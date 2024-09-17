@@ -1,1 +1,1 @@
-# gregdetre-www
+see www.gregdetre.com
