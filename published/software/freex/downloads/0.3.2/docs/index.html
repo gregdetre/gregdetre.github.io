@@ -1,0 +1,204 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd">
+<html ="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Greg Detre</title>
+    <meta name="description" content="greg detre gregdetre memrise princeton mvpa" />
+    
+          <link rel="stylesheet" type="text/css" charset="utf-8" href="/media/main.css" />
+        
+        
+    
+      <link rel="icon" 
+            type="image/png" 
+            href="/img/favicon.png">
+
+      <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20347856-5']);
+  _gaq.push(['_setDomainName', 'gregdetre.co.uk']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>  </head>
+  
+    <body class="">
+        
+    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <title>
+      Greg Detre - index
+    </title>
+    <meta name="generator" content="muse.el">
+    <meta http-equiv="Content-Type"
+          content="text/html; charset=iso-8859-1">
+
+<p><link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="common.css" />
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="screen.css" />
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="print.css" /></p>
+<p></head>
+  <body></p>
+<pre><code>&lt;!-- Page published by Emacs Muse begins here --&gt;
+</code></pre>
+<p><h2><a name="sec1" id="sec1"></a>
+Emacs Freex minor&nbsp;mode</h2>
+<hr></p>
+<p><a href="http://www.princeton.edu/~gdetre/software/freex/">Home</a> - <a href="tutorials.html">Tutorials</a> - <a href="http://www.princeton.edu/~gdetre/software/freex/downloads">Downloads</a> - <a href="http://www.princeton.edu/~gdetre/software/freex/docs">Docs</a></p>
+
+<hr>
+
+<dl class="contents">
+<dt class="contents">
+<a href="#sec1">Emacs Freex minor&nbsp;mode</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec2">What is Emacs Freex&nbsp;mode?</a>
+</dt>
+<dt class="contents">
+<a href="#sec3">How do I get Freex&nbsp;mode?</a>
+</dt>
+<dt class="contents">
+<a href="#sec4">Latest&nbsp;updates</a>
+</dt>
+</dl>
+</dd>
+</dl>
+
+<hr>
+
+<p class="first">Emacs Freex mode is a minor mode for organizing and editing a
+massively-hyperlinked database of your notes and ideas. It&#8217;s
+a personal wiki on&nbsp;steroids.</p>
+
+<p>Freex is released under the <span class="caps">GPL</span>. Freex is still in beta mode
+- that is, it still has various bugs and pitfalls. However,
+it is usable - indeed, we use it ourselves for all our
+note-taking every day. Email
+<a href="mailto:greg@remove-this.gregdetre.co.uk">greg@remove-this.gregdetre.co.uk</a> or
+<a href="mailto:persed@no-spam-thankyou.princeton.edu">persed@no-spam-thankyou.princeton.edu</a> with suggestions or&nbsp;criticisms.</p>
+
+<h3><a name="sec2" id="sec2"></a>
+What is Emacs Freex&nbsp;mode?</h3>
+
+<p class="first">If you learn best by doing, then you might want to skip to
+the <a href="quickstart.html">quickstart</a> or <a href="intro_tutorial.html">intro tutorial</a> to start&nbsp;with.</p>
+
+<p>Freex mode is a minor mode designed to help you deal with
+all of your notes and ideas. It has features and ideals in
+common with <a href="http://mwolson.org/projects/EmacsMuse.html">Emacs Muse</a>, <a href="http://howm.sourceforge.jp/">Howm</a>, <a href="http://dto.freeshell.org/notebook/Linkd.html">linkd</a>, <a href="http://www.emacswiki.org/cgi-bin/wiki/OrgMode">org</a>, and probably a
+flotilla of other modes that we don&#8217;t even know&nbsp;about.</p>
+
+<p>Freex mode has 3 major infrastructural features that
+separate it from other&nbsp;offerings:</p>
+
+<ul>
+<li>Makes extensive use of <a href="http://pymacs.progiciels-bpi.ca/">Pymacs</a> to access python
+libraries. This is both a boon and a bane. It adds a
+major dependency, but dramatically extends the scope of
+what can be achieved within Emacs&nbsp;lisp.</li>
+<li>Stores all of the metadata for your notes in a <a href="http://www.sqlite.org/">sqlite</a>
+database. The user can query this database transparently
+from within Emacs, through&nbsp;Pymacs.</li>
+<li>Extends Emacs&#8217; built-in overlays functionality, allowing
+you to embed all kinds of information (e.g. files,
+database queries) within other files, all visible and
+editable in the same&nbsp;buffer.</li>
+</ul>
+
+<p>As a result, Freex mode has a variety of handy features for
+taking&nbsp;notes:</p>
+
+<ul>
+<li>Automatically creates hyperlinks as you type to any
+&#8216;nuggets&#8217; (i.e. files) in your database of that&nbsp;name.</li>
+<li>Any nugget can be &#8216;tagged&#8217; as a member of another nugget
+(<a href="http://del.icio.us/">del.icio.us</a>-style). This sounds weird, but it becomes
+intuitive very quickly. Simply put, a nugget can belong
+to multiple categories. Those categories don&#8217;t have any
+special ontological status - they&#8217;re just other&nbsp;nuggets.</li>
+<li>Any nugget can embed one or more nuggets (which can
+embed other nuggets), like china dolls. You can edit
+embedded nuggets, and they will be saved as you&#8217;d
+expect. A nugget can be embedded in multiple&nbsp;places.</li>
+<li>Freex is a minor mode, so you can run it in conjunction
+with (e.g.) Emacs Muse mode, to benefit from Muse&#8217;s
+sophisticated publishing abilities. Unfortunately, Freex
+doesn&#8217;t always play as nicely with other modes, so your
+mileage may&nbsp;vary.</li>
+<li>Powerful querying syntax, that allows you to easily
+create queries like &#8216;list all the nuggets that belong to
+both &#8216;emacs&#8217; and &#8216;python&#8217;, and contain the term
+&#8220;sql&#8221;&#8217;. The really cool part is that you get
+instantaneous tab-completion, so Freex will list all the
+nuggets matching your query so far, as well as
+suggesting further categories to whittle down your&nbsp;search.</li>
+</ul>
+
+<h3><a name="sec3" id="sec3"></a>
+How do I get Freex&nbsp;mode?</h3>
+
+<p class="first">See the <a href="install.html">downloading and installation</a>&nbsp;instructions.</p>
+
+<h3><a name="sec4" id="sec4"></a>
+Latest&nbsp;updates</h3>
+
+<h4>22nd October,&nbsp;2007</h4>
+
+<p class="first">Added <a href="quickstart.html">quickstart</a>.</p>
+
+<h4>19th September&nbsp;2007</h4>
+
+<p class="first">Added basic <a href="install.html">installation instructions</a> and <a href="intro_tutorial.html">intro tutorial</a>.</p>
+
+<h4>16th September&nbsp;2007</h4>
+
+<p class="first">We&#8217;ve just uploaded the first release version, <a href="../downloads/0.3.1/">v 0.3.1</a>
+(<a href="../downloads/freex-0.3.1.tar.gz">tarball</a>).</p>
+
+<hr>
+
+<p><a href="http://www.princeton.edu/~gdetre/software/freex/">Home</a> - <a href="tutorials.html">Tutorials</a> - <a href="http://www.princeton.edu/~gdetre/software/freex/downloads">Downloads</a> - <a href="http://www.princeton.edu/~gdetre/software/freex/docs">Docs</a></p>
+
+<!-- Page published by Emacs Muse ends here -->
+
+<hr>
+
+<script language="javascript" src="footer.js">
+
+  </body>
+</html>
+          <br>
+<hr>
+
+<h6>
+  <p align="center">
+    <a href="http://blog.gregdetre.co.uk/">Home</a> - 
+    <a href="http://blog.gregdetre.co.uk/posts/">Blog</a> - 
+    <a href="http://blog.gregdetre.co.uk/startups/">Startups</a> - 
+    <a href="http://blog.gregdetre.co.uk/software/">Software</a> - 
+    <a href="http://blog.gregdetre.co.uk/research/">Research</a> - 
+    <a href="http://blog.gregdetre.co.uk/writing/">Writing</a>
+  </p>
+
+  <p align="center">
+    <a href="mailto:greg@gregdetre.co.uk">Email me</a> - updated 31 Dec 2012
+  </p>
+
+</h6>
+    
+              
+    
+             
+
+  </body>
+</html>

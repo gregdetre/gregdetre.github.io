@@ -1,0 +1,789 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 9">
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List
+href="./reading%20-%20Levy%20Artificial%20Life%20(a-life)_files/filelist.xml">
+<title>Information and life</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Greg Detre</o:Author>
+  <o:LastAuthor>Greg Detre</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>93</o:TotalTime>
+  <o:Created>2003-07-02T01:18:00Z</o:Created>
+  <o:LastSaved>2003-07-02T01:18:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>1587</o:Words>
+  <o:Characters>9048</o:Characters>
+  <o:Lines>75</o:Lines>
+  <o:Paragraphs>18</o:Paragraphs>
+  <o:CharactersWithSpaces>11111</o:CharactersWithSpaces>
+  <o:Version>9.2720</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:DrawingGridHorizontalSpacing>4.5 pt</w:DrawingGridHorizontalSpacing>
+  <w:DrawingGridVerticalSpacing>12.25 pt</w:DrawingGridVerticalSpacing>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:Compatibility>
+   <w:WW6BorderRules/>
+   <w:FootnoteLayoutLikeWW8/>
+   <w:ShapeLayoutLikeWW8/>
+   <w:AlignTablesRowByRow/>
+   <w:ForgetLastTabAlignment/>
+   <w:LayoutRawTableWidth/>
+   <w:LayoutTableRowsApart/>
+  </w:Compatibility>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:"Book Antiqua";
+	panose-1:2 4 6 2 5 3 5 3 3 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:647 0 0 0 159 0;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:553679495 -2147483648 8 0 66047 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin-top:8.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	color:purple;
+	mso-font-kerning:14.0pt;
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+h2
+	{mso-style-next:Normal;
+	margin-top:16.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	color:navy;
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+h3
+	{mso-style-next:Normal;
+	margin-top:16.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	tab-stops:right 451.45pt;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	color:#339966;
+	font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+h4
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-font-weight:normal;}
+h5
+	{mso-style-next:Normal;
+	margin-top:15.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	mso-outline-level:5;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	color:maroon;
+	font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+h6
+	{mso-style-parent:"Heading 5";
+	mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	mso-outline-level:6;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	color:olive;
+	font-weight:normal;
+	mso-bidi-font-weight:bold;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{mso-style-parent:"Heading 1";
+	mso-style-next:Normal;
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	tab-stops:.75in right 451.45pt;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-variant:small-caps;
+	color:purple;
+	mso-font-kerning:14.0pt;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{mso-style-parent:"Heading 2";
+	mso-style-next:Normal;
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:10.1pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	tab-stops:right 451.3pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:navy;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{mso-style-parent:"TOC 2";
+	mso-style-next:Normal;
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:20.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	tab-stops:right 451.45pt;
+	font-size:9.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:teal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoToc4, li.MsoToc4, div.MsoToc4
+	{mso-style-update:auto;
+	mso-style-parent:"TOC 3";
+	mso-style-next:Normal;
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:35.7pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	tab-stops:right 451.45pt;
+	font-size:7.5pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:maroon;
+	mso-bidi-font-weight:bold;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoFootnoteText, li.MsoFootnoteText, div.MsoFootnoteText
+	{margin-top:8.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoCommentText, li.MsoCommentText, div.MsoCommentText
+	{margin-top:8.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin-top:8.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	tab-stops:center 239.75pt right 6.65in;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+span.MsoFootnoteReference
+	{vertical-align:super;}
+span.MsoCommentReference
+	{mso-ansi-font-size:8.0pt;
+	mso-bidi-font-size:8.0pt;}
+p.MsoDate, li.MsoDate, div.MsoDate
+	{margin-top:8.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:right;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
+	{margin-top:8.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	background:navy;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Tahoma;
+	mso-fareast-font-family:"Times New Roman";}
+p.Section, li.Section, div.Section
+	{mso-style-name:Section;
+	margin-top:8.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.Heading0, li.Heading0, div.Heading0
+	{mso-style-name:"Heading 0";
+	mso-style-parent:"Heading 1";
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	border:none;
+	mso-border-alt:solid windowtext .5pt;
+	padding:0in;
+	mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt;
+	font-size:16.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Book Antiqua";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	font-variant:small-caps;
+	color:purple;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:68.05pt 68.05pt 68.05pt 68.05pt;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+@list l0
+	{mso-list-id:449666863;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1554992552 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l0:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l1
+	{mso-list-id:478230134;
+	mso-list-type:hybrid;
+	mso-list-template-ids:594455464 67698691 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:31.5pt;
+	mso-level-number-position:left;
+	margin-left:31.5pt;
+	text-indent:-.25in;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l2
+	{mso-list-id:615799144;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1950599136 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l2:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3
+	{mso-list-id:737628656;
+	mso-list-type:hybrid;
+	mso-list-template-ids:2067163578 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l3:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l4
+	{mso-list-id:1325161856;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1745699056 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l4:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l5
+	{mso-list-id:1746143482;
+	mso-list-type:simple;
+	mso-list-template-ids:-719658964;}
+@list l5:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+</head>
+
+<body lang=EN-GB style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<h1>Notes � Stephen Levy�s �Artificial Life�</h1>
+
+<p class=MsoNormal align=right style='text-align:right'>Greg Detre</p>
+
+<p class=MsoNormal align=right style='margin-top:2.0pt;text-align:right'>Friday,
+October 06, 2000</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h2>John von Neumann</h2>
+
+<p class=MsoNormal>His premise was that �the basis of life is information,
+steeped in a dynamical system complex enough to reproduce and bear offspring
+more complex than the parent� (Levy). He also recognised that genetic
+information has two roles: as a record to be carried and transferred (genotype)
+and as a recipe used to physically build the organism (phenotype). He imagined
+a creature constructed from girders in a lake, which carried the information to
+replicate itself in its physical structure (a tail-like component, analagous to
+DNA), which it processed like a Turing machine.</p>
+
+<p class=MsoNormal>With Stanislaw Ulam???, he devised cellular automata (CA).
+These are a grid (1- or multi-dimensional), and each cell is in one of a set of
+states. Proceeding in discrete time steps, the state of each cell is affected
+by its neighbours.</p>
+
+<h2>NASA study into self-replicating systems (SRS)</h2>
+
+<p class=MsoNormal>Considered a huge landing party comprised of
+self-replicating robots that would colonise the moon at miniscule cost (akin, I
+suppose, to Arthur C Clarke�s exponential monolith expansion which exploded
+Jupiter).</p>
+
+<h2>Craig Reynolds</h2>
+
+<p class=MsoNormal>Computer animator who watched geese and birds flocking,
+realised and realised that it could be recreated without a centralised
+controlling mechanism but would emerge from a simple, local and reactive
+algorithm followed by each bird. Created boids, and showed them actually
+flocking round a pair of columns, using just 3 simple rules:</p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal style='mso-list:l2 level1 lfo8;tab-stops:list .5in'>a
+     clumping force that kept the flock together</li>
+ <li class=MsoNormal style='margin-top:2.0pt;mso-list:l2 level1 lfo8;
+     tab-stops:list .5in'>an ability to match velocity so that the birds in the
+     flock would move at the same speed</li>
+ <li class=MsoNormal style='margin-top:2.0pt;mso-list:l2 level1 lfo8;
+     tab-stops:list .5in'>a separation force that prevented birds from getting
+     too close to each other</li>
+</ol>
+
+<h2>John Conway</h2>
+
+<p class=MsoNormal>Conway wanted to demonstrate that a CA could act as a univeral
+computer. In the Cambridge Maths Department, used a huge sprawling Go set to
+run his games of �Life� (a 2-dimensional binary CA) by hand. He needed a pulse
+generator, which fired out gliders, to represent the bits, so he posed the
+problem as a Scientific American maths enigma. Gosper at MIT wrote a Life
+program to produce puffer trains which produced glider guns � Conway was also
+able to represent logic gates and internal storage, and demonstrate that that
+Life could perform universal computation.</p>
+
+<h2>Stephen Wolfram</h2>
+
+<p class=MsoNormal>Saw the connection between the chaotic triangles of
+one-dimensional CAs and the patterning on a natural mollusc shell. Also
+categorised his CAs into 4 classes: fixed, periodic, complex and chaotic.</p>
+
+<h2>Chris Langton</h2>
+
+<p class=MsoNormal>Pushed the �bottom-up� approach. Managed to get his little
+tear shapes to replicated themselves, despite their basic structure and
+procedures. Organised the first A-life conference. Building on Wolfram�s
+four-fold classification scheme, he introduced the variable lambda (<span
+style='font-size:10.0pt;font-family:Symbol;mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman";mso-char-type:symbol;mso-symbol-font-family:
+Symbol'><span style='mso-char-type:symbol;mso-symbol-font-family:Symbol'>l</span></span>)
+as a measure of the chaos in a life model. Showed that life thrives on the
+phase transition border between too much chaos and too much order - complexity.</p>
+
+<p class=MsoNormal>Believes that we need to be open and think now (admittedly
+prematurely) about the implications of successful a-life research � perhaps the
+only reason that a-life has not attracted the level of public concern it may
+one day deserve is that few believe it to be possible.</p>
+
+<h2>Stuart Kauffman</h2>
+
+<p class=MsoNormal>Attacked the problem of life with the paradigm of
+self-organisation. Used a 100x100 CA (modelled using computer time on an IBM
+mainframe) with lots of rules relating the neighbouring cells together, known
+as the Kauffman Model. Within a few steps the model looped (showing simple
+self-organisation), and it didn�t matter what the initial state of the cells
+were. This showed that the details and random starting point of the network
+were not important, since the overall self-organising structure of the whole
+network dealt with them anyway. Hence the robustness of our DNA, which is
+filled with mutations and mistakes.</p>
+
+<p class=MsoNormal>Contributed to the chicken-and-egg debate about RNA
+molecules and metabolism. His theory (apparently similar to Eigen�s �hypercycle
+theory�) did not place one first without the other, but showed how a single RNA
+molecule might also handle metabolism???</p>
+
+<h2>Steen Rasmussen</h2>
+
+<p class=MsoNormal>VENUS � virtual evolution in a non-stochastic universe
+simulation � attempted to model the emergence of life in a prebiotic soup by
+tweaking the physical/chemical parameters</p>
+
+<p class=MsoNormal>Rasmussen�s contentious �Aspects of Information, Life
+Reality and Physics�, distributed at the second A-life conference:</p>
+
+<h3>Information and life</h3>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l0 level1 lfo5;
+tab-stops:list .25in'><![if !supportLists]>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>A universal computer is indeed universal and can emulate any
+process (Turing)</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l0 level1 lfo5;
+tab-stops:list .25in'><![if !supportLists]>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>The essence of life is a process (von Neumann)</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l0 level1 lfo5;
+tab-stops:list .25in'><![if !supportLists]>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>There exist criteria by which we are able to distinguish
+living from non-living things</p>
+
+<p class=MsoNormal>Accepting (1), (2) and (3) implies the possibility of life
+in a computer</p>
+
+<h3>Life and reality</h3>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l0 level1 lfo5;
+tab-stops:list .25in'><![if !supportLists]>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>If somebody manages to develop life in a computer environment,
+which satisfied (3), it follows from (2) that those life-forms are just as
+alive as you and I</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l0 level1 lfo5;
+tab-stops:list .25in'><![if !supportLists]>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Such an artificial organism must perceive a reality R<sub>2</sub>,
+which for itself is just as real as our �real� reality R<sub>1</sub> is for us.</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l0 level1 lfo5;
+tab-stops:list .25in'><![if !supportLists]>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>From (5) we conclude that R<sub>1</sub> and R<sub>2</sub> have
+the same ontological status. Although R<sub>2</sub> in a material way is
+imbedded in R<sub>1</sub>, R<sub>2</sub> is independent of R<sub>1</sub>.</p>
+
+<h3>Reality and physics</h3>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l0 level1 lfo5;
+tab-stops:list .25in'><![if !supportLists]>7.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>If R<sub>1</sub> and R<sub>2</sub> have the same ontological
+status, it might be possible to learn something about the fundamental
+properties of realities in general, and of R<sub>1</sub> in particular, by
+studying the details of different R<sub>2</sub>s. An example of such a property
+is the physics of a reality.</p>
+
+<p class=MsoNormal>Rasmussen was quoted as saying that �in his heart of
+hearts�, his investigations of a-life are �wrong�.</p>
+
+<h2>Arthur Samuel</h2>
+
+<p class=MsoNormal>At IBM???, wrote the champion checkers program, using GA
+techniques.</p>
+
+<h2>John Holland</h2>
+
+<p class=MsoNormal>First computer science PhD. Believed in and demonstrated the
+greater importance of crossover than mutation. Seeking to harness the
+�perpetual novelty� of evolution to produce �something from nothing�. With his
+students, he designed number-sorting GAs which produced his phone number etc.</p>
+
+<h2>Paley�s watch</h2>
+
+<p class=MsoNormal>Rev. William Paley �he didn�t see how nature (the �Blind
+Watchmaker�) could evolve organisms as intricate as those which do exist � if
+one stumbled across a clock in a field, one would take that as evidence of a
+�watchmaker�</p>
+
+<h2>Jefferson &amp; UCLA</h2>
+
+<p class=MsoNormal>Produced lots of little GA ants to navigate a �scent� (full
+of gaps and twists), a.k.a. the �John Muir� ant trail. In about 70 generations,
+there were populations composed mostly of perfect ants which had learned tricks
+to manage all 89 moves through the trail in the allotted 200 time steps</p>
+
+<h2>Dawkins</h2>
+
+<p class=MsoNormal>In the �Blind Watchmaker�, Dawkins wrote a program which
+uses 9 �genes� (e.g. symmetry, segmentation, branching) composed of 19 alleles
+to produced tree-like figures on the screen. The human observer hand-picked
+from the offspring, usually on aesthetic grounds, and led to realistic looking
+insects, trees and structures.</p>
+
+<h2>Tierra</h2>
+
+<p class=MsoNormal>Organisms within Tierra fought for CPU cycles within a
+virtual machine, keeping themselves small and altering each other�s codes
+parasitically to reproduce themselves.</p>
+
+<h2>Rodney Brookes, MIT and the Mobot lab</h2>
+
+<p class=MsoNormal>Brookes� vision of building up to intelligence
+incrementally, first through robust, non-cognitive attempts like Genghis and
+Attila (designed as a potential Mars or lunar lander).</p>
+
+<h2>Danny Hillis</h2>
+
+<p class=MsoNormal>Former MIT student, founded the Connection Machines
+Corporations(???) which marketed powerful, massively parallel computers (&lt;
+65,536 processors), as well as tinkering with his own Ramps a-life. Realised
+the importance of predators/parasites in shifting GAs from local maxima and
+increasing robustness and efficiency. His GAs came close to besting all human
+attempts at number sorting algorithms.</p>
+
+<p class=MsoNormal>Is amongst those who believe that strong a-life is
+inevitably on the cards, and that it may ultimately replace us. Is not dismayed
+by this, so long as our artificial successors inherit our ability to love,
+create and think.</p>
+
+<h2>AL</h2>
+
+<p class=MsoNormal>A 100x100 grid with agents (with primitive neural networks
+and the capacity to evolve), carnivores, trees, plants and rocks. Demonstrated
+the Baldwin effect, as well as discovered a potentially new evolutionary idea,
+�shielding�, whereby a useful evolved trait undermines the neural net�s
+learning.</p>
+
+<h2>John Shuch and Jon Hupp</h2>
+
+<p class=MsoNormal>Xerox PARC researchers who released the first worm onto the
+Xerox ethernet at night to perform various functions, paralysing the whole
+network at one point, as part of a vision of distributed computation.</p>
+
+<h2>Charles Taylor</h2>
+
+<p class=MsoNormal>A UCLA biologist who worked with Jefferson, pointed out that
+self-evolving a-life would inevitably violate Asimov�s First Law of Robotics.</p>
+
+<h2>Fred Cohen</h2>
+
+<p class=MsoNormal>First conceived of the idea of computer viruses, probably
+the strongest contenders for the Strong Claim to a-life. According to Doyne
+Farmer and Alletta Belin, a virus �satisfies most, and potentially all, of the
+criteria [for life]�. A computer virus:</p>
+
+<p class=MsoNormal style='margin-left:31.5pt;text-indent:-.25in;mso-list:l1 level1 lfo9;
+tab-stops:13.5pt list 31.5pt'><![if !supportLists]><span style='font-family:
+"Courier New";mso-bidi-font-family:"Times New Roman"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>is a pattern on a computer memory storage device</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:31.5pt;margin-bottom:.0001pt;text-indent:-.25in;mso-list:l1 level1 lfo9;
+tab-stops:13.5pt list 31.5pt'><![if !supportLists]><span style='font-family:
+"Courier New";mso-bidi-font-family:"Times New Roman"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>can copy itself to other computers, thereby reproducing
+itself</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:31.5pt;margin-bottom:.0001pt;text-indent:-.25in;mso-list:l1 level1 lfo9;
+tab-stops:13.5pt list 31.5pt'><![if !supportLists]><span style='font-family:
+"Courier New";mso-bidi-font-family:"Times New Roman"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>makes use of the metabolism of its host (the computer),
+like a real virus, to modify the available storage medium</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:31.5pt;margin-bottom:.0001pt;text-indent:-.25in;mso-list:l1 level1 lfo9;
+tab-stops:13.5pt list 31.5pt'><![if !supportLists]><span style='font-family:
+"Courier New";mso-bidi-font-family:"Times New Roman"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>senses changes in the copute ran responds to them in
+order to procreate</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:31.5pt;margin-bottom:.0001pt;text-indent:-.25in;mso-list:l1 level1 lfo9;
+tab-stops:13.5pt list 31.5pt'><![if !supportLists]><span style='font-family:
+"Courier New";mso-bidi-font-family:"Times New Roman"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>its parts are highly interdependent</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:31.5pt;margin-bottom:.0001pt;text-indent:-.25in;mso-list:l1 level1 lfo9;
+tab-stops:13.5pt list 31.5pt'><![if !supportLists]><span style='font-family:
+"Courier New";mso-bidi-font-family:"Times New Roman"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>is robust enough under small noise fluctuations, though
+not large electrical perturbations, and sometimes under small alterations in
+its instructions and programs</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:31.5pt;margin-bottom:.0001pt;text-indent:-.25in;mso-list:l1 level1 lfo9;
+tab-stops:13.5pt list 31.5pt'><![if !supportLists]><span style='font-family:
+"Courier New";mso-bidi-font-family:"Times New Roman"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>evolve to a limited degree, though usually through
+human intervention, to adapt to new environments or make themselves harder to
+detect and eliminate</p>
+
+<p class=MsoNormal>Most frighteningly, viruses show that the step to being the
+victims of autonomous creations is possible, and that we may not be able to
+simply �pull out the plug�.</p>
+
+<p class=MsoNormal>Viruses highlight the flaw in the belief that life somehow
+transcends the Second Law of Thermodynamics (that of order ultimately giving
+way to disorder), in that life pays the price of generating order in terms of a
+massive disordering of the environment around it.</p>
+
+<p class=MsoNormal>Wrote a system which used a set of viruses communicating
+with each other, lying dormant and performing garbage collection-like duties
+which ran stably for 2 years as a demonstration of harnessed viruses� potential
+benefits. Sponsored a $1000 annual for �the most useful computer virus�.</p>
+
+<h2>Thimbleby</h2>
+
+<p class=MsoNormal>Wrote a �liveware� (virus-based) technology, where a communal
+database kept itself continually updated across a number of computers by
+�enlivening� the data to inform other copies of changes.</p>
+
+<h2>Spafford</h2>
+
+<p class=MsoNormal>One of the early victims of Cohen�s Brain virus, argues
+strongly that the scientific study of viruses is immoral, prompting the debate
+about a-life as being the nuclear bomb of the next century, a scientific leap
+that we are ill-prepared to handle. As Langton points out, the burden of
+responsibility for the technology of death is potentially outweighed by that of
+creating life.</p>
+
+<h2>Penrose</h2>
+
+<p class=MsoNormal>Argues against AI, though retracts this when discussing AI
+as evolved from a-life attempts, conceding that there is something
+extraordinary about the process of evolution which cannot be discounted.</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+</div>
+
+</body>
+
+</html>

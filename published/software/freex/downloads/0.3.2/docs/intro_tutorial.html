@@ -1,0 +1,340 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd">
+<html ="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Greg Detre</title>
+    <meta name="description" content="greg detre gregdetre memrise princeton mvpa" />
+    
+          <link rel="stylesheet" type="text/css" charset="utf-8" href="/media/main.css" />
+        
+        
+    
+      <link rel="icon" 
+            type="image/png" 
+            href="/img/favicon.png">
+
+      <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20347856-5']);
+  _gaq.push(['_setDomainName', 'gregdetre.co.uk']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>  </head>
+  
+    <body class="">
+        
+    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <title>
+      Greg Detre - intro_tutorial
+    </title>
+    <meta name="generator" content="muse.el">
+    <meta http-equiv="Content-Type"
+          content="text/html; charset=iso-8859-1">
+
+<p><link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="common.css" />
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="screen.css" />
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="print.css" /></p>
+<p></head>
+  <body></p>
+<pre><code>&lt;!-- Page published by Emacs Muse begins here --&gt;
+</code></pre>
+<p><h2><a name="sec1" id="sec1"></a>
+Intro&nbsp;tutorial</h2></p>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec1">Intro&nbsp;tutorial</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec2">Creating our first&nbsp;nuggets</a>
+</dt>
+<dt class="contents">
+<a href="#sec3">Going behind the&nbsp;scenes</a>
+</dt>
+</dl>
+</dd>
+</dl>
+
+<p>[This is a moderately techical tutorial that also shows you
+some of the backend. We&#8217;re working on a more user-level&nbsp;tutorial.</p>
+
+<h3><a name="sec2" id="sec2"></a>
+Creating our first&nbsp;nuggets</h3>
+
+<p class="first">The first thing to do is to <a href="install.html">download and install</a>&nbsp;Freex.</p>
+
+<p>Assuming that&#8217;s all working, the next step is to create a
+new .freex file. As soon as you save this, freex will
+automatically create and initialize your&nbsp;database.</p>
+
+<p>To do this, just open up a new file in your data directory -
+let&#8217;s call it &#8216;emacs.freex&#8217;. Type in some text&nbsp;like:</p>
+
+<blockquote>
+<p><em><span class="dquo">&#8220;</span>emacs outshines all other editing software in
+approximately the same way that the noonday sun does the
+stars. It is not just bigger and brighter; it simply makes
+everything else vanish&#8221;.</em> &mdash; <a href="http://www.cryptonomicon.com/beginning.html">Neal&nbsp;Stephenson</a></p>
+</blockquote>
+
+<p>Now, save it. Congratulations - you just added your first
+nugget to the database. To test this, try typing &#8216;emacs&#8217;, or
+just editing the line above that contains the word
+&#8216;emacs&#8217;. You should see it now highlighted with a link. Try
+putting the cursor over &#8216;emacs&#8217; and pressing
+<span class="caps">ENTER</span>&#8230; nothing happens. That&#8217;s because you just followed a
+link right back to where you already&nbsp;were.</p>
+
+<p>Time to create another nugget. Let&#8217;s call it
+&#8216;lisp.freex&#8217;. Fill it with some text,&nbsp;e.g.:</p>
+
+<blockquote>
+<p><em>A girl goes to the doctor to have her cold
+treated. The doctor lifts up her top to listen to her
+chest and says, &#8220;nice big&nbsp;breaths.&#8221;</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">The girl replies, &#8220;Yeth, and I&#8217;m only&nbsp;14!&#8221;</em></p>
+</blockquote>
+
+<p>Notice that if you type &#8216;emacs&#8217; now, place the cursor on it,
+and press <span class="caps">ENTER</span>, you will be magically transported to the
+&#8216;emacs&#8217;&nbsp;nugget.</p>
+
+<p>[We use the term &#8216;nugget&#8217; throughout to mean &#8216;document&#8217; or
+&#8216;piece of text&#8217;, since nuggets will not always equate to
+files. More on this&nbsp;later.]</p>
+
+<h3><a name="sec3" id="sec3"></a>
+Going behind the&nbsp;scenes</h3>
+
+<p class="first">So now we have two nuggets. Let&#8217;s examine a little what&#8217;s
+going on behind the scenes before we carry on. Peek at your
+data directory. You should see something like&nbsp;this:</p>
+
+<blockquote>
+<pre class="example">
+66 budokan:.../freex/testdocs&gt;ll
+total 32K
+drwxrwxr-x 12 greg greg 4.0K 2007-09-19 05:03 ..
+-rw-rw-r--  1 greg greg   17 2007-09-19 05:04 emacs.freex
+-rw-rw-r--  1 greg greg    8 2007-09-19 05:04 lisp.freex
+-rw-r--r--  1 greg greg  11K 2007-09-19 05:04 freex.db
+drwxrwxr-x  3 greg greg 4.0K 2007-09-19 05:11 .
+</pre>
+</blockquote>
+
+<p>As you&#8217;d expect, both of the .freex files are plain ascii
+text, containing whatever you typed. The real magic is
+hidden inside freex.db. Fire up sqlite (by typing &#8216;sqlite&#8217;
+or maybe &#8216;sqlite3&#8217;) so that we can peer inside&nbsp;it:</p>
+
+<blockquote>
+<pre class="example">
+62 budokan:.../freex/testdocs&gt;sqlite freex.db
+SQLite version 3.3.13
+Enter &quot;.help&quot; for instructions
+</pre>
+</blockquote>
+
+<p>and enter the following&nbsp;query:</p>
+
+<blockquote>
+<pre class="example">
+select * from nuggets;
+</pre>
+</blockquote>
+
+<p>This is a very simple <span class="caps">SQL</span> query that&#8217;s asking the database
+to tell us everything it knows about the nuggets in our
+database. It reports&nbsp;back:</p>
+
+<blockquote>
+<pre class="example">
+1| emacs outshines all other [snip] |2007-09-19 05:03:53.410275|emacs.freex
+2| A girl goes to the doctor [snip] |2007-09-19 05:04:36.098915|lisp.freex
+</pre>
+</blockquote>
+
+<p>As you can probably guess, this tells us&nbsp;that:</p>
+
+<ul>
+<li>we have 2, with primary keys of 1 and 2&nbsp;respectively</li>
+<li>spits out their contents (mirrored in the database for&nbsp;convenience)</li>
+<li>and their creation&nbsp;dates</li>
+<li>and tells us their&nbsp;filenames</li>
+</ul>
+
+<p>If you&#8217;re curious, you can inspect the database further. To
+see the full&nbsp;schema:</p>
+
+<blockquote>
+<pre class="example">
+select * from sqlite_master;
+</pre>
+</blockquote>
+
+<p>Definitely worth a muse, but beyond the scope of this&nbsp;document.</p>
+
+<p>Just for completeness, let&#8217;s take a quick spin in python,
+which provides the backend interface to the database to
+emacs, before we jump back into the driver&#8217;s seat. Fire up
+a python or ipython shell, and try something like&nbsp;this:</p>
+
+<blockquote>
+<pre class="example">
+from freex_sqlalchemy import *
+fsqa = create_fsqa('/home/greg/docs/freex/freex.db',False,file_ext='freex')
+</pre>
+</blockquote>
+
+<p><span class="quo">&#8216;</span>freex_sqlalchemy.py&#8217; contains all the backend python
+database code, and provides the <span class="caps">API</span> that emacs uses for
+getting and setting nuggets. The three arguments to
+&#8216;create_fsqa&#8217; tell&nbsp;it:</p>
+
+<ul>
+<li>to load (or create) the freex.db sqlite&nbsp;database</li>
+<li>not to use any lisp code (since we&#8217;re not calling it
+from within&nbsp;emacs)</li>
+<li>and that our files have a .freex&nbsp;extension.</li>
+</ul>
+
+<p>Now, we can start to query the&nbsp;database:</p>
+
+<blockquote>
+<pre class="example">
+In [2]: get_all_aliases()
+Out[2]: ['emacs', 'python']
+</pre>
+</blockquote>
+
+<p>Ok. Enough infrastructure. Let&#8217;s play some more. Open Emacs
+up again. Create a new .freex file called
+&#8216;elisp.freex&#8217;. Now, we want to represent the fact that
+&#8216;elisp&#8217; belongs to both &#8216;emacs&#8217; and &#8216;lisp&#8217;. If &#8216;emacs&#8217; and
+&#8216;lisp&#8217; were directories, this would be like saying that we wanted
+&#8216;elisp&#8217; to exist in&nbsp;both.</p>
+
+<p>This is easy to do. Just run M-x
+freex-meta-insert-metadata-here (C-cm), and you should see a
+grey metadata overlay appear in the midst of your text. It
+tells you a bunch of things you already know, but the fun
+part is that it got all this by querying the database, and
+if you edit the fields, you&#8217;ll be able to transparently
+update the database. Just place your cursor inside the small
+darker grey box to the right of &#8216;tag-parents&#8217;, and&nbsp;type:</p>
+
+<blockquote>
+<pre class="example">
+emacs; lisp
+</pre>
+</blockquote>
+
+<p>In other words, the tag-parents line should look like&nbsp;this:</p>
+
+<p class="image-link"><img src="elisp.png" alt=""></p>
+
+<p>Now, save as normal, and then press C-cm again. You should
+find that the modtime field has updated, indicating that the
+data has been written to the database. [You can banish the
+metadata overlay with M-x
+freex-embed-remove-overlay-at-point&nbsp;(C&#8212;).]</p>
+
+<p>Let&#8217;s test this out. If &#8216;elisp&#8217; belongs to
+&#8216;emacs&#8217;, then that means that &#8216;emacs&#8217; owns (is the parent
+of) &#8216;elisp&#8217;, right? Open up &#8216;emacs&#8217;, and look at its
+metadata. You should see that its tag-children contains
+&#8216;elisp&#8217;&nbsp;now.</p>
+
+<p>Play around with this. Let&#8217;s try adding a tag-parent for a
+nugget that doesn&#8217;t exist yet. Make &#8216;lisp&#8217; belong to
+&#8216;programming&#8217;. Voila! You should now have a
+&#8216;programming.freex&#8217;. Before we go any further, make sure
+that you&#8217;ve set things up so&nbsp;that:</p>
+
+<ul>
+<li><span class="quo">&#8216;</span>elisp&#8217; has &#8216;emacs&#8217; and &#8216;lisp&#8217; as&nbsp;tag-parents</li>
+<li><span class="quo">&#8216;</span>lisp&#8217; has &#8216;programming&#8217; as a&nbsp;tag-parent</li>
+</ul>
+
+<p>For the final part of the tutorial, I&#8217;m
+going to try and demonstrate a pretty meaty idea, so saddle
+up your&nbsp;mind.</p>
+
+<p>Imagine you have a bunch of nuggets, each with various
+tag-parents, and you want to find a nugget. Maybe you want
+to find the nugget for the Emacs programming language, but
+you&#8217;ve forgotten what it&#8217;s called. Try M-x freex-meta-find
+(C-cm). Type &#8216;programming/emacs/&#8217; and then hit <span class="caps">TAB</span>. In fact,
+you could have tab-completed multiple times as you were
+typing those, just as with files.  Every time you hit <span class="caps">TAB</span>,
+you&#8217;re actually querying the database. Think of the &#8216;/&#8217; as
+denoting &#8216;has tag-parent&#8217;. That query is asking &#8220;which
+nuggets have both &#8216;emacs&#8217; and &#8216;programming&#8217; as tag-parents?&#8221;
+With any luck, it should tab-complete to &#8216;elisp&#8217;. Hit <span class="caps">ENTER</span>
+to open it up. That&#8217;s the easiest way to open up (or even
+create) freex&nbsp;nuggets.</p>
+
+<p>Now wait just one darn cotton-picking minute. We specified
+that &#8216;elisp&#8217; belongs to both &#8216;emacs&#8217; and &#8216;lisp&#8217;. And we
+specified that &#8216;lisp&#8217; belongs to &#8216;programming&#8217;. But we never
+specified that <em>&#8216;elisp&#8217;</em> belongs to &#8216;programming&#8217;. So how did it
+know. Basically, freex-meta-find allows for second-order
+parenting relationships. Almost as though grandparents
+(though currently not great-grandparents) count as honorary
+parents. This makes for a pretty powerful system, because it
+means that you don&#8217;t have to have so much redundancy in your
+tagging. Anything that has &#8216;lisp&#8217; as a tag-parent will also
+have &#8216;programming&#8217; as a parent, for&nbsp;free.</p>
+
+<p>That&#8217;s plenty of tutoring for now. Play around with creating
+links, tag-parents and tag-children, and with freex-meta-find. Peek at the
+database as you go, just to get a better idea of what&#8217;s
+going&nbsp;on.</p>
+
+<!-- Page published by Emacs Muse ends here -->
+
+<hr>
+
+<script language="javascript" src="footer.js">
+
+  </body>
+</html>
+          <br>
+<hr>
+
+<h6>
+  <p align="center">
+    <a href="http://blog.gregdetre.co.uk/">Home</a> - 
+    <a href="http://blog.gregdetre.co.uk/posts/">Blog</a> - 
+    <a href="http://blog.gregdetre.co.uk/startups/">Startups</a> - 
+    <a href="http://blog.gregdetre.co.uk/software/">Software</a> - 
+    <a href="http://blog.gregdetre.co.uk/research/">Research</a> - 
+    <a href="http://blog.gregdetre.co.uk/writing/">Writing</a>
+  </p>
+
+  <p align="center">
+    <a href="mailto:greg@gregdetre.co.uk">Email me</a> - updated 31 Dec 2012
+  </p>
+
+</h6>
+    
+              
+    
+             
+
+  </body>
+</html>

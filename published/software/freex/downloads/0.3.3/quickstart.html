@@ -1,0 +1,218 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd">
+<html ="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Greg Detre</title>
+    <meta name="description" content="greg detre gregdetre memrise princeton mvpa" />
+    
+          <link rel="stylesheet" type="text/css" charset="utf-8" href="/media/main.css" />
+        
+        
+    
+      <link rel="icon" 
+            type="image/png" 
+            href="/img/favicon.png">
+
+      <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20347856-5']);
+  _gaq.push(['_setDomainName', 'gregdetre.co.uk']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>  </head>
+  
+    <body class="">
+        
+    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <title>
+      Greg Detre - quickstart
+    </title>
+    <meta name="generator" content="muse.el">
+    <meta http-equiv="Content-Type"
+          content="text/html; charset=iso-8859-1">
+
+<p><link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="common.css" />
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="screen.css" />
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="print.css" /></p>
+<p></head>
+  <body></p>
+<pre><code>&lt;!-- Page published by Emacs Muse begins here --&gt;
+</code></pre>
+<p><h2>Quickstart</h2></p>
+<p class="first">You have <span class="caps">ADHD</span>. Your pulse never drops below 200 beats per
+minute and you drink Redbull to calm down. This is the
+tutorial for&nbsp;you.</p>
+
+<p>Step 1 - <a href="install.html">download and install freex</a>.</p>
+
+<h3>Creating a&nbsp;journal/scrapbook</h3>
+
+<p class="first">Let&#8217;s say you want to keep a journal, idea-log or scrapbook
+of some kind. Maybe you&#8217;re a blogger who wants to keep track
+of your ideas for future posts. Or a scientist keeping track
+of experimental results. Or a programmer who wants to keep a
+log of design and implementation&nbsp;decisions.</p>
+
+<p>You&#8217;d like it to be easy to write things down, but find them
+later. You&#8217;d like to be able to tag each entry (or &#8216;nugget&#8217;
+as we&#8217;re going to term it), search through them&nbsp;etc.</p>
+
+<p>In emacs, run M-x find-file
+&#8220;~/path/to/freex/data/journal.freex&#8221;. Type something
+in. Save&nbsp;it.</p>
+
+<p>Now type &#8216;journal&#8217;. Notice that it automatically becomes a&nbsp;hyperlink.</p>
+
+<p>Type a couple of entries,&nbsp;e.g.:</p>
+
+<pre class="example">
+----
+22 October 2007
+
+toilet paper ran out today.
+
+----
+23 October 2007
+
+got awarded Nobel Prize today. Again.
+
+----
+24 October 2007
+
+still no toilet paper. Good job I'm constipated.
+
+----
+25 October 2007
+
+no longer constipated. one problem down, but still no toilet
+paper, so I have other problems now.
+
+</pre>
+
+<p>Enough.</p>
+
+<p>Highlight the first entry. Run M-x
+freex-embed-define-region-as-nugget, and enter &#8220;journal - 22
+October 2007&#8221;.&nbsp;Save.</p>
+
+<p>Notice that the region you highlighted now has a grey
+background. You just created a nugget called &#8216;journal - 22
+October 2007&#8221; that is embedded within &#8220;journal&#8221;. In other
+words, you can have nuggets embedded within other
+nuggets. You can run M-x find-file &#8220;journal - 22 October
+2007.freex&#8221;, and you&#8217;ll see your entry. Try editing it and
+save. Now, go back to &#8220;journal&#8221; and run M-x
+revert-buffer. It should have updated to reflect your&nbsp;changes.</p>
+
+<p>Let&#8217;s tag our first entry now. Put the cursor inside the
+first entry, and run M-x
+freex-meta-edit-tag-parents-in-minibuffer. You should see
+&#8220;journal/22 October 2007/&#8221;. In other words, your first entry
+is tagged with (i.e. belongs to) &#8220;journal&#8221; and &#8220;22 October
+2007&#8221;. Let&#8217;s also tag it with &#8220;toilet&nbsp;paper&#8221;.</p>
+
+<p>Now, highlight the second entry, define that as a nugget
+called &#8220;journal - 23 October 2007&#8221; just as before, and tag
+it with &#8220;Nobel Prize&#8221;. Now, Nobel Prize will show up as a
+link too, though you might have to edit the text nearby to
+make emacs notice that it&#8217;s&nbsp;there.</p>
+
+<p>Highlight the third entry, name it, and tag it with &#8220;toilet
+paper&#8221; and&nbsp;&#8220;constipated&#8221;.</p>
+
+<p>Close all your buffers. Let&#8217;s pretend that you&#8217;re trying to
+find that nugget you wrote about toilet paper and being
+constipated so that you can recount the story at a dinner
+party. Run M-x freex-meta-find and enter &#8220;toi[<span class="caps">TAB</span>]&#8221;. It&#8217;ll
+complete to &#8220;toilet paper&#8221;. We want the nuggets that belong
+to &#8220;toilet paper&#8221; though, not &#8220;toilet paper&#8221; itself, so put
+in &#8220;toilet paper/[<span class="caps">TAB</span>]&#8221;. If this was a file system, this
+would be like saying &#8220;which files are in the &#8216;toilet paper&#8217;
+directory?&#8221;. But we&#8217;re not in Kansas any more, as you&#8217;ll
+begin to&nbsp;see.</p>
+
+<p>If you&#8217;ve been paying attention this far, then you&#8217;ll see
+something like&nbsp;this:</p>
+
+<pre class="example">
+Possible completions are:
+toilet paper/22 October 2007/      toilet paper/24 October 2007/
+toilet paper/constipated/      toilet paper/journal - 22 October 2007
+toilet paper/journal - 24 October 2007
+toilet paper/journal/
+</pre>
+
+<p>Think of anything with a &#8220;/&#8221; on the end as a kind of
+subdirectory, i.e. a category that you could use to further
+whittle down the list of items that belong to &#8220;toilet
+paper&#8221;. In this case, you could usefully whittle things down
+with the date, or by &#8220;constipated&#8221;, so let&#8217;s try that. Enter
+&#8220;toilet paper/constipated/[<span class="caps">TAB</span>]&#8221;. Sure enough, it should
+complete to &#8220;toilet paper/constipated/journal - 24 October
+2007&#8221;, the only nugget that is tagged with both &#8220;toilet
+paper&#8221; and&nbsp;&#8220;constipated&#8221;.</p>
+
+<p>You could experiment by running M-x freex-meta-find and some
+of the following&nbsp;queries:</p>
+
+<pre class="example">
+  journal/
+
+  constipated/
+
+  toilet paper/&quot;other problems now&quot;/
+
+  toilet paper//
+
+  toilet paper//*
+</pre>
+
+<p>Hmmmm. My aim was to tell you enough to be dangerous. Not
+dangerous like a man aiming at a cow with a shoulder-mounted
+rocket launcher is dangerous, but dangerous enough to be
+getting on with. Maybe try the
+<a href="intro_tutorial.html">more technical, introductory tutorial</a>&nbsp;now.</p>
+
+<!-- Page published by Emacs Muse ends here -->
+
+<hr>
+
+<script language="javascript" src="footer.js">
+
+  </body>
+</html>
+          <br>
+<hr>
+
+<h6>
+  <p align="center">
+    <a href="http://blog.gregdetre.co.uk/">Home</a> - 
+    <a href="http://blog.gregdetre.co.uk/posts/">Blog</a> - 
+    <a href="http://blog.gregdetre.co.uk/startups/">Startups</a> - 
+    <a href="http://blog.gregdetre.co.uk/software/">Software</a> - 
+    <a href="http://blog.gregdetre.co.uk/research/">Research</a> - 
+    <a href="http://blog.gregdetre.co.uk/writing/">Writing</a>
+  </p>
+
+  <p align="center">
+    <a href="mailto:greg@gregdetre.co.uk">Email me</a> - updated 31 Dec 2012
+  </p>
+
+</h6>
+    
+              
+    
+             
+
+  </body>
+</html>

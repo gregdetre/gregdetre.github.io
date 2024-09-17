@@ -1,0 +1,613 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 9">
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List
+href="./lecture%20-%20Mark%20Yim,%20modular%20reconfigurable%20robots_files/filelist.xml">
+<title>Title</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Greg Detre</o:Author>
+  <o:LastAuthor>Greg Detre</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>56</o:TotalTime>
+  <o:Created>2003-07-02T01:05:00Z</o:Created>
+  <o:LastSaved>2003-07-02T01:05:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>562</o:Words>
+  <o:Characters>3205</o:Characters>
+  <o:Lines>26</o:Lines>
+  <o:Paragraphs>6</o:Paragraphs>
+  <o:CharactersWithSpaces>3935</o:CharactersWithSpaces>
+  <o:Version>9.2720</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:DrawingGridHorizontalSpacing>4.5 pt</w:DrawingGridHorizontalSpacing>
+  <w:DrawingGridVerticalSpacing>12.25 pt</w:DrawingGridVerticalSpacing>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:Compatibility>
+   <w:WW6BorderRules/>
+   <w:FootnoteLayoutLikeWW8/>
+   <w:ShapeLayoutLikeWW8/>
+   <w:AlignTablesRowByRow/>
+   <w:ForgetLastTabAlignment/>
+   <w:LayoutRawTableWidth/>
+   <w:LayoutTableRowsApart/>
+  </w:Compatibility>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:"Book Antiqua";
+	panose-1:2 4 6 2 5 3 5 3 3 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:647 0 0 0 159 0;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:553679495 -2147483648 8 0 66047 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin-top:8.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	color:purple;
+	mso-font-kerning:14.0pt;
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+h2
+	{mso-style-next:Normal;
+	margin-top:16.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	color:navy;
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+h3
+	{mso-style-next:Normal;
+	margin-top:16.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	tab-stops:right 451.45pt;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	color:#339966;
+	font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+h4
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-font-weight:normal;}
+h5
+	{mso-style-next:Normal;
+	margin-top:15.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	mso-outline-level:5;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	color:maroon;
+	font-weight:normal;
+	text-decoration:underline;
+	text-underline:single;}
+h6
+	{mso-style-parent:"Heading 5";
+	mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	mso-outline-level:6;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	color:olive;
+	font-weight:normal;
+	mso-bidi-font-weight:bold;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{mso-style-parent:"Heading 1";
+	mso-style-next:Normal;
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	tab-stops:.75in right 451.45pt;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-variant:small-caps;
+	color:purple;
+	mso-font-kerning:14.0pt;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{mso-style-parent:"Heading 2";
+	mso-style-next:Normal;
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:10.1pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	tab-stops:right 451.3pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:navy;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{mso-style-parent:"TOC 2";
+	mso-style-next:Normal;
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:20.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	tab-stops:right 451.45pt;
+	font-size:9.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:teal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoToc4, li.MsoToc4, div.MsoToc4
+	{mso-style-update:auto;
+	mso-style-parent:"TOC 3";
+	mso-style-next:Normal;
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:35.7pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	tab-stops:right 451.45pt;
+	font-size:7.5pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:maroon;
+	mso-bidi-font-weight:bold;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin-top:8.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	tab-stops:center 239.75pt right 6.65in;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoDate, li.MsoDate, div.MsoDate
+	{margin-top:8.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:right;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
+	{margin-top:8.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	background:navy;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Tahoma;
+	mso-fareast-font-family:"Times New Roman";}
+p.Section, li.Section, div.Section
+	{mso-style-name:Section;
+	margin-top:8.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.Heading0, li.Heading0, div.Heading0
+	{mso-style-name:"Heading 0";
+	mso-style-parent:"Heading 1";
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	border:none;
+	mso-border-alt:solid windowtext .5pt;
+	padding:0in;
+	mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt;
+	font-size:16.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Book Antiqua";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	font-variant:small-caps;
+	color:purple;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:68.05pt 68.05pt 68.05pt 68.05pt;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+@list l0
+	{mso-list-id:1746143482;
+	mso-list-type:simple;
+	mso-list-template-ids:-719658964;}
+@list l0:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+</head>
+
+<body lang=EN-GB link=blue vlink=purple style='tab-interval:17.85pt'>
+
+<div class=Section1>
+
+<h1>Lecture � Mark Yim, modular reconfigurable robots</h1>
+
+<p class=MsoNormal align=right style='text-align:right'>Greg Detre</p>
+
+<p class=MsoNormal align=right style='margin-top:2.0pt;text-align:right'>@17.30
+Monday, 05 March, 2001</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>PhD at Stanford, moved to Xeroc PARC</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h2>Introduction</h2>
+
+<p class=MsoNormal>simple modules, combine to achieve complex tasks, rearrange
+to form many configurations</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'>versatile</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'>robust (high redundancy)</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'>inexpensive (economies of
+scale/batch production)</p>
+
+<p class=MsoNormal>want a system that can rearrange itself</p>
+
+<p class=MsoNormal>what are the effects/limitations? does increasing the number
+of modules increase what the robot can offer?</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>self-reconfigurable (mobile, lattice, closed chain) and
+modular</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'>mobile � move around, then
+re-dock</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>lattice � move to different
+positions within a discrete lattice</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>closed chain � large, long chains of
+models, that change their shape</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>they�re good for versatility � where you don�t know what to
+expect</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>xerox � PR, component technologies and smart matter
+distributed control</p>
+
+<p class=MsoNormal>funded by DARPA � interested in search &amp; rescue (e.g.
+urban)</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>could do some of a difficult obstacle course</p>
+
+<p class=MsoNormal>could:</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>turn/backwards, pipes, up/down
+stairs, pu slopes, loose debree, 0.5km on one battery chair</p>
+
+<p class=MsoNormal>couldn�t:</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>ladder, vertical pipe, �</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>climbing like a caterpillar, climbing the stairs, riding a
+tricycle, spider (COMDEX 99)</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>very difficult inverse kinematics</p>
+
+<p class=MsoNormal>dextrous workspace � moving around one fixed point vs 6D
+calculations</p>
+
+<p class=MsoNormal>what if you had a really really long coiled robot and you
+wanted to convert it into a complicated structure � very difficult</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>telecube � similar to Crystalline (Dartmouth), but 3D �
+modules expand/shrink and attach/detach</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>very difficult to get the robot to move another object</p>
+
+<p class=MsoNormal>considering genetic programming</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>proteo � smaller, rhombic dodecahedrons, more of them</p>
+
+<p class=MsoNormal>but the actuation mechanism that could roll around the edges
+proved much harder than expected</p>
+
+<p class=MsoNormal>instead, used magnets and humans to manipulate the modules
+like clay, and the workstation works out what shape has been formed</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h3>Near future plan</h3>
+
+<p class=MsoNormal>generation 3 (200 modules = �500,000)</p>
+
+<p class=MsoNormal style='margin-top:4.0pt'>self-diagnosis and self-repair</p>
+
+<p class=MsoNormal style='margin-top:4.0pt'>fully autonomous locomotoin in a
+rubble pile, going from 3 different shapes</p>
+
+<p class=MsoNormal style='margin-top:4.0pt'>need an integrated environment
+understanding</p>
+
+<h3>Longer term</h3>
+
+<p class=MsoNormal>shrink modules further, increase numbers (cost becoming
+prohibitive)</p>
+
+<p class=MsoNormal>explore automatic methods of control</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>learning based control</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>biological metaphors</p>
+
+<p class=MsoNormal>specialised modules for some tasks</p>
+
+<p class=MsoNormal>exploit general reconfigurability � do you need general
+reconfigurability, or might just a few shapes be enough on their own</p>
+
+<p class=MsoNormal>considering bicycle-riding!</p>
+
+<p class=MsoNormal>Summer interns</p>
+
+<p class=MsoNormal><a href="http://www.parc.xerox.com/modrobots">www.parc.xerox.com/modrobots</a></p>
+
+<p class=MsoNormal><a href="mailto:yim@parc.xerox.com">yim@parc.xerox.com</a></p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h2>Questions</h2>
+
+<p class=MsoNormal>considered centralised module??? what are the adventages of
+distributed control???</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>every module will probably need some
+processing � having all the processing in just one place wouldn�t be efficient</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>they will employ a brain segment for
+path-finding etc.</p>
+
+<p class=MsoNormal style='margin-top:0in'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>single torque model � what about high torque vs high speed
+modes???</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>meta-module</p>
+
+<p class=MsoNormal style='margin-top:0in'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>what about robots that can hop???</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>they didn�t like that idea. they
+prefer low-speed high-torque systems</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>what about freedom in another dimension, e.g. twisting/turning???</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>all they can do is move in one
+degree of freedom � they have to be re-attached (which they can do themselves
+in the latest generations) to move in other than a snake pattern</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>what about manipulation?</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>snake form is best for locomotion, but
+not for manipulation. the robots won�t need to move human bodies</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>large + small-scale versions???</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>small-scale is more interesting for
+the moment, because you can more easily increase numbers</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>large ones could shore up and
+reinforce damaged buildings</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>submersible and space � don�t have to worry about torque and
+gravity???</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>yes, but there are always
+complications and technical issues</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>how tightly do you have to specify how the robot can
+recombine???s</p>
+
+<p class=MsoNormal>can they reconnect on the fly???</p>
+
+<p class=MsoNormal>what about tiny versions???</p>
+
+<p class=MsoNormal>what about add-ons??? hands, pads etc.???</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+</div>
+
+</body>
+
+</html>

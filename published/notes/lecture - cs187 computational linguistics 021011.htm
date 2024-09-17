@@ -1,0 +1,866 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 9">
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List
+href="./lecture%20-%20cs187%20computational%20linguistics%20021011_files/filelist.xml">
+<title>Title</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Greg Detre</o:Author>
+  <o:LastAuthor>Greg Detre</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>178</o:TotalTime>
+  <o:Created>2003-07-02T01:03:00Z</o:Created>
+  <o:LastSaved>2003-07-02T01:03:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>869</o:Words>
+  <o:Characters>4954</o:Characters>
+  <o:Company>-</o:Company>
+  <o:Lines>41</o:Lines>
+  <o:Paragraphs>9</o:Paragraphs>
+  <o:CharactersWithSpaces>6083</o:CharactersWithSpaces>
+  <o:Version>9.2720</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:DrawingGridHorizontalSpacing>4.5 pt</w:DrawingGridHorizontalSpacing>
+  <w:DrawingGridVerticalSpacing>12.25 pt</w:DrawingGridVerticalSpacing>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:Compatibility>
+   <w:WW6BorderRules/>
+   <w:FootnoteLayoutLikeWW8/>
+   <w:ShapeLayoutLikeWW8/>
+   <w:AlignTablesRowByRow/>
+   <w:ForgetLastTabAlignment/>
+   <w:LayoutRawTableWidth/>
+   <w:LayoutTableRowsApart/>
+  </w:Compatibility>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:"Book Antiqua";
+	panose-1:2 4 6 2 5 3 5 3 3 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:647 0 0 0 159 0;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:553679495 -2147483648 8 0 66047 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin-top:8.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	color:purple;
+	mso-font-kerning:14.0pt;
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+h2
+	{mso-style-next:Normal;
+	margin-top:16.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	color:navy;
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+h3
+	{mso-style-next:Normal;
+	margin-top:16.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	tab-stops:right 451.45pt;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	color:green;
+	font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+h4
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-font-weight:normal;}
+h5
+	{mso-style-next:Normal;
+	margin-top:15.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	mso-outline-level:5;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	color:maroon;
+	font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+h6
+	{mso-style-parent:"Heading 5";
+	mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	mso-outline-level:6;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	color:olive;
+	font-weight:normal;
+	mso-bidi-font-weight:bold;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{mso-style-parent:"Heading 1";
+	mso-style-next:Normal;
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	tab-stops:.75in right 451.45pt;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-variant:small-caps;
+	color:purple;
+	mso-font-kerning:14.0pt;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{mso-style-parent:"Heading 2";
+	mso-style-next:Normal;
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:10.1pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	tab-stops:right 451.3pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:navy;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{mso-style-parent:"TOC 2";
+	mso-style-next:Normal;
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:20.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	tab-stops:right 451.45pt;
+	font-size:9.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:teal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoToc4, li.MsoToc4, div.MsoToc4
+	{mso-style-update:auto;
+	mso-style-parent:"TOC 3";
+	mso-style-next:Normal;
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:35.7pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	tab-stops:right 451.45pt;
+	font-size:7.5pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:maroon;
+	mso-bidi-font-weight:bold;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin-top:8.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	tab-stops:center 239.75pt right 6.65in;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoDate, li.MsoDate, div.MsoDate
+	{margin-top:8.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:right;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
+	{margin-top:8.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	background:navy;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Tahoma;
+	mso-fareast-font-family:"Times New Roman";}
+p.Section, li.Section, div.Section
+	{mso-style-name:Section;
+	margin-top:8.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.Heading0, li.Heading0, div.Heading0
+	{mso-style-name:"Heading 0";
+	mso-style-parent:"Heading 1";
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	border:none;
+	mso-border-alt:solid windowtext .5pt;
+	padding:0in;
+	mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt;
+	font-size:16.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Book Antiqua";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	font-variant:small-caps;
+	color:purple;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:68.05pt 68.05pt 68.05pt 68.05pt;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+@list l0
+	{mso-list-id:1746143482;
+	mso-list-type:simple;
+	mso-list-template-ids:-719658964;}
+@list l0:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+</head>
+
+<body lang=EN-GB style='tab-interval:17.85pt'>
+
+<div class=Section1>
+
+<h1>Lecture � CS187 Computational linguistics</h1>
+
+<p class=MsoNormal align=right style='text-align:right'>Greg Detre</p>
+
+<p class=MsoNormal align=right style='margin-top:2.0pt;text-align:right'><span
+lang=EN-US style='mso-ansi-language:EN-US'>@14:30 Friday, October 11, 2002<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<h2><span lang=EN-US style='mso-ansi-language:EN-US'>Introduction<o:p></o:p></span></h2>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>story:
+Symantec was founded selling Q&amp;A, a natural language database product<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<h2><span lang=EN-US style='mso-ansi-language:EN-US'>Lecture<o:p></o:p></span></h2>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>n ==&gt;
+[X] :- n(X).<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'><span lang=EN-US style='mso-ansi-language:
+EN-US'>n(toad).<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'><span lang=EN-US style='mso-ansi-language:
+EN-US'>n(frog).<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'><span lang=EN-US style='mso-ansi-language:
+EN-US'>etc.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>in Prolog,
+�=� is defined by �X = X� � built-in<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>strings are
+in double-quotes<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>upper-case
+atoms are in single-quotes<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<h3><span lang=EN-US style='mso-ansi-language:EN-US'>DCG � definite clause
+grammars<o:p></o:p></span></h3>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>non-terminals
+thread string positions<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'><span lang=EN-US style='mso-ansi-language:
+EN-US'>s --&gt; np, vp.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:2.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'><span lang=EN-US style='mso-ansi-language:
+EN-US'>s(P0, P) :- np(P0, P1), vp(P1, P).<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:4.0pt'><span lang=EN-US style='mso-ansi-language:
+EN-US'>when it reads in the file, it turns the first line into the second line<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>terminals(in
+brackets) thread directly<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:35.7pt;margin-bottom:.0001pt'><span lang=EN-US style='mso-ansi-language:
+EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>escapes to
+Prolog (in braces) don�t thread string positions<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'><span lang=EN-US style='mso-ansi-language:
+EN-US'>that is, they don�t undergo the transformations<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>to utilise
+this notation:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:17.85pt'><span lang=EN-US
+style='mso-ansi-language:EN-US'>s([frog, met, toad], []).<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:17.85pt'><span lang=EN-US
+style='mso-ansi-language:EN-US'>s([frog|Rest],[]).<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:35.7pt;margin-bottom:.0001pt'><span lang=EN-US style='mso-ansi-language:
+EN-US'>what sentences start with �frog ��?<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>non-terminals
+are no longer atomic � they have arguments, so they have (arbitrary) structure<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>so how do
+we get the np and vp to agree? add an extra argument<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>problem
+with combinatorial explosion if you keep adding these agreement arguments?<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:17.85pt'><span lang=EN-US
+style='mso-ansi-language:EN-US'>sometimes adding arguments can make it more
+efficient (because it can prune better)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'><span lang=EN-US style='mso-ansi-language:
+EN-US'>it depends � I need to find out how the execution model works???<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>David: this
+way, every time we want to add an argument, we have to change the grammar<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'><span lang=EN-US style='mso-ansi-language:
+EN-US'>why not have the argument as a list of subcategorisation features?<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'><span lang=EN-US style='mso-ansi-language:
+EN-US'>Dev: lookup table<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'><span lang=EN-US style='mso-ansi-language:
+EN-US'>build a term out of a function symbol and some arguments<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>types of
+verbs:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'><span lang=EN-US style='mso-ansi-language:
+EN-US'>infinitival � e.g. �to ��<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:2.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'><span lang=EN-US style='mso-ansi-language:
+EN-US'>finite � has tense information, e.g. �goes�<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:2.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'><span lang=EN-US style='mso-ansi-language:
+EN-US'>non-finite � e.g. �go�<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:2.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'><span lang=EN-US style='mso-ansi-language:
+EN-US'>past participal � e.g. �gone�<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:2.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'><span lang=EN-US style='mso-ansi-language:
+EN-US'>progressive � e.g. �going�<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:2.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'><span lang=EN-US style='mso-ansi-language:
+EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>�/�<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'><span lang=EN-US style='mso-ansi-language:
+EN-US'>e.g. �aux(Form/Required)�<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:2.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'><span lang=EN-US style='mso-ansi-language:
+EN-US'>it�s a function symbol � convention??? could have put it in two
+different arguments<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>rather than
+listing all the forms, the right thing to do is to build a morphological
+analyser in Prolog that generates them for you<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>represent
+parse trees as terms<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'><span lang=EN-US style='mso-ansi-language:
+EN-US'>pass the parse tree in as an argument if you�re trying to discern not
+just whether a string is generable by the grammar, but its structure<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'><span lang=EN-US style='mso-ansi-language:
+EN-US'>we could do it like either of these:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:35.7pt;margin-bottom:.0001pt'><span lang=EN-US style='mso-ansi-language:
+EN-US'>pt(s,[pt(np,[frog]),pt(�<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:35.7pt;margin-bottom:.0001pt'><span lang=EN-US style='mso-ansi-language:
+EN-US'>s(np(frog),vp(left))�<span style='mso-tab-count:4'>������������������������� </span></span><span
+lang=EN-US style='font-size:9.0pt;mso-bidi-font-size:10.0pt;mso-ansi-language:
+EN-US'>less typing, but often not as good as the former</span><span lang=EN-US
+style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<h3><span lang=EN-US style='mso-ansi-language:EN-US'>Semantics<o:p></o:p></span></h3>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>meaning is
+based somehow on the string�s structure<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'><span lang=EN-US style='mso-ansi-language:
+EN-US'>e.g. �I saw her duck�<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>ken church:
+ambiguous between a sentence and a noun phrase<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'><span lang=EN-US style='mso-ansi-language:
+EN-US'>�I see a bee�<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'><span lang=EN-US style='mso-ansi-language:
+EN-US'>each of those terms are nouns (letter �I�, the holy �see�, letter �a�,
+�bee�)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:35.7pt;margin-bottom:.0001pt'><span lang=EN-US style='mso-ansi-language:
+EN-US'>English allows noun noun compounds, e.g. metal bread knives<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>how could
+you incorporate meaning?<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'><span lang=EN-US style='mso-ansi-language:
+EN-US'>representation of the real world � denotational semantics, i.e. logic<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:35.7pt;margin-bottom:.0001pt'><span lang=EN-US style='mso-ansi-language:
+EN-US'>denotational semantics:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:53.55pt;margin-bottom:.0001pt'><span lang=EN-US style='font-size:
+9.0pt;mso-bidi-font-size:10.0pt;mso-ansi-language:EN-US'>denote � Mark out;
+distinguish by a mark or sign. L16. 2 Indicate; be an outward or visible sign
+of. L16.b Give to understand; make known. M17. &lt;unknown&gt;3 Note down;
+describe. Only in 17. 4 Signify; be a symbol for or a name of. M17.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:2.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:53.55pt;margin-bottom:.0001pt'><span lang=EN-US style='font-size:
+9.0pt;mso-bidi-font-size:10.0pt;mso-ansi-language:EN-US'>denotation (dictionary
+meaning) vs connotation (meaning we give to it)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:2.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:53.55pt;margin-bottom:.0001pt'><span lang=EN-US style='font-size:
+9.0pt;mso-bidi-font-size:10.0pt;mso-ansi-language:EN-US'>denotation
+/di:n&lt;schwa&gt;(U)&quot;teI&lt;longs&gt;(&lt;schwa&gt;)n/ n.M16. [Fr.
+d�tation or L denotatio(n-), f. denotat- pa. ppl stem of denotare: see
+DENOTE, -ATION.]1 The action of denoting; expression by marks, signs, or symbols;
+indication. M16.b A mark etc. denoting a thing; a sign. M17. 2 The meaning or
+signification of a term, as distinct from its implications or connotations.
+E17. 3 A term used to describe something; a designation. M17. 4 Logic. The
+object or range of objects which a word denotes; extension. M19.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:53.55pt'><span lang=EN-US
+style='mso-ansi-language:EN-US'>denotational relation between words and things
+� <i>words denote things</i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:2.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:71.4pt;margin-bottom:.0001pt'><span lang=EN-US style='mso-ansi-language:
+EN-US'>i.e. that words denote some things and not others, right???<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:71.4pt;margin-bottom:.0001pt'><span lang=EN-US style='mso-ansi-language:
+EN-US'>number vs numeral<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:53.55pt'><span lang=EN-US
+style='mso-ansi-language:EN-US'>they want the phrases of a logic to denote
+things<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:53.55pt'><span lang=EN-US
+style='mso-ansi-language:EN-US'>we want to know, for every word/phrase in
+English, what it�s denotation is<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:53.55pt'><span lang=EN-US
+style='mso-ansi-language:EN-US'>but you need a notation for representing the
+world<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:71.4pt;margin-bottom:.0001pt'><span lang=EN-US style='mso-ansi-language:
+EN-US'>so we�re going to use some other logic to denote the world<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:71.4pt;margin-bottom:.0001pt'><span lang=EN-US style='mso-ansi-language:
+EN-US'>it�s going to look as though we�re translating from English to logic,
+but since that logic is a notation for the world, you�re really only using that
+logic as an expedient for English denoting the world<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:71.4pt;margin-bottom:.0001pt'><span lang=EN-US style='mso-ansi-language:
+EN-US'>you�re going to need propositions in your logic<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:71.4pt;margin-bottom:.0001pt'><span lang=EN-US style='mso-ansi-language:
+EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>frog meets
+toad:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:17.85pt'><span lang=EN-US
+style='mso-ansi-language:EN-US'>meet(frog, toad)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:17.85pt'><span lang=EN-US
+style='mso-ansi-language:EN-US'>holds(meet, frog, toad)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:17.85pt'><span lang=EN-US
+style='mso-ansi-language:EN-US'>Davidsonian???<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:2.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:35.7pt;margin-bottom:.0001pt'><span lang=EN-US style='mso-ansi-language:
+EN-US'>meeting holds of certain events<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:2.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:35.7pt;margin-bottom:.0001pt'><span lang=EN-US style='mso-ansi-language:
+EN-US'>thereIsAn(e) AND meeter(e,frog) AND meetee(e,toad)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>lambda(x)
+meet(x,toad)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'><span lang=EN-US style='mso-ansi-language:
+EN-US'>where lambda is a function from objects to propositions (and then to
+truth values???)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.7pt'><span lang=EN-US
+style='mso-ansi-language:EN-US'>Richard Montague preferred x(hat) to Church�s
+lambda notation<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:17.85pt'><span lang=EN-US
+style='mso-ansi-language:EN-US'>so our logic has to include FOL plus the lambda
+stuff<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:17.85pt'><span lang=EN-US
+style='mso-ansi-language:EN-US'>(lambda(x)P)Question </span><span lang=EN-US
+style='font-size:10.0pt;font-family:Symbol;mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman";mso-ansi-language:EN-US;mso-char-type:
+symbol;mso-symbol-font-family:Symbol'><span style='mso-char-type:symbol;
+mso-symbol-font-family:Symbol'>�</span></span><span lang=EN-US
+style='mso-ansi-language:EN-US'> P[x </span><span lang=EN-US style='font-size:
+10.0pt;mso-ansi-language:EN-US'>|</span><span lang=EN-US style='font-size:10.0pt;
+font-family:Symbol;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-ansi-language:EN-US;mso-char-type:symbol;mso-symbol-font-family:
+Symbol'><span style='mso-char-type:symbol;mso-symbol-font-family:Symbol'>�</span></span><span
+lang=EN-US style='font-size:10.0pt;mso-ansi-language:EN-US'> </span><span
+lang=EN-US style='mso-ansi-language:EN-US'>Q]<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:17.85pt'><span lang=EN-US
+style='mso-ansi-language:EN-US'>(lambda(x) lambda(y) p(x, f(y)))a </span><span
+lang=EN-US style='font-size:10.0pt;font-family:Symbol;mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman";mso-ansi-language:
+EN-US;mso-char-type:symbol;mso-symbol-font-family:Symbol'><span
+style='mso-char-type:symbol;mso-symbol-font-family:Symbol'>�</span></span><span
+lang=EN-US style='mso-ansi-language:EN-US'> lambda(y) p(a, f(y))<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:17.85pt'><span lang=EN-US
+style='mso-ansi-language:EN-US'>(lambda(x) lambda(x) p(x, f(x)))a </span><span
+lang=EN-US style='font-size:10.0pt;font-family:Symbol;mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman";mso-ansi-language:
+EN-US;mso-char-type:symbol;mso-symbol-font-family:Symbol'><span
+style='mso-char-type:symbol;mso-symbol-font-family:Symbol'>�</span></span><span
+lang=EN-US style='mso-ansi-language:EN-US'> lambda(x) p(a,f(a))<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:17.85pt'><span lang=EN-US
+style='mso-ansi-language:EN-US'>what is our intuition about what this is
+supposed to mean???<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:17.85pt'><span lang=EN-US
+style='mso-ansi-language:EN-US'>we want to be able to rename variables and not
+change what the notation means<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>�most� is
+not expressible in FOL<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'><span lang=EN-US style='mso-ansi-language:
+EN-US'>why???<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:17.85pt'><span lang=EN-US
+style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:53.55pt'><span lang=EN-US
+style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:53.55pt'><span lang=EN-US
+style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<h2><span lang=EN-US style='mso-ansi-language:EN-US'>Projects<o:p></o:p></span></h2>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>write a
+natural language interface to a software system<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'><span lang=EN-US style='mso-ansi-language:
+EN-US'>pick a software system, one that you�re familiar with<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'><span lang=EN-US style='mso-ansi-language:
+EN-US'>imagine you�re going to interact with it in natural language<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'><span lang=EN-US style='mso-ansi-language:
+EN-US'>why are you going to interact with it in NL? not necessarily because
+it�s the best interface�<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:17.85pt'><span lang=EN-US
+style='mso-ansi-language:EN-US'>there seem to be very few pieces of software
+for which NL is the best interface, because people aren�t selling them<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:35.7pt;margin-bottom:.0001pt'><span lang=EN-US style='mso-ansi-language:
+EN-US'>but that�s because they don�t work<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:17.85pt'><span lang=EN-US
+style='mso-ansi-language:EN-US'>it doesn�t matter if it�s lame<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:35.7pt;margin-bottom:.0001pt'><span lang=EN-US style='mso-ansi-language:
+EN-US'>dancing bear � it�s not that it dances so well, but that it dances at
+all<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:17.85pt'><span lang=EN-US
+style='mso-ansi-language:EN-US'>don�t worry about practicality � shouldn�t just
+be signal processing<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:35.7pt;margin-bottom:.0001pt'><span lang=EN-US style='mso-ansi-language:
+EN-US'>the successful NL interfaces are just low-level<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:35.7pt;margin-bottom:.0001pt'><span lang=EN-US style='mso-ansi-language:
+EN-US'>we�re interested in higher-level � syntax, semantics etc.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>proposal
+due on Friday<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>Quake idea:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'><span lang=EN-US style='mso-ansi-language:
+EN-US'>the scene-descriptor might change the emphasis from kiling to
+interaction in some way<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'><span lang=EN-US style='mso-ansi-language:
+EN-US'>better still, it might allow players on the same team playing over the
+internet to automatically describe where they are to help them find each other<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<h2><span lang=EN-US style='mso-ansi-language:EN-US'>Questions<o:p></o:p></span></h2>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>prolog as a
+NDFA???<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>so is the
+DCG with extra arguments still CF???<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>to allow
+Prolog to take context into account, you need to maybe add arguments<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'><span lang=EN-US style='mso-ansi-language:
+EN-US'>but how would you ground Prolog�s stuff semantically??? how would you
+get it to disambiguate based on semantics??? can you do things
+probabilistically???<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'><span lang=EN-US style='mso-ansi-language:
+EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+</div>
+
+</body>
+
+</html>

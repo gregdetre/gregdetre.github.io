@@ -1,0 +1,1621 @@
+MIT media lab for 2003 application 3.doc
+MIT media lab application - user interface.doc
+MIT media lab for 2003 application 2.doc
+MIT media lab application - formation of language.doc
+MIT media lab for 2003 application 4.doc
+MIT media lab for 2003 application 5.doc
+MIT media lab for 2003 application statement of objectives draft 1.doc
+MIT media lab for 2003 application statement of objectives draft 2.doc
+MIT media lab for 2003 application 1.doc
+MIT media lab for 2003 application 6.doc
+reading group - soar 021114.doc
+reading - carver, evolution of blackboard control architectures 2.doc
+lecture - mas964 common sense 021121.doc
+lecture - mas964 common sense 021107.doc
+lecture - mas964 common sense 021114.doc
+lecture - airg, neal lesh, MERL, interactive search.doc
+lecture - airg, pustejovsky.doc
+lecture - airg, parkes, approximate + truthful vcg.doc
+lecture - AIRG, bayes etc 021001.doc
+notes - turing test.doc
+lecture - airg, shieber, turing test.doc
+reading - Chalmers.htm
+lecture - cs187 computational linguistics 020920.doc
+notes - cs187, ps2.doc
+lecture - cs187 computational linguistics 020927.doc
+section - cs187 021002.doc
+office hours - cs187 021001.doc
+notes - cs187, ps1.doc
+project revised design - 021031.doc
+officehours - cs187 021001.doc
+discarded - cs187, ps1.doc
+lecture - cs187 computational linguistics 021004.doc
+project meeting - cs187 021009.doc
+lecture - cs187 computational linguistics 021011.doc
+project meeting - cs187 021016.doc
+project meeting - cs187 021017.doc
+lecture - cs187 computational linguistics 021018.doc
+project analysis - questions for imdb 0211020.doc
+project design - cs187 021024.doc
+project ideas - cs187 early 1.doc
+project ideas - cs187, early 2, email to group 021008.doc
+project ideas - cs187, misc + questions.doc
+lecture - cs187 computational linguistics 021025.doc
+prolog - questions 021031.doc
+lecture - cs187 computational linguistics 021101.doc
+lecture - cs187 computational linguistics 021108.doc
+lecture - cs187 computational linguistics 021206.doc
+lecture - cs187 computational linguistics 021213.doc
+lecture - cs182 intelligent machines 020930.doc
+lecture - cs182 intelligent machines 020918.doc
+notes - cs182, ps0 thoughts.doc
+lecture - cs182 intelligent machines 021002.doc
+lecture - cs182 intelligent machines - 021007.doc
+lecture - cs182 intelligent machines 021009.doc
+lecture - cs182 intelligent machines 020923.doc
+lecture - cs182 intelligent machines - lisp review 020923.doc
+lecture - cs182 intelligent machines 020925.doc
+lecture - cs121 020917.doc
+lecture - mit 622J-1 126J pattern recognition 020910.doc
+lecture - mit 6-825 techniques in ai 020910.doc
+lecture - mit 6-825 techniques in ai 020912.doc
+discussion - Thomas Trappenberg 8 may 01.htm
+lecture - mit mas962 computational semantics 020910.doc
+lecture - mit mas962 computational semantics 020924.doc
+reactions - mas962 pustejovsky 021008.doc
+reactions - mas962 computational semantics 021001.doc
+lecture - mit mas962 computational semantics 021001.doc
+reading - deb roy, learning words publication.doc
+project proposal - mas962 project 021017.doc
+reading - mas962 miller 021001.doc
+reading - mas962 pustejovsky 021008.doc
+reading - brooks + smith 021020.doc
+reading - regier carlson 021009.doc
+notes - lera boroditsky.doc
+meeting - peter gorniak, regier + space 021010.doc
+presentation - cantwell smith, origin of objects 021022.doc
+lecture - mit mas962 computational semantics 021029.doc
+essay - animal behaviour I, Tinbergen 4 problems ethology.htm
+reactions - mas962 computational semantics 021022.doc
+reading - mas962 gardenfors regier hofstadter 021028.doc
+lecture - mit mas962 computational semantics 021022.doc
+draft - society of mind, final paper, my bits 2 finished.htm
+reactions - mas 962, mueller.doc
+reactions - mas962 computational semantics 021028.doc
+lecture - mit mas962 computational semantics 021008.doc
+discarded - mas962 computational semantics 020920.doc
+lecture - deb roy, faculty talk 021030.doc
+reading - mas962 goldstone 021101.doc
+summary - mas962 goldstone 021104.doc
+reactions - mas962 computational semantics 020920.doc
+project ideas - mas962 project 021009 2.doc
+reading - jackendoff 021024.doc
+lecture - mit mas962 computational semantics 021119.doc
+lecture - mit mas962 computational semantics 021105.doc
+reactions - mas962 computational semantics 021124.doc
+discarded - mueller 021112.doc
+reading - mas962 putnam 021202.doc
+discarded - mas962 putnam 021202.doc
+final paper - mit mas962 ver 2.doc
+final paper - mit mas962 ver 1.doc
+final paper - mit mas962.doc
+lecture - mit mas962 computational semantics 021112.doc
+reading - spelke carey gopnik 021117.doc
+lecture - ken norman, princeton, neural networks 030414.doc
+lecture - airg, jackendoff.doc
+proposal - curious machines project 3.doc
+notes - curious machines paper 9.doc
+essay - curious machines, final paper 9 fin.doc
+essay - curious machines - background, learning analogy.doc
+essay - curious machines, final paper 9 both parts fin.doc
+essay - curious machines, final paper 10 re-edit.doc
+reading - curious machines 030209 - call + tomasello, gopnik + meltzoff.doc
+lecture - curious machines 030205.doc
+lecture - curious machines 030212.doc
+reactions - curious machines - call + tomasello, gopnik + meltzoff 030209.doc
+reading - curious machines 030216.doc
+reading - curious machines 030223.doc
+reactions - curious machines 030216.doc
+presentation - curious machines - social cognition dogs 030218.doc
+lecture - curious machines 030219.doc
+reactions - curious machines 030223.doc
+reading - curious machines 030305.doc
+lecture - curious machines 030226.doc
+lecture - curious machines 030305.doc
+reactions - curious machines 030303.doc
+reading - curious machines 030310.doc
+lecture - curious machines 030312.doc
+reactions - curious machines 030311.doc
+lecture - curious machines 030402.doc
+reading - curious machines 030330 2.doc
+reading - curious machines 030408.doc
+reactions - curious machines 030331.doc
+reactions - curious machines 030408.doc
+lecture - curious machines 030416.doc
+reading - curious machines 030429.doc
+lecture - curious machines 030507.doc
+reading - curious machines 030421 2.doc
+lecture - curious machines 030423.doc
+reactions - curious machines 030421 2.doc
+lecture - curious machines 030430.doc
+lecture - curious machines 030514.doc
+notes - curious machines, complete reading list.doc
+essay - B&B II vision agnosias 2.htm
+lecture - eng178, house of mirth.doc
+lecture - society of mind 030212.doc
+lecture - society of mind 030205.doc
+lecture - society of mind 030402.doc
+lecture - society of mind 030409.doc
+lecture - society of mind 030219.doc
+questions - society of mind.doc
+discussion - lambert re early psychology 030218.doc
+lecture - society of mind 030305.doc
+lecture - society of mind 030312.doc
+lecture - society of mind 030319.doc
+lecture - society of mind 030416.doc
+essay - B&B III parietal cortex.htm
+reactions - society of mind, emotion machine ch 7 2.doc
+lecture - society of mind 030430.doc
+notes - society of mind, emotion machine ch 7 2.doc
+slarson - society of mind, emotion machine ch 7.doc
+essay - email to steve larson 030410.doc
+draft - society of mind, final paper, my bits 2.htm
+essay - email to steve larson 030410 2.doc
+lecture - society of mind 030423.doc
+slarson - society of mind, emotion machine ch 6.doc
+reactions - society of mind, emotion machine, ch 6, common sense.doc
+notes - society of mind, final paper.doc
+notes - society of mind, emotion machine, ch 6, common sense 2.doc
+c+c just so story.doc
+essay - society of mind, final paper.doc
+essay - B&B IV pre-frontal cortex 2.htm
+notes - society of mind, final paper 2.doc
+essay - society of mind, final paper - recovered.doc
+draft - society of mind, final paper, my bits.doc
+draft - society of mind, final paper, my bits 3.doc
+notes - society of mind, final paper 3.doc
+steve minsky 2.doc
+draft - society of mind, final paper, my bits 2.doc
+draft - society of mind, reward + consequences.doc
+Minsky2.doc
+draft - society of mind, final paper, my bits 2 finished.doc
+registration - society of mind 3.doc
+essay - society of mind, final paper 2.doc
+essay - society of mind, final paper 4 fin.doc
+lecture - society of mind 030514.doc
+planning - selker project ideas.doc
+interview - ted selker 030305.doc
+planning - selker project proposals.doc
+planning - discussion with ted selker re research project 030212.doc
+class - mit mas741 context aware 020916.doc
+class - mit mas741 context aware 020911.doc
+class - mit mas741 context aware 020918.doc
+reading - mit mas741 context aware papers for 020911.doc
+reactions - mit mas741 context aware papers 020916.doc
+reading - mit mas741 context aware papers for 020916.doc
+reading - mit mas741 context papers for 021023.doc
+reading - hugo liu et al, goose search engine.doc
+class - mit mas741 context aware 021009.doc
+class - mit mas741 context aware 021002.doc
+essay - B&B IV pre-frontal cortex 3.htm
+class - mit mas741 context aware 021030.doc
+draft - society of mind, final paper, my bits 3.htm
+reading - mit context aware 021105.doc
+class - mit mas741 context aware 021204.doc
+class - mit mas741 context aware 021211.doc
+reading - Damasio Descartes error.doc
+lecture - chomsky 030311.doc
+slashdot comments.doc
+lecture - cohen, multi-modal hci.doc
+lecture - airg, pollack.doc
+final - knox profile for website 030408.doc
+lecture - carey, origin of concepts.doc
+lecture - hearn, dangerous ideas.doc
+notes - knox profile for website.doc
+lecture - lieberman, faculty talk on common sense 030226.doc
+lecture - hopfield, spiking + timing.doc
+planning - summer holidays 2003.doc
+lecture - airg, nasa autonomy.doc
+lecture - hofstadter, analogy in physics 2.doc
+lecture - hofstadter, consciousness 2.doc
+notes - wired article on sacks.doc
+notes - article, informing ourselves to death.doc
+notes - hancock, fingerprints of the gods.doc
+lecture - selker, airg.doc
+lecture - ken kahn, toontalk, mit seminar.doc
+notes - domain name setup, gregdetre_co_uk.doc
+lecture - common sense reading group 030227.doc
+lecture - common sense reading group 030305.doc
+planning - courses, spring 2003.doc
+planning - finances 2002-3.doc
+notes - tax issues.doc
+planning - princeton.doc
+planning - future, masters + jobs 2003.doc
+notes - planned long-term reading.doc
+planning - interview at media lab.doc
+letter to referees 020904.doc
+notes - details for margot gill 030417.doc
+letter - reply to ken norman job offer.doc
+discussion - hugo liu 021106.doc
+letter - add drop petition forms 021122.doc
+planning - courses, fall 2002.doc
+reading - Mentifex AI document.doc
+discussion - joscelyn paine 1 mar 01.doc
+discussion - morten kringelbach 15 jan 02.doc
+essay - history + future of AI and a-life.doc
+essay - when we pass the turing test.doc
+lecture - Colin Campbell, kernel methods.doc
+lecture - Delon Dotson, future of the Internet.doc
+lecture - James Luke, deep blue deep computing.doc
+lecture - Kevin Warwick AI soc.doc
+lecture - Mark Yim, modular reconfigurable robots.doc
+lecture - Rolls, computational neuroscience 4 feb 02.doc
+lecture - Rolls, computational neuroscience, attention + STM.doc
+lecture - Rolls, computational neuroscience, conclusions.doc
+lecture - Sloman, SimAgents.doc
+project - Rolls, sparseness patterns NNs.doc
+reading - Levy Artificial Life (a-life).doc
+reading - MacDonalds ed, Connectionism.doc
+reading - Marr, personal view of AI.doc
+reading - Minsky, alien intelligence.doc
+reading - Minsky, Computers can't think.doc
+reading - minsky, symbolic vs connectionist.doc
+reading - minsky, will robots inherit the earth.doc
+reading - Moore, Crossing the Chasm.doc
+reading - web, Coding a transhuman AI.doc
+reading - Wordnet, 5 papers.doc
+revision - animal behaviour collection michaelmas 2001.doc
+revision - ethics collection michaelmas 01.doc
+revision - history collection trinity 01.doc
+revision - post-kantian collection hilary 01.doc
+notes - photocopying to do for Easter 02.doc
+revision - history finals 02.doc
+revision plan for Oxford PPP finals 2002.doc
+revision - all exams finals 02.doc
+revision - animal behaviour finals 02 citations.doc
+revision - animal behaviour finals 02.doc
+revision - collection qs so far.doc
+revision - ethics finals 02.doc
+revision - history finals 02 notes.doc
+revision - history finals 02 ver 2.doc
+revision - history, quotes.doc
+revision - l&c finals 02.doc
+revision - l&c finals citations 02.doc
+revision - mind finals 02.doc
+revision - post-kantian finals 02.doc
+revision - quotes.doc
+revision - to do list 2.doc
+revision - to do list.doc
+revision - neuro2 finals 02.doc
+revision - neuro2 finals citations 02.doc
+essay - attachment & permanence of objects.doc
+essay - feature detectors 17 nov 99.doc
+essay - infants' perceptual ability.doc
+essay - intelligence 26 oct 99.doc
+essay - interactive activation model and HIP.doc
+essay - language acquisition 3 nov 99.doc
+essay - memory.doc
+essay - moral development 3 nov 99.doc
+essay - motivational mechanisms (thirst).doc
+essay - Parkinson's disease and schizophrenia 2.doc
+essay - Parkinson's disease and schizophrenia.doc
+essay - piaget logical development ver2 26 oct 99.doc
+essay - Schizophrenia 3.doc
+essay - sensory coding 10 nov 99.doc
+exercises - short questions lang & morals 3 nov 99.doc
+exercises - short questions light dark 17 nov 99.doc
+exercises - short questions sensory coding.doc
+lecture - cognitive psychology - reading.doc
+lecture - infant attachment 18 Oct 99.doc
+lecture - infant perception 11 Oct 99.doc
+lecture - the permanence of objects 13 Oct 99.doc
+misc psych notes.doc
+presentation - moral development & language acquisition.doc
+quotes - manic + depressive.doc
+reading - Damasio Descartes error 31 jan 00.doc
+draft - society of mind, final paper, my bits.htm
+draft - society of mind, reward + consequences.htm
+essay - L&C I emma, language & thought.doc
+essay - L&C II emma, speech production + perception.doc
+essay - L&C III carmel, language acquisition.doc
+essay - L&C IV asma, inflectional morphology.doc
+essay - L&C V carmel, lexical processing.doc
+essay - L&C VI carmel, animal language.doc
+essay - L&C VII asma, sentence processing.doc
+essay - L&C VIII emma, hemispheric specialisation.doc
+lecture - L&C Ia speech production.doc
+lecture - Plunkett L&C Ia.doc
+notes - Altmann, Ascent of Man.doc
+notes - L&C I language + thought.doc
+notes - L&C II speech production + perception.doc
+notes - L&C III language acquisition.doc
+notes - L&C IV inflectional morphology.doc
+notes - L&C V lexical processing.doc
+notes - L&C VI animal language.doc
+notes - L&C VII asma, sentence processing.doc
+notes - L&C VIII emma, hemispheric specialisation.doc
+notes - prelims, reading aloud.doc
+presentation - L&C VIII emma, hemispheric specialisation.doc
+essay - B&B IV pre-frontal cortex.htm
+reading - gazzaniga, cognitive sciences - language + brain.doc
+reading - Lyons, Chomsky.doc
+reading - Rethinking innateness, Elman, Plunkett et al.doc
+seminar - social cognition in chimpanzees + dolphins.doc
+tutorial - L&C I emma, language & thought.doc
+tutorial - L&C II emma, speech perception-production.doc
+tutorial - L&C III carmel, language acquisition device.doc
+tutorial - L&C IV asma, inflectional morphology.doc
+tutorial - L&C V carmel, lexical processing.doc
+tutorial - L&C VI carmel, animal language.doc
+tutorial - L&C VII asma, sentence processing.doc
+tutorial - L&C VIII emma, hemispheric specialisation.doc
+discussion - Martin Davies brief in EP hallway re his seminar talk.doc
+discussion - Simon Stringer re head direction, place cells and Visnet 26 may 00.doc
+essay - B&B I vision cortical areas 4.doc
+essay - B&B II vision agnosias 2.doc
+essay - B&B III parietal cortex.doc
+essay - B&B IV pre-frontal cortex 2.doc
+essay - B&B IV pre-frontal cortex 3.doc
+essay - B&B IV pre-frontal cortex.doc
+essay - B&B V hunger.doc
+essay - B&B VI brain stimulation reward + thirst.doc
+essay - B&B VII emotion.doc
+lecture - Davies Explanation + Consciousness.doc
+lecture - Evans, emotion.doc
+lecture - Hubel - eye, brain + perception.doc
+lecture - memory & cognition I.doc
+lecture - Morten, neuroimaging orbitofrontal.doc
+lecture - rolls Neural Networks & Brain functions 1 may 00 week 1.doc
+lecture - social I.doc
+lecture - social IIa 8 may 00.doc
+lecture - social IIb 12 may 00.doc
+lecture - social IIIa.doc
+lecture - social IIIb attitudes.doc
+lecture - social IVa persuasion and attitude change.doc
+lecture - social IVb.doc
+notes - B&B vision I cortical areas.doc
+reading - artificial emotion Ian Wilson Gamasutra.doc
+reading - B&B basal ganglia misc.doc
+reading - B&B brain stimulation reward + thirst misc.doc
+reading - B&B emotion misc.doc
+reading - B&B hunger 1 misc.doc
+reading - B&B hunger 2 misc.doc
+reading - B&B parietal cortex - New Cognitive Neurosciences.doc
+reading - B&B parietal cortex - Principles of Neural Science.doc
+reading - B&B parietal cortex misc.doc
+reading - B&B pre-frontal cortex Fuster.doc
+reading - B&B pre-frontal cortex misc.doc
+reading - B&B pre-frontal cortex Passingham.doc
+reading - B&B pre-frontal cortex RHS Carpenter NP.doc
+reading - B&B pre-frontal Kolb & Whishaw.doc
+reading - B&B Rolls PPT presentation on taste + eating.doc
+reading - consciousness introduction New Cognitive Neurosciences Schachter.doc
+readingx - Crick + Koch on Consciousness in New Cognitive Neurosciences.doc
+seminar - cog sci I 8 may 00.doc
+tutorial - B&B, Rolls, emotion.doc
+tutorial - rolls B&B I vision segregation.doc
+tutorial - rolls B&B II - inferotemporal + agnosia.doc
+tutorial - rolls B&B III - parietal cortex - 18 may 00.doc
+tutorial - rolls B&B IV pre-frontal cortex.doc
+tutorial - rolls B&B V hunger.doc
+tutorial - rolls B&B VI brain stimulation reward + thirst.doc
+tutorial - Rolls, attention.doc
+tutorial - Rolls, vision.doc
+essay - animal behaviour II, communication.htm
+essay - animal behaviour III, consciousness.htm
+essay - animal behaviour IV, a-life 3.htm
+essay - animal behaviour IV, a-life 3_files
+essay - animal behaviour V, kin recognition.htm
+essay - animal behaviour VI, cognitive 2.htm
+discussion - Thomas Trappenberg 8 may 01.doc
+essay - animal behaviour II, communication.doc
+essay - animal behaviour III, consciousness.doc
+essay - animal behaviour IV, a-life 3.doc
+essay - animal behaviour V, kin recognition.doc
+essay - animal behaviour VI, cognitive 2.doc
+essay - animal behaviour VII, optimality.doc
+essay - animal behaviour VIII, social learning.doc
+lecture - animal, sexual selection.doc
+lecture - Weiskrantz, Consciousness society, blindsight.doc
+notes - animal behaviour I, Tinbergen 4 problems ethology.doc
+notes - animal behaviour II, communication.doc
+notes - animal behaviour III, consciousness.doc
+notes - animal behaviour IV, a-life.doc
+notes - animal behaviour V, kin recognition.doc
+notes - animal behaviour VI, cognitive.doc
+notes - animal behaviour VII, optimality.doc
+notes - animal behaviour VIII, social learning.doc
+reading - Gould + Lewontin, spandrels + panglossian paradigm.doc
+reading - Manning and Dawkins, animal behaviour.doc
+reading - misc animal behaviour stuff.doc
+reading list - Simpson, animal behaviour I, II, III, IV.doc
+tutorial - animal behaviour I, Simpson, Tinbergen.doc
+tutorial - animal behaviour II, Simpson, communication.doc
+tutorial - animal behaviour III, Simpson, consciousness.doc
+tutorial - animal behaviour VIII, Dawkins, social learning.doc
+tutorial - animal behaviour, kin recognition.doc
+tutorial - Dawkins, animal behaviour, cognition.doc
+tutorial - Dawkins, animal behaviour, optimality.doc
+tutorial - Reil, animal behaviour IV, artificial life.doc
+essay - animal behaviour I, Tinbergen 4 problems ethology.doc
+lecture - social, expression and communication of affect.doc
+notes - pinker on a review of HtMW.doc
+questions - more psychology + physiology.doc
+essay I - Mill hedonism 2.doc
+essay II - Mill well-being.doc
+essay III - Mill utilitarianism knowledge.doc
+essay IV - Mill utilitarianism proof + measurement.doc
+essay V - Mill utilitarianism integrity + personal PoV.doc
+essay VI - Mill utilitarianism justice 3.doc
+essay VII - Mill utilitarianism rights.doc
+reading - Griffin Value Judgements ch 6-7.doc
+reading - Griffin Well-being part 2.doc
+reading - Mill Crisp on Utilitarianism ch 5.doc
+reading - Mill integrity + personal PoV - Smart & Williams.doc
+reading - Mill integrity + personal PoV Crisp.doc
+reading - Mill integrity + personal PoV misc.doc
+reading - Mill justice misc 2.doc
+reading - Mill justice misc.doc
+reading - Mill utilitarianism Crisp structure.doc
+reading - Mill utilitarianism rights misc.doc
+reading - Nietzsche Tanner introduction to Twilight of the Idols.doc
+readingx - Williams Ethics and the Limits of Philosophy ch 5-6.doc
+tutorial - Tasioulas Mill II well-being.doc
+tutorial - Tasioulas Mill III forms of utilitarianism.doc
+tutorial - Tasioulas Mill IV proof + measurement.doc
+tutorial - Tasioulas Mill V utilitarianism integrity + personal PoV.doc
+tutorial - Tasioulas Mill VI utilitarianism + justice.doc
+notes - ethics of AI, initial ideas 1.doc
+abstract - reason, oct 01 plan for Tasioulas 1.doc
+abstract - reason, sept 01 plan for Tasioulas 1.doc
+discussion - Kim Plunkett 11 jan 02.doc
+essay - thesis Tasioulas draft 9.doc
+essay - thesis, rationality a - introduction 1.doc
+essay - thesis, rationality a - introduction 2.doc
+essay - thesis, rationality b - evolution 1.doc
+essay - thesis, rationality b - evolution 2.doc
+essay - thesis, rationality c - connectionism 1.doc
+essay - thesis, rationality c - connectionism 2.doc
+essay - thesis, rationality c - connectionism 3.doc
+essay - thesis, rationality d - ending 1.doc
+essay - thesis, rationality d - ending 2.doc
+essay - thesis, rationality d - ending 3.doc
+essay - thesis, rationality restart 9 fin.doc
+junk - questions printout 10 feb 02.doc
+notes - humour, initial ideas 1.doc
+notes - printers.doc
+notes - reason, working ideas 9.doc
+reading - Kenny's overview of Hofstadter on Godel.doc
+thesis - junk store.doc
+tutorial - thesis I, Tasioulas.doc
+tutorial - thesis II, Tasioulas.doc
+tutorial - thesis III, Tasioulas.doc
+lecture - descartes 1st meditation 15 oct 99.doc
+lecture - descartes 2nd meditation 22 Oct 99.doc
+lecture - descartes 5 error & innateness 16 feb 00.htm.doc
+lecture - descartes theory of error.doc
+lecture - logic 13 oct 99.doc
+lecture - logic 27 oct 99.doc
+exercises - logic I q 15 22 oct 99.doc
+exercises - logic II 26 oct 99.doc
+exercises - logic III 3 nov 99.doc
+essay - Descartes cogito.doc
+essay - Descartes dualism II external world.doc
+essay - Descartes dualism III union of mind + body.doc
+essay - Descartes existence God.doc
+essay - Descartes method of doubt.doc
+essay - Descartes mind-body.doc
+essayx - Descartes clear and distinct and cartesian circle.doc
+logic misc q.doc
+notes - ramblings about consciousness.doc
+essay - Rosen, post-Kantian II, nietzsche tragedy.doc
+essay - Rosen, post-Kantian III, nietzsche revaluation all values.doc
+essay - Rosen, post-Kantian IV, nietzsche ER + WTP.doc
+essay - Rosen, post-Kantian V, hegel history matters to philosophy.doc
+essay - Rosen, post-Kantian VI, hegel vs kant.doc
+essay - Rosen, post-Kantian VII, hegel + nietzsche vs kant CI.doc
+essay - Rosen, post-Kantian VIII, hegel phenomenology consciousness.doc
+initial meeting with Rosen 30 nov 00.doc
+lecture - Inwood, Hegel II.doc
+lecture - post-kantian, Schroeder on Schopenhauer I, introduction.doc
+lecture - post-kantian, Schroeder on Schopenhauer II.doc
+notes - Rosen, post-Kantian I, nietzsche truth.doc
+notes - Rosen, post-Kantian II, nietzsche tragedy.doc
+notes - Rosen, post-Kantian III, nietzsche revaluation all values.doc
+notes - Rosen, post-Kantian IV, nietzsche ER + WTP.doc
+notes - Rosen, post-Kantian V, hegel history matters to philosophy.doc
+notes - Rosen, post-Kantian VI, hegel vs kant.doc
+notes - Rosen, post-Kantian VII, hegel + nietzsche vs kant CI.doc
+notes - Rosen, post-Kantian VIII, hegel phenomenology consciousness.doc
+essay - animal behaviour VII, optimality.htm
+reading - Hegel by Taylor.doc
+reading - Hegel, Cambridge companion.doc
+reading - Heller, Importance of Nietzsche.doc
+reading - Nietzsche by Schacht.doc
+reading - Nietzsche, Birth of tragedy.doc
+reading - Nietzsche, Daybreak.doc
+reading - Nietzsche, Genealogy of morals.doc
+reading - Routledge, Nietzsche.doc
+seminar - PF Strawson at CCC.doc
+tutorial - Rosen, post-Kantian I, nietzsche truth.doc
+tutorial - Rosen, post-Kantian II, nietzsche birth of tragedy.doc
+tutorial - Rosen, post-Kantian III, nietzsche revaluation of all values.doc
+tutorial - Rosen, post-Kantian IV, WTP + ER.doc
+tutorial - Rosen, post-Kantian V, hegel history matters to philosophy.doc
+tutorial - Rosen, post-Kantian VI, hegel vs kant.doc
+tutorial - Rosen, post-Kantian VII, hegel nietzsche kant.doc
+tutorial - Rosen, post-Kantian VIII, hegel phenomenology.doc
+essay - Rosen, post-Kantian I, nietzsche truth.doc
+Greg Detre - matrix essay for Think.doc
+Greg Detre - Philosophy Now Matrix competition essay fin.doc
+Greg Detre - Stanford competition matrix essay fin.doc
+reading - Dennett, kinds of minds.doc
+chat with yousef 24 july 00.doc
+philosophy now competition details.doc
+Philosophy Now Matrix competition covering letter.doc
+Philosophy Now Matrix competition essay 1.doc
+Philosophy Now Matrix competition essay 10.doc
+Philosophy Now Matrix competition essay 2.doc
+Philosophy Now Matrix competition essay 3.doc
+Philosophy Now Matrix competition essay 4.doc
+Philosophy Now Matrix competition essay 5.doc
+Philosophy Now Matrix competition essay 6.doc
+Philosophy Now Matrix competition essay 7.doc
+Philosophy Now Matrix competition essay 8.doc
+Philosophy Now Matrix competition essay 9.doc
+Philosophy Now Matrix competition notes 1.doc
+Philosophy Now Matrix competition notes 2.doc
+essay - Snowdon, Mind I - materialism identity theory.doc
+essay - Snowdon, Mind II - functionalism.doc
+essay - Snowdon, Mind III - Wittgenstein + private langauge.doc
+essay - Snowdon, Mind V - action.doc
+essay - Snowdon, Mind VII - machines fin.doc
+essay - Snowdon, Mind VII - machines.doc
+essay - Snowdon, Mind VIII, consciousness.doc
+essay from sarah w - private language argument.doc
+lecture - Avramides history of mind.doc
+lecture - Blakemore, conch, consciousness.doc
+lecture - Boden, conch.doc
+lecture - Campbell, conch, consciousness.doc
+lecture - Campbell, consciousness.doc
+lecture - Campbell, cross-modal senses.doc
+lecture - Campbell, delusion.doc
+lecture - Campbell, modularity.doc
+lecture - Campbell, systematicity.doc
+lecture - Campbell, theory theory.doc
+lecture - Dennett LSE, taking the first person point of view seriously.doc
+lecture - Foster, Theories of Mind I.doc
+lecture - Foster, Theories of Mind II.doc
+lecture - Greenfield, conch, consciousness.doc
+lecture - Gregory, conch, consciousness perception qualia.doc
+lecture - logic & language I.doc
+lecture - logic & language Ia.doc
+lecture - logic & language IIa.doc
+lecture - logic & language IIIb.doc
+lecture - logic & language IVb.doc
+lecture - mind II, Hymans revision class.doc
+lecture - Nagel psychophysical nexus.doc
+lecture - Papineau, conch.doc
+lecture - Penrose, quantum + consciousness.doc
+lecture - phil of mind I, Fricker.doc
+lecture - phil of mind II, Fricker.doc
+lecture - phil of mind II.doc
+lecture - phil of mind III, Fricker.doc
+lecture - phil of mind V, Fricker.doc
+lecture - Sloman, conch, varieties of consciousness.doc
+lecture - Sloman, varieties of evolvable minds.doc
+lecture - Snowdon history of phil.doc
+lecture - Soteriou, Mind.doc
+lecture - Strawson, conch, consciousness.doc
+lecture - Swinburne, conch, consciousness.doc
+lecture - Wilkes, philosophy of psychology Ia.doc
+lecture - Wilkes, philosophy of psychology Ib.doc
+notes - ramblings about private language.doc
+notes - Snowdon, Mind I - materialism.doc
+notes - Snowdon, Mind II - functionalism.doc
+notes - Snowdon, Mind III - wittgenstein + private language.doc
+notes - Snowdon, Mind IV - perception.doc
+notes - Snowdon, Mind V - action.doc
+notes - Snowdon, Mind VII - machines.doc
+notes - Snowdon, Mind VIII - consciousness.doc
+essay - B&B VII emotion.htm
+notes from sarah w - wittgenstein, hacker little book.doc
+presentation - BPhil of Mind - Dennett CE ch 5.doc
+essay - animal behaviour VIII, social learning.htm
+essay - attachment & permanence of objects.htm
+reading - Block, how not to find the NCC.doc
+reading - Block, what is functionalism.doc
+reading - Byrne, behaviourism.doc
+reading - Chalmers, zombie Dave.doc
+reading - Chalmers.doc
+reading - Churchlands, m&C + hornswoggle.doc
+reading - Clancey, Review of Chalmers.doc
+reading - conversation with Davidson on anti-foundationalist language philosophy.doc
+reading - Davies, philosophy of mind in Grayling.doc
+reading - Dennett, quining qualia.doc
+reading - Honderich, Consciousness and microtubules.doc
+reading - Jaynes, Origin of consciousness bicameral mind.doc
+reading - Lloyd, undergraduate essay on machine consciousness.doc
+reading - Nagel CtI + the Mind-Body Problem.doc
+reading - nagel, conceiving the impossible - the mind-body problem.doc
+reading - Nagel, Panpsychism.doc
+reading - Nagel, The sleep of reason.doc
+readingx - Nagel Psychophysical nexus.doc
+scribblings - definition of phenomenological.doc
+seminar - Bphil of mind II Davidson.doc
+seminar - Bphil of mind II introduction.doc
+seminar - Bphil of mind III Dennett discussion.doc
+seminar - Bphil of mind III McGinn.doc
+seminar - Bphil of mind IV Russell.doc
+seminar - Bphil of mind V personal identity Olson.doc
+seminar - Bphil of mind V personal identity Parfit.doc
+seminar - Nagel Q&A.doc
+seminar - physics advanced IV.doc
+seminar handout- Bphil of mind II Davidson.doc
+tutorial - Child, mind revision I.doc
+tutorial - Snowdon, mind I - materialism.doc
+tutorial - Snowdon, mind II.doc
+tutorial - Snowdon, mind III - Wittgenstein.doc
+tutorial - Snowdon, mind IV - perception.doc
+tutorial - Snowdon, mind V - action.doc
+tutorial - Snowdon, mind VII - machines.doc
+tutorial - Snowdon, mind VIII - consciousness.doc
+excerpts f sarah w - I confess myself to have one of those dull souls.doc
+excerpts f sarah w - lockepersid.doc
+notes f sarah w - induction + causation.doc
+essay - Berkeley, history III, idealism.doc
+essay - comparative, history VI, ideas + concepts.doc
+essay - Hume, history IV, induction.doc
+essay - Hume, history V, causation 2.doc
+essay - Kant, history VII, synthetic a priori.doc
+essay - Kant, history VIII, space + time.doc
+essay - Locke, history I, primary + secondary qualities.doc
+essay - Locke, history II, personal identity.doc
+handout - Taylor on Berkeley.doc
+lecture - history of philosophy I, Morris.doc
+lecture - Morris, history II.doc
+misc Kant points.doc
+notes - Berkeley, history III, idealism.doc
+notes - comparative, history VI, ideas + concepts.doc
+notes - Hume, history IV, induction.doc
+notes - Hume, history V, causation.doc
+notes - initial reading for history of philosophy, Allais.doc
+notes - Kant, history VII, synthetic a priori.doc
+notes - Kant, history VIII, space + time.doc
+notes - Locke, history I, primary + secondary qualities.doc
+notes - Locke, history II, personal identity.doc
+presentation - Taylor revision I, Locke on ideas + reality.doc
+reading - Grayling, empiricists in Grayling.doc
+reading - Hume on causation.doc
+reading - Mackie, problems from locke.doc
+reading - Russell, HoWP - Locke.doc
+reading - Williams, Problems of the Self, self + future.doc
+tutorial - Allais, history I, Locke, primary secondary qualities.doc
+tutorial - Allais, history II, Locke, personal identity.doc
+tutorial - Allais, history IV, Hume, induction.doc
+tutorial - Allais, history V, Hume, causation.doc
+tutorial - Allais, history VI, Hume, ideas + concepts.doc
+tutorial - Allais, history VII, Kant, synthetic a priori.doc
+tutorial - Allais, history VIII, Kant, space + time.doc
+reading - Bennett.doc
+Free Will revision.doc
+essay - attachment & permanence of objects_header.htm
+essay - attachment & permanence of objects_editdata.mso
+notes from sarah w - Free Will.doc
+essay - ethics class, Tasioulas, objectivism 2.doc
+essay - ethics I, amoralism.doc
+essay - ethics II, emotivism.doc
+essay - ethics III, moral facts.doc
+essay - ethics IV, consequentialism.doc
+essay - ethics V, kantianism.doc
+essay - ethics VI, virtue theory.doc
+essay - ethics VII, free will.doc
+exam - ethics 2001.doc
+lecture - ethics Ia, morality, egoism + altruism.doc
+lecture - ethics IIa, consequentialism.doc
+lecture - ethics IIIa, virtue ethics.doc
+notes - ethics class, Tasioulas, objectivism 2.doc
+notes - ethics I, amoralism.doc
+notes - ethics II, emotivism.doc
+notes - ethics III, moral facts.doc
+notes - ethics IV, consequentialism.doc
+notes - ethics V, kantianism.doc
+notes - ethics VI, virtue theory.doc
+notes - ethics VII, free will.doc
+notes - virtue ethics.doc
+notes f steve + sarah - important together printable.doc
+essay - thesis Tasioulas draft 9_files
+reading - Foot, natural goodness.doc
+reading - Hume on ethics.doc
+reading - MacIntyre, after virtue.doc
+reading - Strawson, freedom + resentment.doc
+reading - Walker, little book of Kant.doc
+reading - web, Moral Discourse and Practice.doc
+reading - Williams in Grayling.doc
+tutorial - Tasioulas ethics revision I objectivism.doc
+tutorial - Tasioulas ethics revision II kant.doc
+tutorial - Tasioulas ethics revision, III virtue ethics.doc
+tutorial - Tasioulas ethics revision, IV consequentialism.doc
+tutorial - Watkins, ethics I - amoralism.doc
+tutorial - Watkins, ethics II - emotivism.doc
+tutorial - Watkins, ethics III - moral facts.doc
+tutorial - Watkins, ethics IV - consequentialism.doc
+tutorial - Watkins, ethics V - kant.doc
+tutorial - Watkins, ethics VI - virtue.doc
+tutorial - Watkins, ethics VII - free will.doc
+tutorial - Watkins, ethics VIII - rights.doc
+lecture - Gerry Cohen, freedom + money.doc
+lecture - Hans Snook, Orange founder in Union.doc
+lecture - Maurice Cotterell, lost tomb of viracocha.doc
+meeting - Tasioulas, 0th week.doc
+notes - philosophers' dates + chronology.doc
+notes - possible sponsorship for Consciousness Society.doc
+notes - Routledge, miracles.doc
+notes - web, Morris on realism.doc
+reading - Hofstadter, GEB.doc
+reading - Davidson, mental events.doc
+bibliography - iles, neuro I somatic + pain.doc
+bibliography - iles, neuro II reaching + movement.doc
+bibliography - iles, neuro III vision.doc
+bibliography - iles, neuro IV sound.doc
+bibliography - King, hearing.doc
+essay - Iles neuro I, somatic obj manipulation + surface.doc
+essay - iles, neuro II reaching + movement.doc
+essay - iles, neuro III, parallel visual processing.doc
+essay - iles, neuro IV, sound localisation.doc
+essay - King, hearing.doc
+essay - parker, neuro V, stereopsis 3.doc
+lecture - intro to physiology 11 oct 99.doc
+lecture - neuro prelims, auditory system 1.doc
+lecture - neuro prelims, auditory system 2.doc
+lecture - neuro prelims, visual system.doc
+lecture - neuro, prelims, somatosensory cortex.doc
+lecture - neuro2 III 18 may 00.doc
+lecture - neuro2 week I 4 may 00.doc
+lecture - neuro2 week II 11 may 00.doc
+lecture-tutorial - neuro prelims, visual system.doc
+notes - Iles neuro I, somatic obj manipulation + surface.doc
+notes - Iles, neuro II reaching + movement.doc
+notes - Iles, neuro III, parallel visual processing 2.doc
+notes - Iles, neuro IV, sound localisation.doc
+notes - King, hearing 2b.doc
+notes - Parker, V stereopsis.doc
+essay - attachment & permanence of objects_filelist.xml
+essay - B&B I vision cortical areas 4.htm
+essay - B&B II vision agnosias 2_image001.jpg
+essay - B&B II vision agnosias 2_image002.jpg
+questions - Diamond, rise and fall of the third chimpanzee.doc
+reading - Carpenter, prelims revision notes.doc
+reading - Kandel + Schwarz, Principles of Neural Science.doc
+reading - Zeki, Vision of the brain.doc
+tutorial - Ellory, neuro prelims, auditory system.doc
+tutorial - Ellory, neuro prelims, visual system.doc
+tutorial - Iles, neuro I, somatosens.doc
+tutorial - Iles, neuro II, reaching.doc
+tutorial - Iles, neuro III, parallel visual processing.doc
+tutorial - King, neuro sound localisation.doc
+tutorial - neuro, Ellory prelims, somatosensory.doc
+tutorial - Rosie Adams, prelims, neuroanatomy.doc
+meeting - Rolls, 0th week.doc
+finals marks breakdown comparison.doc
+abstract - reason, oct 01 plan for Tasioulas 1.htm
+abstract - reason, sept 01 plan for Tasioulas 1.htm
+bibliography - iles, neuro I somatic + pain.htm
+bibliography - iles, neuro II reaching + movement.htm
+bibliography - iles, neuro III vision.htm
+bibliography - iles, neuro IV sound.htm
+bibliography - King, hearing.htm
+bibliography - King, hearing_header.htm
+bibliography - King, hearing_filelist.xml
+c+c just so story.htm
+chat with yousef 24 july 00.htm
+essay - B&B II vision agnosias 2_image003.gif
+class - mit mas741 context aware 020911.htm
+essay - B&B II vision agnosias 2_image004.gif
+class - mit mas741 context aware 020916.htm
+essay - B&B II vision agnosias 2_filelist.xml
+class - mit mas741 context aware 020918.htm
+essay - B&B VI brain stimulation reward + thirst.htm
+class - mit mas741 context aware 021002.htm
+essay - Berkeley, history III, idealism.htm
+class - mit mas741 context aware 021009.htm
+essay - Snowdon, Mind VII - machines fin_files
+class - mit mas741 context aware 021030.htm
+essay - Snowdon, Mind VII - machines.htm
+class - mit mas741 context aware 021204.htm
+essay - Snowdon, Mind VIII, consciousness.htm
+class - mit mas741 context aware 021211.htm
+discarded - cs187, ps1.htm
+essay - comparative, history VI, ideas + concepts.htm
+discarded - mas962 computational semantics 020920.htm
+lecture - Morris, history II.htm
+discarded - mas962 putnam 021202.htm
+lecture - neuro2 III 18 may 00.htm
+discarded - mueller 021112.htm
+lecture - neuro2 week I 4 may 00.htm
+discussion - hugo liu 021106.htm
+discussion - joscelyn paine 1 mar 01.htm
+discussion - Kim Plunkett 11 jan 02.htm
+essay - thesis, rationality a - introduction 1.htm
+discussion - lambert re early psychology 030218.htm
+discussion - Martin Davies brief in EP hallway re his seminar talk.htm
+discussion - morten kringelbach 15 jan 02.htm
+discussion - Simon Stringer re head direction, place cells and Visnet 26 may 00.htm
+essay - B&B V hunger.htm
+essay - society of mind, final paper - recovered.htm
+essay - curious machines - background, learning analogy.htm
+essay - curious machines - background, learning analogy_files
+essay - society of mind, final paper 2.htm
+essay - curious machines, final paper 10 re-edit.htm
+essay - curious machines, final paper 10 re-edit_files
+essay - society of mind, final paper 4 fin.htm
+essay - curious machines, final paper 9 both parts fin.htm
+essay - curious machines, final paper 9 both parts fin_files
+essay - society of mind, final paper.htm
+essay - curious machines, final paper 9 fin.htm
+essay - curious machines, final paper 9 fin_files
+essay - Descartes cogito.htm
+essay - Descartes dualism II external world.htm
+essay - Descartes dualism III union of mind + body.htm
+essay - Descartes existence God.htm
+essay - Descartes method of doubt.htm
+essay - Descartes mind-body.htm
+essay - thesis, rationality a - introduction 2.htm
+essay - email to steve larson 030410 2.htm
+essay - thesis, rationality b - evolution 1.htm
+essay - email to steve larson 030410.htm
+essay - ethics class, Tasioulas, objectivism 2.htm
+essay - ethics I, amoralism.htm
+essay - ethics II, emotivism.htm
+essay - ethics III, moral facts.htm
+essay - ethics IV, consequentialism.htm
+essay - ethics V, kantianism.htm
+essay - ethics VI, virtue theory.htm
+essay - ethics VII, free will.htm
+essay - feature detectors 17 nov 99.htm
+essay - feature detectors 17 nov 99_image001.png
+essay - feature detectors 17 nov 99_image002.png
+essay - feature detectors 17 nov 99_image003.png
+essay - feature detectors 17 nov 99_image004.jpg
+essay - feature detectors 17 nov 99_header.htm
+essay - feature detectors 17 nov 99_filelist.xml
+essay - history + future of AI and a-life.htm
+essay - Hume, history IV, induction.htm
+essay - Hume, history V, causation 2.htm
+essay - Hume, history V, causation 2_files
+essay - Iles neuro I, somatic obj manipulation + surface.htm
+essay - iles, neuro II reaching + movement.htm
+essay - iles, neuro III, parallel visual processing.htm
+essay - iles, neuro IV, sound localisation.htm
+essay - infants' perceptual ability.htm
+essay - infants' perceptual ability_header.htm
+essay - infants' perceptual ability_filelist.xml
+essay - intelligence 26 oct 99.htm
+essay - intelligence 26 oct 99_header.htm
+essay - intelligence 26 oct 99_editdata.mso
+essay - intelligence 26 oct 99_filelist.xml
+essay - interactive activation model and HIP.htm
+essay - Kant, history VII, synthetic a priori.htm
+essay - Kant, history VIII, space + time.htm
+essay - King, hearing.htm
+essay - King, hearing_files
+essay - L&C I emma, language & thought.htm
+essay - L&C II emma, speech production + perception.htm
+essay - L&C III carmel, language acquisition.htm
+essay - L&C IV asma, inflectional morphology.htm
+essay - L&C IV asma, inflectional morphology_files
+essay - L&C V carmel, lexical processing.htm
+essay - L&C VI carmel, animal language.htm
+essay - L&C VI carmel, animal language_files
+essay - L&C VII asma, sentence processing.htm
+essay - L&C VIII emma, hemispheric specialisation.htm
+essay - language acquisition 3 nov 99.htm
+essay - language acquisition 3 nov 99_header.htm
+essay - language acquisition 3 nov 99_filelist.xml
+essay - Locke, history I, primary + secondary qualities.htm
+essay - Locke, history II, personal identity.htm
+essay - memory.htm
+essay - moral development 3 nov 99.htm
+essay - moral development 3 nov 99_header.htm
+essay - moral development 3 nov 99_filelist.xml
+essay - motivational mechanisms (thirst).htm
+essay - parker, neuro V, stereopsis 3.htm
+essay - Parkinson's disease and schizophrenia 2.htm
+essay - Parkinson's disease and schizophrenia.htm
+essay - Parkinson's disease and schizophrenia_files
+essay - piaget logical development ver2 26 oct 99.htm
+essay - piaget logical development ver2 26 oct 99_header.htm
+essay - piaget logical development ver2 26 oct 99_filelist.xml
+essay - Rosen, post-Kantian I, nietzsche truth.htm
+essay - Rosen, post-Kantian II, nietzsche tragedy.htm
+essay - Rosen, post-Kantian III, nietzsche revaluation all values.htm
+essay - Rosen, post-Kantian IV, nietzsche ER + WTP.htm
+essay - Rosen, post-Kantian V, hegel history matters to philosophy.htm
+essay - Rosen, post-Kantian VI, hegel vs kant.htm
+essay - Rosen, post-Kantian VII, hegel + nietzsche vs kant CI.htm
+essay - Rosen, post-Kantian VIII, hegel phenomenology consciousness.htm
+essay - Schizophrenia 3.htm
+essay - sensory coding 10 nov 99.htm
+essay - sensory coding 10 nov 99_header.htm
+essay - sensory coding 10 nov 99_filelist.xml
+essay - Snowdon, Mind I - materialism identity theory.htm
+essay - Snowdon, Mind II - functionalism.htm
+essay - Snowdon, Mind III - Wittgenstein + private langauge.htm
+essay - Snowdon, Mind V - action.htm
+essay - Snowdon, Mind VII - machines fin.htm
+essay - thesis Tasioulas draft 9.htm
+essay - thesis, rationality b - evolution 2.htm
+essay - thesis, rationality c - connectionism 1.htm
+essay - thesis, rationality c - connectionism 2.htm
+essay - thesis, rationality c - connectionism 3.htm
+essay - thesis, rationality d - ending 1.htm
+essay - thesis, rationality d - ending 2.htm
+essay - thesis, rationality d - ending 3.htm
+essay - thesis, rationality restart 9 fin.htm
+essay - thesis, rationality restart 9 fin_header.htm
+essay - thesis, rationality restart 9 fin_filelist.xml
+essay - when we pass the turing test.htm
+essay from sarah w - private language argument.htm
+essay I - Mill hedonism 2.htm
+essay II - Mill well-being.htm
+essay III - Mill utilitarianism knowledge.htm
+essay IV - Mill utilitarianism proof + measurement.htm
+essay V - Mill utilitarianism integrity + personal PoV.htm
+essay VI - Mill utilitarianism justice 3.htm
+essay VII - Mill utilitarianism rights.htm
+essayx - Descartes clear and distinct and cartesian circle.htm
+exam - ethics 2001.htm
+excerpts f sarah w - I confess myself to have one of those dull souls.htm
+excerpts f sarah w - lockepersid.htm
+exercises - logic I q 15 22 oct 99.htm
+exercises - logic II 26 oct 99.htm
+exercises - logic III 3 nov 99.htm
+exercises - short questions lang & morals 3 nov 99.htm
+exercises - short questions lang & morals 3 nov 99_header.htm
+exercises - short questions lang & morals 3 nov 99_filelist.xml
+exercises - short questions light dark 17 nov 99.htm
+exercises - short questions light dark 17 nov 99_image001.png
+exercises - short questions light dark 17 nov 99_image002.jpg
+exercises - short questions light dark 17 nov 99_header.htm
+exercises - short questions light dark 17 nov 99_filelist.xml
+exercises - short questions sensory coding.htm
+lecture - Morten, neuroimaging orbitofrontal.htm
+final - knox profile for website 030408.htm
+lecture - neuro2 week II 11 may 00.htm
+final paper - mit mas962 ver 1.htm
+lecture - Papineau, conch.htm
+final paper - mit mas962 ver 2.htm
+lecture - phil of mind I, Fricker.htm
+final paper - mit mas962.htm
+finals marks breakdown comparison.htm
+Free Will revision.htm
+Free Will revision_header.htm
+Free Will revision_filelist.xml
+Greg Detre - matrix essay for Think.htm
+Greg Detre - Philosophy Now Matrix competition essay fin.htm
+Greg Detre - Stanford competition matrix essay fin.htm
+handout - Taylor on Berkeley.htm
+initial meeting with Rosen 30 nov 00.htm
+lecture - phil of mind II, Fricker.htm
+interview - ted selker 030305.htm
+junk - questions printout 10 feb 02.htm
+lecture - phil of mind II.htm
+lecture - AIRG, bayes etc 021001.htm
+lecture - phil of mind III, Fricker.htm
+lecture - airg, jackendoff.htm
+lecture - phil of mind V, Fricker.htm
+lecture - airg, nasa autonomy.htm
+lecture - cs182 intelligent machines 021002.htm
+lecture - airg, neal lesh, MERL, interactive search.htm
+lecture - cs182 intelligent machines 021009.htm
+lecture - airg, parkes, approximate + truthful vcg.htm
+lecture - Plunkett L&C Ia.htm
+lecture - airg, pollack.htm
+notes - ethics I, amoralism.htm
+lecture - airg, pustejovsky.htm
+lecture - cs187 computational linguistics 020920.htm
+lecture - airg, shieber, turing test.htm
+lecture - animal, sexual selection.htm
+lecture - Avramides history of mind.htm
+lecture - Blakemore, conch, consciousness.htm
+lecture - Boden, conch.htm
+lecture - Campbell, conch, consciousness.htm
+lecture - Campbell, consciousness.htm
+lecture - Campbell, cross-modal senses.htm
+lecture - Campbell, delusion.htm
+lecture - Campbell, modularity.htm
+lecture - Campbell, systematicity.htm
+lecture - Campbell, theory theory.htm
+notes - ethics II, emotivism.htm
+lecture - carey, origin of concepts.htm
+notes - ethics III, moral facts.htm
+lecture - chomsky 030311.htm
+lecture - cognitive psychology - reading.htm
+notes - ethics IV, consequentialism.htm
+lecture - cohen, multi-modal hci.htm
+lecture - Colin Campbell, kernel methods.htm
+lecture - cs187 computational linguistics 020927.htm
+lecture - common sense reading group 030227.htm
+lecture - cs187 computational linguistics 021004.htm
+lecture - common sense reading group 030305.htm
+lecture - cs121 020917.htm
+lecture - cs187 computational linguistics 021011.htm
+lecture - cs182 intelligent machines - 021007.htm
+lecture - cs187 computational linguistics 021018.htm
+lecture - cs182 intelligent machines - lisp review 020923.htm
+lecture - cs187 computational linguistics 021025.htm
+lecture - cs182 intelligent machines 020918.htm
+lecture - cs187 computational linguistics 021101.htm
+lecture - cs182 intelligent machines 020923.htm
+lecture - cs187 computational linguistics 021108.htm
+lecture - cs182 intelligent machines 020925.htm
+lecture - cs187 computational linguistics 021206.htm
+lecture - cs182 intelligent machines 020930.htm
+lecture - cs187 computational linguistics 021213.htm
+notes - ethics V, kantianism.htm
+lecture - curious machines 030205.htm
+notes - ethics VI, virtue theory.htm
+lecture - curious machines 030212.htm
+notes - ethics VII, free will.htm
+lecture - curious machines 030219.htm
+notes - Hume, history IV, induction.htm
+lecture - curious machines 030226.htm
+notes - Hume, history V, causation.htm
+lecture - curious machines 030305.htm
+notes - humour, initial ideas 1.htm
+lecture - curious machines 030312.htm
+notes - King, hearing 2b.htm
+lecture - curious machines 030402.htm
+notes - King, hearing 2b_image001.png
+lecture - curious machines 030416.htm
+notes - King, hearing 2b_image002.jpg
+lecture - curious machines 030423.htm
+notes - King, hearing 2b_image003.gif
+lecture - curious machines 030430.htm
+notes - King, hearing 2b_filelist.xml
+lecture - curious machines 030507.htm
+notes - L&C I language + thought.htm
+lecture - curious machines 030514.htm
+lecture - Davies Explanation + Consciousness.htm
+lecture - Nagel psychophysical nexus.htm
+lecture - deb roy, faculty talk 021030.htm
+lecture - Delon Dotson, future of the Internet.htm
+lecture - Dennett LSE, taking the first person point of view seriously.htm
+lecture - descartes 1st meditation 15 oct 99.htm
+lecture - descartes 2nd meditation 22 Oct 99.htm
+lecture - descartes 5 error & innateness 16 feb 00.htm.htm
+lecture - descartes theory of error.htm
+notes - knox profile for website.htm
+lecture - eng178, house of mirth.htm
+lecture - ethics Ia, morality, egoism + altruism.htm
+lecture - ethics IIa, consequentialism.htm
+lecture - ethics IIIa, virtue ethics.htm
+lecture - Evans, emotion.htm
+lecture - Foster, Theories of Mind I.htm
+lecture - Foster, Theories of Mind II.htm
+lecture - Gerry Cohen, freedom + money.htm
+lecture - Greenfield, conch, consciousness.htm
+lecture - Gregory, conch, consciousness perception qualia.htm
+lecture - Hans Snook, Orange founder in Union.htm
+notes - L&C V lexical processing.htm
+lecture - hearn, dangerous ideas.htm
+lecture - history of philosophy I, Morris.htm
+lecture - neuro prelims, auditory system 1.htm
+lecture - hofstadter, analogy in physics 2.htm
+lecture - neuro prelims, auditory system 2.htm
+lecture - hofstadter, consciousness 2.htm
+lecture - neuro prelims, visual system.htm
+lecture - hopfield, spiking + timing.htm
+lecture - Hubel - eye, brain + perception.htm
+lecture - infant attachment 18 Oct 99.htm
+lecture - infant perception 11 Oct 99.htm
+lecture - intro to physiology 11 oct 99.htm
+lecture - Inwood, Hegel II.htm
+lecture - James Luke, deep blue deep computing.htm
+lecture - neuro, prelims, somatosensory cortex.htm
+lecture - ken kahn, toontalk, mit seminar.htm
+lecture - Penrose, quantum + consciousness.htm
+lecture - ken norman, princeton, neural networks 030414.htm
+lecture - Kevin Warwick AI soc.htm
+lecture - L&C Ia speech production.htm
+lecture - mit mas962 computational semantics 021112.htm
+lecture - lieberman, faculty talk on common sense 030226.htm
+lecture - logic & language I.htm
+lecture - logic & language Ia.htm
+lecture - logic & language IIa.htm
+lecture - logic & language IIIb.htm
+lecture - logic & language IVb.htm
+lecture - logic 13 oct 99.htm
+lecture - logic 27 oct 99.htm
+lecture - Mark Yim, modular reconfigurable robots.htm
+notes - ethics class, Tasioulas, objectivism 2.htm
+lecture - mas964 common sense 021107.htm
+notes - details for margot gill 030417.htm
+lecture - mas964 common sense 021114.htm
+notes - domain name setup, gregdetre_co_uk.htm
+lecture - mas964 common sense 021121.htm
+lecture - Maurice Cotterell, lost tomb of viracocha.htm
+lecture - memory & cognition I.htm
+lecture - mind II, Hymans revision class.htm
+lecture - mit mas962 computational semantics 021119.htm
+lecture - mit 622J-1 126J pattern recognition 020910.htm
+notes - ethics of AI, initial ideas 1.htm
+lecture - mit 6-825 techniques in ai 020910.htm
+notes - Iles, neuro II reaching + movement.htm
+lecture - mit 6-825 techniques in ai 020912.htm
+notes - hancock, fingerprints of the gods.htm
+lecture - mit mas962 computational semantics 020910.htm
+notes - Iles neuro I, somatic obj manipulation + surface.htm
+lecture - mit mas962 computational semantics 020924.htm
+notes - Iles, neuro III, parallel visual processing 2.htm
+lecture - mit mas962 computational semantics 021001.htm
+notes - Iles, neuro IV, sound localisation.htm
+lecture - mit mas962 computational semantics 021008.htm
+notes - initial reading for history of philosophy, Allais.htm
+lecture - mit mas962 computational semantics 021022.htm
+notes - Kant, history VII, synthetic a priori.htm
+lecture - mit mas962 computational semantics 021029.htm
+notes - Kant, history VIII, space + time.htm
+lecture - mit mas962 computational semantics 021105.htm
+lecture - post-kantian, Schroeder on Schopenhauer I, introduction.htm
+lecture - post-kantian, Schroeder on Schopenhauer II.htm
+lecture - rolls Neural Networks & Brain functions 1 may 00 week 1.htm
+lecture - Rolls, computational neuroscience 4 feb 02.htm
+lecture - Rolls, computational neuroscience, attention + STM.htm
+lecture - Rolls, computational neuroscience, conclusions.htm
+lecture - selker, airg.htm
+lecture - Sloman, conch, varieties of consciousness.htm
+lecture - Sloman, SimAgents.htm
+lecture - Sloman, varieties of evolvable minds.htm
+lecture - Snowdon history of phil.htm
+lecture - social I.htm
+lecture - social IIa 8 may 00.htm
+lecture - social IIb 12 may 00.htm
+lecture - social IIIa.htm
+lecture - social IIIb attitudes.htm
+lecture - social IVa persuasion and attitude change.htm
+lecture - social IVb.htm
+lecture - social, expression and communication of affect.htm
+notes - L&C VI animal language.htm
+lecture - society of mind 030205.htm
+reading - Williams in Grayling.htm
+lecture - society of mind 030212.htm
+reading - Wordnet, 5 papers.htm
+lecture - society of mind 030219.htm
+reading - Zeki, Vision of the brain.htm
+lecture - society of mind 030305.htm
+tutorial - Snowdon, mind II.htm
+lecture - society of mind 030312.htm
+reading group - soar 021114.htm
+lecture - society of mind 030319.htm
+tutorial - Snowdon, mind V - action.htm
+lecture - society of mind 030402.htm
+lecture - society of mind 030409.htm
+lecture - society of mind 030416.htm
+lecture - society of mind 030423.htm
+lecture - society of mind 030430.htm
+lecture - society of mind 030514.htm
+lecture - Soteriou, Mind.htm
+lecture - Soteriou, Mind_files
+lecture - Strawson, conch, consciousness.htm
+lecture - Swinburne, conch, consciousness.htm
+lecture - the permanence of objects 13 Oct 99.htm
+lecture - Weiskrantz, Consciousness society, blindsight.htm
+lecture - Wilkes, philosophy of psychology Ia.htm
+lecture - Wilkes, philosophy of psychology Ib.htm
+lecture-tutorial - neuro prelims, visual system.htm
+notes - L&C II speech production + perception.htm
+letter - add drop petition forms 021122.htm
+notes - L&C III language acquisition.htm
+letter - reply to ken norman job offer.htm
+letter to referees 020904.htm
+logic misc q.htm
+notes - L&C IV inflectional morphology.htm
+meeting - peter gorniak, regier + space 021010.htm
+meeting - Rolls, 0th week.htm
+meeting - Tasioulas, 0th week.htm
+Minsky2.htm
+misc Kant points.htm
+misc psych notes.htm
+notes - L&C VII asma, sentence processing.htm
+MIT media lab application - formation of language.htm
+reading - Churchlands, m&C + hornswoggle.htm
+MIT media lab application - user interface.htm
+reading - Clancey, Review of Chalmers.htm
+MIT media lab for 2003 application 1.htm
+reading - Walker, little book of Kant.htm
+MIT media lab for 2003 application 2.htm
+reading - web, Coding a transhuman AI.htm
+MIT media lab for 2003 application 3.htm
+reading - web, Moral Discourse and Practice.htm
+MIT media lab for 2003 application 4.htm
+readingx - Nagel Psychophysical nexus.htm
+MIT media lab for 2003 application 5.htm
+tutorial - Snowdon, mind III - Wittgenstein.htm
+MIT media lab for 2003 application 6.htm
+notes - Iles neuro I, somatic obj manipulation + surface_image001.gif
+MIT media lab for 2003 application statement of objectives draft 1.htm
+notes - Iles neuro I, somatic obj manipulation + surface_filelist.xml
+MIT media lab for 2003 application statement of objectives draft 2.htm
+notes - Altmann, Ascent of Man.htm
+notes - animal behaviour I, Tinbergen 4 problems ethology.htm
+notes - animal behaviour II, communication.htm
+notes - animal behaviour III, consciousness.htm
+notes - animal behaviour IV, a-life.htm
+notes - animal behaviour V, kin recognition.htm
+notes - animal behaviour VI, cognitive.htm
+notes - animal behaviour VII, optimality.htm
+notes - animal behaviour VIII, social learning.htm
+tutorial - Snowdon, mind IV - perception.htm
+notes - article, informing ourselves to death.htm
+notes - B&B vision I cortical areas.htm
+notes - Berkeley, history III, idealism.htm
+notes - comparative, history VI, ideas + concepts.htm
+notes - cs182, ps0 thoughts.htm
+notes - cs187, ps1.htm
+notes - cs187, ps2.htm
+notes - curious machines paper 9.htm
+tutorial - Snowdon, mind VII - machines.htm
+notes - curious machines, complete reading list.htm
+notes - L&C VIII emma, hemispheric specialisation.htm
+notes - lera boroditsky.htm
+notes - Locke, history I, primary + secondary qualities.htm
+notes - Locke, history II, personal identity.htm
+notes - Parker, V stereopsis.htm
+notes - philosophers' dates + chronology.htm
+notes - photocopying to do for Easter 02.htm
+notes - pinker on a review of HtMW.htm
+notes - planned long-term reading.htm
+notes - possible sponsorship for Consciousness Society.htm
+notes - prelims, reading aloud.htm
+notes - printers.htm
+notes - ramblings about consciousness.htm
+notes - ramblings about private language.htm
+notes - reason, working ideas 9.htm
+notes - Rosen, post-Kantian I, nietzsche truth.htm
+notes - Rosen, post-Kantian II, nietzsche tragedy.htm
+notes - Rosen, post-Kantian III, nietzsche revaluation all values.htm
+notes - Rosen, post-Kantian IV, nietzsche ER + WTP.htm
+notes - Rosen, post-Kantian V, hegel history matters to philosophy.htm
+notes - Rosen, post-Kantian VI, hegel vs kant.htm
+notes - Rosen, post-Kantian VII, hegel + nietzsche vs kant CI.htm
+notes - Rosen, post-Kantian VIII, hegel phenomenology consciousness.htm
+notes - Routledge, miracles.htm
+notes - Snowdon, Mind I - materialism.htm
+notes - Snowdon, Mind II - functionalism.htm
+notes - Snowdon, Mind III - wittgenstein + private language.htm
+notes - Snowdon, Mind IV - perception.htm
+notes - Snowdon, Mind V - action.htm
+notes - Snowdon, Mind VII - machines.htm
+notes - Snowdon, Mind VIII - consciousness.htm
+tutorial - Snowdon, mind VIII - consciousness.htm
+notes - society of mind, emotion machine ch 7 2.htm
+presentation - moral development & language acquisition_image001.png
+notes - society of mind, emotion machine, ch 6, common sense 2.htm
+tutorial - Tasioulas ethics revision II kant.htm
+notes - society of mind, final paper 2.htm
+tutorial - Tasioulas Mill II well-being.htm
+notes - society of mind, final paper 3.htm
+tutorial - Tasioulas Mill IV proof + measurement.htm
+notes - society of mind, final paper.htm
+notes - tax issues.htm
+notes - turing test.htm
+notes - virtue ethics.htm
+notes - web, Morris on realism.htm
+notes - wired article on sacks.htm
+notes f sarah w - induction + causation.htm
+notes f steve + sarah - important together printable.htm
+notes f steve + sarah - important together printable_header.htm
+notes f steve + sarah - important together printable_filelist.xml
+notes from sarah w - Free Will.htm
+notes from sarah w - wittgenstein, hacker little book.htm
+notes from sarah w - wittgenstein, hacker little book_image001.gif
+notes from sarah w - wittgenstein, hacker little book_filelist.xml
+office hours - cs187 021001.htm
+officehours - cs187 021001.htm
+philosophy now competition details.htm
+Philosophy Now Matrix competition covering letter.htm
+Philosophy Now Matrix competition essay 1.htm
+Philosophy Now Matrix competition essay 10.htm
+Philosophy Now Matrix competition essay 2.htm
+Philosophy Now Matrix competition essay 3.htm
+Philosophy Now Matrix competition essay 4.htm
+Philosophy Now Matrix competition essay 5.htm
+Philosophy Now Matrix competition essay 6.htm
+Philosophy Now Matrix competition essay 7.htm
+Philosophy Now Matrix competition essay 8.htm
+Philosophy Now Matrix competition essay 9.htm
+Philosophy Now Matrix competition notes 1.htm
+Philosophy Now Matrix competition notes 2.htm
+planning - courses, fall 2002.htm
+planning - courses, spring 2003.htm
+planning - courses, spring 2003_files
+presentation - moral development & language acquisition_image002.png
+planning - discussion with ted selker re research project 030212.htm
+planning - finances 2002-3.htm
+planning - future, masters + jobs 2003.htm
+planning - interview at media lab.htm
+planning - princeton.htm
+planning - selker project ideas.htm
+planning - selker project proposals.htm
+planning - summer holidays 2003.htm
+presentation - BPhil of Mind - Dennett CE ch 5.htm
+reading - Williams, Problems of the Self, self + future.htm
+presentation - cantwell smith, origin of objects 021022.htm
+presentation - moral development & language acquisition_image003.png
+presentation - curious machines - social cognition dogs 030218.htm
+presentation - L&C VIII emma, hemispheric specialisation.htm
+presentation - moral development & language acquisition.htm
+presentation - moral development & language acquisition_image004.png
+presentation - moral development & language acquisition_image005.png
+presentation - moral development & language acquisition_image006.png
+presentation - moral development & language acquisition_image007.png
+presentation - moral development & language acquisition_image008.png
+presentation - moral development & language acquisition_image009.png
+presentation - moral development & language acquisition_image010.png
+presentation - moral development & language acquisition_filelist.xml
+presentation - Taylor revision I, Locke on ideas + reality.htm
+project - Rolls, sparseness patterns NNs.htm
+project analysis - questions for imdb 0211020.htm
+project design - cs187 021024.htm
+project ideas - cs187 early 1.htm
+reading list - Simpson, animal behaviour I, II, III, IV.htm
+project ideas - cs187, early 2, email to group 021008.htm
+project ideas - cs187, misc + questions.htm
+project ideas - mas962 project 021009 2.htm
+project meeting - cs187 021009.htm
+project meeting - cs187 021016.htm
+project meeting - cs187 021017.htm
+project proposal - mas962 project 021017.htm
+project revised design - 021031.htm
+prolog - questions 021031.htm
+proposal - curious machines project 3.htm
+questions - Diamond, rise and fall of the third chimpanzee.htm
+questions - more psychology + physiology.htm
+questions - society of mind.htm
+quotes - manic + depressive.htm
+reading - consciousness introduction New Cognitive Neurosciences Schachter.htm
+reactions - curious machines - call + tomasello, gopnik + meltzoff 030209.htm
+reactions - curious machines 030216.htm
+reactions - curious machines 030223.htm
+reactions - curious machines 030303.htm
+reactions - curious machines 030311.htm
+reactions - curious machines 030331.htm
+reactions - curious machines 030408.htm
+reactions - curious machines 030421 2.htm
+reactions - mas 962, mueller.htm
+reading list - Simpson, animal behaviour I, II, III, IV_files
+reactions - mas962 computational semantics 020920.htm
+tutorial - Tasioulas ethics revision I objectivism.htm
+reactions - mas962 computational semantics 021001.htm
+tutorial - Tasioulas ethics revision, III virtue ethics.htm
+reactions - mas962 computational semantics 021022.htm
+tutorial - Tasioulas ethics revision, IV consequentialism.htm
+reactions - mas962 computational semantics 021028.htm
+tutorial - Tasioulas Mill III forms of utilitarianism.htm
+reactions - mas962 computational semantics 021124.htm
+reactions - mas962 pustejovsky 021008.htm
+reactions - mit mas741 context aware papers 020916.htm
+reactions - society of mind, emotion machine ch 7 2.htm
+reading - carver, evolution of blackboard control architectures 2.htm
+reactions - society of mind, emotion machine, ch 6, common sense.htm
+reading - artificial emotion Ian Wilson Gamasutra.htm
+reading - artificial emotion Ian Wilson Gamasutra_files
+reading - B&B basal ganglia misc.htm
+reading - B&B brain stimulation reward + thirst misc.htm
+reading - B&B emotion misc.htm
+reading - B&B hunger 1 misc.htm
+reading - B&B hunger 2 misc.htm
+reading - B&B parietal cortex - New Cognitive Neurosciences.htm
+reading - B&B parietal cortex - Principles of Neural Science.htm
+reading - B&B parietal cortex misc.htm
+reading - B&B pre-frontal cortex Fuster.htm
+reading - B&B pre-frontal cortex misc.htm
+reading - B&B pre-frontal cortex Passingham.htm
+reading - B&B pre-frontal cortex RHS Carpenter NP.htm
+reading - B&B pre-frontal Kolb & Whishaw.htm
+reading - B&B Rolls PPT presentation on taste + eating.htm
+reading - Bennett.htm
+reading - Block, how not to find the NCC.htm
+reading - Block, what is functionalism.htm
+reading - brooks + smith 021020.htm
+reading - Byrne, behaviourism.htm
+reading - Carpenter, prelims revision notes.htm
+reading - Chalmers, zombie Dave.htm
+reading - conversation with Davidson on anti-foundationalist language philosophy.htm
+readingx - Crick + Koch on Consciousness in New Cognitive Neurosciences.htm
+reading - curious machines 030209 - call + tomasello, gopnik + meltzoff.htm
+reading - curious machines 030216.htm
+reading - curious machines 030223.htm
+reading - curious machines 030305.htm
+reading - curious machines 030310.htm
+reading - curious machines 030330 2.htm
+reading - curious machines 030408.htm
+reading - curious machines 030421 2.htm
+reading - curious machines 030429.htm
+reading - Damasio Descartes error 31 jan 00.htm
+reading - Damasio Descartes error.htm
+reading - Davidson, mental events.htm
+reading - Davies, philosophy of mind in Grayling.htm
+reading - deb roy, learning words publication.htm
+reading - Dennett, kinds of minds.htm
+reading - Dennett, quining qualia.htm
+reading - Dennett, quining qualia_image001.gif
+reading - Dennett, quining qualia_filelist.xml
+reading - Foot, natural goodness.htm
+reading - gazzaniga, cognitive sciences - language + brain.htm
+reading - Gould + Lewontin, spandrels + panglossian paradigm.htm
+reading - Grayling, empiricists in Grayling.htm
+reading - Griffin Value Judgements ch 6-7.htm
+reading - Griffin Well-being part 2.htm
+reading - Hegel by Taylor.htm
+reading - Hegel, Cambridge companion.htm
+reading - Heller, Importance of Nietzsche.htm
+reading - Hofstadter, GEB.htm
+reading - Honderich, Consciousness and microtubules.htm
+reading - hugo liu et al, goose search engine.htm
+reading - Hume on causation.htm
+reading - Hume on ethics.htm
+reading - jackendoff 021024.htm
+reading - Jaynes, Origin of consciousness bicameral mind.htm
+reading - Kandel + Schwarz, Principles of Neural Science.htm
+reading - Kenny's overview of Hofstadter on Godel.htm
+reading - Levy Artificial Life (a-life).htm
+reading - Lloyd, undergraduate essay on machine consciousness.htm
+reading - Lyons, Chomsky.htm
+reading - MacDonalds ed, Connectionism.htm
+reading - MacIntyre, after virtue.htm
+reading - Mackie, problems from locke.htm
+reading - Manning and Dawkins, animal behaviour.htm
+reading - Marr, personal view of AI.htm
+reading - mas962 gardenfors regier hofstadter 021028.htm
+reading - mas962 goldstone 021101.htm
+reading - mas962 miller 021001.htm
+reading - mas962 pustejovsky 021008.htm
+reading - mas962 putnam 021202.htm
+reading - Mentifex AI document.htm
+reading - Mill Crisp on Utilitarianism ch 5.htm
+reading - Mill integrity + personal PoV - Smart & Williams.htm
+reading - Mill integrity + personal PoV Crisp.htm
+reading - Mill integrity + personal PoV misc.htm
+reading - Mill justice misc 2.htm
+reading - Mill justice misc.htm
+reading - Mill utilitarianism Crisp structure.htm
+reading - Mill utilitarianism rights misc.htm
+reading - Minsky, alien intelligence.htm
+reading - Minsky, Computers can't think.htm
+reading - minsky, symbolic vs connectionist.htm
+reading - minsky, will robots inherit the earth.htm
+reading - misc animal behaviour stuff.htm
+reading - mit context aware 021105.htm
+reading - mit mas741 context aware papers for 020911.htm
+reading - mit mas741 context aware papers for 020916.htm
+reading - mit mas741 context papers for 021023.htm
+reading - Moore, Crossing the Chasm.htm
+reading - Nagel CtI + the Mind-Body Problem.htm
+reading - nagel, conceiving the impossible - the mind-body problem.htm
+reading - Nagel, Panpsychism.htm
+reading - Nagel, The sleep of reason.htm
+reading - Nietzsche by Schacht.htm
+reading - Nietzsche Tanner introduction to Twilight of the Idols.htm
+reading - Nietzsche, Birth of tragedy.htm
+reading - Nietzsche, Daybreak.htm
+reading - Nietzsche, Genealogy of morals.htm
+reading - regier carlson 021009.htm
+reading - Rethinking innateness, Elman, Plunkett et al.htm
+reading - Routledge, Nietzsche.htm
+reading - Russell, HoWP - Locke.htm
+reading - spelke carey gopnik 021117.htm
+reading - Strawson, freedom + resentment.htm
+readingx - Williams Ethics and the Limits of Philosophy ch 5-6.htm
+registration - society of mind 3.htm
+revision - all exams finals 02.htm
+revision - animal behaviour collection michaelmas 2001.htm
+revision - animal behaviour finals 02 citations.htm
+revision - animal behaviour finals 02.htm
+revision - collection qs so far.htm
+revision - ethics collection michaelmas 01.htm
+revision - ethics finals 02.htm
+revision - history collection trinity 01.htm
+revision - history finals 02 notes.htm
+revision - history finals 02 ver 2.htm
+revision - history finals 02.htm
+revision - history, quotes.htm
+revision - l&c finals 02.htm
+revision - l&c finals citations 02.htm
+revision - mind finals 02.htm
+revision - neuro2 finals 02.htm
+revision - neuro2 finals citations 02.htm
+revision - post-kantian collection hilary 01.htm
+revision - post-kantian finals 02.htm
+revision - quotes.htm
+revision - to do list 2.htm
+revision - to do list.htm
+revision plan for Oxford PPP finals 2002.htm
+scribblings - definition of phenomenological.htm
+section - cs187 021002.htm
+seminar - Bphil of mind II Davidson.htm
+seminar - Bphil of mind II introduction.htm
+seminar - Bphil of mind III Dennett discussion.htm
+seminar - Bphil of mind III McGinn.htm
+seminar - Bphil of mind IV Russell.htm
+seminar - Bphil of mind V personal identity Olson.htm
+seminar - Bphil of mind V personal identity Parfit.htm
+seminar - cog sci I 8 may 00.htm
+seminar - Nagel Q&A.htm
+seminar - PF Strawson at CCC.htm
+seminar - physics advanced IV.htm
+seminar - social cognition in chimpanzees + dolphins.htm
+seminar handout- Bphil of mind II Davidson.htm
+slarson - society of mind, emotion machine ch 6.htm
+slarson - society of mind, emotion machine ch 6_files
+slarson - society of mind, emotion machine ch 7.htm
+slarson - society of mind, emotion machine ch 7_files
+slashdot comments.htm
+steve minsky 2.htm
+summary - mas962 goldstone 021104.htm
+thesis - junk store.htm
+tutorial - Allais, history I, Locke, primary secondary qualities.htm
+tutorial - Allais, history II, Locke, personal identity.htm
+tutorial - Allais, history IV, Hume, induction.htm
+tutorial - Allais, history V, Hume, causation.htm
+tutorial - Allais, history VI, Hume, ideas + concepts.htm
+tutorial - Allais, history VII, Kant, synthetic a priori.htm
+tutorial - Allais, history VIII, Kant, space + time.htm
+tutorial - animal behaviour I, Simpson, Tinbergen.htm
+tutorial - animal behaviour II, Simpson, communication.htm
+tutorial - animal behaviour III, Simpson, consciousness.htm
+tutorial - animal behaviour VIII, Dawkins, social learning.htm
+tutorial - animal behaviour, kin recognition.htm
+tutorial - B&B, Rolls, emotion.htm
+tutorial - Child, mind revision I.htm
+tutorial - Dawkins, animal behaviour, cognition.htm
+tutorial - Dawkins, animal behaviour, optimality.htm
+tutorial - Ellory, neuro prelims, auditory system.htm
+tutorial - Ellory, neuro prelims, visual system.htm
+tutorial - Iles, neuro I, somatosens.htm
+tutorial - Iles, neuro II, reaching.htm
+tutorial - Iles, neuro III, parallel visual processing.htm
+tutorial - King, neuro sound localisation.htm
+tutorial - L&C I emma, language & thought.htm
+tutorial - L&C II emma, speech perception-production.htm
+tutorial - L&C III carmel, language acquisition device.htm
+tutorial - L&C IV asma, inflectional morphology.htm
+tutorial - L&C V carmel, lexical processing.htm
+tutorial - L&C VI carmel, animal language.htm
+tutorial - L&C VII asma, sentence processing.htm
+tutorial - L&C VIII emma, hemispheric specialisation.htm
+tutorial - neuro, Ellory prelims, somatosensory.htm
+tutorial - Reil, animal behaviour IV, artificial life.htm
+tutorial - rolls B&B I vision segregation.htm
+tutorial - rolls B&B II - inferotemporal + agnosia.htm
+tutorial - rolls B&B III - parietal cortex - 18 may 00.htm
+tutorial - rolls B&B IV pre-frontal cortex.htm
+tutorial - rolls B&B V hunger.htm
+tutorial - rolls B&B VI brain stimulation reward + thirst.htm
+tutorial - Rolls, attention.htm
+tutorial - Rolls, vision.htm
+tutorial - Rosen, post-Kantian I, nietzsche truth.htm
+tutorial - Rosen, post-Kantian II, nietzsche birth of tragedy.htm
+tutorial - Rosen, post-Kantian III, nietzsche revaluation of all values.htm
+tutorial - Rosen, post-Kantian IV, WTP + ER.htm
+tutorial - Rosen, post-Kantian V, hegel history matters to philosophy.htm
+tutorial - Rosen, post-Kantian VI, hegel vs kant.htm
+tutorial - Rosen, post-Kantian VII, hegel nietzsche kant.htm
+tutorial - Rosen, post-Kantian VIII, hegel phenomenology.htm
+tutorial - Rosie Adams, prelims, neuroanatomy.htm
+tutorial - Snowdon, mind I - materialism.htm
+tutorial - Tasioulas Mill V utilitarianism integrity + personal PoV.htm
+tutorial - Tasioulas Mill VI utilitarianism + justice.htm
+tutorial - thesis I, Tasioulas.htm
+tutorial - thesis II, Tasioulas.htm
+tutorial - thesis III, Tasioulas.htm
+tutorial - Watkins, ethics I - amoralism.htm
+tutorial - Watkins, ethics II - emotivism.htm
+tutorial - Watkins, ethics III - moral facts.htm
+tutorial - Watkins, ethics IV - consequentialism.htm
+tutorial - Watkins, ethics V - kant.htm
+tutorial - Watkins, ethics VI - virtue.htm
+tutorial - Watkins, ethics VII - free will.htm
+tutorial - Watkins, ethics VIII - rights.htm
+docs.txt

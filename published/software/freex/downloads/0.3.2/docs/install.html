@@ -1,0 +1,224 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd">
+<html ="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Greg Detre</title>
+    <meta name="description" content="greg detre gregdetre memrise princeton mvpa" />
+    
+          <link rel="stylesheet" type="text/css" charset="utf-8" href="/media/main.css" />
+        
+        
+    
+      <link rel="icon" 
+            type="image/png" 
+            href="/img/favicon.png">
+
+      <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20347856-5']);
+  _gaq.push(['_setDomainName', 'gregdetre.co.uk']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>  </head>
+  
+    <body class="">
+        
+    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <title>
+      Greg Detre - install
+    </title>
+    <meta name="generator" content="muse.el">
+    <meta http-equiv="Content-Type"
+          content="text/html; charset=iso-8859-1">
+
+<p><link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="common.css" />
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="screen.css" />
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="print.css" /></p>
+<p></head>
+  <body></p>
+<pre><code>&lt;!-- Page published by Emacs Muse begins here --&gt;
+</code></pre>
+<p><h2><a name="sec1" id="sec1"></a>
+Downloading and installing&nbsp;Freex</h2></p>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec1">Downloading and installing&nbsp;Freex</a>
+</dt>
+<dd>
+<dl class="contents">
+<dt class="contents">
+<a href="#sec2">Dependencies</a>
+</dt>
+<dt class="contents">
+<a href="#sec3">Installing Freex&nbsp;itself</a>
+</dt>
+<dt class="contents">
+<a href="#sec4">Checking everything&nbsp;works</a>
+</dt>
+<dt class="contents">
+<a href="#sec5">Using Freex with&nbsp;Muse</a>
+</dt>
+<dt class="contents">
+<a href="#sec6">Troubleshooting</a>
+</dt>
+</dl>
+</dd>
+</dl>
+
+<h3><a name="sec2" id="sec2"></a>&nbsp;Dependencies</h3>
+
+<p class="first">Installing Freex itself shouldn&#8217;t be too hard. The tricky bit is
+getting all the dependencies working first.  Here&#8217;s the&nbsp;list:</p>
+
+<dl>
+<dt><strong>Emacs</strong></dt>
+<dd>We&#8217;ve been using version 22, but 21 and higher should work.
+On <span class="caps">OSX</span> we recommend <a href="http://aquamacs.org">Aquamacs</a>, which is also based on version
+22 of&nbsp;Emacs.
+</dd>
+<dt><strong><a href="http://python.org">Python</a></strong></dt>
+<dd>We&#8217;ve used both 2.4 and 2.5 with no&nbsp;problem.
+</dd>
+<dt><strong><a href="http://pymacs.progiciels-bpi.ca/">Pymacs</a></strong></dt>
+<dd>Freex requires <a href="http://pymacs.progiciels-bpi.ca/">Pymacs</a> to interface with python for all of
+its database&nbsp;functionality.
+</dd>
+<dt><strong><a href="http://www.sqlite.org/">Sqlite</a></strong></dt>
+<dd>We use version 3 to hold the&nbsp;data.
+</dd>
+<dt><strong><a href="http://www.sqlalchemy.org/">Sqlalchemy</a></strong></dt>
+<dd>This is the python interface to the database.  The
+stable 0.3 version is working well for&nbsp;us.
+</dd>
+</dl>
+
+<h4>Installing the dependencies on&nbsp;Ubuntu</h4>
+
+<p class="first">This is very easy (at least on Feisty&nbsp;Fawn):</p>
+
+<pre class="example">
+sudo apt-get install emacs22 python2.5 python-pymacs sqlite3 python-sqlalchemy
+</pre>
+
+<p>Gotta love package&nbsp;management.</p>
+
+<h4>Installing the dependencies on&nbsp;<span class="caps">OSX</span></h4>
+
+<p class="first">The long and the short of it is that you&#8217;ll likely have to install all
+the dependencies from source.  Follow the links provided above to
+download the packages.  Each should have current instructions for
+compiling and installing&nbsp;them.</p>
+
+<h4>Installing the dependencies on Microsoft&nbsp;Windows</h4>
+
+<p class="first">We haven&#8217;t tried installing Pymacs on <span class="caps">MS</span> Windows, so we can&#8217;t offer
+any assistance with that. If you do get Pymacs and Freex working under
+Windows, we would love to <a href="mailto:greg@gregdetre.co.uk">hear from you</a>.</p>
+
+<p>On any other system, you&#8217;ll have to see if there&#8217;s some
+other package or binary you can use, or follow the
+<a href="http://pymacs.progiciels-bpi.ca/manual/Installation.html#Installation">Pymacs installation instructions</a>.</p>
+
+<h3><a name="sec3" id="sec3"></a>
+Installing Freex&nbsp;itself</h3>
+
+<p class="first">Download and untar the latest Freex tarball from the
+<a href="http://www.princeton.edu/~gdetre/software/freex/downloads">downloads directory</a> (which should be called something like
+&#8216;freex-x.x.x.tar.gz&#8217;). Inside, you&#8217;ll see a file called
+&#8216;freex-conf-test.el.&#8217;. This provides an example
+configuration file. Make a copy and call it something like
+&#8216;freex-conf.el&#8217; - you can store it with your Freex scripts,
+or put with your other elisp init files as you&nbsp;prefer.</p>
+
+<p>Go through your new freex-conf.el and modify any references
+to &#8216;/home/greg/elisp/freex&#8217; to the location containing your
+Freex scripts. Also, change the value of the
+&#8216;freex-mode-dir&#8217; variable from
+&#8216;/home/greg/elisp/freex/testdocs/&#8217; to wherever you&#8217;d like to
+store the text files containing your hard-won wisdom. It
+makes sense to keep this &#8216;data&#8217; directory separate from the
+&#8216;scripts&#8217; directory. Create your data directory&nbsp;now.</p>
+
+<p>If you want to make sure that Freex mode loads up every time
+you start Emacs in future, just add these lines to your .emacs&nbsp;file:</p>
+
+<blockquote>
+<p class="quoted">(add-to-list &#8216;load-path&nbsp;&#8221;/my/freex/scripts/&#8221;)</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">(load&nbsp;&#8220;freex-conf&#8221;)</p>
+</blockquote>
+
+<p>Run M-x eval-buffer on freex-conf.el, and now Freex mode should
+be ready to go, as soon as it sees its first &#8216;.freex&#8217;&nbsp;file.</p>
+
+<h3><a name="sec4" id="sec4"></a>
+Checking everything&nbsp;works</h3>
+
+<p class="first">Now, open up a new file called &#8216;test0.freex&#8217; in your freex
+data directory. If you see &#8216;Freex&#8217; added to your mode bar at
+the bottom of your Emacs window, you&#8217;re in business. If not,
+head to the Troubleshooting&nbsp;section.</p>
+
+<p>Now, you&#8217;re ready to try the <a href="intro_tutorial.html">intro tutorial</a>.</p>
+
+<h3><a name="sec5" id="sec5"></a>
+Using Freex with&nbsp;Muse</h3>
+
+<p class="first">As you probably guessed, we are impressed and inspired by the <a href="http://mwolson.org/projects/EmacsMuse.html">Muse</a>
+publishing system for Emacs.  We are working on making Muse and Freex
+play well together and we are at least part way there.  Far enough
+that some percentage of Freex users actually run Freex in Muse mode on
+a daily&nbsp;basis.</p>
+
+<p>The following is how to it up to use Freex in one of your Muse
+projects (such as your personal&nbsp;wiki.)</p>
+
+<h3><a name="sec6" id="sec6"></a>&nbsp;Troubleshooting</h3>
+
+<p class="first">Under construction still. Sorry - that&#8217;s not very helpful of&nbsp;us.</p>
+
+<!-- Page published by Emacs Muse ends here -->
+
+<hr>
+
+<script language="javascript" src="footer.js">
+
+  </body>
+</html>
+          <br>
+<hr>
+
+<h6>
+  <p align="center">
+    <a href="http://blog.gregdetre.co.uk/">Home</a> - 
+    <a href="http://blog.gregdetre.co.uk/posts/">Blog</a> - 
+    <a href="http://blog.gregdetre.co.uk/startups/">Startups</a> - 
+    <a href="http://blog.gregdetre.co.uk/software/">Software</a> - 
+    <a href="http://blog.gregdetre.co.uk/research/">Research</a> - 
+    <a href="http://blog.gregdetre.co.uk/writing/">Writing</a>
+  </p>
+
+  <p align="center">
+    <a href="mailto:greg@gregdetre.co.uk">Email me</a> - updated 31 Dec 2012
+  </p>
+
+</h6>
+    
+              
+    
+             
+
+  </body>
+</html>

@@ -1,0 +1,853 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 9">
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List
+href="./notes%20-%20L&amp;C%20VII%20asma,%20sentence%20processing_files/filelist.xml">
+<title>Title</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Greg Detre</o:Author>
+  <o:LastAuthor>Greg Detre</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>665</o:TotalTime>
+  <o:LastPrinted>2000-11-22T16:40:00Z</o:LastPrinted>
+  <o:Created>2003-07-02T01:11:00Z</o:Created>
+  <o:LastSaved>2003-07-02T01:11:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>2112</o:Words>
+  <o:Characters>12041</o:Characters>
+  <o:Lines>100</o:Lines>
+  <o:Paragraphs>24</o:Paragraphs>
+  <o:CharactersWithSpaces>14787</o:CharactersWithSpaces>
+  <o:Version>9.2720</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:DrawingGridHorizontalSpacing>4.5 pt</w:DrawingGridHorizontalSpacing>
+  <w:DrawingGridVerticalSpacing>12.25 pt</w:DrawingGridVerticalSpacing>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:Compatibility>
+   <w:WW6BorderRules/>
+   <w:FootnoteLayoutLikeWW8/>
+   <w:ShapeLayoutLikeWW8/>
+   <w:AlignTablesRowByRow/>
+   <w:ForgetLastTabAlignment/>
+   <w:LayoutRawTableWidth/>
+   <w:LayoutTableRowsApart/>
+  </w:Compatibility>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:"Book Antiqua";
+	panose-1:2 4 6 2 5 3 5 3 3 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:647 0 0 0 159 0;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:553679495 -2147483648 8 0 66047 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin-top:8.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	color:purple;
+	mso-font-kerning:14.0pt;
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+h2
+	{mso-style-next:Normal;
+	margin-top:16.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	color:navy;
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+h3
+	{mso-style-next:Normal;
+	margin-top:16.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	tab-stops:right 451.45pt;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	color:#339966;
+	font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+h4
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-font-weight:normal;}
+h5
+	{mso-style-next:Normal;
+	margin-top:15.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	mso-outline-level:5;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	color:maroon;
+	font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+h6
+	{mso-style-parent:"Heading 5";
+	mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	mso-outline-level:6;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	color:olive;
+	font-weight:normal;
+	mso-bidi-font-weight:bold;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{mso-style-parent:"Heading 1";
+	mso-style-next:Normal;
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	tab-stops:.75in right 451.45pt;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-variant:small-caps;
+	color:purple;
+	mso-font-kerning:14.0pt;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{mso-style-parent:"Heading 2";
+	mso-style-next:Normal;
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:10.1pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	tab-stops:right 451.3pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:navy;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{mso-style-parent:"TOC 2";
+	mso-style-next:Normal;
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:20.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	tab-stops:right 451.45pt;
+	font-size:9.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:teal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoToc4, li.MsoToc4, div.MsoToc4
+	{mso-style-update:auto;
+	mso-style-parent:"TOC 3";
+	mso-style-next:Normal;
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:35.7pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	tab-stops:right 451.45pt;
+	font-size:7.5pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:maroon;
+	mso-bidi-font-weight:bold;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoToc5, li.MsoToc5, div.MsoToc5
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:8.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:48.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc6, li.MsoToc6, div.MsoToc6
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:8.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:60.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc7, li.MsoToc7, div.MsoToc7
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:8.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:1.0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc8, li.MsoToc8, div.MsoToc8
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:8.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:84.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc9, li.MsoToc9, div.MsoToc9
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:8.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:96.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin-top:8.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	tab-stops:center 239.75pt right 6.65in;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoDate, li.MsoDate, div.MsoDate
+	{margin-top:8.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:right;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
+	{margin-top:8.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	background:navy;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Tahoma;
+	mso-fareast-font-family:"Times New Roman";}
+p.Section, li.Section, div.Section
+	{mso-style-name:Section;
+	margin-top:8.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.Heading0, li.Heading0, div.Heading0
+	{mso-style-name:"Heading 0";
+	mso-style-parent:"Heading 1";
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	border:none;
+	mso-border-alt:solid windowtext .5pt;
+	padding:0in;
+	mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt;
+	font-size:16.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Book Antiqua";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	font-variant:small-caps;
+	color:purple;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:68.05pt 68.05pt 68.05pt 68.05pt;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+@list l0
+	{mso-list-id:1746143482;
+	mso-list-type:simple;
+	mso-list-template-ids:-719658964;}
+@list l0:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+</head>
+
+<body lang=EN-GB link=blue vlink=purple style='tab-interval:17.85pt'>
+
+<div class=Section1>
+
+<h1><a name="_Toc499499162">Notes � L&amp;C VII Asma, Sentence processing</a></h1>
+
+<p class=MsoNormal align=right style='text-align:right'>Greg Detre</p>
+
+<p class=MsoNormal align=right style='margin-top:2.0pt;text-align:right'>Tuesday,
+21 November, 2000</p>
+
+<p class=MsoNormal align=right style='margin-top:2.0pt;text-align:right'>for
+tute on Wed @12</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h2><a name="_Toc499499163">Essay titles</a></h2>
+
+<p class=MsoNormal><i>Evaluate the downfall of the Derivational Theory of
+Complexity. Did it really fail?<o:p></o:p></i></p>
+
+<p class=MsoNormal><i>Is it appropriate to characterise syntactic knowledge as
+involving a separate processing module?<o:p></o:p></i></p>
+
+<p class=MsoNormal><i>Is word recognition achieved before the syntactic
+structure of an utterance is computed?<o:p></o:p></i></p>
+
+<p class=MsoNormal><i>How do we recognise words in sentences?<o:p></o:p></i></p>
+
+<h2><a name="_Toc499499164">Notes � Altmann, Ascent of Babel</a></h2>
+
+<h3><a name="_Toc499499165">Chapter 7 � �Time flies like an arrow�</a></h3>
+
+<p class=MsoNormal>duality?</p>
+
+<p class=MsoNormal>Words are not sufficient for language � their meaning is
+altered and given huge extra dimension by being bound in a syntax</p>
+
+<p class=MsoNormal>But only if this knowledge is shared by speaker + listener =
+grammar</p>
+
+<p class=MsoNormal>Why don�t we notice ambiguities? �time flies like an arrow�
+could mean any of over 50 different possible meanings (all grammatical), more
+if we are listening to the words spoken aloud one by one. it is because we rely
+on contextual clues and expectations of what the speaker is probably saying
+that we unconsciously filter all these out</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>Grammar is simply a set of conventions, adhered to within a
+given language community</p>
+
+<p class=MsoNormal>Word order matters</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>politicians think that the public
+don�t know</p>
+
+<p class=MsoNormal style='margin-top:2.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>the public know that politicians
+don�t think</p>
+
+<p class=MsoNormal>Having said that, arranging the same letters of a word in a
+different order alters the meaning � what�s special about grammar? the
+difference is that grammatical correctness is determined by infinitely
+generative rules rather than rote-learnt set, finite combinations stored in a
+mental lexicon. the meaning of a sentence is constituted by the particular
+combination of its parts.</p>
+
+<p class=MsoNormal>The gross constituents of a word, the phonemes, taken
+together simply identify the word. the constituents of a sentence, the words,
+all have a different function � they each play a different role, e.g. subject,
+object, verb etc. these roles inter-relate. different languages use different
+rules for identifying the roles each word is playing, e.g. English uses the
+�subject-verb-object� word order; English uses the �noun-adjective� order,
+which is reversed in French</p>
+
+<p class=MsoNormal>Other languages use case-marking rather than word order to
+indicate the roles that words are occupying.</p>
+
+<p class=MsoNormal>But often, a given sentence (especially as you hear it
+word-by-word) might be conforming to more than one grammatical convention, or
+some of the words may have more than one meaning � in such (frequent) cases,
+the sentence will be ambiguous, i.e. there is more than one grammatical
+interpretation of the sentence. For example, �time flies like an arrow�, could
+be interpreted as time flying through the arrow like an arrow, or time flies, a
+variant on the common house fly, having a penchant for arrows. Indeed, to the
+listener, the problem of distinguishing words from the auditory jumble is made
+more difficult since there may well be a person called �Anne Arrow�, or a rare
+verb, �to flizelike�.</p>
+
+<p class=MsoNormal>Sometimes, the only way to pin down the roles being played
+in a sentence is by reference to the words� meanings. For instance, one can eat
+a pizza with friends/family or with your fingers/fork or with extra anchovies.
+The three senses are very different, and this is only signalled by their very
+different meanings.</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'>But sometimes, one meaning being
+more <span style='color:blue'>plausible </span>than the other is not enough???</p>
+
+<p class=MsoNormal>Sometimes though, the ambiguity passes unnoticed (at least
+initially), with unexpected results:</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'>For those of you who have
+children and don�t know it, we have a nursery downstairs.</p>
+
+<p class=MsoNormal style='margin-top:2.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>Crowds rushing to see Pope trample
+six to death</p>
+
+<p class=MsoNormal>And sometimes, it can prove very difficult to spot an
+ambiguity, to the extent that we might decide that a sentence is actually
+ungrammatical:</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'>If someone read this sentence
+thought it was ungrammatical because it missed an �and� between �sentence� and
+�thought� they would be wrong.</p>
+
+<p class=MsoNormal>The key to understanding this is to realise that there is
+someone who is <i>being read</i> the sentence, i.e. �read� is in the passive
+rather than being the main verb.</p>
+
+<p class=MsoNormal>The fact that this mistake is made almost universally,
+despite there being a correct grammatical interpretation, would seem to
+indicate that there is a consistent preference underlying our grammatical
+analysis that rules out the alternative to the extent that our first response
+is to assume the sentence is ungrammatical. This mistaken reading need not
+hinge on a word with two possible meanings, like �read�.</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>This universal preference for one (incorrect) reading over
+another may be invaluable in understanding each other as well as we do without
+becoming bogged down in the possible ambiguities at every point. However,
+theories of language understanding get engtangled in explaining phenomena like
+this.</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>It could be that we learn to prefer
+certain conventions over others</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>Given that the less preferred
+interpretations tend to require more complex descriptions, they may require
+more complex, and so less obvious, mental processes too. We might automatically
+plump for the simplest option</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>We might be opting for the most
+frequently used constructions (which may also be the simplest)</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>Such a frequency-based choice might
+depend on the frequency of a particular construction for the words being used,
+e.g. �read� in the past tense is more frequently used than �read� as a passive</p>
+
+<p class=MsoNormal>Yet, counter-intuitively, none of these explanations depend
+on the meaning of the word.</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>Context plays a critical role in our understanding. Consequently,
+it needs to be taken into account during experiments. Until Stephen Crain�s
+work with relative clause comprehension and production in young children, it
+was assumed that they were unable to differentiate between the elephant bumping
+the giraffe and vice versa in sentences like:</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'>The elephant <i>that a giraffe
+bumped against</i> lay down and went to sleep</p>
+
+<p class=MsoNormal style='margin-top:2.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>The elephant <i>that bumped against
+a giraffe</i> lay down and went to sleep</p>
+
+<p class=MsoNormal>When Crain tried to get children to act out a similar story
+with toy animals, he found that children were able to understand and use such
+relative clauses, but only if there was more than one elephant. Taken in this
+context, the roles of subject and object are being much more clearly signalled
+by the relative clause, and the meaning was clearer to the child.</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>Various experiments in adult sentence processing were
+designed to investigate whether some of the preferences described would be
+affected by context.</p>
+
+<p class=MsoNormal>Subjects� unconscious eye movements were measured with an
+infra-red beam while reading for the first time:</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'>Sam told the writer that he
+couldn�t understand to get some help from a decent editor</p>
+
+<p class=MsoNormal>Our eyes spend more time on problematic regions, or return
+to earlier parts of the sentence. The experiment was designed to test how
+problematic the sentence was by analysing eye movements when reading �to get�.</p>
+
+<p class=MsoNormal>In order to have a control to see how our eye movements cope
+with a less ambiguous sentence, separate measurements were conducted on eye
+movements reading:</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'>Sam asked the writer that he
+couldn�t understand to get some help from a decent editor</p>
+
+<p class=MsoNormal>Here, �asked� replaces �told�, since it does not lead us to
+think that �Sam told the writer [something of great importance]�. For instance,
+we don�t ever say, �Sam asked the writer that [his new book was awful]�. As
+might be expected, eye movements in the sentence with �asked�, where there is
+only one possible interpretation, are different.</p>
+
+<p class=MsoNormal>But if the ambiguous �told� case is embedded in a context
+where there is more than one writer, and it is that particular writer that Sam
+is addressing, then the problems on encountering �to get� are eradicated,
+mirroring Crain�s experiment with children.</p>
+
+<p class=MsoNormal>Thus, it seemed as though certain kinds of ambiguities
+resolved themselves when the meaning could be distinguished on the basis of
+context. Subsequent experiments have given frequency a place in the explanation
+once more, alongside context and a variety of other factors. Experiments have
+shown, for instance, that different verbs associated with alternative
+structures but with different frequencies influenced the particular
+interpretation chosen.</p>
+
+<p class=MsoNormal><span style='color:blue'>frequency of occurrence of the
+different meanings assoc with each word???</span></p>
+
+<p class=MsoNormal>We find then that if one kind of information is missing,
+e.g. context, we rely on other types, e.g. frequency of occurrence.</p>
+
+<p class=MsoNormal>But which takes precedence over which? surely, in a
+connectionist model, it�s all probabilistic??? constraint satisfaction</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>Spoken vs written. Written contains no ambiguity about what
+individual words are, i.e. their spelling, allows you to easily distinguish
+between similar sounding words. However, spoken gives you prosody (intonation,
+rhythm, pausing etc.), which helps disambiguate the sentence greatly. However,
+it doesn�t always help.</p>
+
+<p class=MsoNormal>Does emphasising a word disambiguate a sentence, or does it
+add alternative meanings? Possibly, it can do either. And does prosody analysis
+come after or before all these other factors?</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>What sort of mental representations do we form? Do they
+mirror the kinds of categories that linguists use? The answer affects the
+question of which mental representations are more complex, which we said
+earlier might affect our preference for a given reading over another. This
+would require a mental representation divorced from the individual meanings
+normally conveyed.</p>
+
+<p class=MsoNormal>Heavy debate about just what form such internal
+representations of the �who-did-what-to-whom?� take.</p>
+
+<p class=MsoNormal>Choosing between ambiguities is just part of the battle of
+understanding a sentence by deciding which roles should be assigned to which
+participant words.</p>
+
+<h3><a name="_Toc499499166">Chapter 8 � �Who did what, and to whom?�</a></h3>
+
+<p class=MsoNormal>Words have meanings in the same way that objects around us
+have meanings � we use them according to how they work and what they are for.
+Driving a car, as an analogy, is not just a matter of knowing what its
+components do, but also using them according to conventions to tell us which
+side of the road to drive on, what to do at a red light etc.</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'>what about how to use the clutch
+and accelerator together - are they part of the conventions too???</p>
+
+<p class=MsoNormal>words refer to things � sometimes they refer to other words
+(e.g. pronouns), or they point to which of a number of particular objects we
+mean (relative clauses)</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>some psycholinguists talk to the universal (except Frisian,
+and then only when no ambiguity would arise) distinction between reflexive and
+non-reflexive pronouns as evidence of innate linguistic knowledge, although
+children do take a long time before they learn to get them right consistently</p>
+
+<p class=MsoNormal>perhaps it just stems from children�s early instinct not to
+assign two words for the same meaning</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>pronouns in questions � questions are like statements with
+gaps, and we answer the question by figuring out which role would be in the gap</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>how do they tell whether the subject reading the sentence
+thinks a word is implausible (Tanenhaus)?</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'>see the words come up
+individually on the screen every time you press the button � the more
+implausible, the longer it takes to read the word</p>
+
+<p class=MsoNormal style='margin-left:35.7pt'><i>Which woman did Bertie present
+a wedding ring to ___?<o:p></o:p></i></p>
+
+<p class=MsoNormal style='margin-top:2.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:35.7pt;margin-bottom:.0001pt'><i>Which horse did Bertie present a
+wedding ring to ___?</i></p>
+
+<p class=MsoNormal style='margin-left:17.85pt'>Or Marta Kaus found that an
+identifiable pattern of brain activity can be seen on an EEG when the subject
+comes across a contextually implausible word</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'>In fact, we process the words as
+we go along, and we assume after �which woman did Bertie present� that the woman
+is being presented</p>
+
+<p class=MsoNormal style='margin-left:35.7pt'>So what does this show??? maybe
+that �present� is used more commonly to present that thing to something, rather
+than to present something to that thing</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'>We try to assign words to roles
+as we hear/read them, rather than waiting until we have found the �gap� in the
+question, which may only come at the end � this is why we sometimes have to
+re-read a sentence, to establish new roles for words in the light of what comes
+at the end</p>
+
+<p class=MsoNormal>Unlike the him/himself universal clean distinction,
+different languages have different rules about where you can form a question by
+adding a gap. for instance, in German, one cannot have a gap after a
+proposition, though this is often permissible in English. However, even when
+these conventions are flouted, the sentence is easily understandable.</p>
+
+<p class=MsoNormal>These seemingly arbitrary constraints on what can and cannot
+be done may reflect underlying, non-arbitrary conventions. Here is one example
+of how this might work for English: usually, to interpret questions like,
+�Which woman did Bertie marry ___?�, you try to identify which participant is
+intended by establishing first what role it played. It should be possible to
+see which word best fits the roles entailed by the verb. Finding the gap in the
+sentence later will tell you which role should have come there, and this should
+be enough to wholly disambiguate the roles of the entire sentence.</p>
+
+<p class=MsoNormal>This may help when we now look at examples where adding a
+legitimate-seeming gap results in an ungrammatical question:</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'><i>What did she think Bertie�s
+offer of ___ was long overdue?<o:p></o:p></i></p>
+
+<p class=MsoNormal style='margin-top:2.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'><i>The marriage that she thought
+Bertie�s offer was long overdue took place last week.</i></p>
+
+<p class=MsoNormal>In both these cases, the gap is in a position which does not
+receive a role from the verb. The arbitrary-seeming rule can be seen in the
+light of an underlying, wider rule, regarding how the roles are assigned by the
+verb. </p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>Tension between linguistics and psycholinguistics �
+overlapping remits but differing agendas. Linguistics focuses on the
+grammatical, while psycholinguistics focuses on the processable.</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h3>Gleitman + Liberman, Intro to cog sci, Chapter 8, �Comprehending sentence
+structure�</h3>
+
+<p class=MsoNormal>There are limits to the processing capacity of the human
+sentence processor. For instance, almost everybody stumbles over double
+center-embedded relative clauses like:</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'>The rat the cat the dog worried
+chased ate the malt.</p>
+
+<p class=MsoNormal>Even though this is wholly grammatical, we cannot seem to
+hold the sentence structure complete in our heads. If we simplify, by naming
+�the cat the dog worried�, �Socks�, then we find:</p>
+
+<p class=MsoNormal><span style='mso-tab-count:1'>������ </span>The rat Socks
+chased ate the malt</p>
+
+<p class=MsoNormal>comparatively easy to process. The complexity of this
+sentence can be seen in its very deep tree structure.</p>
+
+<p class=MsoNormal>The processing difficulty of the original sentence is
+exacerbated by its containing two �empty categories�. These are seen by
+linguists as sections of the sentence that effectively exist, but are not
+pronounced or written. The listener has to deduce the existence of and
+properties of an empty category. An illustrative example is the sentence:</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'>John flew to Paris, and Mary to
+Chicago</p>
+
+<p class=MsoNormal>which contains the �missing� verb, �flew�, in the second
+half of the sentence. This is an empty category, because the tree diagrams for
+both halves of the sentence are identical, with an empty category completing
+the verb phrase.</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h2><a name="_Toc499499168">Points</a></h2>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h2><a name="_Toc499499169">Questions</a></h2>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+</div>
+
+</body>
+
+</html>

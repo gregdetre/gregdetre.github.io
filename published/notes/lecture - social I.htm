@@ -1,0 +1,864 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 9">
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List href="./lecture%20-%20social%20I_files/filelist.xml">
+<title>Lecture � logic &amp; language I</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Detre</o:Author>
+  <o:LastAuthor>Greg Detre</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>54</o:TotalTime>
+  <o:Created>2003-07-02T01:07:00Z</o:Created>
+  <o:LastSaved>2003-07-02T01:07:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>1113</o:Words>
+  <o:Characters>6346</o:Characters>
+  <o:Lines>52</o:Lines>
+  <o:Paragraphs>12</o:Paragraphs>
+  <o:CharactersWithSpaces>7793</o:CharactersWithSpaces>
+  <o:Version>9.2720</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:DrawingGridHorizontalSpacing>4.5 pt</w:DrawingGridHorizontalSpacing>
+  <w:DrawingGridVerticalSpacing>12.25 pt</w:DrawingGridVerticalSpacing>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>0</w:DisplayVerticalDrawingGridEvery>
+  <w:Compatibility>
+   <w:WW6BorderRules/>
+   <w:FootnoteLayoutLikeWW8/>
+   <w:ShapeLayoutLikeWW8/>
+   <w:AlignTablesRowByRow/>
+   <w:ForgetLastTabAlignment/>
+   <w:LayoutRawTableWidth/>
+   <w:LayoutTableRowsApart/>
+  </w:Compatibility>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:"Book Antiqua";
+	panose-1:2 4 6 2 5 3 5 3 3 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:647 0 0 0 159 0;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:553679495 -2147483648 8 0 66047 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	tab-stops:.25in;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	tab-stops:.25in;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-font-kerning:14.0pt;
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+h2
+	{mso-style-next:Normal;
+	margin-top:16.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	tab-stops:.25in;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+h3
+	{mso-style-next:Normal;
+	margin-top:16.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	tab-stops:right 451.45pt;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+h4
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	tab-stops:.25in;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-font-weight:normal;}
+h5
+	{mso-style-next:Normal;
+	margin-top:15.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.25in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:-.25in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:5;
+	mso-list:l6 level1 lfo4;
+	tab-stops:list .25in;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	color:maroon;
+	font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{mso-style-parent:"Heading 1";
+	mso-style-next:Normal;
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	tab-stops:.25in .75in right 451.45pt;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-variant:small-caps;
+	color:purple;
+	mso-font-kerning:14.0pt;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{mso-style-parent:"Heading 2";
+	mso-style-next:Normal;
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:10.1pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	tab-stops:right 451.3pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:navy;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{mso-style-parent:"TOC 2";
+	mso-style-next:Normal;
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:20.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	tab-stops:right 451.45pt;
+	font-size:9.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoToc4, li.MsoToc4, div.MsoToc4
+	{mso-style-update:auto;
+	mso-style-parent:"TOC 3";
+	mso-style-next:Normal;
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:1.0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	tab-stops:right 451.45pt;
+	font-size:9.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	tab-stops:.25in center 239.75pt right 6.65in;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoDate, li.MsoDate, div.MsoDate
+	{margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:right;
+	mso-pagination:widow-orphan;
+	tab-stops:.25in;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
+	{margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	tab-stops:.25in;
+	background:navy;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Tahoma;
+	mso-fareast-font-family:"Times New Roman";}
+p.Section, li.Section, div.Section
+	{mso-style-name:Section;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	tab-stops:.25in;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.Heading0, li.Heading0, div.Heading0
+	{mso-style-name:"Heading 0";
+	mso-style-parent:"Heading 1";
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	tab-stops:.25in;
+	border:none;
+	mso-border-alt:solid windowtext .5pt;
+	padding:0in;
+	mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt;
+	font-size:16.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Book Antiqua";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	font-variant:small-caps;
+	color:purple;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:68.05pt 68.05pt 68.05pt 68.05pt;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+@list l0
+	{mso-list-id:567763230;
+	mso-list-type:hybrid;
+	mso-list-template-ids:151807834 1732910432 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l0:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+@list l1
+	{mso-list-id:717096762;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1213719150 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l1:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l2
+	{mso-list-id:860358687;
+	mso-list-type:hybrid;
+	mso-list-template-ids:2117256956 1732910432 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l2:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+@list l3
+	{mso-list-id:877933496;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1057068158 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l3:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l4
+	{mso-list-id:1550530779;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-724513824 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l4:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l5
+	{mso-list-id:1667703204;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1658139410 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l5:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l6
+	{mso-list-id:1746143482;
+	mso-list-type:simple;
+	mso-list-template-ids:-719658964;}
+@list l6:level1
+	{mso-level-style-link:"Heading 5";
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l7
+	{mso-list-id:1871647922;
+	mso-list-type:hybrid;
+	mso-list-template-ids:713329122 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l7:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l8
+	{mso-list-id:2058577400;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1213719150 67698689 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l8:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+</head>
+
+<body lang=EN-GB style='tab-interval:17.85pt'>
+
+<div class=Section1>
+
+<h1 style='tab-stops:17.85pt'>Lecture � social I</h1>
+
+<p class=MsoNormal align=right style='margin-top:3.0pt;text-align:right;
+tab-stops:17.85pt'>Prof Emler - Psychology</p>
+
+<p class=MsoNormal align=right style='margin-top:3.0pt;text-align:right;
+tab-stops:17.85pt'>@12 on Wednesday, 03 May, 2000</p>
+
+<h2>Introduction</h2>
+
+<p class=MsoNormal>16 lectures</p>
+
+<p class=MsoNormal>change of time</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h2>The evolution of social nature</h2>
+
+<h3>what does it mean to be a social animal � and what is distinctive about us?</h3>
+
+<h3 style='margin-top:3.0pt'>a question of altruism</h3>
+
+<p class=MsoNormal>1964 murder in New York � striking, because the murder
+appeared to be preventable. 38 people saw it happen, witnessed the attack take
+place. attacked outside a block of flats, murderer came back. raised questions
+about conditions under which people are prepared to intervene in emergencies to
+help strangers = a version of the �altruism question� � pro-social behaviour.</p>
+
+<p class=MsoNormal>social psychologist � arranged for somebody to collapse on a
+path, divinity students going to a lecture on Good Samaritan, stepping over the
+person</p>
+
+<p class=MsoNormal>the more people, the more diffused the sense of
+responsibility</p>
+
+<p class=MsoNormal>research in areas, incl developmental, on pro-social
+behaviour</p>
+
+<p class=MsoNormal>raised the q: what does it mean to be a social animal, and
+what kind are we?</p>
+
+<h3>society as a human invention</h3>
+
+<p class=MsoNormal>Hobbes introduced the fiction that at some point, our
+ancestors invented society</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'><i><span style="mso-spacerun:
+yes">�</span>�no arts, no letters; no siciety; and which is worse of all,
+continual fear and dnager of violent death; and the life of man, solitary,
+pooor, nasty, brutish and short.� � Thomas Hobbes, Leviathan (1651)<o:p></o:p></i></p>
+
+<p class=MsoNormal>implying that we are not naturally social animal</p>
+
+<h3>the SSSM (standard social science model)</h3>
+
+<h3>sociobiology � social species</h3>
+
+<h3>anatomical and behavioural adaptations for social living</h3>
+
+<h3>advantages of sociality</h3>
+
+<h3>the �free rider� problem</h3>
+
+<h3>what is intelligence for?</h3>
+
+<h3>specific cognitive adaptations for social life</h3>
+
+<h3>what is language for?</h3>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h2>The �evolution� of cultural determinism</h2>
+
+<h3>Hobbes � enforcement of co-operation by a central power</h3>
+
+<h3>the Industrial Revolution � problems for �social control� thesis</h3>
+
+<p class=MsoNormal>Industrial Revolution � went from close-knit communities,
+easy to monitor + sanction</p>
+
+<p class=MsoNormal style='margin-top:0in'>people moved to huge conurbations of
+strangers</p>
+
+<h3>internalisation (Freud)</h3>
+
+<p class=MsoNormal>internal but internalised social inclinations � acquire
+through process of socialisation, from authority figures</p>
+
+<p class=MsoNormal>Freud � view that have to tame natural baby inclinations to
+kill and have sex with mother</p>
+
+<p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>there is an opposition between what
+is natural to us (selfishness) and what is needed for society</p>
+
+<h3>moral education (Durkheim)</h3>
+
+<p class=MsoNormal>born with no social impulses at all � they need to be
+drummed into us, to fit in with society</p>
+
+<h3>social psychology: threats to civilisation</h3>
+
+<p class=MsoNormal>social psychology � the veneer of social civilisation is v
+thin, and the threats to it � the conditions which undermine them</p>
+
+<h3>the SSSM: between-group differences, within-group similarities</h3>
+
+<p class=MsoNormal>shared culture determines in-group similarity, rather than
+genetic.</p>
+
+<p class=MsoNormal>the model is interested in how we generate + sustain
+culture-specific</p>
+
+<p class=MsoNormal>not interested in general biological similarities</p>
+
+<h3>extreme plasticity of human nature</h3>
+
+<p class=MsoNormal>Berger &amp; Luckmann �Social construction of reality� �
+humans can end up believing/wanting/valuing almost anything, dependent on
+cultural standards</p>
+
+<h3>origins of culture insrutable or ecology (Harris)?</h3>
+
+<p class=MsoNormal>explains why Jews + Muslims don�t eat pork, in terms of
+economically sensible</p>
+
+<h3>Kitty Genovese and the problem of altruism in other species</h3>
+
+<p class=MsoNormal>we aren�t the only social animal on the planet � there are
+always other species which fit the definition</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h2>The four pinnacles of social evolution</h2>
+
+<p class=MsoNormal><span style='mso-tab-count:1'>������� </span>E. O. Wilson,
+1974</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h3>Colonial invertebrates</h3>
+
+<p class=MsoNormal>corals � no pursuit of self-interest, only collective
+interest � so totalitarian, that there is no viable life except as joined to
+other coral</p>
+
+<h3>Social insects</h3>
+
+<p class=MsoNormal>they build apartment-type blocks, divisions of labour, food
+storage for community use, systems of communication (ants chemical trails, bees
+dance to point to honey), altruism (sacrifice themselves for the collective �
+biologically designed for it, e.g. bee�s insides are ripped out when it stings)</p>
+
+<h3>Social vertebrates</h3>
+
+<p class=MsoNormal>wolves, primates, dolphins etc.</p>
+
+<p class=MsoNormal>they are genetic competitors, unlike the sterile social
+insects � lower degree of self-sacrifice</p>
+
+<p class=MsoNormal>but still high degree of co-operation</p>
+
+<h3>Humans � the social animal?</h3>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h2>Basic features of social species</h2>
+
+<p class=MsoNormal>the social instincts are built-in, e.g. the social insects</p>
+
+<h3>Sharing information about the environment</h3>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Symbol;mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman";mso-char-type:symbol;
+mso-symbol-font-family:Symbol'><span style='mso-char-type:symbol;mso-symbol-font-family:
+Symbol'>\</span></span> system of communication</p>
+
+<h3>Co-operation or co-ordinated action</h3>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Symbol;mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman";mso-char-type:symbol;
+mso-symbol-font-family:Symbol'><span style='mso-char-type:symbol;mso-symbol-font-family:
+Symbol'>\</span></span> social influence</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h2>Species-specific designed features</h2>
+
+<h3>Anatomical</h3>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l8 level1 lfo10;
+tab-stops:list .25in'><![if !supportLists]><span style='font-family:Symbol'>�<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>stereoscopic colour vision</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l8 level1 lfo10;
+tab-stops:list .25in'><![if !supportLists]><span style='font-family:Symbol'>�<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>bi-pedal gait (females: narrow birth canal, because
+engineering constrains a narrow pelvis for walking, so our babies are immature
+and highly dependent)</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l8 level1 lfo10;
+tab-stops:list .25in'><![if !supportLists]><span style='font-family:Symbol'>�<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>large parietal lobes (compared with chimpanzees, re:
+spatial relations)</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l8 level1 lfo10;
+tab-stops:list .25in'><![if !supportLists]><span style='font-family:Symbol'>�<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>opposable thumb (grasping + throwing)</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l8 level1 lfo10;
+tab-stops:list .25in'><![if !supportLists]><span style='font-family:Symbol'>�<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>size - ancestors 3�5�, average man now 5�9�, 3000 yrs
+ago average 5�11� (our diet is more monotonous since agriculture)</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l8 level1 lfo10;
+tab-stops:list .25in'><![if !supportLists]><span style='font-family:Symbol'>�<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>hairless bodies � heat loss (stamina), cleaner</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h3>Behavioural</h3>
+
+<p class=MsoNormal>Waddington (1960) �The ethical animal�</p>
+
+<p class=MsoNormal>hunter-gatherer social adaptations:</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l3 level1 lfo11;
+tab-stops:list .25in'><![if !supportLists]><span style='font-family:Symbol'>�<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>co-operative hunting � mass co-ordinated slaughter of
+animals</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l3 level1 lfo11;
+tab-stops:list .25in'><![if !supportLists]><span style='font-family:Symbol'>�<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>food-sharing</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l3 level1 lfo11;
+tab-stops:list .25in'><![if !supportLists]><span style='font-family:Symbol'>�<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>tool manufacture � other animals make tools, but not to
+the same extent</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l3 level1 lfo11;
+tab-stops:list .25in'><![if !supportLists]><span style='font-family:Symbol'>�<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>husband-wife reciprocities</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l3 level1 lfo11;
+tab-stops:list .25in'><![if !supportLists]><span style='font-family:Symbol'>�<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>symbolic communication</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l3 level1 lfo11;
+tab-stops:list .25in'><![if !supportLists]><span style='font-family:Symbol'>�<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>rule-giving and rule-following</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h2>Why form social groups? What are the advantages of being a social animal?</h2>
+
+<p class=MsoNormal>Robin Dunbar (1988)</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l4 level1 lfo12;
+tab-stops:list .25in'><![if !supportLists]><span style='font-family:Symbol'>�<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>predator defence</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l4 level1 lfo12;
+tab-stops:list .25in'><![if !supportLists]><span style='font-family:Symbol'>�<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>resource defence (defending against competitors)</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l4 level1 lfo12;
+tab-stops:list .25in'><![if !supportLists]><span style='font-family:Symbol'>�<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>foraging efficiency</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l4 level1 lfo12;
+tab-stops:list .25in'><![if !supportLists]><span style='font-family:Symbol'>�<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>infant care</p>
+
+<p class=MsoNormal>co-operation always entails a degree of altruism. there is
+no immediate benefit to the self in this co-operation. others may benefit on
+this occasion. fair enough, so long as the net benefit in the long run exceeds
+aggregate costs</p>
+
+<p class=MsoNormal>adapt to the environment at the level of groups</p>
+
+<p class=MsoNormal>game theory � benefit from altruism. but benefit even more
+from living selfishly (free rider) in an altruistic group. <span
+style='font-size:10.0pt;font-family:Symbol;mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman";mso-char-type:symbol;mso-symbol-font-family:
+Symbol'><span style='mso-char-type:symbol;mso-symbol-font-family:Symbol'>�</span></span>
+genetic dissemination.</p>
+
+<p class=MsoNormal>so how can a society discourage free riders? otherwise,
+society wouldn�t be viable.</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h3>Inclusive fitness theory</h3>
+
+<p class=MsoNormal>William Hamilton (1964)</p>
+
+<p class=MsoNormal>the process of natural selection is not about individuals,
+but about a genetic pattern. some of us carry similar genetic patterns, because
+we�re biologically related. so it makes sense to incur costs for people
+biologically related to me.</p>
+
+<p class=MsoNormal>r B &gt; C</p>
+
+<p class=MsoNormal>where<span style='mso-tab-count:1'>�� </span>r = biological
+relatedness of giver and receiver of benefit</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:35.7pt;margin-bottom:.0001pt'>B = benefit to receiver</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:35.7pt;margin-bottom:.0001pt'>C = cost of giver</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>but why co-operate with people who are not genetically
+related</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h3>Richard Trivett(???)</h3>
+
+<p class=MsoNormal>most co-operation among social vertebrates is not
+unconditional � usually hinges on reciprocation (contingent on getting a
+repayment)</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h3>Prisoners� Dilemma</h3>
+
+<p class=MsoNormal>encapsulates the problem of the free rider</p>
+
+<p class=MsoNormal>but defecting isn�t the sensible strategy in the long run,
+if you have to repeat the game with the same people</p>
+
+<p class=MsoNormal>iterative game where each strategy plays every other
+strategy an unspecified number of times</p>
+
+<p class=MsoNormal>tit-for-tat worked best of all � not unconditionally
+altruistic, but altruistic under certain conditions</p>
+
+<p class=MsoNormal>but there are problems with this</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h2>Human peculiarity of intelligence</h2>
+
+<p class=MsoNormal>allows humans to be intelligent adaptors to material
+environment � NO</p>
+
+<p class=MsoNormal>the problems of material survival aren�t difficult enough to
+dictate the need for intelligence</p>
+
+<p class=MsoNormal>other species can do trial and error too � the difference is
+that we do <i>collective</i> trial and error � stored knowledge</p>
+
+<p class=MsoNormal>problem remains: what is there that is so difficult and
+intellectually demanding on a daily basis that you need a big brain for?</p>
+
+<h3>make tools - NO</h3>
+
+<p class=MsoNormal style='margin-left:17.85pt'>but the great developments in
+tools are unrelated to great developments in our brain</p>
+
+<h3>other people</h3>
+
+<p class=MsoNormal style='margin-left:17.85pt'>the big brain is necessary to
+solve the problem of keeping collective life going � so that you aren�t exploited
+by others or co-operation breaks down</p>
+
+<h3>different species of primates have different neo-cortex ratios</h3>
+
+<p class=MsoNormal style='margin-left:17.85pt'>relates almost <i>linearly to
+the size of the social groups</i> that the different species form</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'>implies that we intelligent
+enough to deal with a human group of 150</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal style='margin-left:17.85pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+</div>
+
+</body>
+
+</html>
