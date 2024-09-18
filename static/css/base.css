@@ -27,7 +27,8 @@ body {
 }
 
 #main {
-    padding: 0 10px 80px 10px;
+    /* change the first padding value to move everything (including the h1) down */
+    padding: 20px 10px 80px 10px;
     position: relative;
 }
 

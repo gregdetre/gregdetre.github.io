@@ -35,18 +35,18 @@
 
 
 <p>Emacs loves to create billions of little ugly-twin backup files all over your hard disk that look like 'myfile~' and 'myfile.txt~'. Here are some better alternatives:  </p>
-<p>- add the following to your .emacs (this is the best solution)<br/>
-(setq make-backup-files t)<br/>
-(setq version-control t)<br/>
-(setq backup-directory-alist<br/>
-     (quote ((".*" . "~/backup/emacs_autosave/"))))<br/>
-; otherwise it keeps asking<br/>
-(setq kept-new-versions 30)<br/>
-(setq delete-old-versions t)  </p>
+<p>- add the following to your .emacs (this is the best solution)  </p>
+<p>(setq make-backup-files t)  </p>
+<p>(setq version-control t)  </p>
+<p>(setq backup-directory-alist  </p>
+<p>(quote ((".*" . "~/backup/emacs_autosave/"))))  </p>
+<p>; otherwise it keeps asking  </p>
+<p>(setq kept-new-versions 30)  </p>
+<p>(setq delete-old-versions t)  </p>
 <p>[i've forgotten which of these does what, but they're all in my .emacs file...]  </p>
 <p>make sure to create ~/backup/emacs_autosave first. this will create multiple snapshots of every file you edit and store them in that directory. this avoids having all the blah~ files in your current directory, and is useful if you want to revert to the way you had things 5 minutes ago.  </p>
-<p>- a quick alias to remove them (courtesy of Randy O'Reilly)<br/>
-alias cleanup '/bin/rm *~ .*~ #* .#*'  </p>
+<p>- a quick alias to remove them (courtesy of Randy O'Reilly)  </p>
+<p>alias cleanup '/bin/rm *~ .*~ #* .#*'  </p>
 <p>- finally, put Dropbox into 'pack rat' mode, so that it stores every single version of your Dropbox files for eternity.</p>
 
 
@@ -60,11 +60,10 @@ alias cleanup '/bin/rm *~ .*~ #* .#*'  </p>
             
 
 <p>
-    <small>
-        <i>
-            Last updated</a>: 2024-August-30
-        </i>
-    </small>
+    <i>
+        <!-- Last updated: 2024-September-18 -->
+        Published: 2009-10-01
+    </i>
 </p>
 
 

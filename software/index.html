@@ -1,120 +1,112 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html>
-  <head>
-    <title>
-      Greg Detre - software
-    </title>
-    <meta name="generator" content="muse.el">
-    <meta http-equiv="Content-Type"
-          content="text/html; charset=iso-8859-1">
-    <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/media/main.css" />
-  </head>
+<!DOCTYPE html>
+<html lang="en">
 
-  <body>
+<head>
+    
+    <title>Greg Detre - Software</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="gdwebgen" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Greg Detre's personal website" />
+    
+    <link rel="stylesheet" href="/static/css/base.css">
+    
+</head>
 
-<h2>Software stuff I've worked on</h2>
+<body>
+    <div class="nav_menu" <p>
+        <!-- <a href="#">Home</a> -->
+        
+        <a href="/">Home</a>
+        
+        <a href="/about">About</a>
+        
+        <a href="/blog">Blog</a>
+        
+        </p>
+    </div>
 
-<h4>The <a href="http://www.csbmb.princeton.edu/mvpa/">
-Multi-voxel pattern analysis</a> (MVPA) toolbox</h4>
+    <div id="main">
+        
 
-<p>I lead the development and maintenance of the
- <a href="http://www.csbmb.princeton.edu/mvpa/">
-Multi-Voxel Pattern Analysis Toolbox</a> (Matlab) for
-analyzing neuroimaging data multivariately. </p>
 
-<p>The MVPA toolbox was co-authored with a number of other
-people (see the AUTHORS list), and has been released under
-the GPL.</p>
+<h1>Software</h1>
 
-<p> The MVPA toolbox has been downloaded by hundreds of labs
-around the world.
+
+<p>I code compulsively and with great delight. Writing software is like weaving a magical spell, something out of nothing.</p>
+<p>I've worked on a mix of consumer, web, scientific and open source software projects. Here are a few.</p>
+<h2>Repositories</h2>
+<p>I'm <a href="https://github.com/gregdetre">gregdetre on GitHub</a> (currently all hidden in private repositories).</p>
+<p>My most recent open source work was produced while CTO, under <a href="https://github.com/Memrise">Memrise's GitHub</a>.</p>
+<p>Some of my older projects below live under <a href="http://code.google.com/u/102180193434691684247/">gdetre on Google Code</a>.</p>
+<h2>Memrise (consumer web)</h2>
+<p>Memrise is a B2C language learning startup, loved by hundreds of thousands of users around the world, and featured in The Guardian, Independent, Wired ... <a href="startups/" title="Startups">more &gt;&gt;</a></p>
+<p>We put together a really talented technical team, and built some great infrastructure for ourselves that I'd love to one day see open sourced. High-level details:</p>
+<ul>
+<li>Rich Python/Django/MySQL/Javascript app that scales to 100+ requests/second.</li>
+<li>Hosted on Amazon EC2/S3/RDS/Cloudfront.</li>
+<li>A lot of complex javascript (mostly jQuery) to make our learning environment snappy once loaded, and highly interactive.</li>
+<li>Original adaptive learning algorithms to decide how and when to test learners, in order to maximize the effectiveness of their learning.</li>
+<li>Fairly comprehensive set of Python and Selenium unit tests.</li>
+<li>Continuous deployment to the live site many times a day (one command to deploy to multiple web servers, migrate the database, run the whole suite of unit tests, and alert the rest of the team on Campfire).</li>
+<li>Powerful internal AB testing and analytics framework that made it very easy to run multiple simultaneous AB tests, and track their effects across multiple key metrics.</li>
+</ul>
+<p>I love to share what I've learned and get new ideas - if you run an event or conference and would like me to speak about any of this, <a href="mailto:greg@gregdetre.co.uk">drop me a line</a>.</p>
+<h2><strong>The <a href="http://www.csbmb.princeton.edu/mvpa/">Multi-voxel pattern analysis</a> (MVPA) toolbox (scientific, open source)</strong></h2>
+<p>I lead the development and maintenance of the popular <a href="http://www.csbmb.princeton.edu/mvpa/">Multi-Voxel Pattern Analysis Toolbox</a> (Matlab) for analyzing fMRI neuroimaging data multivariately. [If you don't understand this, but would like to, see <a href="2010/10/29/brain-orchestras-and-fmri-analyses/" title="Brain orchestras and fMRI analyses">Brain orchestras and fMRI analyses</a>.]</p>
+<p>The MVPA toolbox was co-authored with a number of other people (see the <a href="http://code.google.com/p/princeton-mvpa-toolbox/source/browse/trunk/AUTHORS">AUTHORS</a> list), and has been released under the GPL.</p>
+<p>It has been downloaded by hundreds of labs around the world, and featured in multiple publications.</p>
+<h2>Emacs freex mode (open source)</h2>
+<p><a href="http://code.google.com/p/emacs-freex/">Emacs Freex mode</a> is a minor mode for organizing and editing a massively-hyperlinked database of your notes and ideas. It's a personal wiki on steroids.</p>
+<p>Freex was co-authored with <a href="http://www.princeton.edu/~persed">Per Sederberg</a>, and has been released under the GPL.</p>
+<p>I'm incredibly proud of it, and I use it hundreds of times a day myself, but it would need a lot of work and polish to increase its market share beyond one :)</p>
+<p>You can see <a href="http://www.youtube.com/watch?v=vGqaSzD-FTE">a screencast of Emacs Freex</a> in action.</p>
+<h2>Wordpress-Python-Emacs</h2>
+<p>A very simple command-line Python library for down/uploading Wordpress posts, and some Emacs wrapper functions, so I can type <a href="2013/09/27/blogging-with-wordpress-and-emacs/">M-x wordpress-publish-this-file</a>.</p>
+<h2>Pebbles.js</h2>
+<p>[Development led by <a href="http://www.jperla.com/blog/">Joseph Perla</a> and <a href="http://www.linkedin.com/in/spencersdavis">Spencer Davis</a>.]</p>
+<p>See <a href="https://github.com/Memrise/pebbles">Pebbles on GitHub</a>.</p>
+<p>Writing lots of custom AJAX interactivity is bug-prone, has no compile-time checking, breaks whenver you change the structure of your html, and requires you to separate basic interactivity from markup.</p>
+<p>With Pebbles, you just annotate your html objects (e.g. a button) with the '.actionable' class, then provide a set of arguments in the html alongside, e.g.</p>
+<p>[sourcecode language="html"] <div class="kwargs"> <!-- replace #money with the output from /user/3/money/create --> <input name="type" value="replace"/> <input name="target" value="#money"/> <input name="url" value="/user/3/money/create"/> </div> [/sourcecode]</p>
+<p>The library then parses the html of .actionable objects, and automatically creates the relevant jQuery bindings for you. In other words, you define the behavior in html, without having to write any custom javascript. (see <a href="http://news.ycombinator.com/item?id=3027293">Hacker News</a>).</p>
+<p>We made heavy use of this at Memrise (Spencer Davis gets most of the credit here). Devolving certain kinds of basic, repetitive ajax functionality to html felt natural and simple. And, by adding new handler types to the library, it was sometimes much easier to create reusable widgets that we can sprinkle throughout the site.</p>
+<p>That said, it produced heavier html pages, and wasn't as easy to extend as we'd hoped. So the jury is still out on this for me. Maybe jQuery plugins are the best compromise.</p>
+<h2>PyEPL blog (open source, Python)</h2>
+<p><a href="http://pyepl.sourceforge.net/">PyEPL</a> (the Python Experiment-Programming Library) was written by the <a href="http://memory.psych.upenn.edu/Main_Page">Kahana lab</a>, and was my favorite way to code up psychological experiments.</p>
+<p>Like the Matlab Cookbook (below), I created the <a href="http://pyepl.blogspot.com/">PyEPL blog</a> to help new users by providing useful snippets.</p>
+<h2>Matlab Cookbook (open source, Matlab)</h2>
+<p>After years and years of writing in Matlab, I collated some of the  utility functions I'd built for myself in a <a href="software/matlab_cookbook.html">Matlab Cookbook</a>. There are also a good number of handy scripts in the MVPA toolbox (see above).</p>
+<h2>Free Rhycall (scientific, Python)</h2>
+<p>This was just a mini-project, but it was pretty neat.</p>
+<p>Free Rhycall helps you parse the free recall audio of someone talking in a noisy fMRI scanner.</p>
+<p>In this case, you have a wordlist of may a few tens or hundreds of words, and your job is to tell which one the subject is saying each time. They could come in any order. This program is not trying to do speech recognition or anything fancy like that. It's simply intended as a handy tool for the human doing the parsing. Put simply, you feed it a wordlist and what you think you hear, and it will return words (from the wordlist) that might be matches. It's then up to the human to decide which works best.</p>
+<p>This uses the Levenshtein edit distance as applied to the phonetic distances in the CMU Pronouncing Dictionary.</p>
+<p>Available upon request.</p>
+<h2>Emacs indentation library (open source, Emacs Lisp)</h2>
+<p>Available as part of <a href="http://code.google.com/p/emacs-freex/">Emacs Freex</a> as <a href="http://code.google.com/p/emacs-freex/source/browse/trunk/freex-hiert.el">freex-hiert.el</a>, this library makes it much easier to indent and outdent multiple, entire paragraphs at a time. Very useful for taking hierarchical notes.</p>
+
+
+    </div>
+    <footer>
+        <div class="bottom_nav">
+            <!-- <p>from base</p> -->
+            
+
+            <!-- <p><a href="#">link1</a></p> -->
+            
+
+<p>
+    <i>
+        <!-- Last updated: 2024-September-18 -->
+        Published: 2013-01-06
+    </i>
 </p>
 
-<h4>Emacs freex mode</h4>
 
-<p><a href="http://code.google.com/p/emacs-freex/">Emacs Freex mode</a> is a minor mode for organizing and editing
-a massively-hyperlinked database of your notes and
-ideas. It's a personal wiki on steroids.</p>
-
-<p>Freex was co-authored
-with <a href="http://www.princeton.edu/~persed">Per
-Sederberg</a>, and has been released under the GPL.</p>
-
-<p>You can
-see <a href="http://www.youtube.com/watch?v=vGqaSzD-FTE"> a
-screencast of Emacs Freex</a> in action.</p>
-
-
-<h4>PyEPL blog</h4>
-
-PyEPL is my favorite way to code up psychological
-experiments - I created
-the <a href="http://pyepl.blogspot.com/">PyEPL blog</a> to
-help new users by providing useful snippets.
-
-<h4>Matlab Cookbook</h4>
-
-<p>I've begun collating the various utility functions I've
-built for myself in a <a href="matlab_cookbook.html">Matlab
-Cookbook</a></p>
-
-
-<h4>Free Rhycall</h4>
-
-Free Rhycall helps you parse the free recall audio of
-someone talking in a noisy fMRI scanner. Available upon
-request.
-
-
-<h4>Emacs indentation library</h4>
-
-Available as part
-of <a href="http://code.google.com/p/emacs-freex/">Emacs
-Freex</a>
-as <a href="http://code.google.com/p/emacs-freex/source/browse/trunk/freex-hiert.el">freex-hiert.el</a>,
-this library makes it much easier to indent and outdent
-multiple, entire paragraphs at a time. Very useful for
-taking hierarchical notes.
-
-
-<h4>Memrise</h4>
-
-<a href="http://www.memrise.com/">Memrise</a> is an online
-learning platform that helps people learn words, facts and
-relationships more quickly, and remember them for
-longer. I'm the lead software developer (currently under
-development).
-
-
-<br>
-<hr>
-
-<h6>
-  <p align="center">
-    <a href="http://blog.gregdetre.co.uk/">Home</a> - 
-    <a href="http://blog.gregdetre.co.uk/posts/">Blog</a> - 
-    <a href="http://blog.gregdetre.co.uk/startups/">Startups</a> - 
-    <a href="http://blog.gregdetre.co.uk/software/">Software</a> - 
-    <a href="http://blog.gregdetre.co.uk/research/">Research</a> - 
-    <a href="http://blog.gregdetre.co.uk/writing/">Writing</a>
-  </p>
-
-  <p align="center">
-    <a href="mailto:greg@gregdetre.co.uk">Email me</a> - updated 31 Dec 2012
-  </p>
-
-</h6>
-
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-1631385-5");
-pageTracker._trackPageview();
-} catch(err) {}</script>
-
+        </div>
+    </footer>
 </body>
-</html>
 
+</html>
