@@ -1,36 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    
-      <title>Greg Detre - My take on emacsclient</title>
-      <meta charset="utf-8" />
-      <meta name="generator" content="gdwebgen" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      
-        <meta name="description" content="Greg Detre's personal website" />
-      
-      
-    
-  </head>
 
-  <body>
-    <header>
-      <hgroup><h1><a href="https://gregdetre.com/">Greg Detre</a></h1><p>Greg Detre's personal website</p></hgroup>
-      <nav><ul>
-        
-        
-        </ul>
-        <hr />
-      </nav>
-    </header>
-    <main>
-      
-  <article>
-    <header>
-      <h2>My take on emacsclient</h2>
-    </header>
+<head>
     
-    <p>Emacs is pretty lightweight relative to most modern editors, though by the time it loads all the modes and gets through all the uncompiled junk in my .emacs configuration, you wouldn't know it.  </p>
+    <title>Greg Detre - My take on emacsclient</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="gdwebgen" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Greg Detre's personal website" />
+    
+    <link rel="stylesheet" href="/static/css/base.css">
+    
+</head>
+
+<body>
+    <div class="nav_menu" <p>
+        <!-- <a href="#">Home</a> -->
+        
+        <a href="/">Home</a>
+        
+        <a href="/about">About</a>
+        
+        <a href="/blog">Blog</a>
+        
+        </p>
+    </div>
+
+    <div id="main">
+        
+
+
+<h1>My take on emacsclient</h1>
+
+
+<p>Emacs is pretty lightweight relative to most modern editors, though by the time it loads all the modes and gets through all the uncompiled junk in my .emacs configuration, you wouldn't know it.  </p>
 <p><a href="http://www-h.eng.cam.ac.uk/help/tpl/emacs/node26.html">Emacsclient</a> is the solution - when you open a file with emacsclient, it doesn't start up a whole new emacs - it just opens it in the running emacs, which is more or less instantaneous.  </p>
 <p>There are lots of webpages on this, so I won't go into detail. Unfortunately, although you'd hope that calling 'emacsclient' would work just like 'emacs', this isn't true:  </p>
 <ul>
@@ -48,19 +52,27 @@
 <p>P.S. I have not dealt with the possibility that you're running this in the terminal, and you don't have an X11 display at all.  </p>
 <p>P.P.S. I suspect that it requires emacs 22 (or gnuclient) to work, since it relies on being able to pass 'make-frame-on-display' as elisp code to be evaluated.</p>
 
-    
-      <footer>
-        <p>
-          Last updated: 2024-08-30 20:41:59.071532+00:00
-        </p>
-      </footer>
-    
-  </article>
 
-    </main>
+    </div>
     <footer>
-      
-      
+        <div class="bottom_nav">
+            <!-- <p>from base</p> -->
+            
+
+            <!-- <p><a href="#">link1</a></p> -->
+            
+
+<p>
+    <small>
+        <i>
+            Last updated</a>: 2024-August-30
+        </i>
+    </small>
+</p>
+
+
+        </div>
     </footer>
-  </body>
+</body>
+
 </html>
