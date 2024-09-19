@@ -29,7 +29,7 @@ body {
 
 #main {
     /* change the first padding value to move everything (including the h1) down */
-    padding: 20px 10px 80px 10px;
+    padding: 30px 10px 80px 10px;
     position: relative;
 }
 
@@ -151,7 +151,7 @@ ul, ol {
 }
 
 li {
-    margin-bottom: 0.5em;
+    margin-bottom: 0.3em;
 }
 
 /* Code */
