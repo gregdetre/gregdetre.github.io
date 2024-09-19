@@ -15,10 +15,23 @@
 </head>
 
 <body>
+    
+<nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        
+        <li class="breadcrumb-item"><a href="/blog">blog</a></li>
+        
+        
+        <li class="breadcrumb-item active" aria-current="page"><a href="">WriteRoom? DarkRoom? MushRoom!</a></li>
+        
+    </ol>
+</nav>
+
+
+    
     <div class="nav_menu" <p>
         <!-- <a href="#">Home</a> -->
-        
-        <a href="/">Home</a>
         
         <a href="/about">About</a>
         
@@ -26,6 +39,7 @@
         
         </p>
     </div>
+    
 
     <div id="main">
         
@@ -42,50 +56,48 @@
 </blockquote>
 <p>Anyway, so I had a nose around, and it turns out that Emacs has both undo/redo and very capable full screen capabilities. The <a href="http://www.emacswiki.org/cgi-bin/wiki/WriteRoom">EmacsWiki</a> includes the following function, which I've renamed from 'write-room' and tweaked a little for the mac:  </p>
 <blockquote>
-<p>;; http://www.emacswiki.org/cgi-bin/wiki/WriteRoom<br/>
-(defun mush-room ()<br/>
-"Make a frame without any bling"<br/>
-(interactive)<br/>
-(let* ((frame (make-frame '(;; (minibuffer . nil)<br/>
-(vertical-scroll-bars . nil)<br/>
-(left-fringe . 235); big fringe to center<br/>
-(right-fringe . 160)<br/>
-(background-mode . dark)<br/>
-(background-color . "black")<br/>
-(foreground-color . "green")<br/>
-(cursor-color . "green")<br/>
-(border-width . 0)<br/>
-(border-color . "black"); should be unnecessary<br/>
-(internal-border-width . 20) ; whitespace<br/>
-(cursor-type . box)<br/>
-(menu-bar-lines . 0)<br/>
-(tool-bar-lines . 0)<br/>
-(mode-line-format . nil); dream on... has no effect<br/>
-(fullscreen . t); does not work on all systems<br/>
-(unsplittable . t)))))<br/>
-(select-frame frame)<br/>
-(setq mode-line-format nil); is buffer local unfortunately<br/>
-(set-face-background 'fringe "black")<br/>
-(set-frame-font gjd-gin-font)<br/>
-(mac-toggle-max-window)))  </p>
+<p>;; http://www.emacswiki.org/cgi-bin/wiki/WriteRoom  </p>
+<p>(defun mush-room ()  </p>
+<p>"Make a frame without any bling"  </p>
+<p>(interactive)  </p>
+<p>(let* ((frame (make-frame '(;; (minibuffer . nil)  </p>
+<p>(vertical-scroll-bars . nil)  </p>
+<p>(left-fringe . 235); big fringe to center  </p>
+<p>(right-fringe . 160)  </p>
+<p>(background-mode . dark)  </p>
+<p>(background-color . "black")  </p>
+<p>(foreground-color . "green")  </p>
+<p>(cursor-color . "green")  </p>
+<p>(border-width . 0)  </p>
+<p>(border-color . "black"); should be unnecessary  </p>
+<p>(internal-border-width . 20) ; whitespace  </p>
+<p>(cursor-type . box)  </p>
+<p>(menu-bar-lines . 0)  </p>
+<p>(tool-bar-lines . 0)  </p>
+<p>(mode-line-format . nil); dream on... has no effect  </p>
+<p>(fullscreen . t); does not work on all systems  </p>
+<p>(unsplittable . t)))))  </p>
+<p>(select-frame frame)  </p>
+<p>(setq mode-line-format nil); is buffer local unfortunately  </p>
+<p>(set-face-background 'fringe "black")  </p>
+<p>(set-frame-font gjd-gin-font)  </p>
+<p>(mac-toggle-max-window)))  </p>
 </blockquote>
 <p>I've also added the following auxiliary bits and bobs to make this work well:  </p>
 <blockquote>
 <p>(setf gjd-gin-font "-apple-courier ce-medium-r-normal--18-180-72-72-m-180-mac-centraleurroman")  </p>
-<p>(defun unfullscreen ()<br/>
-(interactive)<br/>
-;; restores mode line<br/>
-(setq mode-line-format (default-value 'mode-line-format))<br/>
-(set-face-background 'fringe "grey95")<br/>
-)  </p>
-<p>(defun delete-frame-and-unfullscreen ()<br/>
-(interactive)<br/>
-(delete-frame)<br/>
-(unfullscreen))  </p>
-<p>(global-set-key "\M-w" 'delete-frame-and-unfullscreen)<br/>
-</p>
+<p>(defun unfullscreen ()  </p>
+<p>(interactive)  </p>
+<p>;; restores mode line  </p>
+<p>(setq mode-line-format (default-value 'mode-line-format))  </p>
+<p>(set-face-background 'fringe "grey95")  </p>
+<p>)  </p>
+<p>(defun delete-frame-and-unfullscreen ()  </p>
+<p>(interactive)  </p>
+<p>(delete-frame)  </p>
+<p>(unfullscreen))  </p>
+<p>(global-set-key "\M-w" 'delete-frame-and-unfullscreen)  </p>
 </blockquote>
-
 
     </div>
     <footer>

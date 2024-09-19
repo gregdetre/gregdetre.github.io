@@ -15,10 +15,25 @@
 </head>
 
 <body>
+    
+<nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        
+        <li class="breadcrumb-item"><a href="/blog">blog</a></li>
+        
+        <li class="breadcrumb-item"><a href="/blog/work">work</a></li>
+        
+        
+        <li class="breadcrumb-item active" aria-current="page"><a href="">Hackathon Profbot technical</a></li>
+        
+    </ol>
+</nav>
+
+
+    
     <div class="nav_menu" <p>
         <!-- <a href="#">Home</a> -->
-        
-        <a href="/">Home</a>
         
         <a href="/about">About</a>
         
@@ -26,6 +41,7 @@
         
         </p>
     </div>
+    
 
     <div id="main">
         
@@ -52,23 +68,32 @@
 <p>In fact, we had a still bolder hope. We wanted to use crowd-sourcing as a crowd-pleaser - we moved the Profbot's Excel file into Dropbox, so that anyone in the company would be able to add to it during the demo and see the Profbot's responses change in real-time.</p>
 <p>There are disadvantages to representing things as a deterministic finite state machine.</p>
 <ul>
-<li>The most obvious is right there in the name - though stateful, the Profbot would respond pretty <em>deterministically</em>, i.e. in exactly the same way every time to the same inputs. This repetitiveness is a sure sign of a bot!</li>
-<li>It made it difficult to deal with global options. For instance, we might want the user to be able to type 'tell me a joke' or 'help me sleep' at any time, and have the Profbot immediately shift down that path. However, if he was already deep in a different mode, we would have to create edges from every node to the 'tell me a joke' node for it to be globally applicable. We didn't solve this in time.</li>
-<li>Ultimately, the paths were still based on a simple disjunctive matching algorithm that looked for any of a variety of keyphrases (or a special '*' wildcard that matched against anything) to determine which state to move into next. This didn't provide much flexibility or robustness, but that was too hard a problem to address meaningfully. 
-We'll discuss one subtle difficulty. We wanted The Profbot to pick randomly from a bag of responses when flummoxed, such as 'I cannae make head or tail of ye' and 'Ach, I'm afraid I didn't catch that', but remain in the same state he was in.</li>
+<li>
+<p>The most obvious is right there in the name - though stateful, the Profbot would respond pretty <em>deterministically</em>, i.e. in exactly the same way every time to the same inputs. This repetitiveness is a sure sign of a bot!</p>
+</li>
+<li>
+<p>It made it difficult to deal with global options. For instance, we might want the user to be able to type 'tell me a joke' or 'help me sleep' at any time, and have the Profbot immediately shift down that path. However, if he was already deep in a different mode, we would have to create edges from every node to the 'tell me a joke' node for it to be globally applicable. We didn't solve this in time.</p>
+</li>
+<li>
+<p>Ultimately, the paths were still based on a simple disjunctive matching algorithm that looked for any of a variety of keyphrases (or a special '*' wildcard that matched against anything) to determine which state to move into next. This didn't provide much flexibility or robustness, but that was too hard a problem to address meaningfully. </p>
+</li>
 </ul>
+<p>We'll discuss one subtle difficulty. We wanted The Profbot to pick randomly from a bag of responses when flummoxed, such as 'I cannae make head or tail of ye' and 'Ach, I'm afraid I didn't catch that', but remain in the same state he was in.</p>
 <p>At this point, I made a bad architectural decision that created a great deal of complexity for little gain. I decided that The Profbot would need a stack. That way, when the user inputted something The Profbot didn't recognise, we could push the 'dunno' state to the top of his stack. He'd respond accordingly, pop off 'dunno', and his prior state would now be at the top, ready to respond to the next input. The intention was to allow him to be able to stash his current state and get into stateful digressions. We realized afterwards that we could have managed without this functionality, and we wasted precious hours getting it to work robustly.</p>
 <p>With just a couple of hours to go, we had a working finite state machine in the terminal. Helena &amp; Jess had built a rich set of conversational paths in Excel - you could almost hear The Prof's soft, witty Scottish brogue as you read them. Brandon had built a beautiful wrapper to the Python Slack API. But we hadn't yet knitted it all together. We thought we had everything working with half an hour to go, and set about writing a script for the demo.</p>
 <p>Here, our story ends in disaster. We had just enough time to QA the core functionality but there were a number of things we didn't have time to try (in part because of my bad decision about the dunno-stack). So when the stopwatch of our 5 minutes began, we invited the company to pour into The Profbot's home. Immediately, people started delightedly typing at him while others joined, and he crashed over and over.</p>
 <p>By the time we had figured out the issue (something to do with people joining the room while he was running), we had wasted 3 of our precious 5 minutes. We rushed through the scripted part of our demo and explanations of what we had built, but we didn't have time to really explain how people could modify his logic, and all the obvious deficiencies of a simple keyword-matching strategy were very evident as people tried feeding him increasingly outlandish inputs.</p>
 <p>So, no prize for us. Most of all, I'm excited about the possibilities of representing conversational logic as data rather than code. I don't think a finite state machine is rich enough to implement a lot of the logic in the real program, so I'm musing about more powerful formalisms. But we had an enormous amount of fun building The Profbot, and seeded new ideas for the future. I'm already looking forward to our next Hackathon!</p>
-<h2>Future ideas</h2>
+<h2 id="future-ideas">Future ideas</h2>
 <p>Instead of an Excel file in Dropbox, we would have preferred to use a Google Sheet, but I already had lots of Xlrd code I could crib from to speed up the development process.</p>
 <ul>
-<li>We considered D3.js, but PyDot + GraphViz is very easy to work with, all Python, and I had code lying around that was easy to repurpose. Plus, I worried that D3's default force-directed graph would generate a different solution every time we made a change, whereas GraphViz's solutions tend to be pretty stable.</li>
-<li>In the future, I'd love to try using TensorBoard. It's interactive, and deals really well with collapsing detail (so that you can see the high level but burrow down a path if you want to), but it would have been too much work to figure out how to decouple TensorBoard from TensorFlow objects for use with arbitrary inputs.</li>
+<li>
+<p>We considered D3.js, but PyDot + GraphViz is very easy to work with, all Python, and I had code lying around that was easy to repurpose. Plus, I worried that D3's default force-directed graph would generate a different solution every time we made a change, whereas GraphViz's solutions tend to be pretty stable.</p>
+</li>
+<li>
+<p>In the future, I'd love to try using TensorBoard. It's interactive, and deals really well with collapsing detail (so that you can see the high level but burrow down a path if you want to), but it would have been too much work to figure out how to decouple TensorBoard from TensorFlow objects for use with arbitrary inputs.</p>
+</li>
 </ul>
-
 
     </div>
     <footer>

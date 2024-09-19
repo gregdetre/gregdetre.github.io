@@ -15,10 +15,23 @@
 </head>
 
 <body>
+    
+<nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        
+        <li class="breadcrumb-item"><a href="/blog">blog</a></li>
+        
+        
+        <li class="breadcrumb-item active" aria-current="page"><a href="">Entangling the ground and cloud</a></li>
+        
+    </ol>
+</nav>
+
+
+    
     <div class="nav_menu" <p>
         <!-- <a href="#">Home</a> -->
-        
-        <a href="/">Home</a>
         
         <a href="/about">About</a>
         
@@ -26,6 +39,7 @@
         
         </p>
     </div>
+    
 
     <div id="main">
         
@@ -50,7 +64,6 @@
 <p>Right now, the browser is the main gate through which we pass to get into the cloud, but it needn't be. No one wants to have to type a whole new wikipedia entry in a poxy text box. Much nicer to fire up MS Word or emacs, and work on c:\wikipedia\Carpets.wiki in comfort (effortlessly mounted as a wikipedia service).  </p>
 <p>We're so close already. On the one hand, tools like Subversion and Unison handle synchronizing pretty well. On the other hand, we can mount remote filesystems over SSH with Fuse SSHFS or Emacs Tramp, so that they almost feel local. So there are tools that sync, and there are tools that make the remote feel local, but there are no tools that do both: automatically sync the remote and make it feel local ... running in the background in perfect imitation of a filesystem.  </p>
 <p>Tim Bray sounds a stirring clarion call for <a href="http://www.tbray.org/ongoing/When/200x/2006/09/14/Why-Atom">'a "Publish" button on everything'</a>. That's a solution at the level of the interface. I'd much rather we build publishing into the very heart of the system. I don't need a "Publish" button. Just let me save my files to a ground-cloud entangled filesystem, and have them simultaneously published for me.</p>
-
 
     </div>
     <footer>

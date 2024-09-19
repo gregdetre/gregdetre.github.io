@@ -15,10 +15,23 @@
 </head>
 
 <body>
+    
+<nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        
+        <li class="breadcrumb-item"><a href="/blog">blog</a></li>
+        
+        
+        <li class="breadcrumb-item active" aria-current="page"><a href="">Picking scientific reviewers</a></li>
+        
+    </ol>
+</nav>
+
+
+    
     <div class="nav_menu" <p>
         <!-- <a href="#">Home</a> -->
-        
-        <a href="/">Home</a>
         
         <a href="/about">About</a>
         
@@ -26,6 +39,7 @@
         
         </p>
     </div>
+    
 
     <div id="main">
         
@@ -36,23 +50,36 @@
 
 <p>It's hard to find good reviewers for scientific papers. Because it's all anonymized (though that may be slowly changing), there's no easy way to tell who's a good reviewer and who's a bad reviewer. It's easier to define what makes for a bad than a good reviewer:</p>
 <ul>
-<li>tardy in responding with their comments [not relevant for the points I make below]</li>
-<li>don't read the paper carefully enough, and make fatuous criticisms</li>
-<li>don't read the paper carefully enough, and miss gigantic flaws</li>
-<li>misjudge the import of a paper, and reject it for being less interesting/novel than it actually is</li>
+<li>
+<p>tardy in responding with their comments [not relevant for the points I make below]</p>
+</li>
+<li>
+<p>don't read the paper carefully enough, and make fatuous criticisms</p>
+</li>
+<li>
+<p>don't read the paper carefully enough, and miss gigantic flaws</p>
+</li>
+<li>
+<p>misjudge the import of a paper, and reject it for being less interesting/novel than it actually is</p>
+</li>
 </ul>
 <p>To some degree, these are unchanging realities and limitations of human nature. But we all respond and improve with feedback. <em>Wouldn't it be great if every reviewer had a <strong>public</strong> scorecard, summarizing their efficacy as a reviewer</em>? (ideally aggregated across all the journals for which they've reviewed)</p>
 <p>We can imagine various objective functions for what makes a good reviewer.</p>
 <p>We could bin all a reviewer's reviews into a 2x2 boolean matrix: your review recommendation x whether the paper was published. If we adopt the parlance of signal detection theory, a good reviewer will have many 'hits', where they recommended publication, and the paper was indeed published, and many 'misses', where they recommended against publication, and the paper was indeed rejected. In other words, <em>a good reviewer's recommendations will be predictive of whether a paper went on to be published in that journal or not.</em> A bad reviewer's recommendations will often be at odds with the eventual fate of the paper.</p>
 <p>We could swap in a variety of other dependent variables, besides just the boolean 'published in this journal or not', such as:</p>
 <ul>
-<li>how many times the paper was cited</li>
-<li>correlation of reviewer's numerical ratings of goodness with other reviewers</li>
-<li>how many rounds of revisions were necessary for the paper to be published</li>
+<li>
+<p>how many times the paper was cited</p>
+</li>
+<li>
+<p>correlation of reviewer's numerical ratings of goodness with other reviewers</p>
+</li>
+<li>
+<p>how many rounds of revisions were necessary for the paper to be published</p>
+</li>
 </ul>
 <p>Of course, there are problems and limitations to this approach. For instance, it says nothing of the usefulness of the reviewer's comments. And just because a paper eventually got published or was cited many times doesn't necessarily mean that it's genuinely good.</p>
 <p>But on the plus side, it provides a measurement that reviewers can try to improve, which if optimized would be broadly good for the system. It's hard to game. It would provide journal editors with more information when deciding which reviewers to pay attention to. And if it were made public, it would provide a way to incentivize and recognize good reviewing.</p>
-
 
     </div>
     <footer>

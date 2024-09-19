@@ -15,10 +15,23 @@
 </head>
 
 <body>
+    
+<nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        
+        <li class="breadcrumb-item"><a href="/blog">blog</a></li>
+        
+        
+        <li class="breadcrumb-item active" aria-current="page"><a href="">The Turing tournament - a proposal for a reformulation of the Turing Test</a></li>
+        
+    </ol>
+</nav>
+
+
+    
     <div class="nav_menu" <p>
         <!-- <a href="#">Home</a> -->
-        
-        <a href="/">Home</a>
         
         <a href="/about">About</a>
         
@@ -26,6 +39,7 @@
         
         </p>
     </div>
+    
 
     <div id="main">
         
@@ -35,11 +49,21 @@
 
 
 <ol>
-<li>Introduction</li>
-<li>Describing the Turing Tournament</li>
-<li>Comparing the Turing Test and the Turing Tournament</li>
-<li>Devising new rules, and non-linguistic competitors</li>
-<li>But is it intelligent?</li>
+<li>
+<p>Introduction</p>
+</li>
+<li>
+<p>Describing the Turing Tournament</p>
+</li>
+<li>
+<p>Comparing the Turing Test and the Turing Tournament</p>
+</li>
+<li>
+<p>Devising new rules, and non-linguistic competitors</p>
+</li>
+<li>
+<p>But is it intelligent?</p>
+</li>
 </ol>
 <hr/>
 <blockquote>
@@ -55,7 +79,7 @@
 <p>— from <a href="http://home.sprynet.com/%7Eowl1/turing.htm">http://home.sprynet.com/~owl1/turing.htm</a></p>
 </blockquote>
 <hr/>
-<h3>Introduction</h3>
+<h3 id="introduction">Introduction</h3>
 <p>The <a href="http://cogprints.org/499/00/turing.html">Turing Test</a> was designed to be an operational test of whether a machine can think. In <a href="http://www.eecs.harvard.edu/shieber/">Stuart Shieber</a>'s <a href="http://www.amazon.com/gp/product/0262692937/002-6025796-7553627?v=glance&amp;n=283155">words</a>:</p>
 <blockquote>
 <p><em>"How do you test if something is a meter long? You compare it with an object postulated to be a meter long. If the two are indistinguishable with regard to the pertinent property, their length, then you can conclude that the tested object is the given length. Now, how do you tell if something is intelligent? You compare it with an entity postulated to be intelligent. If the two are indistinguishable with regard to the pertinent properties, then you can conclude that the tested entity is intelligent (pg 1)."</em></p>
@@ -69,23 +93,43 @@
 </blockquote>
 <p>It's clear that this lacks the pithy generality of Turing's original formulation, and we'd have to do quite a lot more work to restrict the scope of the above to exclude asteroids. Perhaps over time, our super-intelligent alien will learn to speak English with a flawless cockney accent, and will pass the standard Turing Test, rendering this discussion moot. But in the meantime, before it has learned to speak a human language, we are faced with a manifestly intelligent being that fails our gold standard test for intelligence. The background aim of this whole essay will be to consider a new version of the Turing Test that overcomes the inherent human- and language-specific parochialism of the original. That way, our intelligent alien might pass, without having to learn to speak English with a cockney accent.</p>
 <p>Along the way, it may be that our reformulated test provides a more constructive goal and yardstick by which to direct and evaluate progress in AI research than the standard Turing Test. Perhaps its primary limitation is that it's difficult to restrict the difficulty or scope without losing everything that's interesting about the test. And since even our current best efforts are a long way from success, the gradient of improvement is almost flat in every direction, making it difficult to discern when progress is being made in the right direction. This makes it difficult for machines to bootstrap themselves by training against each other, requiring lots of labour-intensive profiling against humans. Finally, the current test is very language-orientated, and undesirably emphasizes domain knowledge,</p>
-<h3>Describing the Turing Tournament</h3>
+<h3 id="describing-the-turing-tournament">Describing the Turing Tournament</h3>
 <p>I'll term this new version of the Turing Test the 'Turing Tournament', to reflect its competitive round robin form. Like the original Turing Test, the Turing Tournament will not yield a definitive, objective yes/no answer, but rather a ranking of the entrants, where the human players provide a benchmark. A lot of the details I'm proposing will probably need considerable refinement. Here are the organizing principles of a Turing Tournament:</p>
 <ul>
-<li>The organizers of each tournament decide what the domain of play will be, e.g. a chessboard, text, a paint program, a 3D virtual reality environment, binary numbers, or some multidimensional analogue stimuli.</li>
-<li>Every 'player' (within which I'm subsuming both human and machine variants) is competing in a round robin competition, and will play every other player twice, once as the 'teacher' and once as the 'student'.</li>
-<li>Every bout will have two players, a teacher and a student. Play proceeds in turns, with the teacher going first. Play terminates when the allotted time has been exceeded, or when some terminating criterion specified by the teacher has been satisfied. Neither player will know the identity of the other player.</li>
-<li>Before the bouts begin, every player is given access to the domain of play so that they can construct their own set of rules that will operate when they are the teachers in a bout.</li>
-<li>The organizers of each tournament determine the scoring for bouts that terminate relative to bouts whose time elapses. We will consider some possible scoring systems <a href="http://doom.princeton.edu/www/blog/TuringTournament.html#scoring">later</a>.</li>
+<li>
+<p>The organizers of each tournament decide what the domain of play will be, e.g. a chessboard, text, a paint program, a 3D virtual reality environment, binary numbers, or some multidimensional analogue stimuli.</p>
+</li>
+<li>
+<p>Every 'player' (within which I'm subsuming both human and machine variants) is competing in a round robin competition, and will play every other player twice, once as the 'teacher' and once as the 'student'.</p>
+</li>
+<li>
+<p>Every bout will have two players, a teacher and a student. Play proceeds in turns, with the teacher going first. Play terminates when the allotted time has been exceeded, or when some terminating criterion specified by the teacher has been satisfied. Neither player will know the identity of the other player.</p>
+</li>
+<li>
+<p>Before the bouts begin, every player is given access to the domain of play so that they can construct their own set of rules that will operate when they are the teachers in a bout.</p>
+</li>
+<li>
+<p>The organizers of each tournament determine the scoring for bouts that terminate relative to bouts whose time elapses. We will consider some possible scoring systems <a href="http://doom.princeton.edu/www/blog/TuringTournament.html#scoring">later</a>.</p>
+</li>
 </ul>
 <p>These sound like strange rules. What kind of games could be played? Why does each teacher get to set their own rules? Do teachers get rewarded or punished if a student is able to reach criterion for their bout?</p>
 <p>I think the easiest way to illustrate what I have in mind is with a concrete example. Imagine the following scenario:</p>
 <ul>
-<li>A big room with lots of people sitting at computers. The people are the human players. The machine players are sitting inside a big server at the back of the room.</li>
-<li>The domain for this competition is a Go board, a 19x19 checkerboard with black and white pieces. Although all bouts in this tournament will take place on a Go board, the rules and goals of each bout will be up the teacher of that bout.</li>
-<li>Let us peer over the shoulder of a human player, currently in the role of student, trying to determine what the rules of the bout are, and play so that the bout terminates before running out of time. Neither we nor they know whether the other player is human or machine.</li>
-<li>The board is blank initially.</li>
-<li>As always, the teacher makes the first move. They place a horizontal line of 19 black pieces in the bottom row of the board.</li>
+<li>
+<p>A big room with lots of people sitting at computers. The people are the human players. The machine players are sitting inside a big server at the back of the room.</p>
+</li>
+<li>
+<p>The domain for this competition is a Go board, a 19x19 checkerboard with black and white pieces. Although all bouts in this tournament will take place on a Go board, the rules and goals of each bout will be up the teacher of that bout.</p>
+</li>
+<li>
+<p>Let us peer over the shoulder of a human player, currently in the role of student, trying to determine what the rules of the bout are, and play so that the bout terminates before running out of time. Neither we nor they know whether the other player is human or machine.</p>
+</li>
+<li>
+<p>The board is blank initially.</p>
+</li>
+<li>
+<p>As always, the teacher makes the first move. They place a horizontal line of 19 black pieces in the bottom row of the board.</p>
+</li>
 <li>
 <p>Now it is the student's turn. They have no idea how the bout is scored, what the aim is, what constitutes a legal move, how many moves there will be or whether there will be multiple sub-bouts. All of that is up to the teacher.</p>
 <p>Working on the assumption that the teacher wants the student to play white, the student lays down a single white piece in the top left corner.</p>
@@ -93,10 +137,18 @@
 <li>
 <p>The teacher removes the white piece, and replaces it with a horizontal row of white pieces just above the existing horizontal black line, and another horizontal row of black pieces above that. So now there are three rows of pieces filling up from the bottom of the board: black, white and then black.</p>
 </li>
-<li>The student decides that the removal of their white piece in the corner was a signal that its future moves should consist of placing an entire row of pieces on the board at a time. The student tries placing an entire row of white pieces in the top row of the board.</li>
-<li>The teacher again removes all the student's pieces, and replaces them with another row of white pieces and another row of black pieces. The bottom of the board consists of black, white, black, white and black stripes.</li>
-<li>The student reasons that its next move should be to place a row of white pieces above the most recent row of black pieces to continue the stripy pattern.</li>
-<li>Gratifyingly, the teacher leaves the row of white pieces in place, and adds a black row above it, as expected.</li>
+<li>
+<p>The student decides that the removal of their white piece in the corner was a signal that its future moves should consist of placing an entire row of pieces on the board at a time. The student tries placing an entire row of white pieces in the top row of the board.</p>
+</li>
+<li>
+<p>The teacher again removes all the student's pieces, and replaces them with another row of white pieces and another row of black pieces. The bottom of the board consists of black, white, black, white and black stripes.</p>
+</li>
+<li>
+<p>The student reasons that its next move should be to place a row of white pieces above the most recent row of black pieces to continue the stripy pattern.</p>
+</li>
+<li>
+<p>Gratifyingly, the teacher leaves the row of white pieces in place, and adds a black row above it, as expected.</p>
+</li>
 <li>
 <p>The two players continue to take turns until all but the top row has been filled with alternating black and white rows.</p>
 <p>Now, it is once more the teacher's turn, and the student wonders whether the last row will be filled in. Instead, the board blanks again, and the teacher places a vertical column of white pieces on the right hand side.</p>
@@ -104,8 +156,12 @@
 <li>
 <p>The student tries tentatively to place an adjacent column of black pieces, deciding that this sub-bout involves creating black and white vertical stripes, with the black and white players reversed.</p>
 </li>
-<li>As it turns out, this assumption appears to be correct, since the teacher does not remove the student's pieces, and together they quickly build up an alternating vertical stripe that moves leftwards.</li>
-<li>When only the last column remains to be filled in by the teacher, the bout has reached criterion, and the student moves on to the next bout, with a different player.</li>
+<li>
+<p>As it turns out, this assumption appears to be correct, since the teacher does not remove the student's pieces, and together they quickly build up an alternating vertical stripe that moves leftwards.</p>
+</li>
+<li>
+<p>When only the last column remains to be filled in by the teacher, the bout has reached criterion, and the student moves on to the next bout, with a different player.</p>
+</li>
 <li>
 <p>Upon inspecting the scores later, our human player (the 'student' in the bout just described) finds that they had scored highly on that bout, but not as high as some. Some of the machine players had failed to see a pattern at all, and had been putting pieces down more or less at random. These players did the worst, since the scoring for this tournament is a function of the total number of turns taken to finish the bout, as well as the number of errors made by the student. (need to clarify???)</p>
 <p>Like our hero, the best players at this bout had also quickly deduced that the pattern involved stripes. Their extra insight came after a few turns, where they tried placing multiple stripes down at once. As it turns out, there was nothing in the rules set by the teacher prohibiting this, and so they finished more quickly, earning a higher score.</p>
@@ -113,7 +169,7 @@
 </li>
 </ul>
 <p>This is intended as a toy example. The rules of the bout are pretty simple, but I think they would discriminate somewhat between intelligent and not-so-intelligent players. The key point to note is that each player would play twice against every other player, once as the teacher and once as the student playing within the teacher's rules. Perhaps some bouts are too hard, and some are too easy. But en masse, the rankings should discriminate quite finely between players, even between human players. The exact details of the scoring, especially how teachers are scored, and how teachers pre-specify their rules, are clearly going to be crucial. It will suffice for now to say that students should probably get points for satisfying the criterion of a bout quickly, and teachers should be rewarded for devising discriminative games, that is, games that only intelligent players can solve. I will defer further discussion of these topics until <a href="http://doom.princeton.edu/www/blog/TuringTournament.html#scoring">later</a>.</p>
-<h3>Comparing the Turing Test and the Turing Tournament</h3>
+<h3 id="comparing-the-turing-test-and-the-turing-tournament">Comparing the Turing Test and the Turing Tournament</h3>
 <p>In discussing the idea of an Inverted Turing Test (more <a href="http://doom.princeton.edu/www/blog/TuringTournament.html#inverted">below</a>) Robert French <a href="http://psycprints.ecs.soton.ac.uk/archive/00000531/">states</a> that:</p>
 <blockquote>
 <p><em>"All variations of the original Turing Test, at least all of those of which I am currently aware, that attempt to make it more powerful, more subtle, or more sensitive can, in fact, be done within the framework of the original Turing Test."</em></p>
@@ -129,12 +185,24 @@
 <p><em>"On a scale of 0 (completely implausible) to 10 (completely plausible), please rate:</em></p>
 </blockquote>
 <ul>
-<li><em>'Flugblogs' as a name Kellogg's would give to a new breakfast cereal.</em></li>
-<li><em>'Flugblogs' as the name of a new computer company.</em></li>
-<li><em>'Flugblogs' as the name of big, air-filled bags worn on the feet and used to walk on water.</em></li>
-<li><em>'Flugly' as the name a student might give its favorite teddy bear.</em></li>
-<li><em>'Flugly' as the surname of a bank accountant in a W.C. Fields movie.</em></li>
-<li><em>'Flugly' as the surname of a glamorous female movie star."</em></li>
+<li>
+<p><em>'Flugblogs' as a name Kellogg's would give to a new breakfast cereal.</em></p>
+</li>
+<li>
+<p><em>'Flugblogs' as the name of a new computer company.</em></p>
+</li>
+<li>
+<p><em>'Flugblogs' as the name of big, air-filled bags worn on the feet and used to walk on water.</em></p>
+</li>
+<li>
+<p><em>'Flugly' as the name a student might give its favorite teddy bear.</em></p>
+</li>
+<li>
+<p><em>'Flugly' as the surname of a bank accountant in a W.C. Fields movie.</em></p>
+</li>
+<li>
+<p><em>'Flugly' as the surname of a glamorous female movie star."</em></p>
+</li>
 </ul>
 <p>By pre-testing lots of humans and machines to figure out what kinds of things people say, and machines fail to say, a simple but well-prepared machine could draw up a 'Human Subcognitive Profile'. By comparing this to the responses of players, it would be an extremely effective judge in an Inverted Turing Test. There are two reasons why this strategy would not work in a Turing Tournament:</p>
 <blockquote>
@@ -148,20 +216,32 @@
 <p>[N.B. In order to ensure that the scales aren't conversely weighted too heavily <em>against</em> human players, it seems reasonable to allow all human players the use of a laptop throughout the Tournament.]</p>
 </blockquote>
 <p>Maybe instead we should accept the possibility of subcognitive shibboleths, and embrace their utility instead as a means of cataloguing different kinds of conceptual schemes. There is a presumption inherent in the standard Turing Test that smartness can be measured on a one-dimensional continuum ranging from rocks to rocket scientists. In the case of the aliens that have travelled 4 million light years in a space ship built out of genetically-engineered quantum nanobits and powered by fermented mango juice, we could be pretty sure they're intelligent, even if they were never to get the hang of English. It's just that their conceptual schemes are different. In this case, we may find that there are cases where they think more like machines than like humans. Or possibly more like dolphins, or African grey parrots, or white mice or marmosets. If we're able to set up a domain in a Tournament that everyone can play in, then we can expect that human student-players may not necessarily come out on top in all respects, even within the animal kingdom. We will <a href="http://doom.princeton.edu/www/blog/TuringTournament.html#cultures">return</a> to this idea when we discuss Turing Tournaments between groups of individuals.</p>
-<h3>Devising new rules, and non-linguistic competitors</h3>
+<h3 id="devising-new-rules-and-non-linguistic-competitors">Devising new rules, and non-linguistic competitors</h3>
 <p>Besides extending the domain of play beyond text, the principle innovation of the Turing Tournament is in casting every player as both student and teacher.</p>
 <p>It is clear enough what is required of the student player. When the bout begins, they have some idea of the kinds of interactions, puzzles and patterns that the domain presents. By interacting with the teacher player, they have to somehow fathom what the aim (i.e. terminating criterion) of the current bout is, and attempt to satisfy that. It might involve placing pieces on the board in some complex pattern, learning the structure of a maze, guessing at the next number in a sequence or optimizing some noisy function. Depending on the tournament, they may or may not be given feedback after each move:</p>
 <ul>
-<li>If they're given a running score, they can attempt to learn how to maximise that reward.</li>
-<li>If no reward is given, but the teacher corrects incorrect moves, then the learning by imitation can be seen as a kind of supervised mapping or reconstructive learning problem.</li>
-<li>There may even be cases where no feedback is given whatsoever, such as when the bout requires the student to guess the next number in some sequence.</li>
+<li>
+<p>If they're given a running score, they can attempt to learn how to maximise that reward.</p>
+</li>
+<li>
+<p>If no reward is given, but the teacher corrects incorrect moves, then the learning by imitation can be seen as a kind of supervised mapping or reconstructive learning problem.</p>
+</li>
+<li>
+<p>There may even be cases where no feedback is given whatsoever, such as when the bout requires the student to guess the next number in some sequence.</p>
+</li>
 </ul>
 <p>It is the teacher's job to come up with new and inventive rules for bouts that challenge the student-players, and also to perhaps lead the student in the right direction. For the Tournament to work as intended, teachers should be intending to come up with the most discriminative bout rules they can.</p>
 <p>Getting the incentive structure for the teachers right is therefore key. I expect that early scoring structures will contain loopholes that ingenious machine designers can exploit, but that over time, scoring structures that serve their purpose in a robust way will emerge. If our goal is to discriminate humans from machines, then this simple scoring system may work:</p>
 <ul>
-<li>If the student 'wins' (i.e. satisfies the terminating criterion) a bout, whether human or machine, then they get a point, otherwise they get nothing.</li>
-<li>If a human student wins a bout, then the teacher gets a point, otherwise they get nothing</li>
-<li>If a machine student wins a bout, then the teacher loses a point, otherwise they get nothing.</li>
+<li>
+<p>If the student 'wins' (i.e. satisfies the terminating criterion) a bout, whether human or machine, then they get a point, otherwise they get nothing.</p>
+</li>
+<li>
+<p>If a human student wins a bout, then the teacher gets a point, otherwise they get nothing</p>
+</li>
+<li>
+<p>If a machine student wins a bout, then the teacher loses a point, otherwise they get nothing.</p>
+</li>
 <li>
 <p>Total player score: the sum of the player's scores as a student and their scores as a teacher</p>
 <p>[There may need to be some weighting/normalization if the number of human and machine players is unequal.]</p>
@@ -170,7 +250,9 @@
 <p>In effect, we're rewarding players that seem human, and can devise rules that discriminate whether other players are human. This Tournament setup is the combo standard/Inverse Turing Test described above, that would not differ all that wildly in principle from the standard Turing Test if played in a text domain. Such Tournaments would encourage the kinds of subcognitive or culturally-rooted human-parochialism that we're trying to avoid.</p>
 <p>Perhaps this more general scheme will work instead:</p>
 <ul>
-<li>If the student wins, whether human or machine, then they get a point, otherwise they get nothing.</li>
+<li>
+<p>If the student wins, whether human or machine, then they get a point, otherwise they get nothing.</p>
+</li>
 <li>
 <p>To calculate the student's score: at the end of all the bouts, count the number of bouts that each player won as a student. Calculate the mean number of bouts won. For each student, subtract this mean value from the number of bouts they won. This will mean that a very average player will have zero student points, a good player will have a positive number of points, and a poor player will actually have negative student points.</p>
 <p>In other words:</p>
@@ -233,7 +315,7 @@
 <p>What if your alien doesn't know anything about Gricean maxims? Or doesn't understand concepts like tournaments, rules, intelligence, machines, scores or games? We've finished outlining how a Tournament might be run that might require less domain knowledge and linguistic ability than the standard Turing test. But one striking pragmatic problem remains, which becomes apteacher when we consider our newly-arrived green visitor. If the alien doesn't speak English, how are we going to explain the idea of the Turing Tournament to him so that he can participate?</p>
 <p>Following <a href="http://web.media.mit.edu/%7Eminsky/papers/AlienIntelligence.html">Minsky</a>, I think that we will be able to converse with aliens to some degree, provided they are motivated to cooperate, because we'll both think in similar ways in spite of our different origins. Every evolving intelligence operates within spatial and temporal constraints, suffers from a scarcity of resources (and presumably, competition), must develop symbols and rules, and must have thought about computation and machine learning in order to be able build spaceships. Perhaps notions of games, intelligence, scores and tournaments are only relevant in a society of individual entities that compete with each other for resources, and that maybe a hive mind or single monolithic being or other <a href="http://www.amazon.co.uk/exec/obidos/ASIN/1857988078/202-0063501-3220649">unimaginable entity</a> might not need such concepts. In that case, you wouldn't have any more luck using the standard Turing Test on such a being.</p>
 <p>Will we have much more luck with machines? Not unless we start small. At the moment, the state of the art in artificial intelligence wouldn't do very well in most of the domains we've discussed, and would struggle especially when trying to generate new rules of its own. Sadly, very few researchers have focused on generative heuristics to <a href="http://doom.princeton.edu/www/outbursts/copycat/curiousmachines_analogymaking_copycat.pdf">curiously</a> <a href="http://en.wikipedia.org/wiki/Discovery_system">discover</a> things that are interesting simply for their own sake, such as <a href="http://en.wikipedia.org/wiki/Doug_Lenat">Lenat</a>'s <a href="http://en.wikipedia.org/wiki/Automated_Mathematician">Automated Mathematician</a> that sought interesting mathematical concepts. In order to stand a chance in a Turing Tournament, much work needs to be done on curiously discovering interesting things that could serve as the basis for a rule set in a new domain. Good, that is, discriminative, rule sets for a Turing Tournament bout might consist of a difficult but ultimately guessable sequence of numbers based on a funny arithmetical pattern, or the kind of letterstring analogy problem that elicits an 'aha'. Better still, teacher players that can lead an intelligent student player down a suggestive road towards the terminating criterion through tutorial or warm-up sub-bout problems will be at a tremendous advantage, where half the problem for the student consists of figuring out what their goal is supposed to be.</p>
-<h3>But is it intelligent?</h3>
+<h3 id="but-is-it-intelligent">But is it intelligent?</h3>
 <p>Let us recall Shieber's pithy test for intelligence:</p>
 <blockquote>
 <p><em>"Now, how do you tell if something is intelligent? You compare it with an entity postulated to be intelligent."</em></p>
@@ -242,17 +324,26 @@
 <p>So although we might imagine some narrow machines that could best humans in certain kinds of puzzles or computation, but it seems less likely that a brute force machine player would also do well on Bongard problems, letterstring analogies, or be able to devise ingenious, fun and discriminative rules for bouts. This new generative aspect is intended to tap into the kind of creative, generative, playful, inventive or aesthetic faculty that humans display, as well as the ability to form a rich internal model of the student player's state of confusion, and guide them towards a solution. In this respect, it borrows the idea of a dialog or gentle interrogation from the original Test, but allows for the translation of that dialog to new domains.</p>
 <p>Bringing this back to Turing's original question, we can finally ask, 'if a machine were to score higher than some of the humans in a Turing Tournament, would we definitely be willing to call it intelligent?' The answer could depend on a few factors:</p>
 <ul>
-<li>Let us assume that the Tournament is well-planned, that the human competitors are well-chosen, that no independent experts can find any scoring loopholes or weaknesses in the organization of the Tournament, and that the result is replicable. If any of these conditions are not met, we will not consider the Tournament to be well-run.</li>
-<li>If the domain is too restrictive, then there may be a dearth of interesting rule sets that can be devised. In this case, a good player won't do much better than a poor player, and this wouldn't be an interesting result.</li>
-<li>Even if the domain is a rich one, such as letterstring analogy problems, it could be that a highly specialized program like Copycat could outperform many humans. Unless the success is relatively domain-general, then you've shown what you probably knew already, i.e. the machine is exhibiting some domain-specific proto-intelligence.</li>
-<li>At that point, we would probably want to analyze the machine's performance. Did it do better as a teacher or student? Was it simply very good at certain kinds of problems? Was there some simple trick to its way of devising problems which, once exposed, would clue in future human players in a rerun of the Tournament?</li>
-<li>Could it pass a standard Turing Test?</li>
+<li>
+<p>Let us assume that the Tournament is well-planned, that the human competitors are well-chosen, that no independent experts can find any scoring loopholes or weaknesses in the organization of the Tournament, and that the result is replicable. If any of these conditions are not met, we will not consider the Tournament to be well-run.</p>
+</li>
+<li>
+<p>If the domain is too restrictive, then there may be a dearth of interesting rule sets that can be devised. In this case, a good player won't do much better than a poor player, and this wouldn't be an interesting result.</p>
+</li>
+<li>
+<p>Even if the domain is a rich one, such as letterstring analogy problems, it could be that a highly specialized program like Copycat could outperform many humans. Unless the success is relatively domain-general, then you've shown what you probably knew already, i.e. the machine is exhibiting some domain-specific proto-intelligence.</p>
+</li>
+<li>
+<p>At that point, we would probably want to analyze the machine's performance. Did it do better as a teacher or student? Was it simply very good at certain kinds of problems? Was there some simple trick to its way of devising problems which, once exposed, would clue in future human players in a rerun of the Tournament?</p>
+</li>
+<li>
+<p>Could it pass a standard Turing Test?</p>
+</li>
 </ul>
 <p>Let us imagine that a machine is designed which is a poor teacher player, but a good student player, particularly in a couple of abstract limited-interaction domains like letter strings, number sequences, Go boards and cryptography, but that it can't pass the Turing Test. Is it intelligent? Somewhat? We've forfeited the no-frills and no-free-parameters yes/no answer that you get from a Turingf Test, but we now have a much richer set of data with which to try and place this machine in the space of all possible minds. We have a more finely-graded multi-dimensional scale. Our machines can bootstrap themselves by competing amongst themselves without human intervention - specialist teacher machines that are good at discovering generative heuristics can be used to train specialist student machines that are good at problem solving, and vice versa. So in forfeiting our neat yes/no answer, we've gained a great deal.</p>
 <p>Perhaps most importantly for the field of AI, we can now attempt to scale the enormous subcognitive iceberg of the mind <em>incrementally</em>, using ever more complex Turing Tournaments as yardsticks. In time, perhaps this will lead back towards the Turing Test as the final summit.</p>
 <hr/>
 <p>see also: <a href="http://doom.princeton.edu/www/blog/AlienIntelligenceLinks.html">AlienIntelligenceLinks</a></p>
-
 
     </div>
     <footer>

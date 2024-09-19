@@ -15,10 +15,23 @@
 </head>
 
 <body>
+    
+<nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        
+        <li class="breadcrumb-item"><a href="/blog">blog</a></li>
+        
+        
+        <li class="breadcrumb-item active" aria-current="page"><a href="">It has to be easy, and worth it, for you to add tags</a></li>
+        
+    </ol>
+</nav>
+
+
+    
     <div class="nav_menu" <p>
         <!-- <a href="#">Home</a> -->
-        
-        <a href="/">Home</a>
         
         <a href="/about">About</a>
         
@@ -26,6 +39,7 @@
         
         </p>
     </div>
+    
 
     <div id="main">
         
@@ -37,15 +51,19 @@
 <p>Whoever adopted the idea that "there's a place for everything, and everything in its place" when it came to organizing files and ideas on a computer suffered from a failure of imagination. Or maybe they were just over-wedded to the desktop and filing cabinet metaphors. Fortunately, the idea of 'tagging' (or 'labels' in Google's parlance) blew that whole banal tidiness away. In short, tagging lets you assign things to multiple categories, or if you prefer, put things in multiple places. Rashmi describes this well - tagging is popular because there's a <a href="http://www.rashmisinha.com/archives/05_09/tagging-cognitive.html">lower cognitive cost</a> when you can put things in multiple categories, rather than having to decide on just one.</p>
 <p>We've only just started to scratch the surface of how categorization schemes could work. I'm going to propose a few ways in which things might grow from here, focusing on the restricted case where you're tagging your own files privately, ignoring all the interesting goodness that happens when those tags are available to others, <a href="http://del.icio.us/">delicious</a>-style.</p>
 <p>N.B. I'm going to use the term 'category' rather than 'tag', since it's easier to think of things belonging to categories than being labelled with a tag. The key notion is that things can belong to multiple categories simultaneously.</p>
-<h3>The more tags the better</h3>
+<h3 id="the-more-tags-the-better">The more tags the better</h3>
 <p><a href="http://207.22.26.166/">Jon Udell</a> has a great post on <a href="http://webservices.xml.com/pub/a/ws/2002/01/01/topic_map.html">building up a taxonomy of categories by hand</a>, starting with a smallish corpus of documents, and just letting the taxonomy emerge, combined with a little judicious weeding. The dataset he has in mind is pretty small, and so he's aiming for 15-40 categories. The kinds of datasets I have in mind are much larger.</p>
 <p>For instance, I have a few thousand text files with notes on topics ranging from Ubuntu troubleshooting to the symptoms of schizophrenia to my travel arrangements for the summer. I could maybe try and shoe-horn things into a few tens of categories, with each category holding many items, and each item belonging to maybe one or two categories. But I very quickly found this to be unsatisfying. We want to be able to differentiate things more finely than that. For instance, how would I categorize a document containing hotel bookings in Florence last summer for the <a href="http://www.humanbrainmapping.org/florence2006">HBM conference</a>? Just by 'travel'? Or also 'Florence', 'conference', 'hotel', 'HBM', and '2007'. Remember the argument about lower cognitive cost though - it's much less effort just to include all those categories. If I do that, I'll end up with many hundreds or even thousands of categories, some of which will have tens or hundreds of members and some of which might only have one or two members. I think one might raise two main objections to this approach:</p>
 <ul>
-<li>Can you really be bothered to add a bunch of categories each time you write something?</li>
-<li>How do you begin to find anything now? Sometimes filtering by a category doesn't help because it returns way too many members, and sometimes it doesn't help because it returns hardly any. Where's Goldilocks when you need her?</li>
+<li>
+<p>Can you really be bothered to add a bunch of categories each time you write something?</p>
+</li>
+<li>
+<p>How do you begin to find anything now? Sometimes filtering by a category doesn't help because it returns way too many members, and sometimes it doesn't help because it returns hardly any. Where's Goldilocks when you need her?</p>
+</li>
 </ul>
 <p>I'll address these in turn.</p>
-<h3>Can you be bothered to add a bunch of categories each time?</h3>
+<h3 id="can-you-be-bothered-to-add-a-bunch-of-categories-each-time">Can you be bothered to add a bunch of categories each time?</h3>
 <p>People are lazy. Any system that requires people to be assiduous book-keepers while they're writing is doomed. Dave Winer talks about how he should be categorizing all his posts, and yet he doesn't do it - and this makes him feel <a href="http://archive.scripting.com/2005/01/29#guiltAboutCategories">guilty</a>. He knows that he won't be able to trust the categories to find that thing later. The value of the whole system has dropped. Squirrels wouldn't go to the effort of hoarding nuts for the winter if they knew that they wouldn't remember where those nuts are when they need them. So what's the point of hoarding nuts any more? All of a sudden, the system has broken down. We need to find a way to make the system less brittle.</p>
 <p>Let's look at Dave Winer's guilty confession a little more closely:</p>
 <blockquote>
@@ -53,20 +71,23 @@
 </blockquote>
 <p>If you ask me, that's not easy enough. Navigating hierarchical menus with a mouse is slow and distracting. Blogger does it right - there's a 'labels' text box that you can tab to, into which you can write a comma-delimited list of tags. As you type, it auto-suggests - pressing 'return' fills in the rest of the tag and puts a comma and space after for you. So that's step 1.</p>
 <p>But it should be even easier. What <em>should</em> happen is that the machine should automatically throw up a list of tags that it thinks might be appropriate for this post. It should put the ones it's most confident about to the left, and less confident ones to the right, with the cursor positioned at the end to make it easy for the user to delete false positives and add new categories it missed. And if you're feeling lazy, then you can just accept the machine's suggestions without glancing at them. The cost of a false positive is low, so it'll deliberately suggest too many. This brings us neatly to our second concern.</p>
-<h3>But then how do you find anything?</h3>
+<h3 id="but-then-how-do-you-find-anything">But then how do you find anything?</h3>
 <p>So now every document belongs to a bajillion categories, none of which is particularly useful on its own. But a conjunction of categories should narrow things down nicely. If I'm trying to find that hotel booking in Florence, I don't have to worry about remembering whether it's tagged with 'travel', 'hotel', 'Florence', '2007' or 'HBM conference', since it's tagged with all of them. So I'll try filtering by the conjunction of 'hotel'+'Florence'+'2007' and that'll probably winnow things down sufficiently for me to pick the file out manually (see also: <a href="http://gregdetre.blogspot.com/2007/04/make-tags-not-trees-filesystem-idea.html">make tags not trees</a>). .</p>
 <p>But maybe we never made a 'Florence' category. It seems like such a natural cue to use now, but at the time, 'Florence' didn't spring to mind as a salient category, despite our liberal categorizing policy. If the system auto-completes in a handy way, we'd already know this, and our fingers would already be backspacing and trying 'Italy' or 'HBM conference'. There are many points of failure, but there are also many points of entry. If we make it easy enough to cue for conjunctions of categories, then there's a very low cognitive cost to having to backtrack once or twice, since our brain effortlessly supplies us with so many possible cues to use.</p>
 <p>We could make things even less brittle in lots and lots of ways. Perhaps the system notices that only one item in the whole database is tagged with 'Florence', so it's probably too restrictive a category. No matter. It could just ignore 'Florence', or suggest that we omit 'Florence' from our search. Better still, and less intrusively, it could now grep through all the files that match one or more of the tags to see if 'Florence' appears in the text, and automatically suggest any matches as partial matches.</p>
-<h3>Conclusions</h3>
+<h3 id="conclusions">Conclusions</h3>
 <p>I keep coming back to the same feeling - for the most part, people don't write notes because they don't think they'll be able to find those notes later when they need them - so why bother writing the notes in the first place?</p>
 <p>All of these suggestions are geared towards:</p>
 <ul>
-<li>Reducing the cognitive cost at both writing and retrieval. If it's less effort, you'll feel less lazy about adding category metadata.</li>
-<li>Making the system less brittle, so that if you <em>were</em> lazy about your category metadata, you still have a good chance of finding things later. This is the key to ensuring that you don't end up losing faith and give up on writing things down in a structured way altogether.</li>
+<li>
+<p>Reducing the cognitive cost at both writing and retrieval. If it's less effort, you'll feel less lazy about adding category metadata.</p>
+</li>
+<li>
+<p>Making the system less brittle, so that if you <em>were</em> lazy about your category metadata, you still have a good chance of finding things later. This is the key to ensuring that you don't end up losing faith and give up on writing things down in a structured way altogether.</p>
+</li>
 </ul>
 <p>Taken together, I hope that it will become easier to categorize your notes in a way that helps you find them later, which is going to make you much more likely to write them down in the first place.</p>
 <hr/>
-
 
     </div>
     <footer>

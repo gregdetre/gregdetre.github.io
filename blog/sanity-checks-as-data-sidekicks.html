@@ -15,10 +15,23 @@
 </head>
 
 <body>
+    
+<nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        
+        <li class="breadcrumb-item"><a href="/blog">blog</a></li>
+        
+        
+        <li class="breadcrumb-item active" aria-current="page"><a href="">Sanity checks as data sidekicks</a></li>
+        
+    </ol>
+</nav>
+
+
+    
     <div class="nav_menu" <p>
         <!-- <a href="#">Home</a> -->
-        
-        <a href="/">Home</a>
         
         <a href="/about">About</a>
         
@@ -26,6 +39,7 @@
         
         </p>
     </div>
+    
 
     <div id="main">
         
@@ -44,14 +58,17 @@
 <p>(sorry, <a href="http://en.wikipedia.org/wiki/Anna_Karenina_principle">Tolstoy</a>)</p>
 <p>Things could be failing for meaningful reasons, e.g.:</p>
 <ul>
-<li>the brain doesn't work the way you think, so you're analysing the wrong brain regions or representing things in a different way</li>
-<li>there's signal there but it's represented at a finer-grained resolution than you can measure.</li>
+<li>
+<p>the brain doesn't work the way you think, so you're analysing the wrong brain regions or representing things in a different way</p>
+</li>
+<li>
+<p>there's signal there but it's represented at a finer-grained resolution than you can measure.</p>
+</li>
 </ul>
 <p>But the most likely explanation is that you screwed up your preprocessing (mis-imported the data, mis-aligned the labels, mixed up the X-Y-Z dimensions etc).</p>
 <p>If you can't classify someone staring at a blank screen vs a screen with something on it, it's probably something like this, since visual input is pretty much the strongest and most wide-spread signal in the brain - your whole posterior cortex lights up in response to high-salience images (like faces and places).</p>
 <p>In the time I spent writing this, Abe had already figured out what I meant :)</p>
 <p>https://twitter.com/AbeGong/status/431201791976288256</p>
-
 
     </div>
     <footer>
