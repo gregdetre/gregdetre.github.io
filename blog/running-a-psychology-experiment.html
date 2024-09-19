@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <title>Greg Detre - Running a psychology experiment</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="gdwebgen" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Greg Detre's personal website" />
+    
+    <link rel="stylesheet" href="/static/css/base.css">
+    
+</head>
+
+<body>
+    <div class="nav_menu" <p>
+        <!-- <a href="#">Home</a> -->
+        
+        <a href="/">Home</a>
+        
+        <a href="/about">About</a>
+        
+        <a href="/blog">Blog</a>
+        
+        </p>
+    </div>
+
+    <div id="main">
+        
+
+
+<h1>Running a psychology experiment</h1>
+
+
+<p>Designing an elegant psychology experiment is a fiendish business. Even after you've done that, running and implementing it correctly requires considerable attention to detail. I've attempted here to catalogue all the checks I (should) run before collecting data in a brand new experiment. Where possible, I've tried to think of extra points to worry about when collecting fMRI data.  </p>
+<p>The most important advice I can give is to run yourself in your own experiment at least a couple of times before you run anyone else. This is a pain - running in the same experiment over and over again is tiring, but it's less of a pain than collecting 20 subjects' data only to find that the data are worthless.  </p>
+<p>N.B. Make sure you run these tests on the testing computer that you're going to use to actually collect the data - each machine is a complex ecosystem, and you can't generalize success from one to another.  </p>
+<p>Obvious bugs  </p>
+<p>Firstly, running yourself will help you spot relatively obvious bugs, such as:  </p>
+<p>- Stimuli that should only show up once occurring more than once  </p>
+<p>- Stimuli that should be randomized appearing in alphabetical or the same order each time  </p>
+<p>- Bugs that only occur when you actually interact with the other experiment, rather than just running it passively  </p>
+<p>- Display glitches  </p>
+<p>- Input bugs. If you can, add a little test program at the beginning of each experiment that requires the subject to press the appropriate buttons, speak into the microphone you're recording from etc. This confirms that they understand which buttons are which, and that everything is plugged in.  </p>
+<p>Secondly, running in your own experiment will give you a sense of what it feels like to be a subject in the experiment, and help you notice more subtle bugs:  </p>
+<p>- Is it impossibly long and tiring? My rule of thumb is that half an hour is usually too short - you might as well add some more trials to increase your power. More than 45 minutes starts to feel unbearable though. But this varies from experiment to experiment.  </p>
+<p>- Can you feel your brain working in the way you hope it should? Do the hard things feel hard in the right way?  </p>
+<p>- Can you sense that there's some strategy that you want to use, but that would distort your data? If there's an easy shortcut to doing your experiment, subjects will find and exploit it. In this case, you can directly instruct them to avoid it, but you'd be better off modifying the design so that they can't. For instance, if you don't want subjects to rehearse in between trials, add in some kind of distractor task to keep them busy and engaged.  </p>
+<p>- Is everything counterbalanced? Might there be lurking order effects (where one type of trial always occurs at the beginning or end of a phase, or always precedes/follows another type of trial)?  </p>
+<p>Timing glitches  </p>
+<p>It's very hard to make sure that every piece of your experiment starts when it should and lasts for as long as it should. Before you do anything else, sit down with a pen and paper and calculate exactly how long each piece of your experiment is supposed to take, and store these as variables somewhere. Better still, they should be calculated automatically from your parameters.  </p>
+<p>Now, add code to your experiment that automatically times how long each piece lasts and when things are being displayed, making sure this all gets logged. Compare how long things are taking with how long you've calculated they should take. If you don't trust your timing code, use a stopwatch to make sure it's at least approximately right.  </p>
+<p>Modern computers have hundreds of background processes running (virus checkers, software updaters, email checking, self-refreshing webpages etc). Write a list of everything running, and make sure that as much as possible gets turned off before you run your experiment. Ideally, as little of this should be installed on your testing room computer as possible, but it's hard to avoid on Windows.  </p>
+<p>Some experiment presentation programs (e.g. the Matlab Psych Toolbox, PyEPL) can self-calibrate their internal timing for each computer. Others have separate timing modes that are optimized for accuracy in duration vs onset (e.g. EPrime, PyEPL).  </p>
+<p>Avoiding disaster  </p>
+<p>There are a variety of ways in which things can be brought to a crashing halt:  </p>
+<p>- can subjects quit the experiment easily/accidentally? If possible, disable standard keyboard shortcuts like Alt-Tab, Alt-F4  </p>
+<p>- turn off the screensaver  </p>
+<p>- make sure that email notifications, software update warnings and the like won't pop up in the corner of the screen, distracting the subject  </p>
+<p>- if your experiment was to crash for some reason (e.g. a power cut), can you resume where you left off?  </p>
+<p>Logging  </p>
+<p>Log everything. If you're lucky, your experimental presentation software will do much of the work for you (e.g. PyEPL, EPrime). Either way, you should attempt to log enough data that you could reconstruct the exact stimuli, and all of the subject's interactions with the experiment. This might seem like overkill, but it's valuable for a number of reasons:  </p>
+<p>- You never know which analyses you might want to run in the future. You might suddenly care about reaction times, or the exact placement of the randomly moving dots on the screen - who knows? If you haven't logged all the data you need, you'll be out of luck.  </p>
+<p>- You may be worried that there's a bug somewhere. Being able to cross-check one log against another is key to determining if/where there's a problem.  </p>
+<p>- You might be logging the same information in multiple ways - that's fine. Depending on the analysis, it might be much easier to process in one form or another  </p>
+<p>- Don't just log the low-level details. Logging every keypress and pixel color will certainly capture all the information you could ever need, but it will create an enormous amount of work to make sense of it all afterwards. If you have the high-level variables available in your experiment code, you might as well record them too to make your life easier later.  </p>
+<p>fMRI-specific  </p>
+<p>The list of extra things to check for when running an fMRI experiment is pretty bewildering, but here's a handy subset:  </p>
+<p>- make sure you view things through the projector, not just on the monitor in the control room. Who knows what devilry the projector might wreak as a result of display resolution interpolation, longer video cables, dying bulbs and the like?  </p>
+<p>- check your button boxes carefully. Some of them number in ascending order, some in descending order, some of them are re-programmable...  </p>
+<p>- our scanner emits a '!' every time it starts to collect a new image. Some programs see this as a 'LEFT SHIFT' plus '1', others as '!'. Make sure your experiment knows how to start each run in sync with the trigger, and can't be set off by an inadvertent button box press.  </p>
+<p>- timing is critical with fMRI. If each of your stimuli take a few milliseconds longer than you intend, you could easily be out of sync by an entire image by the end of a long run, which would be enough to scupper all your analyses.  </p>
+<p>- it's difficult to see anything in the bottom half of the screen in our head-only scanner. Make sure subjects will be able to see what's going on during your experiment.  </p>
+<p>Analyze your data early  </p>
+<p>Once you've run yourself at least once, try analyzing your data. Since you aren't a naive subject, your data probably won't be publishable, but this is still a critical step for at least the following reasons:  </p>
+<p>- If you can run the analyses, then you know that you've get everything logged that you need.  </p>
+<p>- You can check that the most obvious, basic, uncontroversial effects are there. If they're not, then that's a serious problem. You can also confirm that subjects' performance isn't too far towards floor or ceiling.  </p>
+<p>- You might be able to check whether any of your stimuli are noticeably poorly-normed (i.e. they stick out when they shouldn't)  </p>
+<p>- Sometimes, grievous logical errors slip through the design phase. Running an analysis is a really good way to pick up on such confusions. To be honest, running an analysis on fake (i.e. synthetic) data would probably work just as well, but it can sometimes be more work to generate good fake data than to collect a small bucket of real data.  </p>
+<p>Ask your friends  </p>
+<p>Finally, once you're pretty sure that things are working, try running a few of your friends or colleagues as subjects before anyone else. You can be sure that they'll pay attention to your instructions, try hard, and you may be able to get useful feedback about how it feels to run in your experiment as a naive subject. That way, if the data from your first few subjects aren't the way you'd hoped, you can be more confident that it's not just because indolent or surly Psych 101 students were chatting amiably on the phone while doing the experiment.  </p>
+<p>Version control  </p>
+<p>If you're not using a version control system to keep track of your experiment scripts, you're making your life harder for yourself in a dozen ways. Here are the key benefits:  </p>
+<p>- you don't need to keep saving your files as experiment1.m, experiment2.m, experiment3.m... The version control system will keep track of all the different versions, so you can see what you've changed at every point  </p>
+<p>- if you're working on multiple computers, or there are multiple people all changing things, you can keep things synchronized across all these computers. No more carting around USB keys.  </p>
+<p>- your experiment is always backed up  </p>
+<p>To be honest, if you're not using version control for almost everything that you write or program on your computer, then you fall into the same category as people who want to be a world-class chef but refuse to abandon their tried-and-tested approach of an open fire and a flint axe.  </p>
+<p>It's not worth putting the experimental data into the version control system, since the data won't be frequently changed and updated. Instead, just backing these up to an external hard drive is probably sufficient.  </p>
+<p>Conclusions  </p>
+<p>Mostly, 'experience' results from having done things enough to make all the common mistakes. You could then say that 'competence' is when you institute procedures that make those mistakes unlikely to happen again in the future. My aim in writing this was to help you find ways to make the common mistakes unlikely without having to make them all first yourself, so that you can be competent without being experienced.  </p>
+<p>If you can think of anything I left out, please point it out in the comments.</p>
+
+
+    </div>
+    <footer>
+        <div class="bottom_nav">
+            <!-- <p>from base</p> -->
+            
+
+            <!-- <p><a href="#">link1</a></p> -->
+            
+
+<p>
+    <i>
+        <!-- Last updated: 2024-September-18 -->
+        Published: 2008-02-16
+    </i>
+</p>
+
+
+        </div>
+    </footer>
+</body>
+
+</html>

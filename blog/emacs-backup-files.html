@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <title>Greg Detre - Emacs backup files</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="gdwebgen" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Greg Detre's personal website" />
+    
+    <link rel="stylesheet" href="/static/css/base.css">
+    
+</head>
+
+<body>
+    <div class="nav_menu" <p>
+        <!-- <a href="#">Home</a> -->
+        
+        <a href="/">Home</a>
+        
+        <a href="/about">About</a>
+        
+        <a href="/blog">Blog</a>
+        
+        </p>
+    </div>
+
+    <div id="main">
+        
+
+
+<h1>Emacs backup files</h1>
+
+
+<p>Emacs loves to create billions of little ugly-twin backup files all over your hard disk that look like 'myfile~' and 'myfile.txt~'. Here are some better alternatives:  </p>
+<p>- add the following to your .emacs (this is the best solution)  </p>
+<p>(setq make-backup-files t)  </p>
+<p>(setq version-control t)  </p>
+<p>(setq backup-directory-alist  </p>
+<p>(quote ((".*" . "~/backup/emacs_autosave/"))))  </p>
+<p>; otherwise it keeps asking  </p>
+<p>(setq kept-new-versions 30)  </p>
+<p>(setq delete-old-versions t)  </p>
+<p>[i've forgotten which of these does what, but they're all in my .emacs file...]  </p>
+<p>make sure to create ~/backup/emacs_autosave first. this will create multiple snapshots of every file you edit and store them in that directory. this avoids having all the blah~ files in your current directory, and is useful if you want to revert to the way you had things 5 minutes ago.  </p>
+<p>- a quick alias to remove them (courtesy of Randy O'Reilly)  </p>
+<p>alias cleanup '/bin/rm *~ .*~ #* .#*'  </p>
+<p>- finally, put Dropbox into 'pack rat' mode, so that it stores every single version of your Dropbox files for eternity.</p>
+
+
+    </div>
+    <footer>
+        <div class="bottom_nav">
+            <!-- <p>from base</p> -->
+            
+
+            <!-- <p><a href="#">link1</a></p> -->
+            
+
+<p>
+    <i>
+        <!-- Last updated: 2024-September-18 -->
+        Published: 2009-10-01
+    </i>
+</p>
+
+
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <title>Greg Detre - Why has Google open sourced TensorFlow?</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="gdwebgen" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Greg Detre's personal website" />
+    
+    <link rel="stylesheet" href="/static/css/base.css">
+    
+</head>
+
+<body>
+    <div class="nav_menu" <p>
+        <!-- <a href="#">Home</a> -->
+        
+        <a href="/">Home</a>
+        
+        <a href="/about">About</a>
+        
+        <a href="/blog">Blog</a>
+        
+        </p>
+    </div>
+
+    <div id="main">
+        
+
+
+<h1>Why has Google open sourced TensorFlow?</h1>
+
+
+<p>I was sitting in a sun-warmed pizza restaurant in London last week talking about deep learning libraries. Everyone had their favourites. I was betting on <a href="https://www.tensorflow.org/">TensorFlow</a>, the new kid in town released by Google in late 2015. In response, a Torch fan pointed out that Google may invest in building up TensorFlow internally, but there's no reason for them to invest in the shared, external version.</p>
+<p>This got me thinking - why <em>has</em> Google open sourced TensorFlow?</p>
+<p>Naively, I usually assume that companies keep their most crown jewels proprietary while open sourcing the periphery. In other words, keep your secret sauce close to your chest - but share the stuff that's more generic, since it builds brand and goodwill, others may contribute helpfully, and you're not straightforwardly giving a leg-up to your direct competitors.</p>
+<p>Google's approach to open source has been a little more strategic than this. Look at a handful of their <a href="https://developers.google.com/open-source/projects">major open source projects</a> - Android, Chromium, Angular, Go, Dart, V8, Wave, WebM. The motivations behind them are various:</p>
+<ul>
+<li>Android, Angular, Chromium, V8, Wave, WebM - creating a new version of an existing technology (free, better engineered, or faster) to disrupt an incumbent, or increase usage and thus drive revenue for Google's core businesses.</li>
+<li>Go, Dart and the <a href="https://github.com/google">long tail</a> of minor projects are peripheral to their goals and serve less direct strategic interest.</li>
+</ul>
+<p>For TensorFlow to make sense and be worthy of long-term support from Google, it needs to fall in the former category.</p>
+<p>It is indeed a new version of an existing technology - it's free, it's better engineered, though not yet faster.</p>
+<p>So, is it intended to either disrupt an incumbent, or to increase usage and thus drive revenue for core Google businesses? I can only think of two possibilities:</p>
+<ol>
+<li>TensorFlow is intended to be a major strategic benefit for Android. Machine learning is going to power a wave of new mobile applications, and many of them need to run locally rather than as a client-server app, whether for efficiency, responsiveness or bandwidth reasons. If TensorFlow makes it easier to develop cross-platform, efficient mobile machine learning solutions for Android but not for iOS, that could give the Android app market a major boost.</li>
+<li>TensorFlow is intended to be a major strategic benefit for Google's platform/hosting, and to disrupt AWS. Right now, it's pretty difficult and expensive to set up a cloud GPU instance. TensorFlow opens up the possibility of a granularly-scalable approach to machine learning that allows us to finally ignore the nitty-gritty of CUDA installations, Python dependencies, and multiple GPUs. Just specify the size of network you want, and TensorFlow allocates and spreads it across hardware as needed. This is why TensorBoard was part of the original implementation, and why AWS support was an afterthought. <strong>"Pay by the parameter"</strong>. If I had to guess, I'd say this is the major reason for open sourcing TensorFlow.</li>
+</ol>
+<p>I want something like the above to be true, because I want there to be a strategic reason for Google to invest in TensorFlow, and I want it to get easier and easier to develop interesting and complex deep learning apps.</p>
+
+
+    </div>
+    <footer>
+        <div class="bottom_nav">
+            <!-- <p>from base</p> -->
+            
+
+            <!-- <p><a href="#">link1</a></p> -->
+            
+
+<p>
+    <i>
+        <!-- Last updated: 2024-September-18 -->
+        Published: 2016-01-22
+    </i>
+</p>
+
+
+        </div>
+    </footer>
+</body>
+
+</html>

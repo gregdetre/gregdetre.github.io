@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <title>Greg Detre - Hackathon Profbot technical</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="gdwebgen" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Greg Detre's personal website" />
+    
+    <link rel="stylesheet" href="/static/css/base.css">
+    
+</head>
+
+<body>
+    <div class="nav_menu" <p>
+        <!-- <a href="#">Home</a> -->
+        
+        <a href="/">Home</a>
+        
+        <a href="/about">About</a>
+        
+        <a href="/blog">Blog</a>
+        
+        </p>
+    </div>
+
+    <div id="main">
+        
+
+
+<h1>Hackathon Profbot technical</h1>
+
+
+<p>I've been obsessed by chatbots ever since I first played around with an Eliza clone that shipped with my Soundblaster sound card at the age of 12. I taught myself to program because I so badly wanted to build a chatbot of my own. My first efforts were very simple - they matched keywords in the user's input, and picked at random from a bag of canned responses. It worked as well as you'd expect.</p>
+<p>The more I scratched at this problem over the years, <a href="/2006/04/18/the-turing-tournament-a-proposal-for-a-reformulation-of-the-turing-test/">the deeper I realized it to be</a>. Even as we recognise the deficiencies of the Turing Test, we must also recognise its genius - it is a necessary but not sufficient test of intelligence. In other words, it's just too dang hard and too specific (see <a href="http://lead.u-bourgogne.fr/people/french/turing.pdf">Robert French's brilliant 'Subcognition and the Limits of the Turing Test'</a>).</p>
+<p>So, with a familiar sense of futility and excitement, I joined forces with Helena, Jess and Brandon to build a Slack-chatbot version of Sleepio's The Prof in our first Hackathon. We had two days from start to finish.</p>
+<p>Now, the real version of The Prof is our animated Scottish sleep expert, powered by complex algorithms that took years to build. He features in our full Sleepio product and scientific papers, personalizing his advice for each user, and has been tweaked, tested and polished to a high sheen.</p>
+<p>We decided from the get-go that The Profbot, his Slack-chatbot little brother, was going to be a considerably scruffier character.</p>
+<p>I knew from my teenage experiments that <em>stateless</em> chatbots are very unsatisfying. Their responses were based solely on the most recent input from the user. They had no memory of what had been said before. I wanted the Profbot to be stateful, i.e. for each response to progress from previous responses.</p>
+<p>Brandon was knee-deep in Python Slack APIs, and had made a discovery. We initially thought we'd have to set up an internet-facing webserver that Slack would push to whenever someone posted. That would in turn require something like a database to store state across requests. He realized that we could just poll Slack regularly from a local Python process, allowing us to store state simply in Python variables. Much simpler, and fine for a Hackathon!</p>
+<p>We intended for The Profbot to hang out in an open Slack channel where anyone in the company could chat with him. This interactivity would be risky, but would be much more exciting to demo than a passive screenshare.</p>
+<p>For this, The Profbot would need a wide repertoire of conversational narratives. Helena &amp; Jess had already begun work on a massive flowchart showing how he could progress through different paths.</p>
+<p>In our real production environment, the mills of Sleepio grind slow but exceedingly fine. Making changes to The real Prof's logic requires a GitHub commit from an engineer, unit tests, code review, a QA cycle, and deployment... </p>
+<p>For a Hackathon, we needed content development to proceed much faster. We wanted to be able to easily modify The Profbot as we learned what kinds of conversation paths worked and what didn't. And we wanted to be able to do this without any input from an engineer, otherwise we'd be bottlenecked in how much content we could develop.</p>
+<p>My dream would have been to train a recurrent deep learning network on various conversations so that it could learn to respond accordingly and robustly. In principle this would have made The Profbot able to generalize better to inputs he hadn't seen while still maintaining state. There are papers showing some generalization from trained sentences to grammatically different but semantically similar sentences, but I knew in my heart of hearts that this wasn't feasible in two days, so we abandoned the plan.</p>
+<p>We also looked into 3rd party services that might provide this for us, but couldn't find anything plug-and-play in the time. Do shout out in the comments if you know of anything that might do the job!</p>
+<p>So we took a gamble on the architecture, and decided to try to represent the entire conversational logic as a finite state machine. This way, the conversational paths could be treated as data, read in from an external file in a simple domain-specific language, rather than as code.</p>
+<p>This had a few major benefits. A simple deterministic finite state machine can be neatly visualized as a flowchart, with a single defined starting point. With a little help from <a href="https://pypi.python.org/pypi/xlrd">Xlrd</a>, <a href="https://pypi.python.org/pypi/pydot">Pydot</a> and <a href="http://www.graphviz.org/">GraphViz</a>, we were able to define an entire conversational path as an Excel file, immediately visualize it as a flowchart, and run it.</p>
+<p>In fact, we had a still bolder hope. We wanted to use crowd-sourcing as a crowd-pleaser - we moved the Profbot's Excel file into Dropbox, so that anyone in the company would be able to add to it during the demo and see the Profbot's responses change in real-time.</p>
+<p>There are disadvantages to representing things as a deterministic finite state machine.</p>
+<ul>
+<li>The most obvious is right there in the name - though stateful, the Profbot would respond pretty <em>deterministically</em>, i.e. in exactly the same way every time to the same inputs. This repetitiveness is a sure sign of a bot!</li>
+<li>It made it difficult to deal with global options. For instance, we might want the user to be able to type 'tell me a joke' or 'help me sleep' at any time, and have the Profbot immediately shift down that path. However, if he was already deep in a different mode, we would have to create edges from every node to the 'tell me a joke' node for it to be globally applicable. We didn't solve this in time.</li>
+<li>Ultimately, the paths were still based on a simple disjunctive matching algorithm that looked for any of a variety of keyphrases (or a special '*' wildcard that matched against anything) to determine which state to move into next. This didn't provide much flexibility or robustness, but that was too hard a problem to address meaningfully. 
+We'll discuss one subtle difficulty. We wanted The Profbot to pick randomly from a bag of responses when flummoxed, such as 'I cannae make head or tail of ye' and 'Ach, I'm afraid I didn't catch that', but remain in the same state he was in.</li>
+</ul>
+<p>At this point, I made a bad architectural decision that created a great deal of complexity for little gain. I decided that The Profbot would need a stack. That way, when the user inputted something The Profbot didn't recognise, we could push the 'dunno' state to the top of his stack. He'd respond accordingly, pop off 'dunno', and his prior state would now be at the top, ready to respond to the next input. The intention was to allow him to be able to stash his current state and get into stateful digressions. We realized afterwards that we could have managed without this functionality, and we wasted precious hours getting it to work robustly.</p>
+<p>With just a couple of hours to go, we had a working finite state machine in the terminal. Helena &amp; Jess had built a rich set of conversational paths in Excel - you could almost hear The Prof's soft, witty Scottish brogue as you read them. Brandon had built a beautiful wrapper to the Python Slack API. But we hadn't yet knitted it all together. We thought we had everything working with half an hour to go, and set about writing a script for the demo.</p>
+<p>Here, our story ends in disaster. We had just enough time to QA the core functionality but there were a number of things we didn't have time to try (in part because of my bad decision about the dunno-stack). So when the stopwatch of our 5 minutes began, we invited the company to pour into The Profbot's home. Immediately, people started delightedly typing at him while others joined, and he crashed over and over.</p>
+<p>By the time we had figured out the issue (something to do with people joining the room while he was running), we had wasted 3 of our precious 5 minutes. We rushed through the scripted part of our demo and explanations of what we had built, but we didn't have time to really explain how people could modify his logic, and all the obvious deficiencies of a simple keyword-matching strategy were very evident as people tried feeding him increasingly outlandish inputs.</p>
+<p>So, no prize for us. Most of all, I'm excited about the possibilities of representing conversational logic as data rather than code. I don't think a finite state machine is rich enough to implement a lot of the logic in the real program, so I'm musing about more powerful formalisms. But we had an enormous amount of fun building The Profbot, and seeded new ideas for the future. I'm already looking forward to our next Hackathon!</p>
+<h2>Future ideas</h2>
+<p>Instead of an Excel file in Dropbox, we would have preferred to use a Google Sheet, but I already had lots of Xlrd code I could crib from to speed up the development process.</p>
+<ul>
+<li>We considered D3.js, but PyDot + GraphViz is very easy to work with, all Python, and I had code lying around that was easy to repurpose. Plus, I worried that D3's default force-directed graph would generate a different solution every time we made a change, whereas GraphViz's solutions tend to be pretty stable.</li>
+<li>In the future, I'd love to try using TensorBoard. It's interactive, and deals really well with collapsing detail (so that you can see the high level but burrow down a path if you want to), but it would have been too much work to figure out how to decouple TensorBoard from TensorFlow objects for use with arbitrary inputs.</li>
+</ul>
+
+
+    </div>
+    <footer>
+        <div class="bottom_nav">
+            <!-- <p>from base</p> -->
+            
+
+            <!-- <p><a href="#">link1</a></p> -->
+            
+
+
+        </div>
+    </footer>
+</body>
+
+</html>
