@@ -33,7 +33,7 @@ body {
 
 #main {
     /* change the first padding value to move everything (including the h1) down. 30 without the wide-img-header */
-    padding: 10px 10px 80px 10px;
+    padding: 20px 10px 80px 10px;
     position: relative;
 }
 
@@ -349,7 +349,7 @@ footer {
 footer p {
     display: inline-block;
     margin: 0;
-    line-height: 1.4;
+    line-height: 2;
     text-align: right;
     padding: 3px 8px 4px 8px;
     font-size: 1em;
