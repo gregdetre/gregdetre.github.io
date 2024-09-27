@@ -1,0 +1,751 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 9">
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List
+href="./lecture%20-%20cs187%20computational%20linguistics%20020920_files/filelist.xml">
+<title>Title</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Greg Detre</o:Author>
+  <o:LastAuthor>Greg Detre</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>164</o:TotalTime>
+  <o:Created>2003-07-02T01:03:00Z</o:Created>
+  <o:LastSaved>2003-07-02T01:03:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>864</o:Words>
+  <o:Characters>4927</o:Characters>
+  <o:Company>-</o:Company>
+  <o:Lines>41</o:Lines>
+  <o:Paragraphs>9</o:Paragraphs>
+  <o:CharactersWithSpaces>6050</o:CharactersWithSpaces>
+  <o:Version>9.2720</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:DrawingGridHorizontalSpacing>4.5 pt</w:DrawingGridHorizontalSpacing>
+  <w:DrawingGridVerticalSpacing>12.25 pt</w:DrawingGridVerticalSpacing>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:Compatibility>
+   <w:WW6BorderRules/>
+   <w:FootnoteLayoutLikeWW8/>
+   <w:ShapeLayoutLikeWW8/>
+   <w:AlignTablesRowByRow/>
+   <w:ForgetLastTabAlignment/>
+   <w:LayoutRawTableWidth/>
+   <w:LayoutTableRowsApart/>
+  </w:Compatibility>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:"Book Antiqua";
+	panose-1:2 4 6 2 5 3 5 3 3 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:647 0 0 0 159 0;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:553679495 -2147483648 8 0 66047 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin-top:8.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	color:purple;
+	mso-font-kerning:14.0pt;
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+h2
+	{mso-style-next:Normal;
+	margin-top:16.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	color:navy;
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+h3
+	{mso-style-next:Normal;
+	margin-top:16.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	tab-stops:right 451.45pt;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	color:green;
+	font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+h4
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-font-weight:normal;}
+h5
+	{mso-style-next:Normal;
+	margin-top:15.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	mso-outline-level:5;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	color:maroon;
+	font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+h6
+	{mso-style-parent:"Heading 5";
+	mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	mso-outline-level:6;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	color:olive;
+	font-weight:normal;
+	mso-bidi-font-weight:bold;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{mso-style-parent:"Heading 1";
+	mso-style-next:Normal;
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	tab-stops:.75in right 451.45pt;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-variant:small-caps;
+	color:purple;
+	mso-font-kerning:14.0pt;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{mso-style-parent:"Heading 2";
+	mso-style-next:Normal;
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:10.1pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	tab-stops:right 451.3pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:navy;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{mso-style-parent:"TOC 2";
+	mso-style-next:Normal;
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:20.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	tab-stops:right 451.45pt;
+	font-size:9.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:teal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoToc4, li.MsoToc4, div.MsoToc4
+	{mso-style-update:auto;
+	mso-style-parent:"TOC 3";
+	mso-style-next:Normal;
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:35.7pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	tab-stops:right 451.45pt;
+	font-size:7.5pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:maroon;
+	mso-bidi-font-weight:bold;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin-top:8.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	tab-stops:center 239.75pt right 6.65in;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoDate, li.MsoDate, div.MsoDate
+	{margin-top:8.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:right;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
+	{margin-top:8.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	background:navy;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Tahoma;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.Section, li.Section, div.Section
+	{mso-style-name:Section;
+	margin-top:8.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.Heading0, li.Heading0, div.Heading0
+	{mso-style-name:"Heading 0";
+	mso-style-parent:"Heading 1";
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	border:none;
+	mso-border-alt:solid windowtext .5pt;
+	padding:0in;
+	mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt;
+	font-size:16.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Book Antiqua";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	font-variant:small-caps;
+	color:purple;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+span.EmailStyle23
+	{mso-style-type:personal;
+	mso-ansi-font-size:10.0pt;
+	mso-ascii-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	color:windowtext;}
+span.EmailStyle24
+	{mso-style-type:personal;
+	mso-ansi-font-size:10.0pt;
+	mso-ascii-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	color:windowtext;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:68.05pt 68.05pt 68.05pt 68.05pt;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+@list l0
+	{mso-list-id:1746143482;
+	mso-list-type:simple;
+	mso-list-template-ids:-719658964;}
+@list l0:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+</head>
+
+<body lang=EN-GB style='tab-interval:17.85pt'>
+
+<div class=Section1>
+
+<h1>Lecture � CS187 Computational linguistics</h1>
+
+<p class=MsoNormal align=right style='text-align:right'>Greg Detre</p>
+
+<p class=MsoNormal align=right style='margin-top:2.0pt;text-align:right'>14:30
+on Friday, September 20, 2002</p>
+
+<p class=MsoNormal align=right style='margin-top:2.0pt;text-align:right'>Prof.
+Stuart Shieber,<span style="mso-spacerun: yes">� </span>MD G-125</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>computational linguistics � study of human language using
+tools + techniques of compsci</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>applications</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>transcribing, categorising, translating,
+controlling, dividing, restoring/editing, annotating, changing</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal style='margin-left:35.7pt'>speech recognition, e.g.
+1-800-COLLECT � do you accept this call? listens just for �yes�</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>Descartes, letter to Marquess of Newcastle (1646???) �
+flexibility of verbal behaviour as the criterion of a �rational soul�</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>considers the Bladerunner �Turing test� for humans vs
+replicants of iris dilation � a property completely independent of intelligence</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>the problem of computational linguistics is �AI-complete�
+(by analogy with NP-complete)</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>CL vs NLP</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>CL � scientific side</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>NLP � engineering side</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>Shieber�s areas of interest concern mainly techniques rather
+than applications</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>both engineering + scientific</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>what�s a natural language?</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>artificial language, e.g. C++, or
+Esperanto, Hebrew, also Korean alphabet</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>well-formedness</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>how useful is grammaticality to NLP
+applications?</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:35.7pt;margin-bottom:.0001pt'>people don�t really speak
+grammatically for the most part</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:35.7pt;margin-bottom:.0001pt'>although different dialects have
+subtly different grammars</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:53.55pt;margin-bottom:.0001pt'>people do follow certain rules when
+they form ill-formed sentences</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>there are degrees of well-formedness</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:35.7pt;margin-bottom:.0001pt'>epsilon well-formed � distance
+measure of how well-formed</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>would a system that could
+distinguish whether or not something is well-formed benefit?</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>maybe use a probabilistic method in
+assessing well-formedness</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:35.7pt;margin-bottom:.0001pt'>but this is still assuming a binary
+distinction of well- or ill-formed</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>can we actually distinguish
+well-formedness from meaningfulness?</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:35.7pt;margin-bottom:.0001pt'>maybe well-formedness is secondary to
+grammaticality (e.g. Schank)</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:35.7pt;margin-bottom:.0001pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>Hockett�s theory (in �A manual of phonology�, 1955)</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>he wants to give an algorithmic
+model of human speech </p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>pg 4, section 0211-0213</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:35.7pt;margin-bottom:.0001pt'>proposes the possibility of a talking
+dog � �let me add at once that I am entirely serious�</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'>how good is his theory?</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:35.7pt;margin-bottom:.0001pt'>it characterises only but not all the
+well-formed English strings over that vocabulary</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:35.7pt;margin-bottom:.0001pt'>you could extend it to all the
+well-formed strings if you made it huge (because it doesn�t really recurse)</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>What kinds of languages are describable in general by
+Hockett�s method?</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>allows for infinite loops</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>is it a finite state machine or a
+context-free grammar?</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:35.7pt;margin-bottom:.0001pt'>if you could generate a<sup>n</sup>b<sup>n</sup>,
+then you could show that it�s regular??? what�s �regular�???</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:35.7pt;margin-bottom:.0001pt'>all you know is what state you�re in,
+and there�s only a finite number of those � you don�t have a stack, and you
+don�t have a memory or a count</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:35.7pt;margin-bottom:.0001pt'>this is a finite state model, and
+this is the transition matrix</p>
+
+<p class=MsoNormal>Is English (viewed as a set of strings) a regular language?</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>no?</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:35.7pt;margin-bottom:.0001pt'>Chomsky invented the Chomsky
+hierarchy (type 0 � 3) to try to prove that English (and all natural language)
+isn�t a regular language</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:53.55pt;margin-bottom:.0001pt'>ww<sup>R</sup></p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:35.7pt;margin-bottom:.0001pt'>parentheses</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:35.7pt;margin-bottom:.0001pt'>a<sup>n</sup>b<sup>n</sup> (e.g.
+anti- anti-missile missile missile � but greater than about 2 levels, it ceases
+to be meaningful English)</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:35.7pt;margin-bottom:.0001pt'>relative clauses</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:53.55pt;margin-bottom:.0001pt'>the cat likes tuna fish</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:53.55pt;margin-bottom:.0001pt'>the cat the dog chased likes tuna
+fish</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:53.55pt;margin-bottom:.0001pt'>the cat the dog the rat bit chased
+likes tuna fish</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:53.55pt;margin-bottom:.0001pt'>maybe what the English language is
+is anchored to the cognitive limitations of its speakers</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:71.4pt;margin-bottom:.0001pt'>if you want to limit English
+sentences to less than 1 million words, then English contains a finite number
+of strings, and is therefore regular</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:71.4pt;margin-bottom:.0001pt'>but consider C++�???</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:71.4pt;margin-bottom:.0001pt'>what about the practical limit of the
+length of our lives?</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:71.4pt;margin-bottom:.0001pt'>you just have to make idealisations
+(just as in physics)</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:89.25pt;margin-bottom:.0001pt'>but the difference here may be that
+it�s not at all obvious that (unlike the classical physical laws of the
+universe) there is a determinate answer as to whether a given sentence is
+grammatical within the English language</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'>how do you prove that English
+is/not regular?</p>
+
+<p class=MsoNormal style='margin-left:35.7pt'>to prove that English is not
+regular is hard, because there can be non-regular subsets of a regular language</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:35.7pt;margin-bottom:.0001pt'>apply a pumping lemma directly???</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:35.7pt;margin-bottom:.0001pt'>closed</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:53.55pt;margin-bottom:.0001pt'>apply the homomorphism that turns
+all nouns to <i style='mso-bidi-font-style:normal'>a</i> and all verbs to <i
+style='mso-bidi-font-style:normal'>b</i> (in the cat/dog example above)</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:53.55pt;margin-bottom:.0001pt'>the argument is that you end up a<sup>n</sup>b<sup>n<o:p></o:p></sup></p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:53.55pt;margin-bottom:.0001pt'>intersect English with a regular
+language � remember that regular languages are closed under intersection with
+other regular languages</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>The Chomsky hierarchy</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>type 0: recursively enumerable</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>type 1: context-sensitive</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>type 2: context-free</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>type 3: regular</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'>invented this to show that
+Hockett�s theory is inadequate</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>Are natural languages context-free?</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>Chomsky � context-free grammars are
+inappropriate for paralleling natural language</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>1981 � Gasdar + Pullam(sp???) �
+claimed that every previous proof that natural language is not context-free was
+wrong (for empirical or theoretical reasons)</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>1986 � the issue was closed, because
+Gasdar + Pullam �???</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'>to show non-regularity, we
+showed dependency</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>to show non-context-freeness what
+pattern of dependency would you have to show?</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:35.7pt;margin-bottom:.0001pt'>what did Toad bake ___?</p>
+
+<p class=MsoNormal style='margin-top:2.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:53.55pt;margin-bottom:.0001pt'>who met John ___? whom did John meet
+___?</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:35.7pt;margin-bottom:.0001pt'>Norweigan may allow multiple
+questions</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:53.55pt;margin-bottom:.0001pt'>if you have finitely-many
+dependencies, you can encode them � but if you have arbitrarily many �</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:53.55pt;margin-bottom:.0001pt'>if you have cross-serial
+dependencies (i.e. that aren�t nested within each other, but cross over each
+other)�</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:71.4pt;margin-bottom:.0001pt'>e.g. John, Mary and Bill bought a
+Ford, a Porsche and a Pontiac respectively</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:71.4pt;margin-bottom:.0001pt'>or better: John, Mary and Bill killed
+himself, herself and himself respectively</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>if one particular natural language is shown not to be CF,
+then (if you assume that there is something universal about natural language)
+chances are that you�ve shown something about natural language in general</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h2>Admin</h2>
+
+<h3>Enrollment</h3>
+
+<p class=MsoNormal>limited to 33 � needs to be 20</p>
+
+<p class=MsoNormal>only 13 are deadly serious</p>
+
+<p class=MsoNormal>due in by Mon morning, returned by Mon eve</p>
+
+<h3>Structure of the course</h3>
+
+<p class=MsoNormal>first half class/lecture (lots of discussion), second half
+project</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h2>Questions</h2>
+
+<p class=MsoNormal>Star Trek � The ultimate computer � computer has control of
+the Enterprise, but Kirk convinces the computer to relinquish control</p>
+
+<p class=MsoNormal>is Esperanto as messy as other �real� natural languages???</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>apparently yes, like Hebrew</p>
+
+<p class=MsoNormal>recur (means again, as in recursive) rather than recurse
+(curse again)</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+</div>
+
+</body>
+
+</html>

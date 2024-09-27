@@ -1,0 +1,674 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 9">
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List
+href="./lecture%20-%20curious%20machines%20030402_files/filelist.xml">
+<title>Title</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Greg Detre</o:Author>
+  <o:LastAuthor>Greg Detre</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>115</o:TotalTime>
+  <o:Created>2003-07-02T01:03:00Z</o:Created>
+  <o:LastSaved>2003-07-02T01:03:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>776</o:Words>
+  <o:Characters>4426</o:Characters>
+  <o:Company>-</o:Company>
+  <o:Lines>36</o:Lines>
+  <o:Paragraphs>8</o:Paragraphs>
+  <o:CharactersWithSpaces>5435</o:CharactersWithSpaces>
+  <o:Version>9.2720</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:DrawingGridHorizontalSpacing>4.5 pt</w:DrawingGridHorizontalSpacing>
+  <w:DrawingGridVerticalSpacing>12.25 pt</w:DrawingGridVerticalSpacing>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:Compatibility>
+   <w:WW6BorderRules/>
+   <w:FootnoteLayoutLikeWW8/>
+   <w:ShapeLayoutLikeWW8/>
+   <w:AlignTablesRowByRow/>
+   <w:ForgetLastTabAlignment/>
+   <w:LayoutRawTableWidth/>
+   <w:LayoutTableRowsApart/>
+  </w:Compatibility>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:"Book Antiqua";
+	panose-1:2 4 6 2 5 3 5 3 3 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:647 0 0 0 159 0;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:553679495 -2147483648 8 0 66047 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin-top:8.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	color:purple;
+	mso-font-kerning:14.0pt;
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+h2
+	{mso-style-next:Normal;
+	margin-top:16.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	color:navy;
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+h3
+	{mso-style-next:Normal;
+	margin-top:16.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	tab-stops:right 451.45pt;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	color:green;
+	font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+h4
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-font-weight:normal;}
+h5
+	{mso-style-next:Normal;
+	margin-top:15.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	mso-outline-level:5;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	color:maroon;
+	font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+h6
+	{mso-style-parent:"Heading 5";
+	mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	mso-outline-level:6;
+	font-size:12.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Times New Roman";
+	color:olive;
+	font-weight:normal;
+	mso-bidi-font-weight:bold;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{mso-style-parent:"Heading 1";
+	mso-style-next:Normal;
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	tab-stops:.75in right 451.45pt;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-variant:small-caps;
+	color:purple;
+	mso-font-kerning:14.0pt;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{mso-style-parent:"Heading 2";
+	mso-style-next:Normal;
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:10.1pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	tab-stops:right 451.3pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:navy;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{mso-style-parent:"TOC 2";
+	mso-style-next:Normal;
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:20.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	tab-stops:right 451.45pt;
+	font-size:9.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:teal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoToc4, li.MsoToc4, div.MsoToc4
+	{mso-style-update:auto;
+	mso-style-parent:"TOC 3";
+	mso-style-next:Normal;
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:35.7pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	tab-stops:right 451.45pt;
+	font-size:7.5pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:maroon;
+	mso-bidi-font-weight:bold;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin-top:8.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	tab-stops:center 239.75pt right 6.65in;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoDate, li.MsoDate, div.MsoDate
+	{margin-top:8.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:right;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
+	{margin-top:8.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	background:navy;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Tahoma;
+	mso-fareast-font-family:"Times New Roman";}
+p.Section, li.Section, div.Section
+	{mso-style-name:Section;
+	margin-top:8.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.Heading0, li.Heading0, div.Heading0
+	{mso-style-name:"Heading 0";
+	mso-style-parent:"Heading 1";
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	border:none;
+	mso-border-alt:solid windowtext .5pt;
+	padding:0in;
+	mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt;
+	font-size:16.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Book Antiqua";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	font-variant:small-caps;
+	color:purple;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:68.05pt 68.05pt 68.05pt 68.05pt;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+@list l0
+	{mso-list-id:1746143482;
+	mso-list-type:simple;
+	mso-list-template-ids:-719658964;}
+@list l0:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l1
+	{mso-list-id:1987079277;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1522620042 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l1:level1
+	{mso-level-tab-stop:35.85pt;
+	mso-level-number-position:left;
+	margin-left:35.85pt;
+	text-indent:-.25in;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+</head>
+
+<body lang=EN-GB style='tab-interval:17.85pt'>
+
+<div class=Section1>
+
+<h1>Lecture � Curious machines</h1>
+
+<p class=MsoNormal align=right style='text-align:right'>Greg Detre</p>
+
+<p class=MsoNormal align=right style='margin-top:2.0pt;text-align:right'><span
+lang=EN-US style='mso-ansi-language:EN-US'>Wednesday, April 02, 2003<o:p></o:p></span></p>
+
+<p class=MsoNormal align=right style='margin-top:2.0pt;text-align:right'><span
+lang=EN-US style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<h2><span lang=EN-US style='mso-ansi-language:EN-US'>Daphna � presentation on
+cognition and affect<o:p></o:p></span></h2>
+
+<p class=MsoNormal>how are emotions generated? what role do they play in
+cognition?</p>
+
+<p class=MsoNormal>Damasio</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'>primary emotion</p>
+
+<p class=MsoNormal style='margin-left:35.7pt'>pre-wired, immediate response,
+doesn�t require recognition of what caused it, or of having it</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'>secondary emotion</p>
+
+<p class=MsoNormal style='margin-left:35.7pt'>reaction to cognitive state which
+triggers primary emotions, often due to previous associations of objects and
+emotions</p>
+
+<p class=MsoNormal style='margin-left:35.7pt'>as-if mechanism � simulate the
+state, without actually changing your body state</p>
+
+<h3>Norman, Ortony and Russell (2003), �Affect and machines design: lessons for
+the development of autonomous machines�</h3>
+
+<p class=MsoNormal>evaluation vs interpretation</p>
+
+<p class=MsoNormal>routine seems to contain a large proportion of all
+learned/non-instinctive behaviour</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>unclear what the routine level is
+exactly for � the language example is confusing</p>
+
+<p class=MsoNormal>they don�t like the co-existing positive and negative affect
+example/discussion</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'>Deb: can you have both positive
+and negative affect for the same thing for the same reason � by definition,
+surely no?</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:35.7pt;margin-bottom:.0001pt'>Kai-yuh � parallel
+threads/timeslicing emotional execution</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>does it have to be the same thing
+and the same reason???</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'>as soon as you add semantic
+content to emotion, the dimensionality gets infinite</p>
+
+<h3>Sloman (2001), �Varieties of affect and the CogAff architecture schema�</h3>
+
+<p class=MsoNormal>emotional terms refer to phenomena at different levels of
+analyisis and complexity</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>behavioural patterns (fear)</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>motivations/desires (lust, jealousy)</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>physiological/neurological (pain)</p>
+
+<p class=MsoNormal><span style='color:red'>emotions might be emergent
+properties of cognitive processing rather than explicit in the system<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>is this a real difference or a
+semantic one?</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>they don�t have to be useful</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>just because you can pretty much
+measure it with an explicit variable doesn�t meant that that variable exists</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:35.7pt;margin-bottom:.0001pt'>Deb: there should always be a distinction
+between description and explanation, unless you�re at (pretty much) the lowest
+level (e.g. theoretical physicists)</p>
+
+<p class=MsoNormal>caution vs proto-caution � difficult to differentiate from
+outside</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>cautious because you expect
+something bad, as opposed to direct reaction to stimuli</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>where does ToM fit into this 3-level architecture?</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>Minsky: self-reflective vs
+reflective</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>they only gave poor, B-brain
+examples for the reflective level</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>you need some means to devolve things down levels when they
+become automaticised, right???</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>Bruce: doesn�t like layered architectures</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>what about his paper???</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal><span style='color:red'>Agre, Horswell � everyday life being
+essentially routines phased in and out<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>how many new things have you done
+today (see Introduction to Agre�s book, 1997)</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>�your Cheerios aren�t going to kill
+you� � you can get away for the most part with bumbling through life without
+too much imaginative/forethought</p>
+
+<p class=MsoNormal>bias: cognition as planning (Miller, 1960s)</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>Bruce: Ptolemy/Brahi(???) elaborate model for why some
+planets appear to move backwards � but then the Copernican rotation around the
+sun explained it much more simply. is there a way of simplifying/cutting
+through the huge inter-connectivity that Sloman proposes?</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>Brooks liked to watch people watch his robot</p>
+
+<p class=MsoNormal style='margin-top:2.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>the robot would keep bumping into a
+wall in a loop � �what a stupid robot�</p>
+
+<p class=MsoNormal style='margin-top:2.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>add a faster CPU, it did the same
+thing faster � �boy, it�s angry�</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>controllability (x) against predictability (y)</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>top left � anxiety</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>bottom right � depression</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>top right � elation</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>bottom right � frustration</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'>these axes: the system believes
+that it can predict / control</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>most of these affective axes aren�t orthogonal</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h2>Hugo � presentation on Minsky, tEM, ch 2</h2>
+
+<p class=MsoNormal>he invented the confocal microscope</p>
+
+<p class=MsoNormal>model six � id, ego + super-ego</p>
+
+<p class=MsoNormal>role-model vs imprimer?</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>seem to point to different criteria
+for attachment???</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:35.7pt;margin-bottom:.0001pt'>&quot;the speed with which a person
+responded to an infant and the intensity of the interaction in which he engaged
+with that infant.&quot; Bowlby</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:35.7pt;margin-bottom:.0001pt'>&quot;those who admire us, those whom
+we admire, those by whom we wish to be admired, those with whom we are
+competing, and those opinion of us we respect.&quot; Aristotle (Rhetoric 2, 6.)</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>we sort of choose our role-modles</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>Hugo: role-model implies someone you
+want to be like � but you don�t necessarily want to be like someone you attach
+to (e.g. abusive) � hmmm</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>he hates baggage from words, so
+likes neologisms</p>
+
+<p class=MsoNormal>Kai-Yuh: negative imprints too?</p>
+
+<p class=MsoNormal>Kai-Yuh: oxytosin � anti-depressant � related to imprinting
+and familiarity</p>
+
+<p class=MsoNormal>gamut of imprimers:</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>caregivers, non-caregivers (peers,
+girlfriends), non-acquaintances (mentors, celebrities), fictional, groups with
+strong idenities (cults, military), any strong identity (doctrines, creeds)</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>this is over-extending the theory</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>internalising absent imprimers and
+have virtual interactions with them as mental critics</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:35.7pt;margin-bottom:.0001pt'>Hugo: these are <span
+style='color:red'>constructed as Simulation Theories of Mind</span></p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:53.55pt;margin-bottom:.0001pt'>at the same level as representations
+of ourselves, and so they have more access to and influence upon self-models </p>
+
+<p class=MsoNormal>what does Minsky mean by �elevating� a goal???</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>lifting it up the hierarchy</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>giving it higher urgency (in the
+Copycat sense)</p>
+
+<p class=MsoNormal>Hugo: Common sense as the Social Norm Imprimer � hmmmm</p>
+
+<p class=MsoNormal>empirically/psychologically verifiable</p>
+
+<p class=MsoNormal>major complaint: Andrea: <span style='color:red'>no
+mechanism for learning the goals</span></p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'>Daphna: what if just getting praise
+is your goal?</p>
+
+<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:17.85pt;margin-bottom:.0001pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>Bruce: �less code, more fulfilling�</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h2>Misc</h2>
+
+<p class=MsoNormal>weird 24 hour analogue clock � does the minute hand miss out
+the left half???</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'>no, you have to ignore the
+numbers for the minute hand � it just goes round in a normal circle</p>
+
+<p class=MsoNormal>Minsky �internal grounding�???</p>
+
+<p class=MsoNormal>learned helplessness</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+</div>
+
+</body>
+
+</html>
