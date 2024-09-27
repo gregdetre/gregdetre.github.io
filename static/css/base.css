@@ -19,8 +19,9 @@
 /* General Styles */
 body {
     font-family: 'Garamond', 'Hoefler Text', 'Baskerville', 'Georgia', 'Palatino', 'Palatino Linotype', serif;
-    font-size: 1.3125rem;
-    line-height: calc(30/21);
+    /* rem means 'root em', i.e. fixed/absolute, whereas em is relative to the parent element */
+    font-size: 1.2rem;
+    line-height: 1.4;
     color: #eee;
     /* Almost white text */
     text-align: justify;
