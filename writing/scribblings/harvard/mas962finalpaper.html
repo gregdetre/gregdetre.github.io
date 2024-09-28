@@ -1,1 +1,303 @@
-notyet/writing/scribblings/harvard/mas962finalpaper.htm
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><!-- InstanceBegin template="/Templates/minimalist.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" --> 
+<title>Greg Detre</title>
+<!-- InstanceEndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="head" --> <!-- InstanceEndEditable --> 
+<style type="text/css">
+<!--
+-->
+</style>
+<link href="../../../minimalist.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<h1><!-- InstanceBeginEditable name="TitleRegion" -->Final paper on seeing the 
+  analogy between space and time <!-- InstanceEndEditable --></h1>
+<!-- InstanceBeginEditable name="EditRegion" -->
+<table width="60%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr> 
+    <td><h3>Abstract</h3>
+      <p class=MsoNormal>The aim of this project was to investigate how spatial 
+        and temporal representations are related, and how this is reflected in 
+        language. By employing a 2-D grid-world, with objects moving through time, 
+        it was hoped that the analogies between spatial and temporal representations 
+        would become apparent. It was hoped that these representations would self-organise 
+        through learning, and that some of the evidence from cognitive psychology 
+        might be replicated.</p>
+      <p class=MsoNormal>
+        <![if !supportEmptyParas]>
+        &nbsp;
+        <![endif]>
+        <o:p></o:p></p>
+      <h3>Introduction</h3>
+      <p class=MsoNormal>The aim of this project was to investigate how spatial 
+        and temporal representations are related, and how this is reflected in 
+        language. When we think about what we mean by ‘spatial representations’, 
+        we are talking ultimately about some ensemble of neurons whose activity 
+        is involved whenever we think in spatial, geometric terms. This very broad 
+        working definition is intended to cover any use of propositional concepts, 
+        visualisations, calculations and manipulations that involve spatial geometry. 
+        We might imagine that a parallel set of concepts, visualisations and manipulations 
+        exist for temporal geometry, correspondingly rooted in ‘temporal representations’.</p>
+      <p class=MsoNormal>We would like to be able to understand a representation 
+        in more detailed and expressive terms than simply picking out the implicated 
+        neurons. It might even be for some representations that almost the entire 
+        brain is implicated. Rather, we want to build a computational, or functional, 
+        model of a representation as a means of understanding it. That is, we 
+        wish to build a system whose outputs are the same as our biological system 
+        for the same inputs. In addressing our original question of how spatial 
+        and temporal representations are related, we really want to be able to 
+        quantifiably compare two models, of spatial and temporal representations, 
+        and then be able to understand where those similarities and differences 
+        lie.</p>
+      <p class=MsoNormal>
+        <![if !supportEmptyParas]>
+        &nbsp;
+        <![endif]>
+        <o:p></o:p></p>
+      <h3>Psychological evidence</h3>
+      <p class=MsoNormal>We don’t know exactly which neurons are involved when 
+        we think about space. We have a broad idea, through neuroimaging studies, 
+        but it quickly becomes apparent that different neurons are implicated 
+        in different ways. A more promising route for the moment involves hypothesising 
+        about what sort of computational structures would give rise to observed 
+        properties. The most illuminating observed properties are those uncovered 
+        by evidence from linguistics, and from cognitive psychology.</p>
+      <p class=MsoNormal>We can see immediately just from an introspective survey 
+        that we often discuss analogous spatial and temporal concepts using the 
+        same, or very similar, words. For example, we don’t even notice the stretch 
+        involved when we say both:</p>
+      <p class=MsoNormal style='margin-left:17.85pt'>The messenger <i>went from</i> 
+        Paris to Istanbul</p>
+      <p class=MsoNormal>and:</p>
+      <p class=MsoNormal align=left style='margin-left:17.85pt;text-align:left;
+tab-stops:right 346.5pt'>The meeting <i>went from</i> 3:00 to 4:00<span
+style='mso-tab-count:1'>                                 </span>(Jackendoff)</p>
+      <p class=MsoNormal>or that we can say:</p>
+      <p class=MsoNormal style='margin-left:17.85pt'>The spaceship is nearly here.</p>
+      <p class=MsoNormal>and:</p>
+      <p class=MsoNormal style='margin-left:17.85pt'>Christmas is nearly here.</p>
+      <p class=MsoNormal>We can also look at the way we use timelines, based on 
+        an archetypal spatial metaphor. It has been long-established that in English, 
+        we use a horizontal timeline&nbsp;with the future to the right, whereas 
+        Mandarin Chinese speakers use a vertical timeline with the future stretching 
+        out below. Furthermore, Mandarin speakers answer simple time sequence 
+        questions more rapidly than English speakers when the objects on the screen 
+        move vertically (Boroditsky, 2001), implying that differences in their 
+        linguistic framework reveal differences in the underlying cognitive representations. 
+        More specifically, it seems almost as though the mapping from the one 
+        temporal to three spatial dimensions in Mandarin is orthogonal to the 
+        mapping involved for English speakers. This may be too strong a statement, 
+        because although we know that dimensionality must be represented somehow 
+        in order to produce the behaviour that is evident and required in any 
+        spatial reasoning, we really have no idea yet exactly what sort of function 
+        relates the temporal and spatial.</p>
+      <p class=MsoNormal>
+        <![if !supportEmptyParas]>
+        &nbsp;
+        <![endif]>
+        <o:p></o:p></p>
+      <h3>The simulation</h3>
+      <p class=MsoNormal>A priority then in any model is to reveal some of the 
+        underlying similarity between the spatial and temporal representations, 
+        and to show how a spatial concept might be coopted into the temporal domain 
+        (or perhaps vice versa).</p>
+      <p class=MsoNormal>We started with a preliminary sketch of a simulation, 
+        involving only two spatial dimensions and a discrete temporal one. It 
+        was felt that almost all of the interesting behaviour could be captured 
+        without a third dimension, especially since the space is already being 
+        reduced to one. One agent and one object, taking the roles of landmark 
+        and target (or ‘trajector’), were all that was required, with the agent 
+        initially being rooted in the spot. The object appears at random locations 
+        on the edge of the grid-world, and moves in straight line towards, through 
+        and past the agent until reaching the boundary, and being repositioned 
+        elsewhere. The object moves at a different rate every time it is repositioned. 
+        At every timestep, each agent utters a string expressing its understanding 
+        of the object’s relation to it, e.g. ‘front near left’ or ‘behind far’.</p>
+      <p class=MsoNormal>We chose to try to capture spatial and temporal concepts 
+        as algorithms, given some local coordinate information about a target, 
+        that could be broken down into parsable formulae. For instance, the spatial 
+        concept of ‘inFront’ amounts to a simple comparison between the ‘y’ coordinates 
+        of the landmark and trajector:</p>
+      <p class=MsoNormal style='margin-left:17.85pt'>inFront: landmarkY &gt; targetY</p>
+      <p class=MsoNormal>To begin with, the landmark coordinates are always fixed 
+        to (0, 0), to reflect the agent’s egocentric view of the world, though 
+        eventually the landmark coordinates can take some non-origin value when 
+        calculating the spatial concept for some external position.</p>
+      <p class=MsoNormal>I employed a Polish notation, to make the parsing of 
+        such formulae as a string easier, in which the same function would look 
+        like this:</p>
+      <p class=MsoNormal style='margin-left:17.85pt'>inFront: boolABiggerThanB 
+        functLandmarkY functTargetY</p>
+      <p class=MsoNormal>Where ‘boolABiggerThanB’ is a self-explanatory boolean 
+        function and the other two evaluate to the two ‘y’ coordinates. I employed 
+        the following primitives:</p>
+      <p class=MsoNormal style='margin-left:17.85pt'>Tests:</p>
+      <p class=MsoNormal style='margin-left:17.85pt'><i><span style='mso-tab-count:
+2'>            </span>&gt;<span style="mso-spacerun: yes">  </span>=<span
+style="mso-spacerun: yes">  </span>AND<span style="mso-spacerun: yes">  </span>OR<span style="mso-spacerun: yes">  
+        </span>NOT<o:p></o:p></i></p>
+      <p class=MsoNormal style='margin-left:17.85pt'><i>
+        <![if !supportEmptyParas]>
+        &nbsp;
+        <![endif]>
+        <o:p></o:p></i></p>
+      <p class=MsoNormal style='margin-left:17.85pt'>Functions:</p>
+      <p class=MsoNormal style='margin-left:17.85pt'><i><span style='mso-tab-count:
+2'>            </span>+<span style="mso-spacerun: yes">  </span>-<span
+style="mso-spacerun: yes">  </span>*<span style="mso-spacerun: yes">  </span>/<span style="mso-spacerun: yes">  
+        </span>^2<span style="mso-spacerun:
+yes">  </span>sqrt<o:p></o:p></i></p>
+      <p class=MsoNormal style='margin-left:17.85pt'>Variables:</p>
+      <p class=MsoNormal style='margin-left:35.7pt'><i>targetX<o:p></o:p></i></p>
+      <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:35.7pt;margin-bottom:.0001pt'><i>targetY<o:p></o:p></i></p>
+      <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:35.7pt;margin-bottom:.0001pt'><i>landmarkX<o:p></o:p></i></p>
+      <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:35.7pt;margin-bottom:.0001pt'><i>landmarkY<o:p></o:p></i></p>
+      <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:35.7pt;margin-bottom:.0001pt'><i>number</i> (some arbitary input number)</p>
+      <p class=MsoNormal>We can use this algorithmic representation to compare 
+        the spatial and temporal senses of ‘near’:</p>
+      <p class=MsoNormal style='margin-top:0in'>
+        <![if !supportEmptyParas]>
+        &nbsp;
+        <![endif]>
+        <o:p></o:p></p>
+      <table border=0 cellspacing=0 cellpadding=0 width=783 style='width:470.0pt;
+ margin-left:17.85pt;border-collapse:collapse;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+        <tr> 
+          <td width=339 valign=top style='width:203.4pt;padding:0in 5.4pt 0in 5.4pt'> 
+            <p class=MsoNormal style='margin-top:0in'>boolNearButNotHere</p>
+            <p class=MsoNormal style='margin-top:0in'><span style='mso-tab-count:1'>      
+              </span>&lt;&lt; &quot;boolAndPQ&quot;</p>
+            <p class=MsoNormal style='margin-top:0in'><span style='mso-tab-count:2'>            
+              </span>&lt;&lt; &quot;boolABiggerThanB&quot;</p>
+            <p class=MsoNormal style='margin-top:0in'><span style='mso-tab-count:3'>                  
+              </span>&lt;&lt; “3&quot;</p>
+            <p class=MsoNormal style='margin-top:0in'><span style='mso-tab-count:3'>                  
+              </span>&lt;&lt; &quot;functDistanceToTarget&quot;</p>
+            <p class=MsoNormal style='margin-top:0in'><span style='mso-tab-count:2'>            
+              </span>&lt;&lt; &quot;boolNotP&quot;</p>
+            <p class=MsoNormal style='margin-top:0in'><span style='mso-tab-count:3'>                  
+              </span>&lt;&lt; “boolAtSamePos&quot;</p></td>
+          <td width=444 valign=top style='width:266.6pt;padding:0in 5.4pt 0in 5.4pt'> 
+            <p class=MsoNormal style='margin-top:0in'>boolImpactSoonButNotYet</p>
+            <p class=MsoNormal style='margin-top:0in'><span style='mso-tab-count:1'>      
+              </span>&lt;&lt; &quot;boolAndPQ&quot;</p>
+            <p class=MsoNormal style='margin-top:0in'><span style='mso-tab-count:2'>            
+              </span>&lt;&lt; &quot;boolABiggerThanB&quot;</p>
+            <p class=MsoNormal style='margin-top:0in'><span style='mso-tab-count:3'>                  
+              </span>&lt;&lt; “3&quot;</p>
+            <p class=MsoNormal style='margin-top:0in'><span style='mso-tab-count:3'>                  
+              </span>&lt;&lt; &quot;functWillImpactIn&quot;</p>
+            <p class=MsoNormal style='margin-top:0in'><span style='mso-tab-count:2'>            
+              </span>&lt;&lt; &quot;boolNotP“</p>
+            <p class=MsoNormal style='margin-top:0in'><span style='mso-tab-count:3'>                  
+              </span>&lt;&lt; “boolAtImpactNow”</p></td>
+        </tr>
+      </table>
+      <p class=MsoNormal style='margin-top:0in'>
+        <![if !supportEmptyParas]>
+        &nbsp;
+        <![endif]>
+        <o:p></o:p></p>
+      <p class=MsoNormal style='margin-top:0in'>This calls a number of further 
+        functions. ‘FunctDistanceToTarget’ evaluates to the Euclidean distance, 
+        and ‘functWillImpactIn’ evaluates how many timesteps will occur before 
+        the object is at the same position as the agent, given its current rate 
+        and direction. The similarity between the two representations is clear, 
+        but seems rather contrived. We might imagine similar other analogues, 
+        between ‘in 3 spacesteps’ and ‘in 3 timesteps’, where ‘in’ is true whenever 
+        the object is within some arbitrary number of steps plus or minus x.</p>
+      <h3>Learning</h3>
+      <p class=MsoNormal>In order to feel that the model was generating these 
+        isomorphisms itself, rather than being fed them, we devised two learning 
+        algorithms, one a symbolic search, and the other connectionist. Unfortunately, 
+        at the time of writing, neither is yielding useful results, and their 
+        relative success is therefore inconclusive.</p>
+      <p class=MsoNormal>The symbolic search employs an iterated depth-first algorithm 
+        to try out every possible algorithm-string up to a given length to find 
+        the most efficient that matches all of the utterances it has heard to 
+        corresponding positions of the object. It will inevitably find correct, 
+        efficient solutions if they exist for strings of a given length, and we 
+        can broadly measure the distance between different strings by seeing how 
+        many permutations it takes to get from the most efficient form of one 
+        to the other.</p>
+      <p class=MsoNormal>The second learning method measures employs a backpropagation 
+        network, which takes the landmark and trajector coordinate information 
+        and uses the utterances the agent hears as the target, so that it should 
+        learn to produce the right utterances for any given landmark/trajector 
+        relation. The problem with connectionist approaches is that they require 
+        a fixed input/output length, and they can’t nest algorithms within each 
+        other to produce more powerful ones in the future. However, we might hope 
+        to see interesting, related patterns in the hidden weights that would 
+        show how temporal and spatial representations in independently trained 
+        nets were represented.</p>
+      <p class=MsoNormal>
+        <![if !supportEmptyParas]>
+        &nbsp;
+        <![endif]>
+        <o:p></o:p></p>
+      <h3>Future work</h3>
+      <p class=MsoNormal>In the future, we would like to see how converting from 
+        egocentric to exocentric coordinates would affect the representations 
+        involved. We might implement this by feeding non-origin landmark coordinates 
+        to the algorithms, where the landmark represents another agent. More importantly, 
+        we would like to see how agent movement affects the situation, and brings 
+        out the ego- vs time-moving representations that Boroditsky (2002) discusses.</p>
+      <p class=MsoNormal>
+        <![if !supportEmptyParas]>
+        &nbsp;
+        <![endif]>
+        <o:p></o:p></p>
+      <h3>Conclusion</h3>
+      <p class=MsoNormal>We were able to establish that this algorithmic representation 
+        of spatial and temporal concepts should be rich and flexible enough to 
+        build the representations that we want, but without the learning data, 
+        we were not able to show what we had hoped, namely that similarities in 
+        the structure of spatial and temporal representations could self-organise. 
+        We were also unable to show that utterances corresponding to these concepts, 
+        could self-organise between two agents utilising different learning methods.</p>
+      <p class=MsoNormal>
+        <![if !supportEmptyParas]>
+        &nbsp;
+        <![endif]>
+        <o:p></o:p></p>
+      <h3>References</h3>
+      <p class=MsoNormal>Boroditsky, L. (2001). Does language shape thought? English 
+        and Mandarin speakers' conceptions of time. Cognitive Psychology, 43(1), 
+        1-22.</p>
+      <p class=MsoNormal>Boroditsky, L. &amp; Ramscar, M. (2002). The Roles of 
+        Body and Mind in Abstract Thought. Psychological Science, 13(2), 185-188.</p>
+      <p class=MsoNormal>
+        <![if !supportEmptyParas]>
+        &nbsp;
+        <![endif]>
+        <o:p></o:p></p>
+      <p class=MsoNormal>
+        <![if !supportEmptyParas]>
+        &nbsp;
+        <![endif]>
+        <o:p></o:p></p>
+
+</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<!-- InstanceEndEditable --> 
+<hr>
+<p align="center"><font size="2"><a href="/greg/index.htm">Home</a> - <a href="/greg/blog/index.htm">Blog</a> 
+  - <a href="/greg/about/about.htm">About me</a> - <a href="/greg/outbursts/outbursts.htm">Outbursts 
+  &amp; outlets</a> - <a href="/greg/collected/collected.htm">Collected mishmash</a></font></p>
+<p align="center"><font size="2">Greg Detre, greg@remove-this.gregdetre.co.uk, 
+  <a href="http://www.gregdetre.co.uk">http://www.gregdetre.co.uk</a> - updated 
+  <!-- #BeginDate format:Am1 -->June 29, 2003<!-- #EndDate -->
+  </font> 
+<p>&nbsp; </p>
+</body>
+<!-- InstanceEnd --></html>
