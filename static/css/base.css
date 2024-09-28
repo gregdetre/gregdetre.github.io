@@ -270,19 +270,26 @@ img {
 a {
     text-decoration: none;
     color: var(--highlight-colour);
+    border-bottom: 1px solid rgba(199, 180, 248, 0.5);
+    /* Reduced opacity */
 }
 
 a:visited {
     color: var(--highlight-colour-darker);
+    border-bottom: 1px solid rgba(150, 139, 195, 0.5);
+    /* Reduced opacity */
 }
 
 a:hover {
     color: var(--hover-highlight-colour);
-    border-bottom: 1px dotted var(--hover-highlight-colour);
+    border-bottom: 1px solid rgba(255, 204, 102, 0.5);
+    /* Slightly more visible on hover */
 }
 
 a:active {
     color: #ff9933;
+    border-bottom: 1px solid rgba(255, 153, 51, 0.5);
+    /* Slightly more visible when active */
 }
 
 /* Navigation Menu */
@@ -318,12 +325,14 @@ a:active {
     text-decoration: none;
     display: inline-block;
     padding: 3px 8px;
+    border-bottom: none;
 }
 
 .nav_menu a:hover,
 .breadcrumb a:hover {
     background-color: #222;
-    color: #fff;
+    color: var(--hover-highlight-colour);
+    border-bottom: solid;
 }
 
 .breadcrumb-item {
