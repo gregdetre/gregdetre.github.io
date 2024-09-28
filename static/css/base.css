@@ -348,9 +348,9 @@ footer {
 }
 
 footer p {
-    display: inline-block;
+    /* display: inline-block; */
     margin: 0;
-    line-height: 2;
+    line-height: 1.5;
     text-align: right;
     padding: 3px 8px 4px 8px;
     font-size: 1em;
