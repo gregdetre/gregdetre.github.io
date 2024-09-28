@@ -37,7 +37,7 @@ body {
     position: relative;
 }
 
-#wide-img-header img {
+#wide-img-header a img {
     top: 0;
     margin: 0;
     padding: 0;
