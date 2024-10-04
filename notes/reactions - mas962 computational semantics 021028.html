@@ -1,811 +1,215 @@
-<html xmlns:o="urn:schemas-microsoft-com:office:office"
-xmlns:w="urn:schemas-microsoft-com:office:word"
-xmlns="http://www.w3.org/TR/REC-html40">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
-<meta name=ProgId content=Word.Document>
-<meta name=Generator content="Microsoft Word 9">
-<meta name=Originator content="Microsoft Word 9">
-<link rel=File-List
-href="./reactions%20-%20mas962%20computational%20semantics%20021028_files/filelist.xml">
-<title>Title</title>
-<!--[if gte mso 9]><xml>
- <o:DocumentProperties>
-  <o:Author>Greg Detre</o:Author>
-  <o:LastAuthor>Greg Detre</o:LastAuthor>
-  <o:Revision>2</o:Revision>
-  <o:TotalTime>10</o:TotalTime>
-  <o:Created>2003-07-02T01:15:00Z</o:Created>
-  <o:LastSaved>2003-07-02T01:15:00Z</o:LastSaved>
-  <o:Pages>1</o:Pages>
-  <o:Words>2093</o:Words>
-  <o:Characters>11934</o:Characters>
-  <o:Company>-</o:Company>
-  <o:Lines>99</o:Lines>
-  <o:Paragraphs>23</o:Paragraphs>
-  <o:CharactersWithSpaces>14655</o:CharactersWithSpaces>
-  <o:Version>9.2720</o:Version>
- </o:DocumentProperties>
-</xml><![endif]--><!--[if gte mso 9]><xml>
- <w:WordDocument>
-  <w:DrawingGridHorizontalSpacing>4.5 pt</w:DrawingGridHorizontalSpacing>
-  <w:DrawingGridVerticalSpacing>12.25 pt</w:DrawingGridVerticalSpacing>
-  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
-  <w:Compatibility>
-   <w:WW6BorderRules/>
-   <w:FootnoteLayoutLikeWW8/>
-   <w:ShapeLayoutLikeWW8/>
-   <w:AlignTablesRowByRow/>
-   <w:ForgetLastTabAlignment/>
-   <w:LayoutRawTableWidth/>
-   <w:LayoutTableRowsApart/>
-  </w:Compatibility>
- </w:WordDocument>
-</xml><![endif]-->
-<style>
-<!--
- /* Font Definitions */
-@font-face
-	{font-family:"Book Antiqua";
-	panose-1:2 4 6 2 5 3 5 3 3 4;
-	mso-font-charset:0;
-	mso-generic-font-family:roman;
-	mso-font-pitch:variable;
-	mso-font-signature:647 0 0 0 159 0;}
-@font-face
-	{font-family:Tahoma;
-	panose-1:2 11 6 4 3 5 4 4 2 4;
-	mso-font-charset:0;
-	mso-generic-font-family:swiss;
-	mso-font-pitch:variable;
-	mso-font-signature:553679495 -2147483648 8 0 66047 0;}
- /* Style Definitions */
-p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{mso-style-parent:"";
-	margin-top:8.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:0in;
-	margin-bottom:.0001pt;
-	text-align:justify;
-	mso-pagination:widow-orphan;
-	font-size:12.0pt;
-	mso-bidi-font-size:10.0pt;
-	font-family:"Times New Roman";
-	mso-fareast-font-family:"Times New Roman";}
-h1
-	{mso-style-next:Normal;
-	margin-top:0in;
-	margin-right:0in;
-	margin-bottom:6.0pt;
-	margin-left:0in;
-	text-align:center;
-	mso-pagination:widow-orphan;
-	page-break-after:avoid;
-	mso-outline-level:1;
-	font-size:12.0pt;
-	mso-bidi-font-size:10.0pt;
-	font-family:"Times New Roman";
-	color:purple;
-	mso-font-kerning:14.0pt;
-	mso-bidi-font-weight:normal;
-	font-style:italic;
-	mso-bidi-font-style:normal;}
-h2
-	{mso-style-next:Normal;
-	margin-top:16.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:0in;
-	margin-bottom:.0001pt;
-	mso-pagination:widow-orphan;
-	page-break-after:avoid;
-	mso-outline-level:2;
-	font-size:12.0pt;
-	mso-bidi-font-size:10.0pt;
-	font-family:"Times New Roman";
-	color:navy;
-	mso-bidi-font-weight:normal;
-	font-style:italic;
-	mso-bidi-font-style:normal;}
-h3
-	{mso-style-next:Normal;
-	margin-top:16.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:0in;
-	margin-bottom:.0001pt;
-	text-align:justify;
-	mso-pagination:widow-orphan;
-	page-break-after:avoid;
-	mso-outline-level:3;
-	tab-stops:right 451.45pt;
-	font-size:12.0pt;
-	mso-bidi-font-size:10.0pt;
-	font-family:"Times New Roman";
-	color:green;
-	font-weight:normal;
-	font-style:italic;
-	mso-bidi-font-style:normal;}
-h4
-	{mso-style-next:Normal;
-	margin-top:12.0pt;
-	margin-right:0in;
-	margin-bottom:3.0pt;
-	margin-left:0in;
-	text-align:justify;
-	mso-pagination:widow-orphan;
-	page-break-after:avoid;
-	mso-outline-level:4;
-	font-size:12.0pt;
-	mso-bidi-font-size:10.0pt;
-	font-family:Arial;
-	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-font-weight:normal;}
-h5
-	{mso-style-next:Normal;
-	margin-top:15.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:0in;
-	margin-bottom:.0001pt;
-	text-align:justify;
-	mso-pagination:widow-orphan;
-	mso-outline-level:5;
-	font-size:12.0pt;
-	mso-bidi-font-size:10.0pt;
-	font-family:"Times New Roman";
-	color:maroon;
-	font-weight:normal;
-	font-style:italic;
-	mso-bidi-font-style:normal;}
-h6
-	{mso-style-parent:"Heading 5";
-	mso-style-next:Normal;
-	margin-top:12.0pt;
-	margin-right:0in;
-	margin-bottom:3.0pt;
-	margin-left:0in;
-	text-align:justify;
-	mso-pagination:widow-orphan;
-	mso-outline-level:6;
-	font-size:11.0pt;
-	font-family:"Times New Roman";
-	color:olive;
-	font-weight:normal;
-	mso-bidi-font-weight:bold;
-	font-style:italic;
-	mso-bidi-font-style:normal;}
-p.MsoToc1, li.MsoToc1, div.MsoToc1
-	{mso-style-parent:"Heading 1";
-	mso-style-next:Normal;
-	margin-top:3.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:0in;
-	margin-bottom:.0001pt;
-	mso-pagination:widow-orphan;
-	page-break-after:avoid;
-	tab-stops:.75in right 451.45pt;
-	font-size:11.0pt;
-	mso-bidi-font-size:10.0pt;
-	font-family:"Times New Roman";
-	mso-fareast-font-family:"Times New Roman";
-	font-variant:small-caps;
-	color:purple;
-	mso-font-kerning:14.0pt;
-	font-weight:bold;
-	mso-bidi-font-weight:normal;
-	font-style:italic;
-	mso-bidi-font-style:normal;}
-p.MsoToc2, li.MsoToc2, div.MsoToc2
-	{mso-style-parent:"Heading 2";
-	mso-style-next:Normal;
-	margin-top:3.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:10.1pt;
-	margin-bottom:.0001pt;
-	mso-pagination:widow-orphan;
-	page-break-after:avoid;
-	tab-stops:right 451.3pt;
-	font-size:10.0pt;
-	font-family:"Times New Roman";
-	mso-fareast-font-family:"Times New Roman";
-	color:navy;
-	font-style:italic;
-	mso-bidi-font-style:normal;}
-p.MsoToc3, li.MsoToc3, div.MsoToc3
-	{mso-style-parent:"TOC 2";
-	mso-style-next:Normal;
-	margin-top:3.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:20.0pt;
-	margin-bottom:.0001pt;
-	mso-pagination:widow-orphan;
-	page-break-after:avoid;
-	tab-stops:right 451.45pt;
-	font-size:9.0pt;
-	mso-bidi-font-size:10.0pt;
-	font-family:"Times New Roman";
-	mso-fareast-font-family:"Times New Roman";
-	color:teal;
-	font-style:italic;
-	mso-bidi-font-style:normal;}
-p.MsoToc4, li.MsoToc4, div.MsoToc4
-	{mso-style-update:auto;
-	mso-style-parent:"TOC 3";
-	mso-style-next:Normal;
-	margin-top:3.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:35.7pt;
-	margin-bottom:.0001pt;
-	mso-pagination:widow-orphan;
-	page-break-after:avoid;
-	tab-stops:right 451.45pt;
-	font-size:7.5pt;
-	mso-bidi-font-size:10.0pt;
-	font-family:"Times New Roman";
-	mso-fareast-font-family:"Times New Roman";
-	color:maroon;
-	mso-bidi-font-weight:bold;
-	font-style:italic;
-	mso-bidi-font-style:normal;}
-p.MsoHeader, li.MsoHeader, div.MsoHeader
-	{margin-top:8.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:0in;
-	margin-bottom:.0001pt;
-	text-align:justify;
-	mso-pagination:widow-orphan;
-	tab-stops:center 239.75pt right 6.65in;
-	font-size:11.0pt;
-	mso-bidi-font-size:10.0pt;
-	font-family:"Times New Roman";
-	mso-fareast-font-family:"Times New Roman";
-	font-style:italic;
-	mso-bidi-font-style:normal;}
-p.MsoDate, li.MsoDate, div.MsoDate
-	{margin-top:8.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:0in;
-	margin-bottom:.0001pt;
-	text-align:right;
-	mso-pagination:widow-orphan;
-	font-size:11.0pt;
-	mso-bidi-font-size:10.0pt;
-	font-family:"Times New Roman";
-	mso-fareast-font-family:"Times New Roman";
-	font-style:italic;
-	mso-bidi-font-style:normal;}
-p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
-	{margin-top:8.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:0in;
-	margin-bottom:.0001pt;
-	text-align:justify;
-	mso-pagination:widow-orphan;
-	background:navy;
-	font-size:12.0pt;
-	mso-bidi-font-size:10.0pt;
-	font-family:Tahoma;
-	mso-fareast-font-family:"Times New Roman";}
-p.Section, li.Section, div.Section
-	{mso-style-name:Section;
-	margin-top:8.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:0in;
-	margin-bottom:.0001pt;
-	text-align:center;
-	mso-pagination:widow-orphan;
-	font-size:12.0pt;
-	mso-bidi-font-size:10.0pt;
-	font-family:"Times New Roman";
-	mso-fareast-font-family:"Times New Roman";
-	font-weight:bold;
-	mso-bidi-font-weight:normal;}
-p.Heading0, li.Heading0, div.Heading0
-	{mso-style-name:"Heading 0";
-	mso-style-parent:"Heading 1";
-	margin-top:6.0pt;
-	margin-right:0in;
-	margin-bottom:6.0pt;
-	margin-left:0in;
-	text-align:center;
-	mso-pagination:widow-orphan;
-	page-break-after:avoid;
-	mso-outline-level:1;
-	border:none;
-	mso-border-alt:solid windowtext .5pt;
-	padding:0in;
-	mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt;
-	font-size:16.0pt;
-	mso-bidi-font-size:10.0pt;
-	font-family:"Book Antiqua";
-	mso-fareast-font-family:"Times New Roman";
-	mso-bidi-font-family:"Times New Roman";
-	font-variant:small-caps;
-	color:purple;
-	font-weight:bold;
-	mso-bidi-font-weight:normal;}
-@page Section1
-	{size:595.3pt 841.9pt;
-	margin:68.05pt 68.05pt 68.05pt 68.05pt;
-	mso-header-margin:.5in;
-	mso-footer-margin:.5in;
-	mso-paper-source:0;}
-div.Section1
-	{page:Section1;}
- /* List Definitions */
-@list l0
-	{mso-list-id:1020667704;
-	mso-list-type:hybrid;
-	mso-list-template-ids:-1555530818 67698711 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
-@list l0:level1
-	{mso-level-number-format:alpha-lower;
-	mso-level-text:"%1\)";
-	mso-level-tab-stop:35.85pt;
-	mso-level-number-position:left;
-	margin-left:35.85pt;
-	text-indent:-.25in;}
-@list l1
-	{mso-list-id:1511792607;
-	mso-list-type:hybrid;
-	mso-list-template-ids:-1134786452 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
-@list l1:level1
-	{mso-level-tab-stop:35.85pt;
-	mso-level-number-position:left;
-	margin-left:35.85pt;
-	text-indent:-.25in;}
-@list l1:level2
-	{mso-level-number-format:alpha-lower;
-	mso-level-tab-stop:71.85pt;
-	mso-level-number-position:left;
-	margin-left:71.85pt;
-	text-indent:-.25in;}
-@list l2
-	{mso-list-id:1746143482;
-	mso-list-type:simple;
-	mso-list-template-ids:-719658964;}
-@list l2:level1
-	{mso-level-tab-stop:.25in;
-	mso-level-number-position:left;
-	margin-left:.25in;
-	text-indent:-.25in;}
-@list l3
-	{mso-list-id:1788697610;
-	mso-list-type:hybrid;
-	mso-list-template-ids:-2133444188 67698711 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
-@list l3:level1
-	{mso-level-number-format:alpha-lower;
-	mso-level-text:"%1\)";
-	mso-level-tab-stop:35.85pt;
-	mso-level-number-position:left;
-	margin-left:35.85pt;
-	text-indent:-.25in;}
-ol
-	{margin-bottom:0in;}
-ul
-	{margin-bottom:0in;}
--->
-</style>
+    
+
+    <title>
+
+reactions - mas962 computational semantics 021028 -
+
+Greg Detre
+</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="gdwebgen" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Greg Detre's personal website" />
+    
+    <link rel="stylesheet" href="/static/css/base.css">
+    
+<link rel="canonical" href="https://www.gregdetre.com/notes/reactions - mas962 computational semantics 021028">
+
 </head>
 
-<body lang=EN-GB style='tab-interval:17.85pt'>
-
-<div class=Section1>
-
-<h1>Reactions � MAS962 Computational semantics</h1>
-
-<p class=MsoNormal align=right style='text-align:right'>Greg Detre</p>
-
-<p class=MsoNormal align=right style='margin-top:2.0pt;text-align:right'><span
-lang=EN-US style='mso-ansi-language:EN-US'>Tuesday, October 29, 2002<o:p></o:p></span></p>
-
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
-
-<h2><span lang=EN-US style='mso-ansi-language:EN-US'>Gardenfors<o:p></o:p></span></h2>
-
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>Gardenfors
-wants to add a new cognitive �level� or �perspective� sandwiched between the
-connectionist and the symbolic, which he terms the �conceptual�. In short, the
-conceptual level can be seen as a low-dimensional vector space, where each
-dimension is interpretable as a �quality�, like pitch, or one of the four
-(five?) taste receptors, or some other more abstract �[representation] used as
-a modelling factor in describing mental activities of organisms�.<o:p></o:p></span></p>
-
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>This
-introduction of the conceptual level follows a useful summary of the debate
-between supporters of the symbolic and connectionist paradigms, which can be
-seen as making most of the same points found in Harnad�s �The Symbol Grounding
-Problem�. These include: symbols are meaningless/ungrounded in the real world;
-symbolic systems are static and cannot learn/self-organise unsupervised; and
-connectionist systems may get the job done but might be uninterpretable. The conceptual
-level is intended, it seems, to address these difficulties from both
-directions.<o:p></o:p></span></p>
-
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
-
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>However,
-although I find Gardenfors� idea interesting, I�m unclear as to exactly what
-the proposal amounts to. I think he wants it to be a level in just the sense that
-the symbolic and connectionist are levels. That is, at each level, we can
-discard all the granularity/noisiness that is unnecessary for computations at
-that level. At the connectionist level, we ignore the atomic, molecular and
-cellular (say) details that underly the computations in our neural network, and
-talk simply in terms of activation, synapse strengths etc. At the symbolic
-level, we ignore the implementation details (whether connectionist, silicon
-etc.), and talk at the abstract level of symbols, rules etc. Apart from it
-being a low-dimensional vector space that �emerges� from the connectionist
-level, I don�t feel that we know enough about the conceptual level to
-understand exactly the sort of computations and lossy abstractions being
-performed to get from the connectionist, or indeed up to the symbolic, from the
-conceptual.<o:p></o:p></span></p>
-
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>Let us
-consider how, in principle, the move from the connectionist all the way up to
-the symbolic is supposed to happen. There, we would like to be able to assume
-that the symbolic information is somehow inherent in the overall behaviour of
-the system, even if there are no single, discrete parts of the system that
-represent each symbol explicitly. Presumably, the same is roughly true of the
-conceptual level � although the quality-dimensions are not explictly contained
-in the activity of any one neuron, they might be spread over a population of
-neurons, or indeed somehow contained implicitly in the whole system. But if
-this is the case, then I don�t see how the introduction of the conceptual level
-has helped us bridge the gap between connectionist and symbolic at all. In
-fact, it feels as though the conceptual can be reduced easily to a special case
-of the symbolic � the quality-dimensions that Gardenfors considers are all
-paradigmatic symbols. We could much more naturally think of taste as a function
-of the four/five taste receptor symbol values, colour as a function of three
-quality-dimensions, time as a number-line symbolic value, kinship relations as
-a symbolic hierarchy etc. The traditional problem with grounding the symbolic,
-it seems to me, has been the difficulty of achieving this seamless continuum
-across levels that he claims is rendered effortless by the insertion of a
-sandwich level. If we can ground the quality-dimensions, paradigmatic symbols
-that they are, then we can also ground the symbolic (or at least some of it).<o:p></o:p></span></p>
-
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>Even more
-importantly, I think we would have real difficulty mapping most of our concepts
-onto quality-dimensions. Concepts like smell, higher-level visual or auditory
-concepts and most lexical concepts (just to name a few) would all be too fuzzy
-and high-dimensional to usefully quantify in low-dimensional terms. Indeed, any
-such mapping would probably be <i>more</i> abstract than the symbolic mapping
-that is supposed to sit on top. Perhaps we should focus instead on his
-suggestion that the conceptual level allows us to employ a frame-like model in
-our cognitive model as a means of discretising context, but I think this brings
-its own problems too. <o:p></o:p></span></p>
-
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>Finally,
-given that the conceptual lacks the fine-grained computational tools of
-connectionist representations, and the high-level syntactic rules of the
-symbolic, it doesn�t seem to help us at all when it comes to understanding how
-high-level representations could self-organise/learn. I think Gardenfors�
-problem is that he has reduced the dimensionality too far in his description of
-the conceptual level. Perhaps though there is space for a sandwich level lower
-down than Gardenfors places the conceptual.<o:p></o:p></span></p>
-
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
-
-<h2><span lang=EN-US style='mso-ansi-language:EN-US'>Hofstadter<o:p></o:p></span></h2>
-
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>Hofstadter�s
-review of Holyoak and Thagard is pretty damning, and seemingly with good cause.
-Their strategy is to encode very restricted fragments of real-world knowledge
-into predicate calculus, and to model analogising as seeing correspondence in
-the structure of this encoding.<o:p></o:p></span></p>
-
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>Hofstadter
-attacks them on these and further grounds:<o:p></o:p></span></p>
-
-<p class=MsoNormal style='margin-left:35.85pt;text-indent:-.25in;mso-list:l0 level1 lfo7;
-tab-stops:list 35.85pt'><![if !supportLists]><span lang=EN-US style='mso-ansi-language:
-EN-US'>a)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><![endif]><span lang=EN-US style='mso-ansi-language:EN-US'>The
-fragments they encode are tiny and appear to contain only highly relevant facts
-� �tiny, hand-sculpted, frozen caricatures�<o:p></o:p></span></p>
-
-<p class=MsoNormal style='margin-left:35.85pt;text-indent:-.25in;mso-list:l0 level1 lfo7;
-tab-stops:list 35.85pt'><![if !supportLists]><span lang=EN-US style='mso-ansi-language:
-EN-US'>b)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><![endif]><span lang=EN-US style='mso-ansi-language:EN-US'>Using
-predicate calculus effectively presumes the analogy being sought, partly by
-nature of the encoding, and partly by the propositions chosen � �they do not
-seem to realise the hugeness of the gulf between a full situation as a human
-perceives it � having no sharp boundaries, woven intricately into the fabric of
-one�s knowledge and life experiences � and a handful of predicate calculus
-formulas�<o:p></o:p></span></p>
-
-<p class=MsoNormal style='margin-left:35.85pt;text-indent:-.25in;mso-list:l0 level1 lfo7;
-tab-stops:list 35.85pt'><![if !supportLists]><span lang=EN-US style='mso-ansi-language:
-EN-US'>c)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><![endif]><span lang=EN-US style='mso-ansi-language:EN-US'>They
-emphasise one-to-one correspondences between the elements of analogous
-situations. This is exemplified by Holyoak and Thagard�s example of the analogy
-between Hitler�s Germany and Hussein�s Iraq that could easily be extended to
-orchestras, and an enormous variety of predicates that happen to have the same
-two-place structure.<o:p></o:p></span></p>
-
-<p class=MsoNormal style='margin-left:35.85pt;text-indent:-.25in;mso-list:l0 level1 lfo7;
-tab-stops:list 35.85pt'><![if !supportLists]><span lang=EN-US style='mso-ansi-language:
-EN-US'>d)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><![endif]><span lang=EN-US style='mso-ansi-language:EN-US'>They
-see causal relationships as a central anological connection at the expense of
-seeing the complex situational themes present in the gist � �such an overstress
-on causality � a ubiquitous ingredient of events and therefore, an essentially
-useless tool for classifiying them � would allow virtually any pair of events
-to map onto each other�<o:p></o:p></span></p>
-
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>The
-resulting �analogies� that are found would not capture all and only the
-analogies that we (humans) find interesting. This is ultimately the acid test
-of a model of analogy-making. ACME is able to appear to insightful despite its
-rudimentary processing because if its knowledge-base was extended to huge
-swathes of the real world, it would see analogies everywhere. <o:p></o:p></span></p>
-
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
-
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>I�m not
-sure how far I agree with his declaration that �<i>gist extraction</i>, the
-ability to see to the core of the matter, is the key to analogy-making�. I
-think my uncertainty is probably a result of not having read enough of his new
-work to feel clear about what he means by the �gist�. I feel as though he could
-mean two things by �gist extraction�:<o:p></o:p></span></p>
-
-<p class=MsoNormal style='margin-left:35.85pt;text-indent:-.25in;mso-list:l3 level1 lfo6;
-tab-stops:list 35.85pt'><![if !supportLists]><span lang=EN-US style='mso-ansi-language:
-EN-US'>a)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><![endif]><span lang=EN-US style='mso-ansi-language:EN-US'>being
-able to abstract down to a brief narrative or essential summary of some
-fragment of knowledge<o:p></o:p></span></p>
-
-<p class=MsoNormal style='margin-left:35.85pt;text-indent:-.25in;mso-list:l3 level1 lfo6;
-tab-stops:list 35.85pt'><![if !supportLists]><span lang=EN-US style='mso-ansi-language:
-EN-US'>b)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><![endif]><span lang=EN-US style='mso-ansi-language:EN-US'>being
-able to reconsider that knowledge from different perspectives or at different
-levels<o:p></o:p></span></p>
-
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>I would
-like to say that it is the second reading that is most important in
-analogy-making, and which seems to be the approach that Hofstadter employs in
-analogising throughout most of the review, while it is the first reading which
-is especially �key � to all intelligence�. However, I don�t want to push this
-distinction, because it could be that the two readings could be seen as more or
-less the same thing. After all, if one can reconsider some fragment of
-knowledge at a high level from various perspectives, then presumably one could
-provide various narratives or summaries of it, and vice versa.<o:p></o:p></span></p>
-
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
-
-<h2><span lang=EN-US style='mso-ansi-language:EN-US'>Regier &amp; Carlson<o:p></o:p></span></h2>
-
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>Regier and
-Carlson are seeking to understand how our perceptual processes and our
-linguistic description of relations based on those perceptual processes are
-linked together. They analyse the projective notion of �above�, comparing 4
-different computational models to empirical findings from 7 experiments
-designed to show which model best fits our intuitions about the notion �above�,
-measured in terms of a human �acceptability� rating for various relational
-positions of a landmark shape and trajector point.<o:p></o:p></span></p>
-
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>The four
-models were:<o:p></o:p></span></p>
-
-<p class=MsoNormal style='margin-left:35.85pt;text-indent:-.25in;mso-list:l1 level1 lfo5;
-tab-stops:list 35.85pt'><![if !supportLists]><span lang=EN-US style='mso-ansi-language:
-EN-US'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><![endif]><i><span lang=EN-US style='mso-ansi-language:EN-US'>Bounding
-box model</span></i><span lang=EN-US style='mso-ansi-language:EN-US'> � �a
-trajector object is above a landmark object if it is higher than the highest
-point of the landmark and between its rightmost and leftmost points�<o:p></o:p></span></p>
-
-<p class=MsoNormal style='margin-left:35.85pt;text-indent:-.25in;mso-list:l1 level1 lfo5;
-tab-stops:list 35.85pt'><![if !supportLists]><span lang=EN-US style='mso-ansi-language:
-EN-US'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><![endif]><i><span lang=EN-US style='mso-ansi-language:EN-US'>Proximal
-and Centre-of-mass model</span></i><span lang=EN-US style='mso-ansi-language:
-EN-US'> � defines aboveness in terms of polar coordinates, i.e. angular
-deviation from upright. This can either be measured from the ray passing
-through the horizontal centre of the landmark (<i>centre of mass</i>) or the
-orientation of the ray connecting the closest edge of the landmark to the
-closest edge of the trajector (<i>proximal</i>)<o:p></o:p></span></p>
-
-<p class=MsoNormal style='margin-left:35.85pt;text-indent:-.25in;mso-list:l1 level1 lfo5;
-tab-stops:list 35.85pt'><![if !supportLists]><span lang=EN-US style='mso-ansi-language:
-EN-US'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><![endif]><i><span lang=EN-US style='mso-ansi-language:EN-US'>Hybrid
-model </span></i><span lang=EN-US style='mso-ansi-language:EN-US'><span
-style="mso-spacerun: yes">�</span>� this is a variant of the
-proximal/centre-of-mass model that also takes into account how much higher the
-trajector is than the landmark<o:p></o:p></span></p>
-
-<p class=MsoNormal style='margin-left:35.85pt;text-indent:-.25in;mso-list:l1 level1 lfo5;
-tab-stops:list 35.85pt'><![if !supportLists]><span lang=EN-US style='mso-ansi-language:
-EN-US'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><![endif]><i><span lang=EN-US style='mso-ansi-language:EN-US'>Attentional
-vector sum model</span></i><span lang=EN-US style='mso-ansi-language:EN-US'> �
-this is informed by two independent observations:<o:p></o:p></span></p>
-
-<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
-margin-left:71.85pt;margin-bottom:.0001pt;text-indent:-.25in;mso-list:l1 level2 lfo5;
-tab-stops:list 71.85pt'><![if !supportLists]><span lang=EN-US style='mso-ansi-language:
-EN-US'>a.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><![endif]><span lang=EN-US style='mso-ansi-language:EN-US'>human
-apprehension of spatial relations involves attention<o:p></o:p></span></p>
-
-<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
-margin-left:71.85pt;margin-bottom:.0001pt;text-indent:-.25in;mso-list:l1 level2 lfo5;
-tab-stops:list 71.85pt'><![if !supportLists]><span lang=EN-US style='mso-ansi-language:
-EN-US'>b.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><![endif]><span lang=EN-US style='mso-ansi-language:EN-US'>overall
-direction is often neurally represented as the vector sum of a set of
-constituent directions<o:p></o:p></span></p>
-
-<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
-margin-left:35.7pt;margin-bottom:.0001pt'><span lang=EN-US style='mso-ansi-language:
-EN-US'>The AVS model defines aboveness in terms of a population of vectors,
-from each point in the landmark, as a function of the polar coordinate and an
-exponential drop-off away from the point at the top of the landmark vertically
-aligned with the trajector.<o:p></o:p></span></p>
-
-<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
-margin-left:35.7pt;margin-bottom:.0001pt'><span lang=EN-US style='mso-ansi-language:
-EN-US'>When the exponential attentional drop-off from the vertically-aligned
-point is high, (<i>narrow beam</i>) the AVS model approaches the proximal
-orientation. When the exponential drop-off is low, (<i>wide beam</i>) the AVS
-model reduces to the centre-of-mass orientation.<o:p></o:p></span></p>
-
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>They find
-that the AVS model best fits the experimental data.<o:p></o:p></span></p>
-
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
-
-<h2><span lang=EN-US style='mso-ansi-language:EN-US'>Regier &amp; Carlson vs
-Gardenfors<o:p></o:p></span></h2>
-
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>Put
-pithily, Regier &amp; Carlson are talking about concepts of geometry, whereas
-Gardenfors is talking about a geometry of concepts.<o:p></o:p></span></p>
-
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>We can see
-Regier &amp; Carlson�s model of spatial semantics as a cognitive domain that we
-can try to fit into Gardenfors� three-level hierarchy. Presumably, the Regier
-&amp; Carlson model would fit in somewhere above the connectionist, since it�s
-expressed in higher-level, lower-granularity, noiseless terms. The notion of
-�above� makes a good example for probing the Gardenfors system, because it fits
-all of Gardenfors� criteria for a quality-dimension nicely, yet shows why the
-idea of a quality-dimension is confusing. On the one hand, you�re unlikely to
-find a better candidate for modelling concepts in geometric terms than actual spatial/geometric
-concepts (like above), since they consist of a small number of orthogonal
-magnitudes that we can effortless map onto quality-dimensions at the conceptual
-level. However, at the same time, Regier &amp; Carlson�s model could equally
-well be seen as at the symbolic level, since �aboveness� is expressed as a
-symbolic expression (a mathematic formula). It seems as though the conceptual
-level is merely a slightly looser subset of the symbolic level, since we still
-have no clearer idea of how to ground it than we do for grounding anything else
-at the symbolic level. Indeed, Regier &amp; Carlson are loath to consider their
-hypotheses as hypotheses about actual neural mechanisms.<o:p></o:p></span></p>
-
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
-
-<h2>Syllogism re Boston apartments</h2>
-
-<p class=MsoNormal>I found it difficult to see where the syllogism is clashing
-with my notion of �reasonableness�. Clearly, the conclusion appears
-paradoxical, but pinpointing the bait-and-switch is tricky.</p>
-
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>One option
-would be simply to reject the second premise. This is certainly a possibility
-with the first syllogism, where we might want to deny that �all rare things are
-expensive� � in this case, the syllogism could be sound, but the
-truth-preserved conclusion would still be false. As a result, </span>I felt
-much happier looking at the second syllogism.</p>
-
-<p class=MsoNormal>Its tighter language precluded any obvious ambiguities,
-either in the words �rare� or �cheap�. �Rare� could be taken to mean either
-�there aren�t many of these� or more strongly, �there aren�t many of these and
-they�re desirable�. Analogously, the word �cheap�, which could be taken to mean
-�cheap and nasty�, or could be taken to mean �costing less than you�d expect
-for something desirable�. Similarly, the caveat �in Boston� presumably allows
-us to rule out any possibility that rarity could be localised due to an uneven
-distribution. I don�t think either of these problems get to the root of the
-problem, but it�s nice to be able to discard them.</p>
-
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>A different
-approach I tried involved trying to understand what it is about the particular
-combination of predicates chosen here that makes the example work. For
-instance, the classic syllogism:<o:p></o:p></span></p>
-
-<p class=MsoNormal style='margin-left:17.85pt'><i><span lang=EN-US
-style='mso-ansi-language:EN-US'>Socrates is a man<o:p></o:p></span></i></p>
-
-<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-margin-left:17.85pt;margin-bottom:.0001pt'><i><span lang=EN-US
-style='mso-ansi-language:EN-US'>All men are mortal<o:p></o:p></span></i></p>
-
-<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-margin-left:17.85pt;margin-bottom:.0001pt'><i><span lang=EN-US
-style='font-size:10.0pt;font-family:Symbol;mso-ascii-font-family:"Times New Roman";
-mso-hansi-font-family:"Times New Roman";mso-ansi-language:EN-US;mso-char-type:
-symbol;mso-symbol-font-family:Symbol'><span style='mso-char-type:symbol;
-mso-symbol-font-family:Symbol'>\</span></span></i><i><span lang=EN-US
-style='mso-ansi-language:EN-US'> Socrates is mortal<o:p></o:p></span></i></p>
-
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>seems to
-take a pretty similar form, yet obviously is not erroneous. I found that if I
-swapped the predicate �is expensive� for �has a propensity to rise in price�,
-we get:<o:p></o:p></span></p>
-
-<p class=MsoNormal style='margin-left:17.85pt'><i><span lang=EN-US
-style='mso-ansi-language:EN-US'>Cheap apartments (in Boston that are desirable)
-are rare (things)<o:p></o:p></span></i></p>
-
-<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-margin-left:17.85pt;margin-bottom:.0001pt'><i><span lang=EN-US
-style='mso-ansi-language:EN-US'>Rare things (in Boston that are desirable) <span
-style='color:red'>have a propensity to rise in price</span><o:p></o:p></span></i></p>
-
-<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-margin-left:17.85pt;margin-bottom:.0001pt'><i><span lang=EN-US
-style='font-size:10.0pt;font-family:Symbol;mso-ascii-font-family:"Times New Roman";
-mso-hansi-font-family:"Times New Roman";mso-ansi-language:EN-US;mso-char-type:
-symbol;mso-symbol-font-family:Symbol'><span style='mso-char-type:symbol;
-mso-symbol-font-family:Symbol'>\</span></span></i><i><span lang=EN-US
-style='mso-ansi-language:EN-US'> Cheap apartments (in Boston that are
-desirable) <span style='color:red'>have a propensity to rise in price</span><o:p></o:p></span></i></p>
-
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>This
-doesn�t seem at all unreasonable. The problem is that I�m not sure that this
-use of �expensive� says exactly the same thing as the original. But it did seem
-to indicate that there�s something odd about the transitoriness of our notion
-of �price�. Somehow, what we want to say is that cheap apartments are rare <i>because</i>
-they�re not expensive, since after all </span>price is a function of
-desirability and rarity,<span lang=EN-US style='mso-ansi-language:EN-US'> i.e.<o:p></o:p></span></p>
-
-<p class=MsoNormal style='margin-left:17.85pt'><i><span lang=EN-US
-style='mso-ansi-language:EN-US'>Desirable things are generally expensive<o:p></o:p></span></i></p>
-
-<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-margin-left:17.85pt;margin-bottom:.0001pt'><i><span lang=EN-US
-style='mso-ansi-language:EN-US'>Things that should be expensive but are cheap
-are rare.<o:p></o:p></span></i></p>
-
-<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-margin-left:17.85pt;margin-bottom:.0001pt'><i><span lang=EN-US
-style='font-size:10.0pt;font-family:Symbol;mso-ascii-font-family:"Times New Roman";
-mso-hansi-font-family:"Times New Roman";mso-ansi-language:EN-US;mso-char-type:
-symbol;mso-symbol-font-family:Symbol'><span style='mso-char-type:symbol;
-mso-symbol-font-family:Symbol'>\</span></span></i><i><span lang=EN-US
-style='mso-ansi-language:EN-US'> Desirable things that are cheap are rare<o:p></o:p></span></i></p>
-
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>This use of
-generally changes things. For starters, I think it must take us out of the
-bounds of what can be expressed using first order logic, since it amounts to a
-�mostly� quantification, i.e. somewhere in between �forAll� and �thereExists�.<o:p></o:p></span></p>
-
-<p class=MsoNormal>Finally, I briefly considered that part of the problem might
-be that the predicates being discussed are extrinsic properties that can be
-attached/detached from an object without affecting its intrinsic meaning, but
-couldn�t really see how to make this stick.</p>
-
-<p class=MsoNormal>In short, I�m not sure which, if any, of these is the source
-of the paradox in the conclusion.</p>
-
-<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
-
-<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
-
-<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
-
-</div>
+<body>
+
+    
+    <div id="wide-img-header">
+        
+        <a href="/wide_img_header/IMG_5253.jpg">
+            <img src="/wide_img_header/IMG_5253_sm.jpg" />
+        </a>
+        
+    </div>
+    
+
+    
+<nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+        
+        
+        <li class="breadcrumb-item" title="Greg Detre">
+            
+            <a href="/">Greg Detre</a>
+            
+        </li>
+        
+        
+        
+        <li class="breadcrumb-item" title="Notes">
+            
+            <a href="/notes/">...</a>
+            
+        </li>
+        
+        
+        
+        <li class="breadcrumb-item" title="reactions - mas962 computational semantics 021028">
+            
+            <a href="/notes/reactions - mas962 computational semantics 021028">Reactions - Mas962 Computational Semantics 021028</a>
+            
+        </li>
+        
+        
+    </ol>
+</nav>
+
+
+    
+    <div class="nav_menu" <p>
+        
+        <a href="/about">About</a>
+        
+        <a href="/blog">Blog</a>
+        
+        </p>
+    </div>
+    
+
+    <div id="main">
+        
+
+<h1>reactions - mas962 computational semantics 021028</h1>
+
+
+
+
+<h1 id="reactions-mas962-computational-semantics">Reactions � MAS962 Computational semantics</h1>
+<p>Greg Detre</p>
+<p>Tuesday, October 29, 2002</p>
+<h2 id="gardenfors">Gardenfors</h2>
+<p>Gardenfors wants to add a new cognitive �level� or �perspective� sandwiched between the connectionist and the symbolic, which he terms the �conceptual�. In short, the conceptual level can be seen as a low-dimensional vector space, where each dimension is interpretable as a �quality�, like pitch, or one of the four (five?) taste receptors, or some other more abstract �[representation] used as a modelling factor in describing mental activities of organisms�.</p>
+<p>This introduction of the conceptual level follows a useful summary of the debate between supporters of the symbolic and connectionist paradigms, which can be seen as making most of the same points found in Harnad�s �The Symbol Grounding Problem�. These include: symbols are meaningless/ungrounded in the real world; symbolic systems are static and cannot learn/self-organise unsupervised; and connectionist systems may get the job done but might be uninterpretable. The conceptual level is intended, it seems, to address these difficulties from both directions.</p>
+<p>However, although I find Gardenfors� idea interesting, I�m unclear as to exactly what the proposal amounts to. I think he wants it to be a level in just the sense that the symbolic and connectionist are levels. That is, at each level, we can discard all the granularity/noisiness that is unnecessary for computations at that level. At the connectionist level, we ignore the atomic, molecular and cellular (say) details that underly the computations in our neural network, and talk simply in terms of activation, synapse strengths etc. At the symbolic level, we ignore the implementation details (whether connectionist, silicon etc.), and talk at the abstract level of symbols, rules etc. Apart from it being a low-dimensional vector space that �emerges� from the connectionist level, I don�t feel that we know enough about the conceptual level to understand exactly the sort of computations and lossy abstractions being performed to get from the connectionist, or indeed up to the symbolic, from the conceptual.</p>
+<p>Let us consider how, in principle, the move from the connectionist all the way up to the symbolic is supposed to happen. There, we would like to be able to assume that the symbolic information is somehow inherent in the overall behaviour of the system, even if there are no single, discrete parts of the system that represent each symbol explicitly. Presumably, the same is roughly true of the conceptual level � although the quality-dimensions are not explictly contained in the activity of any one neuron, they might be spread over a population of neurons, or indeed somehow contained implicitly in the whole system. But if this is the case, then I don�t see how the introduction of the conceptual level has helped us bridge the gap between connectionist and symbolic at all. In fact, it feels as though the conceptual can be reduced easily to a special case of the symbolic � the quality-dimensions that Gardenfors considers are all paradigmatic symbols. We could much more naturally think of taste as a function of the four/five taste receptor symbol values, colour as a function of three quality-dimensions, time as a number-line symbolic value, kinship relations as a symbolic hierarchy etc. The traditional problem with grounding the symbolic, it seems to me, has been the difficulty of achieving this seamless continuum across levels that he claims is rendered effortless by the insertion of a sandwich level. If we can ground the quality-dimensions, paradigmatic symbols that they are, then we can also ground the symbolic (or at least some of it).</p>
+<p>Even more importantly, I think we would have real difficulty mapping most of our concepts onto quality-dimensions. Concepts like smell, higher-level visual or auditory concepts and most lexical concepts (just to name a few) would all be too fuzzy and high-dimensional to usefully quantify in low-dimensional terms. Indeed, any such mapping would probably be <em>more</em> abstract than the symbolic mapping that is supposed to sit on top. Perhaps we should focus instead on his suggestion that the conceptual level allows us to employ a frame-like model in our cognitive model as a means of discretising context, but I think this brings its own problems too. </p>
+<p>Finally, given that the conceptual lacks the fine-grained computational tools of connectionist representations, and the high-level syntactic rules of the symbolic, it doesn�t seem to help us at all when it comes to understanding how high-level representations could self-organise/learn. I think Gardenfors� problem is that he has reduced the dimensionality too far in his description of the conceptual level. Perhaps though there is space for a sandwich level lower down than Gardenfors places the conceptual.</p>
+<h2 id="hofstadter">Hofstadter</h2>
+<p>Hofstadter�s review of Holyoak and Thagard is pretty damning, and seemingly with good cause. Their strategy is to encode very restricted fragments of real-world knowledge into predicate calculus, and to model analogising as seeing correspondence in the structure of this encoding.</p>
+<p>Hofstadter attacks them on these and further grounds:</p>
+<p>a)      The fragments they encode are tiny and appear to contain only highly relevant facts � �tiny, hand-sculpted, frozen caricatures�</p>
+<p>b)      Using predicate calculus effectively presumes the analogy being sought, partly by nature of the encoding, and partly by the propositions chosen � �they do not seem to realise the hugeness of the gulf between a full situation as a human perceives it � having no sharp boundaries, woven intricately into the fabric of one�s knowledge and life experiences � and a handful of predicate calculus formulas�</p>
+<p>c)      They emphasise one-to-one correspondences between the elements of analogous situations. This is exemplified by Holyoak and Thagard�s example of the analogy between Hitler�s Germany and Hussein�s Iraq that could easily be extended to orchestras, and an enormous variety of predicates that happen to have the same two-place structure.</p>
+<p>d)      They see causal relationships as a central anological connection at the expense of seeing the complex situational themes present in the gist � �such an overstress on causality � a ubiquitous ingredient of events and therefore, an essentially useless tool for classifiying them � would allow virtually any pair of events to map onto each other�</p>
+<p>The resulting �analogies� that are found would not capture all and only the analogies that we (humans) find interesting. This is ultimately the acid test of a model of analogy-making. ACME is able to appear to insightful despite its rudimentary processing because if its knowledge-base was extended to huge swathes of the real world, it would see analogies everywhere. </p>
+<p>I�m not sure how far I agree with his declaration that � <em>gist extraction</em> , the ability to see to the core of the matter, is the key to analogy-making�. I think my uncertainty is probably a result of not having read enough of his new work to feel clear about what he means by the �gist�. I feel as though he could mean two things by �gist extraction�:</p>
+<p>a)      being able to abstract down to a brief narrative or essential summary of some fragment of knowledge</p>
+<p>b)      being able to reconsider that knowledge from different perspectives or at different levels</p>
+<p>I would like to say that it is the second reading that is most important in analogy-making, and which seems to be the approach that Hofstadter employs in analogising throughout most of the review, while it is the first reading which is especially �key � to all intelligence�. However, I don�t want to push this distinction, because it could be that the two readings could be seen as more or less the same thing. After all, if one can reconsider some fragment of knowledge at a high level from various perspectives, then presumably one could provide various narratives or summaries of it, and vice versa.</p>
+<h2 id="regier-carlson">Regier &amp; Carlson</h2>
+<p>Regier and Carlson are seeking to understand how our perceptual processes and our linguistic description of relations based on those perceptual processes are linked together. They analyse the projective notion of �above�, comparing 4 different computational models to empirical findings from 7 experiments designed to show which model best fits our intuitions about the notion �above�, measured in terms of a human �acceptability� rating for various relational positions of a landmark shape and trajector point.</p>
+<p>The four models were:</p>
+<ol>
+<li>
+<p><em>Bounding box model</em> � �a trajector object is above a landmark object if it is higher than the highest point of the landmark and between its rightmost and leftmost points�</p>
+</li>
+<li>
+<p><em>Proximal and Centre-of-mass model</em> � defines aboveness in terms of polar coordinates, i.e. angular deviation from upright. This can either be measured from the ray passing through the horizontal centre of the landmark (<em>centre of mass</em>) or the orientation of the ray connecting the closest edge of the landmark to the closest edge of the trajector (<em>proximal</em>)</p>
+</li>
+<li>
+<p><em>Hybrid model</em> �� this is a variant of the proximal/centre-of-mass model that also takes into account how much higher the trajector is than the landmark</p>
+</li>
+<li>
+<p><em>Attentional vector sum model</em> � this is informed by two independent observations:</p>
+</li>
+</ol>
+<p>a.       human apprehension of spatial relations involves attention</p>
+<p>b.       overall direction is often neurally represented as the vector sum of a set of constituent directions</p>
+<p>The AVS model defines aboveness in terms of a population of vectors, from each point in the landmark, as a function of the polar coordinate and an exponential drop-off away from the point at the top of the landmark vertically aligned with the trajector.</p>
+<p>When the exponential attentional drop-off from the vertically-aligned point is high, (<em>narrow beam</em>) the AVS model approaches the proximal orientation. When the exponential drop-off is low, (<em>wide beam</em>) the AVS model reduces to the centre-of-mass orientation.</p>
+<p>They find that the AVS model best fits the experimental data.</p>
+<h2 id="regier-carlson-vs-gardenfors">Regier &amp; Carlson vs Gardenfors</h2>
+<p>Put pithily, Regier &amp; Carlson are talking about concepts of geometry, whereas Gardenfors is talking about a geometry of concepts.</p>
+<p>We can see Regier &amp; Carlson�s model of spatial semantics as a cognitive domain that we can try to fit into Gardenfors� three-level hierarchy. Presumably, the Regier &amp; Carlson model would fit in somewhere above the connectionist, since it�s expressed in higher-level, lower-granularity, noiseless terms. The notion of �above� makes a good example for probing the Gardenfors system, because it fits all of Gardenfors� criteria for a quality-dimension nicely, yet shows why the idea of a quality-dimension is confusing. On the one hand, you�re unlikely to find a better candidate for modelling concepts in geometric terms than actual spatial/geometric concepts (like above), since they consist of a small number of orthogonal magnitudes that we can effortless map onto quality-dimensions at the conceptual level. However, at the same time, Regier &amp; Carlson�s model could equally well be seen as at the symbolic level, since �aboveness� is expressed as a symbolic expression (a mathematic formula). It seems as though the conceptual level is merely a slightly looser subset of the symbolic level, since we still have no clearer idea of how to ground it than we do for grounding anything else at the symbolic level. Indeed, Regier &amp; Carlson are loath to consider their hypotheses as hypotheses about actual neural mechanisms.</p>
+<h2 id="syllogism-re-boston-apartments">Syllogism re Boston apartments</h2>
+<p>I found it difficult to see where the syllogism is clashing with my notion of �reasonableness�. Clearly, the conclusion appears paradoxical, but pinpointing the bait-and-switch is tricky.</p>
+<p>One option would be simply to reject the second premise. This is certainly a possibility with the first syllogism, where we might want to deny that �all rare things are expensive� � in this case, the syllogism could be sound, but the truth-preserved conclusion would still be false. As a result, I felt much happier looking at the second syllogism.</p>
+<p>Its tighter language precluded any obvious ambiguities, either in the words �rare� or �cheap�. �Rare� could be taken to mean either �there aren�t many of these� or more strongly, �there aren�t many of these and they�re desirable�. Analogously, the word �cheap�, which could be taken to mean �cheap and nasty�, or could be taken to mean �costing less than you�d expect for something desirable�. Similarly, the caveat �in Boston� presumably allows us to rule out any possibility that rarity could be localised due to an uneven distribution. I don�t think either of these problems get to the root of the problem, but it�s nice to be able to discard them.</p>
+<p>A different approach I tried involved trying to understand what it is about the particular combination of predicates chosen here that makes the example work. For instance, the classic syllogism:</p>
+<p><em>Socrates is a man</em></p>
+<p><em>All men are mortal</em></p>
+<p><em>__Socrates is mortal</em></p>
+<p>seems to take a pretty similar form, yet obviously is not erroneous. I found that if I swapped the predicate �is expensive� for �has a propensity to rise in price�, we get:</p>
+<p><em>Cheap apartments (in Boston that are desirable) are rare (things)</em></p>
+<p><em>Rare things (in Boston that are desirable) have a propensity to rise in price</em></p>
+<p><em>__Cheap apartments (in Boston that are desirable) have a propensity to rise in price</em></p>
+<p>This doesn�t seem at all unreasonable. The problem is that I�m not sure that this use of �expensive� says exactly the same thing as the original. But it did seem to indicate that there�s something odd about the transitoriness of our notion of �price�. Somehow, what we want to say is that cheap apartments are rare <em>because</em> they�re not expensive, since after all price is a function of desirability and rarity, i.e.</p>
+<p><em>Desirable things are generally expensive</em></p>
+<p><em>Things that should be expensive but are cheap are rare.</em></p>
+<p><em>__Desirable things that are cheap are rare</em></p>
+<p>This use of generally changes things. For starters, I think it must take us out of the bounds of what can be expressed using first order logic, since it amounts to a �mostly� quantification, i.e. somewhere in between �forAll� and �thereExists�.</p>
+<p>Finally, I briefly considered that part of the problem might be that the predicates being discussed are extrinsic properties that can be attached/detached from an object without affecting its intrinsic meaning, but couldn�t really see how to make this stick.</p>
+<p>In short, I�m not sure which, if any, of these is the source of the paradox in the conclusion.</p>
 
+
+<br />
+<br />
+<br />
+<hr />
+
+
+
+        
+
+
+
+        
+
+<small>
+    <h1>Belongs to these <a href="/tag">tags</a></h1>
+    <ul>
+        
+        <li><a href="/tag/cognitive-load.html">Cognitive load</a></li>
+        
+        <li><a href="/tag/semantic-networks.html">Semantic Networks</a></li>
+        
+        <li><a href="/tag/philosophy.html">Philosophy</a></li>
+        
+        <li><a href="/tag/artificial-intelligence.html">Artificial Intelligence</a></li>
+        
+        <li><a href="/tag/cognitive-biases.html">Cognitive biases</a></li>
+        
+    </ul>
+</small>
+
+
+
+        
+
+
+
+        
+
+
+
+    </div>
+    <footer>
+        <div class="bottom_nav">
+            
+
+            
+
+
+<p>
+    <i>
+        Last updated: 2024-Oct-04
+    </i>
+</p>
+
+
+        </div>
+    </footer>
 </body>
 
 </html>

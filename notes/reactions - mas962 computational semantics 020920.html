@@ -1,802 +1,207 @@
-<html xmlns:o="urn:schemas-microsoft-com:office:office"
-xmlns:w="urn:schemas-microsoft-com:office:word"
-xmlns="http://www.w3.org/TR/REC-html40">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
-<meta name=ProgId content=Word.Document>
-<meta name=Generator content="Microsoft Word 9">
-<meta name=Originator content="Microsoft Word 9">
-<link rel=File-List
-href="./reactions%20-%20mas962%20computational%20semantics%20020920_files/filelist.xml">
-<title>Title</title>
-<!--[if gte mso 9]><xml>
- <o:DocumentProperties>
-  <o:Author>Greg Detre</o:Author>
-  <o:LastAuthor>Greg Detre</o:LastAuthor>
-  <o:Revision>2</o:Revision>
-  <o:TotalTime>401</o:TotalTime>
-  <o:Created>2003-07-02T01:15:00Z</o:Created>
-  <o:LastSaved>2003-07-02T01:15:00Z</o:LastSaved>
-  <o:Pages>2</o:Pages>
-  <o:Words>1796</o:Words>
-  <o:Characters>10239</o:Characters>
-  <o:Company>-</o:Company>
-  <o:Lines>85</o:Lines>
-  <o:Paragraphs>20</o:Paragraphs>
-  <o:CharactersWithSpaces>12574</o:CharactersWithSpaces>
-  <o:Version>9.2720</o:Version>
- </o:DocumentProperties>
-</xml><![endif]--><!--[if gte mso 9]><xml>
- <w:WordDocument>
-  <w:ActiveWritingStyle Lang="EN-GB" VendorID="64" DLLVersion="131077"
-   NLCheck="1">1</w:ActiveWritingStyle>
-  <w:DrawingGridHorizontalSpacing>4.5 pt</w:DrawingGridHorizontalSpacing>
-  <w:DrawingGridVerticalSpacing>12.25 pt</w:DrawingGridVerticalSpacing>
-  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
-  <w:Compatibility>
-   <w:WW6BorderRules/>
-   <w:FootnoteLayoutLikeWW8/>
-   <w:ShapeLayoutLikeWW8/>
-   <w:AlignTablesRowByRow/>
-   <w:ForgetLastTabAlignment/>
-   <w:LayoutRawTableWidth/>
-   <w:LayoutTableRowsApart/>
-  </w:Compatibility>
- </w:WordDocument>
-</xml><![endif]-->
-<style>
-<!--
- /* Font Definitions */
-@font-face
-	{font-family:"Book Antiqua";
-	panose-1:2 4 6 2 5 3 5 3 3 4;
-	mso-font-charset:0;
-	mso-generic-font-family:roman;
-	mso-font-pitch:variable;
-	mso-font-signature:647 0 0 0 159 0;}
-@font-face
-	{font-family:Tahoma;
-	panose-1:2 11 6 4 3 5 4 4 2 4;
-	mso-font-charset:0;
-	mso-generic-font-family:swiss;
-	mso-font-pitch:variable;
-	mso-font-signature:553679495 -2147483648 8 0 66047 0;}
-@font-face
-	{font-family:TimesNewRomanPSMT;
-	panose-1:0 0 0 0 0 0 0 0 0 0;
-	mso-font-charset:0;
-	mso-generic-font-family:roman;
-	mso-font-format:other;
-	mso-font-pitch:auto;
-	mso-font-signature:3 0 0 0 1 0;}
- /* Style Definitions */
-p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{mso-style-parent:"";
-	margin-top:8.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:0in;
-	margin-bottom:.0001pt;
-	text-align:justify;
-	mso-pagination:widow-orphan;
-	font-size:12.0pt;
-	mso-bidi-font-size:10.0pt;
-	font-family:"Times New Roman";
-	mso-fareast-font-family:"Times New Roman";}
-h1
-	{mso-style-next:Normal;
-	margin-top:0in;
-	margin-right:0in;
-	margin-bottom:6.0pt;
-	margin-left:0in;
-	text-align:center;
-	mso-pagination:widow-orphan;
-	page-break-after:avoid;
-	mso-outline-level:1;
-	font-size:12.0pt;
-	mso-bidi-font-size:10.0pt;
-	font-family:"Times New Roman";
-	color:purple;
-	mso-font-kerning:14.0pt;
-	mso-bidi-font-weight:normal;
-	font-style:italic;
-	mso-bidi-font-style:normal;}
-h2
-	{mso-style-next:Normal;
-	margin-top:16.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:0in;
-	margin-bottom:.0001pt;
-	mso-pagination:widow-orphan;
-	page-break-after:avoid;
-	mso-outline-level:2;
-	font-size:12.0pt;
-	mso-bidi-font-size:10.0pt;
-	font-family:"Times New Roman";
-	color:navy;
-	mso-bidi-font-weight:normal;
-	font-style:italic;
-	mso-bidi-font-style:normal;}
-h3
-	{mso-style-next:Normal;
-	margin-top:16.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:0in;
-	margin-bottom:.0001pt;
-	text-align:justify;
-	mso-pagination:widow-orphan;
-	page-break-after:avoid;
-	mso-outline-level:3;
-	tab-stops:right 451.45pt;
-	font-size:12.0pt;
-	mso-bidi-font-size:10.0pt;
-	font-family:"Times New Roman";
-	color:green;
-	font-weight:normal;
-	font-style:italic;
-	mso-bidi-font-style:normal;}
-h4
-	{mso-style-next:Normal;
-	margin-top:12.0pt;
-	margin-right:0in;
-	margin-bottom:3.0pt;
-	margin-left:0in;
-	text-align:justify;
-	mso-pagination:widow-orphan;
-	page-break-after:avoid;
-	mso-outline-level:4;
-	font-size:12.0pt;
-	mso-bidi-font-size:10.0pt;
-	font-family:Arial;
-	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-font-weight:normal;}
-h5
-	{mso-style-next:Normal;
-	margin-top:15.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:0in;
-	margin-bottom:.0001pt;
-	text-align:justify;
-	mso-pagination:widow-orphan;
-	mso-outline-level:5;
-	font-size:12.0pt;
-	mso-bidi-font-size:10.0pt;
-	font-family:"Times New Roman";
-	color:maroon;
-	font-weight:normal;
-	font-style:italic;
-	mso-bidi-font-style:normal;}
-h6
-	{mso-style-parent:"Heading 5";
-	mso-style-next:Normal;
-	margin-top:12.0pt;
-	margin-right:0in;
-	margin-bottom:3.0pt;
-	margin-left:0in;
-	text-align:justify;
-	mso-pagination:widow-orphan;
-	mso-outline-level:6;
-	font-size:11.0pt;
-	font-family:"Times New Roman";
-	color:olive;
-	font-weight:normal;
-	mso-bidi-font-weight:bold;
-	font-style:italic;
-	mso-bidi-font-style:normal;}
-p.MsoToc1, li.MsoToc1, div.MsoToc1
-	{mso-style-parent:"Heading 1";
-	mso-style-next:Normal;
-	margin-top:3.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:0in;
-	margin-bottom:.0001pt;
-	mso-pagination:widow-orphan;
-	page-break-after:avoid;
-	tab-stops:.75in right 451.45pt;
-	font-size:11.0pt;
-	mso-bidi-font-size:10.0pt;
-	font-family:"Times New Roman";
-	mso-fareast-font-family:"Times New Roman";
-	font-variant:small-caps;
-	color:purple;
-	mso-font-kerning:14.0pt;
-	font-weight:bold;
-	mso-bidi-font-weight:normal;
-	font-style:italic;
-	mso-bidi-font-style:normal;}
-p.MsoToc2, li.MsoToc2, div.MsoToc2
-	{mso-style-parent:"Heading 2";
-	mso-style-next:Normal;
-	margin-top:3.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:10.1pt;
-	margin-bottom:.0001pt;
-	mso-pagination:widow-orphan;
-	page-break-after:avoid;
-	tab-stops:right 451.3pt;
-	font-size:10.0pt;
-	font-family:"Times New Roman";
-	mso-fareast-font-family:"Times New Roman";
-	color:navy;
-	font-style:italic;
-	mso-bidi-font-style:normal;}
-p.MsoToc3, li.MsoToc3, div.MsoToc3
-	{mso-style-parent:"TOC 2";
-	mso-style-next:Normal;
-	margin-top:3.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:20.0pt;
-	margin-bottom:.0001pt;
-	mso-pagination:widow-orphan;
-	page-break-after:avoid;
-	tab-stops:right 451.45pt;
-	font-size:9.0pt;
-	mso-bidi-font-size:10.0pt;
-	font-family:"Times New Roman";
-	mso-fareast-font-family:"Times New Roman";
-	color:teal;
-	font-style:italic;
-	mso-bidi-font-style:normal;}
-p.MsoToc4, li.MsoToc4, div.MsoToc4
-	{mso-style-update:auto;
-	mso-style-parent:"TOC 3";
-	mso-style-next:Normal;
-	margin-top:3.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:35.7pt;
-	margin-bottom:.0001pt;
-	mso-pagination:widow-orphan;
-	page-break-after:avoid;
-	tab-stops:right 451.45pt;
-	font-size:7.5pt;
-	mso-bidi-font-size:10.0pt;
-	font-family:"Times New Roman";
-	mso-fareast-font-family:"Times New Roman";
-	color:maroon;
-	mso-bidi-font-weight:bold;
-	font-style:italic;
-	mso-bidi-font-style:normal;}
-p.MsoFootnoteText, li.MsoFootnoteText, div.MsoFootnoteText
-	{margin-top:8.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:0in;
-	margin-bottom:.0001pt;
-	text-align:justify;
-	mso-pagination:widow-orphan;
-	font-size:10.0pt;
-	font-family:"Times New Roman";
-	mso-fareast-font-family:"Times New Roman";}
-p.MsoHeader, li.MsoHeader, div.MsoHeader
-	{margin-top:8.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:0in;
-	margin-bottom:.0001pt;
-	text-align:justify;
-	mso-pagination:widow-orphan;
-	tab-stops:center 239.75pt right 6.65in;
-	font-size:11.0pt;
-	mso-bidi-font-size:10.0pt;
-	font-family:"Times New Roman";
-	mso-fareast-font-family:"Times New Roman";
-	font-style:italic;
-	mso-bidi-font-style:normal;}
-span.MsoFootnoteReference
-	{vertical-align:super;}
-p.MsoDate, li.MsoDate, div.MsoDate
-	{margin-top:8.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:0in;
-	margin-bottom:.0001pt;
-	text-align:right;
-	mso-pagination:widow-orphan;
-	font-size:11.0pt;
-	mso-bidi-font-size:10.0pt;
-	font-family:"Times New Roman";
-	mso-fareast-font-family:"Times New Roman";
-	font-style:italic;
-	mso-bidi-font-style:normal;}
-p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
-	{margin-top:8.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:0in;
-	margin-bottom:.0001pt;
-	text-align:justify;
-	mso-pagination:widow-orphan;
-	background:navy;
-	font-size:12.0pt;
-	mso-bidi-font-size:10.0pt;
-	font-family:Tahoma;
-	mso-fareast-font-family:"Times New Roman";
-	mso-bidi-font-family:"Times New Roman";}
-p.Section, li.Section, div.Section
-	{mso-style-name:Section;
-	margin-top:8.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:0in;
-	margin-bottom:.0001pt;
-	text-align:center;
-	mso-pagination:widow-orphan;
-	font-size:12.0pt;
-	mso-bidi-font-size:10.0pt;
-	font-family:"Times New Roman";
-	mso-fareast-font-family:"Times New Roman";
-	font-weight:bold;
-	mso-bidi-font-weight:normal;}
-p.Heading0, li.Heading0, div.Heading0
-	{mso-style-name:"Heading 0";
-	mso-style-parent:"Heading 1";
-	margin-top:6.0pt;
-	margin-right:0in;
-	margin-bottom:6.0pt;
-	margin-left:0in;
-	text-align:center;
-	mso-pagination:widow-orphan;
-	page-break-after:avoid;
-	mso-outline-level:1;
-	border:none;
-	mso-border-alt:solid windowtext .5pt;
-	padding:0in;
-	mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt;
-	font-size:16.0pt;
-	mso-bidi-font-size:10.0pt;
-	font-family:"Book Antiqua";
-	mso-fareast-font-family:"Times New Roman";
-	mso-bidi-font-family:"Times New Roman";
-	font-variant:small-caps;
-	color:purple;
-	font-weight:bold;
-	mso-bidi-font-weight:normal;}
-span.EmailStyle23
-	{mso-style-type:personal;
-	mso-ansi-font-size:10.0pt;
-	mso-ascii-font-family:Arial;
-	mso-hansi-font-family:Arial;
-	mso-bidi-font-family:Arial;
-	color:windowtext;}
-span.EmailStyle24
-	{mso-style-type:personal;
-	mso-ansi-font-size:10.0pt;
-	mso-ascii-font-family:Arial;
-	mso-hansi-font-family:Arial;
-	mso-bidi-font-family:Arial;
-	color:windowtext;}
-@page Section1
-	{size:595.3pt 841.9pt;
-	margin:68.05pt 68.05pt 68.05pt 68.05pt;
-	mso-header-margin:.5in;
-	mso-footer-margin:.5in;
-	mso-paper-source:0;}
-div.Section1
-	{page:Section1;}
- /* List Definitions */
-@list l0
-	{mso-list-id:719403617;
-	mso-list-type:hybrid;
-	mso-list-template-ids:-1487997874 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
-@list l0:level1
-	{mso-level-tab-stop:35.85pt;
-	mso-level-number-position:left;
-	margin-left:35.85pt;
-	text-indent:-.25in;}
-@list l1
-	{mso-list-id:1138495848;
-	mso-list-type:hybrid;
-	mso-list-template-ids:-783400212 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
-@list l1:level1
-	{mso-level-tab-stop:35.85pt;
-	mso-level-number-position:left;
-	margin-left:35.85pt;
-	text-indent:-.25in;}
-@list l2
-	{mso-list-id:1746143482;
-	mso-list-type:simple;
-	mso-list-template-ids:-719658964;}
-@list l2:level1
-	{mso-level-tab-stop:.25in;
-	mso-level-number-position:left;
-	margin-left:.25in;
-	text-indent:-.25in;}
-@list l3
-	{mso-list-id:1815902839;
-	mso-list-type:hybrid;
-	mso-list-template-ids:-639569522 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
-@list l3:level1
-	{mso-level-tab-stop:35.85pt;
-	mso-level-number-position:left;
-	margin-left:35.85pt;
-	text-indent:-.25in;}
-@list l4
-	{mso-list-id:1983385316;
-	mso-list-type:hybrid;
-	mso-list-template-ids:-900664358 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
-@list l4:level1
-	{mso-level-tab-stop:.5in;
-	mso-level-number-position:left;
-	text-indent:-.25in;}
-ol
-	{margin-bottom:0in;}
-ul
-	{margin-bottom:0in;}
--->
-</style>
+    
+
+    <title>
+
+reactions - mas962 computational semantics 020920 -
+
+Greg Detre
+</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="gdwebgen" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Greg Detre's personal website" />
+    
+    <link rel="stylesheet" href="/static/css/base.css">
+    
+<link rel="canonical" href="https://www.gregdetre.com/notes/reactions - mas962 computational semantics 020920">
+
 </head>
 
-<body lang=EN-GB style='tab-interval:17.85pt'>
+<body>
 
-<div class=Section1>
+    
+    <div id="wide-img-header">
+        
+        <a href="/wide_img_header/IMG_5253.jpg">
+            <img src="/wide_img_header/IMG_5253_sm.jpg" />
+        </a>
+        
+    </div>
+    
 
-<h1>Reactions � MAS962 Computational semantics</h1>
+    
+<nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+        
+        
+        <li class="breadcrumb-item" title="Greg Detre">
+            
+            <a href="/">Greg Detre</a>
+            
+        </li>
+        
+        
+        
+        <li class="breadcrumb-item" title="Notes">
+            
+            <a href="/notes/">...</a>
+            
+        </li>
+        
+        
+        
+        <li class="breadcrumb-item" title="reactions - mas962 computational semantics 020920">
+            
+            <a href="/notes/reactions - mas962 computational semantics 020920">Reactions - Mas962 Computational Semantics 020920</a>
+            
+        </li>
+        
+        
+    </ol>
+</nav>
 
-<p class=MsoNormal align=right style='text-align:right'>Greg Detre</p>
 
-<h2>Assignment</h2>
+    
+    <div class="nav_menu" <p>
+        
+        <a href="/about">About</a>
+        
+        <a href="/blog">Blog</a>
+        
+        </p>
+    </div>
+    
 
-<h3>Bibliography</h3>
+    <div id="main">
+        
 
-<p class=MsoNormal>Quillian, M. (1968) Semantic Memory. In M. Minsky, ed,
-Semantic Information Processing, 216-270. MIT Press, Cambridge, MA.</p>
+<h1>reactions - mas962 computational semantics 020920</h1>
 
-<p class=MsoNormal>Harnad, S. (1990) The Symbol Grounding Problem. Physica D
-42: 335-346.</p>
 
-<h3><span style='layout-grid-mode:line'>Questions<o:p></o:p></span></h3>
 
-<p class=MsoNormal><span style='font-family:TimesNewRomanPSMT;layout-grid-mode:
-line'>1. Summarize each paper�s main ideas (one page maximum for each summary)<o:p></o:p></span></p>
 
-<p class=MsoNormal><span style='font-family:TimesNewRomanPSMT;layout-grid-mode:
-line'>2. Consider a machine that represents word meanings in terms of a
-Quillian network. What sort of linguistic processing tasks would be inherently
-easy for such a machine? What tasks would be difficult?<o:p></o:p></span></p>
-
-<p class=MsoNormal><span style='font-family:TimesNewRomanPSMT;layout-grid-mode:
-line'>3. Are semantic networks compatible with Harnad�s notion of symbol
-grounding? If so, how? If not, why not?<o:p></o:p></span></p>
-
-<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
-
-<h2>Harnad � The symbol grounding problem</h2>
-
-<p class=MsoNormal>Harnad�s tri-partite scheme provides an interesting attempt
-to reconcile what might broadly be termed the symbolic and connectionist
-agendas.</p>
-
-<p class=MsoNormal>On the one hand, we have the Fodorian emphasis on the
-symbolic, citing high-level human cognitive abilities like language and chess
-as evidence that we can (in principle) capture all that is important about the
-way our minds work in purely symbolic terms, that is, in terms of manipulations
-of tokens (symbols) according to rules (which can themselves be couched in
-symbolic terms). Harnad defines a symbolic system as one which fulfils the
-following criteria:</p>
-
-<p class=MsoNormal>Broadly, he defines a symbol system as:</p>
-
-<ol style='margin-top:0in' start=1 type=1>
- <li class=MsoNormal style='margin-top:4.0pt;mso-list:l4 level1 lfo5;
-     tab-stops:list .5in'>composed of arbitrary physical tokens, which are
-     manipulated and combined algorithmically</li>
- <li class=MsoNormal style='margin-top:4.0pt;mso-list:l4 level1 lfo5;
-     tab-stops:list .5in'>the entire system and all its parts are all
-     �semantically interpretable�, i.e. the syntax can be systematically
-     assigned a meaning e.g., as standing for objects, as describing states of
-     affairs)</li>
+<h1 id="reactions-mas962-computational-semantics">Reactions � MAS962 Computational semantics</h1>
+<p>Greg Detre</p>
+<h2 id="assignment">Assignment</h2>
+<h3 id="bibliography">Bibliography</h3>
+<p>Quillian, M. (1968) Semantic Memory. In M. Minsky, ed, Semantic Information Processing, 216-270. MIT Press, Cambridge, MA.</p>
+<p>Harnad, S. (1990) The Symbol Grounding Problem. Physica D 42: 335-346.</p>
+<h3 id="questions">Questions</h3>
+<p>1. Summarize each paper�s main ideas (one page maximum for each summary)</p>
+<p>2. Consider a machine that represents word meanings in terms of a Quillian network. What sort of linguistic processing tasks would be inherently easy for such a machine? What tasks would be difficult?</p>
+<p>3. Are semantic networks compatible with Harnad�s notion of symbol grounding? If so, how? If not, why not?</p>
+<h2 id="harnad-the-symbol-grounding-problem">Harnad � The symbol grounding problem</h2>
+<p>Harnad�s tri-partite scheme provides an interesting attempt to reconcile what might broadly be termed the symbolic and connectionist agendas.</p>
+<p>On the one hand, we have the Fodorian emphasis on the symbolic, citing high-level human cognitive abilities like language and chess as evidence that we can (in principle) capture all that is important about the way our minds work in purely symbolic terms, that is, in terms of manipulations of tokens (symbols) according to rules (which can themselves be couched in symbolic terms). Harnad defines a symbolic system as one which fulfils the following criteria:</p>
+<p>Broadly, he defines a symbol system as:</p>
+<ol>
+<li>
+<p>composed of arbitrary physical tokens, which are manipulated and combined algorithmically</p>
+</li>
+<li>
+<p>the entire system and all its parts are all �semantically interpretable�, i.e. the syntax can be systematically assigned a meaning e.g., as standing for objects, as describing states of affairs)</p>
+</li>
 </ol>
+<p>On the other hand, connectionist systems are a subset of statistical, self-organising dynamical systems, with at least some degree of biological plausibility/inspiration. We can broadly characterise the connectionist as hoping that, given certain architectural constraints, the kind of high-level, stable yet flexible, self-learning cognitive models that people have will emerge out of numerous low-level interactions between very simple nodes.</p>
+<p>Harnard weighs the relative attractions and disadvantages of the two approaches to modelling the mind. In short, his main points are that connectionist systems are poor at symbolic rule-following, while symbolic systems suffer from the �symbol grounding problem�. There are also numerous other ways of comparing the two approaches[1], that Harnad briefly considers.</p>
+<p>Harnad�s paper tries to break down this symbolic/connectionist opposition by postulating a level of iconic and categorical representations on which the symbolic sits. He seems to want the iconic representation to be a slightly-abstracted sensory/imagistic representation (used for discrimination), while the categorical representation is a feature-invariant description which captures all objects of the same name (i.e. used for identification). Together, the sensory and pattern-recognising representations provide the grounding for the symbolic level.</p>
+<p>First of all, it�s unclear to me why there is a need for the distinction between the iconic and the categorical representations that Harnad introduces. A connectionist �categorical representation�, for example, already incorporates robust prototyping/generalising/pattern-matching properties that can perform both the discriminating and identifying tasks. In this way, there is no need to make the hard-and-fast distinction between discrimination (a relative ability) and identification (an absolute ability) components.</p>
+<p>More importantly, I think there remains a deep question as to whether there is any need to explicitly build a high-level symbolic level at all. After all, although we certainly can manipulate symbols, this ability varies greatly from person to person, is prone to error, and slow (especially in comparison with the overall computational/processing power of our brains), which I think lends support to the idea that our symbolic manipulation abilities emerge out of lower-level non-semantically evaluable interactions[2]. He fails, I think, to show why there really must be a discontinuity between iconic/categorical representations and the kind of fallible, limited, effortful symbolic manipulation that we can perform. Without the symbolic system at the top, there appears no symbol grounding problem at all. Of course, this just shows up my bias against the language of thought hypothesis in general.</p>
+<p>Having said that, I�m not sure that I fully understand why symbolic systems suffer from a symbol grounding problem whereas connectionist systems don�t. The way that Harnad couches the general problem of what it is for a word to have meaning seems to presuppose Searle�s distinction between derived and intrinsic intentionality. We can either attack this distinction[3], or try and argue that Searle is too restrictive in his application of it. For instance, I think he fails to adequately respond to the Robot Reply, when he simply asserts that �the addition of such �perceptual� and �motor� capacities adds nothing by way of understanding�. This leaves him either in Roger Penrose�s[4] camp asserting that the human brain is fundamentally non-algorithmic in its operation, or making the even less defensible claim that there is simply something about biological, terrestrially-evolved neurons that makes them special/conscious/originally-intentional. Am I right in thinking that Harnad uses the term �symbolic grounding� to mean little more than a systematic causal feedback loop from the representations in our head through the environment (mediated by our sensory and motor systems) and back? If this is the case, then another way of seeing the problem is that we do not know whether it is possible to design an algorithmic system (i.e. one whose rules are purely syntactic) which is semantically interpretable, and yet which preserves the isomorphism between the environment and the internal representation. If the problem of symbolic grounding can be stated in this way, in terms of the conflict between a semantically-interpretable algorithm and an isomorphism with the environment, then it doesn�t seem inconceivable to me that a future symbolic system could be symbolically grounded in the way that Harnad demands.</p>
+<h2 id="quillian-semantic-networks">Quillian � Semantic networks</h2>
+<p>A semantic network has been defined as �a declarative graphic representation that can be used either to represent knowledge or to support automated systems for reasoning about knowledge�[5], and this seems to more or less capture what Quillian is trying to do. Each concept is placed within a tangled hierarchy and connected to a multitude of other related concepts by various types and strengths of links (e.g. grammatical (subject/object/direct object, in/for), contextual/semantic etc.) which serve to propagate activation from one node to another.</p>
+<p>I liked the way that he approached the general problem of modelling or reproducing human-like meaning and memory faculties. He emphasised commonalities between words (or better, word-concepts) rather than trying to define concepts in isolation, and he tries to incorporate the natural fuzziness and blurredness that seem so essential to our thinking.</p>
+<p>At first sight, Quillian�s emphasis on the interconnectedness of his symbolic concepts as the main way in which meaning builds up seems connectionist in spirit. However, we can see that it departs crucially from what Harnad would term a connectionist model because it fulfils all of his 8 criteria for being a symbol system. Quillian�s model therefore falls on the Fodorian symbolic/language-of-thought side, in (implicitly) making the claim that we don�t need to descend below the symbolic level when modelling the mind[6].</p>
+<p>The interesting part of Quillian�s paper concerns how activity propagates between nodes, as evidenced by the task of seeing similarities between concepts. The results he includes seem promising, but we need to consider two major issues: scaling, and task specificity.</p>
+<p>I don�t think his model would scale to the whole of human language for two major reasons, and two minor reasons:</p>
+<ol>
+<li>
+<p>The biggest problem concerns the task of encoding the information into a form that Quillian�s model can absorb. He doesn�t give much information about this process, other than mentioning the vague hope that as more concepts are added, the process will become increasingly autonomous. I think the opposite is true � as the number of concepts increases, the business of relating new concepts by hand would increasingly labyrinthine, and claiming that beyond some hypothetical critical mass, this problem will go away, seems like wishful thinking. It is also worth considering that because the concepts in human language are so densely-connected, the combinatorial explosion of connections and nodes might well become unmanageable (in terms of computational time and storage space) as the model increased from less than a thousand concepts to a hundred times that number.[7]</p>
+</li>
+<li>
+<p>The second major problem is one of task specificity. By this, I mean that although Quillian�s model does a credible job of seeking similarities between the concepts it knows (the task it seems primarily designed around), I don�t think it would be able to re-deploy its knowledge in a more general way. Most importantly, I don�t think that the knowledge encoded in this way would help much in reading, understanding and responding flexibly to sentences in English. It might help occasionally to choose between possible parse trees of a sentence by disambiguating homonyms, but otherwise I just don�t see how it could be merged with the non-linguistic parts of a complete cognitive system.</p>
+</li>
+</ol>
+<p>Another way of saying this is in terms of the trade-off between representational expressiveness and computational tractability � in my opinion, Quillian�s approach concedes too much to computational tractability. The catalogue of link-types he proposes falls between two stools: a) the list of different types of links he allows is too rigid and impoverished to be able to represent the whole gamut of different relations between concepts, and b) by having categories rather than just scalar synaptic weights as in a connectionist system, his system will not self-organise dynamically. As a result, there will always be things that we can say with language that I don�t think any variation or simple expansion of Quillian�s model would be able to represent.</p>
+<ol start="3">
+<li>
+<p>A more minor concern relates to how we learn language as children. It seems possible that a really important part of this process may involve stepping-stone or bootstrapping concepts, which we leave behind as our understanding become more sophisticated but which are necessary childhood steps. Alternatively, most of our concepts� meaning/function changes greatly over time, and it could be that their circuitous evolution is absolutely necessary for the system to reach a given end state. By trying to leapfrog all of this to the desired end-state, we may be making the task considerably harder for ourselves.</p>
+</li>
+<li>
+<p>One further minor consideration relates to whether Quillian intended his model as a model of how human memory actually works, or whether it�s merely a reverse-engineered replication of its salient properties. He does state that he is �disposed to consider this model a psychological theory�. Either way, if we were trying to build a machine to pass the Turing test, I think that we could devise innumerable fiendish ways to distinguish even a successful implementation of Quillian�s model from a real human[8].</p>
+</li>
+</ol>
+<h2 id="conclusions">Conclusions</h2>
+<p>Both papers were stimulating, and contained a number of interesting ideas. Although I found quite a lot that I wanted to criticise or at least discuss in them, I felt that both authors� concern with meaning was instructive. Both of their approaches could be broadly summed up by Quillian�s four key assumptions about word concepts stored in memory: �that the information in them is large, differentially accessible, exceedingly rich in expressive power and yet composed of units that represent properties�, which reflects an underlying emphasis on the symbolic that they shared. Having said that, I think Harnad�s preoccupation with grounding, rather than simply the internal relations, reflects more modern insights, and will prove necessary for real progress � although Searle�s Chinese Room argument fails to apply as widely as he�d like, it can certainly be levelled here at Quillian�s model. </p>
+<hr/>
+<p>[1] e.g. see Minsky (1990), �Symbolic vs connectionist� (available at http://www.ai.mit.edu/~minsky/papers/SymbolicVs.Connectionist.txt)</p>
+<p>[2] This is what Hofstadter (1979), <em>G�, Escher, Bach</em> argues in various places, such as in his discussion of the possibility of an ant-hill level intelligence/consciousness emerging out of the low-level behaviour of the non-intelligent/conscious ants.</p>
+<p>[3] See Dennett�s papers on intentionality</p>
+<p>[4] Penrose (1994), <em>Shadows of the mind</em></p>
+<p>[5] Sowa (2002) (http://www.jfsowa.com/pubs/semnet.htm)</p>
+<p>[6] See Smolensky, �On the proper treatment of connectionism� in Behavioral and Brain Sciences (1988), 11(1):1-74. In contrast, he maintains that a sub-symbolic level consisting of non-semantically evaluable constituents or micro-features of symbols exists, above the neural level, at which we will be able to fully specify (i.e. capture nomologically) mental activity.</p>
+<p>[7] However, the CYC project (www.cyc.com) has shown that neither the hand-coding on an enormous scale nor the associated combinatorial explosion need be considered insurmountable problems. CYC is an analogous modern project whose knowledge base is couched in terms of propositional axioms rather than the kind of definitional hierarchy that Quillian is constructing, but it has a similar aim of building a symbolic corpus of common-sense knowledge or meaning.</p>
+<p>[8] Robert French considers a number of such questions, designed to probe what he terms the sub-cognitive framework of the interviewee � see French (1990), �Subcognition and the limits of the Turing test�, http://www.ulg.ac.be/cogsci/rfrench/turing.pdf</p>
 
-<p class=MsoNormal>On the other hand, connectionist systems are a subset of
-statistical, self-organising dynamical systems, with at least some degree of
-biological plausibility/inspiration. We can broadly characterise the
-connectionist as hoping that, given certain architectural constraints, the kind
-of high-level, stable yet flexible, self-learning cognitive models that people
-have will emerge out of numerous low-level interactions between very simple
-nodes.</p>
 
-<p class=MsoNormal>Harnard weighs the relative attractions and disadvantages of
-the two approaches to modelling the mind. In short, his main points are that
-connectionist systems are poor at symbolic rule-following, while symbolic
-systems suffer from the �symbol grounding problem�. There are also numerous
-other ways of comparing the two approaches<a style='mso-footnote-id:ftn1'
-href="#_ftn1" name="_ftnref1" title=""><span class=MsoFootnoteReference><span
-style='mso-special-character:footnote'><![if !supportFootnotes]>[1]<![endif]></span></span></a>,
-that Harnad briefly considers.</p>
+<br />
+<br />
+<br />
+<hr />
 
-<p class=MsoNormal>Harnad�s paper tries to break down this
-symbolic/connectionist opposition by postulating a level of iconic and
-categorical representations on which the symbolic sits. He seems to want the
-iconic representation to be a slightly-abstracted sensory/imagistic
-representation (used for discrimination), while the categorical representation
-is a feature-invariant description which captures all objects of the same name
-(i.e. used for identification). Together, the sensory and pattern-recognising
-representations provide the grounding for the symbolic level.</p>
 
-<p class=MsoNormal>First of all, it�s unclear to me why there is a need for the
-distinction between the iconic and the categorical representations that Harnad
-introduces. A connectionist �categorical representation�, for example, already
-incorporates robust prototyping/generalising/pattern-matching properties that
-can perform both the discriminating and identifying tasks. In this way, there
-is no need to make the hard-and-fast distinction between discrimination (a
-relative ability) and identification (an absolute ability) components.</p>
 
-<p class=MsoNormal>More importantly, I think there remains a deep question as
-to whether there is any need to explicitly build a high-level symbolic level at
-all. After all, although we certainly can manipulate symbols, this ability
-varies greatly from person to person, is prone to error, and slow (especially
-in comparison with the overall computational/processing power of our brains),
-which I think lends support to the idea that our symbolic manipulation
-abilities emerge out of lower-level non-semantically evaluable interactions<a
-style='mso-footnote-id:ftn2' href="#_ftn2" name="_ftnref2" title=""><span
-class=MsoFootnoteReference><span style='mso-special-character:footnote'><![if !supportFootnotes]>[2]<![endif]></span></span></a>.
-He fails, I think, to show why there really must be a discontinuity between
-iconic/categorical representations and the kind of fallible, limited, effortful
-symbolic manipulation that we can perform. Without the symbolic system at the
-top, there appears no symbol grounding problem at all. Of course, this just
-shows up my bias against the language of thought hypothesis in general.</p>
+        
 
-<p class=MsoNormal>Having said that, I�m not sure that I fully understand why
-symbolic systems suffer from a symbol grounding problem whereas connectionist
-systems don�t. The way that Harnad couches the general problem of what it is
-for a word to have meaning seems to presuppose Searle�s distinction between
-derived and intrinsic intentionality. We can either attack this distinction<a
-style='mso-footnote-id:ftn3' href="#_ftn3" name="_ftnref3" title=""><span
-class=MsoFootnoteReference><span style='mso-special-character:footnote'><![if !supportFootnotes]>[3]<![endif]></span></span></a>,
-or try and argue that Searle is too restrictive in his application of it. For
-instance, I think he fails to adequately respond to the Robot Reply, when he
-simply asserts that �the addition of such �perceptual� and �motor� capacities
-adds nothing by way of understanding�. This leaves him either in Roger
-Penrose�s<a style='mso-footnote-id:ftn4' href="#_ftn4" name="_ftnref4" title=""><span
-class=MsoFootnoteReference><span style='mso-special-character:footnote'><![if !supportFootnotes]>[4]<![endif]></span></span></a>
-camp asserting that the human brain is fundamentally non-algorithmic in its
-operation, or making the even less defensible claim that there is simply
-something about biological, terrestrially-evolved neurons that makes them
-special/conscious/originally-intentional. Am I right in thinking that Harnad
-uses the term �symbolic grounding� to mean little more than a systematic causal
-feedback loop from the representations in our head through the environment
-(mediated by our sensory and motor systems) and back? If this is the case, then
-another way of seeing the problem is that we do not know whether it is possible
-to design an algorithmic system (i.e. one whose rules are purely syntactic)
-which is semantically interpretable, and yet which preserves the isomorphism
-between the environment and the internal representation. If the problem of
-symbolic grounding can be stated in this way, in terms of the conflict between
-a semantically-interpretable algorithm and an isomorphism with the environment,
-then it doesn�t seem inconceivable to me that a future symbolic system could be
-symbolically grounded in the way that Harnad demands.</p>
 
-<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
 
-<h2>Quillian � Semantic networks</h2>
+        
 
-<p class=MsoNormal>A semantic network has been defined as �a declarative
-graphic representation that can be used either to represent knowledge or to
-support automated systems for reasoning about knowledge�<a style='mso-footnote-id:
-ftn5' href="#_ftn5" name="_ftnref5" title=""><span class=MsoFootnoteReference><span
-style='mso-special-character:footnote'><![if !supportFootnotes]>[5]<![endif]></span></span></a>,
-and this seems to more or less capture what Quillian is trying to do. Each
-concept is placed within a tangled hierarchy and connected to a multitude of
-other related concepts by various types and strengths of links (e.g.
-grammatical (subject/object/direct object, in/for), contextual/semantic etc.)
-which serve to propagate activation from one node to another.</p>
+<small>
+    <h1>Belongs to these <a href="/tag">tags</a></h1>
+    <ul>
+        
+        <li><a href="/tag/semantic-networks.html">Semantic Networks</a></li>
+        
+        <li><a href="/tag/artificial-intelligence.html">Artificial Intelligence</a></li>
+        
+        <li><a href="/tag/mit.html">MIT</a></li>
+        
+    </ul>
+</small>
 
-<p class=MsoNormal>I liked the way that he approached the general problem of
-modelling or reproducing human-like meaning and memory faculties. He emphasised
-commonalities between words (or better, word-concepts) rather than trying to
-define concepts in isolation, and he tries to incorporate the natural fuzziness
-and blurredness that seem so essential to our thinking.</p>
 
-<p class=MsoNormal>At first sight, Quillian�s emphasis on the
-interconnectedness of his symbolic concepts as the main way in which meaning
-builds up seems connectionist in spirit. However, we can see that it departs
-crucially from what Harnad would term a connectionist model because it fulfils
-all of his 8 criteria for being a symbol system. Quillian�s model therefore
-falls on the Fodorian symbolic/language-of-thought side, in (implicitly) making
-the claim that we don�t need to descend below the symbolic level when modelling
-the mind<a style='mso-footnote-id:ftn6' href="#_ftn6" name="_ftnref6" title=""><span
-class=MsoFootnoteReference><span style='mso-special-character:footnote'><![if !supportFootnotes]>[6]<![endif]></span></span></a>.</p>
 
-<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+        
 
-<p class=MsoNormal>The interesting part of Quillian�s paper concerns how
-activity propagates between nodes, as evidenced by the task of seeing
-similarities between concepts. The results he includes seem promising, but we
-need to consider two major issues: scaling, and task specificity.</p>
 
-<p class=MsoNormal>I don�t think his model would scale to the whole of human
-language for two major reasons, and two minor reasons:</p>
 
-<p class=MsoNormal style='margin-left:35.85pt;text-indent:-.25in;mso-list:l1 level1 lfo6;
-tab-stops:list 35.85pt'><![if !supportLists]>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span><![endif]>The biggest problem concerns the task of encoding the
-information into a form that Quillian�s model can absorb. He doesn�t give much
-information about this process, other than mentioning the vague hope that as
-more concepts are added, the process will become increasingly autonomous. I
-think the opposite is true � as the number of concepts increases, the business
-of relating new concepts by hand would increasingly labyrinthine, and claiming
-that beyond some hypothetical critical mass, this problem will go away, seems
-like wishful thinking. It is also worth considering that because the concepts
-in human language are so densely-connected, the combinatorial explosion of
-connections and nodes might well become unmanageable (in terms of computational
-time and storage space) as the model increased from less than a thousand
-concepts to a hundred times that number.<a style='mso-footnote-id:ftn7'
-href="#_ftn7" name="_ftnref7" title=""><span class=MsoFootnoteReference><span
-style='mso-special-character:footnote'><![if !supportFootnotes]>[7]<![endif]></span></span></a></p>
+        
 
-<p class=MsoNormal style='margin-left:35.85pt;text-indent:-.25in;mso-list:l1 level1 lfo6;
-tab-stops:list 35.85pt'><![if !supportLists]>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span><![endif]>The second major problem is one of task specificity. By this,
-I mean that although Quillian�s model does a credible job of seeking
-similarities between the concepts it knows (the task it seems primarily
-designed around), I don�t think it would be able to re-deploy its knowledge in
-a more general way. Most importantly, I don�t think that the knowledge encoded
-in this way would help much in reading, understanding and responding flexibly
-to sentences in English. It might help occasionally to choose between possible
-parse trees of a sentence by disambiguating homonyms, but otherwise I just
-don�t see how it could be merged with the non-linguistic parts of a complete
-cognitive system.</p>
 
-<p class=MsoNormal style='margin-left:35.7pt'>Another way of saying this is in
-terms of the trade-off between representational expressiveness and computational
-tractability � in my opinion, Quillian�s approach concedes too much to
-computational tractability. The catalogue of link-types he proposes falls
-between two stools: a) the list of different types of links he allows is too
-rigid and impoverished to be able to represent the whole gamut of different
-relations between concepts, and b) by having categories rather than just scalar
-synaptic weights as in a connectionist system, his system will not
-self-organise dynamically. As a result, there will always be things that we can
-say with language that I don�t think any variation or simple expansion of
-Quillian�s model would be able to represent.</p>
 
-<p class=MsoNormal style='margin-left:35.85pt;text-indent:-.25in;mso-list:l1 level1 lfo6;
-tab-stops:list 35.85pt'><![if !supportLists]>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span><![endif]>A more minor concern relates to how we learn language as
-children. It seems possible that a really important part of this process may
-involve stepping-stone or bootstrapping concepts, which we leave behind as our
-understanding become more sophisticated but which are necessary childhood
-steps. Alternatively, most of our concepts� meaning/function changes greatly over
-time, and it could be that their circuitous evolution is absolutely necessary
-for the system to reach a given end state. By trying to leapfrog all of this to
-the desired end-state, we may be making the task considerably harder for
-ourselves.</p>
+    </div>
+    <footer>
+        <div class="bottom_nav">
+            
 
-<p class=MsoNormal style='margin-left:35.85pt;text-indent:-.25in;mso-list:l1 level1 lfo6;
-tab-stops:list 35.85pt'><![if !supportLists]>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span><![endif]>One further minor consideration relates to whether Quillian
-intended his model as a model of how human memory actually works, or whether
-it�s merely a reverse-engineered replication of its salient properties. He does
-state that he is �disposed to consider this model a psychological theory�.
-Either way, if we were trying to build a machine to pass the Turing test, I
-think that we could devise innumerable fiendish ways to distinguish even a
-successful implementation of Quillian�s model from a real human<a
-style='mso-footnote-id:ftn8' href="#_ftn8" name="_ftnref8" title=""><span
-class=MsoFootnoteReference><span style='mso-special-character:footnote'><![if !supportFootnotes]>[8]<![endif]></span></span></a>.</p>
+            
 
-<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
 
-<h2>Conclusions</h2>
+<p>
+    <i>
+        Last updated: 2024-Oct-04
+    </i>
+</p>
 
-<p class=MsoNormal>Both papers were stimulating, and contained a number of
-interesting ideas. Although I found quite a lot that I wanted to criticise or
-at least discuss in them, I felt that both authors� concern with meaning was
-instructive. Both of their approaches could be broadly summed up by Quillian�s
-four key assumptions about word concepts stored in memory: �that the
-information in them is large, differentially accessible, exceedingly rich in
-expressive power and yet composed of units that represent properties�, which reflects
-an underlying emphasis on the symbolic that they shared. Having said that, I
-think Harnad�s preoccupation with grounding, rather than simply the internal
-relations, reflects more modern insights, and will prove necessary for real
-progress � although Searle�s Chinese Room argument fails to apply as widely as
-he�d like, it can certainly be levelled here at Quillian�s model. </p>
 
-<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
-
-</div>
-
-<div style='mso-element:footnote-list'><![if !supportFootnotes]><br clear=all>
-
-<hr align=left size=1 width="33%">
-
-<![endif]>
-
-<div style='mso-element:footnote' id=ftn1>
-
-<p class=MsoFootnoteText align=left style='text-align:left'><a
-style='mso-footnote-id:ftn1' href="#_ftnref1" name="_ftn1" title=""><span
-class=MsoFootnoteReference><span style='mso-special-character:footnote'><![if !supportFootnotes]>[1]<![endif]></span></span></a>
-e.g. see Minsky (1990), �Symbolic vs connectionist� (available at
-http://www.ai.mit.edu/~minsky/papers/SymbolicVs.Connectionist.txt)</p>
-
-</div>
-
-<div style='mso-element:footnote' id=ftn2>
-
-<p class=MsoFootnoteText><a style='mso-footnote-id:ftn2' href="#_ftnref2"
-name="_ftn2" title=""><span class=MsoFootnoteReference><span style='mso-special-character:
-footnote'><![if !supportFootnotes]>[2]<![endif]></span></span></a> This is what
-Hofstadter (1979), <i>G�, Escher, Bach </i>argues in various places, such as
-in his discussion of the possibility of an ant-hill level
-intelligence/consciousness emerging out of the low-level behaviour of the
-non-intelligent/conscious ants.</p>
-
-</div>
-
-<div style='mso-element:footnote' id=ftn3>
-
-<p class=MsoFootnoteText><a style='mso-footnote-id:ftn3' href="#_ftnref3"
-name="_ftn3" title=""><span class=MsoFootnoteReference><span style='mso-special-character:
-footnote'><![if !supportFootnotes]>[3]<![endif]></span></span></a> See
-Dennett�s papers on intentionality</p>
-
-</div>
-
-<div style='mso-element:footnote' id=ftn4>
-
-<p class=MsoFootnoteText><a style='mso-footnote-id:ftn4' href="#_ftnref4"
-name="_ftn4" title=""><span class=MsoFootnoteReference><span style='mso-special-character:
-footnote'><![if !supportFootnotes]>[4]<![endif]></span></span></a> Penrose
-(1994), <i>Shadows of the mind</i></p>
-
-</div>
-
-<div style='mso-element:footnote' id=ftn5>
-
-<p class=MsoFootnoteText><a style='mso-footnote-id:ftn5' href="#_ftnref5"
-name="_ftn5" title=""><span class=MsoFootnoteReference><span style='mso-special-character:
-footnote'><![if !supportFootnotes]>[5]<![endif]></span></span></a> Sowa (2002)
-(http://www.jfsowa.com/pubs/semnet.htm)</p>
-
-</div>
-
-<div style='mso-element:footnote' id=ftn6>
-
-<p class=MsoFootnoteText><a style='mso-footnote-id:ftn6' href="#_ftnref6"
-name="_ftn6" title=""><span class=MsoFootnoteReference><span style='mso-special-character:
-footnote'><![if !supportFootnotes]>[6]<![endif]></span></span></a> See
-Smolensky, �On the proper treatment of connectionism� in Behavioral and Brain
-Sciences (1988), 11(1):1-74. In contrast, he maintains that a sub-symbolic
-level consisting of non-semantically evaluable constituents or micro-features
-of symbols exists, above the neural level, at which we will be able to fully
-specify (i.e. capture nomologically) mental activity.</p>
-
-</div>
-
-<div style='mso-element:footnote' id=ftn7>
-
-<p class=MsoFootnoteText><a style='mso-footnote-id:ftn7' href="#_ftnref7"
-name="_ftn7" title=""><span class=MsoFootnoteReference><span style='mso-special-character:
-footnote'><![if !supportFootnotes]>[7]<![endif]></span></span></a> However, the
-CYC project (www.cyc.com) has shown that neither the hand-coding on an enormous
-scale nor the associated combinatorial explosion need be considered
-insurmountable problems. CYC is an analogous modern project whose knowledge
-base is couched in terms of propositional axioms rather than the kind of
-definitional hierarchy that Quillian is constructing, but it has a similar aim
-of building a symbolic corpus of common-sense knowledge or meaning.</p>
-
-</div>
-
-<div style='mso-element:footnote' id=ftn8>
-
-<p class=MsoFootnoteText><a style='mso-footnote-id:ftn8' href="#_ftnref8"
-name="_ftn8" title=""><span class=MsoFootnoteReference><span style='mso-special-character:
-footnote'><![if !supportFootnotes]>[8]<![endif]></span></span></a> Robert
-French considers a number of such questions, designed to probe what he terms
-the sub-cognitive framework of the interviewee � see French (1990),
-�Subcognition and the limits of the Turing test�,
-http://www.ulg.ac.be/cogsci/rfrench/turing.pdf</p>
-
-</div>
-
-</div>
-
+        </div>
+    </footer>
 </body>
 
 </html>

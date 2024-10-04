@@ -1,500 +1,172 @@
-<html xmlns:o="urn:schemas-microsoft-com:office:office"
-xmlns:w="urn:schemas-microsoft-com:office:word"
-xmlns="http://www.w3.org/TR/REC-html40">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
-<meta name=ProgId content=Word.Document>
-<meta name=Generator content="Microsoft Word 9">
-<meta name=Originator content="Microsoft Word 9">
-<link rel=File-List
-href="./reactions%20-%20mas962%20computational%20semantics%20021124_files/filelist.xml">
-<title>Title</title>
-<!--[if gte mso 9]><xml>
- <o:DocumentProperties>
-  <o:Author>Greg Detre</o:Author>
-  <o:LastAuthor>Greg Detre</o:LastAuthor>
-  <o:Revision>2</o:Revision>
-  <o:TotalTime>315</o:TotalTime>
-  <o:Created>2003-07-02T01:15:00Z</o:Created>
-  <o:LastSaved>2003-07-02T01:15:00Z</o:LastSaved>
-  <o:Pages>1</o:Pages>
-  <o:Words>744</o:Words>
-  <o:Characters>4245</o:Characters>
-  <o:Company>-</o:Company>
-  <o:Lines>35</o:Lines>
-  <o:Paragraphs>8</o:Paragraphs>
-  <o:CharactersWithSpaces>5213</o:CharactersWithSpaces>
-  <o:Version>9.2720</o:Version>
- </o:DocumentProperties>
-</xml><![endif]--><!--[if gte mso 9]><xml>
- <w:WordDocument>
-  <w:DrawingGridHorizontalSpacing>4.5 pt</w:DrawingGridHorizontalSpacing>
-  <w:DrawingGridVerticalSpacing>12.25 pt</w:DrawingGridVerticalSpacing>
-  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
-  <w:Compatibility>
-   <w:WW6BorderRules/>
-   <w:FootnoteLayoutLikeWW8/>
-   <w:ShapeLayoutLikeWW8/>
-   <w:AlignTablesRowByRow/>
-   <w:ForgetLastTabAlignment/>
-   <w:LayoutRawTableWidth/>
-   <w:LayoutTableRowsApart/>
-  </w:Compatibility>
- </w:WordDocument>
-</xml><![endif]-->
-<style>
-<!--
- /* Font Definitions */
-@font-face
-	{font-family:"Book Antiqua";
-	panose-1:2 4 6 2 5 3 5 3 3 4;
-	mso-font-charset:0;
-	mso-generic-font-family:roman;
-	mso-font-pitch:variable;
-	mso-font-signature:647 0 0 0 159 0;}
-@font-face
-	{font-family:Tahoma;
-	panose-1:2 11 6 4 3 5 4 4 2 4;
-	mso-font-charset:0;
-	mso-generic-font-family:swiss;
-	mso-font-pitch:variable;
-	mso-font-signature:553679495 -2147483648 8 0 66047 0;}
- /* Style Definitions */
-p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{mso-style-parent:"";
-	margin-top:8.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:0in;
-	margin-bottom:.0001pt;
-	text-align:justify;
-	mso-pagination:widow-orphan;
-	font-size:12.0pt;
-	mso-bidi-font-size:10.0pt;
-	font-family:"Times New Roman";
-	mso-fareast-font-family:"Times New Roman";}
-h1
-	{mso-style-next:Normal;
-	margin-top:0in;
-	margin-right:0in;
-	margin-bottom:6.0pt;
-	margin-left:0in;
-	text-align:center;
-	mso-pagination:widow-orphan;
-	page-break-after:avoid;
-	mso-outline-level:1;
-	font-size:12.0pt;
-	mso-bidi-font-size:10.0pt;
-	font-family:"Times New Roman";
-	color:purple;
-	mso-font-kerning:14.0pt;
-	mso-bidi-font-weight:normal;
-	font-style:italic;
-	mso-bidi-font-style:normal;}
-h2
-	{mso-style-next:Normal;
-	margin-top:16.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:0in;
-	margin-bottom:.0001pt;
-	mso-pagination:widow-orphan;
-	page-break-after:avoid;
-	mso-outline-level:2;
-	font-size:12.0pt;
-	mso-bidi-font-size:10.0pt;
-	font-family:"Times New Roman";
-	color:navy;
-	mso-bidi-font-weight:normal;
-	font-style:italic;
-	mso-bidi-font-style:normal;}
-h3
-	{mso-style-next:Normal;
-	margin-top:16.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:0in;
-	margin-bottom:.0001pt;
-	text-align:justify;
-	mso-pagination:widow-orphan;
-	page-break-after:avoid;
-	mso-outline-level:3;
-	tab-stops:right 451.45pt;
-	font-size:12.0pt;
-	mso-bidi-font-size:10.0pt;
-	font-family:"Times New Roman";
-	color:green;
-	font-weight:normal;
-	font-style:italic;
-	mso-bidi-font-style:normal;}
-h4
-	{mso-style-next:Normal;
-	margin-top:12.0pt;
-	margin-right:0in;
-	margin-bottom:3.0pt;
-	margin-left:0in;
-	text-align:justify;
-	mso-pagination:widow-orphan;
-	page-break-after:avoid;
-	mso-outline-level:4;
-	font-size:12.0pt;
-	mso-bidi-font-size:10.0pt;
-	font-family:Arial;
-	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-font-weight:normal;}
-h5
-	{mso-style-next:Normal;
-	margin-top:15.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:0in;
-	margin-bottom:.0001pt;
-	text-align:justify;
-	mso-pagination:widow-orphan;
-	mso-outline-level:5;
-	font-size:12.0pt;
-	mso-bidi-font-size:10.0pt;
-	font-family:"Times New Roman";
-	color:maroon;
-	font-weight:normal;
-	font-style:italic;
-	mso-bidi-font-style:normal;}
-h6
-	{mso-style-parent:"Heading 5";
-	mso-style-next:Normal;
-	margin-top:12.0pt;
-	margin-right:0in;
-	margin-bottom:3.0pt;
-	margin-left:0in;
-	text-align:justify;
-	mso-pagination:widow-orphan;
-	mso-outline-level:6;
-	font-size:11.0pt;
-	font-family:"Times New Roman";
-	color:olive;
-	font-weight:normal;
-	mso-bidi-font-weight:bold;
-	font-style:italic;
-	mso-bidi-font-style:normal;}
-p.MsoToc1, li.MsoToc1, div.MsoToc1
-	{mso-style-parent:"Heading 1";
-	mso-style-next:Normal;
-	margin-top:3.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:0in;
-	margin-bottom:.0001pt;
-	mso-pagination:widow-orphan;
-	page-break-after:avoid;
-	tab-stops:.75in right 451.45pt;
-	font-size:11.0pt;
-	mso-bidi-font-size:10.0pt;
-	font-family:"Times New Roman";
-	mso-fareast-font-family:"Times New Roman";
-	font-variant:small-caps;
-	color:purple;
-	mso-font-kerning:14.0pt;
-	font-weight:bold;
-	mso-bidi-font-weight:normal;
-	font-style:italic;
-	mso-bidi-font-style:normal;}
-p.MsoToc2, li.MsoToc2, div.MsoToc2
-	{mso-style-parent:"Heading 2";
-	mso-style-next:Normal;
-	margin-top:3.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:10.1pt;
-	margin-bottom:.0001pt;
-	mso-pagination:widow-orphan;
-	page-break-after:avoid;
-	tab-stops:right 451.3pt;
-	font-size:10.0pt;
-	font-family:"Times New Roman";
-	mso-fareast-font-family:"Times New Roman";
-	color:navy;
-	font-style:italic;
-	mso-bidi-font-style:normal;}
-p.MsoToc3, li.MsoToc3, div.MsoToc3
-	{mso-style-parent:"TOC 2";
-	mso-style-next:Normal;
-	margin-top:3.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:20.0pt;
-	margin-bottom:.0001pt;
-	mso-pagination:widow-orphan;
-	page-break-after:avoid;
-	tab-stops:right 451.45pt;
-	font-size:9.0pt;
-	mso-bidi-font-size:10.0pt;
-	font-family:"Times New Roman";
-	mso-fareast-font-family:"Times New Roman";
-	color:teal;
-	font-style:italic;
-	mso-bidi-font-style:normal;}
-p.MsoToc4, li.MsoToc4, div.MsoToc4
-	{mso-style-update:auto;
-	mso-style-parent:"TOC 3";
-	mso-style-next:Normal;
-	margin-top:3.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:35.7pt;
-	margin-bottom:.0001pt;
-	mso-pagination:widow-orphan;
-	page-break-after:avoid;
-	tab-stops:right 451.45pt;
-	font-size:7.5pt;
-	mso-bidi-font-size:10.0pt;
-	font-family:"Times New Roman";
-	mso-fareast-font-family:"Times New Roman";
-	color:maroon;
-	mso-bidi-font-weight:bold;
-	font-style:italic;
-	mso-bidi-font-style:normal;}
-p.MsoHeader, li.MsoHeader, div.MsoHeader
-	{margin-top:8.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:0in;
-	margin-bottom:.0001pt;
-	text-align:justify;
-	mso-pagination:widow-orphan;
-	tab-stops:center 239.75pt right 6.65in;
-	font-size:11.0pt;
-	mso-bidi-font-size:10.0pt;
-	font-family:"Times New Roman";
-	mso-fareast-font-family:"Times New Roman";
-	font-style:italic;
-	mso-bidi-font-style:normal;}
-p.MsoDate, li.MsoDate, div.MsoDate
-	{margin-top:8.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:0in;
-	margin-bottom:.0001pt;
-	text-align:right;
-	mso-pagination:widow-orphan;
-	font-size:11.0pt;
-	mso-bidi-font-size:10.0pt;
-	font-family:"Times New Roman";
-	mso-fareast-font-family:"Times New Roman";
-	font-style:italic;
-	mso-bidi-font-style:normal;}
-p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
-	{margin-top:8.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:0in;
-	margin-bottom:.0001pt;
-	text-align:justify;
-	mso-pagination:widow-orphan;
-	background:navy;
-	font-size:12.0pt;
-	mso-bidi-font-size:10.0pt;
-	font-family:Tahoma;
-	mso-fareast-font-family:"Times New Roman";}
-p.Section, li.Section, div.Section
-	{mso-style-name:Section;
-	margin-top:8.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:0in;
-	margin-bottom:.0001pt;
-	text-align:center;
-	mso-pagination:widow-orphan;
-	font-size:12.0pt;
-	mso-bidi-font-size:10.0pt;
-	font-family:"Times New Roman";
-	mso-fareast-font-family:"Times New Roman";
-	font-weight:bold;
-	mso-bidi-font-weight:normal;}
-p.Heading0, li.Heading0, div.Heading0
-	{mso-style-name:"Heading 0";
-	mso-style-parent:"Heading 1";
-	margin-top:6.0pt;
-	margin-right:0in;
-	margin-bottom:6.0pt;
-	margin-left:0in;
-	text-align:center;
-	mso-pagination:widow-orphan;
-	page-break-after:avoid;
-	mso-outline-level:1;
-	border:none;
-	mso-border-alt:solid windowtext .5pt;
-	padding:0in;
-	mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt;
-	font-size:16.0pt;
-	mso-bidi-font-size:10.0pt;
-	font-family:"Book Antiqua";
-	mso-fareast-font-family:"Times New Roman";
-	mso-bidi-font-family:"Times New Roman";
-	font-variant:small-caps;
-	color:purple;
-	font-weight:bold;
-	mso-bidi-font-weight:normal;}
-@page Section1
-	{size:595.3pt 841.9pt;
-	margin:68.05pt 68.05pt 68.05pt 68.05pt;
-	mso-header-margin:.5in;
-	mso-footer-margin:.5in;
-	mso-paper-source:0;}
-div.Section1
-	{page:Section1;}
- /* List Definitions */
-@list l0
-	{mso-list-id:1030641677;
-	mso-list-type:hybrid;
-	mso-list-template-ids:1224117862 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
-@list l0:level1
-	{mso-level-tab-stop:35.85pt;
-	mso-level-number-position:left;
-	margin-left:35.85pt;
-	text-indent:-.25in;}
-@list l1
-	{mso-list-id:1746143482;
-	mso-list-type:simple;
-	mso-list-template-ids:-719658964;}
-@list l1:level1
-	{mso-level-tab-stop:.25in;
-	mso-level-number-position:left;
-	margin-left:.25in;
-	text-indent:-.25in;}
-ol
-	{margin-bottom:0in;}
-ul
-	{margin-bottom:0in;}
--->
-</style>
+    
+
+    <title>
+
+reactions - mas962 computational semantics 021124 -
+
+Greg Detre
+</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="gdwebgen" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Greg Detre's personal website" />
+    
+    <link rel="stylesheet" href="/static/css/base.css">
+    
+<link rel="canonical" href="https://www.gregdetre.com/notes/reactions - mas962 computational semantics 021124">
+
 </head>
 
-<body lang=EN-GB style='tab-interval:17.85pt'>
+<body>
 
-<div class=Section1>
+    
+    <div id="wide-img-header">
+        
+        <a href="/wide_img_header/IMG_5253.jpg">
+            <img src="/wide_img_header/IMG_5253_sm.jpg" />
+        </a>
+        
+    </div>
+    
 
-<h1>Reactions � MAS962 Jackendoff chapters</h1>
+    
+<nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+        
+        
+        <li class="breadcrumb-item" title="Greg Detre">
+            
+            <a href="/">Greg Detre</a>
+            
+        </li>
+        
+        
+        
+        <li class="breadcrumb-item" title="Notes">
+            
+            <a href="/notes/">...</a>
+            
+        </li>
+        
+        
+        
+        <li class="breadcrumb-item" title="reactions - mas962 computational semantics 021124">
+            
+            <a href="/notes/reactions - mas962 computational semantics 021124">Reactions - Mas962 Computational Semantics 021124</a>
+            
+        </li>
+        
+        
+    </ol>
+</nav>
 
-<p class=MsoNormal align=right style='text-align:right'>Greg Detre</p>
 
-<p class=MsoNormal align=right style='margin-top:2.0pt;text-align:right'><span
-lang=EN-US style='mso-ansi-language:EN-US'>Sunday, November 24, 2002<o:p></o:p></span></p>
+    
+    <div class="nav_menu" <p>
+        
+        <a href="/about">About</a>
+        
+        <a href="/blog">Blog</a>
+        
+        </p>
+    </div>
+    
 
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+    <div id="main">
+        
 
-<p class=MsoNormal>Jackendoff�s calm proposal that language speaks directly
-about internal perceptual representations, and only indirectly about the
-outside world, is an absolutely necessary epistemological step. But, it defers
-the debate about the extent to which we can say that we are talking about the
-outside world to the question of how reliable the percepts we form of the
-outside world are. There are two answers to this. The shallow answer presupposes
-that the world, our bodies and our sense organs are much as they appear to us
-as adults and scientists, in which case we can resolve perceptual reliability
-empirically through experimentation, and understand why this should be so in
-terms of evolutionary theory. The deeper problem relates to how we can be
-certain that the nature of an outside world corresponds in any way to the
-causal picture detailing veridical transductions via eyes, ears, noses etc.
-Even the correspondence between, say, our visual and tactile senses, tells us
-nothing about the outside world, other than confirming that there is
-systematicity in the delusion. We have fallen into the Berkleyan pit, to put it
-crudely. Nietzsche provides at least a foothold from which we can begin to clamber
-out:</p>
+<h1>reactions - mas962 computational semantics 021124</h1>
 
-<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
-margin-left:17.85pt;margin-bottom:.0001pt'>&quot;What? and others even go so
-far as to say that the external world is the work of our organs? But then our
-body, as a piece of this external world, would be the work of our organs! But
-then our organs themselves would be - the work of our organs! This, it seems to
-me, is a complete reductio ad absurdium, supposing that the concept causa sui
-is something altogether absurd. Consequently the external world is *not* the
-work of our organs -?&quot;</p>
 
-<p class=MsoNormal>In short though, I don�t think there can be an answer from
-first principles to the question of how we can <i>know</i> about evolution and
-a real, natural world, i.e. how we can confirm our percepts� reliability
-without already presupposing it. This is, roughly, Nozick�s position in �The
-Nature of Rationality� (1993), although he is talking in broader terms about a
-�reason-independent justification of reason�. Either way, Jackendoff�s move
-towards a conceptualist semantics that straddles language and internal
-conceptual representations, rooted in percepts, seems like the only way to go.</p>
 
-<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
 
-<p class=MsoNormal style='margin-top:0in'>Jackendoff characterises a
-�consciously experienced entity� in terms of:</p>
+<h1 id="reactions-mas962-jackendoff-chapters">Reactions � MAS962 Jackendoff chapters</h1>
+<p>Greg Detre</p>
+<p>Sunday, November 24, 2002</p>
+<p>Jackendoff�s calm proposal that language speaks directly about internal perceptual representations, and only indirectly about the outside world, is an absolutely necessary epistemological step. But, it defers the debate about the extent to which we can say that we are talking about the outside world to the question of how reliable the percepts we form of the outside world are. There are two answers to this. The shallow answer presupposes that the world, our bodies and our sense organs are much as they appear to us as adults and scientists, in which case we can resolve perceptual reliability empirically through experimentation, and understand why this should be so in terms of evolutionary theory. The deeper problem relates to how we can be certain that the nature of an outside world corresponds in any way to the causal picture detailing veridical transductions via eyes, ears, noses etc. Even the correspondence between, say, our visual and tactile senses, tells us nothing about the outside world, other than confirming that there is systematicity in the delusion. We have fallen into the Berkleyan pit, to put it crudely. Nietzsche provides at least a foothold from which we can begin to clamber out:</p>
+<p>"What? and others even go so far as to say that the external world is the work of our organs? But then our body, as a piece of this external world, would be the work of our organs! But then our organs themselves would be - the work of our organs! This, it seems to me, is a complete reductio ad absurdium, supposing that the concept causa sui is something altogether absurd. Consequently the external world is <em>not</em> the work of our organs -?"</p>
+<p>In short though, I don�t think there can be an answer from first principles to the question of how we can <em>know</em> about evolution and a real, natural world, i.e. how we can confirm our percepts� reliability without already presupposing it. This is, roughly, Nozick�s position in �The Nature of Rationality� (1993), although he is talking in broader terms about a �reason-independent justification of reason�. Either way, Jackendoff�s move towards a conceptualist semantics that straddles language and internal conceptual representations, rooted in percepts, seems like the only way to go.</p>
+<p>Jackendoff characterises a �consciously experienced entity� in terms of:</p>
+<p>an indexical feature</p>
+<p>descriptive features (in one or more modalities)</p>
+<p>an �affective� status in various modality-independent dimensions (e.g. internal, self-produced, coherent, mattering)</p>
+<p>This allows him to make progress in a couple of important ways. </p>
+<ol>
+<li>
+<p>In combination with his powerful attack asserting that the references of declarative sentences are situations, rather than truth values. I haven�t really read about this debate in much detail before, but the numerous, wide-ranging examples he provides seem to settle the issue for me. It allows us to talk loosely in terms of situations entailing one another, a much more human sort of �truth�. It also allows him to unpack truth/falsity into four levels of satisfiability for the hearer. Finally, if we bring in the dimensions of �affective� status, we are able to immediately generate a rich combinatoric matrix of situations, fictional or non-fictional, agential or non-agential etc.</p>
+</li>
+<li>
+<p>It almost sounds at times as though he is probing at the internal �API� for language, for example when he says that:</p>
+</li>
+</ol>
+<p>�ontological category features, unlike most descriptive features of concepts, <em>are</em> �visible� to the syntax-semantics interface. This means that they play an important role in grammar as well as in perception.�</p>
+<p>He posits that our percepts can contain higher-level indexical, aggregating representations (objects, actions, locations, events etc.), demonstrates how types can be produced by dropping the index, and shows how various linguistic categorisations map onto these ontological types. In doing so, he makes a compelling and empirical claim about the bindings between language and our internal representations, and points towards the possibility of an empirically-based ontology of types and tokens.</p>
+<p>On a related note, he makes the important, if unoriginal, point that introspection is unlikely to be able to help us, since �there is a disconnection between the form taken by awareness and the unconscious form responsible for understanding�. Of course, he glosses over the difficulty of following this up with any sort of� theory that picks out why/how/which such representations/computation should exclusively bubble to the surface of awareness.</p>
+<p>I really enjoyed the chapters, though I had trouble pinning down what he meant by his notion of the �f[unctional]-mind� without the rest of the book. His naturalistic assumptions, his acknowledgement of the need to skirt the fringes of solipsism and deconstructivism, and his willingness to place a highly-interdisciplinary emphasis on semantics at the centre of his system, are all to be commended. Furthermore, the brief generative approach he sketches seems richer and more firmly philosophically grounded than any I have encountered so far.</p>
 
-<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
-margin-left:17.85pt;margin-bottom:.0001pt'>an indexical feature</p>
 
-<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
-margin-left:17.85pt;margin-bottom:.0001pt'>descriptive features (in one or more
-modalities)</p>
+<br />
+<br />
+<br />
+<hr />
 
-<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
-margin-left:17.85pt;margin-bottom:.0001pt'>an �affective� status in various
-modality-independent dimensions (e.g. internal, self-produced, coherent,
-mattering)</p>
 
-<p class=MsoNormal>This allows him to make progress in a couple of important
-ways. </p>
 
-<p class=MsoNormal style='margin-left:35.85pt;text-indent:-.25in;mso-list:l0 level1 lfo5;
-tab-stops:list 35.85pt'><![if !supportLists]>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span><![endif]>In combination with his powerful attack asserting that the
-references of declarative sentences are situations, rather than truth values. I
-haven�t really read about this debate in much detail before, but the numerous,
-wide-ranging examples he provides seem to settle the issue for me. It allows us
-to talk loosely in terms of situations entailing one another, a much more human
-sort of �truth�. It also allows him to unpack truth/falsity into four levels of
-satisfiability for the hearer. Finally, if we bring in the dimensions of
-�affective� status, we are able to immediately generate a rich combinatoric
-matrix of situations, fictional or non-fictional, agential or non-agential etc.</p>
+        
 
-<p class=MsoNormal style='margin-left:35.85pt;text-indent:-.25in;mso-list:l0 level1 lfo5;
-tab-stops:list 35.85pt'><![if !supportLists]>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span><![endif]>It almost sounds at times as though he is probing at the
-internal �API� for language, for example when he says that:</p>
 
-<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:0in;
-margin-left:53.55pt;margin-bottom:.0001pt'>�ontological category features,
-unlike most descriptive features of concepts, <i>are</i> �visible� to the
-syntax-semantics interface. This means that they play an important role in
-grammar as well as in perception.�</p>
 
-<p class=MsoNormal style='margin-left:35.7pt'>He posits that our percepts can
-contain higher-level indexical, aggregating representations (objects, actions,
-locations, events etc.), demonstrates how types can be produced by dropping the
-index, and shows how various linguistic categorisations map onto these
-ontological types. In doing so, he makes a compelling and empirical claim about
-the bindings between language and our internal representations, and points
-towards the possibility of an empirically-based ontology of types and tokens.</p>
+        
 
-<p class=MsoNormal style='margin-left:35.7pt'>On a related note, he makes the
-important, if unoriginal, point that introspection is unlikely to be able to
-help us, since �there is a disconnection between the form taken by awareness
-and the unconscious form responsible for understanding�. Of course, he glosses
-over the difficulty of following this up with any sort of<span
-style="mso-spacerun: yes">� </span>theory that picks out why/how/which such
-representations/computation should exclusively bubble to the surface of
-awareness.</p>
+<small>
+    <h1>Belongs to these <a href="/tag">tags</a></h1>
+    <ul>
+        
+        <li><a href="/tag/cognitive-load.html">Cognitive load</a></li>
+        
+        <li><a href="/tag/philosophy.html">Philosophy</a></li>
+        
+        <li><a href="/tag/language.html">Language</a></li>
+        
+        <li><a href="/tag/rationality.html">Rationality</a></li>
+        
+        <li><a href="/tag/mind.html">Mind</a></li>
+        
+    </ul>
+</small>
 
-<p class=MsoNormal style='margin-left:35.7pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
 
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>I really
-enjoyed the chapters, though I had trouble pinning down what he meant by his
-notion of the �f[unctional]-mind� without the rest of the book. His
-naturalistic assumptions, his acknowledgement of the need to skirt the fringes
-of solipsism and deconstructivism, and his willingness to place a
-highly-interdisciplinary emphasis on semantics at the centre of his system, are
-all to be commended. Furthermore, the brief generative approach he sketches
-seems richer and more firmly philosophically grounded than any I have
-encountered so far.<o:p></o:p></span></p>
 
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+        
 
-</div>
 
+
+        
+
+
+
+    </div>
+    <footer>
+        <div class="bottom_nav">
+            
+
+            
+
+
+<p>
+    <i>
+        Last updated: 2024-Oct-04
+    </i>
+</p>
+
+
+        </div>
+    </footer>
 </body>
 
 </html>
