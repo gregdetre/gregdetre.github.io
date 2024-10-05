@@ -1,0 +1,699 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Greg Detre</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="6369118a-6fa7-4ce2-a429-41e0b22245cc" class="page serif"><header><h1 class="page-title"><strong>Greg Detre</strong></h1><p class="page-description"></p></header><div class="page-body"><nav id="47cea660-8a82-497a-adb5-40f5bc761ab5" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#37d6f96f-10e1-4edb-a333-365e58868819">Questions</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#dc36d0cb-b24b-4b45-8342-4bbd3522c417">How do you think machine learning could be developed for the areas of learning and education? *</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#5a3460c9-f4f8-4747-bdd0-81c87276b74e">How would you develop useful measures and evaluations of performance and effectiveness for learning and education domains? *</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#40fe6321-36a2-4b0b-86a7-75b3d7a712b0">Summary</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#4a715182-a580-4e84-af49-9cfa74a85d08">Bio</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#100b74cb-769b-454b-a0d0-cae7dedbf24d">Education</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#56399c18-6a93-41e7-a970-d052043d78c3">Employment</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#810d1511-65af-45c2-8a57-c35836e0454a">Research</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#5a39e7d4-6902-4e86-bc10-0091d9d57b3e">Skills</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#3f75d4d5-b9bf-4fbd-b061-aca66fbf58f2">Awards &amp; honours</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#40277119-c7e2-4ace-aff3-21275c5d88f7">Personal interests</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#9cfe698f-3ec3-41c8-a45e-084d18f40192">References</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#e1be1f8d-6f5b-446e-b162-1453a7e3c51c">Highlighted projects and achievements</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#d7b1baa2-ca62-4bd9-945b-2dab69acfce1">Keynote speaker, podcast host, blog author</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#7b362141-a813-40e0-a214-6d24e50fa444">Memrise LLM for language learning</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#9f2939cc-4e58-4128-abd7-64f2de3b8f1a">Memrise adaptive learning algorithms</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#30887147-d176-4345-84b1-f800ff561215"><strong>The </strong><strong><a href="http://www.csbmb.princeton.edu/mvpa/">Multi-Voxel Pattern Analysis</a></strong><strong> (MVPA) toolbox (2005-2010, scientific, open source)</strong></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#4abc79ee-dfb2-4867-85e9-c1ff2c6c750c"><strong>Emacs Freex mode (2005-2007, open source, personal)</strong></a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#49f1c449-eb6c-48d6-905b-a56f1f314d0c">Employment</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#2f67d991-9350-47de-8f73-a312224c3184">Greg Detre Consulting (2019-)</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#380e5249-48d3-47bc-9188-f31cb6496393">Rehearsable.ai (2023-), co-founder</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#96607d8b-c641-493e-9a07-5e9141787c9e">Filtered - Chief Product &amp; Technology Officer (2021-2022), Board Observer (2023-)</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#e1f3e160-3c7d-49f7-9fbf-f5c3b73f0577">Channel 4 - Chief Data Scientist (2016-2019)</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#1c93df59-014b-4c4b-a287-9c37a7efff47">Big Health/Sleepio - Chief Technology Officer (2014-2016)</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#917c6a24-650e-4e6f-a59c-5da088c2676f">The Guardian - Consultant senior data scientist (2013)</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#0e1d279b-9adf-4333-bf1e-82cd45ca1358">Memrise.com co-founder, Chief Technology Officer (2008-2012; 2022)</a></div></nav><p id="d36c8fae-c66f-4515-b4c3-f1f781b57264" class="">
+</p><h1 id="37d6f96f-10e1-4edb-a333-365e58868819" class="">Questions</h1><h2 id="dc36d0cb-b24b-4b45-8342-4bbd3522c417" class="">How do you think machine learning could be developed for the areas of learning and education? *</h2><p id="e03cfd81-5912-4a3a-b023-a00dee83b69f" class="">With any data science project, the hardest and most important part is the evaluation. If you can quantify progress, you’re halfway to success. We’ll come back to that in the second question.</p><p id="f81c902a-a110-4e1e-b6c2-6c008b0cb4af" class="">
+</p><p id="09e5f36e-9c91-4505-b37c-25e31079fa7d" class="">
+</p><h2 id="5a3460c9-f4f8-4747-bdd0-81c87276b74e" class="">How would you develop useful measures and evaluations of performance and effectiveness for learning and education domains? *</h2><p id="eb407647-5fcb-4717-a836-30fdf5eea561" class="">This depends a good deal on the domain. Let’s take language learning as an example, and then generalise from there.</p><ul id="bf2d0727-9308-4973-b423-10179b390b98" class="bulleted-list"><li style="list-style-type:disc">Building language learning apps/software </li></ul><p id="9f1a490d-ba40-4163-a0cb-45df9f23620c" class="">
+</p><p id="b0bf7220-e910-4b1a-bd56-cc62d36f3f1a" class="">
+</p><p id="6618d062-4003-4ccc-b765-ab24a90e2259" class="">
+</p><p id="c81fde07-aeb7-4fac-9bf4-99cceb84d70d" class="">
+</p><p id="e74903f4-c17e-486a-a0a4-ad12ae3e20df" class="">
+</p><p id="0fba7e8f-6b80-438e-903a-7276de34b490" class="">
+</p><p id="76666fec-bab2-45df-a980-de5f1b80094e" class="">
+</p><h1 id="40fe6321-36a2-4b0b-86a7-75b3d7a712b0" class="">Summary</h1><h2 id="4a715182-a580-4e84-af49-9cfa74a85d08" class="">Bio</h2><p id="e1d1b43d-19ed-4b7a-8be1-173d9ac2f791" class="">Co-founder of <a href="http://www.memrise.com/">Memrise.com</a> for language learning, now a global brand with 70m users, awarded overall <a href="https://thenextweb.com/news/this-highly-rated-google-play-store-language-learning-app-is-now-on-sale">Best App in the 2017 Google Play Awards</a> and <a href="https://time.com/collection/worlds-top-edtech-companies-2024/">TIME’s #2 EdTech company of 2024</a>.</p><p id="d2457735-17e0-44a1-8243-e4abc5629619" class="">Education:<div class="indented"><ul id="57e26768-57d7-4717-b059-480dc64f0867" class="bulleted-list"><li style="list-style-type:disc">First Class Honours from Oxford University, and a prestigious Frank Knox Fellowship to study at Harvard.</li></ul><ul id="aa395e4a-4a98-42f3-b9ab-0f66a16e7bb8" class="bulleted-list"><li style="list-style-type:disc">They say that psychologists study their own deficiencies - I studied why we forget things, in my <a href="https://blog.gregdetre.co.uk/research/">PhD from Princeton University</a> in computational neuroscience. I worked on: neural network algorithms and brain simulations; an open source <a href="https://code.google.com/p/princeton-mvpa-toolbox/">multivariate analysis toolbox for fMRI data</a> used by hundreds of labs around the world; prize-winner in DARPA international competition; co-winner of Young Investigator Award.</li></ul></div></p><p id="2b20b279-cf90-49f0-8d82-4eabfc374cb3" class="">Experienced startup C-suite leader, AI/data scientist, and full-stack software engineer:<div class="indented"><ul id="e45928ed-d9cb-4cea-830c-daf0941cc098" class="bulleted-list"><li style="list-style-type:disc">Chief Data Scientist at Channel 4: led on a flurry of new and prize-winning data products, winning the DataIQ 2019 <a href="https://www.dataiq.co.uk/news/dataiq-awards---anita-fernqvist-scoops-top-prize-as-channel-4-takes-three">‘Best data and analytics team’</a>.</li></ul><ul id="72d50019-0871-42d3-9a83-0fde5403a4ec" class="bulleted-list"><li style="list-style-type:disc">Memrise: Spurred by an incident with a barber in Athens, I set out to build the world’s first LLM language learning coach (in early 2022, with GPT-3), now used in millions of conversations;</li></ul><ul id="2f1d22d4-874f-4eda-9f0f-3252d05753fd" class="bulleted-list"><li style="list-style-type:disc">CTO at Big Health: launched best-in-class <a href="http://sleepio.com/">Sleepio</a> digital mental health mobile app (featured by Apple, reached #3 US iTunes Health &amp; Fitness);</li></ul><ul id="df9d93d6-1c5e-42a8-8f36-7e75c7f5e60b" class="bulleted-list"><li style="list-style-type:disc">Consultant for The Guardian: helped build their original data analytics infrastructure;</li></ul></div></p><p id="2835694e-327e-4ff5-a8e4-482a2b06dfca" class="">Technical advisor, coach, board member:<div class="indented"><ul id="304e5f46-1cc7-4582-84d0-6a720416b22f" class="bulleted-list"><li style="list-style-type:disc">I work with some of the top companies in Europe to build stronger technology teams and AI products (from social media content moderation, to communication training, to fabric designs, to fintech).</li></ul></div></p><p id="f6e2b011-be16-43b5-b550-055faea8d5f0" class="">
+</p><h2 id="100b74cb-769b-454b-a0d0-cae7dedbf24d" class="">Education</h2><table id="7a348a65-3215-4449-aef0-167ce3fab56a" class="simple-table"><tbody><tr id="3c901299-036e-4ab0-bb35-67bafd2d0393"><td id="OwFj" class="" style="width:220px"><strong>Princeton University</strong><br/>(2004-2010)<br/></td><td id="Knb&lt;" class="" style="width:541.9986877441406px"><strong>PhD</strong> - Psychology &amp; Neuroscience</td></tr><tr id="48600e8c-5cd9-4289-a42b-56c7a6835450"><td id="OwFj" class="" style="width:220px"><strong>Harvard University</strong><br/>(2002-2003)<br/></td><td id="Knb&lt;" class="" style="width:541.9986877441406px"><strong>visiting graduate student</strong>, <a href="https://www.frankknoxfellowships.org.uk/">Frank Knox Fellowship</a>, studying AI</td></tr><tr id="ee26ad8e-503d-45e8-af8f-78ea5ade0a66"><td id="OwFj" class="" style="width:220px"><strong>Oxford University</strong><br/>(1999-2002)<br/></td><td id="Knb&lt;" class="" style="width:541.9986877441406px"><strong>BA (1st-class Honours)</strong> - Philosophy, Psychology &amp; Physiology</td></tr></tbody></table><h2 id="56399c18-6a93-41e7-a970-d052043d78c3" class="">Employment</h2><table id="6b2d5793-bc2e-4f5c-b4b5-518725cb4f09" class="simple-table"><tbody><tr id="1a2c7359-14a8-4989-9a86-c7ca01f6040c"><td id="=~\&gt;" class="" style="width:143.1770782470703px"><a href="http://Memrise.comhttps://www.memrise.com/">Memrise.com</a><br/>(2008-2012; 2022)<br/></td><td id="Op_`" class="" style="width:511.9947509765625px"><strong>Co-founder</strong> of <a href="http://Memrise.com">Memrise.com</a>, now 70m users and a global brand (e.g. <a href="https://time.com/collection/worlds-top-edtech-companies-2024/">TIME world #2 EdTech company of 2024</a>, overall <a href="https://www.electronicsweekly.com/blogs/eyes-on-android/google-play/memrise-app-scoops-google-play-awards-2017-05/">Best App of Google Play Award 2017</a>).</td></tr><tr id="ef11d256-6e70-4cad-9153-fd9be6556790"><td id="=~\&gt;" class="" style="width:143.1770782470703px"><a href="https://www.channel4.com/press/news/c4-bolsters-consumer-insights-team-chief-data-scientist-hire">Channel 4</a><br/>(2016-2019)<br/></td><td id="Op_`" class="" style="width:511.9947509765625px"><strong>Chief Data Scientist</strong>, winners of <a href="https://www.dataiq.global/award-winner/dataiq-awards-2019-best-data-and-analytics-team-data-titan-channel-4-data-science-team/">DataIQ ‘Best data and analytics team of 2019’</a>.</td></tr><tr id="a7a65ece-0fc4-4a83-accb-fb4851f056ce"><td id="=~\&gt;" class="" style="width:143.1770782470703px"><a href="https://bighealth.com/">Big Health/Sleepio</a><br/>(2014-2016)<br/></td><td id="Op_`" class="" style="width:511.9947509765625px"><strong>Chief Technology Officer, Security &amp; Privacy</strong> - launched best-in-class <a href="http://sleepio.com/">Sleepio</a> digital mental health mobile app (featured by Apple as part of iOS 8 launch, reached #3 US iTunes Health &amp; Fitness), and built the team &amp; infrastructure to handle sensitive data for Fortune 50 clients.</td></tr><tr id="12c9e223-3ac6-4ba6-a510-284b724976e2"><td id="=~\&gt;" class="" style="width:143.1770782470703px"><a href="https://learn.filtered.com/">Filtered.com</a><br/>(2021-)<br/></td><td id="Op_`" class="" style="width:511.9947509765625px"><strong>Chief Product &amp; Technology Officer, Board Observer</strong>, using machine learning &amp; LLMs for enterprise Learning &amp; Development products.</td></tr><tr id="8af55215-5474-4daa-9683-eff40d3d4977"><td id="=~\&gt;" class="" style="width:143.1770782470703px"><a href="http://Rehearsable.aihttps://rehearsable.ai/">Rehearsable.ai</a><br/>(2023-)<br/></td><td id="Op_`" class="" style="width:511.9947509765625px"><strong>Part-time co-founder</strong>, using LLMs to teach difficult communication skills through roleplay and expert-level feedback.</td></tr><tr id="68e99b2e-3f57-471d-8585-6aecdc22ec95"><td id="=~\&gt;" class="" style="width:143.1770782470703px"><a href="https://makingdatamistakes.com/">Greg Detre Consulting Ltd</a><br/>(2019-)<br/></td><td id="Op_`" class="" style="width:511.9947509765625px"><strong>Technical advisor, coach, board member</strong> for some of the top companies in Europe - on AI and leadership.<br/><br/>Also: <br/><strong>Chief Technology Officer, Head of Data Science, Chief Product Officer, consultant data scientist</strong></td></tr></tbody></table><h1 id="810d1511-65af-45c2-8a57-c35836e0454a" class="">Research</h1><p id="961eacc7-3792-4032-8b9c-eb514987e991" class="">I left academia after my PhD at the <a href="https://compmem.princeton.edu/">Princeton Computational Memory Lab</a> in 2010. My <a href="https://scholar.google.com/citations?user=Ccx3bxYAAAAJ">H-index is 10</a>, with publications in <a href="https://pubmed.ncbi.nlm.nih.gov/16899397/">Trends in Cognitive Sciences</a> (2900 citations), <a href="https://scholar.google.co.uk/citations?view_op=view_citation&amp;hl=en&amp;user=Ccx3bxYAAAAJ&amp;citation_for_view=Ccx3bxYAAAAJ:u-x6o8ySG0sC">Artificial Intelligence</a>, and <a href="https://citeseerx.ist.psu.edu/document?repid=rep1&amp;type=pdf&amp;doi=247acb7e1756d28e5e68a8b39be396a51fe4b5ba">Neural Computation</a>.</p><p id="9b7d5739-6caa-481c-a434-0a8fce736e8c" class="">My work included <a href="https://blog.gregdetre.co.uk/2007/03/26/the-pittsburgh-ebc-competition/">DARPA prize-winning methods</a> for <a href="https://pubmed.ncbi.nlm.nih.gov/16899397/">mind-reading with machine learning on brain imaging</a>, development of a popular <a href="https://www.notion.so/Greg-Detre-6369118a6fa74ce2a42941e0b22245cc?pvs=21">open source toolbox for machine learning and brain imaging</a>, biologically-plausible <a href="https://citeseerx.ist.psu.edu/document?repid=rep1&amp;type=pdf&amp;doi=247acb7e1756d28e5e68a8b39be396a51fe4b5ba">neural network brain simulations and algorithm development</a>, <a href="https://blog.gregdetre.co.uk/research/weakening-memories-by-half-remembering-them/">human behavioural experiments on forgetting</a>, and various <a href="https://blog.gregdetre.co.uk/research/">other projects</a>.</p><p id="8211e649-7042-415f-9f64-419e9fa32357" class="">Also <a href="https://sjdm.org/history.html">co-winner of the Young Investigator Award</a> (Society for Judgment &amp; Decision-Making) for our <a href="https://www.sciencedirect.com/science/article/abs/pii/S0010027719301325">computational modelling work</a> on decision-making.</p><p id="e972b24a-35aa-4dee-989b-fcb7faa85728" class="">Links:</p><ul id="c7a61c5a-fcf3-4b53-8646-2a2ca0b9c851" class="bulleted-list"><li style="list-style-type:disc"><strong>Journals, book chapters and conference papers</strong>: see <a href="https://scholar.google.co.uk/citations?user=Ccx3bxYAAAAJ&amp;hl=en">Google Scholar</a>.</li></ul><ul id="86546d46-8ddd-404c-8e2d-ae1e14b21654" class="bulleted-list"><li style="list-style-type:disc"><strong>PhD thesis: </strong><em>Weakening memories by half-remembering them</em> (2010, advisor Prof Kenneth Norman, Princeton).</li></ul><ul id="89f683d7-a0c5-4272-a1db-5fc3b9748a4f" class="bulleted-list"><li style="list-style-type:disc"><strong>Teaching assistant</strong>: undergraduate classes on neural networks and psycholiguistics</li></ul><ul id="65822547-8ee7-4dde-8f04-84775ba986de" class="bulleted-list"><li style="list-style-type:disc"><strong>Training</strong>: ran my own informal courses and seminars for other graduate students on programming and computational methods.</li></ul><ul id="a853d7dc-b655-4289-813f-0fc8c4506f5c" class="bulleted-list"><li style="list-style-type:disc"><strong>Grants</strong>: Assisted on various multi-million dollar grants, for the Princeton Conte Centre, and Prof Ken Norman.</li></ul><h1 id="5a39e7d4-6902-4e86-bc10-0091d9d57b3e" class="">Skills</h1><table id="29d38147-527a-4407-99b6-8bbfa6061f3b" class="simple-table"><tbody><tr id="f152b85f-09ae-4a01-970e-e5ba6ec2bdbb"><td id="hic_" class="" style="width:136.8216094970703px"><mark class="highlight-default">LLMs, generative AI</mark></td><td id="pBOU" class="" style="width:542.6575317382812px">Multiple LLM-based projects, including language learning (Memrise), communication skills training through roleplay (Rehearsable.ai), social media content moderation (Unitary.ai), enterprise learning &amp; development (Filtered), advice in a regulated industry (fintech), and image search &amp; generation (for fabric design).<br/><br/>Complex prompt engineering, multimodal (text, images, voice, some video), human &amp; automated evals, red teaming, multi-agent architectures.<br/></td></tr><tr id="74f97eb0-fa6f-4cf3-bf0a-32de617fae93"><td id="hic_" class="" style="width:136.8216094970703px">Data science, scientific computing</td><td id="pBOU" class="" style="width:542.6575317382812px">Neural network learning algorithms, classification, regression, recommender systems, information retrieval, clustering, dimensionality reduction, statistics, signal processing, text &amp; image similarity search, visualisation, hyper-parameter optimisation.<br/><br/>Large datasets (billions of rows), multiple domains (including text, image, 3D vision, content moderation). Many tools (e.g. PyTorch, Scikit-learn, Pandas, Tidyverse, Matlab).<br/><br/>Design &amp; analysis of human behavioural &amp; brain imaging experiments.<br/></td></tr><tr id="959f8780-13a2-4c95-82e3-f98a491b288f"><td id="hic_" class="" style="width:136.8216094970703px">Software engineering &amp; architecture</td><td id="pBOU" class="" style="width:542.6575317382812px">Complex/scalable/robust production systems, rapid prototyping, re-platforming, continuous integration &amp; deployment, testing, delivery under pressure.<br/><br/>Python, Javascript, HTML/CSS, SQL, Matlab, C#, R, Clojure, Lisp, C/C++.<br/><br/>Full-stack web development, APIs, Linux sysadmin, Git, CI/CD and testing, cloud (AWS/GCP/Azure), database architecture &amp; administration (Postgres, MySQL, Sqlite).<br/></td></tr><tr id="60032d93-2431-4a06-a837-284cd18d97e2"><td id="hic_" class="" style="width:136.8216094970703px">Product management</td><td id="pBOU" class="" style="width:542.6575317382812px">Strategy, discovery interviews, analytics &amp; AB testing, gamification, project management with tight resources &amp; strict deadlines, prioritisation, Kanban/agile, pre/postmortems.</td></tr><tr id="c0063221-dd6c-4627-a006-c260741ef148"><td id="hic_" class="" style="width:136.8216094970703px">Business leadership</td><td id="pBOU" class="" style="width:542.6575317382812px">Multiple cofounder and leadership roles (CTO, CPO, CEO), senior advisor &amp; coach, devised company strategy and raised investment, built &amp; trained multiple teams from scratch to world-class level, expert at rescuing failing projects &amp; teams. Hired, managed, trained and mentored dozens of junior &amp; senior managers, engineers, data scientists, product managers, QA, and designers; on-site &amp; across continents.</td></tr><tr id="77dca5cb-0896-41cb-8cfa-e97ea72c5862"><td id="hic_" class="" style="width:136.8216094970703px">Communication &amp; training </td><td id="pBOU" class="" style="width:542.6575317382812px">Professional public speaker: technical &amp; non-technical; keynotes, after-dinner, conferences, panels.<br/><br/>Author of the <br/><a href="https://www.makingdatamistakes.com/">Making Data Mistakes</a> blog, on data science, management and software engineering. Podcast co-host of <a href="https://www.listennotes.com/podcasts/the-data-dig-the-data-dig-Fbr0m3zIl9U/">The Data Dig</a>, on data science in industry.<br/><br/>Mentoring &amp; coaching, from junior employees to startup C-suite.<br/><br/>Longitudinal team-wide training, on hard and soft skills.<br/></td></tr><tr id="62d24f87-23c5-46a1-9c0a-c9a90b5fa220"><td id="hic_" class="" style="width:136.8216094970703px">Information security, privacy</td><td id="pBOU" class="" style="width:542.6575317382812px">HIPAA, ISO 27001, GDPR. Risk Assessments.</td></tr></tbody></table><h1 id="3f75d4d5-b9bf-4fbd-b061-aca66fbf58f2" class="">Awards &amp; honours</h1><p id="ef105e5f-524d-4cd2-a974-9624f4cd27f6" class=""><em>DataIQ ‘Best data and analytics team’</em> (2019) and a half-dozen other awards at Channel 4.</p><p id="588bd881-4408-4b2d-bacb-cf6d2eb7036c" class=""><em>Hillel Einhorn Young Investigator Award</em> (2007), Society of Judgment &amp; Decision-Making, co-winner.</p><p id="f78295a8-7967-4510-8e6e-6d9a9bf290d9" class=""><em>Frank Knox Fellowship</em> (2002) for study at Harvard.</p><h1 id="40277119-c7e2-4ace-aff3-21275c5d88f7" class="">Personal interests</h1><p id="4f264d55-2ac1-4bbc-9303-a35f8bb1f0f7" class="">Improvisational drama, learning Greek, experiments in augmented intelligence, singing round a campfire.</p><h1 id="9cfe698f-3ec3-41c8-a45e-084d18f40192" class="">References</h1><p id="80e98e4e-29d0-40c6-ab67-b60a1595ba60" class="">Available upon request.</p><p id="33b786d2-55ea-4872-8aa8-a3ba71014bea" class="">
+</p><p id="0203de05-d2e1-4cd3-9f81-25a0ed48e255" class="">
+</p><p id="8eb295dd-fa80-4afc-ab82-aa2387438dad" class="">
+</p><h1 id="e1be1f8d-6f5b-446e-b162-1453a7e3c51c" class="">Highlighted projects and achievements</h1><h2 id="d7b1baa2-ca62-4bd9-945b-2dab69acfce1" class="">Keynote speaker, podcast host, blog author</h2><p id="1b43378b-cd96-4ebb-be41-ac4388127a57" class="">Keynote and conference speaker, including at various <a href="https://www.youtube.com/watch?v=4kcjH4v6yrQ">UK startup</a> and <a href="https://vimeo.com/857571701">venture capital events</a>, and after-dinner speaker for a Big 5 consultancy.</p><p id="fbd045e0-5b02-4dfd-81c9-58f46b354c08" class="">Author of the <a href="https://www.makingdatamistakes.com/">Making Data Mistakes</a> blog, on data science, management and software engineering.</p><p id="493539b6-34d9-45e0-a225-b95a9de36cf3" class="">Podcast co-host of <a href="https://www.listennotes.com/podcasts/the-data-dig-the-data-dig-Fbr0m3zIl9U/">The Data Dig</a>, on data science in industry.</p><h2 id="7b362141-a813-40e0-a214-6d24e50fa444" class="">Memrise LLM for language learning</h2><p id="694ae1d2-c269-4be8-931c-87a2d23330da" class="">Led development on the world’s first LLM-based language learning coach for Memrise, using the original GPT-3 API (in early 2022), multi-agent architecture, and custom human and automated evals/red-teaming.</p><p id="df880eb2-ce40-474e-947c-bb92824b3cd1" class="">Prompt engineering was difficult (before RLHF), so we ran AB tests with human evals to tune the results, plus automated evals (especially for protecting against malicious input). We also built a meta-prompt that generated other prompts, to produce a diverse range of content.</p><h2 id="9f2939cc-4e58-4128-abd7-64f2de3b8f1a" class="">Memrise adaptive learning algorithms</h2><p id="3653bd1a-be9c-43dd-a8c7-4444705ad10c" class="">Led design &amp; development of algorithms for highly effective human learning, incorporating user-generated mnemonics, the spacing effect, test-driven learning, and adaptive difficulty.</p><p id="beead1c1-1be2-47c0-b4c8-e3b53b0dd7f2" class="">Our algorithms worked for learning languages (from Japanese’s multiple alphabets, to Klingon), but also for everything from driving theory tests to birdsong. In informal testing, Memrise improved retention by an order of magnitude (compared with staring at a textbook), and was much more addictive.</p><h2 id="30887147-d176-4345-84b1-f800ff561215" class=""><strong>The </strong><strong><a href="http://www.csbmb.princeton.edu/mvpa/">Multi-Voxel Pattern Analysis</a></strong><strong> (MVPA) toolbox (2005-2010, scientific, open source)</strong></h2><p id="225f4e25-96db-4a47-ac5f-04017cd0ef6d" class="">In grad school, I led the development and maintenance of the popular <a href="http://www.csbmb.princeton.edu/mvpa/">Multi-Voxel Pattern Analysis Toolbox</a> (in Matlab) for analysing 4D fMRI neuroimaging data with multivariate and machine learning methods (such as sparse linear classifiers).</p><p id="6c7d9516-ea1c-4409-94b3-0701b8044397" class="">We developed a number of state-of-the-art methods, and at the time our toolbox was the most popular software for applying machine learning to brain imaging analysis, downloaded by hundreds of labs around the world, and featured in multiple publications.</p><h2 id="4abc79ee-dfb2-4867-85e9-c1ff2c6c750c" class=""><strong>Emacs Freex mode (2005-2007, open source, personal)</strong></h2><p id="ca82ab0d-5e03-4cf7-a57c-bbed2c87d8cd" class="">An Emacs mode for massively-hyperlinked database of notes and ideas. Various novel features that predate Roam and Obsidian by 20 years, including full transclusion, a combined hierarchical/tagging representational system, and auto-hyperlinking. Still in active use, by exactly one person in the world.</p><h1 id="49f1c449-eb6c-48d6-905b-a56f1f314d0c" class="">Employment</h1><h2 id="2f67d991-9350-47de-8f73-a312224c3184" class="">Greg Detre Consulting (2019-)</h2><p id="68fbb003-fce1-47b7-885b-e365e0bd7f49" class="">Applied machine learning expert, coach, board member, fractional CTO. Working with a mix of fast-growing startups and larger companies.</p><p id="2d1f8f19-148f-45e5-a45e-5541af46ab66" class="">Strategy &amp; coaching for C-suite leaders, data/AI/machine learning technical development, software architecture, improving processes &amp; hiring.</p><p id="ca84f914-9a2e-40f2-a3e8-f5b4a213fe6d" class="">Recently, I’ve focused on applying generative AI in novel ways, e.g. social media NSFW video content moderation, risk assessment for a highly-regulated fintech; pattern search &amp; generation for designers.</p><h2 id="380e5249-48d3-47bc-9188-f31cb6496393" class="">Rehearsable.ai (2023-), co-founder</h2><p id="8b8e98a8-89b7-42f5-93d8-2f5f8d3ccc6f" class="">Using LLMs for roleplay &amp; feedback to teach communication skills in the workplace.</p><h2 id="96607d8b-c641-493e-9a07-5e9141787c9e" class="">Filtered - Chief Product &amp; Technology Officer (2021-2022), Board Observer (2023-)</h2><p id="039a941c-761f-46e7-8de8-e7d34ff7ba44" class="">Led product, software, data, and information security teams through a major pivot into a new product category from prototyping to £2m ARR in under 2 years.</p><h2 id="e1f3e160-3c7d-49f7-9fbf-f5c3b73f0577" class="">Channel 4 - Chief Data Scientist (2016-2019)</h2><p id="6c67203f-d852-411a-8ef3-e81578e55729" class="">Led a dozen data scientists, with senior commercial &amp; creative stakeholders, running and building data products generating millions.</p><p id="0a6b0067-50ab-4e88-9669-ebe19f90ea7e" class="">Developed a flurry of new and prize-winning data products across advertising, personalisation and forecasting, highlighted by CEO and co-opted widely.</p><p id="3e2a3cc3-ecf7-42c2-b9b0-56dd09ee2f89" class="">Winners of DataIQ 2019 ‘Best data and analytics team’.</p><p id="f9422218-0c26-4408-aeed-2775006a6dcf" class="">Rebooted team culture; designed &amp; ran intensive and hugely successful internal training &amp; innovation programme; central role in major infrastructure re-development.</p><h2 id="1c93df59-014b-4c4b-a287-9c37a7efff47" class="">Big Health/Sleepio - Chief Technology Officer (2014-2016)</h2><p id="b273becc-ceba-4886-8948-e97bba44bc71" class="">Responsible for hiring, strategy and success of engineering team, technical architecture &amp; infrastructure, and data flows &amp; analysis. Led development of brand-new best-in-class sleep therapy iPhone app (featured by Apple as part of iOS 8 launch, reached #3 US iTunes Health &amp; Fitness).</p><p id="b3b16f79-0e0a-458b-bcab-b43d67acc7ed" class="">Multiple major rollouts to Fortune 50 &amp; 500 companies, all successful, culminating in $12m Series A from top investors in London &amp; Silicon Valley.</p><p id="1d8bec93-7f91-4c8f-b7ab-0d78dd21a714" class="">Replaced complex legacy codebase with a more scalable, secure and extensible API and infrastructure (without major downtime or disruption).</p><p id="856a7308-33fa-4c27-9be0-47a09079aed2" class="">As Security &amp; Privacy Officer, brought to full HIPAA compliance from scratch.</p><h2 id="917c6a24-650e-4e6f-a59c-5da088c2676f" class="">The Guardian - Consultant senior data scientist (2013)</h2><p id="8c4be72e-9be8-4d99-82bb-eb7f7639035f" class="">Advising senior management on data analysis &amp; strategy.</p><p id="14766c16-dc37-477b-ac7a-6934ebd9ee48" class="">Led a new team building large-scale data warehouse from scratch, developed novel machine learning approaches and tools to understand clusters of user behaviour, and to visualise large-scale content patterns.</p><h2 id="0e1d279b-9adf-4333-bf1e-82cd45ca1358" class="">Memrise.com co-founder, Chief Technology Officer (2008-2012; 2022)</h2><p id="b2bbe55d-c784-4b78-a112-ba1ea1a474c9" class="">Second-largest language learning app in the world (70 million users), featured in e.g. NY Times, Wired, BBC, Guardian.</p><p id="023e5786-3d7d-4575-a8b7-9f1cca69dac4" class="">Hired and managed a very successful technical team. Led the design and development of a novel, highly-effective platform for crowd-sourced vocabulary learning at scale, based on strong scientific evidence.</p><p id="e7f7b3b8-dd71-443d-9790-da63e18a6941" class="">In 2022, led on world-first application of LLMs to language learning, already used in millions of conversations.</p><p id="000003e0-c24d-4f4f-878d-2eb59c954465" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
