@@ -87,7 +87,15 @@ Greg Detre
 
 
 
-
+<p>Have you ever had trouble deciding where to store a file on your hard disk? Or worse, had trouble finding it later?</p>
+<p>When you store a file on your hard disk, you have to decide which folder to put it in. That folder can in turn live inside other folders. This results in a hierarchy, known in computer science as a *tree*.</p>
+<p>The main problem with trees is that sometimes you want things to live in multiple places.</p>
+<p>Tagging provides an alternate system. Tags are a lot like folders, except that things can belong to multiple tags. However, but the tags can't themselves belong to anything. So you have just one level of organisation with no nesting.</p>
+<p>The main problem with single-level tagging is that it's too simple. We want to be able to use fine-grained categories (e.g. 'lesser spotted greeb') that themselves belong to higher-level categories (e.g. 'greeb', or even 'bird' or 'animal'). But we said that tags can't themselves belong to tags.</p>
+<p>Described like this, perhaps the solution will seem obvious to you too. We want things to belong to multiple tags, and for those tags to sometimes belong to other tags.</p>
+<p>I built this into <a href="/software/freex/">Emacs Freex</a>, my note-taking system.</p>
+<p>For instance, I have tagged this blog post with '<a href="/tag/tagging">Tagging</a>' and '<a href="/software/freex/">Emacs Freex</a>'. In turn '<a href="/software/freex/">Emacs Freex</a>' is tagged with '<a href="/software/">Software</a>'. So I can find this blog post later in various ways, including by intersecting '<a href="/tag/tagging">Tagging</a>' and '<a href="/software/">Software</a>'.  </p>
+<p>This gives you the best of both worlds: things belong to multiple categories, along with a hierarchy of categories.</p>
 
 
 <br />
@@ -106,11 +114,11 @@ Greg Detre
 <h1>Belongs to these <a href="/tag">tags</a></h1>
 <ul>
     
-    <li><a href="/tag/organizing-knowledge.html">Organizing Knowledge</a></li>
-    
     <li><a href="/tag/tagging.html">Tagging</a></li>
     
     <li><a href="/software/freex/index.html">Emacs Freex</a></li>
+    
+    <li><a href="/tag/organising-knowledge.html">Organising Knowledge</a></li>
     
 </ul>
 
@@ -131,10 +139,16 @@ Greg Detre
 
             
 
+<p>
+    <i>
+        First published: 2013-Oct-29
+    </i>
+</p>
+
 
 <p>
     <i>
-        Last updated: 2024-Sep-29
+        Last updated: 2024-Oct-17
     </i>
 </p>
 
