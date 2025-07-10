@@ -4,15 +4,15 @@
 
 <head>
     <title>Redirecting...</title>
-    <link rel="canonical" href="/about/bio" />
+    <link rel="canonical" href="/about/bio/" />
     <meta charset="utf-8" />
-    <meta http-equiv="refresh" content="0; url=/about/bio" />
+    <meta http-equiv="refresh" content="0; url=/about/bio/" />
     <link rel="stylesheet" type="text/css" href="/static/css/base.css" />
 </head>
 
 <body>
     <p>Redirecting to
-        <a href="/about/bio">/about/bio</a>
+        <a href="/about/bio/">/about/bio/</a>
         - click if you are not
         redirected.
     </p>
