@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+
+    <title>
+
+Psychological illusions in AI-assisted programming -
+
+Greg Detre
+</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="gdwebgen" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Greg Detre's personal website" />
+    
+    <link rel="stylesheet" href="/static/css/base.css">
+    
+<link rel="canonical" href="https://www.gregdetre.com/blog/psychological-illusions-in-ai-assisted-programming">
+
+</head>
+
+<body>
+
+    
+    <div id="wide-img-header">
+        
+        <a href="/wide_img_header/IMG_5253.jpg">
+            <img src="/wide_img_header/IMG_5253_sm.jpg" />
+        </a>
+        
+    </div>
+    
+
+    
+<nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+        
+        
+        <li class="breadcrumb-item" title="Greg Detre">
+            
+            <a href="/">Greg Detre</a>
+            
+        </li>
+        
+        
+        
+        <li class="breadcrumb-item" title="Blog">
+            
+            <a href="/blog/">...</a>
+            
+        </li>
+        
+        
+        
+        <li class="breadcrumb-item" title="Psychological illusions in AI-assisted programming">
+            
+            <a href="/blog/psychological-illusions-in-ai-assisted-programming">Psychological Illusions In Ai-Assisted Programming</a>
+            
+        </li>
+        
+        
+    </ol>
+</nav>
+
+
+    
+    <div class="nav_menu" <p>
+        
+        <a href="/about">About</a>
+        
+        <a href="/blog">Blog</a>
+        
+        <a href="/consulting">Consulting</a>
+        
+        </p>
+    </div>
+    
+
+    <div id="main">
+        
+
+<h1>Psychological illusions in AI-assisted programming</h1>
+
+
+
+
+<p>What can psychology experiments tell us about programming with AI?</p>
+<p>When AI does the coding, we experience a variety of psychological effects and illusions that distort our sense of time passing, difficulty, effectiveness, and joy.</p>
+<h2 id="its-hard-to-judge-how-much-work-the-ai-did-for-us">It's hard to judge how much work the AI did for us</h2>
+<p>When the AI takes an hour to do something, with all the attendant dead-ends and back-and-forth, we don't have a clear sense of how long it would have taken us on our own. <a href="https://www.makingdatamistakes.com/why-were-bad-at-estimating-and-what-to-do-about-it/">We are bad at estimating how long it would have taken us to do</a>, and it's <a href="https://newsletter.pragmaticengineer.com/p/measuring-developer-productivity">particularly difficult to measure programming productivity</a> in a meaningful, reliable, comparable way that can't be gamed.</p>
+<p>When we watch the AI try and fail and iterate, we notice every dead end and false start. <em>"Gah, you've broken the unit tests again, you foolish robot!"</em> But when coding manually ourselves, we might make the same mistakes but experience them differently. We <a href="https://claude.ai/chat/1fefa77f-b834-4f10-abad-0ed3e76c86c9">aren't always good judges of how hard things are, what works for us and what doesn't, or reliable in comparing ourselves to others</a>. (For example, there's a lovely <a href="https://www.pnas.org/doi/10.1073/pnas.1821936116">psychology experiment where students feel they've learned less from active recall than passive review, even though active recall is actually more effective</a>.) And things always <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC1743746/">seem simpler after we have understood them</a>, so once we see the AI's solution, it seems obvious.</p>
+<p>So for all these reasons, expect to see a lot of people rationalising away even a 10x speedup (<a href="https://www.makingdatamistakes.com/ai-first-development/">1000+ lines of code in a day</a>, rather than <a href="https://www.perplexity.ai/search/how-many-lines-of-code-does-a-JStnps.URG.lO.1AClkOOw">&lt;100</a>). After all, <em>"<a href="https://www.goodreads.com/quotes/21810-it-is-difficult-to-get-a-man-to-understand-something">it is difficult to get a man to understand something, when his salary depends on his not understanding it</a>”</em> :~</p>
+<h1 id="context-change-and-feeling-of-duration">Context change, and feeling of duration</h1>
+<p>In an hour of AI-assisted programming, especially with multiple AI agents working in parallel, we might experience multiple distinct events, e.g. discussing ideas, exploring multiple approaches; hitting a dead end; reverting and try again; shipping a couple of small features. Each of these feels like a significant, distinct event.</p>
+<p>Our <a href="https://claude.ai/chat/dafd3c21-06bd-4271-8f06-9c4e2efe64b7">sense of time is heavily influenced by the number of distinct events or changes we experience</a>. As a result, an hour like this will feel longer than if we'd just been working on one, relatively undifferentiated problem. Even though you've accomplished more than you might have in a day of traditional coding.</p>
+<h1 id="being-knocked-out-of-flow">Being knocked out of flow</h1>
+<p>AI-assisted programming knocks us out of the <a href="https://en.wikipedia.org/wiki/Flow_(psychology)">"flow state"</a> - that magical zone of manageable-but-still-challenging where you lose track of time.</p>
+<p>Classic programming provides an almost instant feedback loop: write code, compile, see results, tweak, repeat. Each micro-adjustment feeds into that cycle.</p>
+<p>AI-assisted development breaks this pattern. Even a 10-second delay between your instruction and the AI's response can bump you out of flow. Watching the AI iterate feels like watching paint dry - even if it's actually drying in just a few moments.</p>
+<p>Eventually, the models will just output so fast that this problem will go away. In the meantime, it helps to run multiple agents in parallel, and switch each time the AI delays (see "<a href="https://www.makingdatamistakes.com/ai-first-development/">Optimise for correctness"</a>). Of course, this creates switch costs that need to be managed...</p>
+<h1 id="weakened-reinforcement">Weakened reinforcement</h1>
+<p><a href="https://umbrex.com/resources/tools-for-thinking/what-is-variable-rewards/">'Variable reinforcement'</a> is when you get some kind of reward or positive result <em>some</em> of the time. Like slot machines... or video games, or capricious bosses/partners, or email. This unpredictable signal creates <a href="https://blog.nateliason.com/p/rats-levers-parks">very robust addictive behaviours</a>.</p>
+<p>Programming has something of this character. Maybe <em>this time</em> when I hit 'compile', it'll work!</p>
+<p>But it's <a href="https://claude.ai/chat/4e99dc52-82dd-4ab8-a611-3bcc2d3a386e">less reinforcing to watch someone someone else get the reward</a> - so when the AI's the one pulling the lever and sometimes getting the cocaine, we miss out on the rush.</p>
+<h1 id="its-a-different-kind-of-work">It's a different kind of work</h1>
+<p>While AI reduces the mechanical effort of coding, it increases the cognitive demand of communication. You're constantly making implicit knowledge explicit:</p>
+<ul>
+<li>
+<p>Explaining background context</p>
+</li>
+<li>
+<p>Defining success criteria</p>
+</li>
+<li>
+<p>Articulating architectural principles</p>
+</li>
+<li>
+<p>Catching unstated assumptions</p>
+</li>
+</ul>
+<p>It's like the difference between driving a car (flow state, muscle memory) and teaching someone to drive (constant metacognition, explicit instruction).</p>
+<p>When AI is writing most of the code, you spend most of your time reading what it wrote, often being spread across various parts of the codebase, and trying to figure out how a series of scattered edits fit into a larger context. And reading code is much more effortful than writing it. I'm not 100% sure why. But it partly explains why it's so much more fun to build from a greenfield than to modify an existing system, and contributes to the illusion that it would be better to start from scratch and <a href="https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/">rewrite the whole damn thing</a>!</p>
+<p>Anybody know of any studies that would explain this?</p>
+<h1 id="the-importance-of-expertise">The importance of expertise</h1>
+<p>AI-assisted programming is a skill. It might even be a meta-skill, a skill about skills, like teaching or learning to learn. It is multiplied by your own mastery at the task, and your own clarity of thinking, and your own metacognition.</p>
+<p>We can expect various non-monotonicities, e.g.</p>
+<ul>
+<li>Junior programmers seem most positive about AI, because it levels the playing field for them. Senior programmers seem pretty positive, because their experience &amp; judgment enables them to make effective architecture decisions, without having to worry about semicolons), while mid-level programmers are most negative, because it threatens the craft and low-level skill on which their pride and economic value sit. see (<a href="https://www.wired.com/story/how-software-engineers-coders-actually-use-ai/">"Does experience affect attitude?"</a>)</li>
+</ul>
+<p><img alt="Does experience affect attitude" src="/blog/images/does_experience_affect_attitude.png"/></p>
+<ul>
+<li>This is part of what I'd guess explains the apparent <a href="https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/"><em>drop</em> in productivity when using AI tools in a recent (mid-2025) study</a>. Expert AI-assisted programming will involve <a href="https://www.makingdatamistakes.com/ai-first-development/">un-learning a lot of existing behaviours, and replacing them with new ones</a>.</li>
+</ul>
+<h1 id="where-does-this-leave-us">Where does this leave us?</h1>
+<p>Even despite all this, I have started to experience a new kind of flow working with AI too. When the context is well-defined, and the guardrails are protective, then the speed at which dreams transform into working code can feel like magic. The impedance between imagination and implementation drops dramatically.</p>
+<p>As AI models get faster and we develop better workflows, we might find a sweet spot that combines this new superpower with the satisfying flow of traditional programming. Until then, we're learning to appreciate a different kind of satisfaction: not the micro-dopamine hits of instant feedback, but the macro-achievements of watching our ideas materialise at unprecedented speed.</p>
+
+
+
+
+        
+
+
+
+        
+
+
+
+        
+
+
+
+        
+
+
+
+    </div>
+    <footer>
+        <div class="bottom_nav">
+            
+
+            
+
+<p>
+    <i>
+        First published: 2025-Aug-05
+    </i>
+</p>
+
+
+<p>
+    <i>
+        Last updated: 2025-Aug-05
+    </i>
+</p>
+
+
+        </div>
+    </footer>
+</body>
+
+</html>
