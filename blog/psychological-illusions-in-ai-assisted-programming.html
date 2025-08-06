@@ -6,7 +6,7 @@
 
     <title>
 
-Psychological illusions in AI-assisted programming -
+Psychological effects and illusions in AI-assisted programming -
 
 Greg Detre
 </title>
@@ -55,9 +55,9 @@ Greg Detre
         
         
         
-        <li class="breadcrumb-item" title="Psychological illusions in AI-assisted programming">
+        <li class="breadcrumb-item" title="Psychological effects and illusions in AI-assisted programming">
             
-            <a href="/blog/psychological-illusions-in-ai-assisted-programming">Psychological Illusions In Ai-Assisted Programming</a>
+            <a href="/blog/psychological-illusions-in-ai-assisted-programming">Psychological Effects And Illusions In Ai-Assisted Programming</a>
             
         </li>
         
@@ -82,20 +82,22 @@ Greg Detre
     <div id="main">
         
 
-<h1>Psychological illusions in AI-assisted programming</h1>
+<h1>Psychological effects and illusions in AI-assisted programming</h1>
 
 
 
 
-<p>What can psychology experiments tell us about programming with AI?</p>
-<p>When AI does the coding, we experience a variety of psychological effects and illusions that distort our sense of time passing, difficulty, effectiveness, and joy.</p>
+<p>There's something odd and new about the subjective experience of AI-assisted programming. It distorts our sense of time passing, difficulty, effectiveness, and joy.</p>
+<p>Some of these are well-known psychological effects and illusions, and the psychological theories behind them can help us understand a bit better what's going on.</p>
 <h2 id="its-hard-to-judge-how-much-work-the-ai-did-for-us">It's hard to judge how much work the AI did for us</h2>
-<p>When the AI takes an hour to do something, with all the attendant dead-ends and back-and-forth, we don't have a clear sense of how long it would have taken us on our own. <a href="https://www.makingdatamistakes.com/why-were-bad-at-estimating-and-what-to-do-about-it/">We are bad at estimating how long it would have taken us to do</a>, and it's <a href="https://newsletter.pragmaticengineer.com/p/measuring-developer-productivity">particularly difficult to measure programming productivity</a> in a meaningful, reliable, comparable way that can't be gamed.</p>
-<p>When we watch the AI try and fail and iterate, we notice every dead end and false start. <em>"Gah, you've broken the unit tests again, you foolish robot!"</em> But when coding manually ourselves, we might make the same mistakes but experience them differently. We <a href="https://claude.ai/chat/1fefa77f-b834-4f10-abad-0ed3e76c86c9">aren't always good judges of how hard things are, what works for us and what doesn't, or reliable in comparing ourselves to others</a>. (For example, there's a lovely <a href="https://www.pnas.org/doi/10.1073/pnas.1821936116">psychology experiment where students feel they've learned less from active recall than passive review, even though active recall is actually more effective</a>.) And things always <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC1743746/">seem simpler after we have understood them</a>, so once we see the AI's solution, it seems obvious.</p>
+<p>When the AI takes an hour to do something, with all the attendant dead-ends and back-and-forth, it's hard to know how effective it has been.</p>
+<p>In general, it's <a href="https://newsletter.pragmaticengineer.com/p/measuring-developer-productivity">very difficult to objectively measure programming productivity</a> , and <a href="https://www.makingdatamistakes.com/why-were-bad-at-estimating-and-what-to-do-about-it/">we are bad at estimating how long it would have taken us to do</a>.</p>
+<p>When we watch the AI try and fail and iterate, we notice every failure and false start along the way. <em>"Gah, you've broken the unit tests again, you foolish robot!"</em> But when coding manually ourselves, we might make the same mistakes but experience them differently. Maybe this is a case of the <a href="https://en.wikipedia.org/wiki/Fundamental_attribution_error">fundamental attribution error</a>, that we see our own actions as contextualised by the situation, whereas we're more likely to attribute permanent 'dispositions' to others based on their actions. Or a little darker, that we use a <a href="https://pubmed.ncbi.nlm.nih.gov/2266485/">victim vs perpetrator narrative</a>: we use a 'perpetrator' narrative for our own mistakes (meaningful and comprehensible, with the incident as a closed, isolated event with no lasting implications) and a 'victim' narrative for the AI's mistakes (seeing the actions as arbitrary and incomprehensible, and portraying the incident in a long-term context with continuing harm and lasting grievances).</p>
+<p>We <a href="https://claude.ai/chat/1fefa77f-b834-4f10-abad-0ed3e76c86c9">aren't always good judges of how hard things are, what works for us and what doesn't, or reliable in comparing ourselves to others</a>. (For example, there's a lovely <a href="https://www.pnas.org/doi/10.1073/pnas.1821936116">psychology experiment where students feel they've learned less from active recall than passive review, even though active recall is actually more effective</a>.) And things always <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC1743746/">seem simpler after we have understood them</a>, so once we see the AI's solution, it seems obvious.</p>
 <p>So for all these reasons, expect to see a lot of people rationalising away even a 10x speedup (<a href="https://www.makingdatamistakes.com/ai-first-development/">1000+ lines of code in a day</a>, rather than <a href="https://www.perplexity.ai/search/how-many-lines-of-code-does-a-JStnps.URG.lO.1AClkOOw">&lt;100</a>). After all, <em>"<a href="https://www.goodreads.com/quotes/21810-it-is-difficult-to-get-a-man-to-understand-something">it is difficult to get a man to understand something, when his salary depends on his not understanding it</a>”</em> :~</p>
 <h1 id="context-change-and-feeling-of-duration">Context change, and feeling of duration</h1>
 <p>In an hour of AI-assisted programming, especially with multiple AI agents working in parallel, we might experience multiple distinct events, e.g. discussing ideas, exploring multiple approaches; hitting a dead end; reverting and try again; shipping a couple of small features. Each of these feels like a significant, distinct event.</p>
-<p>Our <a href="https://claude.ai/chat/dafd3c21-06bd-4271-8f06-9c4e2efe64b7">sense of time is heavily influenced by the number of distinct events or changes we experience</a>. As a result, an hour like this will feel longer than if we'd just been working on one, relatively undifferentiated problem. Even though you've accomplished more than you might have in a day of traditional coding.</p>
+<p>Our <a href="https://claude.ai/chat/dafd3c21-06bd-4271-8f06-9c4e2efe64b7">sense of time is heavily influenced by the number of distinct events or changes we experience</a>. As a result, an hour spent like this will <em>feel</em> like it lasts longer than if we'd just been working on a single, undifferentiated problem. Even though you've accomplished more than you might have in a day of traditional coding.</p>
 <h1 id="being-knocked-out-of-flow">Being knocked out of flow</h1>
 <p>AI-assisted programming knocks us out of the <a href="https://en.wikipedia.org/wiki/Flow_(psychology)">"flow state"</a> - that magical zone of manageable-but-still-challenging where you lose track of time.</p>
 <p>Classic programming provides an almost instant feedback loop: write code, compile, see results, tweak, repeat. Each micro-adjustment feeds into that cycle.</p>
@@ -124,15 +126,20 @@ Greg Detre
 <p>It's like the difference between driving a car (flow state, muscle memory) and teaching someone to drive (constant metacognition, explicit instruction).</p>
 <p>When AI is writing most of the code, you spend most of your time reading what it wrote, often being spread across various parts of the codebase, and trying to figure out how a series of scattered edits fit into a larger context. And reading code is much more effortful than writing it. I'm not 100% sure why. But it partly explains why it's so much more fun to build from a greenfield than to modify an existing system, and contributes to the illusion that it would be better to start from scratch and <a href="https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/">rewrite the whole damn thing</a>!</p>
 <p>Anybody know of any studies that would explain this?</p>
-<h1 id="the-importance-of-expertise">The importance of expertise</h1>
+<h1 id="a-new-kind-of-skill">A new kind of skill</h1>
 <p>AI-assisted programming is a skill. It might even be a meta-skill, a skill about skills, like teaching or learning to learn. It is multiplied by your own mastery at the task, and your own clarity of thinking, and your own metacognition.</p>
 <p>We can expect various non-monotonicities, e.g.</p>
 <ul>
-<li>Junior programmers seem most positive about AI, because it levels the playing field for them. Senior programmers seem pretty positive, because their experience &amp; judgment enables them to make effective architecture decisions, without having to worry about semicolons), while mid-level programmers are most negative, because it threatens the craft and low-level skill on which their pride and economic value sit. see (<a href="https://www.wired.com/story/how-software-engineers-coders-actually-use-ai/">"Does experience affect attitude?"</a>)</li>
+<li><strong>Seniority</strong>: Junior programmers seem most positive about AI, because it levels the playing field for them. Senior programmers seem pretty positive, because their experience &amp; judgment enables them to make effective architecture decisions, without having to worry about semicolons), while mid-level programmers are most negative, because it threatens the craft and low-level skill on which their pride and economic value sit. see (<a href="https://www.wired.com/story/how-software-engineers-coders-actually-use-ai/">"Does experience affect attitude?"</a>)</li>
 </ul>
 <p><img alt="Does experience affect attitude" src="/blog/images/does_experience_affect_attitude.png"/></p>
 <ul>
-<li>This is part of what I'd guess explains the apparent <a href="https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/"><em>drop</em> in productivity when using AI tools in a recent (mid-2025) study</a>. Expert AI-assisted programming will involve <a href="https://www.makingdatamistakes.com/ai-first-development/">un-learning a lot of existing behaviours, and replacing them with new ones</a>.</li>
+<li>
+<p><strong>Expertise</strong>: This is part of what I'd guess explains the apparent <a href="https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/"><em>drop</em> in productivity when using AI tools in a recent (mid-2025) study</a>. Expert AI-assisted programming will involve <a href="https://www.makingdatamistakes.com/ai-first-development/">un-learning a lot of existing behaviours &amp; skills, and replacing them with new ones</a>.</p>
+</li>
+<li>
+<p><strong>Verbal</strong>: We may find that the best AI-assisted programmers have different skillsets from the best human-only programmers. We may find that teachers and managers and other expert communicators are at a huge advantage.</p>
+</li>
 </ul>
 <h1 id="where-does-this-leave-us">Where does this leave us?</h1>
 <p>Even despite all this, I have started to experience a new kind of flow working with AI too. When the context is well-defined, and the guardrails are protective, then the speed at which dreams transform into working code can feel like magic. The impedance between imagination and implementation drops dramatically.</p>
@@ -166,14 +173,14 @@ Greg Detre
 
 <p>
     <i>
-        First published: 2025-Aug-05
+        First published: 2025-Aug-06
     </i>
 </p>
 
 
 <p>
     <i>
-        Last updated: 2025-Aug-05
+        Last updated: 2025-Aug-06
     </i>
 </p>
 
