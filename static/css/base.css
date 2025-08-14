@@ -193,6 +193,17 @@ li {
     margin-bottom: 0.3em;
 }
 
+/* Inline tag list next to titles in folder listings */
+.tags-inline {
+    font-size: 0.8em;
+    font-variant: all-small-caps;
+    color: var(--light-grey-text);
+}
+
+.tags-inline .tag-link {
+    /* Inherit the standard link styles (mauve) from global a{} rules */
+}
+
 /* Code */
 code {
     font-family: 'Courier New', Courier, monospace;
