@@ -193,6 +193,29 @@ li {
     margin-bottom: 0.3em;
 }
 
+/* Star indicator for starred posts in folder listings */
+#post-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+#post-list li {
+    position: relative;
+    padding-left: 20px;
+}
+
+#post-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--highlight-colour-darker);
+}
+
+#post-list li[data-starred="1"]::before {
+    content: "★";
+    color: var(--highlight-colour);
+}
+
 /* Tag list on separate line in folder listings */
 .tags-inline {
     font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;

@@ -31,6 +31,23 @@
             case 'modified_desc':
                 comparator = by((el) => parseIntAttr(el, 'data-modified'), 'desc');
                 break;
+            case 'words_desc':
+                comparator = by((el) => parseIntAttr(el, 'data-words'), 'desc');
+                break;
+            case 'words_asc':
+                comparator = by((el) => parseIntAttr(el, 'data-words'), 'asc');
+                break;
+            case 'starred_first':
+                // starred=1 should come first; then fall back to date desc
+                comparator = function (a, b) {
+                    const sa = parseIntAttr(a, 'data-starred');
+                    const sb = parseIntAttr(b, 'data-starred');
+                    if (sa !== sb) return sb - sa; // 1 before 0
+                    const da = parseIntAttr(a, 'data-date');
+                    const db = parseIntAttr(b, 'data-date');
+                    return db - da;
+                };
+                break;
             case 'date_desc':
             default:
                 comparator = by((el) => parseIntAttr(el, 'data-date'), 'desc');
@@ -52,7 +69,7 @@
         const params = new URLSearchParams(window.location.search);
         const qp = params.get('sort');
         if (qp) {
-            const allowed = new Set(['date_desc', 'date_asc', 'alpha', 'alpha_desc', 'modified_desc']);
+            const allowed = new Set(['date_desc', 'date_asc', 'alpha', 'alpha_desc', 'modified_desc', 'words_desc', 'words_asc', 'starred_first']);
             if (allowed.has(qp)) {
                 select.value = qp;
             }
