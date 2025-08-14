@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+
+    <title>
+
+What new developments will we need for personalised, relevant one-to-one AI tutoring? -
+
+Greg Detre
+</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="gdwebgen" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Greg Detre's personal website" />
+    
+    <link rel="stylesheet" href="/static/css/base.css">
+    
+<link rel="canonical" href="https://www.gregdetre.com/blog/what-new-developments-will-we-need-for-personalised-relevant-one-to-one-ai-tutoring">
+
+</head>
+
+<body>
+
+    
+    <div id="wide-img-header">
+        
+        <a href="/wide_img_header/IMG_5253.jpg">
+            <img src="/wide_img_header/IMG_5253_sm.jpg" />
+        </a>
+        
+    </div>
+    
+
+    
+<nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+        
+        
+        <li class="breadcrumb-item" title="Greg Detre">
+            
+            <a href="/">Greg Detre</a>
+            
+        </li>
+        
+        
+        
+        <li class="breadcrumb-item" title="Blog">
+            
+            <a href="/blog/">Blog</a>
+            
+        </li>
+        
+        
+        
+        <li class="breadcrumb-item" title="What new developments will we need for personalised, relevant one-to-one AI tutoring?">
+            
+            <a href="/blog/what-new-developments-will-we-need-for-personalised-relevant-one-to-one-ai-tutoring">What New Developments Will ...</a>
+            
+        </li>
+        
+        
+    </ol>
+</nav>
+
+
+    
+    <div class="nav_menu" <p>
+        
+        <a href="/about">About</a>
+        
+        <a href="/blog">Blog</a>
+        
+        <a href="/consulting">Consulting</a>
+        
+        </p>
+    </div>
+    
+
+    <div id="main">
+        
+
+<h1>What new developments will we need for personalised, relevant one-to-one AI tutoring?</h1>
+
+
+
+
+<p>In <a href="https://en.wikipedia.org/wiki/Bloom%27s_2_sigma_problem">"The 2 Sigma Problem"</a>, Bloom suggested that one-to-one tutoring could provide a phenomenal boost to students' learning. Maybe it's <a href="https://www.educationnext.org/two-sigma-tutoring-separating-science-fiction-from-science-fact/">not <em>quite</em> as big an effect as he suggested</a>, but I'm still willing to bet that the combination of personalisation, relevance, engagement, adaptive difficulty, and other benefits of one-to-one tutoring do make a huge difference, and at least some of them can be captured by generative AI. But even if we thought we did have a better approach, how could we be sure?</p>
+<p>I'll try and tackle both sets of questions.</p>
+<h1 id="developing-better-models">Developing better models</h1>
+<h2 id="a-teacher-model-thats-personalised-and-relevant">A teacher model that's personalised and relevant</h2>
+<p>Let's focus on the question of how we might make a teacher model that provides very personalised, relevant tutoring to the student.</p>
+<p>Relevance is rich and hierarchical: the environment, the task or context that the student is learning about right now, this particular course, their previous learning and progress, the history of interactions with the teacher, the language, the country they live in, recent news, macro changes, etc. All of these contextualise our learning.</p>
+<p>This kind of rich, hierarchical, many-faceted personalisation presents challenges for a single gigantic, fixed model, such as an LLM.</p>
+<p><em>Maybe</em> we can get away with just prompt engineering, feeding in an enormous dump of data about learner goals, preferences, and previous interactions, and rely on ever-larger context windows and more instructable models.</p>
+<p>But I’m pessimistic about whether prompt engineering alone is enough for fine-grained, subtle, creative, optimal relevance and personalisation.</p>
+<p>Firstly, there's the challenge of fitting all the necessary background into the model's context window <a href="https://www.dbreunig.com/2025/06/22/how-contexts-fail-and-how-to-fix-them.html">without overwhelming or confusing it</a>.</p>
+<p>Secondly, LLMs struggle with prompts that tug against their pretraining. For example, at <a href="https://rehearsable.ai/">Rehearsable.ai</a>, it proved intractable to prompt-engineer GPT-4 to reliably and subtly follow a particular negotiation skills approach that flew in the face of the common advice found on the internet.</p>
+<p>In the short-run, perhaps we can imagine hierarchies of LORA-style fine-tuning that can be layered on top of one another, for student, exam board, culture, etc. But my bet is that eventually the best AI teachers will learn too, alongside and about their students.</p>
+<h2 id="an-explicit-model-of-the-student">An explicit model of the student</h2>
+<p>Perhaps we also need to go beyond a single, main teacher model. Could it help to represent the learner with an explicit (separate?) model that assists the primary teacher model? To train such a model of the learner, we could train it to predict the learner’s behaviour, e.g. the answers they are giving, and the questions they are asking. We might then probe this model of the learner, to ask “How would the learner respond if we asked them this question?”, or to look at how it has changed over time to measure “Has the learner’s understanding of Topic X improved?”.</p>
+<p>With such a model of the learner’s behaviour, we could run <a href="https://medium.com/@_michelangelo_/monte-carlo-tree-search-mcts-algorithm-for-dummies-74b2bae53bfa">Monte-Carlo Tree Search</a> or similar to simulate the effect of different teacher interventions, and pick the one that we believe will best help improve the learner’s eventual performance. In this way, we can consider relevance as exactly the content that <em>this</em> learner needs right now, in order to pass their particular exam, or indeed to unstick their current confusion. A rich model of the learner could help with choosing or generating particular problems that will help them see how to apply a new concept, develop the skill they’re missing, or correct a misconception. It could involve judicious examples, or analogies, or counter-examples.</p>
+<p>So, future AI one-to-one tutoring might involve both custom teacher <em>and</em> custom student models.</p>
+
+
+
+
+        
+
+
+
+        
+
+
+
+        
+
+
+
+        
+
+
+
+    </div>
+    <footer>
+        <div class="bottom_nav">
+            
+
+            
+
+<p>
+    <i>
+        First published: 2025-Aug-09
+    </i>
+</p>
+
+
+<p>
+    <i>
+        Last updated: 2025-Aug-06
+    </i>
+</p>
+
+
+        </div>
+    </footer>
+</body>
+
+</html>
