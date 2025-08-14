@@ -237,10 +237,13 @@ li {
 
 /* Excerpt styling for list views */
 .excerpt {
-    max-width: 550px;
-    margin: 4px auto 0 auto;
+    max-width: 530px;
+    margin: 8px auto 0 auto;
+    padding-left: 20px;  /* Align with tags */
     font-size: 0.95em;
-    color: #bbb;
+    font-style: italic;
+    color: #d0d0d0;  /* Slightly brighter for better readability */
+    line-height: 1.4;
 }
 
 /* Compact inline dates for folder listings */
