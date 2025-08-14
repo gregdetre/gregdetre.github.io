@@ -462,3 +462,48 @@ blockquote {
 .sibling-nav-bottom {
     margin-top: 20px;
 }
+
+/* Sort controls for folder listings */
+.sort-controls {
+    max-width: 550px;
+    margin: 2em auto 1.5em auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+    font-size: 0.9em;
+}
+
+.sort-controls label {
+    color: var(--light-grey-text);
+    font-variant: all-small-caps;
+    font-weight: 300;
+}
+
+.sort-controls select {
+    background-color: #222;
+    color: var(--almost-white);
+    border: 1px solid #444;
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-size: 0.95em;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.sort-controls select:hover {
+    border-color: var(--highlight-colour);
+    background-color: #2a2a2a;
+}
+
+.sort-controls select:focus {
+    outline: none;
+    border-color: var(--highlight-colour);
+    box-shadow: 0 0 0 2px rgba(199, 180, 248, 0.2);
+}
+
+.sort-controls noscript {
+    color: #666;
+    font-style: italic;
+}
