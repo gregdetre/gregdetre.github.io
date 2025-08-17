@@ -276,6 +276,33 @@ li {
     cursor: help;
 }
 
+/* Feed icon link (compact, inline, consistent with theme) */
+.feed-links {
+    max-width: var(--content-width);
+    margin: 8px auto 12px auto;
+    text-align: left;
+}
+
+.feed-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border: none;
+    margin-left: 0;
+}
+
+.feed-icon svg {
+    width: 18px;
+    height: 18px;
+    fill: var(--highlight-colour);
+}
+
+.feed-icon:hover svg {
+    fill: var(--hover-highlight-colour);
+}
+
 /* Show tags more clearly on hover */
 li:hover .tags-inline {
     opacity: 1;
