@@ -221,15 +221,22 @@ li {
 }
 
 #post-list li::before {
-    content: "•";
+    content: "";
     position: absolute;
     left: 0;
-    color: var(--highlight-colour-darker);
+    width: 10px;
+    height: 10px;
+    background-color: var(--highlight-colour-darker);
+    border-radius: 50%;
+    top: 0.6em;
 }
 
 #post-list li[data-starred="1"]::before {
-    content: "★";
-    color: var(--highlight-colour);
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: var(--highlight-colour);
+    border-radius: 50%;
 }
 
 /* Tag list on separate line in folder listings */
@@ -353,9 +360,22 @@ img {
 }
 
 .external-badge {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     margin-left: 6px;
     vertical-align: middle;
+    width: 16px;
+    height: 16px;
+    background: #222;
+    border: 1px solid #444;
+    border-radius: 4px;
+}
+
+.external-badge .external-favicon {
+    margin: 0;
+    width: 12px;
+    height: 12px;
 }
 
 /* Links */
