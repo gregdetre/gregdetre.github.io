@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+
+    <title>
+
+WriteRoom? DarkRoom? MushRoom! -
+
+Greg Detre
+</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="gdwebgen" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Greg Detre's personal website" />
+    
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/blog/rss.xml">
+    
+    <meta property="og:site_name" content="Greg Detre" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:site" content="Greg Detre" />
+    <link rel="stylesheet" href="/static/css/base.css">
+    
+<link rel="canonical" href="https://www.gregdetre.com/blog/writeroom-darkroom-mushroom/">
+
+<meta name="description" content="Why build yet another "distraction-free" text editor when Emacs already has undo/redo and full-screen capabilities? Here's a simple function that outperforms WriteRoom's expensive alternatives." />
+<meta property="og:description" content="Why build yet another "distraction-free" text editor when Emacs already has undo/redo and full-screen capabilities? Here's a simple function that outperforms WriteRoom's expensive alternatives." />
+<meta name="twitter:description" content="Why build yet another "distraction-free" text editor when Emacs already has undo/redo and full-screen capabilities? Here's a simple function that outperforms WriteRoom's expensive alternatives." />
+
+<meta property="og:title" content="WriteRoom? DarkRoom? MushRoom!" />
+<meta name="twitter:title" content="WriteRoom? DarkRoom? MushRoom!" />
+<meta property="og:url" content="https://www.gregdetre.com/blog/writeroom-darkroom-mushroom/" />
+<meta name="twitter:card" content="summary" />
+
+</head>
+
+<body>
+
+    
+    <div id="wide-img-header">
+        
+        <a href="/wide_img_header/IMG_5253.jpg">
+            <img src="/wide_img_header/IMG_5253_sm.jpg" />
+        </a>
+        
+    </div>
+    
+
+    
+<nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+        
+        
+        <li class="breadcrumb-item" title="Greg Detre">
+            
+            <a href="/">Greg Detre</a>
+            
+        </li>
+        
+        
+        
+        <li class="breadcrumb-item" title="Blog">
+            
+            <a href="/blog/">Blog</a>
+            
+        </li>
+        
+        
+        
+        <li class="breadcrumb-item" title="WriteRoom? DarkRoom? MushRoom!">
+            
+            <a href="/blog/writeroom-darkroom-mushroom/">Writeroom? Darkroom? Mushroom!</a>
+            
+        </li>
+        
+        
+    </ol>
+</nav>
+
+
+    
+    <div class="nav_menu" <p>
+        
+        <a href="/about">About</a>
+        
+        <a href="/blog">Blog</a>
+        
+        <a href="/consulting">Consulting</a>
+        
+        </p>
+    </div>
+    
+
+    <div id="main">
+        
+
+<nav class="sibling-nav sibling-nav-top" aria-label="Page navigation">
+    
+    <a class="prev" href="/blog/pyepl-blog/"
+        title="Previous — PyEPL blog — sorted by date (newest first)">&#x2190;</a>
+    
+    
+    <a class="up" href="/blog/"
+        title="Up — Blog">&#x2191;</a>
+    
+    
+    <a class="next" href="/blog/switching-from-linux-to-mac/"
+        title="Next — Switching from Linux to Mac — sorted by date (newest first)">&#x2192;</a>
+    
+</nav>
+
+
+<hr />
+
+
+<h1>WriteRoom? DarkRoom? MushRoom!</h1>
+
+
+
+
+
+
+<p>Mark Pilgrim <a href="http://diveintomark.org/archives/2007/01/21/wrongroom">said it best</a>:  </p>
+<blockquote>
+<p>I’ve been peripherally following the latest fad of full-screen “writing-focused” text editors. Here’s what I’ve learned so far: in the beginning, there was <a href="http://hogbaysoftware.com/products/writeroom">WriteRoom</a> (Mac OS X, $24.95). WriteRoom is “just about you and your text.” WriteRoom begat <a href="http://they.misled.us/dark-room">DarkRoom</a> (Windows + .NET, $0), which is also “just about you and your text” but requires a 22 MB runtime environment. DarkRoom begat <a href="http://www.codealchemists.com/jdarkroom/">JDarkRoom</a> (Java, $0), which is just about you, your text, and somebody else’s multi-megabyte runtime environment.  </p>
+<p>Here’s the basic problem: you’re writing a text editor. Stop doing that. It’s 2007. Saying to yourself “I’m gonna build my own text editor” is as silly as saying “I’m gonna build my own build system” or “I’m gonna build my own amusement park.”  </p>
+<p>Reading the change logs of these programs is like traveling back in time. Way back. Latest changes in JDarkRoom 8: Undo / Redo. Seriously. Version 8, and they now support undo. No offense, but what the fuck?  </p>
+</blockquote>
+<p>Anyway, so I had a nose around, and it turns out that Emacs has both undo/redo and very capable full screen capabilities. The <a href="http://www.emacswiki.org/cgi-bin/wiki/WriteRoom">EmacsWiki</a> includes the following function, which I've renamed from 'write-room' and tweaked a little for the mac:  </p>
+<blockquote>
+<p>;; http://www.emacswiki.org/cgi-bin/wiki/WriteRoom  </p>
+<p>(defun mush-room ()  </p>
+<p>"Make a frame without any bling"  </p>
+<p>(interactive)  </p>
+<p>(let* ((frame (make-frame '(;; (minibuffer . nil)  </p>
+<p>(vertical-scroll-bars . nil)  </p>
+<p>(left-fringe . 235); big fringe to center  </p>
+<p>(right-fringe . 160)  </p>
+<p>(background-mode . dark)  </p>
+<p>(background-color . "black")  </p>
+<p>(foreground-color . "green")  </p>
+<p>(cursor-color . "green")  </p>
+<p>(border-width . 0)  </p>
+<p>(border-color . "black"); should be unnecessary  </p>
+<p>(internal-border-width . 20) ; whitespace  </p>
+<p>(cursor-type . box)  </p>
+<p>(menu-bar-lines . 0)  </p>
+<p>(tool-bar-lines . 0)  </p>
+<p>(mode-line-format . nil); dream on... has no effect  </p>
+<p>(fullscreen . t); does not work on all systems  </p>
+<p>(unsplittable . t)))))  </p>
+<p>(select-frame frame)  </p>
+<p>(setq mode-line-format nil); is buffer local unfortunately  </p>
+<p>(set-face-background 'fringe "black")  </p>
+<p>(set-frame-font gjd-gin-font)  </p>
+<p>(mac-toggle-max-window)))  </p>
+</blockquote>
+<p>I've also added the following auxiliary bits and bobs to make this work well:  </p>
+<blockquote>
+<p>(setf gjd-gin-font "-apple-courier ce-medium-r-normal--18-180-72-72-m-180-mac-centraleurroman")  </p>
+<p>(defun unfullscreen ()  </p>
+<p>(interactive)  </p>
+<p>;; restores mode line  </p>
+<p>(setq mode-line-format (default-value 'mode-line-format))  </p>
+<p>(set-face-background 'fringe "grey95")  </p>
+<p>)  </p>
+<p>(defun delete-frame-and-unfullscreen ()  </p>
+<p>(interactive)  </p>
+<p>(delete-frame)  </p>
+<p>(unfullscreen))  </p>
+<p>(global-set-key "\M-w" 'delete-frame-and-unfullscreen)  </p>
+</blockquote>
+
+
+<br />
+<hr />
+
+
+
+<nav class="sibling-nav sibling-nav-bottom" aria-label="Page navigation">
+    
+    <a class="prev" href="/blog/pyepl-blog/"
+        title="Previous — PyEPL blog — sorted by date (newest first)">&#x2190;</a>
+    
+    
+    <a class="up" href="/blog/"
+        title="Up — Blog">&#x2191;</a>
+    
+    
+    <a class="next" href="/blog/switching-from-linux-to-mac/"
+        title="Next — Switching from Linux to Mac — sorted by date (newest first)">&#x2192;</a>
+    
+</nav>
+
+
+
+        
+
+
+
+        
+
+<h1>Belongs to these <a href="/tag">tags</a></h1>
+<ul>
+    
+    <li><a href="/tag/emacs/index.html">Emacs</a></li>
+    
+    <li><a href="/tag/mac/index.html">Mac</a></li>
+    
+    <li><a href="/software/index.html">Software</a></li>
+    
+    <li><a href="/writing/index.html">Writing</a></li>
+    
+</ul>
+
+
+
+        
+
+
+
+        
+
+
+
+    </div>
+    <footer>
+        <div class="bottom_nav">
+            
+
+            
+
+<p>
+    <i>
+        <span title="The date this page was first made public.">First published</span>: 2008-May-05
+    </i>
+</p>
+
+
+<p>
+    <i>
+        <span
+            title="The most recent time the content was edited (which could be before the page was actually published).">Last
+            updated</span>: 2025-Aug-14
+    </i>
+</p>
+
+
+        </div>
+    </footer>
+</body>
+
+</html>

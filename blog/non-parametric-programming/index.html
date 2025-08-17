@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+
+    <title>
+
+Using fancy methods to estimate shipping dates (Joel Spolsky's FogBugz) -
+
+Greg Detre
+</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="gdwebgen" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Greg Detre's personal website" />
+    
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/blog/rss.xml">
+    
+    <meta property="og:site_name" content="Greg Detre" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:site" content="Greg Detre" />
+    <link rel="stylesheet" href="/static/css/base.css">
+    
+<link rel="canonical" href="https://www.gregdetre.com/blog/non-parametric-programming/">
+
+<meta name="description" content="Joel Spolsky's FogBugz uses non-parametric statistics to predict shipping dates by analyzing developers' historical estimation errors and generating thousands of synthetic futures." />
+<meta property="og:description" content="Joel Spolsky's FogBugz uses non-parametric statistics to predict shipping dates by analyzing developers' historical estimation errors and generating thousands of synthetic futures." />
+<meta name="twitter:description" content="Joel Spolsky's FogBugz uses non-parametric statistics to predict shipping dates by analyzing developers' historical estimation errors and generating thousands of synthetic futures." />
+
+<meta property="og:title" content="Using fancy methods to estimate shipping dates (Joel Spolsky's FogBugz)" />
+<meta name="twitter:title" content="Using fancy methods to estimate shipping dates (Joel Spolsky's FogBugz)" />
+<meta property="og:url" content="https://www.gregdetre.com/blog/non-parametric-programming/" />
+<meta name="twitter:card" content="summary" />
+
+</head>
+
+<body>
+
+    
+    <div id="wide-img-header">
+        
+        <a href="/wide_img_header/IMG_5253.jpg">
+            <img src="/wide_img_header/IMG_5253_sm.jpg" />
+        </a>
+        
+    </div>
+    
+
+    
+<nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+        
+        
+        <li class="breadcrumb-item" title="Greg Detre">
+            
+            <a href="/">Greg Detre</a>
+            
+        </li>
+        
+        
+        
+        <li class="breadcrumb-item" title="Blog">
+            
+            <a href="/blog/">Blog</a>
+            
+        </li>
+        
+        
+        
+        <li class="breadcrumb-item" title="Using fancy methods to estimate shipping dates (Joel Spolsky's FogBugz)">
+            
+            <a href="/blog/non-parametric-programming/">Using Fancy Methods To Esti...</a>
+            
+        </li>
+        
+        
+    </ol>
+</nav>
+
+
+    
+    <div class="nav_menu" <p>
+        
+        <a href="/about">About</a>
+        
+        <a href="/blog">Blog</a>
+        
+        <a href="/consulting">Consulting</a>
+        
+        </p>
+    </div>
+    
+
+    <div id="main">
+        
+
+<nav class="sibling-nav sibling-nav-top" aria-label="Page navigation">
+    
+    <a class="prev" href="/blog/emacs-freex-0-3-1/"
+        title="Previous — Emacs freex 0.3.1 — sorted by date (newest first)">&#x2190;</a>
+    
+    
+    <a class="up" href="/blog/"
+        title="Up — Blog">&#x2191;</a>
+    
+    
+    <a class="next" href="/blog/scroogled/"
+        title="Next — Scroogled — sorted by date (newest first)">&#x2192;</a>
+    
+</nav>
+
+
+<hr />
+
+
+<h1>Using fancy methods to estimate shipping dates (Joel Spolsky's FogBugz)</h1>
+
+
+
+
+
+
+<p><a href="/tag/joel-spolsky/">Joel Spolsky</a> (of Joel on Software fame) is in the midst of a <a href="http://www.joelonsoftware.com/items/2007/06/21b.html">World Tour</a>, showing off the latest version of his company's bug tracking and project management software, <a href="http://www.fogcreek.com/FogBugz/">FogBugz 6.0</a>.  </p>
+<p>I went along to see him when he visited Princeton, mainly out of curiosity. It turns out that FogBugz is pretty awesome. Let me highlight a couple of its most endearing features:  </p>
+<p>- the built-in wiki has the best WYSYWG editor I've seen  </p>
+<p>- utilizes backlinking between cases as a simple but handy aggregating related bugs  </p>
+<p>- really low barrier to entry for creating new bug reports  </p>
+<p>- beautifully integrated with email and discussion lists  </p>
+<p>Fine. But what really appealed to me was their emphasis on planning, and on tools that enabled more accurate estimations of shipping dates (<a href="http://www.fogcreek.com/FogBugz/docs/60/topics/schedules/Evidence-BasedScheduling.html">'evidence-based scheduling'</a>). Firstly, they make it as easy as possible to log one's activities ('currently working on blah'), so that the system can keep track of how long is being spent on each case. Secondly, they require you to estimate up front how long you think that each case is going to take.  </p>
+<p>Now, in principle one's ship date should now be determined by the some function of the number of cases left in your milestones list, how long each is projected to take, and the number of developers at your disposal. In reality, of course, these estimates are probably wrong. One can look at the history of an individual's estimates, and compare them to how long things actually took. Perhaps I'm regularly off by a factor of 2 - so if I say something's going to take four hours, it's probably going to take the whole day. FogBugz builds a simple regression model, predicting actual duration from estimated duration for each developer, from which it can easily spot this factor-of-two trend.  </p>
+<p>If I'm reliably off by a factor of two, then that's actually a kind of good news. It means that the system can be confident of its adjusted estimates. It means that the system can guess when the team is *actually* going to meet its milestones, rather than when they think they're going to, by using the predicted durations from its regression model.  </p>
+<p>But things are probably more complicated. What if someone's estimates are sometimes off by a factor of two, sometimes a factor of four, sometimes even over-compensating in the opposite direction? The variability in the goodness of this person's estimates is more problematic for our projections. FogBugz's solution is to use a kind of non-parametric permutation statistic to estimate 5%, 50% and 95% confidence intervals for shipping dates. I think the idea is to create a bajillion synthetic potential futures for each developer, each created by shuffling the evidence from their track record of estimations. We create a bajillion projected ship dates, each a combination of a set of synthetic developer-futures. Then, when the team manager wants to know the likelihood of shipping in time for Christmas, he or she can tell where it lies amidst the distribution of bajillion projected ship dates - if Christmas is earlier than all but a handful of the bajillion projected ship dates, then maybe there's less than a 5% chance of shipping on time. If Christmas lies somewhere in the middle of the bajillion-strong distribution, then the system might estimate a 50% chance of shipping on time.  </p>
+<p>This idea of scrambling the past to generate a distribution is at the center of most non-parametric statistical tests, which avoid making assumptions about normal distributions, homescedasticity and other evil-sounding stuff that's unlikely to be true in the real world. Anyway, props to Fog Creek for attempting to inject some low-level statistical intelligence in a way that might very plausibly work.</p>
+
+
+<br />
+<hr />
+
+
+
+<nav class="sibling-nav sibling-nav-bottom" aria-label="Page navigation">
+    
+    <a class="prev" href="/blog/emacs-freex-0-3-1/"
+        title="Previous — Emacs freex 0.3.1 — sorted by date (newest first)">&#x2190;</a>
+    
+    
+    <a class="up" href="/blog/"
+        title="Up — Blog">&#x2191;</a>
+    
+    
+    <a class="next" href="/blog/scroogled/"
+        title="Next — Scroogled — sorted by date (newest first)">&#x2192;</a>
+    
+</nav>
+
+
+
+        
+
+
+
+        
+
+<h1>Belongs to these <a href="/tag">tags</a></h1>
+<ul>
+    
+    <li><a href="/tag/statistics/index.html">Statistics</a></li>
+    
+    <li><a href="/software/index.html">Software</a></li>
+    
+    <li><a href="/tag/project-management/index.html">Project management</a></li>
+    
+    <li><a href="/tag/joel-spolsky/index.html">Joel Spolsky</a></li>
+    
+    <li><a href="/tag/bugs-testing/index.html">Bugs & testing</a></li>
+    
+</ul>
+
+
+
+        
+
+
+
+        
+
+
+
+    </div>
+    <footer>
+        <div class="bottom_nav">
+            
+
+            
+
+<p>
+    <i>
+        <span title="The date this page was first made public.">First published</span>: 2007-Sep-19
+    </i>
+</p>
+
+
+<p>
+    <i>
+        <span
+            title="The most recent time the content was edited (which could be before the page was actually published).">Last
+            updated</span>: 2025-Aug-14
+    </i>
+</p>
+
+
+        </div>
+    </footer>
+</body>
+
+</html>

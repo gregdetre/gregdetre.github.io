@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+
+    <title>
+
+Brain orchestras and fMRI analyses -
+
+Greg Detre
+</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="gdwebgen" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Greg Detre's personal website" />
+    
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/blog/rss.xml">
+    
+    <meta property="og:site_name" content="Greg Detre" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:site" content="Greg Detre" />
+    <link rel="stylesheet" href="/static/css/base.css">
+    
+<link rel="canonical" href="https://www.gregdetre.com/blog/brain-orchestras-and-fmri-analyses/">
+
+<meta name="description" content="Think of the brain as an orchestra with instruments playing simultaneously— Multi-variate Pattern Analysis helps decode whether you're hearing Mozart or Beethoven from the neural symphony." />
+<meta property="og:description" content="Think of the brain as an orchestra with instruments playing simultaneously— Multi-variate Pattern Analysis helps decode whether you're hearing Mozart or Beethoven from the neural symphony." />
+<meta name="twitter:description" content="Think of the brain as an orchestra with instruments playing simultaneously— Multi-variate Pattern Analysis helps decode whether you're hearing Mozart or Beethoven from the neural symphony." />
+
+<meta property="og:title" content="Brain orchestras and fMRI analyses" />
+<meta name="twitter:title" content="Brain orchestras and fMRI analyses" />
+<meta property="og:url" content="https://www.gregdetre.com/blog/brain-orchestras-and-fmri-analyses/" />
+<meta name="twitter:card" content="summary" />
+
+</head>
+
+<body>
+
+    
+    <div id="wide-img-header">
+        
+        <a href="/wide_img_header/IMG_5253.jpg">
+            <img src="/wide_img_header/IMG_5253_sm.jpg" />
+        </a>
+        
+    </div>
+    
+
+    
+<nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+        
+        
+        <li class="breadcrumb-item" title="Greg Detre">
+            
+            <a href="/">Greg Detre</a>
+            
+        </li>
+        
+        
+        
+        <li class="breadcrumb-item" title="Blog">
+            
+            <a href="/blog/">Blog</a>
+            
+        </li>
+        
+        
+        
+        <li class="breadcrumb-item" title="Brain orchestras and fMRI analyses">
+            
+            <a href="/blog/brain-orchestras-and-fmri-analyses/">Brain Orchestras And Fmri A...</a>
+            
+        </li>
+        
+        
+    </ol>
+</nav>
+
+
+    
+    <div class="nav_menu" <p>
+        
+        <a href="/about">About</a>
+        
+        <a href="/blog">Blog</a>
+        
+        <a href="/consulting">Consulting</a>
+        
+        </p>
+    </div>
+    
+
+    <div id="main">
+        
+
+<nav class="sibling-nav sibling-nav-top" aria-label="Page navigation">
+    
+    <a class="prev" href="/blog/master-turkers/"
+        title="Previous — Master Turkers — sorted by date (newest first)">&#x2190;</a>
+    
+    
+    <a class="up" href="/blog/"
+        title="Up — Blog">&#x2191;</a>
+    
+    
+    <a class="next" href="/blog/auto-links/"
+        title="Next — Auto-links — sorted by date (newest first)">&#x2192;</a>
+    
+</nav>
+
+
+<hr />
+
+
+<h1>Brain orchestras and fMRI analyses</h1>
+
+
+
+
+
+
+<p>[With help from David Weiss]  </p>
+<p>I spent much of my PhD working on algorithms for making sense of gigabytes of brain data from fMRI scanners, especially on a fairly new approach called Multi-variate Pattern Analysis (MVPA). I want to show you how the MVPA approach is useful for tackling certain kinds of questions.  </p>
+<p>Think of the brain as a kind of orchestra. You have lots of separate instruments playing at the same time, and you can subdivide them in lots of different ways, e.g.  </p>
+<ul>
+<li>
+<p>You can subdivide the orchestra into parts by location - the 1st violins, the brass, the percussion etc.</p>
+</li>
+<li>
+<p>Or you could organize them by what they're doing. Say the 2nd violins, the oboes and the trumpets have the melody, while the clarinets and the tubas have the harmony. [The harps are doing their own thing and the bassoonist is drunk.]</p>
+</li>
+</ul>
+<p>Likewise, there are all kinds of things going on at once in the brain.  </p>
+<ul>
+<li>
+<p>You can subdivide the brain by location - frontal, temporal, parietal, occipital lobes.</p>
+</li>
+<li>
+<p>Or you could organize the sub-parts by what they're doing - vision, language, executive control, motor etc.</p>
+</li>
+</ul>
+<p>Let's go back to thinking about how the multivariate approach differs in the kinds of questions it can address.  </p>
+<p>Standard univariate analysis is useful if you want to tell which instruments are involved in one case rather than another, e.g.  </p>
+<ul>
+<li>violins are more active in Beethoven than Mozart, but for trumpets it's the other way around</li>
+</ul>
+<p>vs  </p>
+<ul>
+<li>one part of the brain is more active when looking at houses than faces, but for another part it's the other way around</li>
+</ul>
+<p>In contrast, a multivariate analysis might be useful if you want to know:  </p>
+<ul>
+<li>
+<p>is this Mozart or Beethoven?</p>
+</li>
+<li>
+<p>is this the brain of someone looking at faces or houses?</p>
+</li>
+</ul>
+<p>Now, let's introduce one more concept: <em>dimensionality reduction</em> is an attempt to boil down many instruments (or brain regions) into a few key themes/groups:  </p>
+<p>Take the famous da-da-da-dum of Beethoven's Fifth, where the entire orchestra is one voice - one could more or less describe the entire orchestra's activity in terms of just <em>one</em> theme/process. In contrast, for Bach or something more complex and interwoven, it might be very hard to summarize what's going in with less than <em>10</em> themes.  </p>
+<p>Likewise, maybe it's straightforward to summarize the brain's activity with just one or two processes when you're doing a very simple task like looking at faces vs houses, but if you're doing something more complicated (like watching a movie) then multiple processes are interacting in complex ways.  </p>
+<p><a href="http://www.djweiss.info/cv.html">David Weiss</a>'s PACA algorithm boils down the brain's activity over time into just a few themes. Once you've summarized the 50,000 readouts we get from fMRI every few seconds into 50, it's much more feasible to try and compare different cognitive processes - just as it's much easier to compare Mozart and Beethoven by looking at the scores of a few key instruments than looking at the full orchestral scores.  </p>
+<p>PACA was inspired by a bunch of existing dimensionality reduction algorithms that could equally be applied to problems like voice, face or handwriting recognition.  </p>
+<p>But its magic involves adding a few constraints that are particularly relevant to the brain. Here's one example of a constraint: it doesn't allow its estimate of a theme's presence at a given moment to go below zero. Think of it like this - when was the last time you heard an anti-violin? Or had an anti-thought? In other words, PACA breaks the manifold streams of activity in the brain down to just a few that are all present to a greater or lesser degree at each moment.  </p>
+<p>P.S. If you hated this, you might also hate <a href="http://gregdetre.blogspot.com/2010/01/how-to-beat-fmri-lie-detector.html">How to beat an fMRI lie detector.</a></p>
+
+
+<br />
+<hr />
+
+
+
+<nav class="sibling-nav sibling-nav-bottom" aria-label="Page navigation">
+    
+    <a class="prev" href="/blog/master-turkers/"
+        title="Previous — Master Turkers — sorted by date (newest first)">&#x2190;</a>
+    
+    
+    <a class="up" href="/blog/"
+        title="Up — Blog">&#x2191;</a>
+    
+    
+    <a class="next" href="/blog/auto-links/"
+        title="Next — Auto-links — sorted by date (newest first)">&#x2192;</a>
+    
+</nav>
+
+
+
+        
+
+
+
+        
+
+<h1>Belongs to these <a href="/tag">tags</a></h1>
+<ul>
+    
+    <li><a href="/tag/fmri/index.html">fMRI</a></li>
+    
+    <li><a href="/tag/multi-variate-pattern-analysis-mvpa/index.html">Multi-variate Pattern Analysis (MVPA)</a></li>
+    
+    <li><a href="/tag/neuroscience/index.html">Neuroscience</a></li>
+    
+    <li><a href="/tag/data-science-and-machine-learning/index.html">Data science and machine learning</a></li>
+    
+    <li><a href="/tag/dimensionality-reduction/index.html">Dimensionality reduction</a></li>
+    
+</ul>
+
+
+
+        
+
+
+
+        
+
+<h1>Backlinks</h1>
+
+<ul>
+    <li>
+        <a href="/software/index.html">Software</a>
+    </li>
+</ul>
+
+
+
+
+    </div>
+    <footer>
+        <div class="bottom_nav">
+            
+
+            
+
+<p>
+    <i>
+        <span title="The date this page was first made public.">First published</span>: 2010-Oct-29
+    </i>
+</p>
+
+
+<p>
+    <i>
+        <span
+            title="The most recent time the content was edited (which could be before the page was actually published).">Last
+            updated</span>: 2025-Aug-14
+    </i>
+</p>
+
+
+        </div>
+    </footer>
+</body>
+
+</html>

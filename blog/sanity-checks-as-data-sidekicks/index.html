@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+
+    <title>
+
+Sanity checks as data sidekicks -
+
+Greg Detre
+</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="gdwebgen" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Greg Detre's personal website" />
+    
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/blog/rss.xml">
+    
+    <meta property="og:site_name" content="Greg Detre" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:site" content="Greg Detre" />
+    <link rel="stylesheet" href="/static/css/base.css">
+    
+<link rel="canonical" href="https://www.gregdetre.com/blog/sanity-checks-as-data-sidekicks/">
+
+<meta name="description" content="When complex data analysis fails, test something dead simple first—like distinguishing a blank screen from visual stimuli in brain data." />
+<meta property="og:description" content="When complex data analysis fails, test something dead simple first—like distinguishing a blank screen from visual stimuli in brain data." />
+<meta name="twitter:description" content="When complex data analysis fails, test something dead simple first—like distinguishing a blank screen from visual stimuli in brain data." />
+
+<meta property="og:title" content="Sanity checks as data sidekicks" />
+<meta name="twitter:title" content="Sanity checks as data sidekicks" />
+<meta property="og:url" content="https://www.gregdetre.com/blog/sanity-checks-as-data-sidekicks/" />
+<meta name="twitter:card" content="summary" />
+
+</head>
+
+<body>
+
+    
+    <div id="wide-img-header">
+        
+        <a href="/wide_img_header/IMG_5253.jpg">
+            <img src="/wide_img_header/IMG_5253_sm.jpg" />
+        </a>
+        
+    </div>
+    
+
+    
+<nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+        
+        
+        <li class="breadcrumb-item" title="Greg Detre">
+            
+            <a href="/">Greg Detre</a>
+            
+        </li>
+        
+        
+        
+        <li class="breadcrumb-item" title="Blog">
+            
+            <a href="/blog/">Blog</a>
+            
+        </li>
+        
+        
+        
+        <li class="breadcrumb-item" title="Sanity checks as data sidekicks">
+            
+            <a href="/blog/sanity-checks-as-data-sidekicks/">Sanity Checks As Data Sidek...</a>
+            
+        </li>
+        
+        
+    </ol>
+</nav>
+
+
+    
+    <div class="nav_menu" <p>
+        
+        <a href="/about">About</a>
+        
+        <a href="/blog">Blog</a>
+        
+        <a href="/consulting">Consulting</a>
+        
+        </p>
+    </div>
+    
+
+    <div id="main">
+        
+
+<nav class="sibling-nav sibling-nav-top" aria-label="Page navigation">
+    
+    <a class="prev" href="/blog/oh-that-should-be-easy-maybe-a-few-minutes/"
+        title="Previous — "Oh, that should be easy - maybe a few minutes..." — sorted by date (newest first)">&#x2190;</a>
+    
+    
+    <a class="up" href="/blog/"
+        title="Up — Blog">&#x2191;</a>
+    
+    
+    <a class="next" href="/blog/two-level-tagging/"
+        title="Next — Two-level tagging — sorted by date (newest first)">&#x2192;</a>
+    
+</nav>
+
+
+<hr />
+
+
+<h1>Sanity checks as data sidekicks</h1>
+
+
+
+
+
+
+<p>Abe Gong asked for good examples of '<a href="https://web.archive.org/web/20160410165155/http://blog.abegong.com/2014/02/wanted-good-examples-of-data-sidekicks.html?utm_content=bufferdd80e&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer">data sidekicks</a>', i.e. <em>"i.e. small, curated data" that "can accelerate analysis, solve cold start problems, and simplify complicated data pipelines"</em>.</p>
+<p>My response was <em><a href="https://twitter.com/gregdetre/status/431192954808451073">"brain-data sidekick: sanity-check you can classify blank screen vs stimuli"</a></em> - <em><a href="https://twitter.com/gregdetre/status/431199600033026048">e.g. when classifying mental states with fMRI, if you can't tell stimuli vs none, probably something awry upstream in your pipeline</a></em>.</p>
+<p>I still haven't got the hang of distilling complex thoughts into 140 characters, and so I was worried my reply might have been compressed into cryptic nonsense. Here's what I was trying to say:</p>
+<p>Let's say you're trying to do a difficult classification on a dataset that has had a lot of preprocessing/transformation, like fMRI brain data. There are a million reasons why things could be going wrong.</p>
+<p>All successful analyses are alike, but every unsuccessful analysis is unsuccessful in its own way (sorry, <a href="http://en.wikipedia.org/wiki/Anna_Karenina_principle">Tolstoy</a>).</p>
+<p>Things could be failing for meaningful reasons, e.g.:</p>
+<ul>
+<li>
+<p>the brain doesn't work the way you think, so you're analysing the wrong brain regions or representing things in a different way</p>
+</li>
+<li>
+<p>there's signal there but it's represented at a finer-grained resolution than you can measure.</p>
+</li>
+</ul>
+<p>But the most likely explanation is that you screwed up your preprocessing (mis-imported the data, mis-aligned the labels, mixed up the X-Y-Z dimensions etc).</p>
+<p>If you can't classify someone staring at a blank screen vs a screen with something on it, it's probably something like this, since visual input is pretty much the strongest and most wide-spread signal in the brain - your whole posterior cortex lights up in response to high-salience images (like faces and places).</p>
+<p>In the time I spent writing this, <a href="https://x.com/AbeGong/status/431201791976288256">Abe had already figured out what I meant :)</a>.</p>
+
+
+<br />
+<hr />
+
+
+
+<nav class="sibling-nav sibling-nav-bottom" aria-label="Page navigation">
+    
+    <a class="prev" href="/blog/oh-that-should-be-easy-maybe-a-few-minutes/"
+        title="Previous — "Oh, that should be easy - maybe a few minutes..." — sorted by date (newest first)">&#x2190;</a>
+    
+    
+    <a class="up" href="/blog/"
+        title="Up — Blog">&#x2191;</a>
+    
+    
+    <a class="next" href="/blog/two-level-tagging/"
+        title="Next — Two-level tagging — sorted by date (newest first)">&#x2192;</a>
+    
+</nav>
+
+
+
+        
+
+
+
+        
+
+<h1>Belongs to these <a href="/tag">tags</a></h1>
+<ul>
+    
+    <li><a href="/tag/data-science-and-machine-learning/index.html">Data science and machine learning</a></li>
+    
+    <li><a href="/tag/artificial-intelligence/index.html">Artificial Intelligence</a></li>
+    
+    <li><a href="/tag/fmri/index.html">fMRI</a></li>
+    
+    <li><a href="/research/index.html">Research</a></li>
+    
+</ul>
+
+
+
+        
+
+
+
+        
+
+
+
+    </div>
+    <footer>
+        <div class="bottom_nav">
+            
+
+            
+
+<p>
+    <i>
+        <span title="The date this page was first made public.">First published</span>: 2014-Feb-05
+    </i>
+</p>
+
+
+<p>
+    <i>
+        <span
+            title="The most recent time the content was edited (which could be before the page was actually published).">Last
+            updated</span>: 2025-Aug-14
+    </i>
+</p>
+
+
+        </div>
+    </footer>
+</body>
+
+</html>

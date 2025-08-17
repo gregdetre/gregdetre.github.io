@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+
+    <title>
+
+Open source the Drobo data format -
+
+Greg Detre
+</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="gdwebgen" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Greg Detre's personal website" />
+    
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/blog/rss.xml">
+    
+    <meta property="og:site_name" content="Greg Detre" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:site" content="Greg Detre" />
+    <link rel="stylesheet" href="/static/css/base.css">
+    
+<link rel="canonical" href="https://www.gregdetre.com/blog/open-source-the-drobo-data-format/">
+
+<meta name="description" content="Open sourcing Drobo's proprietary data format could spark innovation, reduce customer lock-in fears, and paradoxically make more people willing to trust their data to the platform." />
+<meta property="og:description" content="Open sourcing Drobo's proprietary data format could spark innovation, reduce customer lock-in fears, and paradoxically make more people willing to trust their data to the platform." />
+<meta name="twitter:description" content="Open sourcing Drobo's proprietary data format could spark innovation, reduce customer lock-in fears, and paradoxically make more people willing to trust their data to the platform." />
+
+<meta property="og:title" content="Open source the Drobo data format" />
+<meta name="twitter:title" content="Open source the Drobo data format" />
+<meta property="og:url" content="https://www.gregdetre.com/blog/open-source-the-drobo-data-format/" />
+<meta name="twitter:card" content="summary" />
+
+</head>
+
+<body>
+
+    
+    <div id="wide-img-header">
+        
+        <a href="/wide_img_header/IMG_5253.jpg">
+            <img src="/wide_img_header/IMG_5253_sm.jpg" />
+        </a>
+        
+    </div>
+    
+
+    
+<nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+        
+        
+        <li class="breadcrumb-item" title="Greg Detre">
+            
+            <a href="/">Greg Detre</a>
+            
+        </li>
+        
+        
+        
+        <li class="breadcrumb-item" title="Blog">
+            
+            <a href="/blog/">Blog</a>
+            
+        </li>
+        
+        
+        
+        <li class="breadcrumb-item" title="Open source the Drobo data format">
+            
+            <a href="/blog/open-source-the-drobo-data-format/">Open Source The Drobo Data ...</a>
+            
+        </li>
+        
+        
+    </ol>
+</nav>
+
+
+    
+    <div class="nav_menu" <p>
+        
+        <a href="/about">About</a>
+        
+        <a href="/blog">Blog</a>
+        
+        <a href="/consulting">Consulting</a>
+        
+        </p>
+    </div>
+    
+
+    <div id="main">
+        
+
+<nav class="sibling-nav sibling-nav-top" aria-label="Page navigation">
+    
+    <a class="prev" href="/blog/the-wallet-washkit-for-the-man-about-town/"
+        title="Previous — The wallet washkit for the person about town — sorted by date (newest first)">&#x2190;</a>
+    
+    
+    <a class="up" href="/blog/"
+        title="Up — Blog">&#x2191;</a>
+    
+    
+    <a class="next" href="/blog/mobile-phone-ringing/"
+        title="Next — Mobile phone ringing — sorted by date (newest first)">&#x2192;</a>
+    
+</nav>
+
+
+<hr />
+
+
+<h1>Open source the Drobo data format</h1>
+
+
+
+
+
+
+<p>The <a href="http://en.wikipedia.org/wiki/Drobo">Drobo</a> is an amazing device - it allows you to pop in a handful of old hard disks, and it effectively pools them so that they show up as a single drive to your OS. It even distributes data redundantly across them to give you peace of mind with old disks. And it's hot-swappable.  </p>
+<p>When our lab was seeking an archival solution, this sounded perfect. But unfortunately, the Data Robotics people are trying to solve a hard problem, and there are a good number of unhappy people on the internet complaining about losing swathes of data. The really unfortunate part of this is that all the data on the hard disks that you add to the Drobo unit are stored in some kind of proprietary format that presumably facilitates the distributive algorithm at the center of Drobo's cleverness. As a result, the only way to read the data on those Drobo'd disks is with a Drobo. So if things get hosed, then there's no recourse but to send it off to them.  </p>
+<p>So here's my proposal. Open source the Drobo data format. Keep the hardware and the distributive algorithm proprietary. But make it very easy for other people to build apps that talk to Drobo boxes.  </p>
+<ul>
+<li>
+<p>Maybe a cottage industry of hardware repair shops and that specialize in Drobo maintenance and repair will spring up. All to the good. Data Robotics' expertise and value lies in building products, not providing services. These repair shops customers with reassuring alternatives, become evangelists for the product, and might even add value by building good third-party add-ons.</p>
+</li>
+<li>
+<p>Likewise, encourage a developer ecosystem. Someone might even come up with their own distributive algorithm that's better than Data Robotics'.</p>
+</li>
+<li>
+<p>Paradoxically but importantly, <em>by reducing the barrier to exit by making it easier for people to get their data off the Drobo, you actually r</em><a href="http://www.joelonsoftware.com/articles/fog0000000052.html"><em>educe the barrier to entry</em></a>.</p>
+</li>
+</ul>
+<p>The value of the Drobo is in the hardware, and maybe in the distributive algorithm, but not in the data format.</p>
+
+
+<br />
+<hr />
+
+
+
+<nav class="sibling-nav sibling-nav-bottom" aria-label="Page navigation">
+    
+    <a class="prev" href="/blog/the-wallet-washkit-for-the-man-about-town/"
+        title="Previous — The wallet washkit for the person about town — sorted by date (newest first)">&#x2190;</a>
+    
+    
+    <a class="up" href="/blog/"
+        title="Up — Blog">&#x2191;</a>
+    
+    
+    <a class="next" href="/blog/mobile-phone-ringing/"
+        title="Next — Mobile phone ringing — sorted by date (newest first)">&#x2192;</a>
+    
+</nav>
+
+
+
+        
+
+
+
+        
+
+<h1>Belongs to these <a href="/tag">tags</a></h1>
+<ul>
+    
+    <li><a href="/tag/open-source/index.html">Open source</a></li>
+    
+    <li><a href="/tag/technology/index.html">Technology</a></li>
+    
+    <li><a href="/tag/product-ideas/index.html">Product ideas</a></li>
+    
+</ul>
+
+
+
+        
+
+
+
+        
+
+
+
+    </div>
+    <footer>
+        <div class="bottom_nav">
+            
+
+            
+
+<p>
+    <i>
+        <span title="The date this page was first made public.">First published</span>: 2009-Sep-08
+    </i>
+</p>
+
+
+<p>
+    <i>
+        <span
+            title="The most recent time the content was edited (which could be before the page was actually published).">Last
+            updated</span>: 2025-Aug-16
+    </i>
+</p>
+
+
+        </div>
+    </footer>
+</body>
+
+</html>

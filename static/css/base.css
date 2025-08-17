@@ -221,22 +221,22 @@ li {
 }
 
 #post-list li::before {
-    content: "";
+    content: "•";
     position: absolute;
     left: 0;
-    width: 10px;
-    height: 10px;
-    background-color: var(--highlight-colour-darker);
-    border-radius: 50%;
-    top: 0.6em;
+    color: var(--highlight-colour-darker);
 }
 
 #post-list li[data-starred="1"]::before {
-    content: "";
-    width: 10px;
-    height: 10px;
-    background-color: var(--highlight-colour);
-    border-radius: 50%;
+    content: "★";
+    color: var(--highlight-colour);
+}
+
+/* Special bullet/icon for external (redirecting) items */
+#post-list li.external-item::before {
+    content: "↗";
+    color: var(--highlight-colour-darker);
+    font-size: 0.95em;
 }
 
 /* Tag list on separate line in folder listings */
