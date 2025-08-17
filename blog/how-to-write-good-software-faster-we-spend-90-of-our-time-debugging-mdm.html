@@ -1,125 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
 
 <head>
-    
-
-    <title>
-
-How to write good software faster (we spend 90% of our time debugging) -
-
-Greg Detre
-</title>
+    <title>Redirecting...</title>
+    <link rel="canonical" href="https://www.makingdatamistakes.com/how-to-write-good-software-faster-we-spend-90-of-our-time-debugging/" />
     <meta charset="utf-8" />
-    <meta name="generator" content="gdwebgen" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <meta name="description" content="Greg Detre's personal website" />
-    
-    
-    <meta property="og:site_name" content="Greg Detre" />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:site" content="Greg Detre" />
-    <link rel="stylesheet" href="/static/css/base.css">
-    
-<link rel="canonical" href="https://www.gregdetre.com/blog/how-to-write-good-software-faster-we-spend-90-of-our-time-debugging-mdm">
-
-<meta name="description" content="If we spend 90% of our time debugging, learning to type twice as fast only speeds up development by a few percent—focus on writing fewer bugs instead." />
-<meta property="og:description" content="If we spend 90% of our time debugging, learning to type twice as fast only speeds up development by a few percent—focus on writing fewer bugs instead." />
-<meta name="twitter:description" content="If we spend 90% of our time debugging, learning to type twice as fast only speeds up development by a few percent—focus on writing fewer bugs instead." />
-
-<meta property="og:title" content="How to write good software faster (we spend 90% of our time debugging)" />
-<meta name="twitter:title" content="How to write good software faster (we spend 90% of our time debugging)" />
-<meta property="og:url" content="https://www.gregdetre.com/blog/how-to-write-good-software-faster-we-spend-90-of-our-time-debugging-mdm" />
-<meta name="twitter:card" content="summary" />
-
+    <meta http-equiv="refresh" content="0; url=https://www.makingdatamistakes.com/how-to-write-good-software-faster-we-spend-90-of-our-time-debugging/" />
+    <link rel="stylesheet" type="text/css" href="/static/css/base.css" />
 </head>
 
 <body>
-
+    <p>Redirecting to
+        <a href="https://www.makingdatamistakes.com/how-to-write-good-software-faster-we-spend-90-of-our-time-debugging/">https://www.makingdatamistakes.com/how-to-write-good-software-faster-we-spend-90-of-our-time-debugging/</a>
+        - click if you are not redirected.
+    </p>
     
-    <div id="wide-img-header">
-        
-        <a href="/wide_img_header/IMG_5253.jpg">
-            <img src="/wide_img_header/IMG_5253_sm.jpg" />
-        </a>
-        
+    <hr />
+    <div class="external-source-note">
+        <strong>Note</strong>: You will be redirected to the original article. A local copy is included below for
+        convenience.
     </div>
-    
-
-    
-<nav aria-label="Breadcrumb">
-    <ol class="breadcrumb">
-        
-        
-        <li class="breadcrumb-item" title="Greg Detre">
-            
-            <a href="/">Greg Detre</a>
-            
-        </li>
-        
-        
-        
-        <li class="breadcrumb-item" title="Blog">
-            
-            <a href="/blog/">Blog</a>
-            
-        </li>
-        
-        
-        
-        <li class="breadcrumb-item" title="How to write good software faster (we spend 90% of our time debugging)">
-            
-            <a href="/blog/how-to-write-good-software-faster-we-spend-90-of-our-time-debugging-mdm">How To Write Good Software ...</a>
-            
-        </li>
-        
-        
-    </ol>
-</nav>
-
-
-    
-    <div class="nav_menu" <p>
-        
-        <a href="/about">About</a>
-        
-        <a href="/blog">Blog</a>
-        
-        <a href="/consulting">Consulting</a>
-        
-        </p>
-    </div>
-    
-
-    <div id="main">
-        
-
-<nav class="sibling-nav sibling-nav-top" aria-label="Page navigation">
-    
-    <a class="prev" href="/blog/what-is-overfitting-mdm"
-        title="Previous — What is Overfitting? — sorted by date (newest first)">&#x2190;</a>
-    
-    
-    <a class="up" href="/blog/"
-        title="Up — Blog">&#x2191;</a>
-    
-    
-    <a class="next" href="/blog/how-to-know-if-your-recommendations-algorithm-is-actually-doing-a-good-job-mdm"
-        title="Next — How to know if your recommendations algorithm is actually doing a good job — sorted by date (newest first)">&#x2192;</a>
-    
-</nav>
-
-
-<hr />
-
-
-<h1>How to write good software faster (we spend 90% of our time debugging)</h1>
-
-
-
-
-<p>Years ago, I was eating dinner with relatives when one of them asked, 'So... what did you do today?'. When I thought back, I realised I’d spent the better part of my afternoon puzzling over a glitch in my code. I’d eventually traced it to a colon that should have been a comma (Matlab cares about that sort of thing). When I realised just how much time I’d spent on something so trivial, I muttered a sheepish response, stuffed another bite of lasagne in my mouth, and tried not to think about how cruel a mistress code can be.</p>
+    <div class="redirect-body">
+        <p>Years ago, I was eating dinner with relatives when one of them asked, 'So... what did you do today?'. When I thought back, I realised I’d spent the better part of my afternoon puzzling over a glitch in my code. I’d eventually traced it to a colon that should have been a comma (Matlab cares about that sort of thing). When I realised just how much time I’d spent on something so trivial, I muttered a sheepish response, stuffed another bite of lasagne in my mouth, and tried not to think about how cruel a mistress code can be.</p>
 <p><strong>We spend 90% of our time debugging.</strong> Learning to type twice as fast will only speed up your overall development time by a few percent. So if you want to speed up how fast you develop finished software, focus your efforts on reducing time spent debugging.</p>
 <p>But of course it’s so tempting to code first and ask questions later. Hammering away on the keyboard into the greenfield of a blank IDE screen is incredibly satisfying - it <em>feels</em> like making rapid progress.</p>
 <p>But efforts to speed up how fast you write the code in the first place will have much less impact than finding ways to write fewer bugs or find and fix them faster. So let’s first understand the claim that the bulk of our programming effort goes into debugging. Then let’s think about how this should change the way we write software.</p>
@@ -263,86 +166,8 @@ Greg Detre
 <p>http://www.dc.uba.ar/materias/plp/cursos/material/programmingAsTheoryBuilding</p>
 </li>
 </ul>
-
-
-<br />
-<hr />
-
-
-
-<nav class="sibling-nav sibling-nav-bottom" aria-label="Page navigation">
-    
-    <a class="prev" href="/blog/what-is-overfitting-mdm"
-        title="Previous — What is Overfitting? — sorted by date (newest first)">&#x2190;</a>
-    
-    
-    <a class="up" href="/blog/"
-        title="Up — Blog">&#x2191;</a>
-    
-    
-    <a class="next" href="/blog/how-to-know-if-your-recommendations-algorithm-is-actually-doing-a-good-job-mdm"
-        title="Next — How to know if your recommendations algorithm is actually doing a good job — sorted by date (newest first)">&#x2192;</a>
-    
-</nav>
-
-
-
-        
-
-
-
-        
-
-<h1>Belongs to these <a href="/tag">tags</a></h1>
-<ul>
-    
-    <li><a href="/tag/programming.html">Programming</a></li>
-    
-    <li><a href="/tag/bugs-testing.html">Bugs & testing</a></li>
-    
-    <li><a href="/tag/productivity.html">Productivity</a></li>
-    
-    <li><a href="/software/index.html">Software</a></li>
-    
-    <li><a href="/tag/tips-tricks.html">Tips & tricks</a></li>
-    
-</ul>
-
-
-
-        
-
-
-
-        
-
-
-
     </div>
-    <footer>
-        <div class="bottom_nav">
-            
-
-            
-
-<p>
-    <i>
-        <span title="The date this page was first made public.">First published</span>: 2020-Aug-10
-    </i>
-</p>
-
-
-<p>
-    <i>
-        <span
-            title="The most recent time the content was edited (which could be before the page was actually published).">Last
-            updated</span>: 2025-Aug-17
-    </i>
-</p>
-
-
-        </div>
-    </footer>
+    
 </body>
 
 </html>

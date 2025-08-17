@@ -1,125 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
 
 <head>
-    
-
-    <title>
-
-A field guide to AI-first development -
-
-Greg Detre
-</title>
+    <title>Redirecting...</title>
+    <link rel="canonical" href="https://www.makingdatamistakes.com/ai-first-development/" />
     <meta charset="utf-8" />
-    <meta name="generator" content="gdwebgen" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <meta name="description" content="Greg Detre's personal website" />
-    
-    
-    <meta property="og:site_name" content="Greg Detre" />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:site" content="Greg Detre" />
-    <link rel="stylesheet" href="/static/css/base.css">
-    
-<link rel="canonical" href="https://www.gregdetre.com/blog/ai-first-development-mdm">
-
-<meta name="description" content="It's a bazooka strapped to a chainsaw, and the default is that you cut off your arm rather than build a house with it." />
-<meta property="og:description" content="It's a bazooka strapped to a chainsaw, and the default is that you cut off your arm rather than build a house with it." />
-<meta name="twitter:description" content="It's a bazooka strapped to a chainsaw, and the default is that you cut off your arm rather than build a house with it." />
-
-<meta property="og:title" content="A field guide to AI-first development" />
-<meta name="twitter:title" content="A field guide to AI-first development" />
-<meta property="og:url" content="https://www.gregdetre.com/blog/ai-first-development-mdm" />
-<meta name="twitter:card" content="summary" />
-
+    <meta http-equiv="refresh" content="0; url=https://www.makingdatamistakes.com/ai-first-development/" />
+    <link rel="stylesheet" type="text/css" href="/static/css/base.css" />
 </head>
 
 <body>
-
+    <p>Redirecting to
+        <a href="https://www.makingdatamistakes.com/ai-first-development/">https://www.makingdatamistakes.com/ai-first-development/</a>
+        - click if you are not redirected.
+    </p>
     
-    <div id="wide-img-header">
-        
-        <a href="/wide_img_header/IMG_5253.jpg">
-            <img src="/wide_img_header/IMG_5253_sm.jpg" />
-        </a>
-        
+    <hr />
+    <div class="external-source-note">
+        <strong>Note</strong>: You will be redirected to the original article. A local copy is included below for
+        convenience.
     </div>
-    
-
-    
-<nav aria-label="Breadcrumb">
-    <ol class="breadcrumb">
-        
-        
-        <li class="breadcrumb-item" title="Greg Detre">
-            
-            <a href="/">Greg Detre</a>
-            
-        </li>
-        
-        
-        
-        <li class="breadcrumb-item" title="Blog">
-            
-            <a href="/blog/">Blog</a>
-            
-        </li>
-        
-        
-        
-        <li class="breadcrumb-item" title="A field guide to AI-first development">
-            
-            <a href="/blog/ai-first-development-mdm">A Field Guide To Ai-First D...</a>
-            
-        </li>
-        
-        
-    </ol>
-</nav>
-
-
-    
-    <div class="nav_menu" <p>
-        
-        <a href="/about">About</a>
-        
-        <a href="/blog">Blog</a>
-        
-        <a href="/consulting">Consulting</a>
-        
-        </p>
-    </div>
-    
-
-    <div id="main">
-        
-
-<nav class="sibling-nav sibling-nav-top" aria-label="Page navigation">
-    
-    <a class="prev" href="/blog/metaphors-for-depression-clean-language-and-the-dsm"
-        title="Previous — Metaphors for depression, clean language, and the DSM — sorted by date (newest first)">&#x2190;</a>
-    
-    
-    <a class="up" href="/blog/"
-        title="Up — Blog">&#x2191;</a>
-    
-    
-    <a class="next" href="/blog/mindstone-2025-mdm"
-        title="Next — Mindstone AI London 2025-Feb-18 — sorted by date (newest first)">&#x2192;</a>
-    
-</nav>
-
-
-<hr />
-
-
-<h1>A field guide to AI-first development</h1>
-
-
-
-
-<p>Want to know how to build a <a href="https://www.perplexity.ai/search/how-many-lines-of-code-does-a-JStnps.URG.lO.1AClkOOw?ref=makingdatamistakes.com">well-architected 60,000-line project from scratch in 6 weeks</a>, without writing a single line of code by hand? This was my second AI-first project, and it went smoothly, using <a href="https://github.com/gregdetre/gjdutils/tree/main/docs?ref=makingdatamistakes.com">techniques and prompts</a> from the first one. (See Postscript below if you're curious about how things turned out.)</p>
+    <div class="redirect-body">
+        <p>Want to know how to build a <a href="https://www.perplexity.ai/search/how-many-lines-of-code-does-a-JStnps.URG.lO.1AClkOOw?ref=makingdatamistakes.com">well-architected 60,000-line project from scratch in 6 weeks</a>, without writing a single line of code by hand? This was my second AI-first project, and it went smoothly, using <a href="https://github.com/gregdetre/gjdutils/tree/main/docs?ref=makingdatamistakes.com">techniques and prompts</a> from the first one. (See Postscript below if you're curious about how things turned out.)</p>
 <p>This approach relies heavily on human software engineering expertise &amp; judgment, and has been optimised for: greenfield, solo <a href="/about/bio/?ref=makingdatamistakes.com">experienced developer</a>, ideal architecture for AI-first coding, and speedy progress, in June 2025 (Claude 4, o3, Gemini 2.5).</p>
 <p>Of course, if you're developing as part of a team, on a larger legacy codebase, with users in production, and place a premium on reliability, then you have a completely different set of constraints. If so, then <a href="https://www.makingdatamistakes.com/making-tea-while-ai-codes-a-practical-guide-to-2024s-development-revolution/">human-first, AI-<em>assisted</em> programming</a> makes more sense for now (i.e. treating AI like a junior pair programmer).</p>
 <p>But as models improve, AI-<em>first</em> will eventually become the dominant mode of development. The AI will write pretty much all the code, with the human as engineering &amp; product manager.</p>
@@ -591,86 +494,8 @@ Greg Detre
 <p>www.makingdatamistakes.com/ai-first-dev...</p>
 <p>— <a href="https://bsky.app/profile/did:plc:wln2lczdl5nmoq54byibc5ac?ref_src=embed&amp;ref=makingdatamistakes.com">Greg Detre (@gregdetre.bsky.social)</a> <a href="https://bsky.app/profile/did:plc:wln2lczdl5nmoq54byibc5ac/post/3lv7famv7lk22?ref_src=embed&amp;ref=makingdatamistakes.com">2025-07-30T19:47:57.246Z</a></p>
 </blockquote>
-
-
-<br />
-<hr />
-
-
-
-<nav class="sibling-nav sibling-nav-bottom" aria-label="Page navigation">
-    
-    <a class="prev" href="/blog/metaphors-for-depression-clean-language-and-the-dsm"
-        title="Previous — Metaphors for depression, clean language, and the DSM — sorted by date (newest first)">&#x2190;</a>
-    
-    
-    <a class="up" href="/blog/"
-        title="Up — Blog">&#x2191;</a>
-    
-    
-    <a class="next" href="/blog/mindstone-2025-mdm"
-        title="Next — Mindstone AI London 2025-Feb-18 — sorted by date (newest first)">&#x2192;</a>
-    
-</nav>
-
-
-
-        
-
-
-
-        
-
-<h1>Belongs to these <a href="/tag">tags</a></h1>
-<ul>
-    
-    <li><a href="/tag/ai.html">AI</a></li>
-    
-    <li><a href="/tag/programming.html">Programming</a></li>
-    
-    <li><a href="/software/index.html">Software</a></li>
-    
-    <li><a href="/tag/artificial-intelligence.html">Artificial Intelligence</a></li>
-    
-    <li><a href="/tag/tips-tricks.html">Tips & tricks</a></li>
-    
-</ul>
-
-
-
-        
-
-
-
-        
-
-
-
     </div>
-    <footer>
-        <div class="bottom_nav">
-            
-
-            
-
-<p>
-    <i>
-        <span title="The date this page was first made public.">First published</span>: 2025-Jul-30
-    </i>
-</p>
-
-
-<p>
-    <i>
-        <span
-            title="The most recent time the content was edited (which could be before the page was actually published).">Last
-            updated</span>: 2025-Aug-17
-    </i>
-</p>
-
-
-        </div>
-    </footer>
+    
 </body>
 
 </html>

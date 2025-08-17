@@ -119,6 +119,8 @@ Greg Detre
 
 
 
+
+
 <p>The <a href="http://en.wikipedia.org/wiki/Drobo">Drobo</a> is an amazing device - it allows you to pop in a handful of old hard disks, and it effectively pools them so that they show up as a single drive to your OS. It even distributes data redundantly across them to give you peace of mind with old disks. And it's hot-swappable.  </p>
 <p>When our lab was seeking an archival solution, this sounded perfect. But unfortunately, the Data Robotics people are trying to solve a hard problem, and there are a good number of unhappy people on the internet complaining about losing swathes of data. The really unfortunate part of this is that all the data on the hard disks that you add to the Drobo unit are stored in some kind of proprietary format that presumably facilitates the distributive algorithm at the center of Drobo's cleverness. As a result, the only way to read the data on those Drobo'd disks is with a Drobo. So if things get hosed, then there's no recourse but to send it off to them.  </p>
 <p>So here's my proposal. Open source the Drobo data format. Keep the hardware and the distributive algorithm proprietary. But make it very easy for other people to build apps that talk to Drobo boxes.  </p>

@@ -337,6 +337,27 @@ img {
     margin: 1em auto;
 }
 
+/* External source note and favicon badge */
+.external-source-note {
+    max-width: var(--content-width);
+    margin: 0.5em auto 1em auto;
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+    font-size: 0.85em;
+    color: #bbb;
+}
+
+.external-favicon {
+    display: inline-block;
+    vertical-align: text-bottom;
+    margin-right: 6px;
+}
+
+.external-badge {
+    display: inline-block;
+    margin-left: 6px;
+    vertical-align: middle;
+}
+
 /* Links */
 a {
     text-decoration: none;
