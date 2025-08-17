@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+
+    <title>
+
+What is Overfitting? -
+
+Greg Detre
+</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="gdwebgen" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Greg Detre's personal website" />
+    
+    
+    <meta property="og:site_name" content="Greg Detre" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:site" content="Greg Detre" />
+    <link rel="stylesheet" href="/static/css/base.css">
+    
+<link rel="canonical" href="https://www.gregdetre.com/blog/what-is-overfitting-mdm">
+
+<meta name="description" content="Solomon Shereshevsky could memorise endless playing cards but struggled to recognise familiar faces—the same trap that snares AI models when they overlearn training data." />
+<meta property="og:description" content="Solomon Shereshevsky could memorise endless playing cards but struggled to recognise familiar faces—the same trap that snares AI models when they overlearn training data." />
+<meta name="twitter:description" content="Solomon Shereshevsky could memorise endless playing cards but struggled to recognise familiar faces—the same trap that snares AI models when they overlearn training data." />
+
+<meta property="og:title" content="What is Overfitting?" />
+<meta name="twitter:title" content="What is Overfitting?" />
+<meta property="og:url" content="https://www.gregdetre.com/blog/what-is-overfitting-mdm" />
+<meta name="twitter:card" content="summary" />
+
+</head>
+
+<body>
+
+    
+    <div id="wide-img-header">
+        
+        <a href="/wide_img_header/IMG_5253.jpg">
+            <img src="/wide_img_header/IMG_5253_sm.jpg" />
+        </a>
+        
+    </div>
+    
+
+    
+<nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+        
+        
+        <li class="breadcrumb-item" title="Greg Detre">
+            
+            <a href="/">Greg Detre</a>
+            
+        </li>
+        
+        
+        
+        <li class="breadcrumb-item" title="Blog">
+            
+            <a href="/blog/">Blog</a>
+            
+        </li>
+        
+        
+        
+        <li class="breadcrumb-item" title="What is Overfitting?">
+            
+            <a href="/blog/what-is-overfitting-mdm">What Is Overfitting?</a>
+            
+        </li>
+        
+        
+    </ol>
+</nav>
+
+
+    
+    <div class="nav_menu" <p>
+        
+        <a href="/about">About</a>
+        
+        <a href="/blog">Blog</a>
+        
+        <a href="/consulting">Consulting</a>
+        
+        </p>
+    </div>
+    
+
+    <div id="main">
+        
+
+<nav class="sibling-nav sibling-nav-top" aria-label="Page navigation">
+    
+    <a class="prev" href="/blog/what-is-machine-learning-mdm"
+        title="Previous — What is Machine Learning? — sorted by date (newest first)">&#x2190;</a>
+    
+    
+    <a class="up" href="/blog/"
+        title="Up — Blog">&#x2191;</a>
+    
+    
+    <a class="next" href="/blog/how-to-write-good-software-faster-we-spend-90-of-our-time-debugging-mdm"
+        title="Next — How to write good software faster (we spend 90% of our time debugging) — sorted by date (newest first)">&#x2192;</a>
+    
+</nav>
+
+
+<hr />
+
+
+<h1>What is Overfitting?</h1>
+
+
+
+
+<p>Most exams are designed to test our real understanding, by including some questions that we’ve never seen before. To answer those questions well, we need to <em>generalise</em>, to apply our knowledge flexibly in novel situations.</p>
+<p>But if all the questions on an upcoming exam had been asked in recent previous years, then you could get a great grade by regurgitating memorised good answers from those previous years without any real understanding. And the more time you spend on memorising, the worse you get at adapting to slightly different questions.</p>
+<p>This happens in <a href="https://www.makingdatamistakes.com/what-is-machine-learning/">machine learning</a> too - <strong>if your model performs well on the training set, but can’t generalise to the test set, it’s called</strong> <strong><em>overfitting</em></strong>. It has over-learned the training set, without picking up on the underlying principles that would allow it to generalise.</p>
+<p><img alt="" src="/blog/makingdatamistakes/what-is-overfitting-mdm/images/Alvt_nFRtjQUFj0_oKmQ2cSg2kVfQRQtSOxKI9oZedvNTnOhP1EPEf4bhWxvBS4mcTS9MT2whuRTCBupp07EX0oFSEtbfJtBMp0VpQzC8gTJ4IjWwqgq_-QEfJLZZDTH6SaaRigS"/></p>
+<p><em>Here, our data has been fitted to a linear model (black line) and a</em> <a href="https://en.wikipedia.org/wiki/Polynomial?ref=makingdatamistakes.com"><em>polynomial</em></a> <em>model (blue line). Although the blue line is a perfect fit, the black line would be expected to generalize better; if the two models were used to extrapolate beyond the data we currently have, the linear model would likely make better predictions. In this case, the blue polynomial is suffering from overfitting. [Source:</em> <a href="https://en.wikipedia.org/wiki/Overfitting?ref=makingdatamistakes.com"><em>Wikipedia</em></a><em>]</em></p>
+<p>Overfitting is a common problem in machine learning. Simply put, <strong>you can tell it’s a problem if you’re improving on your training set as you continue to train, but you’re actually getting worse at generalising to the test set.</strong></p>
+<p>My favourite example of overfitting actually comes from a human, rather than a machine. Solomon Shereshevsky was a famous Russian mnemonist whose brain naturally emphasised the distinctiveness of the world through synaesthesia, making it easy for him to memorise long strings of playing cards or random numbers for his act. But on the flip side, he struggled to recognise the faces of people he knew, which he saw as <a href="https://en.wikipedia.org/wiki/Solomon_Shereshevsky?ref=makingdatamistakes.com">‘very changeable’</a>.</p>
+<p>This is the same problem we have when an AI facial recognition algorithm has overfit to the training set and can’t generalise to the “test set” of photos taken a year later!</p>
+<p>There are many techniques for avoiding overfitting. One solution is to <em>stop</em> learning when you’ve got as much as you can from the training set. Another is to constrain your algorithms to look for simple solutions (known as ‘regularisation’). We’ll discuss some of these in future articles.</p>
+<p><em><a href="https://www.makingdatamistakes.com/what-is-precision-vs-recall-and-why-should-i-care/">This post is part of a series I’m calling Data Science Explained - where I explain Data Science concepts to managers and other non-technical people. Other posts in this series include:</a></em></p>
+<ul>
+<li>
+<p><a href="https://www.makingdatamistakes.com/throughput-vs-latency/">The Difference: Throughput vs Latency</a></p>
+</li>
+<li>
+<p><a href="https://www.makingdatamistakes.com/what-is-machine-learning/">What is Machine Learning?</a></p>
+</li>
+</ul>
+
+
+<br />
+<hr />
+
+
+
+<nav class="sibling-nav sibling-nav-bottom" aria-label="Page navigation">
+    
+    <a class="prev" href="/blog/what-is-machine-learning-mdm"
+        title="Previous — What is Machine Learning? — sorted by date (newest first)">&#x2190;</a>
+    
+    
+    <a class="up" href="/blog/"
+        title="Up — Blog">&#x2191;</a>
+    
+    
+    <a class="next" href="/blog/how-to-write-good-software-faster-we-spend-90-of-our-time-debugging-mdm"
+        title="Next — How to write good software faster (we spend 90% of our time debugging) — sorted by date (newest first)">&#x2192;</a>
+    
+</nav>
+
+
+
+        
+
+
+
+        
+
+<h1>Belongs to these <a href="/tag">tags</a></h1>
+<ul>
+    
+    <li><a href="/tag/machine-learning.html">Machine learning</a></li>
+    
+    <li><a href="/tag/data-science-and-machine-learning.html">Data science and machine learning</a></li>
+    
+    <li><a href="/tag/learning.html">Learning</a></li>
+    
+    <li><a href="/tag/education.html">Education</a></li>
+    
+</ul>
+
+
+
+        
+
+
+
+        
+
+
+
+    </div>
+    <footer>
+        <div class="bottom_nav">
+            
+
+            
+
+<p>
+    <i>
+        <span title="The date this page was first made public.">First published</span>: 2020-Sep-21
+    </i>
+</p>
+
+
+<p>
+    <i>
+        <span
+            title="The most recent time the content was edited (which could be before the page was actually published).">Last
+            updated</span>: 2025-Aug-17
+    </i>
+</p>
+
+
+        </div>
+    </footer>
+</body>
+
+</html>

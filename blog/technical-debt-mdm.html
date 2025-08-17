@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+
+    <title>
+
+Technical debt isn't like financial debt -
+
+Greg Detre
+</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="gdwebgen" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Greg Detre's personal website" />
+    
+    
+    <meta property="og:site_name" content="Greg Detre" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:site" content="Greg Detre" />
+    <link rel="stylesheet" href="/static/css/base.css">
+    
+<link rel="canonical" href="https://www.gregdetre.com/blog/technical-debt-mdm">
+
+<meta name="description" content="It's helpful to imagine I've borrowed money from a capricious loan shark, who might show up at your door one day with a baseball bat and demand all the money right now ." />
+<meta property="og:description" content="It's helpful to imagine I've borrowed money from a capricious loan shark, who might show up at your door one day with a baseball bat and demand all the money right now ." />
+<meta name="twitter:description" content="It's helpful to imagine I've borrowed money from a capricious loan shark, who might show up at your door one day with a baseball bat and demand all the money right now ." />
+
+<meta property="og:title" content="Technical debt isn't like financial debt" />
+<meta name="twitter:title" content="Technical debt isn't like financial debt" />
+<meta property="og:url" content="https://www.gregdetre.com/blog/technical-debt-mdm" />
+<meta name="twitter:card" content="summary" />
+
+</head>
+
+<body>
+
+    
+    <div id="wide-img-header">
+        
+        <a href="/wide_img_header/IMG_5253.jpg">
+            <img src="/wide_img_header/IMG_5253_sm.jpg" />
+        </a>
+        
+    </div>
+    
+
+    
+<nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+        
+        
+        <li class="breadcrumb-item" title="Greg Detre">
+            
+            <a href="/">Greg Detre</a>
+            
+        </li>
+        
+        
+        
+        <li class="breadcrumb-item" title="Blog">
+            
+            <a href="/blog/">Blog</a>
+            
+        </li>
+        
+        
+        
+        <li class="breadcrumb-item" title="Technical debt isn't like financial debt">
+            
+            <a href="/blog/technical-debt-mdm">Technical Debt Isn'T Like F...</a>
+            
+        </li>
+        
+        
+    </ol>
+</nav>
+
+
+    
+    <div class="nav_menu" <p>
+        
+        <a href="/about">About</a>
+        
+        <a href="/blog">Blog</a>
+        
+        <a href="/consulting">Consulting</a>
+        
+        </p>
+    </div>
+    
+
+    <div id="main">
+        
+
+<nav class="sibling-nav sibling-nav-top" aria-label="Page navigation">
+    
+    <a class="prev" href="/blog/premortem-mdm"
+        title="Previous — Running a Premortem — sorted by date (newest first)">&#x2190;</a>
+    
+    
+    <a class="up" href="/blog/"
+        title="Up — Blog">&#x2191;</a>
+    
+    
+    <a class="next" href="/blog/how-to-make-good-quick-collective-decisions-mdm"
+        title="Next — How to write proposals that lead to good, quick, collective decisions — sorted by date (newest first)">&#x2192;</a>
+    
+</nav>
+
+
+<hr />
+
+
+<h1>Technical debt isn't like financial debt</h1>
+
+
+
+
+<p><em>"Look, the reason it's taking a long time to build Feature X is that the underlying infrastructure is flawed. We need to take the time to fix that, as an investment in the long term."</em></p>
+<p>I can still hear the shrill pleading in my voice, and the certainty that this was the right and necessary move. Unfortunately, at the time I couldn't hear the thump-thump of the Hindsight Train heading towards me on its tracks.</p>
+<p>Let's talk about the metaphor of technical debt, when to pay it off, and how I'd think about this differently now.</p>
+<h1 id="what-is-technical-debt">What is 'technical debt'?</h1>
+<p>When you take on a financial debt, you borrow in the short-term, with the expectation that you’ll pay it back later. In the meantime, you pay interest on it.<a href="#what-is-debt">1</a></p>
+<p>So by analogy with financial debt, a <em>technical</em> debt is when you borrow in the short-term by taking a short-cut in your implementation<a href="#what-is-technical-debt">2</a>. Maybe you're building things in a way that helps you make progress faster at first, but will hurt you in the long run, e.g. it won’t scale, it’ll break every so often, it’s hard to use, hard to debug, or hard to modify. In all those cases, you may be able to get something mostly working much more quickly or cheaply, knowing that there are costs waiting for you in the future.</p>
+<h1 id="why-borrow-at-all">Why borrow at all?</h1>
+<p>Like real debt, often you need to borrow if you want to make progress, and taking on technical debt may be absolutely the right decision. It’s easy to see the wisdom in waiting till you have a million users before you worry too much about scaling your system to a hundred million.</p>
+<p>This is especially true, for instance, if you don’t know whether you’re building the right thing. Build your <em>minimum viable product</em> as quickly as you can, figure out whether the market wants it, iterate, …, profit! This <em>lean</em> approach is often the smart way to go, and is equally applicable to data science as more traditional products (though your ‘market’ may be a small group of internal stakeholders, the principles still apply).</p>
+<p>However, there are certainly other cases where the lean approach may not work for you. For example, <a href="https://www.amazon.co.uk/Lost-Founder-Painfully-Honest-Startup/dp/0241290929?ref=makingdatamistakes.com">Rand Fishkin (</a><a href="https://www.amazon.co.uk/Lost-Founder-Painfully-Honest-Startup/dp/0241290929?ref=makingdatamistakes.com"><em>Lost and Founder ch 12)</em></a> points out that releasing an MVP as a trusted brand can hurt your reputation.</p>
+<p>So, there’s a balance to be struck in deciding whether to take on technical debt, and relatedly, when and how to pay it off.</p>
+<p>If technical debt was as simple as a fixed-rate mortgage, then you could make fairly hard-headed, quantitative decisions about whether to take it on and when to pay it back. You’d take into account how much value you’re getting from being able to build faster, how much it will cost you to pay it back, how much the interest payments are costing you in the meantime, the opportunity cost of using the resources for other things, etc. But the analogy between technical debt and a simple financial debt breaks down in a few ways, and that’s where things start to get interesting.</p>
+<h1 id="but-its-more-complicated-than-that">But it’s more complicated than that</h1>
+<h2 id="accidental-technical-debt">Accidental technical debt</h2>
+<p>The discussion so far has assumed that you <em>chose</em> to take on the technical debt. In an idealised process the potential implementation approaches were laid out side-by-side with an accounting of their costs and benefits, and you made an informed decision as a team based on risk.</p>
+<p>I don’t have to tell you that doesn’t always go like that.</p>
+<p>Perhaps more often than not, you hadn’t realised until much later that you had taken on technical debt. This can happen in so many, many ways. The system got built in a hurry, or by a junior person, or by someone who left partway through, or the design requirements changed, or we had to hack around a dodgy 3rd-party component, or there was a gap in our knowledge, or organisational dysfunction forced things, or whatever.</p>
+<p>So maybe you didn’t intentionally take on the technical debt. But the same principles for thinking about how and when to pay it off should still hold.</p>
+<p>In the case when you take on technical debt unintentionally, just make sure you run an honest Retrospective with the team afterwards to figure out how you could have seen it earlier, and what lessons you want to learn for next time.</p>
+<h2 id="the-predictability-volatility-and-timing-of-interest-payments">The predictability, volatility and timing of interest payments</h2>
+<p>Perhaps the most important thing to remember is that the interest payments in technical debt can be highly, highly variable. You may be able to ignore scaling issues for a couple of years by adding servers horizontally or with some easy performance wins, until scaling gradually-yet-suddenly becomes the biggest problem you have. Or worse still, perhaps you built things in a way that breaks occasionally - it hadn’t bitten you for ages, until an important client’s data got corrupted, prompting an emergency all-hands herculean rescue effort.</p>
+<p>In other words, you may pay little or no interest at all indefinitely, and then suddenly owe more in an urgent interest payment <em>than it would have cost to fix the thing in the first place</em>. So your decision-making needs to take the predictability, volatility and timing of your potential interest payments into account.</p>
+<p>For this reason, I refer to them as ‘interest payments’ rather than an ‘interest rate’, since ‘rate’ misleadingly implies constancy. I find it more helpful to imagine that I’ve borrowed money from a capricious loan shark, who just might show up at your door with a baseball bat one day and demand all the money <em>right now</em>.</p>
+<blockquote>
+<p>The thing about technical debt is that the interest payments can be highly variable.  </p>
+<p>It's helpful to imagine I’ve borrowed money from a capricious loan shark, who might show up at your door one day with a baseball bat and demand all the money right now.<a href="https://t.co/GfiQUMLfq2?ref=makingdatamistakes.com">https://t.co/GfiQUMLfq2</a></p>
+<p>— Greg Detre (@gregdetre) <a href="https://twitter.com/gregdetre/status/1237142617017769985?ref_src=twsrc%5Etfw&amp;ref=makingdatamistakes.com">March 9, 2020</a></p>
+</blockquote>
+<h2 id="talking-to-your-manager-about-prioritising-technical-debt">Talking to your manager about prioritising technical debt</h2>
+<p>It can be hard to make space on your roadmap to fix technical debt, even if you think it’s the right thing to do.</p>
+<p>First of all, it requires a careful, frank and perhaps difficult conversation with your manager. You’re worried that they’re going to say (or at least be thinking) “Wait a second, you’re telling me we can’t work on any new features for the next three sprints because we have to fix the broken Blahblah because <em>you didn’t build it right in the first place</em>?”</p>
+<p>I find it helpful to start the conversation by discussing the financial analogy with technical debt, because that makes two key points clear:</p>
+<ul>
+<li>
+<p><em>Sometimes you have to borrow in order to build.</em> Most people (especially startup CEOs and business folk) understand this principle, whether in the light of a mortgage to buy a house, or raising investment to start a company. You can talk through the reasoning behind the implementation choices and why the technical debt was taken on. And if you didn’t take on the technical debt deliberately, acknowledge that, and talk through what you’ve learned as a team from your Retrospective and what you’re doing differently to avoid it in future - then you can have a conversation looking forwards.</p>
+</li>
+<li>
+<p><em>In the long-run you may be better off paying off a debt than paying interest on it forever.</em> Framed in these terms, the conversation shifts to questions about how much it costs to pay off, how much the interest costs, and the opportunity cost. In practice, this turns into a conversation about risk and trade-offs, because almost all of the costs involved are uncertain and potentially variable. But that’s the conversation you need to have.</p>
+</li>
+</ul>
+<h2 id="talking-to-the-team-about-prioritising-technical-debt">Talking to the team about prioritising technical debt</h2>
+<p>Secondly, you need to have a conversation with your team. This can go in two opposite directions.</p>
+<p>Sometimes paying off technical debt can be a fiddly uphill slog, and so you’ll need to motivate the team to see it through.</p>
+<p>In contrast, sometimes the team is pushing to fix the technical debt they see. This is perhaps the trickier situation to manage. It’s often the engineers on the coalface who are paying much of the interest (in terms of time, hassle, or ugliness in dealing with the issues). And we are all inclined to imagine that we could rebuild a complicated thing to be simpler and better (though heed <a href="https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/?ref=makingdatamistakes.com">Joel Spolsky's warning, because this is often a bad ide</a>a).</p>
+<p>So they might be keenly aware of the costs of the interest and the cost to pay off the debt. But they may need wider context from you to see why it’s important:</p>
+<ul>
+<li>
+<p>High-level business constraints make a kind of budget, e.g. we won’t be able to raise more money until next year.</p>
+</li>
+<li>
+<p>Competing priorities are the opportunity cost, e.g. paying off this technical debt means we won’t be able to work on feature X.</p>
+</li>
+<li>
+<p>Interest payments they may not notice, e.g. Customer Service have to appease 10 irate customers calling about this each week.</p>
+</li>
+</ul>
+<p>As with the manager it’s a conversation about risk. But importantly, the conversation with your team is also critically about information-gathering. You and your team are the ones who have to estimate the quantities involved in the decision. This is hard, because we’ve acknowledged that they can be volatile and hard to predict. Try and consider the black swan events that can trigger sudden interest payments. Be realistic in your estimate of how much it will cost to pay off the debt.</p>
+<ul>
+<li><a href="https://www.makingdatamistakes.com/why-were-bad-at-estimating-and-what-to-do-about-it/">See future article on estimating.</a></li>
+</ul>
+<h2 id="all-building-incurs-technical-debt">All building incurs technical debt</h2>
+<p>There’s one final way in which the analogy with financial debt breaks down: <em>all building incurs technical debt</em>. Whenever you write code, there’ll be some way in which it could be improved, and some way in which that imperfection is costing you interest. There is some understanding of the problem you are missing that's causing you to mis-design things. You will never pay it all off, and you cannot avoid incurring it.</p>
+<p>Indeed, even as you pay off a piece of technical debt by rebuilding the system somehow, you will incur yet more. Hopefully you’re in a better overall position than you were, but if you allow yourself to imagine that you could fix something and then it would be <em>just right</em>, then you need to read more Buddhism.</p>
+<h1 id="finally">Finally</h1>
+<p>I hope you weren’t hoping for a blanket answer to the question of exactly when to pay off technical debt. If you were, the answer is Tuesday.</p>
+<p>Almost all interesting decisions are about risks and trade-offs. To make them well, we need to understand the risks and trade-offs well, and have a good process for weighing them. This is an attempt at a framework for making our intuitions about technical debt more rigorous.</p>
+<p>Paying off technical debt is often the right move, but maybe a little less often and less drastically than I used to think. These are the rules I usually apply as a basic default:</p>
+<ul>
+<li>
+<p>If the interest payments are crippling (or could likely become so), it’s probably a good idea to pay it off soon.</p>
+</li>
+<li>
+<p>The interest may be unevenly distributed - look for a way to do the 20% of the work that will reduce the interest payments by 80%.</p>
+</li>
+<li>
+<p>Wait until you have a good reason to change the relevant parts of the system anyway, i.e. a reason that adds value. Then since you have to change things anyway, fix the technical debt at the same time. That makes it easier to find space on the roadmap, minimises switch costs, and minimises the technical debt that gets incurred every time we touch anything.</p>
+</li>
+</ul>
+<h1 id="footnotes">Footnotes‌</h1>
+<p>[1] That’s a simplistic definition, but it makes for a useful analogy.</p>
+<p>‌[2] This analogy with financial debt implies that an explicit decision or a deliberate shortcut was taken. The more important aspect of the analogy is the idea that you have to pay interest, i.e. there's a cost going forwards. As we'll see later, sometimes accruing technical debt is the right business move, and sometimes it's simply an inevitable cruft that accumulates as you learn more about the problem, or as the problem changes.</p>
+
+
+<br />
+<hr />
+
+
+
+<nav class="sibling-nav sibling-nav-bottom" aria-label="Page navigation">
+    
+    <a class="prev" href="/blog/premortem-mdm"
+        title="Previous — Running a Premortem — sorted by date (newest first)">&#x2190;</a>
+    
+    
+    <a class="up" href="/blog/"
+        title="Up — Blog">&#x2191;</a>
+    
+    
+    <a class="next" href="/blog/how-to-make-good-quick-collective-decisions-mdm"
+        title="Next — How to write proposals that lead to good, quick, collective decisions — sorted by date (newest first)">&#x2192;</a>
+    
+</nav>
+
+
+
+        
+
+
+
+        
+
+<h1>Belongs to these <a href="/tag">tags</a></h1>
+<ul>
+    
+    <li><a href="/software/index.html">Software</a></li>
+    
+    <li><a href="/tag/project-management.html">Project management</a></li>
+    
+    <li><a href="/tag/programming.html">Programming</a></li>
+    
+    <li><a href="/tag/management.html">Management</a></li>
+    
+    <li><a href="/tag/economics.html">Economics</a></li>
+    
+</ul>
+
+
+
+        
+
+
+
+        
+
+
+
+    </div>
+    <footer>
+        <div class="bottom_nav">
+            
+
+            
+
+<p>
+    <i>
+        <span title="The date this page was first made public.">First published</span>: 2020-Feb-10
+    </i>
+</p>
+
+
+<p>
+    <i>
+        <span
+            title="The most recent time the content was edited (which could be before the page was actually published).">Last
+            updated</span>: 2025-Aug-17
+    </i>
+</p>
+
+
+        </div>
+    </footer>
+</body>
+
+</html>

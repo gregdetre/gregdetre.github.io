@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+
+    <title>
+
+What is precision vs recall, and why should I care? -
+
+Greg Detre
+</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="gdwebgen" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Greg Detre's personal website" />
+    
+    
+    <meta property="og:site_name" content="Greg Detre" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:site" content="Greg Detre" />
+    <link rel="stylesheet" href="/static/css/base.css">
+    
+<link rel="canonical" href="https://www.gregdetre.com/blog/what-is-precision-vs-recall-and-why-should-i-care-mdm">
+
+<meta name="description" content="Machine learning algorithms are lazy and opportunistic—faced with imbalanced data, they might just guess 'no' every time, achieve 90% accuracy, and go home early for a beer." />
+<meta property="og:description" content="Machine learning algorithms are lazy and opportunistic—faced with imbalanced data, they might just guess 'no' every time, achieve 90% accuracy, and go home early for a beer." />
+<meta name="twitter:description" content="Machine learning algorithms are lazy and opportunistic—faced with imbalanced data, they might just guess 'no' every time, achieve 90% accuracy, and go home early for a beer." />
+
+<meta property="og:title" content="What is precision vs recall, and why should I care?" />
+<meta name="twitter:title" content="What is precision vs recall, and why should I care?" />
+<meta property="og:url" content="https://www.gregdetre.com/blog/what-is-precision-vs-recall-and-why-should-i-care-mdm" />
+<meta name="twitter:card" content="summary" />
+
+</head>
+
+<body>
+
+    
+    <div id="wide-img-header">
+        
+        <a href="/wide_img_header/IMG_5253.jpg">
+            <img src="/wide_img_header/IMG_5253_sm.jpg" />
+        </a>
+        
+    </div>
+    
+
+    
+<nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+        
+        
+        <li class="breadcrumb-item" title="Greg Detre">
+            
+            <a href="/">Greg Detre</a>
+            
+        </li>
+        
+        
+        
+        <li class="breadcrumb-item" title="Blog">
+            
+            <a href="/blog/">Blog</a>
+            
+        </li>
+        
+        
+        
+        <li class="breadcrumb-item" title="What is precision vs recall, and why should I care?">
+            
+            <a href="/blog/what-is-precision-vs-recall-and-why-should-i-care-mdm">What Is Precision Vs Recall...</a>
+            
+        </li>
+        
+        
+    </ol>
+</nav>
+
+
+    
+    <div class="nav_menu" <p>
+        
+        <a href="/about">About</a>
+        
+        <a href="/blog">Blog</a>
+        
+        <a href="/consulting">Consulting</a>
+        
+        </p>
+    </div>
+    
+
+    <div id="main">
+        
+
+<nav class="sibling-nav sibling-nav-top" aria-label="Page navigation">
+    
+    <a class="prev" href="/blog/how-to-run-an-idea-stampede-to-make-a-group-gallop-mdm"
+        title="Previous — How to run an Idea Stampede to make a group gallop — sorted by date (newest first)">&#x2190;</a>
+    
+    
+    <a class="up" href="/blog/"
+        title="Up — Blog">&#x2191;</a>
+    
+    
+    <a class="next" href="/blog/how-to-cheat-at-data-science-with-help-from-centaurs-and-the-wizard-of-oz-mdm"
+        title="Next — How to Cheat at Data Science (with help from Centaurs and the Wizard of Oz) — sorted by date (newest first)">&#x2192;</a>
+    
+</nav>
+
+
+<hr />
+
+
+<h1>What is precision vs recall, and why should I care?</h1>
+
+
+
+
+<h1 id="_1"></h1>
+<p>What do these tasks all have in common?</p>
+<ul>
+<li>
+<p>Looking at an X-ray and deciding whether someone’s leg is broken</p>
+</li>
+<li>
+<p>Screening a CV for suitability for a job post</p>
+</li>
+<li>
+<p>Identifying faces of terrorists in a crowd</p>
+</li>
+</ul>
+<p>They are all examples of <strong>classification</strong> tasks, where we need to make a binary <strong>yes/no decision</strong>. This is one of the most common kinds of <a href="https://www.makingdatamistakes.com/what-is-machine-learning/">machine learning</a>, and it usually works something like this:</p>
+<p>For each example in our <a href="https://www.makingdatamistakes.com/what-is-machine-learning/"><strong>training data</strong></a>, we have an <strong>input</strong> and a <strong>label</strong>.</p>
+<ul>
+<li>
+<p>The <strong>input</strong> might be anything, e.g. an image, or a piece of text, or a bunch of numbers, or something else entirely.</p>
+</li>
+<li>
+<p>The <strong>label</strong> is always a ‘yes’ or a ‘no’. [<abbr title="Of course, we can imagine more complex setups. Maybe sometimes we allow for multi-way decisions (rather than just binary yes/no). Maybe sometimes we have examples in our training data that don’t have labels. In that case, it will be worth asking if there's a way you can make use of those too.*">1</abbr>]</p>
+</li>
+</ul>
+<p>Our job is to guess what the yes/no <strong>label</strong> should be for a new piece of <strong>test data</strong> based on its <strong>input</strong>. For example, the input might be an X-ray of someone's leg, and we're trying to label it yes/no for whether the leg is broken.</p>
+<p><img alt="" src="/blog/makingdatamistakes/what-is-precision-vs-recall-and-why-should-i-care-mdm/images/ankle-2253057_1280-2.jpg"/></p>
+<p><strong>If each input is an X-ray of someone's leg, the associated label might be 'yes - it’s broken', or 'no - it’s not broken'. It's the algorithm's job to identify if a new X-ray shows a broken leg, or not.</strong></p>
+<p>In this article, we’re going to focus on <em>how to measure whether we’re doing a good job</em>, and we’ll discuss three metrics, <strong>‘accuracy’</strong>, <strong>‘precision’</strong>, and <strong>‘recall’</strong>.</p>
+<h2 id="accuracy-how-often-do-you-get-the-right-answer">Accuracy: how often do you get the right answer?</h2>
+<p>Let’s start with accuracy, which is the most obvious. The <em>accuracy score</em> is just a <em>percentage</em> - <em>how often did you get the right answer?</em> In other words, how often did your yes/no guess match the actual yes/no label for that input?</p>
+<p>Accuracy works well when you have a <strong>balanced</strong> dataset, i.e. the ‘yes’ and ‘no’ labels are roughly 50-50.</p>
+<p>But we run into problems with accuracy when your dataset is <strong>imbalanced</strong>. Consider the problem of deciding whether the X-ray shows a broken leg. Perhaps in your dataset, only <abbr title="Of course, we can imagine more complex setups. Maybe sometimes we allow for multi-way decisions (rather than just binary yes/no). Maybe sometimes we have examples in our training data that don’t have labels. In that case, it will be worth asking if there's a way you can make use of those too.*">1</abbr> in 10 of the X-rays actually has a broken leg. In other words, the correct labels are ‘yes’ 10% of the time, and ‘no’ 90% of the time.</p>
+<p><a href="https://www.makingdatamistakes.com/what-is-overfitting/">Machine learning algorithms are lazy and opportunistic</a>. Faced with a dataset like this, a simple classification algorithm might just guess ‘no’ all the time every time, and then go home early to have a beer. And you know what, its accuracy would be <strong>90%</strong>!</p>
+<p>So, <strong>if someone boasts about their high accuracy when you know the dataset is imbalanced, they’re either making an amateur mistake or trying to hoodwink you.</strong></p>
+<h2 id="so-what-are-precision-and-recall">So what are Precision and Recall?</h2>
+<p>Accuracy (‘how often was the answer correct?’) can be split into two components:</p>
+<ul>
+<li>
+<p><strong>Precision</strong> = when it said yes, how often was it right? i.e., of all the people it said had a broken leg, how many did indeed have broken legs?</p>
+</li>
+<li>
+<p><strong>Recall</strong> = of all the times the answer should have been yes, how many did it get? i.e., of all the X-rays with broken legs, did it notice them all?</p>
+</li>
+</ul>
+<p>Sometimes we care more about precision, sometimes we care more about recall.</p>
+<p>If we’re trying to decide whether to let someone into the Federal Reserve’s gold vaults from their retinal scan, maybe we care a lot about <strong>precision</strong>. In that case, we don’t want to accidentally say ‘yes’ when the answer is in fact ‘no’. We don’t want to accidentally let in a master thief holding up a severed eyeball - even if that means irritating the real Bank Manager because we’re being really careful and mistakenly reject them sometimes.</p>
+<p><img alt="Precision is important for retinal scanners and bank security" src="/blog/makingdatamistakes/what-is-precision-vs-recall-and-why-should-i-care-mdm/images/image.png"/></p>
+<p>Precision is important for bank security - particularly if a master thief has access to rogue eyeballs!</p>
+<p>If we’re trying to tell whether someone has cancer from their medical imaging, maybe we care a lot about <strong>recall</strong>, i.e. we don’t want to accidentally say ‘no’ when the answer is ‘yes’. We don’t want to accidentally miss anybody, even if it means we occasionally have some false positives that go for a follow-up test.</p>
+<p>For a deeper dive into precision and recall, the <a href="https://en.wikipedia.org/wiki/Precision_and_recall?ref=makingdatamistakes.com">Wikipedia’s examples and Venn diagrams are pretty helpful</a> and more rigorously defined.</p>
+<h2 id="its-a-trade-off">It's a trade-off</h2>
+<p>You can see intuitively that precision and recall trade off against one another - in other words, you can always choose to improve one but at the expense of the other by adjusting your threshold for deciding when to say ‘yes’ vs ‘no’.</p>
+<p>In the real world, <strong>your first job when faced with a classification task is to measure how balanced the dataset is, and then to have a conversation with your stakeholders about whether they care about precision or recall.</strong> Unhelpfully, the answer is almost always ‘both’!</p>
+<p>There are more advanced metrics (like ‘F1’, ‘area under the ROC curve’, ‘Cohen’s kappa’) that take both into account, so you could just use one of those. But once you dig into the problem, you may realise that one is more important than the other. Indeed you may eventually end up with an even more sophisticated approach. For example, imagine a situation where you make more money by maximising recall, but your reputation suffers if precision isn’t good enough. In that case, perhaps you decide on some acceptable level of precision (whatever’s standard for the existing system or market) - and set your threshold to maximise recall, as long as precision is above that acceptable level.</p>
+<p>As always, <strong>the key in data science is evaluation, i.e. knowing how to measure whether you're doing a good job.</strong> Unless you get that right, no amount of algorithm tuning will lead to happy stakeholders!</p>
+<hr/>
+
+
+<br />
+<hr />
+
+
+
+<nav class="sibling-nav sibling-nav-bottom" aria-label="Page navigation">
+    
+    <a class="prev" href="/blog/how-to-run-an-idea-stampede-to-make-a-group-gallop-mdm"
+        title="Previous — How to run an Idea Stampede to make a group gallop — sorted by date (newest first)">&#x2190;</a>
+    
+    
+    <a class="up" href="/blog/"
+        title="Up — Blog">&#x2191;</a>
+    
+    
+    <a class="next" href="/blog/how-to-cheat-at-data-science-with-help-from-centaurs-and-the-wizard-of-oz-mdm"
+        title="Next — How to Cheat at Data Science (with help from Centaurs and the Wizard of Oz) — sorted by date (newest first)">&#x2192;</a>
+    
+</nav>
+
+
+
+        
+
+
+
+        
+
+<h1>Belongs to these <a href="/tag">tags</a></h1>
+<ul>
+    
+    <li><a href="/tag/machine-learning.html">Machine learning</a></li>
+    
+    <li><a href="/tag/data-science-and-machine-learning.html">Data science and machine learning</a></li>
+    
+    <li><a href="/tag/statistics.html">Statistics</a></li>
+    
+    <li><a href="/tag/evaluation.html">Evaluation, measurement</a></li>
+    
+</ul>
+
+
+
+        
+
+
+
+        
+
+
+
+    </div>
+    <footer>
+        <div class="bottom_nav">
+            
+
+            
+
+<p>
+    <i>
+        <span title="The date this page was first made public.">First published</span>: 2020-Nov-02
+    </i>
+</p>
+
+
+<p>
+    <i>
+        <span
+            title="The most recent time the content was edited (which could be before the page was actually published).">Last
+            updated</span>: 2025-Aug-17
+    </i>
+</p>
+
+
+        </div>
+    </footer>
+</body>
+
+</html>

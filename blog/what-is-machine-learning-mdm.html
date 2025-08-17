@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+
+    <title>
+
+What is Machine Learning? -
+
+Greg Detre
+</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="gdwebgen" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Greg Detre's personal website" />
+    
+    
+    <meta property="og:site_name" content="Greg Detre" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:site" content="Greg Detre" />
+    <link rel="stylesheet" href="/static/css/base.css">
+    
+<link rel="canonical" href="https://www.gregdetre.com/blog/what-is-machine-learning-mdm">
+
+<meta name="description" content="Machine learning algorithms face the same challenge you had as a school pupil: there's going to be an exam, and you only have past papers to study from." />
+<meta property="og:description" content="Machine learning algorithms face the same challenge you had as a school pupil: there's going to be an exam, and you only have past papers to study from." />
+<meta name="twitter:description" content="Machine learning algorithms face the same challenge you had as a school pupil: there's going to be an exam, and you only have past papers to study from." />
+
+<meta property="og:title" content="What is Machine Learning?" />
+<meta name="twitter:title" content="What is Machine Learning?" />
+<meta property="og:url" content="https://www.gregdetre.com/blog/what-is-machine-learning-mdm" />
+<meta name="twitter:card" content="summary" />
+
+</head>
+
+<body>
+
+    
+    <div id="wide-img-header">
+        
+        <a href="/wide_img_header/IMG_5253.jpg">
+            <img src="/wide_img_header/IMG_5253_sm.jpg" />
+        </a>
+        
+    </div>
+    
+
+    
+<nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+        
+        
+        <li class="breadcrumb-item" title="Greg Detre">
+            
+            <a href="/">Greg Detre</a>
+            
+        </li>
+        
+        
+        
+        <li class="breadcrumb-item" title="Blog">
+            
+            <a href="/blog/">Blog</a>
+            
+        </li>
+        
+        
+        
+        <li class="breadcrumb-item" title="What is Machine Learning?">
+            
+            <a href="/blog/what-is-machine-learning-mdm">What Is Machine Learning?</a>
+            
+        </li>
+        
+        
+    </ol>
+</nav>
+
+
+    
+    <div class="nav_menu" <p>
+        
+        <a href="/about">About</a>
+        
+        <a href="/blog">Blog</a>
+        
+        <a href="/consulting">Consulting</a>
+        
+        </p>
+    </div>
+    
+
+    <div id="main">
+        
+
+<nav class="sibling-nav sibling-nav-top" aria-label="Page navigation">
+    
+    <a class="prev" href="/blog/what-makes-a-good-data-scientist-and-data-science-team-mdm"
+        title="Previous — What makes a great data scientist and data science team? (Podcast) — sorted by date (newest first)">&#x2190;</a>
+    
+    
+    <a class="up" href="/blog/"
+        title="Up — Blog">&#x2191;</a>
+    
+    
+    <a class="next" href="/blog/what-is-overfitting-mdm"
+        title="Next — What is Overfitting? — sorted by date (newest first)">&#x2192;</a>
+    
+</nav>
+
+
+<hr />
+
+
+<h1>What is Machine Learning?</h1>
+
+
+
+
+<h1 id="_1"></h1>
+<p>Machine learning algorithms are faced with the same challenge you had as a pupil at school.</p>
+<p><em>There’s going to be an exam. The higher you score, the better. You’re given some exams from the past with answer sheets to study from.</em></p>
+<p>This leads to a few standard data science principles that will be familiar from your schooldays:</p>
+<ul>
+<li>
+<p>You’ll have an easier time if the past exams are very similar to the future exam. You’ll be stuck if the past exams have different kinds of questions (or a different grading scheme) from the future exam.</p>
+</li>
+<li>
+<p>You’ll have an easier time if you have a large number of past exams to study.</p>
+</li>
+<li>
+<p>You’ll have an easier time if the questions are drawn from a narrow range of topics.</p>
+</li>
+<li>
+<p>You’ll have an easier time if there’s a clean and consistent grading scheme.</p>
+</li>
+<li>
+<p>You’ll have an easier time if you try a question or two, see what you got right and wrong, and learn from that, before you go onto the next one.</p>
+</li>
+<li>
+<p>On the other hand, if correctness depends on factors beyond your knowledge or control, then that places an upper limit on just how well you can do.</p>
+</li>
+<li>
+<p>You can get a rough idea of how well you’re going to do on the future exam by testing yourself on the past exams. Of course, if you’ve already seen the answers, that’ll give you an over-inflated confidence. So you have to make sure to always test your progress on exams you haven’t seen before.</p>
+</li>
+<li>
+<p>If you keep improving as you go over and over the past exams that you have, keep on practicing.</p>
+</li>
+<li>
+<p>But only up to a point - sometimes you can actually fixate too much on the past exams, and you’ll find it hard to generalise your knowledge to new questions that are even slightly different and unexpected. See: <a href="https://www.makingdatamistakes.com/what-is-overfitting/">What is Overfitting?</a>.</p>
+</li>
+</ul>
+<p>In machine learning terms, we’d say that the practice exams are the algorithm’s <em>‘training set’</em>, i.e., the data it uses to learn from. Its <em>‘performance’</em> is the score when it generalises to new, unseen data, aka the <em>‘testing set’</em> - that’s what we really care about.</p>
+<p>Machine learning algorithms <a href="http://www.cs.cmu.edu/~tom/mlbook.html?ref=makingdatamistakes.com">automatically improve with experience</a>. They are unlike normal computer code, which needs every single step to be spelled out in unambiguous and complete detail. Given enough high-quality data and a clear scoring system, machine learning algorithms use clever maths to notice patterns in the training set.</p>
+<p>In Part 2, we’ll talk about some techniques for guessing when the algorithms will be able to meet this magical-sounding promise, and when they’ll fall far short.</p>
+<p><a href="https://www.makingdatamistakes.com/what-is-precision-vs-recall-and-why-should-i-care/"><em>This post is part of a series called</em> Data Science Explained <em>- where I explain Data Science concepts to managers and other non-technical people. Other posts in this series include:</em></a></p>
+<ul>
+<li>
+<p><a href="https://www.makingdatamistakes.com/what-is-overfitting/">What is Overfitting</a></p>
+</li>
+<li>
+<p><a href="https://www.makingdatamistakes.com/throughput-vs-latency/">The Difference: Throughput vs Latency</a></p>
+</li>
+</ul>
+
+
+<br />
+<hr />
+
+
+
+<nav class="sibling-nav sibling-nav-bottom" aria-label="Page navigation">
+    
+    <a class="prev" href="/blog/what-makes-a-good-data-scientist-and-data-science-team-mdm"
+        title="Previous — What makes a great data scientist and data science team? (Podcast) — sorted by date (newest first)">&#x2190;</a>
+    
+    
+    <a class="up" href="/blog/"
+        title="Up — Blog">&#x2191;</a>
+    
+    
+    <a class="next" href="/blog/what-is-overfitting-mdm"
+        title="Next — What is Overfitting? — sorted by date (newest first)">&#x2192;</a>
+    
+</nav>
+
+
+
+        
+
+
+
+        
+
+<h1>Belongs to these <a href="/tag">tags</a></h1>
+<ul>
+    
+    <li><a href="/tag/machine-learning.html">Machine learning</a></li>
+    
+    <li><a href="/tag/education.html">Education</a></li>
+    
+    <li><a href="/tag/data-science-and-machine-learning.html">Data science and machine learning</a></li>
+    
+    <li><a href="/tag/learning.html">Learning</a></li>
+    
+</ul>
+
+
+
+        
+
+
+
+        
+
+
+
+    </div>
+    <footer>
+        <div class="bottom_nav">
+            
+
+            
+
+<p>
+    <i>
+        <span title="The date this page was first made public.">First published</span>: 2020-Sep-28
+    </i>
+</p>
+
+
+<p>
+    <i>
+        <span
+            title="The most recent time the content was edited (which could be before the page was actually published).">Last
+            updated</span>: 2025-Aug-17
+    </i>
+</p>
+
+
+        </div>
+    </footer>
+</body>
+
+</html>

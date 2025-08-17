@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+
+    <title>
+
+Will data scientists become obsolete in the next 10 years? -
+
+Greg Detre
+</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="gdwebgen" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Greg Detre's personal website" />
+    
+    
+    <meta property="og:site_name" content="Greg Detre" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:site" content="Greg Detre" />
+    <link rel="stylesheet" href="/static/css/base.css">
+    
+<link rel="canonical" href="https://www.gregdetre.com/blog/data-scientists-obsolete-in-the-next-ten-years-mdm">
+
+<meta name="description" content="Just as cloud servers replaced physical hardware with three clicks, machine learning services promise to commoditise data science—yet the real world stubbornly refuses to cooperate with our Dorothy fantasies." />
+<meta property="og:description" content="Just as cloud servers replaced physical hardware with three clicks, machine learning services promise to commoditise data science—yet the real world stubbornly refuses to cooperate with our Dorothy fantasies." />
+<meta name="twitter:description" content="Just as cloud servers replaced physical hardware with three clicks, machine learning services promise to commoditise data science—yet the real world stubbornly refuses to cooperate with our Dorothy fantasies." />
+
+<meta property="og:title" content="Will data scientists become obsolete in the next 10 years?" />
+<meta name="twitter:title" content="Will data scientists become obsolete in the next 10 years?" />
+<meta property="og:url" content="https://www.gregdetre.com/blog/data-scientists-obsolete-in-the-next-ten-years-mdm" />
+<meta name="twitter:card" content="summary" />
+
+</head>
+
+<body>
+
+    
+    <div id="wide-img-header">
+        
+        <a href="/wide_img_header/IMG_5253.jpg">
+            <img src="/wide_img_header/IMG_5253_sm.jpg" />
+        </a>
+        
+    </div>
+    
+
+    
+<nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+        
+        
+        <li class="breadcrumb-item" title="Greg Detre">
+            
+            <a href="/">Greg Detre</a>
+            
+        </li>
+        
+        
+        
+        <li class="breadcrumb-item" title="Blog">
+            
+            <a href="/blog/">Blog</a>
+            
+        </li>
+        
+        
+        
+        <li class="breadcrumb-item" title="Will data scientists become obsolete in the next 10 years?">
+            
+            <a href="/blog/data-scientists-obsolete-in-the-next-ten-years-mdm">Will Data Scientists Become...</a>
+            
+        </li>
+        
+        
+    </ol>
+</nav>
+
+
+    
+    <div class="nav_menu" <p>
+        
+        <a href="/about">About</a>
+        
+        <a href="/blog">Blog</a>
+        
+        <a href="/consulting">Consulting</a>
+        
+        </p>
+    </div>
+    
+
+    <div id="main">
+        
+
+<nav class="sibling-nav sibling-nav-top" aria-label="Page navigation">
+    
+    <a class="prev" href="/blog/throughput-vs-latency-mdm"
+        title="Previous — The Difference: Throughput vs Latency — sorted by date (newest first)">&#x2190;</a>
+    
+    
+    <a class="up" href="/blog/"
+        title="Up — Blog">&#x2191;</a>
+    
+    
+    <a class="next" href="/blog/how-to-find-a-job-through-a-recruiter-mdm"
+        title="Next — How to find a job through a recruiter — sorted by date (newest first)">&#x2192;</a>
+    
+</nav>
+
+
+<hr />
+
+
+<h1>Will data scientists become obsolete in the next 10 years?</h1>
+
+
+
+
+<p>A couple of decades ago, to set up an online web service you’d have have to buy physical servers and colocate them somewhere. It took planning, effort, upfront capital, lead times and physical access.</p>
+<p>Now, with three clicks of your mouse/heels, you can summon 20 cloud servers to answer your bidding instantly.</p>
+<p><img alt="" src="/blog/makingdatamistakes/data-scientists-obsolete-in-the-next-ten-years-mdm/images/Dorothy-in-AWS-crop.jpg"/></p>
+<p>"There's no place like AWS"</p>
+<p>And just a few years ago, to set up a machine learning service, your data scientists would have to laboriously work through a morass of preprocessing, parameterisation and acceptance testing. It took planning, effort, lead times, salaries, datasets, computation, and a tolerance for risk.</p>
+<p>What about now? Are we nearing ‘three clicks of our heels’ for machine learning services too? And, if so, does this mean in-house data scientists will become a thing of the past?</p>
+<h2 id="the-8020-machine-learning-solution">The 80:20 machine learning solution</h2>
+<p>Let’s consider a concrete example. Say you want to automatically assign tags to new blog posts. We’ll assume that the set of tags have already been decided, and that you have a number of blog posts which have already been tagged manually.</p>
+<p><strong>Option #1)</strong> Well, you can always <strong>do it by hand</strong> <strong>and avoid machine learning</strong> <strong>altogether</strong>. Clients are sometimes surprised when I recommend this to them, but it’s often the most cost-effective option - the costs of developing, deploying and maintaining an algorithmic option only pay for themselves at pretty large scale, and you avoid a lot of risk this way.</p>
+<p>For this example, let’s say we’re at large scale and that it’s not feasible for humans to do things manually.</p>
+<p><strong>Option #2)</strong> You can <strong>train and deploy a custom machine learning model yourself</strong>. This is probably the right approach if:</p>
+<ul>
+<li>
+<p>Performance on this task is a key differentiator or core to your business, and you’re trying to push the state-of-the-art.</p>
+</li>
+<li>
+<p>You have special requirements (e.g. you need to solve an unusual problem or with unusual constraints, or you need access to the innards of the model to understand how it’s working).</p>
+</li>
+</ul>
+<p>But in practice, these requirements are quite rare. Most business data science teams are looking for an 80:20 solution - that is, they’d rather have a decent solution that they can deploy quickly and cheaply, rather than a state-of-the-art solution at great expense. Certainly that’s what most <em>managers</em> of business data science teams want!</p>
+<p><strong>Option #3)</strong> For these cases, the smart move is to <strong>wrap an off-the-shelf cloud solution</strong>.</p>
+<p>Our blog/text classification problem, for instance, has already been commoditised. You can give <a href="https://docs.aws.amazon.com/comprehend/latest/dg/how-document-classification.html?ref=makingdatamistakes.com"><em>AWS Comprehend Custom Classification</em></a> a few example documents for each category hand-labelled with your tags, and it can generalise from them. So now all your new blog posts would automatically be tagged fairly reliably. Hurray!</p>
+<p>Solutions like these offer the promise of reducing data science to rote engineering – you just pay Amazon some money and call the API.</p>
+<p>So there’s no further need for expensive data scientists – you can just hire a few software engineers to call the right APIs, and let the money roll in, right?</p>
+<h2 id="why-companies-still-need-data-scientists-both-now-and-in-the-future">Why companies still need data scientists, both now and in the future</h2>
+<p>Indeed, this was more or less my thinking when I started working with a client company to deploy a document-tagging solution just like this. I figured that it would be mostly a software engineering effort with minimal need for data science expertise.</p>
+<p>That experience and others have reminded me how things are more complicated than that – that even in cases like this, there are still a number of ways in which data scientists are not just valuable, but invaluable, to a business solving these kinds of problems.</p>
+<h3 id="1-to-choose-the-right-problems-to-solve-and-frame-them-in-the-right-way">1. To choose the right problems to solve, and frame them in the right way</h3>
+<p>First of all, you need someone to notice that there’s a potential, high-value, feasible opportunity for the effective use of machine learning or data. Occasionally, people in the business will flag a business process that could be automated, or a revenue stream that be generated by a Data Product.</p>
+<p>But this is the exception, in my experience. In practice, one of the key jobs for a data science team within a larger company is to be on the lookout for these kinds of opportunities, and to push to make them a reality. (How to do that well is another story!)</p>
+<p>And even once you’ve identified a potential, high-value, feasible opportunity, you still need to frame it in the right way.</p>
+<p>In the case of our tagging problem, it’s possible that it would make more sense to reframe it from a classification problem into an information retrieval problem, or a clustering problem, or a reinforcement learning problem, depending on the context...</p>
+<p>Finally, you need to shortlist and choose between the various machine learning service providers, to find one that offers a good solution for the specifics of your problem and business. That could take into account factors ranging from the quality of the documentation and API, to the nature of the algorithm they’re using, to the kinds of data you have at your disposal, to their reputation in the data science community.</p>
+<p>Example questions:</p>
+<ul>
+<li>
+<p><em>What do people spend a lot of time on that could realistically be automated by an algorithm? What could an algorithm do that we don’t currently offer, that would be of value to customers? How much would that be worth to the business?</em></p>
+</li>
+<li>
+<p><em>Which class of algorithms would be a good for for this? How hard would a solution be to build? How well should we expect that to work? How good is the state-of-the-art in machine learning at this problem?</em></p>
+</li>
+<li>
+<p><em>What form does the data exist in now? How clean is it? How easy would it be to rejig it into the form we’d need?</em></p>
+</li>
+<li>
+<p><em>How expensive in money or time will it be to run this service?</em></p>
+</li>
+</ul>
+<h3 id="2-to-evaluate-how-well-things-are-going">2. To evaluate how well things are going</h3>
+<p>This is the very most important step. You need to evaluate how well things are working. You’ll need to separate training and test sets, decide on the right evaluation metric, agree on an acceptable performance threshold, run AB tests (aka ‘<em>champion challenger tests</em>’) to compare alternative approaches, and explain the results to the rest of the business. This is where your data scientists shine.</p>
+<p>Example questions:</p>
+<ul>
+<li>
+<p><em>How well should we expect to be able to do?</em></p>
+</li>
+<li>
+<p><em>Do some errors matter more than others?</em></p>
+</li>
+<li>
+<p><em>Do our sanity checks pass, e.g. chance performance on scrambled data?</em></p>
+</li>
+<li>
+<p><em>Are there edge cases, biases or other potential pitfalls that we need to look out for?</em></p>
+</li>
+</ul>
+<h3 id="3-to-improve-performance">3. To improve performance</h3>
+<p>What if the algorithm performance isn’t good enough? What if performance in the real world is worse than expected from your early tests? What if performance worsens over time?</p>
+<p>Example questions:</p>
+<ul>
+<li>
+<p><em>Is that because of a problem with our data (is it our features? our labels? Is it confined to just a few samples? bad data hygiene? unrepresentative sampling?)?</em></p>
+</li>
+<li>
+<p><em>Perhaps there’s just not enough signal in the data?</em></p>
+</li>
+<li>
+<p><em>Is it overfitting, or underfitting?</em></p>
+</li>
+<li>
+<p><em>Is it something weird about the particular algorithm being used by the black box commoditised service? What if you call the service differently, or try a competitor service?</em></p>
+</li>
+<li>
+<p><em>Can we visualise what’s going on?</em></p>
+</li>
+<li>
+<p><em>How does it behave with various kinds of synthetic data?</em></p>
+</li>
+<li>
+<p><em>How have the data or the problem changed over time?</em></p>
+</li>
+<li>
+<p><em>Could you improve performance from your side? What if you change the data you feed in (e.g. preprocess it differently, or only feed in the high-quality samples/features)? What if you had more training data? Can you augment the data with synthetic data?</em></p>
+</li>
+</ul>
+<p>Your data scientists can help you answer these questions, and many more.</p>
+<p>Which is to say, <strong>you need at least <em>some</em> data science expertise to choose and define the right problems, and to be confident that things are working well. And you will need much more data science expertise if you want to understand <em>why</em> things aren’t working and try to improve them.</strong></p>
+<p>Put simply, you’ll still need data scientists.</p>
+<h2 id="what-the-future-of-data-science-means-for-you">What the future of data science means for you</h2>
+<p>I started writing this piece assuming that I’d end up arguing that most data science problems could be mostly reduced to engineering problems. I’d expected to conclude that in a few years’ time, just a couple of data scientists – with support from data engineering – could indeed be pretty effective at stitching together commoditised ML services for a range of 80:20 solutions.</p>
+<p>And maybe, for a well-studied problem and a decent-sized, clean, well-labelled, non-changing dataset, maybe things will work out-of-the-box a good deal of the time. This is the “Dorothy, click your heels three times” territory. But somehow, in the real world things are never so ideal.</p>
+<p>So, on that basis, <strong>should we expect a continuation of the current trend, where every business seems to be developing an in-house data science team?</strong></p>
+<p>I see a number of potential futures. Perhaps the best of the commoditised services will differentiate themselves by offering comprehensive and comprehensible sanity-checking, visualisation, monitoring and diagnostics. Alternatively, maybe they’ll offer some sporadic high-touch hand-holding from their in-house data scientists, to support client engineering teams.</p>
+<p>Or perhaps the definition of a full-stack engineer will expand to include core data science best practices. Nowadays, most software engineers are alert to warning flags like copied and pasted code, unnormalised SQL tables, or using html tables for layout. Perhaps in future they’ll also be trained to look out for peeking, overfitting, unbalanced labels, misleading metrics, non-stationary data, the brittleness of a model tied to the output of another model, and so on.</p>
+<p>The only conclusion that seems clear is that data scientists will spend less time trying out a variety of algorithms and parameters in an effort to tune their models. Just as we would almost always prefer to use an open source algorithm framework (e.g. something from <em>Scikit-learn</em> or <em>PyTorch</em>) than implement an algorithm from scratch, data scientists will soon prefer to build on top of a 3rd-party ML service (especially if it has a nice, big pretrained model).</p>
+<p>Which will mean fewer days spent waiting for big models to train and no more endless grid searches! But still plenty to do in designing, evaluation, probing, and improving the approach – meaning data scientists can be more productive, scale their work faster, and be even more valuable to a business.</p>
+<h2 id="to-sum-it-up">To sum it up:</h2>
+<ul>
+<li>
+<p>Even as the best 3rd-party ML services continue to add more features and support, businesses will still need at least some data science expertise to choose and define the right problems to solve, and to be confident that things are working well. If they want to understand <em>why</em> things aren’t working, and to improve them, they'll need much more data science expertise.</p>
+</li>
+<li>
+<p>It’s possible that the role of a full-stack engineer could expand to include a deeper understanding of core data science best practices. Even so, data scientists will still be needed. Since they’ll likely be building on top of 3rd-party ML services, they’ll spend less time tuning their own models, and more time designing, evaluating, probing, and improving the selected approach.</p>
+</li>
+</ul>
+
+
+<br />
+<hr />
+
+
+
+<nav class="sibling-nav sibling-nav-bottom" aria-label="Page navigation">
+    
+    <a class="prev" href="/blog/throughput-vs-latency-mdm"
+        title="Previous — The Difference: Throughput vs Latency — sorted by date (newest first)">&#x2190;</a>
+    
+    
+    <a class="up" href="/blog/"
+        title="Up — Blog">&#x2191;</a>
+    
+    
+    <a class="next" href="/blog/how-to-find-a-job-through-a-recruiter-mdm"
+        title="Next — How to find a job through a recruiter — sorted by date (newest first)">&#x2192;</a>
+    
+</nav>
+
+
+
+        
+
+
+
+        
+
+<h1>Belongs to these <a href="/tag">tags</a></h1>
+<ul>
+    
+    <li><a href="/tag/data-science-and-machine-learning.html">Data science and machine learning</a></li>
+    
+    <li><a href="/tag/the-future.html">The future</a></li>
+    
+    <li><a href="/tag/automation.html">Automation</a></li>
+    
+    <li><a href="/tag/business.html">Business</a></li>
+    
+    <li><a href="/tag/ai.html">AI</a></li>
+    
+</ul>
+
+
+
+        
+
+
+
+        
+
+
+
+    </div>
+    <footer>
+        <div class="bottom_nav">
+            
+
+            
+
+<p>
+    <i>
+        <span title="The date this page was first made public.">First published</span>: 2020-Jul-06
+    </i>
+</p>
+
+
+<p>
+    <i>
+        <span
+            title="The most recent time the content was edited (which could be before the page was actually published).">Last
+            updated</span>: 2025-Aug-17
+    </i>
+</p>
+
+
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+
+    <title>
+
+Running a Premortem -
+
+Greg Detre
+</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="gdwebgen" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Greg Detre's personal website" />
+    
+    
+    <meta property="og:site_name" content="Greg Detre" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:site" content="Greg Detre" />
+    <link rel="stylesheet" href="/static/css/base.css">
+    
+<link rel="canonical" href="https://www.gregdetre.com/blog/premortem-mdm">
+
+<meta name="description" content="We told a story together out loud about a potential worst-case future that hadn't happened yet, picturing the Apple launch event happening in slow motion with nary a mention of our product." />
+<meta property="og:description" content="We told a story together out loud about a potential worst-case future that hadn't happened yet, picturing the Apple launch event happening in slow motion with nary a mention of our product." />
+<meta name="twitter:description" content="We told a story together out loud about a potential worst-case future that hadn't happened yet, picturing the Apple launch event happening in slow motion with nary a mention of our product." />
+
+<meta property="og:title" content="Running a Premortem" />
+<meta name="twitter:title" content="Running a Premortem" />
+<meta property="og:url" content="https://www.gregdetre.com/blog/premortem-mdm" />
+<meta name="twitter:card" content="summary" />
+
+</head>
+
+<body>
+
+    
+    <div id="wide-img-header">
+        
+        <a href="/wide_img_header/IMG_5253.jpg">
+            <img src="/wide_img_header/IMG_5253_sm.jpg" />
+        </a>
+        
+    </div>
+    
+
+    
+<nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+        
+        
+        <li class="breadcrumb-item" title="Greg Detre">
+            
+            <a href="/">Greg Detre</a>
+            
+        </li>
+        
+        
+        
+        <li class="breadcrumb-item" title="Blog">
+            
+            <a href="/blog/">Blog</a>
+            
+        </li>
+        
+        
+        
+        <li class="breadcrumb-item" title="Running a Premortem">
+            
+            <a href="/blog/premortem-mdm">Running A Premortem</a>
+            
+        </li>
+        
+        
+    </ol>
+</nav>
+
+
+    
+    <div class="nav_menu" <p>
+        
+        <a href="/about">About</a>
+        
+        <a href="/blog">Blog</a>
+        
+        <a href="/consulting">Consulting</a>
+        
+        </p>
+    </div>
+    
+
+    <div id="main">
+        
+
+<nav class="sibling-nav sibling-nav-top" aria-label="Page navigation">
+    
+    <a class="prev" href="/blog/how-to-build-a-model-performs-at-chance-mdm"
+        title="Previous — How to build a model that performs at chance — sorted by date (newest first)">&#x2190;</a>
+    
+    
+    <a class="up" href="/blog/"
+        title="Up — Blog">&#x2191;</a>
+    
+    
+    <a class="next" href="/blog/technical-debt-mdm"
+        title="Next — Technical debt isn't like financial debt — sorted by date (newest first)">&#x2192;</a>
+    
+</nav>
+
+
+<hr />
+
+
+<h1>Running a Premortem</h1>
+
+
+
+
+<p>In the past, running a <a href="https://www.theguardian.com/lifeandstyle/2014/may/10/hindsight-in-advance-premortem-this-column-change-life?ref=makingdatamistakes.com">Premortem</a> has been the single most helpful exercise I’ve found for succeeding at complex, risky endeavours.</p>
+<p>I’ll tell you a true story about my first Premortem. I’d just joined a company as the new CTO, and we had been invited to be featured in Apple’s latest iOS launch in a few months’ time. We had no control over the event, and if we weren’t ready for it we wouldn’t be included. It involved designing and building a mobile version of an existing product in about four months flat. On top of that, the CEO was determined to use this opportunity to make a number of changes and improvements to the product, most of which were being designed at the same time.</p>
+<p>Soon after I’d joined, I’d used the honeymoon period as a new exec to highlight some major team problems, to have a few difficult conversations, and to make critical changes. But I was feeling that there were only so many problems I could highlight before it would seem that I was making excuses and lose the CEO’s trust. So we’d discussed the list of necessary features for the product launch, and we’d agreed to strike off a few of them - but the CEO considered the remainder to be absolutely essential.</p>
+<p>Fast forward a couple of months and I was panicking. It was crystal clear to me that we were simply not going to be able to release a working product in time, let alone with all the features we’d agreed on. So the CEO and I went for a walk. We told a story together out loud about a potential worst-case future that hadn’t happened yet, picturing the Apple launch event happening in slow motion, with nary a mention of our product after a disastrous demo the week before. We imagined having to explain what had happened to investors, and the feeling of walking into work the next day knowing we’d blown it. I think we felt almost physically sick at what a disappointment that would be. Then, with 20-20 counterfactual hindsight, we listed all the things that had gone wrong to cause that outcome, and what we could have done differently. Finally, we walked back from the brink, and it suddenly became very easy to make decisions about what we’d be willing to change in order to avoid that outcome.</p>
+<p>We agreed on many changes together as a result of that discussion, including clarifying which features really were essential. The next month was brutal for the whole team, because it was still an extraordinarily ambitious goal that we’d set for ourselves. And even on the dress rehearsal the day before the deadline, the app crashed within the first 30s of the demo. But ultimately, the demo was a success, we were featured, we hit #3 in the US iTunes Health &amp; Fitness App Store, and we were on to the next chapter. We also did some soul-searching right afterwards about what kind of company culture we wanted to have, and avoided ever going through a collective experience like that again.</p>
+<p>So I’m not joking when I say that a Premortem refocused the hardest death-march I’ve been on, and another Premortem years later was a key step in planning for a complicated (and ultimately successful) major fund-raise. If all goes well, it’ll help highlight your biggest fears, and proactively figure out steps for how to defuse them.</p>
+<h1 id="howto">Howto</h1>
+<p>In short, this is how I run them now:</p>
+<ul>
+<li>
+<p>Gather a couple of other core people/project leads with complementary expertise and the power to make changes. Allocate 2 uninterrupted hours (though you might not need all that time once you start to get efficient at them).</p>
+</li>
+<li>
+<p>Sit down and read the above <a href="https://www.theguardian.com/lifeandstyle/2014/may/10/hindsight-in-advance-premortem-this-column-change-life?ref=makingdatamistakes.com">Guardian article</a> through together at the beginning of the session.</p>
+</li>
+<li>
+<p>Have fun telling the nightmare story collectively. I usually set them at the next major milestone, perhaps within the next 6 months or so. Make it specific and vivid, e.g. ‘The CEO of X is on stage announcing their partnership in October with your major competitor’ or ‘We’re out of money and don’t exist, and you’re back to working at your previous job you hated.’</p>
+</li>
+<li>
+<p>With 20-20 counterfactual hindsight, list all the reasons for failure. Set a timer for 15 minutes or so, and separately in silence each scribble down as many potential reasons why this terrible future came to pass, e.g. ‘Their CEO tried it out and hit a bug and they lost faith in us’, or ‘The lawyers axed the project because of regulatory hurdles’. I usually use either Google Docs or post-its to make the following phases easier.</p>
+</li>
+<li>
+<p>Race through everyone’s items out loud quickly. There will be duplicates and related issues – as you go through them, place them into groups.</p>
+</li>
+<li>
+<p>Then, for each group of issues, ask ‘what could we do to fix/de-risk this?’. [Maybe do this in silence individually first too]. You’ll start to see that there are a few things you could do that will help considerably de-risk multiple issues at the same time. Assign one person to be responsible for each approach you agree to act on.</p>
+</li>
+<li>
+<p>By this point, you should have felt like you’ve looked into the abyss, but come out the other side and achieved a measure of catharsis. There’s something about the perspective you get from doing this exercise that makes it much easier to make hard choices.</p>
+</li>
+<li>
+<p>Set a date to revisit in 6 weeks, to make sure you actually addressed the risks you’ve just identified, and see where things stand.</p>
+</li>
+</ul>
+<h1 id="a-few-caveats">A few caveats</h1>
+<p>I’ve used Premortems most successfully in a couple of scenarios, e.g.:</p>
+<ul>
+<li>
+<p>Before a big launch/delivery/event, to expose all the things that could go wrong, and de-risk them.</p>
+</li>
+<li>
+<p>As a way of making critical prioritisation decisions, e.g. when the Product Manager refused to take anything off the ‘essential backlog’. This helped them see that they’d rather meet the really important hard deadline missing a few features, than completely whiff the deadline because we were considering all the features to be essential.</p>
+</li>
+</ul>
+<p>It seems to help for there to be a particular event or deadline that you’re focused upon, with clarity about what a win or loss would look like. When I tried running a Premortem in a general way to try and improve overall team performance, it fizzled somehow.</p>
+<p>It works best if you come up with the 20-20 counterfactual hindsight reasons for failure quietly in isolation rather than out loud - see Quiet Brainstorming.</p>
+<p>Make sure there’s enough time. I participated in a Premortem that spent all the time highlighting reasons why things could fail, and ran out of time to consider the changes we could make to turn it around. Everyone left feeling enormously dispirited, and we didn’t discover or make the changes we needed to.</p>
+<p>Finally, there needs to be trust. I tried running one in a group where there wasn’t trust. One of the key people involved didn’t show up, which meant that we didn’t have their input or their buy-in to potential actions. The other didn’t really want to consider the worst-case scenario, and we were both wary of saying what we really thought. Perhaps it’s no surprise that the worst-case scenario eventually came to pass.</p>
+<h1 id="footnotes">Footnotes</h1>
+<p>Based on:</p>
+<ul>
+<li><a href="/2018/08/16/running-a-premortem/?ref=makingdatamistakes.com">Early version of this article</a></li>
+</ul>
+
+
+<br />
+<hr />
+
+
+
+<nav class="sibling-nav sibling-nav-bottom" aria-label="Page navigation">
+    
+    <a class="prev" href="/blog/how-to-build-a-model-performs-at-chance-mdm"
+        title="Previous — How to build a model that performs at chance — sorted by date (newest first)">&#x2190;</a>
+    
+    
+    <a class="up" href="/blog/"
+        title="Up — Blog">&#x2191;</a>
+    
+    
+    <a class="next" href="/blog/technical-debt-mdm"
+        title="Next — Technical debt isn't like financial debt — sorted by date (newest first)">&#x2192;</a>
+    
+</nav>
+
+
+
+        
+
+
+
+        
+
+<h1>Belongs to these <a href="/tag">tags</a></h1>
+<ul>
+    
+    <li><a href="/tag/premortem.html">Premortem</a></li>
+    
+    <li><a href="/tag/project-management.html">Project management</a></li>
+    
+    <li><a href="/tag/risk-management.html">Risk Management</a></li>
+    
+    <li><a href="/tag/leadership.html">Leadership</a></li>
+    
+    <li><a href="/tag/team-effectiveness.html">Team effectiveness</a></li>
+    
+</ul>
+
+
+
+        
+
+
+
+        
+
+
+
+    </div>
+    <footer>
+        <div class="bottom_nav">
+            
+
+            
+
+<p>
+    <i>
+        <span title="The date this page was first made public.">First published</span>: 2020-Feb-10
+    </i>
+</p>
+
+
+<p>
+    <i>
+        <span
+            title="The most recent time the content was edited (which could be before the page was actually published).">Last
+            updated</span>: 2025-Aug-17
+    </i>
+</p>
+
+
+        </div>
+    </footer>
+</body>
+
+</html>

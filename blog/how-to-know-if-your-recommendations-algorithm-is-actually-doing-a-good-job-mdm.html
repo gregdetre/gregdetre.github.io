@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+
+    <title>
+
+How to know if your recommendations algorithm is actually doing a good job -
+
+Greg Detre
+</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="gdwebgen" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Greg Detre's personal website" />
+    
+    
+    <meta property="og:site_name" content="Greg Detre" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:site" content="Greg Detre" />
+    <link rel="stylesheet" href="/static/css/base.css">
+    
+<link rel="canonical" href="https://www.gregdetre.com/blog/how-to-know-if-your-recommendations-algorithm-is-actually-doing-a-good-job-mdm">
+
+<meta name="description" content="You can get a pretty good 'average hit rate' score by just recommending the most popular programs to everyone—but that's a failure of the metrics, rather than a success of the algorithm." />
+<meta property="og:description" content="You can get a pretty good 'average hit rate' score by just recommending the most popular programs to everyone—but that's a failure of the metrics, rather than a success of the algorithm." />
+<meta name="twitter:description" content="You can get a pretty good 'average hit rate' score by just recommending the most popular programs to everyone—but that's a failure of the metrics, rather than a success of the algorithm." />
+
+<meta property="og:title" content="How to know if your recommendations algorithm is actually doing a good job" />
+<meta name="twitter:title" content="How to know if your recommendations algorithm is actually doing a good job" />
+<meta property="og:url" content="https://www.gregdetre.com/blog/how-to-know-if-your-recommendations-algorithm-is-actually-doing-a-good-job-mdm" />
+<meta name="twitter:card" content="summary" />
+
+</head>
+
+<body>
+
+    
+    <div id="wide-img-header">
+        
+        <a href="/wide_img_header/IMG_5253.jpg">
+            <img src="/wide_img_header/IMG_5253_sm.jpg" />
+        </a>
+        
+    </div>
+    
+
+    
+<nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+        
+        
+        <li class="breadcrumb-item" title="Greg Detre">
+            
+            <a href="/">Greg Detre</a>
+            
+        </li>
+        
+        
+        
+        <li class="breadcrumb-item" title="Blog">
+            
+            <a href="/blog/">Blog</a>
+            
+        </li>
+        
+        
+        
+        <li class="breadcrumb-item" title="How to know if your recommendations algorithm is actually doing a good job">
+            
+            <a href="/blog/how-to-know-if-your-recommendations-algorithm-is-actually-doing-a-good-job-mdm">How To Know If Your Recomme...</a>
+            
+        </li>
+        
+        
+    </ol>
+</nav>
+
+
+    
+    <div class="nav_menu" <p>
+        
+        <a href="/about">About</a>
+        
+        <a href="/blog">Blog</a>
+        
+        <a href="/consulting">Consulting</a>
+        
+        </p>
+    </div>
+    
+
+    <div id="main">
+        
+
+<nav class="sibling-nav sibling-nav-top" aria-label="Page navigation">
+    
+    <a class="prev" href="/blog/how-to-write-good-software-faster-we-spend-90-of-our-time-debugging-mdm"
+        title="Previous — How to write good software faster (we spend 90% of our time debugging) — sorted by date (newest first)">&#x2190;</a>
+    
+    
+    <a class="up" href="/blog/"
+        title="Up — Blog">&#x2191;</a>
+    
+    
+    <a class="next" href="/blog/neseccary-vs-sufficient-mdm"
+        title="Next — Necessary vs Sufficient — sorted by date (newest first)">&#x2192;</a>
+    
+</nav>
+
+
+<hr />
+
+
+<h1>How to know if your recommendations algorithm is actually doing a good job</h1>
+
+
+
+
+<p>When they work, recommender systems feel almost like magic: <em>based on these things you like, here are some other things you might also like.</em></p>
+<p>The trend towards personalisation has been a major driver behind data science’s popularity, and with good reason. <a href="https://www.ft.com/content/c7764ff0-00b2-11e6-99cb-83242733f755?ref=makingdatamistakes.com">Netflix claims that algorithmically-generated recommendations account for 80% of views, and improved Google News clickthrough by 38%</a>.</p>
+<p>You might think the hardest part about building a recommender system would be the core mathematical algorithm itself. Not so. <strong>The hardest part about building the recommender system for Channel 4’s ‘All 4’ digital platform turned out to be knowing whether we were doing a good job.</strong> Now, knowing whether you're doing a good job is pretty important in any field, but it's especially critical in machine learning.</p>
+<p>At its core, machine learning is about building algorithms that automatically improve at a task with experience. The word ‘improve’ is critical here. In order for the mathematics to do its work, you have to be able to tell the algorithm, with a number, how well it’s doing at every moment.</p>
+<p><strong>So, to build a recommender system, you need to be able to put a number on how good your recommendations are.</strong></p>
+<p>Surely that’s a straightforward thing to create?</p>
+<h2 id="naive-first-attempt-average-hit-rate">Naïve first attempt: Average Hit Rate</h2>
+<p>A good recommender system should suggest things you want to watch. So let’s start with a simple approach, called ‘average hit rate’ in the lyrical vernacular of the field.</p>
+<p><strong>Based on what you have watched recently, the algorithm has to guess what you are going to watch next. ‘Average hit rate’ measures how often it guesses right.</strong></p>
+<p><img alt="" src="/blog/makingdatamistakes/how-to-know-if-your-recommendations-algorithm-is-actually-doing-a-good-job-mdm/images/DALL-E-2024-09-26-17.55.58---A-highly-realistic-image-of-a-baseball-player-hitting-the-ball.-The-scene-captures-the-moment-of-impact--with-the-bat-connecting-with-the-baseball-in--copy.png"/></p>
+<p><strong>‘Average hit rate’ measures how often we can guess what you will watch next, based on what you’ve watched in the recent past</strong></p>
+<p>But you quickly run into problems with ‘average hit rate’. Put yourself in the shoes of a Channel 4 viewer who watched a lot of Hollyoaks (a perennially popular soap opera for teenagers). Well, we could recommend they watch ‘Hollyoaks: Best Bits 2011’, ‘Hollyoaks: Access All Areas’, and ‘Hollyoaks Does Come Dine With Me’. That would probably guess right quite a lot of the time, but it feels like it’s missing some interestingness, some serendipity, some <em>je ne sais quoi</em> that a really good recommendation should have.</p>
+<p><img alt="" src="/blog/makingdatamistakes/how-to-know-if-your-recommendations-algorithm-is-actually-doing-a-good-job-mdm/images/NFjQsA8mJVRyloQ_hGRmSGTyC0j7Pr-aeLVuGDv7Z81E2_IwWeGeUJJv2f9WSG-uD--4Ul7LuJzWE3RBHc544z4HrSZpudTwT4Cgon08kU33UevnPL_EKdo1NN_dMwPevz_s3Xio"/></p>
+<p><strong>We could recommend that Hollyoaks viewers just watch more Hollyoaks - but a recommendation algorithm should do more than that</strong></p>
+<p><strong>There’s also another, more insidious problem with ‘average hit rate’: you can get a pretty good ‘average hit rate’ score by just recommending the most popular programs at the time, to everyone.</strong></p>
+<p>There’s no cleverness here at all, yet it ends up being right quite a lot of the time: a lot of people want (and, in our experience, went on to watch) those popular programmes, so you’ll probably be right pretty often if you guess them! But there's no personalisation and nothing relevant to a particular user. So even though it gives a better ‘average hit rate’ score than you’d imagine, that’s a failure of the metrics, rather than a success of the algorithm.</p>
+<p>At Channel 4, this prompted some soul-searching about what makes for a really good recommendation, and how the recommender system should fit within the larger <em>All 4</em> product and the Channel 4 brand.</p>
+<h2 id="back-to-first-principles-what-makes-a-good-recommendation">Back to first principles: what makes a good recommendation?</h2>
+<p>A good recommendation should be <em>relevant</em>, certainly. That is, it should be appropriate and closely connected to your previous preferences and behaviours.</p>
+<p>But the <em>All 4</em> Product team pointed out that <strong>we also want the recommendations to be <em>serendipitous</em> - in other words, if we just recommend what you were already going to watch, what’s the benefit?</strong> We want to point you towards something that you would not otherwise have noticed or chosen, but turns out to be something you love.</p>
+<p>Additionally, Channel 4 has a <em>public service remit</em> (defined by the UK government) to be <em>experimental, provocative, pluralistic, educational,</em> and <em>distinctive</em>. It has developed its own unique <em>tone of voice</em>, and its recommendations need to fit with that.</p>
+<p><img alt="" src="/blog/makingdatamistakes/how-to-know-if-your-recommendations-algorithm-is-actually-doing-a-good-job-mdm/images/LD2bX-wTYOUP4Y_bTAdBBszaEL5KoyYn1_J2ndukoTLmt_qTqOup9wKLqySNTI4_r3baV9Wo8Dz7OQ1BamxjBi3a_pcuiQM_NmO0J4hIHvsogZQHoqEOJdq5hnoSs1GhAM1z_rSe"/></p>
+<p><strong>Channel 4’s infamous</strong><a href="https://www.youtube.com/watch?v=h1xxC_Rr__U&amp;ref=makingdatamistakes.com">“Complaints Welcome” advert</a><strong>is a great example of their public service remit</strong></p>
+<p><strong>A good set of recommendations also has a kind of narrative, a cadence.</strong> You might build trust by leading with a reliable suggestion or two that are obviously relevant, then push the boat out a bit further with the next few, and end with some leftfield “Marmite” that they might either love or hate. <strong>At the very least, the set of recommendations should be a little <em>diverse</em>.</strong></p>
+<p>But not <em>too</em> diverse: at Channel 4 we had an embarrassing incident where the Head of Product noticed that one of our early prototypes was making completely dotty suggestions every so often - and so the data science team resolved that we wanted the algorithm to be <em>diverse</em>, but not <em>laughably bad</em>.</p>
+<p>Lastly, there are lots of subtle (and not so subtle) ways that cultural bias or quirks in training data can <a href="https://www.nytimes.com/2018/03/10/opinion/sunday/youtube-politics-radical.html?ref=makingdatamistakes.com">introduce unwanted bias into an algorithm’s decision-making</a>. Measuring and correcting for this <em>bias</em> is tricky, but should be attempted. At the very least, you might want the algorithm to be <em>interpretable</em>, i.e., to be able to <a href="https://www.linkedin.com/pulse/kind-recommendations-marc-zao-sanders/?ref=makingdatamistakes.com">understand <em>why</em> the algorithm made the suggestions it did</a>.</p>
+<p>Our naïve ‘average hit rate’ metric captured <em>relevance</em>, but it wasn’t capturing any of: s<em>erendipity, the public service remit, diversity,</em> or <em>not being laughably bad</em>. If anything, by encouraging you to watch more of what you already like or stuff that’s already popular, it was doing the opposite.</p>
+<p>But how on earth do you put a score on whether an algorithm’s recommendations are <em>serendipitous, provocative, diverse,</em> or <em>laughably bad</em>?</p>
+<h2 id="average-home-run-rate">Average Home Run Rate</h2>
+<p>If you remember, the ‘average hit rate’ measured how often we could guess what you’d watch next, based on what you’d watched in the recent past. <strong>We modified the ‘average hit rate’ to give a higher score for correct guesses of less popular shows. In other words, the algorithm would still get a few points for guessing when someone went on to watch a really popular show, but it would get a lot more if it guessed when they went on to watch a less popular show.</strong> This will tend to produce more <em>serendipitous</em> recommendations.</p>
+<p>For the public service remit (i.e., to be <em>experimental, provocative, pluralistic, educational, distinctive</em> etc.) and capturing the Channel 4 brand's unique tone of voice, we knew we needed to include real human experts somehow. We started with a ‘blind taste test’ experiment, comparing the results of different versions of the algorithm, and asking human experts to judge which was better.</p>
+<p>More importantly, <strong>we designed the <em>All 4</em> product so that most of the overall structure of the page was designed by human experts, restricting the algorithm’s job usually to reordering for each user, along with its own ‘Recommendations’ slot.</strong> We also gave our experts a way to highlight, blacklist and further refine the parameters of the recommendations. This balanced the importance of expert human judgment with individual-level relevance and personalisation.</p>
+<p><img alt="" src="/blog/makingdatamistakes/how-to-know-if-your-recommendations-algorithm-is-actually-doing-a-good-job-mdm/images/MMzwGKBzKELqSXD0tU5WWWy4hRD7noV7qqSqYZfR21LrgV_zWmqs1RSW1Xdbb3e3VCR8qiXzprtOTL0VqG2EpL_qSbHnHxqMCw7baGfY4OzFc-YlyKFfCVoaCIFkM_HtGNTj7HX5"/></p>
+<p><strong>Recommendations if you search for Hollyoaks using the new approach</strong></p>
+<p>Additionally, we wanted to avoid any more embarrassing incidents where we discovered too late that the algorithm was making <em>laughably bad</em> predictions. So <strong>we inverted the ‘average hit rate’ to create the ‘average complete miss rate’, which measured how often the algorithm completely failed to guess <em>anything</em> that a user watched next. We tried to minimise that!</strong></p>
+<p>We also introduced a rigorous quality assurance (QA) step, where human beings hunted for egregious nonsense by eye.</p>
+<p>Taken together, this richer, blended approach to evaluating the algorithm’s performance led to a balanced recommender system that was more valuable to the user and to the business.</p>
+<h2 id="dont-get-lost-down-the-rabbit-hole">Don’t get lost down the rabbit hole</h2>
+<p><em>All 4</em>’s recommendation algorithm started out as what I believed to be a straightforward project. But after getting lost in a rabbit hole trying to devise a score for <em>provocativeness</em> and <em>serendipity</em>, I learnt the single most important lesson about data science: <strong>if you only get one thing right as a data scientist, make sure the scoring system for your algorithm <em>really</em> captures what matters for the end-user and for the business.</strong></p>
+<p>It’s so tempting to just pick a standard, simple metric (e.g., ‘average hit rate’) and focus all your efforts on the algorithm itself. But you may end up with an algorithm that doesn’t quite behave the way you expect it to. Or worse still, it behaves how you (the data scientist) expect, but doesn’t deliver on what matters to the end-user and business.</p>
+
+
+<br />
+<hr />
+
+
+
+<nav class="sibling-nav sibling-nav-bottom" aria-label="Page navigation">
+    
+    <a class="prev" href="/blog/how-to-write-good-software-faster-we-spend-90-of-our-time-debugging-mdm"
+        title="Previous — How to write good software faster (we spend 90% of our time debugging) — sorted by date (newest first)">&#x2190;</a>
+    
+    
+    <a class="up" href="/blog/"
+        title="Up — Blog">&#x2191;</a>
+    
+    
+    <a class="next" href="/blog/neseccary-vs-sufficient-mdm"
+        title="Next — Necessary vs Sufficient — sorted by date (newest first)">&#x2192;</a>
+    
+</nav>
+
+
+
+        
+
+
+
+        
+
+<h1>Belongs to these <a href="/tag">tags</a></h1>
+<ul>
+    
+    <li><a href="/tag/recommendations.html">Recommendations</a></li>
+    
+    <li><a href="/tag/machine-learning.html">Machine learning</a></li>
+    
+    <li><a href="/tag/evaluation.html">Evaluation, measurement</a></li>
+    
+    <li><a href="/tag/product-management.html">Product Management</a></li>
+    
+    <li><a href="/tag/user-experience.html">User Experience</a></li>
+    
+</ul>
+
+
+
+        
+
+
+
+        
+
+
+
+    </div>
+    <footer>
+        <div class="bottom_nav">
+            
+
+            
+
+<p>
+    <i>
+        <span title="The date this page was first made public.">First published</span>: 2020-Aug-03
+    </i>
+</p>
+
+
+<p>
+    <i>
+        <span
+            title="The most recent time the content was edited (which could be before the page was actually published).">Last
+            updated</span>: 2025-Aug-17
+    </i>
+</p>
+
+
+        </div>
+    </footer>
+</body>
+
+</html>

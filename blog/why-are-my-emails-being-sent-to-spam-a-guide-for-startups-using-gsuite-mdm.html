@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+
+    <title>
+
+Why are my emails being sent to spam - a guide for GSuite -
+
+Greg Detre
+</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="gdwebgen" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Greg Detre's personal website" />
+    
+    
+    <meta property="og:site_name" content="Greg Detre" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:site" content="Greg Detre" />
+    <link rel="stylesheet" href="/static/css/base.css">
+    
+<link rel="canonical" href="https://www.gregdetre.com/blog/why-are-my-emails-being-sent-to-spam-a-guide-for-startups-using-gsuite-mdm">
+
+<meta name="description" content="Like car brakes, we can all agree that email deliverability is important, but we don't want to have to learn how it works." />
+<meta property="og:description" content="Like car brakes, we can all agree that email deliverability is important, but we don't want to have to learn how it works." />
+<meta name="twitter:description" content="Like car brakes, we can all agree that email deliverability is important, but we don't want to have to learn how it works." />
+
+<meta property="og:title" content="Why are my emails being sent to spam - a guide for GSuite" />
+<meta name="twitter:title" content="Why are my emails being sent to spam - a guide for GSuite" />
+<meta property="og:url" content="https://www.gregdetre.com/blog/why-are-my-emails-being-sent-to-spam-a-guide-for-startups-using-gsuite-mdm" />
+<meta name="twitter:card" content="summary" />
+
+</head>
+
+<body>
+
+    
+    <div id="wide-img-header">
+        
+        <a href="/wide_img_header/IMG_5253.jpg">
+            <img src="/wide_img_header/IMG_5253_sm.jpg" />
+        </a>
+        
+    </div>
+    
+
+    
+<nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+        
+        
+        <li class="breadcrumb-item" title="Greg Detre">
+            
+            <a href="/">Greg Detre</a>
+            
+        </li>
+        
+        
+        
+        <li class="breadcrumb-item" title="Blog">
+            
+            <a href="/blog/">Blog</a>
+            
+        </li>
+        
+        
+        
+        <li class="breadcrumb-item" title="Why are my emails being sent to spam - a guide for GSuite">
+            
+            <a href="/blog/why-are-my-emails-being-sent-to-spam-a-guide-for-startups-using-gsuite-mdm">Why Are My Emails Being Sen...</a>
+            
+        </li>
+        
+        
+    </ol>
+</nav>
+
+
+    
+    <div class="nav_menu" <p>
+        
+        <a href="/about">About</a>
+        
+        <a href="/blog">Blog</a>
+        
+        <a href="/consulting">Consulting</a>
+        
+        </p>
+    </div>
+    
+
+    <div id="main">
+        
+
+<nav class="sibling-nav sibling-nav-top" aria-label="Page navigation">
+    
+    <a class="prev" href="/blog/how-to-make-your-data-science-team-faster-and-speed-up-progress-mdm"
+        title="Previous — How to make your data science team faster (and speed up progress) — sorted by date (newest first)">&#x2190;</a>
+    
+    
+    <a class="up" href="/blog/"
+        title="Up — Blog">&#x2191;</a>
+    
+    
+    <a class="next" href="/blog/throughput-vs-latency-mdm"
+        title="Next — The Difference: Throughput vs Latency — sorted by date (newest first)">&#x2192;</a>
+    
+</nav>
+
+
+<hr />
+
+
+<h1>Why are my emails being sent to spam - a guide for GSuite</h1>
+
+
+
+
+<h1 id="_1"></h1>
+<p>Argh. Email deliverability. Like car brakes, we can all agree that they’re important, but we don’t want to have to learn how they work.</p>
+<p>I got this email from a client, asking me to help: <em>“This email to an investor was marked as spam! They only noticed it by accident. Why is this happening?”</em></p>
+<p>So this is the high-level guide I wish existed, focused on the practical steps you need to take to make sure your emails don't go to someone else's spam folder.</p>
+<p>It’s probably most relevant if you’re using GSuite (Google’s tools for organisations, including Gmail email), and a separate host for your domain/DNS (GoDaddy in their case).</p>
+<p><strong>There are 3 acronyms that matter for making sure your email doesn’t get marked as spam:</strong></p>
+<ol>
+<li>
+<p><a href="https://support.google.com/a/answer/33786?ref=makingdatamistakes.com">SPF - Sender Policy Framework</a></p>
+</li>
+<li>
+<p><a href="https://support.google.com/a/answer/174126?hl=en&amp;ref=makingdatamistakes.com">DKIM - Domain Keys Identification Mail</a></p>
+</li>
+<li>
+<p><a href="https://dmarc.org/overview/?ref=makingdatamistakes.com">DMARC - Domain-based Message Authentication, Reporting and Conformance</a></p>
+</li>
+</ol>
+<p>For modern email deliverability, <strong>SPF is essential</strong>, <strong>DKIM is also very important</strong>, but you <a href="https://techcrunch.com/2018/11/01/half-fortune-500-dmarc-email-security/?ref=makingdatamistakes.com">can maybe get away without DMARC at first</a>.</p>
+<p>Unfortunately, <a href="https://support.google.com/a/answer/140034?hl=en&amp;ref=makingdatamistakes.com">Google’s basic setup guide for linking up your GSuite/professional Gmail to your domain</a> doesn’t mention setting up any of them. So you may have working email, but occasionally find that it’s showing up in your recipients’ spam folders.</p>
+<p><strong>Note:</strong> If you’re using Google Domains for your DNS, they’ll have set all this up for you automatically. This guide is most relevant if you use a separate DNS provider (GoDaddy in this case).</p>
+<h2 id="step-1-what-do-you-have-set-up-currently">Step 1: What do you have set up currently?</h2>
+<p>Start by finding out what kind of shape you’re in. Take screenshots <em>before</em> you start making changes, so you can be sure later whether you’ve improved things.</p>
+<h3 id="check-if-your-domains-have-spf-dkim-and-dmarc">Check if your domains have SPF, DKIM and DMARC</h3>
+<p>1) <a href="https://toolbox.googleapps.com/apps/checkmx/?ref=makingdatamistakes.com">Google has a handy tool that checks your domain for you</a>. If your SPF and DKIM have green ticks, and there’s nothing red, you’re probably in decent shape:</p>
+<p><img alt="" src="/blog/makingdatamistakes/why-are-my-emails-being-sent-to-spam-a-guide-for-startups-using-gsuite-mdm/images/MY1gNSDY8oseu3OwZZqrVpz0DdLoWn0Y_7cJhOCX7vQYje7y3CSJjrauElKyZHA_fI0JQZtO4BTMfj011XjQbNZmrd0WMrV9XIMUWBTiw1YMD-KZCDHrphrSS5Tu5sldU1DfRNeI"/></p>
+<p><strong>Note:</strong> The ‘Effective SPF Address Ranges’ line is confusing - <a href="https://support.google.com/a/answer/33786?hl=en&amp;ref=makingdatamistakes.com">this gives you an indication of what to look for</a>.</p>
+<p>2) As a followup, try sending an email from your domain to <a href="mailto:ping@tools.mxtoolbox.com">ping@tools.mxtoolbox.com</a> to receive a detailed report (make sure to click through, rather than just looking at the summary in the email).</p>
+<p>For reference, mine looks like this (where I think the important things are correct, but I haven’t bothered with DMARC):</p>
+<p><img alt="" src="/blog/makingdatamistakes/why-are-my-emails-being-sent-to-spam-a-guide-for-startups-using-gsuite-mdm/images/Axnp_u9YShe5iylN5yCrrHbhpChXKWuAKWg7Zm2pEk_at4gM_ow1fun9JGwpSHqDziC52FRuYiS9ApCpmmIP3iRnZI0rI6idJXCuDqYvPSk82sRDdXWTquwYz8yvlTquI-yyk7vf"/></p>
+<p><strong>Note:</strong> I had hoped to use <a href="https://postmaster.google.com/u/0/dashboards?ref=makingdatamistakes.com#do=yourheights.com&amp;st=userReportedSpamRate&amp;dr=7">Google’s Postmaster Tools</a> to get a sense of deliverability rate etc, but it always tells me that there’s no data to display, and to come back later.</p>
+<h3 id="check-if-your-domain-has-been-added-to-spam-blacklists">Check if your domain has been added to spam blacklists</h3>
+<p>I also did some quick checks to see whether the domain had been added to any spam blacklists:</p>
+<p><a href="https://talosintelligence.com/reputation_center/email_rep?ref=makingdatamistakes.com">https://talosintelligence.com/reputation_center/email_rep</a></p>
+<p><em>Blacklisted: no</em></p>
+<p><a href="http://www.sorbs.net/lookup.shtml?ref=makingdatamistakes.com">http://www.sorbs.net/lookup.shtml</a></p>
+<p>It told me that mydomain.com was “<em>not found in the database</em>”.</p>
+<p>Great!</p>
+<p><strong>Note</strong>: I’m not convinced that these checks are sensitive enough. If you know of a better way to measure the email deliverability/spam rating of a domain, <a href="mailto:greg@gregdetre.co.uk">I’d love to hear from you</a>!</p>
+<h2 id="step-2-set-up-the-missing-pieces">Step 2: Set up the missing pieces</h2>
+<h3 id="how-to-set-up-spf">How to set up SPF</h3>
+<p>If your SPF is missing, that’s an easy fix - <a href="https://support.google.com/a/answer/33786?hl=en&amp;ref=makingdatamistakes.com">add a single TXT record to your DNS</a>.</p>
+<h3 id="how-to-set-up-dkim">How to set up DKIM</h3>
+<p>If your DKIM is missing, that’s <a href="https://support.google.com/a/answer/174124?hl=en&amp;ref=makingdatamistakes.com">slightly more involved</a>, since it involves both 1) a change to your Google Admin Console and 2) adding a line to your DNS.</p>
+<p>After you’ve done those, run the checks again from above to make sure they’re passing.</p>
+<p><strong>Note:</strong> Even though you may need to wait 24-48h for the DNS changes to fully propagate to all clients, it seems that at least Google’s CheckMX Toolbox noticed changes immediately.</p>
+<p><strong>A few DKIM gotchas to watch out for:</strong></p>
+<ul>
+<li>If you have multiple domains, make sure you pick the one you’re using for sending emails in the Google Admin page for email authentication:</li>
+</ul>
+<p><img alt="" src="/blog/makingdatamistakes/why-are-my-emails-being-sent-to-spam-a-guide-for-startups-using-gsuite-mdm/images/u0grPeM0a8MksQp7uSv6agz1mi8pdBHQ7PNPuZmQCpJe-w3YAr_gdR9MOQCUVkgM-7GoJ7CHXsilQhS6oyaNMMeA8XsOvVoGTDDEj_k5hDD8XTWi1op5I7VjBqo5EBItdsiuoYhM"/></p>
+<ul>
+<li>
+<p>Make sure to press the ‘Start authentication’ button after generating the record on the Google Admin page. It seems to then stay permanently in a ‘Stop authentication’ state, which I think means everything is working.</p>
+</li>
+<li>
+<p>These <a href="https://support.google.com/a/answer/180504?ref=makingdatamistakes.com">Google instructions for DKIM</a> suggest you can test things are working just by looking at the message header. I got burned by this, because I think I had forgotten the 3rd step (and so it wasn’t <a href="https://mxtoolbox.com/problem/dkim/dkim-signature-alignment?ref=makingdatamistakes.com">correctly aligned with my DNS record</a>), the message header seemed to be fine, i.e. this seems to be a <a href="https://www.makingdatamistakes.com/neseccary-vs-sufficient/">necessary but not sufficient</a> test. For that reason, I now prefer the more stringent <a href="mailto:ping@tools.mxtoolbox.com">ping@tools.mxtoolbox.com</a> test described above.</p>
+</li>
+<li>
+<p>As I understand it, <a href="https://support.google.com/a/answer/174126?hl=en&amp;ref=makingdatamistakes.com">not all DNS hosts can support longer (i.e. 2048-bit) DKIM keys</a>, so I simply opted for a <a href="https://crypto.stackexchange.com/questions/72297/recommended-key-size-for-dkim?ref=makingdatamistakes.com">1024-bit key as sufficient for now</a>.</p>
+</li>
+</ul>
+<h3 id="how-to-set-up-dmarc">How to set up DMARC</h3>
+<p>DMARC is the icing on the cake, but it’s a bit more complicated for a few reasons:</p>
+<ul>
+<li>
+<p><strong>Configuration</strong>. You have to make some choices about what should happen when there’s a problem. The smart move is to start with monitoring-only (‘none’), then gradually ramp up to quarantining, starting with a small proportion of messages - see <a href="https://support.google.com/a/answer/2466563?hl=en&amp;ref=makingdatamistakes.com">‘Deploy DMARC slowly / Example deployment’</a>.</p>
+</li>
+<li>
+<p><strong>Monitoring</strong>. Unlike SPF and DKIM, DMARC gets input back from the email recipient. So you can nominate an email address to receive a daily aggregated report (or even a detailed immediate forensic one).</p>
+</li>
+<li>
+<p><strong>3rd-party sending</strong>. Until now, I had focused on sending from GSuite (via the Gmail-style interface), and ignored the <a href="http://klaviyo.com/?ref=makingdatamistakes.com">Klaviyo</a> newsletter that was being sent from the same domain, since deliverability and spam ratings were good for the newsletter (&gt;99% deliverability). Importantly, Klaviyo has its own separate mail transfer agent and DNS setup, and it shouldn’t be affected by any of the SPF/DKIM changes we’ve made so far. However, be aware that DMARC (mis)configuration might affect 3rd-party sending.</p>
+</li>
+<li>
+<p>One final tip that had me tearing out my hair. <a href="https://thepracticalparanoid.com/its-time-to-upgrade-your-email-security/?ref=makingdatamistakes.com">All the</a> <a href="https://support.google.com/a/answer/2466563?hl=en&amp;ref=makingdatamistakes.com">guides</a> seemed to suggest using <em>_dmarc.example.com</em> for the TXT record name - but in practice, that means setting it to just <em>_dmarc</em> on GoDaddy.</p>
+</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>At the time of writing, I’m still not certain that things are working perfectly. It takes up to 48h for DNS changes to propagate, and it took months after the last set of changes to realise there were still some lingering deliverability issues. But the hardest part was finding a set of tools to <em>test</em> that everything was set up correctly - with those in hand, I feel much more confident of zeroing in inexorably on a stable configuration.</p>
+
+
+<br />
+<hr />
+
+
+
+<nav class="sibling-nav sibling-nav-bottom" aria-label="Page navigation">
+    
+    <a class="prev" href="/blog/how-to-make-your-data-science-team-faster-and-speed-up-progress-mdm"
+        title="Previous — How to make your data science team faster (and speed up progress) — sorted by date (newest first)">&#x2190;</a>
+    
+    
+    <a class="up" href="/blog/"
+        title="Up — Blog">&#x2191;</a>
+    
+    
+    <a class="next" href="/blog/throughput-vs-latency-mdm"
+        title="Next — The Difference: Throughput vs Latency — sorted by date (newest first)">&#x2192;</a>
+    
+</nav>
+
+
+
+        
+
+
+
+        
+
+<h1>Belongs to these <a href="/tag">tags</a></h1>
+<ul>
+    
+    <li><a href="/tag/tips-tricks.html">Tips & tricks</a></li>
+    
+    <li><a href="/tag/technology.html">Technology</a></li>
+    
+    <li><a href="/tag/google.html">Google</a></li>
+    
+    <li><a href="/tag/business.html">Business</a></li>
+    
+</ul>
+
+
+
+        
+
+
+
+        
+
+
+
+    </div>
+    <footer>
+        <div class="bottom_nav">
+            
+
+            
+
+<p>
+    <i>
+        <span title="The date this page was first made public.">First published</span>: 2020-Jul-16
+    </i>
+</p>
+
+
+<p>
+    <i>
+        <span
+            title="The most recent time the content was edited (which could be before the page was actually published).">Last
+            updated</span>: 2025-Aug-17
+    </i>
+</p>
+
+
+        </div>
+    </footer>
+</body>
+
+</html>

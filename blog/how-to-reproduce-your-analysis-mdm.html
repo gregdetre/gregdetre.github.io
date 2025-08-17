@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+
+    <title>
+
+How to reproduce your analysis -
+
+Greg Detre
+</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="gdwebgen" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Greg Detre's personal website" />
+    
+    
+    <meta property="og:site_name" content="Greg Detre" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:site" content="Greg Detre" />
+    <link rel="stylesheet" href="/static/css/base.css">
+    
+<link rel="canonical" href="https://www.gregdetre.com/blog/how-to-reproduce-your-analysis-mdm">
+
+<meta name="description" content="I had to become the world's most boring archaeologist, poring over version control changelogs and filesystem backups to understand why my analysis suddenly gave different results." />
+<meta property="og:description" content="I had to become the world's most boring archaeologist, poring over version control changelogs and filesystem backups to understand why my analysis suddenly gave different results." />
+<meta name="twitter:description" content="I had to become the world's most boring archaeologist, poring over version control changelogs and filesystem backups to understand why my analysis suddenly gave different results." />
+
+<meta property="og:title" content="How to reproduce your analysis" />
+<meta name="twitter:title" content="How to reproduce your analysis" />
+<meta property="og:url" content="https://www.gregdetre.com/blog/how-to-reproduce-your-analysis-mdm" />
+<meta name="twitter:card" content="summary" />
+
+</head>
+
+<body>
+
+    
+    <div id="wide-img-header">
+        
+        <a href="/wide_img_header/IMG_5253.jpg">
+            <img src="/wide_img_header/IMG_5253_sm.jpg" />
+        </a>
+        
+    </div>
+    
+
+    
+<nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+        
+        
+        <li class="breadcrumb-item" title="Greg Detre">
+            
+            <a href="/">Greg Detre</a>
+            
+        </li>
+        
+        
+        
+        <li class="breadcrumb-item" title="Blog">
+            
+            <a href="/blog/">Blog</a>
+            
+        </li>
+        
+        
+        
+        <li class="breadcrumb-item" title="How to reproduce your analysis">
+            
+            <a href="/blog/how-to-reproduce-your-analysis-mdm">How To Reproduce Your Analysis</a>
+            
+        </li>
+        
+        
+    </ol>
+</nav>
+
+
+    
+    <div class="nav_menu" <p>
+        
+        <a href="/about">About</a>
+        
+        <a href="/blog">Blog</a>
+        
+        <a href="/consulting">Consulting</a>
+        
+        </p>
+    </div>
+    
+
+    <div id="main">
+        
+
+<nav class="sibling-nav sibling-nav-top" aria-label="Page navigation">
+    
+    <a class="prev" href="/blog/unhttps-www-graymeta-com-metadatamatterspodcast-howhumansandmachinelearningdeliverthebestresulttitled-mdm"
+        title="Previous — How Humans and Machine Learning Deliver the Best Result (Podcast) — sorted by date (newest first)">&#x2190;</a>
+    
+    
+    <a class="up" href="/blog/"
+        title="Up — Blog">&#x2191;</a>
+    
+    
+    <a class="next" href="/blog/how-to-run-an-idea-stampede-to-make-a-group-gallop-mdm"
+        title="Next — How to run an Idea Stampede to make a group gallop — sorted by date (newest first)">&#x2192;</a>
+    
+</nav>
+
+
+<hr />
+
+
+<h1>How to reproduce your analysis</h1>
+
+
+
+
+<blockquote>
+<p><em>“But didn’t you say you got 80% when you ran this analysis last month?”</em></p>
+</blockquote>
+<p>That little question prompted a very miserable few weeks of data science detective work for me in grad school.</p>
+<p>What do you do when things don’t seem to be behaving the same way now that they did before?</p>
+<p>It’s tempting, oh my god so tempting, to just stick with the new answer. Until some voice inside wonders ‘but what if the <em>previous</em> answer was right and it’s this <em>new</em> one that’s wrong?’. Or it could be even worse - maybe they’re <em>both</em> wrong. Or maybe you’re just a dummy, and you’ve misremembered the number from before.</p>
+<p>Some version of this dilemma will strike everyone working in data science, and probably more than once. When I was bitten by this problem in grad school for the first time, I had to become the world’s most boring archaeologist. I pored over my own version control changelogs, filesystem backups, figures and tables from old presentations, and entries from my lab journal. I tried different random seeds, re-running it on multiple machines, and painstakingly reverting to older versions of the analysis library. I went through everything I could think of that might have changed, to try and understand what was different.</p>
+<p>This kind of debugging is painful, it’s slow, and you may never get to the bottom of things.</p>
+<p>After that experience, I swore I’d put in extra effort <em>up front</em> wherever I could, to avoid that laborious detective work trying to reproduce old results again. Of course, I’ve been bitten by reproducibility bugs since then anyway… but hopefully less often.</p>
+<p>So this is about <strong>reproducibility</strong> - <strong>can you re-run the same analysis 6 months later and get the same answer? Or for a stricter test - could <em>someone else</em> run your analysis long after you’ve gone and get the same answer?</strong></p>
+<p>Let’s start with some basics.</p>
+<h2 id="have-a-front-door">Have a front door</h2>
+<p>Your analysis should have a front door that you always enter through. If it’s a machine learning modelling problem, then create a pipeline that you always call in the same way.</p>
+<h2 id="document-the-important-things">Document the important things</h2>
+<p>Document things, at least somewhat. <em>How do you call your pipeline? Are there any gotchas?</em> In six months’ time, your memory for all these arcane details will have faded, so do your future self a favour and provide some hints.</p>
+<h2 id="use-version-control">Use version control</h2>
+<p>Use version control. If you’re new to it, maybe start with GitHub Desktop rather than the command-line. Use version control, even if you’re working on your own. Commit often, and use descriptive messages. That way, if you <em>do</em> have trouble reproducing your results from months ago when you run it again, you can try checking out a commit from that time.</p>
+<ul>
+<li>
+<p>If the code from the past reproduces the results from the past, you’re in luck. You’ve found the smoking gun, and there’s a straightforward debugging method. Do a binary search (see <a href="http://www.kernel.org/pub/software/scm/git/docs/git-bisect.html?ref=makingdatamistakes.com">git bisect</a>) through your commits between then and now to find the moment when the results changed.</p>
+</li>
+<li>
+<p>If the code from the past <em>doesn’t</em> reproduce the results from the past, then it’s time to bring out the bigger guns.</p>
+</li>
+</ul>
+<h2 id="make-your-datasets-immutable">Make your datasets immutable</h2>
+<p>You also need to make sure your datasets haven’t changed underfoot. There are lots of ways to achieve this. You could stuff your data into version control too, but this quickly becomes infeasible for large or changing datasets. You could store your data in an S3 bucket with versioning and logging enabled.</p>
+<p>Better still, make your datasets <em>immutable</em>. That is, you don’t ever change a dataset - instead, make a copy with a new name, and modify that. Each dataset should have a unique and permanent name, kind of like a ‘primary key’. That way, each analysis can refer unambiguously to the dataset it was run on. For very large datasets, you might have to find a more efficient way to store things while still treating the data as immutable.</p>
+<h2 id="store-your-results">Store your results</h2>
+<p>Store the results from running your analysis somewhere safe and searchable. Don’t do what I did and just stuff them into a shoebox full of receipts, fortune cookie messages, Nietzsche quotes, and phone numbers from girls in gas masks that you met in an underground Berlin techno bar. A spreadsheet is a good start.</p>
+<h2 id="keep-a-lab-journal">Keep a lab journal</h2>
+<p>Keep a lab journal, a kind of diary that you scribble in as you proceed. Describe your thinking process, and make notes of your progress.</p>
+<h2 id="to-sum-it-up">To sum it up:</h2>
+<p>So, your code is versioned. Your datasets are versioned and immutable. You’re storing your results. And you’re keeping a lab journal. That will get you a long way to being able to reproduce your results.</p>
+
+
+<br />
+<hr />
+
+
+
+<nav class="sibling-nav sibling-nav-bottom" aria-label="Page navigation">
+    
+    <a class="prev" href="/blog/unhttps-www-graymeta-com-metadatamatterspodcast-howhumansandmachinelearningdeliverthebestresulttitled-mdm"
+        title="Previous — How Humans and Machine Learning Deliver the Best Result (Podcast) — sorted by date (newest first)">&#x2190;</a>
+    
+    
+    <a class="up" href="/blog/"
+        title="Up — Blog">&#x2191;</a>
+    
+    
+    <a class="next" href="/blog/how-to-run-an-idea-stampede-to-make-a-group-gallop-mdm"
+        title="Next — How to run an Idea Stampede to make a group gallop — sorted by date (newest first)">&#x2192;</a>
+    
+</nav>
+
+
+
+        
+
+
+
+        
+
+<h1>Belongs to these <a href="/tag">tags</a></h1>
+<ul>
+    
+    <li><a href="/tag/data-science-and-machine-learning.html">Data science and machine learning</a></li>
+    
+    <li><a href="/research/index.html">Research</a></li>
+    
+    <li><a href="/tag/bugs-testing.html">Bugs & testing</a></li>
+    
+    <li><a href="/tag/documentation.html">Documentation</a></li>
+    
+    <li><a href="/tag/tips-tricks.html">Tips & tricks</a></li>
+    
+</ul>
+
+
+
+        
+
+
+
+        
+
+
+
+    </div>
+    <footer>
+        <div class="bottom_nav">
+            
+
+            
+
+<p>
+    <i>
+        <span title="The date this page was first made public.">First published</span>: 2020-Nov-16
+    </i>
+</p>
+
+
+<p>
+    <i>
+        <span
+            title="The most recent time the content was edited (which could be before the page was actually published).">Last
+            updated</span>: 2025-Aug-17
+    </i>
+</p>
+
+
+        </div>
+    </footer>
+</body>
+
+</html>

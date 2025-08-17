@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+
+    <title>
+
+A field guide to AI-first development -
+
+Greg Detre
+</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="gdwebgen" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Greg Detre's personal website" />
+    
+    
+    <meta property="og:site_name" content="Greg Detre" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:site" content="Greg Detre" />
+    <link rel="stylesheet" href="/static/css/base.css">
+    
+<link rel="canonical" href="https://www.gregdetre.com/blog/ai-first-development-mdm">
+
+<meta name="description" content="It's a bazooka strapped to a chainsaw, and the default is that you cut off your arm rather than build a house with it." />
+<meta property="og:description" content="It's a bazooka strapped to a chainsaw, and the default is that you cut off your arm rather than build a house with it." />
+<meta name="twitter:description" content="It's a bazooka strapped to a chainsaw, and the default is that you cut off your arm rather than build a house with it." />
+
+<meta property="og:title" content="A field guide to AI-first development" />
+<meta name="twitter:title" content="A field guide to AI-first development" />
+<meta property="og:url" content="https://www.gregdetre.com/blog/ai-first-development-mdm" />
+<meta name="twitter:card" content="summary" />
+
+</head>
+
+<body>
+
+    
+    <div id="wide-img-header">
+        
+        <a href="/wide_img_header/IMG_5253.jpg">
+            <img src="/wide_img_header/IMG_5253_sm.jpg" />
+        </a>
+        
+    </div>
+    
+
+    
+<nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+        
+        
+        <li class="breadcrumb-item" title="Greg Detre">
+            
+            <a href="/">Greg Detre</a>
+            
+        </li>
+        
+        
+        
+        <li class="breadcrumb-item" title="Blog">
+            
+            <a href="/blog/">Blog</a>
+            
+        </li>
+        
+        
+        
+        <li class="breadcrumb-item" title="A field guide to AI-first development">
+            
+            <a href="/blog/ai-first-development-mdm">A Field Guide To Ai-First D...</a>
+            
+        </li>
+        
+        
+    </ol>
+</nav>
+
+
+    
+    <div class="nav_menu" <p>
+        
+        <a href="/about">About</a>
+        
+        <a href="/blog">Blog</a>
+        
+        <a href="/consulting">Consulting</a>
+        
+        </p>
+    </div>
+    
+
+    <div id="main">
+        
+
+<nav class="sibling-nav sibling-nav-top" aria-label="Page navigation">
+    
+    <a class="prev" href="/blog/metaphors-for-depression-clean-language-and-the-dsm"
+        title="Previous — Metaphors for depression, clean language, and the DSM — sorted by date (newest first)">&#x2190;</a>
+    
+    
+    <a class="up" href="/blog/"
+        title="Up — Blog">&#x2191;</a>
+    
+    
+    <a class="next" href="/blog/mindstone-2025-mdm"
+        title="Next — Mindstone AI London 2025-Feb-18 — sorted by date (newest first)">&#x2192;</a>
+    
+</nav>
+
+
+<hr />
+
+
+<h1>A field guide to AI-first development</h1>
+
+
+
+
+<p>Want to know how to build a <a href="https://www.perplexity.ai/search/how-many-lines-of-code-does-a-JStnps.URG.lO.1AClkOOw?ref=makingdatamistakes.com">well-architected 60,000-line project from scratch in 6 weeks</a>, without writing a single line of code by hand? This was my second AI-first project, and it went smoothly, using <a href="https://github.com/gregdetre/gjdutils/tree/main/docs?ref=makingdatamistakes.com">techniques and prompts</a> from the first one. (See Postscript below if you're curious about how things turned out.)</p>
+<p>This approach relies heavily on human software engineering expertise &amp; judgment, and has been optimised for: greenfield, solo <a href="/about/bio/?ref=makingdatamistakes.com">experienced developer</a>, ideal architecture for AI-first coding, and speedy progress, in June 2025 (Claude 4, o3, Gemini 2.5).</p>
+<p>Of course, if you're developing as part of a team, on a larger legacy codebase, with users in production, and place a premium on reliability, then you have a completely different set of constraints. If so, then <a href="https://www.makingdatamistakes.com/making-tea-while-ai-codes-a-practical-guide-to-2024s-development-revolution/">human-first, AI-<em>assisted</em> programming</a> makes more sense for now (i.e. treating AI like a junior pair programmer).</p>
+<p>But as models improve, AI-<em>first</em> will eventually become the dominant mode of development. The AI will write pretty much all the code, with the human as engineering &amp; product manager.</p>
+<h1 id="let-go-emotionally-of-the-idea-that-you-are-there-to-write-code">Let go emotionally of the idea that you are there to write code.</h1>
+<p>Your job (as developer) is to be a manager of an AI team of developers.</p>
+<p><em>There's an old joke: "</em><a href="https://quoteinvestigator.com/2022/01/30/future-factory/?ref=makingdatamistakes.com"><em>in the future</em></a><em>, all factories will have two employees - a person and a dog. The person is there to feed the dog, and the dog is there to bite the person if they try to touch the machines.”</em></p>
+<p>I found it very hard to resist the temptation to obsess over every line of code, especially for the bits I like building. To break that habit, it helped enormously at first to be using TypeScript &amp; React for this project, because I don't know either of them very well! It forced me to apply generalised best practices and solve meta-problems (how to instruct the AI to make good decisions itself). But there have been lots of moments where it would have helped a lot if I knew React better.</p>
+<p>Take joy in the pace at which your vision becomes real, in product and architectural decisions, in meta-building (building the <a href="https://www.john-rush.com/posts/ai-20250701.html?ref=makingdatamistakes.com">factory</a> that in turn builds the product), and in the value people get from what you've built.</p>
+<h1 id="ai-first-development-is-a-skill">AI-first development is a skill</h1>
+<p>AI-first coding is a skill that can be learned. It is also a toolset that you can build or adopt. It's immature, and changing fast. It's a bazooka strapped to a chainsaw, and the default is that you cut off your arm rather than build a house with it. Steve Yegge <a href="https://youtu.be/TZE33qMYwsc?si=J5rm7WWrYFEt0v3J&amp;t=4042&amp;ref=makingdatamistakes.com">puts this well</a>.</p>
+<ul>
+<li>
+<p>Be willing to read, learn, and experiment.</p>
+</li>
+<li>
+<p>Start off in a sandbox, e.g. a hackathon, or building for fun, or a low-stakes project. This way, you can take risks. We learn faster when we can make bold mistakes.</p>
+</li>
+<li>
+<p>Your expertise is a multiplier. You will be much more effective if you deeply understand the architecture and tools that you're building with.</p>
+</li>
+<li>
+<p>Using AI as a Socratic tutor (rather than an oracle) works well in unfamiliar territory.</p>
+</li>
+<li>
+<p>AI still does stupid stuff routinely. The techniques below will make it happen less often, and will help you notice and fix it quickly. But it will still happen a lot, for now. You probably should check every line of production code yourself, unless you have great tests.</p>
+</li>
+</ul>
+<h1 id="work-as-though-ai-is-free-instantaneous-and-smarter-than-you">Work as though AI is free, instantaneous, and smarter than you.</h1>
+<p>This will be true in the not-so-distant future, and we can live in that future today by working around the ways in which we're not there yet.</p>
+<ul>
+<li>
+<p>It's zero marginal cost if you pay for the Anthropic $200/month <a href="https://www.anthropic.com/news/max-plan?ref=makingdatamistakes.com">all-you-can-eat plan</a> plus Cursor $20/month.</p>
+</li>
+<li>
+<p>If you set up your workflow so that you can work in parallel, you won't notice the delays as much.</p>
+</li>
+<li>
+<p>In order to live in the future where AI is even smarter, use planning docs and the "multiple model" techniques from below.</p>
+</li>
+</ul>
+<h1 id="if-i-have-six-hours-to-chop-down-a-tree-i-will-spend-the-first-four-sharpening-my-axe"><em>"If I have six hours to chop down a tree, I will spend the first four sharpening my axe"</em>.</h1>
+<p>A lot of the software engineering best practices that we've known about for a long time are quite effortful. With AI, the effort/cost has dropped enormously, because you're not one that actually has to write the tests or update the docs. And if anything, the benefits are even greater, because a good doc makes it much more likely that the AI will follow the right coding style, reuse existing machinery, avoid gotchas, and generally make good decisions. So <strong>the cost-benefit ratio of good practices is suddenly much higher for AI-first coding</strong>.</p>
+<ul>
+<li>
+<p>Take the time to have conversations and get aligned about requirements, and then agree on a good plan (for bigger pieces of work), before setting the AI loose on the code.</p>
+</li>
+<li>
+<p>Invest in your development setup, documentation, CLAUDE.md file, pick AI-friendly simple architecture, linting, tests, browser automation, infrastructure for ensembling multiple models, handy scripts, safety nets, etc.</p>
+</li>
+<li>
+<p>Be profligate in asking for web research, e.g. for debugging, best practices, 3rd-party libraries, etc - and ask it to write up the best stuff as docs that you can refer to later.</p>
+</li>
+<li>
+<p>Make time for regular housekeeping, e.g. update documentation and CLAUDE.md, fix linter/type-checker issues, make automated tests work/relevant/high-coverage, etc.</p>
+</li>
+<li>
+<p>Address root causes. When you spot a patch of quicksand that keeps being a source of friction and bugs, take the time to fix/refactor/improve it. See below re "fix inputs, not outputs".</p>
+</li>
+<li>
+<p>Build your own foundational skills and understanding. Get to know your IDE really well. Use <a href="https://www.lennysnewsletter.com/p/ai-prompt-engineering-in-2025-sander-schulhoff?ref=makingdatamistakes.com">evidence-based</a> <a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview?ref=makingdatamistakes.com">prompting</a> techniques. And it might be helpful to build intuitions about how modern LLMs work (<a href="https://simonwillison.net/?ref=makingdatamistakes.com">Simon Willison for the application level</a>, <a href="https://www.anthropic.com/research/mapping-mind-language-model?ref=makingdatamistakes.com">Anthropic for interpretability</a>, <a href="https://magazine.sebastianraschka.com/?ref=makingdatamistakes.com">Raschka for algorithms</a>, <a href="https://www.3blue1brown.com/lessons/mlp?ref=makingdatamistakes.com">3blue1brown for mathematics</a>, <a href="https://karpathy.ai/zero-to-hero.html?ref=makingdatamistakes.com">Karpathy for implementation intuitions</a>).</p>
+</li>
+</ul>
+<h1 id="for-big-features-use-the-following-workflow">For big features, use the following <a href="https://github.com/gregdetre/gjdutils/blob/main/docs/WORKFLOW.md?ref=makingdatamistakes.com">workflow</a></h1>
+<p><a href="https://github.com/gregdetre/gjdutils/tree/main/docs/reference?ref=makingdatamistakes.com">Sounding board mode</a></p>
+<ul>
+<li>
+<p>Prefer Claude, because it's nicer to talk to, listens, raises concerns, and can use subagents (if Claude Code) to search the web.</p>
+</li>
+<li>
+<p>Use voice recognition (not whatever's built into your OS - something like <a href="https://wisprflow.ai/?ref=makingdatamistakes.com">Wispr Flow</a> for speed, or <a href="https://tryvoiceink.com/?ref=makingdatamistakes.com">Voice Ink</a> for privacy).</p>
+</li>
+<li>
+<p>If it's a big, open topic where you're trying to think through the requirements for the first time, tell it to interview you like a journalist, asking one question at a time (to avoid cognitive overload), and answer out loud while folding the laundry.</p>
+</li>
+</ul>
+<p>Write a <a href="https://github.com/gregdetre/gjdutils/blob/main/docs/instructions/CRITIQUE_OF_PLANNING_DOC.md?ref=makingdatamistakes.com">planning doc</a>.</p>
+<ul>
+<li>
+<p>This is invaluable for so many reasons, including: being sure that you &amp; the AI are aligned; giving you fine-grained visibility &amp; control over the plan; an ongoing progress update; a historical record; something to feed into prompts later as a reference; externalises context to carry into new conversations; a concrete proposal for other AIs to critique; something to hang on your wall above your mantlepiece, etc.</p>
+</li>
+<li>
+<p>That prompt will break things down strategically into stages, and make sure that good habits are built-in to the process at the right moments.</p>
+</li>
+<li>
+<p>Ask another AI to <a href="https://github.com/gregdetre/gjdutils/blob/main/docs/instructions/CRITIQUE_OF_PLANNING_DOC.md?ref=makingdatamistakes.com">critique the planning doc</a>, especially if it's tricky/meaty, and then decide what to take on board. o3 is good for this, because it's smart and it really delights in telling you all the ways that this was written by cowboys and listing all the ways to improve things.</p>
+</li>
+</ul>
+<p><a href="https://github.com/gregdetre/gjdutils/tree/main/docs/instructions?ref=makingdatamistakes.com">Execute the planning doc</a>, stage-by-stage.</p>
+<ul>
+<li>
+<p>This gives you a chance to review/test/<a href="https://github.com/gregdetre/gjdutils/blob/main/docs/instructions/DEBRIEF_PROGRESS.md?ref=makingdatamistakes.com">debrief</a> before <a href="https://github.com/gregdetre/gjdutils/blob/main/docs/instructions/GIT_COMMIT_CHANGES.md?ref=makingdatamistakes.com">committing</a>, and then run <a href="https://docs.anthropic.com/en/docs/claude-code/costs?ref=makingdatamistakes.com">/compact</a> on the conversation before proceeding.</p>
+</li>
+<li>
+<p>Prefer o3 in Cursor for <a href="https://github.com/gregdetre/gjdutils/blob/main/docs/instructions/DETECTIVE_SCIENTIST_MODE.md?ref=makingdatamistakes.com">debugging</a> and reviewing the code that has been written.</p>
+</li>
+</ul>
+<h1 id="invest-in-your-evergreen-documentation">Invest in your <a href="https://github.com/gregdetre/gjdutils/blob/main/docs/instructions/WRITE_EVERGREEN_DOC.md?ref=makingdatamistakes.com">evergreen documentation</a></h1>
+<p>(Obviously don't write the docs <em>yourself</em>.)</p>
+<ul>
+<li>
+<p>Lots of cross-references to other docs and relevant code. Then in your prompts you can just reference one or two of those docs and that's usually enough to help the agent figure out what references to follow and find the relevant bits of code. <em>"Add a delete icon, as per DESIGN_ICONS.md”</em></p>
+</li>
+<li>
+<p>Create <a href="https://github.com/gregdetre/gjdutils/blob/main/docs/instructions/WRITE_DEEP_DIVE_AS_DOC.md?ref=makingdatamistakes.com">research docs</a>. For example, if you're making use of a new library, ask Claude to write itself documentation on how to use it.</p>
+</li>
+<li>
+<p>Regular <a href="https://github.com/gregdetre/gjdutils/blob/main/docs/instructions/UPDATE_HOUSEKEEPING_DOCUMENTATION.md?ref=makingdatamistakes.com">documentation housekeeping</a>, i.e. make sure it's up-to-date, covers everything, nothing's obsolete, not too much overlap, well-referenced, up-to-date documentation-index etc.</p>
+</li>
+<li>
+<p>If you have to <a href="https://github.com/gregdetre/gjdutils/blob/main/docs/instructions/RENAME_OR_MOVE.md?ref=makingdatamistakes.com">rename a file</a>, make sure to update all the references to it. For big renames, it helps to set up <a href="https://github.com/chmln/sd?ref=makingdatamistakes.com">SD for find-replace</a> (nice syntax, and a dry-run mode) along with an <a href="https://github.com/gregdetre/gjdutils/blob/main/docs/reference/SD_STRING_DISPLACEMENT_FIND_REPLACE.md?ref=makingdatamistakes.com">explanatory doc</a>.</p>
+</li>
+</ul>
+<h1 id="pick-ai-friendly-architecture">Pick AI-friendly architecture</h1>
+<p>What makes for an AI-friendly choice?</p>
+<ul>
+<li>
+<p>Pick languages/libraries/frameworks with <em>lots</em> of pretraining data (i.e. they've been around for a while, and lots of people use &amp; discuss them), with good documentation, with few gotchas. I suspect it helps too if there hasn't been too much API-version churn, especially recently (otherwise a lot of the pretraining might use older examples). You can provide up-to-date docs, but the AI will always be tugged towards its pretraining.</p>
+</li>
+<li>
+<p>Simple (after all, anything that causes human developers friction will be tricky for AI too). Standard. <a href="http://www.drmaciver.com/2016/10/why-you-should-use-a-single-repository-for-all-your-companys-projects/?ref=makingdatamistakes.com">Monorepo</a>. No <a href="https://blog.komand.com/microservices-please-dont?ref=makingdatamistakes.com">microservices</a>. Try to avoid multiple languages. Try to avoid separate frontend and backend. Try to avoid ultraprocessed foods.</p>
+</li>
+<li>
+<p>In a previous project, I wanted to use an unusual setup with Python/Flask, with <a href="http://svelte.js/?ref=makingdatamistakes.com">Svelte.js</a> embedded within Jinja templates. It took a long time to get it to work, and it kept breaking whenever the AI made changes. Eventually <a href="https://www.linkedin.com/in/glenn-smith-uk/?originalSubdomain=uk&amp;ref=makingdatamistakes.com">Glenn Smith</a> pointed out that my bad architecture choices were holding me back. After I reworked everything with a more conventional setup (giving Svelte.js a full frontend), things immediately went much more smoothly.</p>
+</li>
+<li>
+<p>For my next project, I went a step further in the same direction: <a href="http://next.js/?ref=makingdatamistakes.com">Next.js</a> plus Shadcn for CSS (thanks for the <a href="https://www.linkedin.com/in/peternixey/?originalSubdomain=uk&amp;ref=makingdatamistakes.com">recommendation, Peter Nixey</a>. Same setup used by Replit, Lovable and v0, probably the most popular approach around, one language, shared code &amp; types across front and backend, libraries to do standard stuff. Things looked better out of the box, and development has gone much faster and more smoothly.</p>
+</li>
+<li>
+<p>Pick AI-friendly hosting, i.e. where everything can be orchestrated by CLI or config without needing to point and click at all. For example, <a href="http://supabase.com/?ref=makingdatamistakes.com">Supabase</a> is Postgres under the hood, and offers a bunch of other nice features. For simple setups, <a href="http://vercel.com/?ref=makingdatamistakes.com">Vercel</a> has been the best so far, except that it doesn't provide programmatic access to production logs. Alternatively, <a href="https://www.linkedin.com/posts/joshuawohle_practicalai-futureofwork-endofsaas-activity-7237734456520765443-Nhrz/?ref=makingdatamistakes.com">Josh Wohle recommends Replit</a> to avoid devops altogether.</p>
+</li>
+</ul>
+<h1 id="optimise-for-correctness-throughput-and-minimal-human-interventionblocking-time-rather-than-latency-wall-clock-time-or-ai-effort">Optimise for correctness, <a href="https://www.makingdatamistakes.com/throughput-vs-latency/">throughput</a>, and minimal human-intervention/blocking-time, rather than latency, wall-clock time, or AI-effort</h1>
+<ul>
+<li>
+<p>It doesn't matter how long the AI churns for, as long as it gets it right eventually.</p>
+</li>
+<li>
+<p>Work in parallel.</p>
+</li>
+<li>
+<p>Try to have some stuff going on that the AI can power through on its own with little supervision (e.g. a well-defined planning doc stage, or some housekeeping), alongside one or two things that are much more interactive (e.g. a sounding-board conversation about requirements, or iteratively tweaking the UI).</p>
+</li>
+<li>
+<p>Try to work on features that touch different areas of the codebase in different worktrees, so that you're less likely to experience merge conflicts.</p>
+</li>
+<li>
+<p>See multiple Git worktrees.</p>
+</li>
+<li>
+<p>Make it easier to context-switch by using separate desktops for each worktree, with a sticky note on each reminding you what's going on.</p>
+</li>
+<li>
+<p>Try and catch errors at compile-time or test-time, rather than human-review-time. I'm still trying to figure this out, but it might involve running the linter/type-checker/tests at the end of each planning doc stage, or even as a custom hook before each Git commit (see hooks below), or automatically asking for a code review from another AI.</p>
+</li>
+<li>
+<p>Run housekeeping tasks to keep things ship-shape regularly (although I think this will work even better if we can keep things clean as we go along), e.g.:</p>
+</li>
+<li>
+<p>Update out-of-date docs, add missing docs, amalgamate duplicate docs, refactor overlapping docs, etc. see "Invest in your evergreen documentation".</p>
+</li>
+<li>
+<p>Cull/consolidate broken tests - see "Testing"</p>
+</li>
+<li>
+<p>Make sure linting and type-checking are clean (see below).</p>
+</li>
+<li>
+<p>Don't look at the code by eye. Find other ways to understand the system, e.g. ask Claude to explain the code, read the docs, or ask it to <a href="https://github.com/gregdetre/gjdutils/blob/main/docs/instructions/GENERATE_MERMAID_DIAGRAM.md?ref=makingdatamistakes.com">generate a diagram</a>. (thanks for this tip, <a href="https://www.linkedin.com/in/david-hathiramani-0b39163?originalSubdomain=uk&amp;ref=makingdatamistakes.com">David H</a>!).</p>
+</li>
+</ul>
+<h1 id="multiple-models">Multiple models</h1>
+<ul>
+<li>
+<p>Use the right model for the job.</p>
+</li>
+<li>
+<p>Claude for conversation, writing, editing, tool use, long to-do lists, following instructions, and especially sub-tasks that can be delegated to subagents. Prefer Opus for anything complex, because Sonnet's intelligence seems to fluctuate.</p>
+</li>
+<li>
+<p>o3 for debugging, critiquing, and for tricky code. It is very good at suggesting root cause solutions, and its code works first-time more often. (Feed it the same <a href="http://claude.md/?ref=makingdatamistakes.com">CLAUDE.md</a> that Claude receives).</p>
+</li>
+<li>
+<p>o3-pro is smarter than o3, but <a href="https://platform.openai.com/docs/pricing?ref=makingdatamistakes.com">10x cost</a> and hopeless at editing in Cursor (late June 2025).</p>
+</li>
+<li>
+<p>I've heard Gemini is great too, especially where a large context would help, but I have tried it less. Gemini editing in Cursor is currently broken in late June 2025, and the Gemini CLI is way behind Claude Code.</p>
+</li>
+<li>
+<p>Probably different models do have different strengths and weaknesses. But the much larger effect is just that on any given task, one model may succeed where another one fails. If one model is stuck and doesn't fix something within a couple of tries, immediately switch to a different one and see what happens.</p>
+</li>
+<li>
+<p>The simplest way to make models smarter is to ensemble them. Even using the same model called multiple times with different prompts can apparently help quite a lot. Better still, call a couple of different models to critique/suggest and then combine their output. At a minimum, asking o3 to critique a planning document written by Claude works incredibly well. Here's a <a href="https://github.com/gregdetre/gjdutils/blob/main/docs/instructions/GATHER_DIVERSE_INPUTS_AND_CRITIQUES_ON_PLANNING_DOCS_FROM_OTHER_AI_MODELS.md?ref=makingdatamistakes.com">prompt</a>.</p>
+</li>
+</ul>
+<h1 id="invest-in-your-rules-file">Invest in your rules file</h1>
+<p>I usually create a <code>RULES.md</code>, and then symlink it to <code>CLAUDE.md</code>, <code>GEMINI.md</code>, <code>.cursorrules</code>, etc, because these get fed in automatically in every conversation. <em>This is the file I pay the most attention to in the whole codebase.</em></p>
+<ul>
+<li>
+<p>Lead with a brief description of your company/project/product/vision. Provide some context about stage, e.g. "we have zero users and it's all about fast prototyping" vs "we're NASA and keen that our spaceships don't explode". Include a reference to longer docs, e.g. PRODUCT_VISION.md.</p>
+</li>
+<li>
+<p>Lay out your <a href="https://github.com/gregdetre/gjdutils/blob/main/docs/instructions/CODING_PRINCIPLES.md?ref=makingdatamistakes.com">principles</a> in detail, e.g. <em>"Fix the root cause rather than putting on a bandaid"</em>, <em>"Make minimal changes focused on the task at hand"</em>, <em>"NEVER make major, destructive, or irreversible changes without explicit authorisation from the user"</em>, etc. These tend to be pretty constant across projects for me.</p>
+</li>
+<li>
+<p>Briefly cover important guidelines, coding style, best practices, preferred libraries, automated testing, linter, setting up development environment, debugging, common commands, plus references to longer docs, e.g. CODING_GUIDELINES.md, SETUP_OVERVIEW.md, etc. (For comparison, here's a different, interesting approach from someone else whose CLAUDE.md <a href="https://github.com/citypaul/.dotfiles/blob/main/claude/.claude/CLAUDE.md?ref=makingdatamistakes.com">really doubles down on coding guidelines</a>, but I think may be more relevant for human-first AI-assisted coding.) These coding guidelines tend to be a bit more project-specific than the principles.</p>
+</li>
+<li>
+<p>Include a list of key documentation files with 1-sentence description for each.</p>
+</li>
+<li>
+<p>Include a brief description of your codebase and site organisation, architecture, overview of UI components &amp; interface, plus references to longer docs, e.g. SITE_ORGANISATION.md, ARCHITECTURE_OVERVIEW.md, UI_COMPONENTS.md, DESIGN_OVERVIEW.md, etc.</p>
+</li>
+<li>
+<p>For Cursor, I used to explicitly feed CLAUDE.md in at the beginning of every single conversation with the little pill box above the first message. (Because I do not trust <a href="https://docs.cursor.com/context/rules?ref=makingdatamistakes.com">.cursor/rules</a>). I'm experimenting with symlinking CLAUDE.md to .cursorrules (you must also enable Cursor / Settings / Rules).</p>
+</li>
+<li>
+<p>For playing with Gemini CLI, I created a symlink from CLAUDE.md to GEMINI.md. Even better, rename CLAUDE.md to something generic like RULES.md and then symlink from that to all the different providers (thanks for <a href="https://blog.nilenso.com/blog/2025/05/29/ai-assisted-coding/?ref=makingdatamistakes.com">the suggestion</a>).</p>
+</li>
+<li>
+<p>Currently, my CLAUDE.md is 250 lines long, but I keep playing with this to figure out the right balance between being comprehensive vs overwhelming.</p>
+</li>
+</ul>
+<h1 id="give-it-access-to-the-same-information-that-a-human-developer-hasdepends-on-to-succeed-at-their-job">Give it access to the same information that a human developer has/depends on to succeed at their job</h1>
+<p>For example:</p>
+<ul>
+<li>
+<p><a href="https://github.com/microsoft/playwright-mcp?ref=makingdatamistakes.com">Playwright MCP</a> (see below) for screenshots, browser console logs, etc. (But always tell it to run within a subagent, because Playwright is very verbose, and will quickly fill up your context window)</p>
+</li>
+<li>
+<p>Local dev webserver logs (ideally both a compact errors-only log file, and the full output).</p>
+</li>
+<li>
+<p>Local database.</p>
+</li>
+<li>
+<p>etc</p>
+</li>
+</ul>
+<h1 id="prefer-claude-code-if-you-can-put-up-with-the-ui">Prefer <a href="https://www.anthropic.com/claude-code?ref=makingdatamistakes.com">Claude Code</a> if you can put up with the UI</h1>
+<p>Mainly because a) of subagents; b) <code>/compact</code>; and c) I trust them to get the best out of their models with fewer weird gotchas and misaligned incentives.</p>
+<ul>
+<li>
+<p><em>"</em><a href="https://github.com/gregdetre/gjdutils/blob/main/docs/instructions/TASKS_SUBAGENTS.md?ref=makingdatamistakes.com"><em>Use subagents</em></a> <em>where appropriate, with careful instructions and references to relevant code &amp; docs"</em>. Dunno if this extra mantra helps, but I worry a lot about it calling subagents with insufficient context which then make half-assed/ill-judged edits.</p>
+</li>
+<li>
+<p>For extra points, tell it to run the subagents in parallel (if you're confident that the changes wouldn't benefit from shared context). It's enormously satisfying to watch it working on multiple pieces of independent work at the same time! Note that this causes the terminal display to go haywire, but it'll settle back down when it all finishes.</p>
+</li>
+<li>
+<p>Claude Code is pretty good about using its <a href="https://www.linkedin.com/posts/ikofman_new-claude-code-features-are-here-you-can-activity-7323479883592933376-s4sH/?ref=makingdatamistakes.com">todolist</a> to track multi-step progress, but it doesn't do any harm to remind it!</p>
+</li>
+<li>
+<p>Run Claude Code <a href="https://docs.anthropic.com/en/docs/claude-code/ide-integrations?ref=makingdatamistakes.com">within Cursor IDE</a> - if you do this, it will then (apparently) have <a href="https://docs.anthropic.com/en/docs/claude-code/ide-integrations?ref=makingdatamistakes.com">direct access to Cursor's linter output</a>.</p>
+</li>
+<li>
+<p>Even though most modern IDEs are based on Microsoft's VS Code, and even though Microsoft owns GitHub and half of OpenAI and invented AI-assisted programming with GitHub Copilot… their AI tools (e.g. original VS Code, Copilot for anything) were weirdly terrible whenever I've tried them. Avoid.</p>
+</li>
+</ul>
+<p>That said, o3 is phenomenal for writing and debugging code, the Claude Code CLI interface for editing is painful, it doesn't stream the output, it's hard to see the changes that have been made, it's a bit buggy too, and it's hard to scan through a long conversation 🙁 So you'll also need Cursor (or perhaps Windsurf) for editing by hand, and for non-Claude models.</p>
+<h1 id="context-management-is-key">Context management is key</h1>
+<p>The models need <a href="https://www.dbreunig.com/2025/06/22/how-contexts-fail-and-how-to-fix-them.html?ref=makingdatamistakes.com">all and only the relevant context</a>.</p>
+<ul>
+<li>
+<p>Many of the other tips (e.g. re rules files and documentation) help the models to agentically sniff out relevant stuff from the codebase by providing lots of signposts, well-named files, etc.</p>
+</li>
+<li>
+<p>The other half of context management is about minimising the context window, by trimming it down and making sure the models have <em>only</em> what they need. The models all get markedly dumber as you get to 100k tokens, or if the <a href="https://www.dbreunig.com/2025/06/22/how-contexts-fail-and-how-to-fix-them.html?ref=makingdatamistakes.com">context includes unhelpful/misleading stuff</a>. Run /compact long before Claude Code starts to warn about auto-compacting, and long before Cursor suggests you start a new chat.</p>
+</li>
+<li>
+<p><a href="https://github.com/gregdetre/gjdutils/blob/main/docs/instructions/WRITE_PLANNING_DOC.md?ref=makingdatamistakes.com">Planning docs</a> are the key here, so that you can just tell it to re-read the planning doc and related code &amp; docs after each /compact, and you're back up and running.</p>
+</li>
+<li>
+<p>Right now, probably 50% of my messages are telling Claude to <a href="https://github.com/gregdetre/gjdutils/blob/main/docs/instructions/DEBRIEF_UPDATE_COMMIT.md?ref=makingdatamistakes.com">commit, compact, then continue</a> on the next stage of a planning doc.</p>
+</li>
+<li>
+<p>Make heavy use of subagents (because they have their own context window). But note that they are only allowed &lt;40k tokens, and there's a risk that they in turn haven't been provided with enough context.</p>
+</li>
+<li>
+<p>Other minor ideas I've been experimenting with to help the AI get the context it needs:</p>
+</li>
+<li>
+<p>Filenames help an AI that's seeing the codebase for the first time every conversation. Make them longer and more descriptive. For example, I had an auto-generated file called <code>database.ts</code> that the agents kept editing. To avoid this, I made multiple changes, including renaming it to <code>database\_autogenerated.ts</code>. (I also added a comment at the top of the file, and a mention in docs. But I bet the filename alone would tip them off.)</p>
+</li>
+<li>
+<p>Maybe make <a href="https://www.researchgate.net/publication/393939595_Variable_Naming_Impact_on_AI_Code_Completion_An_Empirical_Study?ref=makingdatamistakes.com">variable names longer and more descriptive</a>. It'll make their meaning more obvious to the AI, and it makes grepping and renaming easier. Yes, it takes more tokens to type them, but see “Don't optimise for wall clock time.”</p>
+</li>
+</ul>
+<h1 id="be-as-lax-with-permissions-as-you-can-but-no-more">Be as lax with permissions as you can, but no more</h1>
+<p>For models I trust, allow it to run most commands, <em>except</em> Git commits and anything destructive and <a href="https://www.youtube.com/shorts/IGmdqQfyAzY?ref=makingdatamistakes.com">hard to reverse</a>. Provide guidance, especially in your rules file. But for this to work, you also need to plan for the worst, and have good safety nets. Here's a more detailed set of recommendations:</p>
+<ul>
+<li>
+<p>Allow most Bash commands, web searches, etc. For obviously destructive, hard-to-reverse commands, i.e. add them to the denylist, or at least exclude them from the allowlist.</p>
+</li>
+<li>
+<p><em>Guidance</em>: provide lots of <code>CRITICAL</code> messages in your rules file (e.g. <code>CLAUDE.md</code>) and relevant documentation that warns against destructive or unwelcome operations. Deny all commands that will write to production without explicit user authorisation. Even in dev, you'd probably prefer that it doesn't drop tables, run migrations, reset, etc. Think about what other guidance to provide for your specific project.</p>
+</li>
+<li>
+<p>One of the reasons I favour Claude is that it's a pretty safe and sensible pair of hands, and usually listens to instructions (e.g. "don't make changes yet"). That is, unless its context window is &gt;100k tokens, in which case all bets are off.</p>
+</li>
+<li>
+<p>If you can, use deterministic, tested scripts with careful, well-named checks &amp; constraints, rather than prompts/instructions for dangerous/risky stuff.</p>
+</li>
+<li>
+<p>Accept that guidance will only protect you somewhat. So you also need <em>safety nets</em> just in case the model <em>does</em> do something dumb. Store everything important in version control, occasionally back up the whole dev folder, treat your dev setup (including the dev database) as ephemeral and make sure it's easy to reconstruct, back up your laptop to an external hard disk every so often, etc. If the stakes are higher, build more elaborate safety nets (virtual machines, no access to production credentials, etc).</p>
+</li>
+<li>
+<p>Why no Git commits? Partly because (unless you amend them immediately) they're hard to reverse. Mostly so you can use them as a natural pause, for summarising &amp; reviewing progress, and compacting context.</p>
+</li>
+</ul>
+<h1 id="dont-say-youre-sorry-just-dont-do-it-again"><em>"Don't say you're sorry - just don't do it again"</em></h1>
+<p>Your job is to build a factory that in turn builds the product. "<a href="https://www.john-rush.com/posts/ai-20250701.html?ref=makingdatamistakes.com">Fix inputs, not outputs" (thanks to John Rush for this framing!).</a>  In other words, when your 'factory' produces the wrong output, improve the inputs (i.e. the setup/automatic scripts/instructions/prompts) rather than fixing the code by hand yourself.</p>
+<ul>
+<li>
+<p>If we see the same error or problem more than a couple of times, it's a sign that we need to address an underlying cause. That could be documenting some <a href="https://github.com/gregdetre/gjdutils/blob/main/docs/instructions/WRITE_DEEP_DIVE_AS_DOC.md?ref=makingdatamistakes.com">web research about best practices/snippets/gotchas</a>, tweaking <a href="http://claude.md/?ref=makingdatamistakes.com">CLAUDE.md</a>, improving compile-time checking with stronger type definitions, improving error messages &amp; logging, writing better tests, switching to a 3rd-party library, a refactor, etc.</p>
+</li>
+<li>
+<p>Solve problems in a stack. For example, let's say I see the AI struggling with a 3rd-party library. Open up a new Claude Code (i.e. add to the stack) to first address the underlying problem (e.g. write a doc with web research of best practices for using that library). Then pop the stack by closing that terminal, and go up a few messages in the conversation to ask the agent to retry, referencing the new doc, etc.</p>
+</li>
+<li>
+<p>I hit a wall at about 40k lines, and then at about 80k lines. In both cases, we had just added a lot of new features and infrastructure very quickly, but found that improving on them often felt like one-step-forward-one-step-back.</p>
+</li>
+<li>
+<p>It had been so exhilarating to see new features emerge that perhaps I had kept pressing ahead without enough review, rapidly building new skyscrapers of sand. So there's a lesson there. And this was before my habit of first asking o3 for a critique of the planning document, and then again later of the output.</p>
+</li>
+<li>
+<p>Follow the practice of <a href="https://www.makingdatamistakes.com/technical-debt/">addressing technical debt as part of an associated feature improvement</a> - when I found that progress was slow on a particular feature, I stopped to first invest in the underlying machinery that was holding the project back (i.e. add to the stack). If something fails silently, perhaps invest in better error-handling and messages to propagate explicit, debuggable, user-visible messages. If you keep finding stuff in a manual review that you think is obvious, perhaps invest in better end-to-end Playwright testing. If the type-checker isn't catching obvious bugs, perhaps invest in stronger type-checking or enable more warnings. Etc.</p>
+</li>
+</ul>
+<h1 id="get-used-to-a-different-cadence">Get used to a different cadence</h1>
+<p>Progress will feel very bursty. There will be troughs, and things will sometimes feel out of control. Your bicycle has been upgraded to a broomstick, your lightsaber has become a bazooka. On a good day, you’ll co-produce literally dozens of features and many thousands of production-ready lines of code. But there will be days when <a href="https://www.youtube.com/shorts/1_rSrkXovOk?ref=makingdatamistakes.com">nothing works</a>, and you don't feel you understand your own codebase. If you get stuck in a broken state:</p>
+<ul>
+<li>
+<p>Resist the urge to try and fix the problem by hand yourself - remember the dog in the factory. Behave as though you're the engineering manager, mentor, or product manager. What moves can you make if you're not the one actually wielding the spanner? Have fortitude, especially if this is the first time you're making the transition from individual contributor to manager. Invest in building your skills as a Manager of AI Colleagues, because that will ultimately be much, much higher-leverage.</p>
+</li>
+<li>
+<p>Switch to another model - that unsticks things astonishingly often.</p>
+</li>
+<li>
+<p>Ask it to be in <a href="https://github.com/gregdetre/gjdutils/blob/main/docs/instructions/DETECTIVE_SCIENTIST_MODE.md?ref=makingdatamistakes.com">detective-scientist mode</a>. Ask it to explain or draw a <a href="https://github.com/gregdetre/gjdutils/blob/main/docs/instructions/GENERATE_MERMAID_DIAGRAM.md?ref=makingdatamistakes.com">diagram</a> of what's going on, and feed that back in as input. Ask for opinions from multiple models. Ask it to look through the Git history and describe the changes that have been made recently. Ask it to build a test that replicates the problem, and then leave it to work in a loop for a while. Make sure it has access to all the information it needs to be able to debug things effectively, and improve your logging and error messages. Do some housekeeping, in case better docs or errant type-checking unclog the solution. Take a breath, take a break, get some sleep, this too shall pass.</p>
+</li>
+</ul>
+<h1 id="quality-control-and-automated-testing">Quality control and automated testing</h1>
+<p>Overall, blended productivity is driven by the number of times we get stuck in quicksand, rather than how fast we can go in bursts at top speed.</p>
+<p>And the AI still drives into quicksand pretty regularly, getting into a broken state that takes a little while of both AI and human time to unwind. And it still does dumb things and papers over the cracks with bandaids. Even taking all this into account, the rate of progress is worth it. But it's painful sometimes, and I'm sure we can do better here.</p>
+<p>Automated testing is part of the answer, though I'm still experimenting with the right approach.</p>
+<ul>
+<li>
+<p>For human-first AI-assisted coding, then test-driven development works well. Provide very close guidance about how the tests should work (or even write them directly yourself), and then you can rely more on the code that the AI writes to pass them.</p>
+</li>
+<li>
+<p>For AI-first coding, I've tried to farm out the test-writing to the AI too, based on the planning document. But I'm not sure how well this is working. Many of the tests break over time, or somehow miss obvious bugs that crop up immediately during a manual review. I'm reluctant to write the tests manually, because that would dramatically slow things down.</p>
+</li>
+</ul>
+<p>Here's my current approach:</p>
+<ul>
+<li>
+<p>Define actions at early stages of the planning doc to write detailed unit tests first (i.e. test-driven development). It might even help to have a different AI write those tests.</p>
+</li>
+<li>
+<p>Then once the code has been written and is passing the tests, then add actions to cull &amp; consolidate most of the low-level tests into fewer, high-coverage integration or browser-automated-E2E tests, where the main goal is for these to catch regressions in future.</p>
+</li>
+<li>
+<p>Mocks are a big part of the brittleness and rot over time. So I'm moving away from mocks. I'm following <a href="https://www.perplexity.ai/search/supabase-testing-in-the-databa-CKQk0gdkT1utsXV9b28odQ?ref=makingdatamistakes.com">Supabase's advice</a> for testing to write to the main dev database and use random IDs for isolation. I'm even moving towards using real LLM calls in tests, perhaps even with the actual production model. It's slower, and more expensive, but remember that we're working as though AI is free and instantaneous - so the wallclock time for the tests matters less, and in practice I think the cost of the LLM during tests will be rounding error.</p>
+</li>
+<li>
+<p>I'm making much heavier use of browser-automated end-to-end (E2E) tests with Playwright (see below). This requires investment in setting up <a href="https://github.com/microsoft/playwright-mcp?ref=makingdatamistakes.com">Playwright</a>:</p>
+</li>
+<li>
+<p>Setup <a href="https://www.youtube.com/watch?v=xyVTbv209a4&amp;ref=makingdatamistakes.com">Playwright MCP</a>.</p>
+</li>
+<li>
+<p>Add a note to the rules file to always run Playwright in <em>headless</em> mode (so that the browser window doesn't pop up and interrupt you) and in <em>isolated</em> mode (so it can run in parallel).</p>
+</li>
+<li>
+<p>Provide instructions for authentication, e.g. a hardcoded dev username + password so that Playwright can log in to your dev server.</p>
+</li>
+<li>
+<p>Always run Playwright with a subagent, so that its verbose output doesn't fill up the context window.</p>
+</li>
+<li>
+<p>And I'm trying to update my rules file and planning docs to ensure that the tests get run &amp; addressed more regularly. Maybe <a href="https://git-scm.com/book/ms/v2/Customizing-Git-Git-Hooks?ref=makingdatamistakes.com">Git-commit hooks</a> or <a href="https://docs.anthropic.com/en/docs/claude-code/hooks?ref=makingdatamistakes.com">Claude Code hooks</a> could help here.</p>
+</li>
+</ul>
+<p>In practice, I find that I'm still doing a lot of manual review &amp; testing at the end of each planning doc stage. This is a nuisance, but as the AIs are getting better, they can do larger and larger chunks of work correctly, and fix bugs quickly. So my main goal for automated testing is to notice regressions, i.e. so that the AI will notice new bugs that it accidentally introduced as its changing code.</p>
+<h1 id="invest-in-handy-scripts">Invest in <a href="https://github.com/gregdetre/gjdutils/tree/main/src/ts/scripts?ref=makingdatamistakes.com">handy scripts</a></h1>
+<p>MCP is great. But it's complicated, often verbose about context, non-deterministic, and often overkill. So if you find yourself wanting to do the same thing often, you're much better off asking the AI to write a script (referring to your code guidelines doc for command-line libraries and patterns), with nice documentation, optional arguments, examples in your rules file, etc. Then you can just tell it to call that script later.</p>
+<p>e.g. to <a href="https://github.com/gregdetre/gjdutils/blob/main/src/ts/scripts/git-worktree-sync-all.ts?ref=makingdatamistakes.com">sync across your Git worktrees</a>, generate date/time prefixes for your file names, restart the dev webserver in the background, etc.</p>
+<h1 id="run-multiple-git-worktrees">Run multiple Git <a href="https://github.com/gregdetre/gjdutils/blob/main/docs/instructions/GIT_WORKTREES.md?ref=makingdatamistakes.com">worktrees</a></h1>
+<p>Each worktree should have its own port, dev server, desktop, etc - but share the same dev database.</p>
+<ul>
+<li>
+<p>Currently, I'm not using any kind of pull requests or feature-specific branches (except occasionally for big, risky refactors). Each Git worktree is already its own branch, but regularly sync them all into main and back. So, in effect, all of the agents are working out of main except they're blind to each other's uncommitted changes. (Part of the reason this works is that the <a href="https://github.com/gregdetre/gjdutils/blob/main/docs/instructions/WRITE_PLANNING_DOC.md?ref=makingdatamistakes.com">planning doc</a> stages are supposed to end with working code.)</p>
+</li>
+<li>
+<p>This aims to avoid/minimise merge conflicts, because they are a source of complexity and screw-ups that could require tiring human intervention. This way I can rely on AI to <a href="https://github.com/gregdetre/gjdutils/blob/main/docs/instructions/RESOLVE_MERGE_CONFLICTS.md?ref=makingdatamistakes.com">resolve merge conflicts itself</a>.</p>
+</li>
+<li>
+<p>To sync: <a href="https://github.com/gregdetre/gjdutils/blob/main/src/ts/scripts/git-worktree-sync-all.ts?ref=makingdatamistakes.com">run this command</a> from the main folder, and it will automatically pull in changes from the other worktree branches into main as the hub, and then back out to each of them.</p>
+</li>
+</ul>
+<h1 id="misc-tips">Misc tips</h1>
+<ul>
+<li>
+<p>Make the AI <a href="https://github.com/gregdetre/gjdutils/blob/main/docs/instructions/GIT_COMMIT_CHANGES.md?ref=makingdatamistakes.com">write the Git commits</a>. Instruct them to include lots of detail in the Git message, so that if you need to know something about the Git history, it'll be easier for the AI to inspect it and report back.</p>
+</li>
+<li>
+<p>If you have a good conversation but you don't quite feel ready to turn it into a plan yet, then <a href="https://github.com/gregdetre/gjdutils/blob/main/docs/instructions/CAPTURE_SOUNDING_BOARD_CONVERSATION.md?ref=makingdatamistakes.com">capture the conversation</a> for future reference.</p>
+</li>
+<li>
+<p>Allow yourself to occasionally have fun with <a href="https://www.spideryarn.com/design/logoplay?ref=makingdatamistakes.com">playful features</a> that might have taken a human hours to do, but take &lt;5 mins of human-time. It's pretty easy to do things that would've otherwise taken hours in less than an hour.</p>
+</li>
+<li>
+<p>Learn about prompt engineering, from the <a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview?ref=makingdatamistakes.com">Anthropic docs</a> and <a href="https://docs.google.com/spreadsheets/d/19jzLgRruG9kjUQNKtCg1ZjdD6l6weA6qRXG5zLIAhC8/edit?gid=150872633&amp;ref=makingdatamistakes.com#gid=150872633">tutorial</a>. For experts, <a href="https://www.lennysnewsletter.com/p/ai-prompt-engineering-in-2025-sander-schulhoff?ref=makingdatamistakes.com">Sander Schulhoff on Lenny's podcast</a> has useful tips, e.g. it's often better to go back and edit the original message rather than adding in the information piecemeal through multi-step conversation.</p>
+</li>
+</ul>
+<h2 id="these-look-promising-but-i-havent-properly-tried-them-yet">These look promising but I haven't properly tried them yet</h2>
+<ul>
+<li>
+<p><a href="https://docs.anthropic.com/en/docs/claude-code/hooks?ref=makingdatamistakes.com">Claude Code custom hooks</a>, e.g. to run linter, type-checker, and tests before Git commit. These look useful. So far, I've relied on my <a href="https://github.com/gregdetre/gjdutils/blob/main/docs/instructions/WRITE_PLANNING_DOC.md?ref=makingdatamistakes.com">meta-instructions for writing planning documents</a> to add these as actions at the appropriate point.</p>
+</li>
+<li>
+<p>Writing custom MCPs. Instead, I've invested in rich instruction &amp; reference docs, scripts, and subagents. If I was working in Cursor more (which doesn't have subagents), I would definitely have written/adopted an MCP-subagent (or a variety of them) by now to externalise context-verbose work.</p>
+</li>
+<li>
+<p><a href="https://docs.anthropic.com/en/docs/claude-code/sub-agents?ref=makingdatamistakes.com">Custom subagents</a> and <a href="https://docs.anthropic.com/en/docs/claude-code/slash-commands?ref=makingdatamistakes.com">commands</a>. These look interesting, but I've stuck with Markdown prompts for now, because they're portable across Claude Code, Cursor, etc.</p>
+</li>
+<li>
+<p>Other IDEs beyond Claude Code and Cursor. I like the philosophy behind <a href="https://podwise.ai/dashboard/episodes/4741822?ref=makingdatamistakes.com">Cline</a> and <a href="https://github.com/Aider-AI/aider?ref=makingdatamistakes.com">Aider</a>, the ideas in <a href="https://kiro.dev/?ref=makingdatamistakes.com">Kiro</a> look congenial, and <a href="https://www.linkedin.com/in/peternixey/?originalSubdomain=uk&amp;ref=makingdatamistakes.com">Peter Nixey</a> and <a href="https://www.linkedin.com/in/alexanderappelbe/?originalSubdomain=uk&amp;ref=makingdatamistakes.com">Alex Appelbe</a> swear by <a href="https://windsurf.com/editor?ref=makingdatamistakes.com">Windsurf</a>. (I would love an IDE with tighter browser integration, because Playwright MCP continues to feel brittle and verbose, but I didn't initially find that Windsurf helped with that.)</p>
+</li>
+<li>
+<p><a href="https://replit.com/?ref=makingdatamistakes.com">Replit</a>, <a href="https://lovable.dev/?ref=makingdatamistakes.com">Lovable</a>, <a href="https://bolt.new/?ref=makingdatamistakes.com">Bolt</a>, <a href="https://v0.dev/?ref=makingdatamistakes.com">v0</a>, etc. <a href="https://www.mindstone.com/company/about?ref=makingdatamistakes.com">Joshua Wohle</a> is especially bullish about Replit, because it handles all the devops for you (hosting, database, etc), and you can combine it with Claude Code/Cursor for frontier model magic. But I'm a little wary about potential barriers to exit, I want control over architecture decisions, and I bet that frontier models will continue to improve so fast that I'd rather rely on their magic directly. (For I wasn't a developer, I certainy would give them a try.)</p>
+</li>
+</ul>
+<h1 id="postscript">Postscript</h1>
+<p>I'm about to launch <a href="http://spideryarn.com/?ref=makingdatamistakes.com">Spideryarn</a> in alpha (a tool for researchers to get more from what they read), where every line of code was written by AI. And before that, AI did the late-stage work on <a href="https://www.hellozenno.com/?ref=makingdatamistakes.com">Hello Zenno</a>.</p>
+<p>If you found this useful, <a href="#/portal/subscribe">subscribe</a> for monthly posts on software, AI, and management.  </p>
+<p>Or drop me a line at <a href="mailto:consulting@gregdetre.com">consulting@gregdetre.com</a> if you'd like help training your software engineering team on AI techniques or building products with AI.</p>
+<p><a href="#/portal/subscribe">Subscribe for monthly posts on software, AI, and management.</a></p>
+<h1 id="acknowledgements">Acknowledgements</h1>
+<p>Thank you to <a href="https://marczaosanders.com/?ref=makingdatamistakes.com">Marc Zao-Sanders</a>, <a href="https://www.linkedin.com/in/johnnieball/?ref=makingdatamistakes.com">Johnnie Ball</a>, <a href="https://www.mindstone.com/company/about?ref=makingdatamistakes.com">Joshua Wohle</a>, <a href="https://eddowding.com/?ref=makingdatamistakes.com">Ed Dowding</a>, <a href="https://www.linkedin.com/in/ianbroom/?ref=makingdatamistakes.com">Ian Broom</a>, <a href="https://www.linkedin.com/in/david-hathiramani-0b39163/?ref=makingdatamistakes.com">David Hathiramani</a>, <a href="https://www.linkedin.com/in/peternixey/?originalSubdomain=uk&amp;ref=makingdatamistakes.com">Peter Nixey</a>, <a href="https://www.linkedin.com/in/glenn-smith-uk/?originalSubdomain=uk&amp;ref=makingdatamistakes.com">Glenn Smith</a>, <a href="https://www.linkedin.com/in/ianstrang/?utm_source=share&amp;utm_campaign=share_via&amp;utm_content=profile&amp;utm_medium=ios_app">Ian Strang</a>, <a href="https://www.linkedin.com/in/martijnverburg/?original_referer=https%3A%2F%2Fwww.google.com%2F&amp;originalSubdomain=nz&amp;ref=makingdatamistakes.com">Martijn Verburg</a>, for ideas and comments.</p>
+<h1 id="useful-references">Useful references</h1>
+<p><a href="https://www.dbreunig.com/2025/06/22/how-contexts-fail-and-how-to-fix-them.html?ref=makingdatamistakes.com">On the importance of managing context</a></p>
+<p>Other field guides:</p>
+<ul>
+<li>
+<p><a href="https://newsletter.pragmaticengineer.com/p/amazon-google-and-vibe-coding-with?ref=makingdatamistakes.com">https://newsletter.pragmaticengineer.com/p/amazon-google-and-vibe-coding-with</a> (from 45:16)</p>
+</li>
+<li>
+<p><a href="https://allenpike.com/2025/coding-agents?ref=makingdatamistakes.com">https://allenpike.com/2025/coding-agents</a></p>
+</li>
+<li>
+<p><a href="https://blog.nilenso.com/blog/2025/05/29/ai-assisted-coding/?ref=makingdatamistakes.com">https://blog.nilenso.com/blog/2025/05/29/ai-assisted-coding/</a></p>
+</li>
+<li>
+<p><a href="https://harper.blog/2025/02/16/my-llm-codegen-workflow-atm/?ref=makingdatamistakes.com">https://harper.blog/2025/02/16/my-llm-codegen-workflow-atm/</a></p>
+</li>
+</ul>
+<p>Prompt engineering:</p>
+<ul>
+<li>
+<p><a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview?ref=makingdatamistakes.com">Anthropic docs</a> and <a href="https://docs.google.com/spreadsheets/d/19jzLgRruG9kjUQNKtCg1ZjdD6l6weA6qRXG5zLIAhC8/edit?gid=150872633&amp;ref=makingdatamistakes.com#gid=150872633">tutorial</a></p>
+</li>
+<li>
+<p><a href="https://www.lennysnewsletter.com/p/ai-prompt-engineering-in-2025-sander-schulhoff?ref=makingdatamistakes.com">Sander Schulhoff on Lenny's podcast</a></p>
+</li>
+</ul>
+<h1 id="comments-welcome-here">Comments welcome here</h1>
+<blockquote>
+<p>Want to know how to build a well-architected 60,000-line project from scratch in 6 weeks, without writing a single line of code by hand?</p>
+<p>www.makingdatamistakes.com/ai-first-dev...</p>
+<p>— <a href="https://bsky.app/profile/did:plc:wln2lczdl5nmoq54byibc5ac?ref_src=embed&amp;ref=makingdatamistakes.com">Greg Detre (@gregdetre.bsky.social)</a> <a href="https://bsky.app/profile/did:plc:wln2lczdl5nmoq54byibc5ac/post/3lv7famv7lk22?ref_src=embed&amp;ref=makingdatamistakes.com">2025-07-30T19:47:57.246Z</a></p>
+</blockquote>
+
+
+<br />
+<hr />
+
+
+
+<nav class="sibling-nav sibling-nav-bottom" aria-label="Page navigation">
+    
+    <a class="prev" href="/blog/metaphors-for-depression-clean-language-and-the-dsm"
+        title="Previous — Metaphors for depression, clean language, and the DSM — sorted by date (newest first)">&#x2190;</a>
+    
+    
+    <a class="up" href="/blog/"
+        title="Up — Blog">&#x2191;</a>
+    
+    
+    <a class="next" href="/blog/mindstone-2025-mdm"
+        title="Next — Mindstone AI London 2025-Feb-18 — sorted by date (newest first)">&#x2192;</a>
+    
+</nav>
+
+
+
+        
+
+
+
+        
+
+<h1>Belongs to these <a href="/tag">tags</a></h1>
+<ul>
+    
+    <li><a href="/tag/ai.html">AI</a></li>
+    
+    <li><a href="/tag/programming.html">Programming</a></li>
+    
+    <li><a href="/software/index.html">Software</a></li>
+    
+    <li><a href="/tag/artificial-intelligence.html">Artificial Intelligence</a></li>
+    
+    <li><a href="/tag/tips-tricks.html">Tips & tricks</a></li>
+    
+</ul>
+
+
+
+        
+
+
+
+        
+
+
+
+    </div>
+    <footer>
+        <div class="bottom_nav">
+            
+
+            
+
+<p>
+    <i>
+        <span title="The date this page was first made public.">First published</span>: 2025-Jul-30
+    </i>
+</p>
+
+
+<p>
+    <i>
+        <span
+            title="The most recent time the content was edited (which could be before the page was actually published).">Last
+            updated</span>: 2025-Aug-17
+    </i>
+</p>
+
+
+        </div>
+    </footer>
+</body>
+
+</html>

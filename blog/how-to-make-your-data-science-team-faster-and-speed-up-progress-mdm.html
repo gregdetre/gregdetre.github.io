@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+
+    <title>
+
+How to make your data science team faster (and speed up progress) -
+
+Greg Detre
+</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="gdwebgen" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Greg Detre's personal website" />
+    
+    
+    <meta property="og:site_name" content="Greg Detre" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:site" content="Greg Detre" />
+    <link rel="stylesheet" href="/static/css/base.css">
+    
+<link rel="canonical" href="https://www.gregdetre.com/blog/how-to-make-your-data-science-team-faster-and-speed-up-progress-mdm">
+
+<meta name="description" content="That complaint about your team being 'too slow' might not be about throughput at all—listen carefully and you'll often discover it's really about latency, flexibility, or predictability instead." />
+<meta property="og:description" content="That complaint about your team being 'too slow' might not be about throughput at all—listen carefully and you'll often discover it's really about latency, flexibility, or predictability instead." />
+<meta name="twitter:description" content="That complaint about your team being 'too slow' might not be about throughput at all—listen carefully and you'll often discover it's really about latency, flexibility, or predictability instead." />
+
+<meta property="og:title" content="How to make your data science team faster (and speed up progress)" />
+<meta name="twitter:title" content="How to make your data science team faster (and speed up progress)" />
+<meta property="og:url" content="https://www.gregdetre.com/blog/how-to-make-your-data-science-team-faster-and-speed-up-progress-mdm" />
+<meta name="twitter:card" content="summary" />
+
+</head>
+
+<body>
+
+    
+    <div id="wide-img-header">
+        
+        <a href="/wide_img_header/IMG_5253.jpg">
+            <img src="/wide_img_header/IMG_5253_sm.jpg" />
+        </a>
+        
+    </div>
+    
+
+    
+<nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+        
+        
+        <li class="breadcrumb-item" title="Greg Detre">
+            
+            <a href="/">Greg Detre</a>
+            
+        </li>
+        
+        
+        
+        <li class="breadcrumb-item" title="Blog">
+            
+            <a href="/blog/">Blog</a>
+            
+        </li>
+        
+        
+        
+        <li class="breadcrumb-item" title="How to make your data science team faster (and speed up progress)">
+            
+            <a href="/blog/how-to-make-your-data-science-team-faster-and-speed-up-progress-mdm">How To Make Your Data Scien...</a>
+            
+        </li>
+        
+        
+    </ol>
+</nav>
+
+
+    
+    <div class="nav_menu" <p>
+        
+        <a href="/about">About</a>
+        
+        <a href="/blog">Blog</a>
+        
+        <a href="/consulting">Consulting</a>
+        
+        </p>
+    </div>
+    
+
+    <div id="main">
+        
+
+<nav class="sibling-nav sibling-nav-top" aria-label="Page navigation">
+    
+    <a class="prev" href="/blog/neseccary-vs-sufficient-mdm"
+        title="Previous — Necessary vs Sufficient — sorted by date (newest first)">&#x2190;</a>
+    
+    
+    <a class="up" href="/blog/"
+        title="Up — Blog">&#x2191;</a>
+    
+    
+    <a class="next" href="/blog/why-are-my-emails-being-sent-to-spam-a-guide-for-startups-using-gsuite-mdm"
+        title="Next — Why are my emails being sent to spam - a guide for GSuite — sorted by date (newest first)">&#x2192;</a>
+    
+</nav>
+
+
+<hr />
+
+
+<h1>How to make your data science team faster (and speed up progress)</h1>
+
+
+
+
+<h1 id="_1"></h1>
+<p>Imagine you’ve just stepped into a meeting room with your CEO, and she drops a bomb on you: she says your team isn’t fast enough, progress is way too slow, and frankly she’s unimpressed.</p>
+<p>You can feel your heart rate increasing. It feels like an attack. Doesn’t she see how hard your team works? David and Emily always work late into the evenings, and Nikita was a superhero during the last sprint.</p>
+<p>So what should you do in a situation like this?</p>
+<h2 id="first-of-all">First of all...</h2>
+<p>Perhaps the first thing to do is <strong>breathe</strong>. Almost anyone faced with this complaint is going to feel defensive. Resist the temptation to deny the problem or shift the blame. <strong>Ask questions to understand where the complaint is coming from, and listen to the answers.</strong></p>
+<p>When emotional, you might find it hard to listen to the answers without interrupting, or to remember the nuance of what’s being said - if so, write notes, and arrange a follow-up meeting to discuss further. These questions, for example, might help you shape your response:</p>
+<ul>
+<li>
+<p><strong><em>What makes you say that things feel slow?</em></strong></p>
+</li>
+<li>
+<p><strong><em>Are some areas particularly slow? Is this affecting certain teams? (Implicitly here it may be useful to know if particular people are complaining). Can you give some examples of when things have been (or still are) slow?</em></strong></p>
+</li>
+<li>
+<p><strong><em>How big a problem is this for the organisation? What would it feel like to you if things were fast?</em></strong></p>
+</li>
+<li>
+<p><strong><em>Are there resources available to potentially boost things along? e.g. could we hire, or spend more money, or divert people from other tasks?</em></strong></p>
+</li>
+</ul>
+<p>It’s very hard to qualitatively and fairly measure or compare the speed of a team, and so we must recognise that this concern about speed is, at least in part, a problem of <em>perception</em>. Depending on the organisation, there may be <strong>politics or other context involved</strong>.</p>
+<p>If you have a good relationship with your CEO, this is just one of many problems you’ll tackle together, so <strong>stay calm and collaborative</strong>. If you don’t have a good relationship with your CEO, then you need to understand how serious a warning you’re receiving, and use this as a chance to <strong>improve the relationship</strong>.</p>
+<p>For more on how to manage your emotional reaction and the relationship, I'll be writing future posts entitled:</p>
+<ul>
+<li>
+<p><strong><em>*</em>*Be Bulletproof</strong>****</p>
+</li>
+<li>
+<p><strong><em>*</em>*‘People fire doctors with a bad bedside manner’</strong>****</p>
+</li>
+</ul>
+<p>For this article, we’ll focus on actions rather than the human relationships, while recognising that the human relationships may be the larger piece of the puzzle.</p>
+<h2 id="how-to-diagnose-the-root-causes-of-slow-progress">How to diagnose the root causes of “slow progress”</h2>
+<p>It’s easy to assume that “slow progress” is a problem of <strong>throughput</strong> - that you team simply aren’t getting enough done. But listen carefully to the answers when you ask your CEO, “<em>Can you give some examples of when things have been (or still are) slow?</em>” and "<em>What would it feel like to you if things were fast?</em>”. If you see responses like the following:</p>
+<ol>
+<li>
+<p>It feels like we’ve been working on Project X forever - it’s been sitting on the Trello board since last quarter!</p>
+</li>
+<li>
+<p>Whenever I want to try out a new idea, even a small one, I get told that all the sprints for the next month are full. And the Customer Service team say that even important new bugs won’t get addressed until the next sprint if they weren’t part of the planning for this sprint.</p>
+</li>
+<li>
+<p>I was told we’d be finished with Project Y two months ago, but it’s still not live.</p>
+</li>
+</ol>
+<p>These are legitimate complaints, but they’re not specifically a problem of throughput. Of course, if you could double throughput (i.e., if your team could work twice as fast), then that would probably help in a lot of ways. I’ll write about ways to increase throughput in a future article, but it probably won’t be easy to do. And more importantly, <strong>if you’ve misdiagnosed the problem then increasing throughput may not help as much as you think it will.</strong></p>
+<p>So let’s consider each of the responses in turn.</p>
+<h3 id="1it-feels-like-weve-been-working-on-project-x-forever-its-been-sitting-on-the-trello-board-since-last-quarter">1.“It feels like we’ve been working on Project X forever - it’s been sitting on the Trello board since last quarter!”</h3>
+<p>There could be lots of reasons why Project X has been on the Trello board since last quarter. Maybe we decided to do other stuff instead. Or maybe we’ve been working on it steadily all this time in the background. Or maybe it keeps getting blocked by an external dependency, halting progress each time.</p>
+<p>So you may be tempted to think that this isn’t a problem. Project X has been squatting like a toad on your Trello board all that time, but <em>for good reasons</em>!</p>
+<p><img alt="" src="/blog/makingdatamistakes/how-to-make-your-data-science-team-faster-and-speed-up-progress-mdm/images/Pyd9uQyMcqAEl6BetwkhAPUW9pRGJPNBnfQtNNe32UNkpLmaRbOZ-U5JwQZGKhdVsEodSbVNi7jQme72v3gIZpmjE-wg4FNpIzk6HvwfdK-7FyDUJtDOiLg0aO7hQT79kqbgFf5B"/></p>
+<p>All hail the Trello Toad (illustrated by Maria Marklove)</p>
+<p>Well, I’ve got good news and bad news for you. The bad news is that this is indeed a problem, <a href="https://www.makingdatamistakes.com/throughput-vs-latency/">not of throughput but of <em>latency</em></a>, and you have to fix it. The good news is that it’s a tractable one, and that everyone will appreciate it when you address it.</p>
+<h4 id="how-to-measure-and-improve-your-teams-latency">How to measure and improve your team’s latency</h4>
+<p>Unlike most progress in an engineering team, you can and should measure latency. <strong>How long does it take from the moment a ticket surfaces on the team’s ‘Todo’ list until it lands in ‘Done’?</strong> (And by ‘Todo’, I’m not talking about the ‘Someday Maybe Backlog’, but the ‘Committed To This And Soon’ todo list.)</p>
+<p>You can measure the average time, but as with all latency measurements, <strong>you may find it most useful to pay attention to the worst-case offenders.</strong></p>
+<p>You improve (and optimise) only what you measure. As soon as you have a latency metric for your engineering organisation and talk about the importance of reducing it, your team will quickly come up with ideas and discussions about how to do that. You’ll be faced with questions such as:</p>
+<ul>
+<li>
+<p>We keep choosing to de-prioritise Project X in favour of other stuff. Is that a sign that we should officially drop it from the Todo list?</p>
+</li>
+<li>
+<p>We’re juggling multiple things at once. How can we ensure we do fewer things at any given time? Will we finish them faster if we do? Will that hurt our overall throughput?</p>
+</li>
+<li>
+<p>We can reduce our latency by breaking bigger projects into smaller pieces and pushing each of those smaller pieces through faster. Is that cheating?</p>
+</li>
+</ul>
+<p>Some of those questions have to be answered case-by-case, or differently for each organisation. But for the most part, the beauty of this metric is that even when you try and game it, it tends to produce behaviours that you actually want. It will create pressure to work on fewer things at once; to break things into smaller pieces; to push things all the way through to deployment, rather than letting them languish in code review; to drop anything that isn’t an active priority; to reorder/minimise dependencies; and it may ultimately nudge towards a more meaningful agile approach.</p>
+<p>Indeed, this insight about latency is the fundamental motivation behind ‘kanban’ and its emphasis on ‘work in progress’.</p>
+<p>Now let’s look at the second potential response from our CEO.</p>
+<h3 id="2-whenever-i-want-to-try-out-a-new-idea-even-a-small-one-i-get-told-that-all-the-sprints-for-the-next-month-are-full-and-the-customer-service-team-say-that-even-important-new-bugs-wont-get-addressed-until-the-next-sprint-if-they-werent-part-of-the-planning-for-this-sprint">2. “Whenever I want to try out a new idea, even a small one, I get told that all the sprints for the next month are full. And the Customer Service team say that even important new bugs won’t get addressed until the next sprint if they weren’t part of the planning for this sprint.”</h3>
+<p>Fundamentally, this is a complaint about <em>flexibility</em>.</p>
+<p>As technicians (e.g., engineers and data scientists) we prefer to know what we’re going to be working on in advance, and don’t like being yanked around by ever-changing priorities. And indeed, it can be more efficient (i.e., higher throughput) to be able to decide in advance, minimise switch-costs, and stick to a pre-agreed plan.</p>
+<p>For this reason, sometimes it’s our job as the leader of the engineering team to be a buffer against the vagaries of the outside world and the rest of the company.</p>
+<p>But we have to balance that against the danger that <strong>we might be increasing throughput but</strong> <strong><em>on the wrong things</em></strong> <strong>- in this case, at the expense of flexibility.</strong></p>
+<p>How to strike that balance, how to know when to be flexible and when to stick to the plan, requires the wisdom of Solomon. But the first step towards good decisions is realising that this balance needs to be struck. And that this balance, in itself, is a sort of parameter that will need constant adjusting and fine-tuning.</p>
+<h3 id="3-i-was-told-wed-be-finished-with-project-y-two-months-ago-but-its-still-not-live">3. “I was told we’d be finished with Project Y two months ago, but it’s still not live.”</h3>
+<p>This may seem like another complaint about <em>latency</em>. And indeed, it’s related - paying attention to latency and improving it would help here too. And it’s probably also a failure of <em>communication</em> - keeping stakeholders up-to-date on the status and reasons for delays will help a good deal.</p>
+<p>But that’s not <em>primarily</em> what this is about. This is about <em>predictability and reliability</em>, about making good estimates for how long things will take and delivering on them. <strong>If things don’t finish when you say they will, it can cost you business, planning becomes much harder, the delays can cascade to other dependent projects and teams, it’s bad for morale, and it looks bad for you.</strong></p>
+<p>As with latency, the bad news is that <em>predictability</em> is indeed a problem you have to fix, but the good news is that it’s tractable and everyone will appreciate it when you do.</p>
+<h1 id="to-sum-it-up">To sum it up:</h1>
+<ul>
+<li>
+<p>Concerns about your team’s speed may not really be about speed at all; asking meaningful questions will help you uncover the real problems behind why progress feels slow.</p>
+</li>
+<li>
+<p>Measuring and improving latency; striking a balance between planning and flexibility; becoming better at estimating and delivering reliably; and improving communication with stakeholders are all excellent starting points to improving progress and delivering more.</p>
+</li>
+</ul>
+
+
+<br />
+<hr />
+
+
+
+<nav class="sibling-nav sibling-nav-bottom" aria-label="Page navigation">
+    
+    <a class="prev" href="/blog/neseccary-vs-sufficient-mdm"
+        title="Previous — Necessary vs Sufficient — sorted by date (newest first)">&#x2190;</a>
+    
+    
+    <a class="up" href="/blog/"
+        title="Up — Blog">&#x2191;</a>
+    
+    
+    <a class="next" href="/blog/why-are-my-emails-being-sent-to-spam-a-guide-for-startups-using-gsuite-mdm"
+        title="Next — Why are my emails being sent to spam - a guide for GSuite — sorted by date (newest first)">&#x2192;</a>
+    
+</nav>
+
+
+
+        
+
+
+
+        
+
+<h1>Belongs to these <a href="/tag">tags</a></h1>
+<ul>
+    
+    <li><a href="/tag/data-science-and-machine-learning.html">Data science and machine learning</a></li>
+    
+    <li><a href="/tag/team-effectiveness.html">Team effectiveness</a></li>
+    
+    <li><a href="/tag/project-management.html">Project management</a></li>
+    
+    <li><a href="/tag/leadership.html">Leadership</a></li>
+    
+    <li><a href="/tag/management.html">Management</a></li>
+    
+</ul>
+
+
+
+        
+
+
+
+        
+
+
+
+    </div>
+    <footer>
+        <div class="bottom_nav">
+            
+
+            
+
+<p>
+    <i>
+        <span title="The date this page was first made public.">First published</span>: 2020-Jul-20
+    </i>
+</p>
+
+
+<p>
+    <i>
+        <span
+            title="The most recent time the content was edited (which could be before the page was actually published).">Last
+            updated</span>: 2025-Aug-17
+    </i>
+</p>
+
+
+        </div>
+    </footer>
+</body>
+
+</html>

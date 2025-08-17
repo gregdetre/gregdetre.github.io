@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+
+    <title>
+
+A little functional programming goes a long way -
+
+Greg Detre
+</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="gdwebgen" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Greg Detre's personal website" />
+    
+    
+    <meta property="og:site_name" content="Greg Detre" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:site" content="Greg Detre" />
+    <link rel="stylesheet" href="/static/css/base.css">
+    
+<link rel="canonical" href="https://www.gregdetre.com/blog/a-little-functional-programming-goes-a-long-way-mdm">
+
+<meta name="description" content="It's better to have 100 functions operate on one data structure than 10 functions on 10 data structures—a principle that transforms how we think about code modularity." />
+<meta property="og:description" content="It's better to have 100 functions operate on one data structure than 10 functions on 10 data structures—a principle that transforms how we think about code modularity." />
+<meta name="twitter:description" content="It's better to have 100 functions operate on one data structure than 10 functions on 10 data structures—a principle that transforms how we think about code modularity." />
+
+<meta property="og:title" content="A little functional programming goes a long way" />
+<meta name="twitter:title" content="A little functional programming goes a long way" />
+<meta property="og:url" content="https://www.gregdetre.com/blog/a-little-functional-programming-goes-a-long-way-mdm" />
+<meta name="twitter:card" content="summary" />
+
+</head>
+
+<body>
+
+    
+    <div id="wide-img-header">
+        
+        <a href="/wide_img_header/IMG_5253.jpg">
+            <img src="/wide_img_header/IMG_5253_sm.jpg" />
+        </a>
+        
+    </div>
+    
+
+    
+<nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+        
+        
+        <li class="breadcrumb-item" title="Greg Detre">
+            
+            <a href="/">Greg Detre</a>
+            
+        </li>
+        
+        
+        
+        <li class="breadcrumb-item" title="Blog">
+            
+            <a href="/blog/">Blog</a>
+            
+        </li>
+        
+        
+        
+        <li class="breadcrumb-item" title="A little functional programming goes a long way">
+            
+            <a href="/blog/a-little-functional-programming-goes-a-long-way-mdm">A Little Functional Program...</a>
+            
+        </li>
+        
+        
+    </ol>
+</nav>
+
+
+    
+    <div class="nav_menu" <p>
+        
+        <a href="/about">About</a>
+        
+        <a href="/blog">Blog</a>
+        
+        <a href="/consulting">Consulting</a>
+        
+        </p>
+    </div>
+    
+
+    <div id="main">
+        
+
+<nav class="sibling-nav sibling-nav-top" aria-label="Page navigation">
+    
+    <a class="prev" href="/blog/why-were-bad-at-estimating-and-what-to-do-about-it-mdm"
+        title="Previous — Why we're bad at estimating (and what to do about it) — sorted by date (newest first)">&#x2190;</a>
+    
+    
+    <a class="up" href="/blog/"
+        title="Up — Blog">&#x2191;</a>
+    
+    
+    <a class="next" href="/blog/what-does-it-take-to-transition-from-senior-to-chief-data-scientist-mdm"
+        title="Next — What does it take to transition from Senior to Chief Data Scientist? — sorted by date (newest first)">&#x2192;</a>
+    
+</nav>
+
+
+<hr />
+
+
+<h1>A little functional programming goes a long way</h1>
+
+
+
+
+<p><em>This article is part of a wider series on ‘how to make your software team much more effective’, and focuses on programming style, design and architecture.</em></p>
+<p>Our goal as programmers is to <strong>write small pieces of code that combine together to do something useful:</strong></p>
+<ul>
+<li>
+<p>Each piece should be simple, so we can understand what it’s doing.</p>
+</li>
+<li>
+<p>Each piece should minimise its dependencies on other pieces, so that you can make changes without everything else breaking.</p>
+</li>
+<li>
+<p>The pieces should combine together flexibly so that you can build big programs out of them.</p>
+</li>
+</ul>
+<p>In other words, <strong>we want our code to be modular, so it’s simple and reusable</strong>. Pretty much everyone agrees on this as a goal. We hope that this will enable teams of people to build large, complex systems quickly and correctly, and to modify them as requirements change.</p>
+<p><strong>Both object-oriented and functional programming styles offer this promise, but their approach to modularity is very different.</strong></p>
+<p><em>Side note:</em> If you don’t know the difference between object-oriented programming and functional programming, then you should first learn about both techniques and get some practice with them before you can form a rich opinion about which to use and when. <strong>(See resources at the bottom of this article).</strong></p>
+<h2 id="prefer-functional-over-object-oriented-programming">Prefer functional over object-oriented programming</h2>
+<p>After playing with both object-oriented and functional approaches over many years, I lean towards a functional style, though I’m not a zealot. Most of my coding nowadays is in languages that make it hard to write purely functional code (Python, Javascript, C#), but a little goes a long way. More concretely, this is what I mean, and why:</p>
+<ul>
+<li>
+<p><strong>Make your functions as pure as you can</strong>. In other words, avoid <a href="http://blog.jenkster.com/2015/12/what-is-functional-programming.html?ref=makingdatamistakes.com">hidden inputs and hidden outputs</a> to your functions, e.g. globals, changing the input variables in-place, manipulating class member variables, extract out the non-determinism/randomness. If nothing else, this will make everything easier to test, which makes things easier to understand, quicker to debug, and often seems to lead to better design.</p>
+</li>
+<li>
+<p><strong>Avoid object-oriented cleverness for control structures</strong>. Avoid inheritance hierarchies, polymorphism, casting, non-virtual methods, etc. They <a href="http://steve-yegge.blogspot.com/2006/03/execution-in-kingdom-of-nouns.html?ref=makingdatamistakes.com">obscure the meat of your code with lots of complicatedness and boilerplate</a>, and they cause the flow of execution to jump around confusingly by scattering functionality over multiple levels of the inheritance hierarchy.</p>
+</li>
+<li>
+<p><strong>Avoid classes as data structures.</strong> I am firmly convinced that <a href="https://www.solipsys.co.uk/new/ProgrammingEpigramsFromPerlis.html?RecentChanges=&amp;ref=makingdatamistakes.com">”it is better to have 100 functions operate on one data structure than 10 functions on 10 data structures"</a>. If you build your data structures out of standard library components (like lists, dictionaries, sets etc), you can use all the language’s built-in features for manipulating them, and they’re maximally interoperable. For this to work well, define a hierarchy of types to enforce integrity and to benefit from compile-time error-checking from your IDE.</p>
+</li>
+<li>
+<p><a href="https://www.infoq.com/presentations/Value-Values/?ref=makingdatamistakes.com"><strong>Prefer immutability</strong></a>. This goes hand-in-hand with the advice to ‘make your functions as pure as you can’ (above). Even if your language doesn’t easily support immutable variables, you can pretend it does by avoiding in-place state changes and get most of the benefits. Even if you can’t stick to this at a system level, I prefer immutability in core, low-level functions that are used widely.</p>
+</li>
+<li>
+<p><strong>Prefer languages that don’t force you to define classes, and that treat functions as first-class variables.</strong> You may not have much choice over the language you write in. But if you do, these are good criteria, and most popular modern languages pass both tests..</p>
+</li>
+</ul>
+<p><img alt="" src="/blog/makingdatamistakes/a-little-functional-programming-goes-a-long-way-mdm/images/37ftCqP16TOLXL3892zBVY2t4e6dnOGdSsrMPUpvjNKrO10zuH6BE6E_kcf62OCQr6OjWj7zNBd35b1r7sKg20qUAy2tY6LB-A02hJWywls7W7lxDu9iHvSNtTzwWS2H79FVhmlQ"/></p>
+<p><a href="https://xkcd.com/1270/?ref=makingdatamistakes.com">https://xkcd.com/1270/</a></p>
+<p>The goal is to write smaller, simpler, de-coupled functions that you can flexibly compose.</p>
+<p><strong>If you’re interested but not yet convinced, and would like to learn more about functional programming:</strong></p>
+<ul>
+<li>
+<p>Watch Rich Hickey’s talks, starting with <a href="https://www.infoq.com/presentations/Simple-Made-Easy/?ref=makingdatamistakes.com">Simple Made Easy</a> at 0.5x speed.</p>
+</li>
+<li>
+<p>Read <a href="https://blog.acolyer.org/2016/09/14/why-functional-programming-matters/?ref=makingdatamistakes.com">this compelling paper illustrating the benefits of functional programming</a> (unfortunately in a weird language called Miranda).</p>
+</li>
+<li>
+<p>Take advantage of the tools for functional programming in your language, e.g.</p>
+</li>
+<li>
+<p><a href="https://docs.python.org/3/howto/functional.html?ref=makingdatamistakes.com">Python has functools and itertools in its standard library</a>.</p>
+</li>
+<li>
+<p><a href="https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/working-with-linq?ref=makingdatamistakes.com">C# has LINQ</a></p>
+</li>
+<li>
+<p>Work through the first couple of chapters of <a href="https://mitpress.mit.edu/sites/default/files/sicp/index.html?ref=makingdatamistakes.com">Structure and Interpretation of Computer Programs</a>. And/or learn Clojure. After a few months of concerted effort struggling with both, I felt my mind had been meaningfully expanded, and the experience had a profound effect on my style of programming, even after I went back to Python.</p>
+</li>
+</ul>
+<h2 id="to-sum-it-up">To sum it up:</h2>
+<p>Our goal as programmers is to write small pieces of code that combine together to do something useful. Both object-oriented and functional programming are abstractions designed to help us. I’m pretty sure there are problem domains that are a better fit for one or the other, and certainly some languages pretty much make the decision for you.</p>
+<p>But if you have the choice, <strong>write pure functions</strong> because they are easier to test, and testability is the single best indicator of whether something’s a good idea. And <strong>avoid classes</strong>, because they are complicated and harder to flexibly compose.</p>
+<h2 id="resources">Resources:</h2>
+<p><strong>What is object-oriented programming?</strong></p>
+<ul>
+<li>
+<p><a href="https://realpython.com/lessons/classes-python/?ref=makingdatamistakes.com">https://realpython.com/lessons/classes-python/</a></p>
+</li>
+<li>
+<p><a href="http://ee402.eeng.dcu.ie/introduction/chapter-1---introduction-to-object-oriented-programming?ref=makingdatamistakes.com">http://ee402.eeng.dcu.ie/introduction/chapter-1---introduction-to-object-oriented-programming</a></p>
+</li>
+</ul>
+<p><strong>What is functional programming?</strong></p>
+<ul>
+<li>
+<p><a href="http://blog.jenkster.com/2015/12/what-is-functional-programming.html?ref=makingdatamistakes.com">http://blog.jenkster.com/2015/12/what-is-functional-programming.html</a> (opens with a really clear description of ‘side-effects’)</p>
+</li>
+<li>
+<p><a href="https://maryrosecook.com/blog/post/a-practical-introduction-to-functional-programming?ref=makingdatamistakes.com">https://maryrosecook.com/blog/post/a-practical-introduction-to-functional-programming</a> (useful for its contrasting non-functional and functional implementations of the same problem)</p>
+</li>
+</ul>
+
+
+<br />
+<hr />
+
+
+
+<nav class="sibling-nav sibling-nav-bottom" aria-label="Page navigation">
+    
+    <a class="prev" href="/blog/why-were-bad-at-estimating-and-what-to-do-about-it-mdm"
+        title="Previous — Why we're bad at estimating (and what to do about it) — sorted by date (newest first)">&#x2190;</a>
+    
+    
+    <a class="up" href="/blog/"
+        title="Up — Blog">&#x2191;</a>
+    
+    
+    <a class="next" href="/blog/what-does-it-take-to-transition-from-senior-to-chief-data-scientist-mdm"
+        title="Next — What does it take to transition from Senior to Chief Data Scientist? — sorted by date (newest first)">&#x2192;</a>
+    
+</nav>
+
+
+
+        
+
+
+
+        
+
+<h1>Belongs to these <a href="/tag">tags</a></h1>
+<ul>
+    
+    <li><a href="/tag/programming.html">Programming</a></li>
+    
+    <li><a href="/software/index.html">Software</a></li>
+    
+    <li><a href="/tag/team-effectiveness.html">Team effectiveness</a></li>
+    
+    <li><a href="/tag/tips-tricks.html">Tips & tricks</a></li>
+    
+</ul>
+
+
+
+        
+
+
+
+        
+
+
+
+    </div>
+    <footer>
+        <div class="bottom_nav">
+            
+
+            
+
+<p>
+    <i>
+        <span title="The date this page was first made public.">First published</span>: 2020-Oct-12
+    </i>
+</p>
+
+
+<p>
+    <i>
+        <span
+            title="The most recent time the content was edited (which could be before the page was actually published).">Last
+            updated</span>: 2025-Aug-17
+    </i>
+</p>
+
+
+        </div>
+    </footer>
+</body>
+
+</html>

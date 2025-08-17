@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+
+    <title>
+
+Making Tea While AI Codes: A Practical Guide to AI-assisted programming (with Cursor Composer Agent in YOLO mode) -
+
+Greg Detre
+</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="gdwebgen" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Greg Detre's personal website" />
+    
+    
+    <meta property="og:site_name" content="Greg Detre" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:site" content="Greg Detre" />
+    <link rel="stylesheet" href="/static/css/base.css">
+    
+<link rel="canonical" href="https://www.gregdetre.com/blog/making-tea-while-ai-codes-a-practical-guide-to-2024s-development-revolution-mdm">
+
+<meta name="description" content="We've progressed from razor-sharp manual tools to chainsaws, and now someone's strapped a bazooka to the chainsaw—powerful, sometimes scary, but with the right approach, transformative and addictive." />
+<meta property="og:description" content="We've progressed from razor-sharp manual tools to chainsaws, and now someone's strapped a bazooka to the chainsaw—powerful, sometimes scary, but with the right approach, transformative and addictive." />
+<meta name="twitter:description" content="We've progressed from razor-sharp manual tools to chainsaws, and now someone's strapped a bazooka to the chainsaw—powerful, sometimes scary, but with the right approach, transformative and addictive." />
+
+<meta property="og:title" content="Making Tea While AI Codes: A Practical Guide to AI-assisted programming (with Cursor Composer Agent in YOLO mode)" />
+<meta name="twitter:title" content="Making Tea While AI Codes: A Practical Guide to AI-assisted programming (with Cursor Composer Agent in YOLO mode)" />
+<meta property="og:url" content="https://www.gregdetre.com/blog/making-tea-while-ai-codes-a-practical-guide-to-2024s-development-revolution-mdm" />
+<meta name="twitter:card" content="summary" />
+
+</head>
+
+<body>
+
+    
+    <div id="wide-img-header">
+        
+        <a href="/wide_img_header/IMG_5253.jpg">
+            <img src="/wide_img_header/IMG_5253_sm.jpg" />
+        </a>
+        
+    </div>
+    
+
+    
+<nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+        
+        
+        <li class="breadcrumb-item" title="Greg Detre">
+            
+            <a href="/">Greg Detre</a>
+            
+        </li>
+        
+        
+        
+        <li class="breadcrumb-item" title="Blog">
+            
+            <a href="/blog/">Blog</a>
+            
+        </li>
+        
+        
+        
+        <li class="breadcrumb-item" title="Making Tea While AI Codes: A Practical Guide to AI-assisted programming (with Cursor Composer Agent in YOLO mode)">
+            
+            <a href="/blog/making-tea-while-ai-codes-a-practical-guide-to-2024s-development-revolution-mdm">Making Tea While Ai Codes: ...</a>
+            
+        </li>
+        
+        
+    </ol>
+</nav>
+
+
+    
+    <div class="nav_menu" <p>
+        
+        <a href="/about">About</a>
+        
+        <a href="/blog">Blog</a>
+        
+        <a href="/consulting">Consulting</a>
+        
+        </p>
+    </div>
+    
+
+    <div id="main">
+        
+
+<nav class="sibling-nav sibling-nav-top" aria-label="Page navigation">
+    
+    <a class="prev" href="/blog/podcast-episode-on-the-neuroscience-of-workplace-learning-mdm"
+        title="Previous — Podcast episode on the neuroscience of workplace learning — sorted by date (newest first)">&#x2190;</a>
+    
+    
+    <a class="up" href="/blog/"
+        title="Up — Blog">&#x2191;</a>
+    
+    
+    <a class="next" href="/blog/ease-value-mdm"
+        title="Next — Ease/value ranking — sorted by date (newest first)">&#x2192;</a>
+    
+</nav>
+
+
+<hr />
+
+
+<h1>Making Tea While AI Codes: A Practical Guide to AI-assisted programming (with Cursor Composer Agent in YOLO mode)</h1>
+
+
+
+
+<p>N.B. This was written with Claude Sonnet 3.5 in mind - for more modern models, see:</p>
+<p>[A field guide to AI-first development</p>
+<p>Detailed techniques and prompts for AI-first coding, for experienced developers to build medium-sized production-ready codebases, providing lots of architecture-level product guidance but without writing a line of code by hand.</p>
+<p><img alt="" src="/blog/makingdatamistakes/making-tea-while-ai-codes-a-practical-guide-to-2024s-development-revolution-mdm/images/logo---Greg-Detre-Consulting---191002-1.png"/>Making Data MistakesGreg Detre</p>
+<p><img alt="" src="/blog/makingdatamistakes/making-tea-while-ai-codes-a-practical-guide-to-2024s-development-revolution-mdm/images/Google_AI_Studio_2025-07-30T15_15_27.887Z.png"/>](https://www.makingdatamistakes.com/ai-first-development/)</p>
+<ul>
+<li>
+<p>Introduction</p>
+</li>
+<li>
+<p>What is Cursor?</p>
+</li>
+<li>
+<p>The State of AI Coding in 2024</p>
+</li>
+<li>
+<p>A Day in the Life: Building Features at AI Speed</p>
+</li>
+<li>
+<p>Getting Started: The Fundamentals</p>
+</li>
+<li>
+<p>Cursor Settings &amp; Setup</p>
+</li>
+<li>
+<p>Treat AI Like a Technical Colleague - provide enough context, and make sure you're aligned</p>
+</li>
+<li>
+<p>Clear Success Criteria, and The Cup of Tea Test</p>
+</li>
+<li>
+<p>Set guardrails, and make every change reversible</p>
+</li>
+<li>
+<p>Summary of the Optimal Simple Workflow</p>
+</li>
+<li>
+<p>Intermediate techniques</p>
+</li>
+<li>
+<p>Spotting When Things Go Wrong - Watch for these red flags</p>
+</li>
+<li>
+<p>What to do when the AI gets stuck, or starts going in circles</p>
+</li>
+<li>
+<p>The Mixed-Speed Productivity Boost</p>
+</li>
+<li>
+<p>Advanced techniques: for complex projects</p>
+</li>
+<li>
+<p>The Planning Document Pattern - for complex, multi-step projects</p>
+</li>
+<li>
+<p>Runbooks/howtos</p>
+</li>
+<li>
+<p>The Side Project Advantage: Learning at Warp Speed</p>
+</li>
+<li>
+<p>The Renaissance of Test-Driven Development</p>
+<ul>
+<li>
+<p>Why TDD Finally Makes Sense</p>
+</li>
+<li>
+<p>Avoiding Common Pitfalls</p>
+</li>
+<li>
+<p>A Two-Stage Approach</p>
+</li>
+<li>
+<p>Managing Test Execution</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Tweak your system prompt</p>
+</li>
+<li>
+<p>For Engineering Managers: Introducing AI to Teams</p>
+<ul>
+<li>The Unease of Not Knowing Your Own Code</li>
+</ul>
+</li>
+<li>
+<p>Conversation Patterns with Composer</p>
+<ul>
+<li>
+<p>Pattern 1: Propose, Refine, Execute</p>
+</li>
+<li>
+<p>Pattern 2: Architectural Discussion</p>
+</li>
+<li>
+<p>Pattern 3: Large-Scale Changes</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Conclusion: Welcome to the Age of the Centaur for programming</p>
+</li>
+<li>
+<p>Postscript - AI-assisted writing</p>
+</li>
+<li>
+<p>Resources and Links</p>
+</li>
+</ul>
+<p>It was afternoon on New Year's Eve 2024, and I had 15 minutes before we needed to leave for the party. The dishes weren't done, and a stubborn DevOps issue was blocking my hobby project - the web server couldn't talk to the database in production. Classic.</p>
+<p>I had an inspiration for how to tackle it, but there was no time to try it! So I gave Cursor (an AI coding assistant) clear instructions and toddled off to do the washing up. "Wouldn't it be poetic," I thought, "if this became my story of the moment AI truly became agentic?"</p>
+<p>Five minutes later, I returned to find... my laptop had fallen asleep.</p>
+<p>I gave it a prod, went back to the dishes, and then checked again just before we walked out the door. This time? Success! Clean dishes and the site was working perfectly after a long AI Composer thread of abortive attempts, culminating in a triumphal "All tests passed". My New Year's gift was watching an AI assistant independently navigate a complex deployment process while I handled real-world chores.</p>
+<p><img alt="" src="/blog/makingdatamistakes/making-tea-while-ai-codes-a-practical-guide-to-2024s-development-revolution-mdm/images/Screenshot-2025-01-08-at-02.13.34.png"/></p>
+<h1 id="introduction">Introduction</h1>
+<h2 id="what-is-cursor">What is Cursor?</h2>
+<blockquote>
+<p>"We've moved from razor-sharp manual tools to chainsaws, and now someone's strapped a bazooka to the chainsaw."</p>
+</blockquote>
+<p>Let's start with some context. Cursor is a modern code editor (or IDE - Integrated Development Environment) built on top of VS Code. It has been re-worked for AI-assisted development, and integrated closely with Claude Sonnet 3.5 (the best overall AI model in late 2024).</p>
+<h2 id="the-state-of-ai-coding-in-2024">The State of AI Coding in 2024</h2>
+<p>Over the last year, we've progressed from razor-sharp manual tools to chainsaws, and in the last few months Cursor has strapped a bazooka to the chainsaw. It's powerful, sometimes scary, easy to shoot your foot off, but with the right approach, transformative and <em>addictive</em>.</p>
+<p>We've gone from auto-completing single lines, to implementing entire features, to running the tests and debugging the problems, to making DevOps changes, to refactoring complex systems.</p>
+<p>The most recent game-changer is Cursor's Composer-agent in "YOLO" mode (still in beta). Think of Composer as an AI pair programmer that can see your entire codebase and make complex changes across multiple files. YOLO mode takes this further - instead of just suggesting changes, it can actually run commands and modify code while you supervise. We've gone from an AI that suggests recipe modifications to a robot chef that can actually flip the pancakes.</p>
+<p>The result? A fundamentally new style of programming, where the AI handles the mechanical complexity while you focus on architecture and intention. At least that's the pitch, and the reality isn't far off.</p>
+<h2 id="a-day-in-the-life-building-features-at-ai-speed">A Day in the Life: Building Features at AI Speed</h2>
+<blockquote>
+<p>"One afternoon, I realized I'd been shipping a complete new UI feature every 5-10 minutes for an hour straight - and for most of that time, I was doing other things while the AI worked."</p>
+</blockquote>
+<p>What does this new style of programming look like? Let me share a "magic moment" to illustrate.</p>
+<p>I needed to several CRUD buttons to my web app - delete, rename, create, etc. Each button sounds simple, but consider the full stack of work for each button:</p>
+<ul>
+<li>
+<p>HTML, CSS, Javascript for the UI element (plus perhaps refactoring repetitive elements into a reusable base template)</p>
+</li>
+<li>
+<p>New API endpoint in the backend</p>
+</li>
+<li>
+<p>And write a smoke/integration test (to check things work end-to-end), plus some unit tests for edge cases in individual pieces</p>
+</li>
+</ul>
+<p>Even just a delete button could easily be an hour of focused work - potentially more for the first one, or if you hit a snag, or haven't done it for a while, or need to refactor, or want to be thorough with testing.</p>
+<p>One afternoon, I asked the AI to create the first delete button, answered some clarifying questions, watched it write all the code and tests, and tweak things until everything just worked. Then I asked for another button, then a small refactor, then added some complexity, then another. I would prepare the instructions for the next feature while the AI was generating code. It was tiring, and I felt like I'd been at it all afternoon. But then I reviewed my Git commits - we'd built a new, robust, fully-tested UI feature every seven minutes for an hour straight. That would have been a day or two's work, doing all the typing yourself, like an animal.</p>
+<p>Of course, one might respond with a quizzical eyebrow and ask "But is the code any good?". The answer depends enormously. My experience has been that, with enough context, guidance, and clear criteria for success, the code it produces is usually good <em>enough</em>. And as we'll discuss, there is much you can do to improve it.</p>
+<p>N.B. My experience so far has been working with small codebases. From talking to people, further techniques &amp; progress may be needed for larger codebases.</p>
+<h1 id="getting-started-the-fundamentals">Getting Started: The Fundamentals</h1>
+<h2 id="cursor-settings-setup">Cursor Settings &amp; Setup</h2>
+<p>For the best AI-assisted development experience, start with these essential configurations:</p>
+<ol>
+<li><strong>Core Settings:</strong></li>
+</ol>
+<ul>
+<li>
+<p>Enable <a href="https://www.perplexity.ai/search/cursor-privacy-mode-V3nrYtU_TGS1zNCdyIxrlQ?ref=makingdatamistakes.com">Privacy mode</a> to protect sensitive information</p>
+</li>
+<li>
+<p>Use Composer (not Chat) in Agent mode with Claude Sonnet 3.5</p>
+</li>
+<li>
+<p>Enable <a href="https://www.perplexity.ai/search/cursor-privacy-mode-V3nrYtU_TGS1zNCdyIxrlQ?ref=makingdatamistakes.com">YOLO mode</a> for autonomous operation</p>
+<ul>
+<li>Add safety commands to your denylist (e.g., <code>git commit</code>, <code>deploy</code>)</li>
+</ul>
+</li>
+<li>
+<p>Set up a <a href="https://www.perplexity.ai/search/how-do-i-enable-the-shadow-wor-srbn4qfyRh2LhQNMyRajXw?ref=makingdatamistakes.com">shadow workspace</a> for safer experimentation</p>
+</li>
+</ul>
+<ol start="2">
+<li><strong>Enhanced Features:</strong></li>
+</ol>
+<ul>
+<li>
+<p>Enable "Agent composer iterate on lints" for automated bug detection and fixes</p>
+</li>
+<li>
+<p>Turn on "Auto context" for smart codebase navigation</p>
+</li>
+<li>
+<p>Consider enabling all settings, including beta features - they're generally stable and unlock more capabilities</p>
+</li>
+</ul>
+<p>See Appendix A for additional system prompt configurations and "Rules for AI".</p>
+<h2 id="treat-ai-like-a-technical-colleague-provide-enough-context-and-make-sure-youre-aligned">Treat AI Like a Technical Colleague - provide enough context, and make sure you're aligned</h2>
+<blockquote>
+<p>"The AI isn't junior in skill, but in wisdom - like a brilliant but occasionally reckless colleague who needs clear context and guardrails."</p>
+</blockquote>
+<p>Forget the "junior developer" metaphor - it's more nuanced than that.</p>
+<ul>
+<li>
+<p>Sometimes the AI writes code that's more elegant and idiomatic than what you'd write yourself, using library features you didn't even know existed. In terms of raw coding ability, it can often perform at a senior level.</p>
+</li>
+<li>
+<p>But the AI sometimes lacks judgment, especially without enough context. Like a brilliant but occasionally reckless colleague, the AI might decide to rip out half your tests because it misdiagnosed an issue, or attempt major surgery on your codebase when a small tweak would do. It's not junior in skill, but in wisdom.</p>
+</li>
+</ul>
+<p>This mirrors the engineering manager's challenge of overseeing a team on a new project: you can't personally review every line of code, so you focus on direction, and creating the conditions for success. For them to have a chance of succeeding, you'll need to:</p>
+<ul>
+<li>
+<p>Provide clear context about the codebase, tech stack, previous experience, and ideas for how to approach things - or give them a runbook to follow, or an example to base their approach on</p>
+</li>
+<li>
+<p>Ensure you're in alignment. Before starting, ask them to suggest multiple approaches, talk through the trade-offs, raise concerns, or ask questions. You can usually tell whether the output is going to be right by the quality of the questions.</p>
+</li>
+<li>
+<p>Set guardrails - don't make changes without asking first, make sure all tests pass, don't deploy without checking, etc.</p>
+</li>
+</ul>
+<h2 id="clear-success-criteria-and-the-cup-of-tea-test">Clear Success Criteria, and The Cup of Tea Test</h2>
+<blockquote>
+<p>"Will no one rid me of these failing tests?"</p>
+</blockquote>
+<p>Before writing a single line of code, define what success looks like. The ideal is to have an objective target that the AI can iterate towards, with clear feedback on what it needs to change.</p>
+<p>Automated tests are your best friend here. The AI can run in a loop, fixing problems determinedly until all the tests pass. (If you don't have automated tests yet, the good news is that AI is really good at writing them, especially if you discuss what they should look like before allowing it to start coding them.)</p>
+<p>The objective criterion could take other forms, e.g.:</p>
+<ul>
+<li>
+<p>The new view runs and returns a 200</p>
+</li>
+<li>
+<p>The migration has run and the local database looks right</p>
+</li>
+<li>
+<p>The ML evaluation metric has increased</p>
+</li>
+<li>
+<p>This function is now fast enough (and still correct)</p>
+</li>
+<li>
+<p>etc</p>
+</li>
+</ul>
+<p>It could be anything that can be run automatically, quickly, repeatedly, consistently, and give clear feedback on what needs to be changed, e.g. an error message or a score.</p>
+<p>The dream is to be able to walk away and make a cup of tea while the AI toils. For this to work, you need to be confident that if the objective criterion has been met (e.g. all the tests pass), then the code is probably right.</p>
+<p>This makes it sound easy. But often, figuring out the right objective criteria is the hard part (e.g. ensuring the tests capture all the edge cases, or the ML evaluation metric really meets the business needs). Before stepping away, you want to see evidence that the AI truly understands your intentions. This is why the "propose and discuss" phase is crucial - when the AI asks insightful questions about edge cases you hadn't considered, or makes proposals that align perfectly with your architectural vision, that's when you can start warming up the kettle.</p>
+<p>N.B. There is of course one obvious way that this could fail - the AI could modify (or even just delete) the tests! I have definitely seen this happen, whether by accident or some AI sneakiness. Add instructions to your Cursor rules system prompt and/or to the conversation prompt, instructing it to minimise changes to the tests, and then keep a close eye on any changes it makes! (I wonder in retrospect if part of the problem was that I used the ambiguous phrase, "Make sure the tests pass", which might be the AI programming equivalent of "Will no one rid me of this turbulent priest?")</p>
+<h2 id="set-guardrails-and-make-every-change-reversible">Set guardrails, and make every change reversible</h2>
+<blockquote>
+<p>"Good guardrails are like a net beneath a trapeze artist - you can risk the triple-somersault"</p>
+</blockquote>
+<p>We would ideally like to be able to let the AI loose with instructions to iterate towards some objective criterion.</p>
+<p>We gave an example of how this could go wrong, if the AI were to simply delete the tests. Of course, there are many other, worse failure modes. It might deploy to production and create an outage. It might format your laptop's hard disk. In practice, I've found Claude to be reasonably sensible, and the worst thing it has ever done is drop the tables on my local development database as part of a migration.</p>
+<p>Here are some minimal guardrails to put in place:</p>
+<p><strong>Code Safety:</strong></p>
+<ul>
+<li>
+<p>Git-commit before every AI conversation</p>
+</li>
+<li>
+<p>Work in branches for complex or risky changes</p>
+</li>
+<li>
+<p>Keep a clean main branch that you can always revert to</p>
+</li>
+<li>
+<p>Make sure your non-Git-committed secrets are also backed up</p>
+</li>
+<li>
+<p>Make sure tests are passing before starting a new Composer conversation, so that we can attribute any failures to recent changes</p>
+</li>
+<li>
+<p>Run in ephemeral containers or staging environments if you can</p>
+</li>
+</ul>
+<p><strong>Data Safety:</strong></p>
+<ul>
+<li>
+<p>Back up your local database before migrations</p>
+</li>
+<li>
+<p>Create database backup scripts that run automatically beforehand as part of the migration scripts</p>
+</li>
+<li>
+<p>Keep regular backups in multiple locations (local disk, cloud)</p>
+</li>
+<li>
+<p>Never modify production data directly</p>
+</li>
+<li>
+<p>Use test data when possible</p>
+</li>
+</ul>
+<p><strong>Process Safety:</strong></p>
+<ul>
+<li>
+<p>Tell the AI to make proposals and ask questions before any changes</p>
+</li>
+<li>
+<p>Tell it to keep changes focused and atomic</p>
+</li>
+<li>
+<p>Document the conversations &amp; decisions with the Planning Document pattern</p>
+</li>
+<li>
+<p>Ask it to raise potential concerns during the discussion period</p>
+</li>
+<li>
+<p>Never modify production directly</p>
+</li>
+<li>
+<p>Review all changes by eye before Git-committing</p>
+</li>
+<li>
+<p>Pay close attention during risky operations (e.g., migrations, deployments)</p>
+</li>
+</ul>
+<p><strong>AI-Specific Safety:</strong></p>
+<ul>
+<li>
+<p>Add dangerous commands to your Cursor YOLO settings denylist (e.g., <code>git commit</code>, <code>deploy</code>, <code>drop table</code>)</p>
+</li>
+<li>
+<p>Keep conversations focused and not too long - if they get long, use the Planning Document pattern to port over to a new conversation.</p>
+</li>
+<li>
+<p>Watch for signs the AI is forgetting context or going in circles</p>
+</li>
+<li>
+<p>Be ready to hit "Cancel generating" if the AI heads in a dangerous direction</p>
+</li>
+<li>
+<p>Consider using separate staging environments for AI experiments</p>
+</li>
+</ul>
+<p>N.B. For irreversible, consequential or  </p>
+<p>potentially dangerous tasks, then you probably  </p>
+<p>need to hobble it from running things without your say-so. For example, even though I've found Cursor very helpful for DevOps, you'll have to  </p>
+<p>make your own risk/reward judgment.</p>
+<p>The key insight is that good guardrails don't just prevent disaster - they enable freedom. When you have automated backups and a solid test suite, you can more confidently let the AI work in its own loop. When it can't break anything important, you can pass the "cup of tea test" more often.</p>
+<h2 id="summary-of-the-optimal-simple-workflow">Summary of the Optimal Simple Workflow</h2>
+<ol>
+<li>
+<p>Describe your goal, constraints, and objective criterion. Ask the AI to AI propose approaches, weigh up trade-offs, raise concerns, and ask questions. But tell it not to start work yet.</p>
+</li>
+<li>
+<p>Answer its questions, and refine its plan. Give it permission to proceed - either one step at a time (for high-risk/uncertain projects), or until the criteria have been met (e.g. the tests pass).</p>
+</li>
+</ol>
+<p>You may want to first discuss &amp; discuss &amp; ask it to build automated tests as a preliminary step, so that you can then use them as the objective criterion.</p>
+<p>[SCREENSHOT: A conversation showing this workflow in action]</p>
+<h1 id="intermediate-techniques">Intermediate techniques</h1>
+<h2 id="spotting-when-things-go-wrong-watch-for-these-red-flags">Spotting When Things Go Wrong - Watch for these red flags</h2>
+<ul>
+<li>
+<p>Really long conversations (e.g. if you scroll to the top of the Composer conversation, is there a "Load older messages" pagination button?)</p>
+</li>
+<li>
+<p>If the AI starts deleting code/tests without clear justification</p>
+</li>
+<li>
+<p>If the AI starts forgetting the original goal</p>
+</li>
+<li>
+<p>If the AI starts creating parallel implementations of existing functionality</p>
+</li>
+<li>
+<p>If the Composer has problems calling the tools, e.g. failing to edit</p>
+</li>
+<li>
+<p>If the AI realises out loud that it has made a mistake, and tries to put things back to how they were</p>
+</li>
+</ul>
+<h2 id="what-to-do-when-the-ai-gets-stuck-or-starts-going-in-circles">What to do when the AI gets stuck, or starts going in circles</h2>
+<p>The AI rarely seems to give up. If its approach isn't working, it keeps trying different fixes, sometimes goes in circles, or graduates to increasingly drastic diagnoses &amp; changes. Eventually, as the conversation gets very long, it seems to forget the original goal, and things can really go rogue.</p>
+<p>N.B. Cursor's checkpoint system is your secret weapon. Think of it like save points in a video game:</p>
+<ul>
+<li>
+<p>Checkpoints are automatically created after each change</p>
+</li>
+<li>
+<p>You can restore to any checkpoint, and re-run with a new/tweaked prompt</p>
+</li>
+<li>
+<p>Like "Back to the Future" - rewind and try again with better instructions</p>
+</li>
+</ul>
+<p>[SCREENSHOT: The checkpoint restore interface in action]</p>
+<p>Possible remedies:</p>
+<ul>
+<li>
+<p>Don't be afraid to throw away the changes from the last few steps, tweak the prompt, and let it go again. In your tweaked prompt, you might add new constraints, or more context, in the hope of pushing the AI along a different path/approach. (And perhaps update the YOLO denylist, or update the system prompt to avoid this ever happening again). See "Managing Context Like Time Travel" below.</p>
+</li>
+<li>
+<p>Ask it to review the conversation so far, propose a diagnosis of what might be going wrong, and suggest a path forwards. (The AI is actually quite good at this meta-cognition, but may get so wrapped up in its thoughts that it forgets to stop and reflect without a nudge.)</p>
+</li>
+<li>
+<p>Ask it to summarise the problem &amp; progress so far, and start a new Composer conversation with that as context. (Or use the Planning Document Pattern paradigm from below)</p>
+</li>
+<li>
+<p>Consider redefining the task, or tackle a simpler/smaller version first</p>
+</li>
+<li>
+<p><strong>Pro Tip:</strong> When Claude gets stuck on edge cases or recent changes, try Perplexity.ai as a complementary tool. Ask Perplexity Pro your question, mark the page as publicly shareable, and then paste in the link to Cursor.</p>
+</li>
+</ul>
+<h2 id="the-mixed-speed-productivity-boost">The Mixed-Speed Productivity Boost</h2>
+<blockquote>
+<p>"AI-assisted programming often feels slower while you're doing it - until you look at your Git diff and realize you've done a day's work in an hour."</p>
+</blockquote>
+<p>After hundreds of hours of usage in late 2024, I've observed a spectrum of outcomes that roughly breaks down into four categories:</p>
+<ol>
+<li>
+<p>A Pit Full of Vipers: It'll make weird choices, get lost in rabbit-holes, or go rogue and make destructive changes</p>
+</li>
+<li>
+<p>The Scenic Route: It'll get there, but with a good deal of hand-holding (still perhaps faster than doing the typing yourself)</p>
+</li>
+<li>
+<p>Better Bicycle: Routine tasks, done 2x faster</p>
+</li>
+<li>
+<p>The Magic of Flight: 10-100x speedups</p>
+</li>
+</ol>
+<p>While dramatic speedups are exciting, the key to maximizing overall productivity is having fewer of pits full of vipers and scenic routes. Think of it like optimizing a production line: eliminating bottlenecks and reducing errors often yields better results than trying to make the fastest parts even faster.</p>
+<p>The most effective tip for minimising these time-sinks is to remember that AI-generated code is <em>cheap</em> and free of sunk costs. Get used to interrupting it mid-flow, reverting back one or more steps, and trying again with tweaked prompts.</p>
+<p><a href="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjhpZXFuNXFlOHJkaWtoOWhmcGE4cnNwZ3RpdTl6am5uNzh2ZDJ0MiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9dg/KT0d5zfjm3qYiZbCzT/giphy.gif?ref=makingdatamistakes.com">https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjhpZXFuNXFlOHJkaWtoOWhmcGE4cnNwZ3RpdTl6am5uNzh2ZDJ0MiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9dg/KT0d5zfjm3qYiZbCzT/giphy.gif</a></p>
+<p>One surprising insight - AI-assisted programming often <em>feels</em> slower than coding manually. You watch the AI iterate, fail, correct itself, and try over and over again, and you can't help but think "what a putz" (even as you secretly know it would have taken you at least as many tries). It is also cognitively effortful to write careful instructions that make the implicit explicit, and to keep track of a rapidly-changing garden of forking paths. And each of the small delays spent waiting for it to generate code take you out of the state of flow. The remedy to this impatient ingratitude is to look at the resulting Git diff and imagine how much actual work would have been involved making each one of those tiny little changes carefully by hand yourself.</p>
+<h1 id="advanced-techniques-for-complex-projects">Advanced techniques: for complex projects</h1>
+<h2 id="the-planning-document-pattern-for-complex-multi-step-projects">The Planning Document Pattern - for complex, multi-step projects</h2>
+<p>See: <em>Appendix C - Project Planning Guide</em></p>
+<p>Ask the AI to create a project plan:</p>
+<ul>
+<li>
+<p>With sections on Goals; Progress so far; and Next steps.</p>
+</li>
+<li>
+<p>Include lots of references to relevant files &amp; functions</p>
+</li>
+<li>
+<p>Ask it to update the doc regularly during the conversation, marking what has been done,</p>
+</li>
+</ul>
+<h2 id="runbookshowtos">Runbooks/howtos</h2>
+<p>See: <em>Appendix B - Example Runbook for Migrations</em></p>
+<p>Create runbooks/howtos with best practices and tips for important, complex, or frequent processes, e.g. database migrations, deploys, etc.</p>
+<ul>
+<li>
+<p>Then you can mention the relevant runbook whenever asking the AI to do that task. This makes for much quicker prompting, and better, more consistent outcomes.</p>
+</li>
+<li>
+<p>At the end of each such task, ask the AI to update the Runbook if anything new has been learned.</p>
+</li>
+<li>
+<p>Every so often, ask it to tidy the Runbook up.</p>
+</li>
+</ul>
+<p>💡 <strong>Pro Tip:</strong> Create dedicated runbooks (like <code>MIGRATIONS.md</code>) to codify common practices. This gives the AI a consistent reference point, making it easier to maintain institutional knowledge and ensure consistent approaches across your team.</p>
+<h2 id="the-side-project-advantage-learning-at-warp-speed">The Side Project Advantage: Learning at Warp Speed</h2>
+<p>What might take months or years to learn in a production environment, you can discover in days or weeks with a side project. The key is using that freedom not just to build features faster, but to experiment with the relationship between human and AI developers.</p>
+<p>Each "disaster" in a side project becomes a guardrail in your production workflow. It's like learning to drive - better to discover the importance of brakes in an empty parking lot than on a busy highway.</p>
+<p>With lower stakes, you can attempt transformative changes that would be too risky in production, e.g. large-scale refactoring, or use new tools.</p>
+<p>This creates a virtuous cycle: try something ambitious, watch what goes wrong, update your techniques and guardrails, push the envelope further, and repeat.</p>
+<p>[SCREENSHOT: A git history showing the evolution of guardrails and complexity over time]</p>
+<h2 id="the-renaissance-of-test-driven-development">The Renaissance of Test-Driven Development</h2>
+<h3 id="why-tdd-finally-makes-sense">Why TDD Finally Makes Sense</h3>
+<blockquote>
+<p>"With AI, you get tests for free, then use them as guardrails for implementation."</p>
+</blockquote>
+<p>Test-Driven Development is like teenage sex - everybody talks about it, but nobody's actually doing it. With AI-assisted programming, that will change. TDD gives you a double win:</p>
+<ol>
+<li>
+<p>The AI does the legwork of writing the tests in the first place, removing that friction</p>
+</li>
+<li>
+<p>The tests then provide an objective success criterion for the Composer-agent AI to iterate against, so it can operate much more independently and effectively.</p>
+</li>
+</ol>
+<p>The key is to get aligned upfront with the AI on the criteria and edge cases to cover in the tests. This creates a virtuous cycle: the AI writes tests for free, then uses them as guardrails for implementation.</p>
+<h3 id="avoiding-common-pitfalls">Avoiding Common Pitfalls</h3>
+<p>However, you need to be precise with your instructions. I learned this the hard way:</p>
+<ul>
+<li>
+<p>Saying "make sure the tests pass" might lead the AI to delete some of the tests!</p>
+</li>
+<li>
+<p>Without access to the right context files, the AI might go rogue and start rebuilding your entire test fixture infrastructure</p>
+</li>
+<li>
+<p>The output from large test suites failing can quickly consume the AI's context window, making it progressively "dumber"</p>
+</li>
+</ul>
+<h3 id="a-two-stage-approach">A Two-Stage Approach</h3>
+<p>I've found success with this pattern:</p>
+<ol>
+<li>
+<p>First pass: Focus on getting the test cases right</p>
+</li>
+<li>
+<p>Second pass: "Without changing the tests too much, get the tests passing"</p>
+</li>
+</ol>
+<p>This prevents the AI from trying to solve test failures by rewriting the tests themselves.</p>
+<h3 id="managing-test-execution">Managing Test Execution</h3>
+<p>With large test suites, efficiency matters. Instead of repeatedly running all tests:</p>
+<ol>
+<li>
+<p>Run the full suite once to identify failures</p>
+</li>
+<li>
+<p>Use focused runs (e.g., <code>pytest -x --lf</code> in Python) to tackle failing tests one by one</p>
+</li>
+<li>
+<p>Run the full suite again at the end</p>
+</li>
+</ol>
+<h2 id="tweak-your-system-prompt">Tweak your system prompt</h2>
+<p>see: <em>Appendix A: System Prompts and Configuration</em> for an example of mine as it stands. Each line tells a story :~</p>
+<p>Over time, I suspect these will become less important. Even now, the out-of-the-box behaviour is pretty good. But in the meantime, they help a little.</p>
+<h2 id="for-engineering-managers-introducing-ai-to-teams">For Engineering Managers: Introducing AI to Teams</h2>
+<ul>
+<li>
+<p>Build confidence, e.g. start with commenting &amp; documentation updates, then unit tests, graduate to small, isolated features, etc.</p>
+</li>
+<li>
+<p>If possible, run a hackathon on a low-risk side-project where only the AI is allowed to write code!</p>
+</li>
+<li>
+<p>If people aren't already using VS Code, then deputise someone to document VS Code best practices/migration guide (e.g. how to set up extensions, project settings, etc)</p>
+</li>
+<li>
+<p>Set up training sessions. If you want a hand, you can contact me on ai_training@gregdetre.com</p>
+</li>
+</ul>
+<h3 id="the-unease-of-not-knowing-your-own-code">The Unease of Not Knowing Your Own Code</h3>
+<blockquote>
+<p>"Managing AI is like managing a team - you can't review every line, so you focus on direction, criteria for success, and making mistakes safe."</p>
+</blockquote>
+<p>Perhaps the most interesting insight comes from watching your relationship with the code evolve. There's an initial unease when you realize you no longer know exactly how every part works - the tests, the implementation, the infrastructure. The AI has modified nearly every line, and while you understand the structure, the details have become a partnership between you and the AI.</p>
+<p>I relaxed when I realised that I recognised this feeling from a long time ago. As I started leading larger teams, I had this same feeling of unease when I couldn't review every line of code the team wrote, or even understand in detail how everything worked. As an engineering leader, I learned to:</p>
+<ul>
+<li>
+<p>Provide context, and align on direction, goals, and overall architecture/approach</p>
+</li>
+<li>
+<p>Trust but verify - focus on how success will be evaluated, e.g. testing, metrics, and edge cases</p>
+</li>
+<li>
+<p>Let go of complete control</p>
+</li>
+<li>
+<p>Create psychological safety - encourage everyone to questions, and raise concerns. And set things up so that mistakes can be caught early and easily reversed</p>
+</li>
+<li>
+<p>You only need to really sweat about the irreversible, consequential decisions</p>
+</li>
+<li>
+<p>Hire great people - or in this case, i.e. use the very best AIs &amp; tools available</p>
+</li>
+</ul>
+<p>There are differences, but most of these lessons apply equally to managing teams of people and AIs.</p>
+<h2 id="conversation-patterns-with-composer">Conversation Patterns with Composer</h2>
+<p>Here are the main patterns of Composer conversation that I've found useful:</p>
+<h3 id="pattern-1-propose-refine-execute">Pattern 1: Propose, Refine, Execute</h3>
+<p>This is the most common pattern for implementing specific features or changes:</p>
+<ol>
+<li>Initial Request:</li>
+</ol>
+<ul>
+<li>
+<p>Present a concrete task, problem, or goal</p>
+</li>
+<li>
+<p>Provide relevant context, e.g. previous experience</p>
+</li>
+<li>
+<p>Ask for a proposal (or multiple proposals, with trade-offs)</p>
+</li>
+<li>
+<p>Define success criteria</p>
+</li>
+<li>
+<p>Tell it to hold off on actual changes for now</p>
+</li>
+</ul>
+<ol start="2">
+<li>Review and Refine:</li>
+</ol>
+<ul>
+<li>
+<p>AI responds with proposal and questions</p>
+</li>
+<li>
+<p>Discuss edge cases</p>
+</li>
+<li>
+<p>Refine the approach</p>
+</li>
+<li>
+<p>Clarify any ambiguities</p>
+</li>
+</ul>
+<ol start="3">
+<li>Implementation:</li>
+</ol>
+<ul>
+<li>
+<p>Give go-ahead for changes</p>
+</li>
+<li>
+<p>AI implements and iterates</p>
+</li>
+<li>
+<p>Continue until success criteria are met</p>
+</li>
+<li>
+<p>Occasionally intervene if you see it going off-track</p>
+</li>
+</ul>
+<p>Often it helps to separate out the test-writing as a preliminary conversation, with a lot of discussion around edge-cases etc. Then the follow-up conversation about actually building the feature becomes pretty straightforward - "write the code to make these tests pass!"</p>
+<h3 id="pattern-2-architectural-discussion">Pattern 2: Architectural Discussion</h3>
+<p>When you need to think through design decisions:</p>
+<ul>
+<li>
+<p>Present high-level goals</p>
+</li>
+<li>
+<p>Explore multiple approaches</p>
+</li>
+<li>
+<p>Discuss trade-offs</p>
+</li>
+<li>
+<p>No code changes, just planning</p>
+</li>
+<li>
+<p>Document decisions for future reference</p>
+</li>
+</ul>
+<h3 id="pattern-3-large-scale-changes">Pattern 3: Large-Scale Changes</h3>
+<p>For complex, multi-stage projects:</p>
+<ol>
+<li>Create a living planning document containing:</li>
+</ol>
+<ul>
+<li>
+<p>Goals and background</p>
+</li>
+<li>
+<p>Current progress</p>
+</li>
+<li>
+<p>Next steps and TODOs</p>
+</li>
+</ul>
+<ol start="2">
+<li>
+<p>Update the document across conversations</p>
+</li>
+<li>
+<p>Use it as a reference point for context</p>
+</li>
+<li>
+<p>Track progress and adjust course as needed</p>
+</li>
+</ol>
+<p>See <em>Appendix C: Project Planning Guide</em>.</p>
+<h2 id="conclusion-welcome-to-the-age-of-the-centaur-for-programming">Conclusion: Welcome to the Age of the Centaur for programming</h2>
+<p>After hundreds of hours of AI-assisted development, the raw productivity gains are undeniable to me. For smaller, lower-stakes projects I see a boost of 2-5x. Even in larger, more constrained environments, I believe that 2x is achievable. And these multipliers are only growing.</p>
+<p>We're entering the age of the centaur - where human+AI hybrid teams are greater than the sum of their parts. Just as the mythical centaur combined the strength of a horse with the wisdom of a human, AI-assisted development pairs machine capabilities with human judgment.</p>
+<p>This hybrid approach has made programming more joyful for me than it's been in years. When the gap between imagination and implementation shrinks by 5x, you become more willing to experiment, to try wild ideas, to push boundaries. You spend less time wrestling with minutiae and more time dreaming about what should be, and what could be. It feels like flying.</p>
+<p>The short- and medium-term future belongs to developers who can:</p>
+<ul>
+<li>
+<p>Recognize and leverage the complementary strengths of human and machine</p>
+</li>
+<li>
+<p>Focus on architecture and intention while delegating implementation</p>
+</li>
+<li>
+<p>Make implicit context and goals explicit, and define success in clear, objective ways</p>
+</li>
+<li>
+<p>Define strong guardrails so that AI changes are reversible</p>
+</li>
+<li>
+<p>Embrace a new kind of flow - less about typing speed, more about clear thinking</p>
+</li>
+</ul>
+<p>In AI-assisted development, your most productive moments might come while making a cup of tea - as your AI partner handles the implementation details, freeing you to focus on what truly matters: ensuring that what's being built is worth building.</p>
+<p>[SCREENSHOT: A before/after comparison of a complex feature implementation, showing not just the time difference but the scope of what's possible]</p>
+<h1 id="postscript-ai-assisted-writing">Postscript - AI-assisted writing</h1>
+<p><em>Postscript: I wrote this article with Cursor as an experiment - watch this space for more details on that AI-assisted writing process. AI helped with the structure, exact phrasing, and expansion of ideas, the core insights and experiences are drawn from hundreds of hours of real-world usage.</em></p>
+<h1 id="resources-and-links">Resources and Links</h1>
+<ul>
+<li>
+<p><a href="https://www.anthropic.com/news/3-5-models-and-computer-use?ref=makingdatamistakes.com">Claude Sonnet 3.5 (upgraded version, 2024-Oct) capabilities and documentation</a></p>
+</li>
+<li>
+<p><a href="https://www.cursor.com/?ref=makingdatamistakes.com">Cursor IDE</a></p>
+</li>
+<li>
+<p><a href="https://www.arguingwithalgorithms.com/posts/cursor-review.html?ref=makingdatamistakes.com">Useful tips for older versions of Cursor</a> </p>
+</li>
+</ul>
+<p><a href="https://www.reddit.com/r/cursor/comments/1hqcp03/a_few_tips_for_using_composer_effectively/?ref=makingdatamistakes.com">Useful tips for Composer</a></p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=GAe1IQtHqVU&amp;ref=makingdatamistakes.com">Video demonstrating Composer-agent mode in action (but pre-dating YOLO mode)</a></li>
+</ul>
+<p>Dear reader, Have you found other helpful resources for AI-assisted development? I'd love to hear about them! Please share your suggestions for additional links that could benefit other developers getting started with these tools.</p>
+<h1 id="appendices">Appendices</h1>
+<h2 id="appendix-a-system-prompts-and-configuration">Appendix A: System Prompts and Configuration</h2>
+<p>Click the cog icon in the top-right of the Cursor window to open the Cursor-specific settings. Paste into General / "Rules for AI".</p>
+<p>You can also set up <code>.cursorrules</code> per-project.</p>
+<p>Here's are <a href="https://x.com/kayladotdev/status/1853272891023872450?s=48&amp;t=qf6BvmQ5-amy5gT1xlRUDQ&amp;ref=makingdatamistakes.com">the Rules from one of the Cursor co-founders</a>. Interestingly:</p>
+<ul>
+<li>
+<p>I don't 100% agree with some of his requests. For example, I don't <em>always</em> want to be treated as an expert - sometimes I'm not! And I worry that asking it to give the answer immediately may lead to worse answers (because it hasn't been able to think things through).</p>
+</li>
+<li>
+<p>And many of his requests seem to be in response to problems I've never encountered. For example, I don't find that Claude gives me lectures, burbles about its knowledge cutoff, over-discloses that it's an AI, etc.</p>
+</li>
+</ul>
+<p>This is mine:</p>
+<h3 id="core-development-guidelines">Core Development Guidelines</h3>
+<ul>
+<li>
+<p>Keep changes focused to a few areas at a time</p>
+</li>
+<li>
+<p>Don't make sweeping changes unrelated to the task</p>
+</li>
+<li>
+<p>Don't delete code or tests without asking first</p>
+</li>
+<li>
+<p>Don't remove comments or commented-out code unless explicitly asked</p>
+</li>
+<li>
+<p>Don't commit to Git without asking</p>
+</li>
+<li>
+<p>Never run major destructive operations (e.g. dropping tables) without asking first</p>
+</li>
+</ul>
+<h3 id="code-style-and-testing">Code Style and Testing</h3>
+<ul>
+<li>
+<p>In Python, use lower-case types for type-hinting, e.g. <code>list</code> instead of <code>List</code></p>
+</li>
+<li>
+<p>Run tests often, especially after completing work or adding tests</p>
+</li>
+<li>
+<p>When running lots of tests, consider using Pytest's <code>-x</code> and <code>--lf</code> flags</p>
+</li>
+<li>
+<p>Make one change at a time for complex tasks, verify it works before proceeding</p>
+</li>
+</ul>
+<h3 id="communication">Communication</h3>
+<ul>
+<li>
+<p>If you notice a problem or see a better way, discuss before proceeding</p>
+</li>
+<li>
+<p>If getting stuck in a rabbithole, stop, review, and discuss</p>
+</li>
+<li>
+<p>Ask if you have questions</p>
+</li>
+<li>
+<p>Suggest a Git commit message when finishing discrete work or needing input</p>
+</li>
+</ul>
+<h2 id="appendix-b-example-runbook-for-migrations">Appendix B: Example Runbook for Migrations</h2>
+<h3 id="database-migrations-guide">Database Migrations Guide</h3>
+<p>This guide documents our best practices and lessons learned for managing database migrations. For basic migration commands, see scripts/README.md.</p>
+<h3 id="core-principles">Core Principles</h3>
+<ol>
+<li><strong>Safety First</strong></li>
+</ol>
+<ul>
+<li>
+<p>Never drop tables unless explicitly requested</p>
+</li>
+<li>
+<p>Never run migrations on production unless explicitly requested</p>
+</li>
+<li>
+<p>Always wrap migrations in <code>database.atomic()</code> transactions</p>
+</li>
+<li>
+<p>Try to write rollback functions, or if that's going to be very complicated then ask the user</p>
+</li>
+<li>
+<p>Check with the user that they've backed up the database first - see backup_proxy_production_db.sh</p>
+</li>
+</ul>
+<ol start="2">
+<li><strong>Test-Driven Development</strong></li>
+</ol>
+<ul>
+<li>
+<p>Write <code>test_migrations.py</code> tests first</p>
+</li>
+<li>
+<p>Test migrations locally before deploying to production</p>
+</li>
+<li>
+<p>See <code>test_lemma_completeness_migration()</code> in <code>test_migrations.py</code> for an example</p>
+</li>
+</ul>
+<ol start="3">
+<li><strong>PostgreSQL Features</strong></li>
+</ol>
+<ul>
+<li>
+<p>Use PostgreSQL-specific features when they provide clear benefits</p>
+</li>
+<li>
+<p>For complex operations, use <code>database.execute_sql()</code> with raw PostgreSQL syntax</p>
+</li>
+<li>
+<p>Take advantage of PostgreSQL's JSONB fields, array types, and other advanced features</p>
+</li>
+</ul>
+<h3 id="common-patterns">Common Patterns</h3>
+<h4 id="adding-required-columns">Adding Required Columns</h4>
+<p>Three-step process to avoid nulls (see <code>migrations/004_fix_sourcedir_language.py</code>):</p>
+<p>Make it required and remove default</p>
+<div class="codehilite"><pre><span></span><code>migrator.sql("ALTER TABLE table ALTER COLUMN new_field SET NOT NULL")
+migrator.sql("ALTER TABLE table ALTER COLUMN new_field DROP DEFAULT")
+</code></pre></div>
+<p>Fill existing rows</p>
+<div class="codehilite"><pre><span></span><code>database.execute_sql("UPDATE table SET new_field = 'value'")
+</code></pre></div>
+<p>Add column as nullable with a default value</p>
+<div class="codehilite"><pre><span></span><code>migrator.add_columns(
+    Model,
+    new_field=CharField(max_length=2, default="el"),
+)
+</code></pre></div>
+<h4 id="managing-indexes">Managing Indexes</h4>
+<p>Create new index:</p>
+<div class="codehilite"><pre><span></span><code>migrator.sql(
+    'CREATE UNIQUE INDEX new_index_name ON table (column1, column2);'
+)
+</code></pre></div>
+<p>Drop existing index if needed:</p>
+<div class="codehilite"><pre><span></span><code>migrator.sql('DROP INDEX IF EXISTS "index_name";')
+</code></pre></div>
+<h4 id="model-definitions-in-migrations">Model Definitions in Migrations</h4>
+<p>When using <code>add_columns</code> or <code>drop_columns</code>, define model classes in both <code>migrate</code> and <code>rollback</code> functions:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="n">BaseModel</span>(<span class="n">Model</span>):
+    <span class="n">created_at</span> = <span class="n">DateTimeField</span>()
+    <span class="n">updated_at</span> = <span class="n">DateTimeField</span>()
+
+<span class="k">class</span> <span class="n">MyModel</span>(<span class="n">BaseModel</span>):
+    <span class="n">field</span> = <span class="n">CharField</span>()
+
+    <span class="k">class</span> <span class="n">Meta:</span>
+        <span class="n">table_name</span> = <span class="s">"my_table"</span>
+
+<span class="c1"># Then use the model class, not string name:</span>
+<span class="n">migrator</span>.<span class="n">drop_columns</span>(<span class="n">MyModel</span>, [<span class="s">"field"</span>])
+</code></pre></div>
+<p>Note: No need to bind models to database - they're just used for schema definition.</p>
+<h3 id="best-practices">Best Practices</h3>
+<ol>
+<li><strong>Model Updates</strong></li>
+</ol>
+<ul>
+<li>
+<p>Always update <code>db_models.py</code> to match migration changes</p>
+</li>
+<li>
+<p>Keep model and migration in sync</p>
+</li>
+<li>
+<p>Add appropriate type hints and docstrings</p>
+</li>
+<li>
+<p>Make a proposal for which indexes (informed by how we're querying that model) we'll need, but check with the user first</p>
+</li>
+<li>
+<p>Wherever possible, use the Peewee-migrate existing tooling</p>
+</li>
+</ul>
+<ol start="2">
+<li><strong>Naming and Organization</strong></li>
+</ol>
+<ul>
+<li>
+<p>Use descriptive migration names</p>
+</li>
+<li>
+<p>Prefix with sequential numbers (e.g., <code>001_initial_schema.py</code>)</p>
+</li>
+<li>
+<p>One logical change per migration</p>
+</li>
+</ul>
+<ol start="3">
+<li><strong>Error Handling and Safety</strong></li>
+</ol>
+<ul>
+<li>
+<p>Use <code>database.atomic()</code> for transactions</p>
+</li>
+<li>
+<p>Handle database-specific errors</p>
+</li>
+<li>
+<p>Provide clear error messages</p>
+</li>
+</ul>
+<ol start="4">
+<li><strong>Documentation</strong></li>
+</ol>
+<ul>
+<li>
+<p>Document complex migrations</p>
+</li>
+<li>
+<p>Note any manual steps required</p>
+</li>
+<li>
+<p>Update this guide with new learnings</p>
+</li>
+</ul>
+<h3 id="superseding-migrations">Superseding Migrations</h3>
+<p>If a migration needs to be replaced:</p>
+<ol>
+<li>
+<p>Keep the old migration file but make it a no-op</p>
+</li>
+<li>
+<p>Document why it was superseded</p>
+</li>
+<li>
+<p>Reference the new migration that replaces it</p>
+</li>
+</ol>
+<p>See <code>migrations/002_add_sourcedir_language.py</code> for an example.</p>
+<h3 id="questions-or-improvements">Questions or Improvements?</h3>
+<ul>
+<li>
+<p>If you see problems or a better way, discuss before proceeding</p>
+</li>
+<li>
+<p>If you get stuck, stop and review, ask for help</p>
+</li>
+<li>
+<p>Update this guide if you discover new patterns or best practices</p>
+</li>
+<li>
+<p>Always ask if you have questions!</p>
+</li>
+</ul>
+<h1 id="appendix-c-project-planning-guide">Appendix C: Project Planning Guide</h1>
+<h2 id="structure-of-document">Structure of document</h2>
+<p>Include 3 sections:</p>
+<ul>
+<li>
+<p>Goals, problem statement, background</p>
+</li>
+<li>
+<p>Progress so far</p>
+</li>
+<li>
+<p>Future steps</p>
+</li>
+</ul>
+<h3 id="goals-problem-statement-background">Goals, problem statement, background</h3>
+<ul>
+<li>
+<p>Clear problem/goal at top, with enough context/description to pick up where we left off</p>
+</li>
+<li>
+<p>Example: "Migrate phrases from JSON to relational DB to enable better searching and management"</p>
+</li>
+</ul>
+<h3 id="progress-so-far">Progress so far</h3>
+<ul>
+<li>
+<p>What are we working on at the moment (in case we get interrupted and need to pick things back up later)</p>
+</li>
+<li>
+<p>Keep updated after each change</p>
+</li>
+</ul>
+<h3 id="future-steps">Future steps</h3>
+<ul>
+<li>
+<p>Most immediate or important tasks first</p>
+</li>
+<li>
+<p>Label the beginning of each action section with TODO, DONE, SKIP, etc</p>
+</li>
+<li>
+<p>Include subtasks with clear acceptance criteria</p>
+</li>
+<li>
+<p>Refer to specific files/functions to so it's clear exactly what needs to be done</p>
+</li>
+</ul>
+<h2 id="key-tactics-used">Key Tactics Used</h2>
+<ol>
+<li><strong>Vertical Slicing</strong></li>
+</ol>
+<ul>
+<li>
+<p>Implement features end-to-end (DB → API → UI)</p>
+</li>
+<li>
+<p>Complete one slice before starting next</p>
+</li>
+<li>
+<p>Example: Phrase feature implemented DB model → migration → views → tests</p>
+</li>
+</ul>
+<ol start="2">
+<li><strong>Test Coverage</strong></li>
+</ol>
+<ul>
+<li>
+<p>Write tests before implementation</p>
+</li>
+<li>
+<p>Test at multiple levels (unit, integration, UI)</p>
+</li>
+<li>
+<p>Run tests after each change</p>
+</li>
+<li>
+<p>Add edge case tests</p>
+</li>
+<li>
+<p>Every so often run all the tests, but focus on running &amp; fixing a small number of tests at a time for speed of iteration</p>
+</li>
+</ul>
+<ol start="3">
+<li><strong>Progressive Enhancement</strong></li>
+</ol>
+<ul>
+<li>
+<p>Start with core functionality, the simplest version</p>
+</li>
+<li>
+<p>Add features/complexity incrementally, checking with me first</p>
+</li>
+<li>
+<p>Example sequence:</p>
+<ol>
+<li>
+<p>Basic DB models</p>
+</li>
+<li>
+<p>Migration scripts</p>
+</li>
+<li>
+<p>UI integration</p>
+</li>
+<li>
+<p>Polish and edge cases</p>
+</li>
+</ol>
+</li>
+</ul>
+<ol start="4">
+<li><strong>Completed Tasks History</strong></li>
+</ol>
+<ul>
+<li>Keep list of completed work (labelled DONE)</li>
+</ul>
+<ol start="5">
+<li><strong>Clear Next Steps</strong></li>
+</ol>
+<ul>
+<li>
+<p>Order the tasks in the order you want to do them, so the next task is always the topmost task that hasn't been done</p>
+</li>
+<li>
+<p>Break large tasks into smaller pieces</p>
+</li>
+</ul>
+
+
+<br />
+<hr />
+
+
+
+<nav class="sibling-nav sibling-nav-bottom" aria-label="Page navigation">
+    
+    <a class="prev" href="/blog/podcast-episode-on-the-neuroscience-of-workplace-learning-mdm"
+        title="Previous — Podcast episode on the neuroscience of workplace learning — sorted by date (newest first)">&#x2190;</a>
+    
+    
+    <a class="up" href="/blog/"
+        title="Up — Blog">&#x2191;</a>
+    
+    
+    <a class="next" href="/blog/ease-value-mdm"
+        title="Next — Ease/value ranking — sorted by date (newest first)">&#x2192;</a>
+    
+</nav>
+
+
+
+        
+
+
+
+        
+
+<h1>Belongs to these <a href="/tag">tags</a></h1>
+<ul>
+    
+    <li><a href="/tag/ai-assisted.html">AI-assisted</a></li>
+    
+    <li><a href="/tag/programming.html">Programming</a></li>
+    
+    <li><a href="/tag/artificial-intelligence.html">Artificial Intelligence</a></li>
+    
+    <li><a href="/tag/productivity.html">Productivity</a></li>
+    
+    <li><a href="/software/index.html">Software</a></li>
+    
+</ul>
+
+
+
+        
+
+
+
+        
+
+
+
+    </div>
+    <footer>
+        <div class="bottom_nav">
+            
+
+            
+
+<p>
+    <i>
+        <span title="The date this page was first made public.">First published</span>: 2025-Jan-08
+    </i>
+</p>
+
+
+<p>
+    <i>
+        <span
+            title="The most recent time the content was edited (which could be before the page was actually published).">Last
+            updated</span>: 2025-Aug-17
+    </i>
+</p>
+
+
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+
+    <title>
+
+How to write good software faster (we spend 90% of our time debugging) -
+
+Greg Detre
+</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="gdwebgen" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Greg Detre's personal website" />
+    
+    
+    <meta property="og:site_name" content="Greg Detre" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:site" content="Greg Detre" />
+    <link rel="stylesheet" href="/static/css/base.css">
+    
+<link rel="canonical" href="https://www.gregdetre.com/blog/how-to-write-good-software-faster-we-spend-90-of-our-time-debugging-mdm">
+
+<meta name="description" content="If we spend 90% of our time debugging, learning to type twice as fast only speeds up development by a few percent—focus on writing fewer bugs instead." />
+<meta property="og:description" content="If we spend 90% of our time debugging, learning to type twice as fast only speeds up development by a few percent—focus on writing fewer bugs instead." />
+<meta name="twitter:description" content="If we spend 90% of our time debugging, learning to type twice as fast only speeds up development by a few percent—focus on writing fewer bugs instead." />
+
+<meta property="og:title" content="How to write good software faster (we spend 90% of our time debugging)" />
+<meta name="twitter:title" content="How to write good software faster (we spend 90% of our time debugging)" />
+<meta property="og:url" content="https://www.gregdetre.com/blog/how-to-write-good-software-faster-we-spend-90-of-our-time-debugging-mdm" />
+<meta name="twitter:card" content="summary" />
+
+</head>
+
+<body>
+
+    
+    <div id="wide-img-header">
+        
+        <a href="/wide_img_header/IMG_5253.jpg">
+            <img src="/wide_img_header/IMG_5253_sm.jpg" />
+        </a>
+        
+    </div>
+    
+
+    
+<nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+        
+        
+        <li class="breadcrumb-item" title="Greg Detre">
+            
+            <a href="/">Greg Detre</a>
+            
+        </li>
+        
+        
+        
+        <li class="breadcrumb-item" title="Blog">
+            
+            <a href="/blog/">Blog</a>
+            
+        </li>
+        
+        
+        
+        <li class="breadcrumb-item" title="How to write good software faster (we spend 90% of our time debugging)">
+            
+            <a href="/blog/how-to-write-good-software-faster-we-spend-90-of-our-time-debugging-mdm">How To Write Good Software ...</a>
+            
+        </li>
+        
+        
+    </ol>
+</nav>
+
+
+    
+    <div class="nav_menu" <p>
+        
+        <a href="/about">About</a>
+        
+        <a href="/blog">Blog</a>
+        
+        <a href="/consulting">Consulting</a>
+        
+        </p>
+    </div>
+    
+
+    <div id="main">
+        
+
+<nav class="sibling-nav sibling-nav-top" aria-label="Page navigation">
+    
+    <a class="prev" href="/blog/what-is-overfitting-mdm"
+        title="Previous — What is Overfitting? — sorted by date (newest first)">&#x2190;</a>
+    
+    
+    <a class="up" href="/blog/"
+        title="Up — Blog">&#x2191;</a>
+    
+    
+    <a class="next" href="/blog/how-to-know-if-your-recommendations-algorithm-is-actually-doing-a-good-job-mdm"
+        title="Next — How to know if your recommendations algorithm is actually doing a good job — sorted by date (newest first)">&#x2192;</a>
+    
+</nav>
+
+
+<hr />
+
+
+<h1>How to write good software faster (we spend 90% of our time debugging)</h1>
+
+
+
+
+<p>Years ago, I was eating dinner with relatives when one of them asked, 'So... what did you do today?'. When I thought back, I realised I’d spent the better part of my afternoon puzzling over a glitch in my code. I’d eventually traced it to a colon that should have been a comma (Matlab cares about that sort of thing). When I realised just how much time I’d spent on something so trivial, I muttered a sheepish response, stuffed another bite of lasagne in my mouth, and tried not to think about how cruel a mistress code can be.</p>
+<p><strong>We spend 90% of our time debugging.</strong> Learning to type twice as fast will only speed up your overall development time by a few percent. So if you want to speed up how fast you develop finished software, focus your efforts on reducing time spent debugging.</p>
+<p>But of course it’s so tempting to code first and ask questions later. Hammering away on the keyboard into the greenfield of a blank IDE screen is incredibly satisfying - it <em>feels</em> like making rapid progress.</p>
+<p>But efforts to speed up how fast you write the code in the first place will have much less impact than finding ways to write fewer bugs or find and fix them faster. So let’s first understand the claim that the bulk of our programming effort goes into debugging. Then let’s think about how this should change the way we write software.</p>
+<h2 id="what-do-we-mean-by-debugging">What do we mean by ‘debugging’?</h2>
+<p>By debugging, I’m talking about investigating and addressing violated expectations[1], that is, time spent trying to understand why things aren’t working as you think they should and then acting on that.</p>
+<h2 id="do-we-really-spend-that-much-of-our-time-debugging">Do we really spend <em>that</em> much of our time debugging?</h2>
+<p>Even though the machine does exactly what we tell it, we are surprised over and over when we write software.</p>
+<p>That we spend the majority of our time debugging has been so consistently true, watching my own and hundreds of other programmers, that I’ve come to treat it as an axiom. From the literature, Glass (2002) notes that “error removal is the most time-consuming phase of the lifecycle”.</p>
+<p>Moreover, <strong>not all time spent debugging is equal.</strong> Finding and fixing a bug before the code is live is cheap in every sense: it’s probably quick to fix because you still have the full system in your mind, and you remember how it all works. There’s not much reputational cost. It’s probably still within working hours. It doesn’t affect the roadmap, user experience, no decisions have been made on the back of it, nor money lost.</p>
+<p>In contrast, a bug in an important algorithm that’s been running for a year is expensive in every way. It might take ages to even figure out when the bug was introduced, let alone the cause of it. You may not be able to use your debugger on the production server, so you’re relying on spotty logs. Time spent fire-fighting is demoralising, and can be high stress - big bugs always seem to show up the night before an investor meeting. They can be more complex to fix - perhaps you need downtime, a custom deployment, or reprocessing a year’s worth of data from backups.</p>
+<blockquote>
+<p>Time spent fire-fighting is demoralising, and can be high stress - big bugs always seem to show up the night before an investor meeting.</p>
+</blockquote>
+<p>In other words, <strong>bugs cost much more as you get further towards production</strong>. It could take literally weeks of investigation for a complex or high-stakes bug.</p>
+<p>When we talk about debugging time, it’s easy to ignore these kind of outliers, to put them in a different category. But they’re not. <strong>They should be considered part of the development time for that piece of work.</strong> Time spent debugging has a long tail. I wouldn’t be surprised to find that there’s some kind of exponential distribution, like earthquake magnitudes.</p>
+<p>In other words, costly bugs may be rare, but when you amortise them over multiple pieces of work, they significantly drive up the proportion of overall time spent debugging. When you add it all up over the lifecycle of your code, debugging ends up taking up much more time than we imagine, and it’s usually not enjoyable time.</p>
+<h2 id="so-how-can-we-spend-less-time-debugging">So how can we spend less time debugging?</h2>
+<p>To reduce the time we spend debugging, we should focus our efforts on introducing fewer bugs in the first place, finding them sooner, identifying their bounds correctly, and fixing them well.</p>
+<h3 id="introduce-fewer-bugs-in-the-first-place">Introduce fewer bugs in the first place</h3>
+<ul>
+<li>
+<p>Focus your best efforts on the bits of the system that are either complex or important.</p>
+</li>
+<li>
+<p>Write good automated tests. Preferably before you write the code. Write a range of tests - from small-scale unit tests that target a single function, through to large-scale integration tests that check the behaviour of the whole system.</p>
+</li>
+<li>
+<p>Pair program.</p>
+</li>
+<li>
+<p>Design. At the very least, talk things over with a colleague beforehand.</p>
+</li>
+<li>
+<p>Code reviews. Like design sessions, these can be very valuable in many ways. But your reviewer almost certainly won’t run the code, and probably can’t inspect every line with a fine-toothed comb.</p>
+</li>
+<li>
+<p>Create great fake datasets. See: <em>How to write scientific software that’s right</em></p>
+</li>
+</ul>
+<h3 id="find-bugs-early-and-quickly">Find bugs early and quickly</h3>
+<p><strong>Aim for a debug cycle time of less than a second</strong></p>
+<ul>
+<li>
+<p>How long does it take you to run your system and determine if it’s working? That’s your debug cycle time. Aim for a debug cycle time of under a second.</p>
+</li>
+<li>
+<p>Even if it takes ten seconds, that’s enough to disrupt your flow, send you off to the coffee machine or your website-vice of choice, and fritter away minutes and precious mental context.</p>
+</li>
+<li>
+<p>If your debugging cycle is slower than that, then you’ll have dramatically fewer bites at the apple in a given day, and every debugging exercise will be a marathon - improving this should be your top priority.</p>
+</li>
+<li>
+<p>Let’s say you’re working on some complicated data analysis or model that takes hours to run. You still have a lot of moves you can make to reduce your cycle time by a few orders of magnitude. And truly, if you don’t reduce your cycle time, I’ll bet any money that this project will drag on and be a nightmare. See: <em>How to unit test in data science</em></p>
+</li>
+</ul>
+<p><strong>Sharpen your axe</strong></p>
+<ul>
+<li>
+<p>Choose good tools, and get to know them really well. If your main tool for debugging is print statements, you’re really missing a trick. Ask productive people about their development environment choices, and get to know it backwards, especially the debugging tools.</p>
+</li>
+<li>
+<p>As a bare minimum, you shouldn’t have to think when you want to step through line by line, in and out of functions, and inspect variables.</p>
+</li>
+<li>
+<p>Make sure you can automatically drop into the debugger at a breakpoint, when certain conditions are met, or whenever there’s an error.</p>
+</li>
+<li>
+<p>If you feel nervous making changes to your code because you’re worried about introducing subtle bugs that you won’t notice, then you probably need more automated tests.</p>
+</li>
+</ul>
+<p><strong>Find bugs upstream (further up the call stack)</strong></p>
+<ul>
+<li>
+<p>It can take a long time to fix things if you don’t know where to look for the problem, or worse still, if you’re looking in the wrong place. Often, the error manifests in one place, but the underlying cause happened much further upstream. By upstream, I mean further up in the call stack (e.g. the function that called the function that called this one), or backwards in the code base (lines of code that were executed earlier). If you could have caught the problem right as it happened, it would have been much more obvious what the problem was, and much quicker to solve.</p>
+</li>
+<li>
+<p>Indeed, this is a big argument for unit tests. If you have good tests, they’ll fail as you’re changing things, you’ll notice immediately, and that usually gives you a big clue about where to look.</p>
+</li>
+<li>
+<p>Time-travel debugging allows you to run the debugger forwards and backwards, like scrubbing in a video. I’ve never used one, but this seems like it could be a big help, especially if you find yourself re-running the debugger over and over, each time with earlier and earlier breakpoints.</p>
+</li>
+</ul>
+<p><strong>Static typing</strong></p>
+<ul>
+<li>
+<p>Until recently, my last 15 years of programming had all been with dynamic languages. I felt that they helped me write fewer lines of code, build faster, and avoid extra syntactic complexity. I did have some quiet misgivings though, especially about type errors that had to be laboriously traced upstream, and consequently the amount of energy spent adding type assertions to unit tests to try and catch them.</p>
+</li>
+<li>
+<p>A brief foray into C# convinced me that I had indeed been missing a trick. I loved being able to specify the types of the inputs and outputs for a function. If someone feeds in a string that was supposed to be an integer, I want things to fail loudly and immediately. Better still, I want my IDE to look at me askance with a squiggly red line. This reduced the debug time for trivial bugs to milliseconds - I wouldn’t even have to run the unit tests to notice the problem. When I went back to Python, I upgraded my IDE and configured it to treat type hinting warnings as errors.</p>
+</li>
+</ul>
+<p><strong>Improve your logging</strong></p>
+<ul>
+<li>
+<p>This is most valuable when you’re trying to debug a problem in production that you can’t easily reproduce. You’re probably doomed without good logging. Remember that debugging problems in production will usually involve higher stakes, stress and urgency, and less information - so a little bit of time spent writing better logging could really pay off.</p>
+</li>
+<li>
+<p>Improve your error messages. Error messages can be your best friend, but bad ones can be uselessly opaque or even misdirect you. You understand the system best at the time you’re writing the code, and so that’s when you can write the best error messages. Your future self or future colleague will thank you.</p>
+</li>
+</ul>
+<p><strong>Be a scientist</strong></p>
+<ul>
+<li>
+<p>Identify the bounds of the bug. Collect data to determine the circumstances when it does and doesn’t occur. Form a hypothesis about what’s causing it that’s consistent with the data.</p>
+</li>
+<li>
+<p>Figure out a way to test that hypothesis as narrowly as possible (e.g. if the problem is with the caching, then it should go away when I read directly from the database).</p>
+</li>
+<li>
+<p>If your hypothesis is wrong, update your theory, generate new hypotheses that are consistent, test them.</p>
+</li>
+<li>
+<p>Take good notes. Zero-in on things systematically.</p>
+</li>
+</ul>
+<h3 id="fix-bugs-well">Fix bugs “well”</h3>
+<p>If you’ve found the problem early, identified its bounds correctly, and tested your hypothesis successfully, then fixing it will hopefully be the easy part.</p>
+<p><strong>When you’ve found a bug, don’t just rush to fix it. First, introduce a new test that isolates it. Make sure that the test fails. Fix the bug. Make sure that the test now passes.</strong></p>
+<p>It’s important to confirm that the test fails before you fix it, otherwise you won’t notice if you’ve written a crappy test. In such cases you may think your test captures the bug, but perhaps the test isn’t quite right or isn’t even running at all! If you only confirm that it passes <em>after</em> you think you’ve fixed things, you may not realise that your test was inadequate and maybe also your fix.</p>
+<p><strong>Don’t create a new bug when you fix the old one.</strong> Yeah, I don’t know how to avoid doing that, but try not to.</p>
+<h2 id="to-sum-it-up">To sum it up:</h2>
+<ul>
+<li>
+<p>If we spend the majority of our programming time and effort on debugging, we should focus our efforts on speeding up our debugging (rather than trying to write code faster).</p>
+</li>
+<li>
+<p>Fortunately, there are lots of ways in which we can debug more effectively - we can introduce fewer bugs in the first place, find them sooner, identify their bounds correctly, and fix them “well” by introducing tests that isolate them.</p>
+</li>
+</ul>
+<p><strong>Footnotes:</strong></p>
+<p>[1] Glass (2002) refers to ‘error removal’, which is similar but too narrow for my tastes. The investigative aspect of debugging is often the hard and uncertain part - we can all think of a time we spent two hours tracking down the source of a problem, and then fixed it in under a minute once we found it. Indeed the fruits of that investigation don’t always lead to action. We may put in a lot of effort to understand an error, only to decide at the end of the debugging investigation that it’s too much hassle to fix. Or indeed, we might work hard to figure out why the program is behaving as it is, only to eventually realise that it’s correct and our expectations were wrong - i.e. there was no error to remove. That still counts as debugging to me, since things weren’t working as I thought they should. So debugging is <em>investigating and addressing violated expectations</em>, a superset of error removal.</p>
+<h2 id="resources">Resources</h2>
+<ul>
+<li>
+<p><a href="http://kev.inburke.com/kevin/the-best-ways-to-find-bugs-in-your-code/?ref=makingdatamistakes.com">http://kev.inburke.com/kevin/the-best-ways-to-find-bugs-in-your-code/</a></p>
+</li>
+<li>
+<p><a href="/2004/09/07/philosophy-as-debugging/?ref=makingdatamistakes.com">https://blog.gregdetre.co.uk/2004/09/07/philosophy-as-debugging/</a></p>
+</li>
+<li>
+<p>http://www.dc.uba.ar/materias/plp/cursos/material/programmingAsTheoryBuilding</p>
+</li>
+</ul>
+
+
+<br />
+<hr />
+
+
+
+<nav class="sibling-nav sibling-nav-bottom" aria-label="Page navigation">
+    
+    <a class="prev" href="/blog/what-is-overfitting-mdm"
+        title="Previous — What is Overfitting? — sorted by date (newest first)">&#x2190;</a>
+    
+    
+    <a class="up" href="/blog/"
+        title="Up — Blog">&#x2191;</a>
+    
+    
+    <a class="next" href="/blog/how-to-know-if-your-recommendations-algorithm-is-actually-doing-a-good-job-mdm"
+        title="Next — How to know if your recommendations algorithm is actually doing a good job — sorted by date (newest first)">&#x2192;</a>
+    
+</nav>
+
+
+
+        
+
+
+
+        
+
+<h1>Belongs to these <a href="/tag">tags</a></h1>
+<ul>
+    
+    <li><a href="/tag/programming.html">Programming</a></li>
+    
+    <li><a href="/tag/bugs-testing.html">Bugs & testing</a></li>
+    
+    <li><a href="/tag/productivity.html">Productivity</a></li>
+    
+    <li><a href="/software/index.html">Software</a></li>
+    
+    <li><a href="/tag/tips-tricks.html">Tips & tricks</a></li>
+    
+</ul>
+
+
+
+        
+
+
+
+        
+
+
+
+    </div>
+    <footer>
+        <div class="bottom_nav">
+            
+
+            
+
+<p>
+    <i>
+        <span title="The date this page was first made public.">First published</span>: 2020-Aug-10
+    </i>
+</p>
+
+
+<p>
+    <i>
+        <span
+            title="The most recent time the content was edited (which could be before the page was actually published).">Last
+            updated</span>: 2025-Aug-17
+    </i>
+</p>
+
+
+        </div>
+    </footer>
+</body>
+
+</html>

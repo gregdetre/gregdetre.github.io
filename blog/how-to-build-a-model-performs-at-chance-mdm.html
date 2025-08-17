@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+
+    <title>
+
+How to build a model that performs at chance -
+
+Greg Detre
+</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="gdwebgen" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Greg Detre's personal website" />
+    
+    
+    <meta property="og:site_name" content="Greg Detre" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:site" content="Greg Detre" />
+    <link rel="stylesheet" href="/static/css/base.css">
+    
+<link rel="canonical" href="https://www.gregdetre.com/blog/how-to-build-a-model-performs-at-chance-mdm">
+
+<meta name="description" content="I shuffled the labels and ran my model on scrambled data—it still performed above chance, revealing that my canary had died and I was peeking." />
+<meta property="og:description" content="I shuffled the labels and ran my model on scrambled data—it still performed above chance, revealing that my canary had died and I was peeking." />
+<meta name="twitter:description" content="I shuffled the labels and ran my model on scrambled data—it still performed above chance, revealing that my canary had died and I was peeking." />
+
+<meta property="og:title" content="How to build a model that performs at chance" />
+<meta name="twitter:title" content="How to build a model that performs at chance" />
+<meta property="og:url" content="https://www.gregdetre.com/blog/how-to-build-a-model-performs-at-chance-mdm" />
+<meta name="twitter:card" content="summary" />
+
+</head>
+
+<body>
+
+    
+    <div id="wide-img-header">
+        
+        <a href="/wide_img_header/IMG_5253.jpg">
+            <img src="/wide_img_header/IMG_5253_sm.jpg" />
+        </a>
+        
+    </div>
+    
+
+    
+<nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+        
+        
+        <li class="breadcrumb-item" title="Greg Detre">
+            
+            <a href="/">Greg Detre</a>
+            
+        </li>
+        
+        
+        
+        <li class="breadcrumb-item" title="Blog">
+            
+            <a href="/blog/">Blog</a>
+            
+        </li>
+        
+        
+        
+        <li class="breadcrumb-item" title="How to build a model that performs at chance">
+            
+            <a href="/blog/how-to-build-a-model-performs-at-chance-mdm">How To Build A Model That P...</a>
+            
+        </li>
+        
+        
+    </ol>
+</nav>
+
+
+    
+    <div class="nav_menu" <p>
+        
+        <a href="/about">About</a>
+        
+        <a href="/blog">Blog</a>
+        
+        <a href="/consulting">Consulting</a>
+        
+        </p>
+    </div>
+    
+
+    <div id="main">
+        
+
+<nav class="sibling-nav sibling-nav-top" aria-label="Page navigation">
+    
+    <a class="prev" href="/blog/how-to-find-a-job-through-a-recruiter-mdm"
+        title="Previous — How to find a job through a recruiter — sorted by date (newest first)">&#x2190;</a>
+    
+    
+    <a class="up" href="/blog/"
+        title="Up — Blog">&#x2191;</a>
+    
+    
+    <a class="next" href="/blog/premortem-mdm"
+        title="Next — Running a Premortem — sorted by date (newest first)">&#x2192;</a>
+    
+</nav>
+
+
+<hr />
+
+
+<h1>How to build a model that performs at chance</h1>
+
+
+
+
+<p>I’m going to tell you about a horrible screwup. Not my first and not my last, but a happy one, because although it was excruciating it was also instructive.</p>
+<h1 id="first-though-excruciating">First though, excruciating</h1>
+<p>Early in my career as a graduate student, we were developing methods to ‘read people’s minds’, by applying machine learning to data from fMRI brain images.</p>
+<p>‌‌In the very first couple of months working on this, it seemed like we were making progress on every problem we tried. We were routinely getting way above chance - say, 80% on a 50-50 classification. Woohoo! We were getting more and more ambitious. I was playing with a dataset of people looking at faces while having their brain scanned, and I was trying to train a classifier to detect whether they were looking at a male or a female face. It was going well. Because, I had deduced, I’m a badass.</p>
+<p>‌‌I was in my dorm room at 11pm, and I just happened to be looking at the data preparation. At first I felt puzzled as I struggled to understand my own code, and then my stomach dropped as I realised that instead of labelling the data with the gender of the face, I was labelling according to whether a row was even- or odd-numbered. It was bad enough to discover that the classifier’s above-chance performance was on the wrong problem. It was much worse to realise that it was performing above chance when there should have been no signal in the data. I could think of no reason whatsoever that even- and odd-numbered rows should consistently give rise to different and discriminable brain states.</p>
+<p>‌‌So I fixed the code to label the trials correctly, by the gender of the face being viewed, and my classifier’s performance dropped off a cliff.</p>
+<p>‌‌My next vivid memory was in my advisor’s office the next day, feeling mortified as I explained that the results we’d been getting weren’t real, and that it was due to a bug in my code. Fortunately, I had the best PhD advisor you could ask for, and after sharing the disappointment, he gave me a pep talk and we spent the rest of the time discussing what might be going on. Even now, when someone comes to me with a screw-up, I try try try to remember how he helped transmute my paralysing guilt into resolve and growth, so I can do the same for them. So that was the first lesson.</p>
+<h1 id="i-dont-want-to-just-fix-it-i-want-to-make-sure-i-can-never-make-the-mistake-again">I don’t want to just fix it. I want to make sure I can never make the mistake again</h1>
+<p>Maybe some of you have already guessed the mistake. We were <em>peeking</em> - allowing information from the test set to leak into training. At this moment, you may be about to stop reading in contempt. <em>Everybody</em> knows not to train on your test data - what amateurs!</p>
+<p>But I knew that at the time. Or at least I thought I did. We were carefully cross-validating (aka ‘leave one out’), so the classifier algorithm was never trained on our test data. However, the problem was that our pre-processing and feature selection phase took ages to run, and so we were reusing the results of that pre-processing and feature selection - in other words, we were running the feature selection on the <em>whole</em> dataset once, before the cross-validation loop. Even as I realised this mistake, I was surprised by just how big a difference that made - it was enough to push performance spuriously up from chance (50%) to over 80% on data with absolutely no signal.</p>
+<p>Fixing that was easy enough. But I couldn’t help but think that I’d had a lucky escape - we hadn’t published or even publicised our results widely yet. I was motivated and tried to be careful, and yet I had made two potentially catastrophic mistakes: a trivial one (the programming bug in how I labelled the trials), which exposed a deeper one (the cross-validation setup). I wanted to figure out how to avoid making either ever again, and I didn’t trust myself to transform into a permanently smarter or more careful person through force of will.</p>
+<p>That shame and determination fuelled a background quest to learn everything I could about software engineering best practices, automated testing, and techniques for minimising programming defects, especially in scientific software. Those measures would help with the programming bugs, and that’s another story.</p>
+<p>But what about the deeper cross-validation/peeking bug? Maybe you’re thinking that it’s an elementary mistake that no one makes any more - certainly not one that <em>you</em> would make… Well, I’ve seen <em>two</em> separate instances of peeking in industry in the last few years, in both cases when smart, motivated people wrote their own cross-validation code. And in the second case, the person insisted that there wasn’t a problem until we applied the canary method described below… which just goes to show that peeking can be subtle and fiendish, especially when you start dealing with nested cross-validations and other complexities.</p>
+<p>I concluded there are two moves you can make to ensure you never, ever fall prey to peeking.</p>
+<h2 id="use-a-framework">Use a framework</h2>
+<p>First of all, use a battle-hardened, prescriptive, open source framework, like <a href="https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html?ref=makingdatamistakes.com">scikit-learn’s Pipeline</a>. That makes it difficult to do the wrong thing. There are very few cases where it’s a good idea to write your own cross-validation code.‌‌</p>
+<p>Btw, in my defence, <em>scikit-learn</em> hadn’t yet been released at the time of this story. Indeed, I was writing in Matlab, and so we ended up writing a battle-hardened, prescriptive, open source framework ourselves, so that none of our colleagues would fall into the same trap (and to my knowledge no one using our framework ever did).</p>
+<h2 id="notice-if-the-canary-dies">Notice if the canary dies</h2>
+<p>The second thing you can do is to have a canary to take with you down to the data mines, a canary that will die if you do something stupid. Because I don’t trust myself to be perfectly smart or careful - so here’s how to construct that canary, in the form of a simple, brutish habit.</p>
+<p><em>When building a machine learning model, start by building a baseline random model that performs at chance</em>. If your random model performs above chance, your canary has died - <a href="https://www.youtube.com/watch?v=vZw35VUBdzo&amp;ref=makingdatamistakes.com">beautiful plumage, but he’s an ex-canary</a>. Now of course, it might just be a problem with your canary (e.g. a bug in your random model), <em>or</em> it might be a sign of a more subtle problem. But either way there’s no point doing anything else until you’ve got to the bottom of it.</p>
+<p><img alt="" src="/blog/makingdatamistakes/how-to-build-a-model-performs-at-chance-mdm/images/dead-canary.png"/></p>
+<p>To create a baseline random model, scramble your data, i.e. shuffle the labels as a very first step, before you feed the data into your cross-validation pipeline. This preserves the statistics of the dataset, but throws away all the information that relates the features to the labels. There will be no consistent difference between the ‘A’ and ‘B’ samples, and your classifier should be at chance when generalising to the test data.</p>
+<p>In the story above, this was the first thing I did after that first meeting with my advisor. I shuffled the labels. Then, I ran the pre-processing and feature selection, and then the cross-validated model training and testing, just as before. And, just as before, I got above-chance performance. On <em>scrambled</em> data. Dead canary, pointing to peeking as the culprit.</p>
+<p>As with unit testing, it’s not enough to fix the bug. You have to write your test, show that it fails, <em>now</em> fix the bug, and <em>then</em> show that the test passes. So, I then moved the feature selection inside the cross-validation loop and confirmed that performance on the scrambled data dropped to chance[<a href="https://www.makingdatamistakes.com/how-to-build-a-model-performs-at-chance/preprocessing-in-xval-loop">1</a>].</p>
+<p>For bonus points, write an automated test that runs routinely, confirming that you’re getting chance performance on scrambled data using your production model and pipeline. After all, it’s possible to introduce bugs late in the day, and simple, brutish and reliable habits win over trying to be permanently smart and careful.</p>
+<h1 id="appendix">Appendix</h1>
+<p>It’s worth noting that there might be multiple ways to build a random model.</p>
+<p>I favour the scrambling method because you can apply it in most circumstances without having to think too hard. As a bonus, you can use it to test your exact production model just by switching out the dataset.</p>
+<p>Alternatively, you can use a <a href="https://scikit-learn.org/stable/modules/generated/sklearn.dummy.DummyClassifier.html?ref=makingdatamistakes.com">'dummy' model</a>. Let’s say you’re measuring two-way classification accuracy on an unbalanced dataset, i.e. some labels are more common than others. You could build a random model that tosses a coin 50-50, or that tosses a biased coin matching the label proportions, or one that always answers with the most common label.</p>
+<p>Sometimes it’s helpful to keep all these random models as points of comparison, to help you diagnose what your real models are doing. But your main measure of chance is the best performance you can get on scrambled data. In this example, that would be the latter approach (always answer with the most common label).</p>
+<p>See:</p>
+<ul>
+<li><a href="https://machinelearningmastery.com/how-to-get-baseline-results-and-why-they-matter/?ref=makingdatamistakes.com">https://machinelearningmastery.com/how-to-get-baseline-results-and-why-they-matter/</a></li>
+</ul>
+<h1 id="footnotes">Footnotes</h1>
+<p>[1] In fact, I think we may have had to move all our pre-processing into the cross-validation loop, because occasionally even that can be a source of peeking (e.g. if you’re normalising with summary statistics). At least now we have a method of checking if it’s a problem.</p>
+
+
+<br />
+<hr />
+
+
+
+<nav class="sibling-nav sibling-nav-bottom" aria-label="Page navigation">
+    
+    <a class="prev" href="/blog/how-to-find-a-job-through-a-recruiter-mdm"
+        title="Previous — How to find a job through a recruiter — sorted by date (newest first)">&#x2190;</a>
+    
+    
+    <a class="up" href="/blog/"
+        title="Up — Blog">&#x2191;</a>
+    
+    
+    <a class="next" href="/blog/premortem-mdm"
+        title="Next — Running a Premortem — sorted by date (newest first)">&#x2192;</a>
+    
+</nav>
+
+
+
+        
+
+
+
+        
+
+<h1>Belongs to these <a href="/tag">tags</a></h1>
+<ul>
+    
+    <li><a href="/tag/machine-learning.html">Machine learning</a></li>
+    
+    <li><a href="/tag/fmri.html">fMRI</a></li>
+    
+    <li><a href="/tag/bugs-testing.html">Bugs & testing</a></li>
+    
+    <li><a href="/research/index.html">Research</a></li>
+    
+    <li><a href="/tag/cross-validation.html">Cross-validation</a></li>
+    
+</ul>
+
+
+
+        
+
+
+
+        
+
+
+
+    </div>
+    <footer>
+        <div class="bottom_nav">
+            
+
+            
+
+<p>
+    <i>
+        <span title="The date this page was first made public.">First published</span>: 2020-Feb-10
+    </i>
+</p>
+
+
+<p>
+    <i>
+        <span
+            title="The most recent time the content was edited (which could be before the page was actually published).">Last
+            updated</span>: 2025-Aug-17
+    </i>
+</p>
+
+
+        </div>
+    </footer>
+</body>
+
+</html>

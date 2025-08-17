@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+
+    <title>
+
+The Difference: Throughput vs Latency -
+
+Greg Detre
+</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="gdwebgen" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Greg Detre's personal website" />
+    
+    
+    <meta property="og:site_name" content="Greg Detre" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:site" content="Greg Detre" />
+    <link rel="stylesheet" href="/static/css/base.css">
+    
+<link rel="canonical" href="https://www.gregdetre.com/blog/throughput-vs-latency-mdm">
+
+<meta name="description" content="Speeding up a conveyor belt reduces latency; widening it increases throughput—but a wider, slow belt still takes ages for any single widget to traverse." />
+<meta property="og:description" content="Speeding up a conveyor belt reduces latency; widening it increases throughput—but a wider, slow belt still takes ages for any single widget to traverse." />
+<meta name="twitter:description" content="Speeding up a conveyor belt reduces latency; widening it increases throughput—but a wider, slow belt still takes ages for any single widget to traverse." />
+
+<meta property="og:title" content="The Difference: Throughput vs Latency" />
+<meta name="twitter:title" content="The Difference: Throughput vs Latency" />
+<meta property="og:url" content="https://www.gregdetre.com/blog/throughput-vs-latency-mdm" />
+<meta name="twitter:card" content="summary" />
+
+</head>
+
+<body>
+
+    
+    <div id="wide-img-header">
+        
+        <a href="/wide_img_header/IMG_5253.jpg">
+            <img src="/wide_img_header/IMG_5253_sm.jpg" />
+        </a>
+        
+    </div>
+    
+
+    
+<nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+        
+        
+        <li class="breadcrumb-item" title="Greg Detre">
+            
+            <a href="/">Greg Detre</a>
+            
+        </li>
+        
+        
+        
+        <li class="breadcrumb-item" title="Blog">
+            
+            <a href="/blog/">Blog</a>
+            
+        </li>
+        
+        
+        
+        <li class="breadcrumb-item" title="The Difference: Throughput vs Latency">
+            
+            <a href="/blog/throughput-vs-latency-mdm">The Difference: Throughput ...</a>
+            
+        </li>
+        
+        
+    </ol>
+</nav>
+
+
+    
+    <div class="nav_menu" <p>
+        
+        <a href="/about">About</a>
+        
+        <a href="/blog">Blog</a>
+        
+        <a href="/consulting">Consulting</a>
+        
+        </p>
+    </div>
+    
+
+    <div id="main">
+        
+
+<nav class="sibling-nav sibling-nav-top" aria-label="Page navigation">
+    
+    <a class="prev" href="/blog/why-are-my-emails-being-sent-to-spam-a-guide-for-startups-using-gsuite-mdm"
+        title="Previous — Why are my emails being sent to spam - a guide for GSuite — sorted by date (newest first)">&#x2190;</a>
+    
+    
+    <a class="up" href="/blog/"
+        title="Up — Blog">&#x2191;</a>
+    
+    
+    <a class="next" href="/blog/data-scientists-obsolete-in-the-next-ten-years-mdm"
+        title="Next — Will data scientists become obsolete in the next 10 years? — sorted by date (newest first)">&#x2192;</a>
+    
+</nav>
+
+
+<hr />
+
+
+<h1>The Difference: Throughput vs Latency</h1>
+
+
+
+
+<h1 id="_1"></h1>
+<p>Imagine you have a conveyor belt in a factory that transports widgets from one end to the other:</p>
+<p><img alt="" src="/blog/makingdatamistakes/throughput-vs-latency-mdm/images/00JDKaDNDSNICCXQF60LfI0R_p_VxM0LqCNKV8z7XNVe-7Y2lKRgeorkQWuKQsiR9Hf_TDmJstO5-rHFV4nMMlAyB3YxmAKRiWaHn9rreHpVbfJYXPE3w7k30D2M1q1lhDGN2QFz"/></p>
+<p>If you speed it up, you’ll reduce (i.e. improve) <strong>latency</strong> (the time taken for a given widget to pass through):</p>
+<p><img alt="" src="/blog/makingdatamistakes/throughput-vs-latency-mdm/images/yTVCX7laLSFeZ9ZpiMS5Em4HcL7N1sSSlzXxL7vT3v5qYAyRMWV8E0e7FU2mBXD6pjlJTKAUqAChN_SCZ8T06t7okd87GHZuUTAoqiu-Tfmf-E11ao_OhmymPK4RpXH0_jNCxu0w"/></p>
+<p>If you widen it, you’ll increase <strong>throughput</strong> (the number of widgets per second that pass through) - but you <em>won’t</em> improve latency:</p>
+<p><img alt="" src="/blog/makingdatamistakes/throughput-vs-latency-mdm/images/B6wUKgRrnVgi6dnaNmIJhVSZ2ji0t5ZSXM0oPolH1ueUtHMZbJIy94ZnWbZxzlWAQesyBnyXc940V9gr7Ov6qyUerhdurqJ56nx9s79MN4CKz7eOxV9_Au-wukExEpcG3qhL3cew"/></p>
+<p>In the case of, say, website performance, latency corresponds to how quickly the page loads (aka ‘performance’). Throughput corresponds to how many users you can have hitting the site concurrently (aka ’scalability’).</p>
+<p>Both latency and throughput are important, but users of the system will probably notice latency most, since that’s what’s delaying their task being completed (e.g. page load time).</p>
+<p><strong>If you improve latency, you also improve throughput. However, improving throughput won’t improve latency.</strong> Imagine making a slow conveyor belt wider - a given widget will still take a long time to pass all the way along it.</p>
+<p><strong>It’s often easier to improve throughput than latency for a machine system.</strong> For example, scaling the number of webservers (or Spark job executors, or whatever) horizontally will improve throughput but may not improve latency at all.</p>
+<p>This distinction also ends up being important for <a href="https://www.makingdatamistakes.com/how-to-make-your-data-science-team-faster-and-speed-up-progress/"><strong>organisational</strong> as well as technical system performance reasons</a>.</p>
+<p><a href="https://www.makingdatamistakes.com/what-is-precision-vs-recall-and-why-should-i-care/"><em>This post is part of a series called</em> Data Science Explained <em>- where I explain Data Science concepts to managers and other non-technical people. Other posts in this series include:</em></a></p>
+<ul>
+<li>
+<p>What is Machine Learning?</p>
+</li>
+<li>
+<p><a href="https://www.makingdatamistakes.com/what-is-overfitting/">What is Overfitting</a>?</p>
+</li>
+</ul>
+
+
+<br />
+<hr />
+
+
+
+<nav class="sibling-nav sibling-nav-bottom" aria-label="Page navigation">
+    
+    <a class="prev" href="/blog/why-are-my-emails-being-sent-to-spam-a-guide-for-startups-using-gsuite-mdm"
+        title="Previous — Why are my emails being sent to spam - a guide for GSuite — sorted by date (newest first)">&#x2190;</a>
+    
+    
+    <a class="up" href="/blog/"
+        title="Up — Blog">&#x2191;</a>
+    
+    
+    <a class="next" href="/blog/data-scientists-obsolete-in-the-next-ten-years-mdm"
+        title="Next — Will data scientists become obsolete in the next 10 years? — sorted by date (newest first)">&#x2192;</a>
+    
+</nav>
+
+
+
+        
+
+
+
+        
+
+<h1>Belongs to these <a href="/tag">tags</a></h1>
+<ul>
+    
+    <li><a href="/tag/technology.html">Technology</a></li>
+    
+    <li><a href="/tag/definitions.html">Definitions</a></li>
+    
+    <li><a href="/tag/performance.html">Performance</a></li>
+    
+    <li><a href="/tag/system-design.html">System Design</a></li>
+    
+</ul>
+
+
+
+        
+
+
+
+        
+
+
+
+    </div>
+    <footer>
+        <div class="bottom_nav">
+            
+
+            
+
+<p>
+    <i>
+        <span title="The date this page was first made public.">First published</span>: 2020-Jul-13
+    </i>
+</p>
+
+
+<p>
+    <i>
+        <span
+            title="The most recent time the content was edited (which could be before the page was actually published).">Last
+            updated</span>: 2025-Aug-17
+    </i>
+</p>
+
+
+        </div>
+    </footer>
+</body>
+
+</html>
