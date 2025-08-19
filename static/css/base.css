@@ -10,10 +10,10 @@
     --highlight-colour-darker: #968BC3;
     --hover-highlight-colour: #ffcc66;
     /* --hover-highlight-colour: #B38CF8; */
-    --almost-black-background: #111;
-    --slight-hover-background-highlight: #111;
-    --almost-white: #eee;
-    --light-grey-text: #ccc;
+    --almost-black-background: #0f0f0f;
+    --slight-hover-background-highlight: #1a1a1a;
+    --almost-white: #f0f0f0;
+    --light-grey-text: #d0d0d0;
 
     /* Content width variables (5% wider than previous defaults)
        Centralized so line-length can be tuned site-wide from one place */
@@ -32,9 +32,9 @@ body {
     font-family: 'Garamond', 'Hoefler Text', 'Baskerville', 'Georgia', 'Palatino', 'Palatino Linotype', serif;
     /* rem means 'root em', i.e. fixed/absolute, whereas em is relative to the parent element */
     font-size: 1.2rem;
-    line-height: 1.5;
-    color: #eee;
-    /* Almost white text */
+    line-height: 1.6;
+    color: #f0f0f0;
+    /* Slightly warmer white */
     text-align: justify;
     background-color: var(--almost-black-background);
     /* background-color: red; */
@@ -76,8 +76,9 @@ h6 {
 
 h1 {
     font-weight: 500;
-    font-size: 2em;
+    font-size: 2.1em;
     margin-top: 50px;
+    letter-spacing: 0.02em;
 }
 
 .starred-badge {
@@ -217,7 +218,19 @@ li {
 
 #post-list li {
     position: relative;
-    padding-left: 20px;
+    padding-left: 24px;
+    margin-bottom: 1.2em;
+    padding-bottom: 0.8em;
+    border-bottom: 1px solid rgba(68, 68, 68, 0.2);
+    transition: border-color 0.3s ease;
+}
+
+#post-list li:hover {
+    border-bottom-color: rgba(199, 180, 248, 0.2);
+}
+
+#post-list li:last-child {
+    border-bottom: none;
 }
 
 #post-list li::before {
@@ -225,11 +238,13 @@ li {
     position: absolute;
     left: 0;
     color: var(--highlight-colour-darker);
+    font-size: 1.1em;
 }
 
 #post-list li[data-starred="1"]::before {
     content: "★";
     color: var(--highlight-colour);
+    font-size: 1.2em;
 }
 
 /* Special bullet/icon for external (redirecting) items */
@@ -248,22 +263,23 @@ li {
     /* Slightly brighter than before */
     opacity: 0.85;
     /* Increased from 0.7 */
-    transition: opacity 0.2s ease;
-    margin-top: 2px;
-    margin-left: 20px;
+    transition: all 0.3s ease;
+    margin-top: 4px;
+    margin-left: 24px;
 }
 
 /* Excerpt styling for list views */
 .excerpt {
     max-width: var(--excerpt-width);
-    margin: 8px auto 0 auto;
-    padding-left: 20px;
+    margin: 10px auto 0 auto;
+    padding-left: 24px;
     /* Align with tags */
-    font-size: 0.95em;
+    font-size: 0.92em;
     font-style: italic;
-    color: #d0d0d0;
+    color: #c8c8c8;
     /* Slightly brighter for better readability */
-    line-height: 1.4;
+    line-height: 1.5;
+    opacity: 0.9;
 }
 
 /* Compact inline dates for folder listings */
@@ -271,36 +287,88 @@ li {
     font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
     font-size: 0.75em;
     font-variant: all-small-caps;
-    color: #999;
-    margin-left: 6px;
+    color: #9a9a9a;
+    margin-left: 8px;
     cursor: help;
+    opacity: 0.9;
 }
 
 /* Feed icon link (compact, inline, consistent with theme) */
 .feed-links {
     max-width: var(--content-width);
-    margin: 8px auto 12px auto;
-    text-align: left;
+    margin: 20px auto 24px auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.feed-links::before {
+    content: "Subscribe:";
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+    font-size: 0.8em;
+    font-variant: all-small-caps;
+    color: #888;
+    letter-spacing: 0.05em;
 }
 
 .feed-icon {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 18px;
-    height: 18px;
-    border: none;
-    margin-left: 0;
+    width: 32px;
+    height: 32px;
+    background: rgba(199, 180, 248, 0.1);
+    border: 1px solid rgba(199, 180, 248, 0.3);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.feed-icon::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, rgba(199, 180, 248, 0.3) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+.feed-icon:hover::before {
+    width: 100%;
+    height: 100%;
 }
 
 .feed-icon svg {
     width: 18px;
     height: 18px;
     fill: var(--highlight-colour);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.feed-icon:hover {
+    transform: translateY(-2px);
+    border-color: var(--highlight-colour);
+    box-shadow: 0 4px 12px rgba(199, 180, 248, 0.2);
 }
 
 .feed-icon:hover svg {
     fill: var(--hover-highlight-colour);
+    transform: scale(1.1);
+}
+
+/* Adjust feed links when inside a blog post */
+.page-content .feed-links {
+    margin: 30px auto;
+    padding: 16px 20px;
+    background: linear-gradient(135deg, rgba(34, 34, 34, 0.4) 0%, rgba(34, 34, 34, 0.2) 100%);
+    border-radius: 10px;
+    border: 1px solid rgba(68, 68, 68, 0.2);
 }
 
 /* Show tags more clearly on hover */
@@ -409,25 +477,27 @@ img {
 a {
     text-decoration: none;
     color: var(--highlight-colour);
-    border-bottom: 1px solid rgba(199, 180, 248, 0.5);
+    border-bottom: 1px solid rgba(199, 180, 248, 0.4);
+    transition: all 0.2s ease;
     /* Reduced opacity */
 }
 
 a:visited {
     color: var(--highlight-colour-darker);
-    border-bottom: 1px solid rgba(150, 139, 195, 0.5);
+    border-bottom: 1px solid rgba(150, 139, 195, 0.4);
     /* Reduced opacity */
 }
 
 a:hover {
     color: var(--hover-highlight-colour);
-    border-bottom: 1px solid rgba(255, 204, 102, 0.5);
+    border-bottom: 1px solid rgba(255, 204, 102, 0.7);
+    text-shadow: 0 0 8px rgba(255, 204, 102, 0.3);
     /* Slightly more visible on hover */
 }
 
 a:active {
     color: #ff9933;
-    border-bottom: 1px solid rgba(255, 153, 51, 0.5);
+    border-bottom: 1px solid rgba(255, 153, 51, 0.7);
     /* Slightly more visible when active */
 }
 
@@ -573,11 +643,19 @@ blockquote {
     font-variant: all-small-caps;
 }
 
-.sibling-nav a {
+.sibling-nav a,
+.sibling-nav .nav-placeholder {
     color: var(--light-grey-text);
     border-bottom: none;
     background-color: transparent;
     padding: 2px 8px;
+    min-width: 24px;
+    display: inline-block;
+    text-align: center;
+}
+
+.sibling-nav .nav-placeholder {
+    visibility: hidden;
 }
 
 .sibling-nav a:hover {
@@ -596,12 +674,16 @@ blockquote {
 /* Sort controls for folder listings */
 .sort-controls {
     max-width: var(--content-width);
-    margin: 2em auto 1.5em auto;
+    margin: 2em auto 2em auto;
     display: flex;
     align-items: center;
     gap: 12px;
     font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
     font-size: 0.9em;
+    padding: 12px 16px;
+    background: linear-gradient(135deg, rgba(34, 34, 34, 0.5) 0%, rgba(34, 34, 34, 0.3) 100%);
+    border-radius: 8px;
+    border: 1px solid rgba(68, 68, 68, 0.3);
 }
 
 .sort-controls label {
@@ -611,26 +693,27 @@ blockquote {
 }
 
 .sort-controls select {
-    background-color: #222;
+    background-color: rgba(34, 34, 34, 0.8);
     color: var(--almost-white);
-    border: 1px solid #444;
-    border-radius: 4px;
-    padding: 6px 12px;
+    border: 1px solid rgba(68, 68, 68, 0.6);
+    border-radius: 6px;
+    padding: 8px 14px;
     font-size: 0.95em;
     font-family: inherit;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
 }
 
 .sort-controls select:hover {
     border-color: var(--highlight-colour);
-    background-color: #2a2a2a;
+    background-color: rgba(42, 42, 42, 0.9);
+    transform: translateY(-1px);
 }
 
 .sort-controls select:focus {
     outline: none;
     border-color: var(--highlight-colour);
-    box-shadow: 0 0 0 2px rgba(199, 180, 248, 0.2);
+    box-shadow: 0 0 0 3px rgba(199, 180, 248, 0.15);
 }
 
 .sort-controls noscript {
