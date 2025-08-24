@@ -8,7 +8,59 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 19 Aug 2025 15:06:24 +0300</lastBuildDate>
+    <lastBuildDate>Sun, 24 Aug 2025 23:31:54 +0300</lastBuildDate>
+    <item>
+      <title>Brain orchestras and fMRI analyses</title>
+      <link>https://www.gregdetre.com/blog/brain-orchestras-and-fmri-analyses/</link>
+      <description>Think of the brain as an orchestra with instruments playing simultaneously—**Multi-variate Pattern Analysis** helps decode whether you're hearing Mozart or Beethoven from the neural symphony.</description>
+      <content:encoded><![CDATA[<p>[With help from David Weiss]  </p>
+<p>I spent much of my PhD working on algorithms for making sense of gigabytes of brain data from fMRI scanners, especially on a fairly new approach called Multi-variate Pattern Analysis (MVPA). I want to show you how the MVPA approach is useful for tackling certain kinds of questions.  </p>
+<p>Think of the brain as a kind of orchestra. You have lots of separate instruments playing at the same time, and you can subdivide them in lots of different ways, e.g.  </p>
+<ul>
+<li>
+<p>You can subdivide the orchestra into parts by location - the 1st violins, the brass, the percussion etc.</p>
+</li>
+<li>
+<p>Or you could organize them by what they're doing. Say the 2nd violins, the oboes and the trumpets have the melody, while the clarinets and the tubas have the harmony. [The harps are doing their own thing and the bassoonist is drunk.]</p>
+</li>
+</ul>
+<p>Likewise, there are all kinds of things going on at once in the brain.  </p>
+<ul>
+<li>
+<p>You can subdivide the brain by location - frontal, temporal, parietal, occipital lobes.</p>
+</li>
+<li>
+<p>Or you could organize the sub-parts by what they're doing - vision, language, executive control, motor etc.</p>
+</li>
+</ul>
+<p>Let's go back to thinking about how the multivariate approach differs in the kinds of questions it can address.  </p>
+<p>Standard univariate analysis is useful if you want to tell which instruments are involved in one case rather than another, e.g.  </p>
+<ul>
+<li>violins are more active in Beethoven than Mozart, but for trumpets it's the other way around</li>
+</ul>
+<p>vs  </p>
+<ul>
+<li>one part of the brain is more active when looking at houses than faces, but for another part it's the other way around</li>
+</ul>
+<p>In contrast, a multivariate analysis might be useful if you want to know:  </p>
+<ul>
+<li>
+<p>is this Mozart or Beethoven?</p>
+</li>
+<li>
+<p>is this the brain of someone looking at faces or houses?</p>
+</li>
+</ul>
+<p>Now, let's introduce one more concept: <em>dimensionality reduction</em> is an attempt to boil down many instruments (or brain regions) into a few key themes/groups:  </p>
+<p>Take the famous da-da-da-dum of Beethoven's Fifth, where the entire orchestra is one voice - one could more or less describe the entire orchestra's activity in terms of just <em>one</em> theme/process. In contrast, for Bach or something more complex and interwoven, it might be very hard to summarize what's going in with less than <em>10</em> themes.  </p>
+<p>Likewise, maybe it's straightforward to summarize the brain's activity with just one or two processes when you're doing a very simple task like looking at faces vs houses, but if you're doing something more complicated (like watching a movie) then multiple processes are interacting in complex ways.  </p>
+<p><a href="http://www.djweiss.info/cv.html">David Weiss</a>'s PACA algorithm boils down the brain's activity over time into just a few themes. Once you've summarized the 50,000 readouts we get from fMRI every few seconds into 50, it's much more feasible to try and compare different cognitive processes - just as it's much easier to compare Mozart and Beethoven by looking at the scores of a few key instruments than looking at the full orchestral scores.  </p>
+<p>PACA was inspired by a bunch of existing dimensionality reduction algorithms that could equally be applied to problems like voice, face or handwriting recognition.  </p>
+<p>But its magic involves adding a few constraints that are particularly relevant to the brain. Here's one example of a constraint: it doesn't allow its estimate of a theme's presence at a given moment to go below zero. Think of it like this - when was the last time you heard an anti-violin? Or had an anti-thought? In other words, PACA breaks the manifold streams of activity in the brain down to just a few that are all present to a greater or lesser degree at each moment.  </p>
+<p>P.S. If you hated this, you might also hate <a href="http://gregdetre.blogspot.com/2010/01/how-to-beat-fmri-lie-detector.html">How to beat an fMRI lie detector.</a></p>]]></content:encoded>
+      <guid isPermaLink="false">https://www.gregdetre.com/blog/brain-orchestras-and-fmri-analyses/</guid>
+      <pubDate>Fri, 29 Oct 2010 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Master Turkers</title>
       <link>https://www.gregdetre.com/blog/master-turkers/</link>
@@ -721,42 +773,6 @@
       <pubDate>Tue, 05 Apr 2016 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Running a Premortem</title>
-      <link>https://www.gregdetre.com/blog/running-a-premortem/</link>
-      <description>A premortem helped refocus a death-march project and plan a successful $12m fund-raise by imagining failure first, then working backwards to prevent it.</description>
-      <content:encoded><![CDATA[<p>In the past, running a Premortem has been the single most helpful exercise I’ve found for dealing with complex, risky projects. <a href="https://www.theguardian.com/lifeandstyle/2014/may/10/hindsight-in-advance-premortem-this-column-change-life">This is the core idea</a>, but there’s a little more to it.</p>
-<p>I’m not joking when I say that a premortem refocused the hardest death-march I’ve been on, and another premortem was a key step in planning for a complicated (and ultimately successful) $12m fund-raise. If all goes well, it’ll help highlight your biggest fears, and proactively figure out steps for how to defuse them.</p>
-<p>In short, this is how I run them:</p>
-<ul>
-<li>
-<p>Gather a couple of other core people/project leads with complementary expertise. Allocate 2 uninterrupted hours (though you might not need all that time once you start to get efficient at them).</p>
-</li>
-<li>
-<p>Sit down and read the above <a href="https://www.theguardian.com/lifeandstyle/2014/may/10/hindsight-in-advance-premortem-this-column-change-life">Guardian article</a> through together at the beginning of the session.</p>
-</li>
-<li>
-<p>Have fun telling each other the nightmare story. I usually set them at the next major milestone, perhaps within the next 6 months or so. Make it specific and vivid, e.g. 'The CEO of X is on stage announcing their partnership in October with your major competitor' or 'We're out of money and don't exist, and you're back to working at your previous job you hated.'</p>
-</li>
-<li>
-<p>Set a timer for 15 minutes or so, and separately in silence each scribble down as many potential reasons why this terrible future came to pass, e.g. 'Their CEO tried it out and happened to get a buggy version and they lost faith in us', or 'The lawyers axed the project because of regulatory hurdles'. I usually use either Google Docs or postits to make the following phases easier.</p>
-</li>
-<li>
-<p>Race through everyone's items out loud quickly. There will be duplicates and related issues - as you go through them, place them into groups.</p>
-</li>
-<li>
-<p>Then, for each group of issues, ask 'what could we do to fix/de-risk this?'. [Maybe do this in silence individually first too]. You'll start to see that there are a few things you could do that will help considerably de-risk multiple issues at the same time. Assign one person to be responsible for each approach you agree to act on.</p>
-</li>
-<li>
-<p>By this point, you should have felt like you've looked into the abyss, but come out the other side and achieved a measure of catharsis. There's something about the perspective you get from doing this exercise that makes it much easier to make hard choices (I find).</p>
-</li>
-<li>
-<p>Set a date to revisit in 6 weeks (to make sure you actually addressed the risks you've just identified, and see where things stand).</p>
-</li>
-</ul>]]></content:encoded>
-      <guid isPermaLink="false">https://www.gregdetre.com/blog/running-a-premortem/</guid>
-      <pubDate>Thu, 16 Aug 2018 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Small wins (list)</title>
       <link>https://www.gregdetre.com/blog/small-wins/</link>
       <description>Ten simple actions that can brighten your day, from learning song lyrics to waterproofing your favorite shoes. Small changes that create **disproportionate satisfaction** in daily life.</description>
@@ -832,10 +848,9 @@
       <pubDate>Sun, 02 Dec 2018 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Unbound 2019</title>
+      <title>How to Cheat at Data Science (With Help from Centaurs and the Wizard of Oz) - presentation at Unbound 2019 (VIDEO)</title>
       <link>https://www.gregdetre.com/blog/unbound-2019/</link>
-      <description><![CDATA[<p>Hi everyone. I'll be at <a href="https://unbound.live/London/agenda#/">Unbound London</a> for a talk at 12.05 on Thu 18th July 2019.</p>
-<p>https://www.youtube.com/watch?v=4kcjH4v6yrQ</p>]]></description>
+      <description><![CDATA[<p>I'll be at <a href="https://unbound.live/London/agenda#/">Unbound London</a> for a talk at 12.05 on Thu 18th July 2019 on <a href="https://www.youtube.com/watch?v=4kcjH4v6yrQ">How to Cheat at Data Science (With Help from Centaurs and the Wizard of Oz)</a> .</p>]]></description>
       <guid isPermaLink="false">https://www.gregdetre.com/blog/unbound-2019/</guid>
       <pubDate>Thu, 18 Jul 2019 00:00:00 +0000</pubDate>
     </item>
