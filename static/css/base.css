@@ -405,6 +405,15 @@ li {
     border-bottom: none;
 }
 
+/* Ensure our global blockquote styling doesn't override Bluesky embeds */
+blockquote.bluesky-embed {
+    max-width: var(--content-width);
+    margin: 12px auto;
+    padding: 0;
+    background: transparent;
+    border: none;
+}
+
 /* Show tags more clearly on hover */
 li:hover .tags-inline {
     opacity: 1;
