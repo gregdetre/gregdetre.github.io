@@ -868,18 +868,18 @@ migrator.sql("ALTER TABLE table ALTER COLUMN new_field DROP DEFAULT")
 </code></pre></div>
 <h4 id="model-definitions-in-migrations">Model Definitions in Migrations</h4>
 <p>When using <code>add_columns</code> or <code>drop_columns</code>, define model classes in both <code>migrate</code> and <code>rollback</code> functions:</p>
-<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="n">BaseModel</span>(<span class="n">Model</span>):
-    <span class="n">created_at</span> = <span class="n">DateTimeField</span>()
-    <span class="n">updated_at</span> = <span class="n">DateTimeField</span>()
+<div class="codehilite"><pre><span></span><code>class BaseModel(Model):
+    created_at = DateTimeField()
+    updated_at = DateTimeField()
 
-<span class="k">class</span> <span class="n">MyModel</span>(<span class="n">BaseModel</span>):
-    <span class="n">field</span> = <span class="n">CharField</span>()
+class MyModel(BaseModel):
+    field = CharField()
 
-    <span class="k">class</span> <span class="n">Meta:</span>
-        <span class="n">table_name</span> = <span class="s">"my_table"</span>
+    class Meta:
+        table_name = "my_table"
 
-<span class="c1"># Then use the model class, not string name:</span>
-<span class="n">migrator</span>.<span class="n">drop_columns</span>(<span class="n">MyModel</span>, [<span class="s">"field"</span>])
+# Then use the model class, not string name:
+migrator.drop_columns(MyModel, ["field"])
 </code></pre></div>
 <p>Note: No need to bind models to database - they're just used for schema definition.</p>
 <h3 id="best-practices">Best Practices</h3>

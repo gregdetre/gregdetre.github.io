@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://www.gregdetre.com/blog/</id>
   <title>Greg Detre</title>
-  <updated>2025-08-25T16:52:49.260471+03:00</updated>
+  <updated>2025-08-25T17:45:37.708164+03:00</updated>
   <link href="https://www.gregdetre.com/blog/" rel="alternate"/>
   <link href="https://www.gregdetre.com/blog/atom.xml" rel="self"/>
   <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
@@ -10,7 +10,7 @@
   <entry>
     <id>https://www.gregdetre.com/blog/master-turkers/</id>
     <title>Master Turkers</title>
-    <updated>2025-08-16T17:53:35.505491+00:00</updated>
+    <updated>2025-08-25T14:33:29.268062+00:00</updated>
     <content type="html">&lt;p&gt;Amazon's Mechanical Turk is an amazing service where one can create a simple task that can be micro-out-sourced to many people over the web, each of whom performs a small parcel of it. For instance, if you wanted 1000 people to highlight faces in photographs, think of synonyms for words, or provide from-the-hip feedback on your website, Mechanical Turk is ideal.  &lt;/p&gt;
 &lt;p&gt;For reasons that are unclear to me, people seem to be willing to work for far below a minimum wage performing pretty dull tasks. As an experimental psychologist, I'm torn between feelings of data lust at the number of participants I could thus thriftily recruit, and concern about the quality of their data. What kind of person is willing to engage in dull tasks that must feel meaningless from a worm's eye view? Where's the incentive to do a good job?  &lt;/p&gt;
 &lt;p&gt;It seems to me that there might be a market for tasks that require more effort, skill or thought, for which one would like to be able to cherry pick the participants. For this to work, you'd need a rich reputation scheme to Mechanical Turk, to pick out the Master Turks.  &lt;/p&gt;
@@ -57,7 +57,7 @@
   <entry>
     <id>https://www.gregdetre.com/blog/how-can-your-iphone-make-you-even-more-entertaining-and-interesting-than-you-already-are/</id>
     <title>How can your iPhone make you even more entertaining and interesting than you already are?</title>
-    <updated>2025-08-14T14:22:01.310813+00:00</updated>
+    <updated>2025-08-25T14:33:29.254876+00:00</updated>
     <content type="html">&lt;p&gt;Have you ever had a conversation with smart friends that got hung up on some disputed point of fact, or tip of the tongue memory failure? Don't you just wish someone would step in with the answer to unclog the free flow of ideas and happy banter? Disputes about facts and tip-of-the-tongue feelings *should* be a relic of the 20th century. So there are two things that are remarkable here:  &lt;/p&gt;
 &lt;p&gt;- Through smartphones and search engines, we can marshal thousands of machines to produce the answer in the blink of your mind's eye.  &lt;/p&gt;
 &lt;p&gt;- But we have to perform that instantaneous incantation with pudgy fingers and a 0.3G internet connection. I challenge anyone to find the name of an actor in under 2 minutes with an iPhone with crappy reception. While those 120 seconds creep past, you're coldly ignoring your friends, and the conversation is gasping on the table like a naked baby on a spacewalk.  &lt;/p&gt;
@@ -78,7 +78,7 @@
   <entry>
     <id>https://www.gregdetre.com/blog/a-wiki-for-spaces-a-town-anyone-can-edit-school-architecture-founded-on-mnemonic-principles/</id>
     <title>A wiki for spaces. A town anyone can edit. School architecture founded on mnemonic principles</title>
-    <updated>2025-08-16T17:53:35.472491+00:00</updated>
+    <updated>2025-08-25T14:33:29.241489+00:00</updated>
     <content type="html">&lt;p&gt;When we think of wikis, we think of text, like the Wikipedia. But this notion of content that anyone can view and anyone can edit has barely unfurled its wings. What if we were to apply it to space?  &lt;/p&gt;
 &lt;p&gt;For instance, imagine growing a World of Warcraft town as a community. Each person could design and improve upon the buildings, fill the walls with graffiti, neighborhoods would define themselves... the ease and pace of iteration might even generate new ideas about town planning.  &lt;/p&gt;
 &lt;p&gt;Alternatively, let's build on Ed Cooke's &lt;a href="http://www.rememberremember.co.uk/?page_id=213"&gt;fantastic plan for school architecture in the future&lt;/a&gt; [&lt;a href="http://webcache.googleusercontent.com/search?q=cache:bYKUVPydjjYJ:www.rememberremember.co.uk/%3Fp%3D209+site:rememberremember.co.uk+school+OR+schools&amp;amp;cd=2&amp;amp;hl=en&amp;amp;ct=clnk&amp;amp;gl=uk"&gt;cached&lt;/a&gt;]:  &lt;/p&gt;
@@ -95,7 +95,7 @@
   <entry>
     <id>https://www.gregdetre.com/blog/the-muses-are-deaf-so-speak-up/</id>
     <title>The muses are deaf, so speak up</title>
-    <updated>2025-08-14T14:21:56.586855+00:00</updated>
+    <updated>2025-08-25T14:33:29.252932+00:00</updated>
     <content type="html">&lt;p&gt;Good thoughts tend to shy away from short walks with a destination. They're kept at bay by the neuroses and instant replays that circle endlessly like tethered carrion.&lt;/p&gt;
 &lt;p&gt;Do you want to know the only way I've found to think while walking? Talk out loud. Loudly proudly aloud. Feel free to gesticulate. Close your eyes if traffic conditions permit. Tell yourself a story. Don't use your normal voice.&lt;/p&gt;
 &lt;p&gt;Why would talking out loud make such a colossal difference? Perhaps because repetition feels explicitly boring out loud, so we avoid re-treading the same paths. Perhaps because full sentences flush and flesh out our half-thoughts? Perhaps because serializing our massively parallel murmur squeezes the thoughts out one at a time with greater velocity, like putting your thumb on a hose.&lt;/p&gt;
@@ -110,7 +110,7 @@
   <entry>
     <id>https://www.gregdetre.com/blog/but-where-does-the-wisdom-come-from/</id>
     <title>But where does the wisdom come from?</title>
-    <updated>2025-08-14T14:21:54.254809+00:00</updated>
+    <updated>2025-08-25T14:33:29.255448+00:00</updated>
     <content type="html">&lt;p&gt;&lt;em&gt;God, grant me the serenity&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;To accept the things I cannot change;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Courage to change the things I can;&lt;/em&gt;&lt;/p&gt;
@@ -125,7 +125,7 @@
   <entry>
     <id>https://www.gregdetre.com/blog/when-i-am-famous-i-will-decline-interviews/</id>
     <title>When I am famous, I will decline interviews</title>
-    <updated>2025-08-14T14:21:50.916679+00:00</updated>
+    <updated>2025-08-25T14:33:29.268093+00:00</updated>
     <content type="html">&lt;p&gt;Reading the 5-page staged and glossy magazine interview in a hotel room with a famous actor has always filled me with a peculiar kind of existential dread. There's something a little horrifying about an hour of conversation in cold type, bereft of the intonation, expression, context and rapport that make anything one says out loud bearable. And at the end of it all, to be distilled, distorted, interpreted and weighed by the pen of a stranger... Who could have the strength of character to read about but not become their own caricature?  &lt;/p&gt;
 &lt;p&gt;In contrast, the last page of the Sunday Times magazine features 'a life in the day of' a happy array of personalities and professions. I like the concreteness of a single day as a window into someone else's micro challenges and achievements. I realize that these days are probably fictionalized composites - but fiction makes for a sweet, concentrated and memorable pill. And at the end of it, there is no distillation, no weighing - just the reality of a daily rhythm.  &lt;/p&gt;
 &lt;p&gt;When I am famous, I will decline interviews.  &lt;/p&gt;
@@ -158,7 +158,7 @@
   <entry>
     <id>https://www.gregdetre.com/blog/a-letter-to-a-prospective-grad-student/</id>
     <title>A letter to a prospective grad student</title>
-    <updated>2025-08-14T14:21:48.233547+00:00</updated>
+    <updated>2025-08-25T14:33:29.240944+00:00</updated>
     <content type="html">&lt;p&gt;Preface: I wrote this to a friend asking me for advice about whether to embark on a science PhD. At the time of writing I still had more than a year to go - so I could see the summit in the distance, but I was feeling grim about the steep icewall I had to climb to get there.&lt;/p&gt;
 &lt;p&gt;In retrospect, I think a lot about Jeff Bezos' advice: don't be proud of your talents - be proud of the things you really worked hard to achieve. For this reason, I'm more proud of (and glad about) my PhD than anything else I've yet done.&lt;/p&gt;
 &lt;p&gt;----&lt;/p&gt;
@@ -177,7 +177,7 @@
   <entry>
     <id>https://www.gregdetre.com/blog/breaking-the-seal/</id>
     <title>Breaking the seal</title>
-    <updated>2025-08-14T14:21:46.174994+00:00</updated>
+    <updated>2025-08-25T14:33:29.253098+00:00</updated>
     <content type="html">&lt;p&gt;I've wanted to try daily writing for an impossibly long time, but the first words didn't want to be dragged out.  &lt;/p&gt;
 &lt;p&gt;In my case, they were unstoppered by a day in London. I pinballed from train platforms to coffee shops, oblivious bustle all around me, far away from the furrowed-browed finger-pecking at Memrise HQ. That context-shift provided a firebreak from the quotidian, and I was finally in the mood to mentally roll up my sleeves and rub my hands together.  &lt;/p&gt;
 &lt;p&gt;Writing's like peeing - once you break the seal, the words just spill forth all evening.  &lt;/p&gt;
@@ -189,7 +189,7 @@
   <entry>
     <id>https://www.gregdetre.com/blog/setting-up-your-own-domain-name-and-website/</id>
     <title>Setting up your own domain name and website</title>
-    <updated>2025-08-14T14:21:43.751819+00:00</updated>
+    <updated>2025-08-25T14:33:29.272188+00:00</updated>
     <content type="html">&lt;p&gt;Someone asked me recently about getting their own domain name and setting up a website. I'm not very good at this stuff, but I have been through it once or twice, so I thought I'd at least offer this up in case it's useful.  &lt;/p&gt;
 &lt;p&gt;Let's say you want to buy &lt;em&gt;example.com&lt;/em&gt;, and set it up as a series of static informational pages about &lt;em&gt;Example Business Inc&lt;/em&gt;, along with &lt;em&gt;@example.com&lt;/em&gt; email addresses. There are (at least) 3 ways you can go:  &lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;1) the standard method&lt;/strong&gt; &lt;/p&gt;
@@ -216,7 +216,7 @@
   <entry>
     <id>https://www.gregdetre.com/blog/storyville-and-jenga-iphone-apps/</id>
     <title>Storyville and Jenga iPhone apps</title>
-    <updated>2025-08-16T16:27:09.381788+00:00</updated>
+    <updated>2025-08-25T14:33:29.248035+00:00</updated>
     <content type="html">&lt;p&gt;Hey everyone,&lt;/p&gt;
 &lt;p&gt;Two friends have just released iPhone apps in time for Christmas:&lt;/p&gt;
 &lt;ul&gt;
@@ -236,7 +236,7 @@
   <entry>
     <id>https://www.gregdetre.com/blog/get-your-users-to-tell-you-what-they-really-want/</id>
     <title>Get your users to tell you what they really want</title>
-    <updated>2025-08-16T17:53:35.501004+00:00</updated>
+    <updated>2025-08-25T14:33:29.267318+00:00</updated>
     <content type="html">&lt;p&gt;We're building &lt;a href="http://www.memrise.com/"&gt;a site that we want people to love using&lt;/a&gt;, so we want as much feedback on it as we can get. From the get-go, we've had a big red &lt;a href="http://www.uservoice.com/"&gt;UserVoice 'Feedback'&lt;/a&gt; button on the lefthand site of every page. But only a tiny proportion of our users ever suggested, voted or commented on an idea.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="" src="/img/blog/uservoice_box.png"/&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -270,7 +270,7 @@
   <entry>
     <id>https://www.gregdetre.com/blog/where-has-all-my-disk-space-gone-mac/</id>
     <title>DaisyDisk - where has all my disk space gone? (Mac app)</title>
-    <updated>2025-08-16T16:51:39.840951+00:00</updated>
+    <updated>2025-08-25T14:33:29.245921+00:00</updated>
     <content type="html">&lt;p&gt;&lt;a href="http://www.daisydiskapp.com/"&gt;DaisyDisk&lt;/a&gt; is the best app I've found so far for visualising where all my disk space has gone. It's free, but you can pay $20 to get it to stop nagging you.&lt;/p&gt;
 &lt;p&gt;P.S. I have a theory that inability to manage one's finances and one's hard disk space have the same psychological factors at their root. (&lt;em&gt;"Oh, I'll treat myself just this once..."&lt;/em&gt;, &lt;em&gt;"It's only a small thing"&lt;/em&gt;, etc)&lt;/p&gt;</content>
     <link href="https://www.gregdetre.com/blog/where-has-all-my-disk-space-gone-mac/"/>
@@ -280,7 +280,7 @@
   <entry>
     <id>https://www.gregdetre.com/blog/startup-thinking-the-people-who-have-most-influenced-my-thinking-on-startups/</id>
     <title>Startup thinking - the people who have most influenced my thinking on startups.</title>
-    <updated>2025-08-14T14:21:34.938372+00:00</updated>
+    <updated>2025-08-25T14:33:29.244587+00:00</updated>
     <content type="html">&lt;p&gt;&lt;strong&gt;Steve Blank and Eric Ries&lt;/strong&gt; &lt;/p&gt;
 &lt;p&gt;&lt;a href="http://steveblank.com/"&gt;Steve Blank&lt;/a&gt; teaches entrepreneurship at the Haas Business School in Berkeley, but has a pretty serious pedigree as a tech entrepreneur himself. I'm ashamed to admit that I still haven't read The 4 Steps to the Epiphany, but I've read most of what he's posted online.  &lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.startuplessonslearned.com/"&gt;Eric Ries&lt;/a&gt; is a protege of Steve Blank's, applies and develops many of the same 'lean' ideas, and focuses specifically on web startups.  &lt;/p&gt;
@@ -302,7 +302,7 @@
   <entry>
     <id>https://www.gregdetre.com/blog/the-iphone-apps-my-cold-dead-hands-would-cling-most-rigidly-to/</id>
     <title>The iPhone apps my cold, dead hands would cling most rigidly to</title>
-    <updated>2025-08-14T14:21:32.743215+00:00</updated>
+    <updated>2025-08-25T14:33:29.252176+00:00</updated>
     <content type="html">&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href="http://www.instapaper.com/"&gt;Instapaper&lt;/a&gt; - combine this with the &lt;a href="https://chrome.google.com/extensions/detail/fldildgghjoohccppflaohodcnmlacpb"&gt;Instachrome&lt;/a&gt; extension, and whenever I see a webpage I want to read later, it'll be waiting with me as I wait for a train&lt;/p&gt;
@@ -351,7 +351,7 @@
   <entry>
     <id>https://www.gregdetre.com/blog/pluviocabulary-rain-words-memrise-style/</id>
     <title>Pluviocabulary (rain words), Memrise-style</title>
-    <updated>2025-08-17T08:18:47.851015+00:00</updated>
+    <updated>2025-08-25T14:33:29.256809+00:00</updated>
     <content type="html">&lt;p&gt;I got distracted by the &lt;a href="http://www.nytimes.com/interactive/2011/04/03/opinion/20110403_schott.html"&gt;NY Times' Pluviocabulary list&lt;/a&gt;, and found myself &lt;a href="http://www.memrise.com/cave/?iset=pluviocabulary-new-york-times-schott"&gt;playing with my new words&lt;/a&gt; - just thought I'd share. I particularly enjoyed being reminded of &lt;a href="http://www.memrise.com/item/40834/petrichor-the-smell-accompanying-the-first-rain-af/?set=pluviocabulary-new-york-times-schott"&gt;petrichor&lt;/a&gt;, and learning &lt;a href="http://www.memrise.com/mem/91054/oh-no-i-got-caught-in-a-flaught/"&gt;flaught&lt;/a&gt; and &lt;a href="http://www.memrise.com/item/40852/tirl-the-sound-of-rain-on-a-roof/?set=pluviocabulary-new-york-times-schott"&gt;tirl&lt;/a&gt;.&lt;/p&gt;</content>
     <link href="https://www.gregdetre.com/blog/pluviocabulary-rain-words-memrise-style/"/>
     <summary>From *petrichor* (the smell of first rain) to *tirl* (rain's sound on rooftops), exploring the rich vocabulary of precipitation reveals language as nuanced as weather itself.</summary>
@@ -360,7 +360,7 @@
   <entry>
     <id>https://www.gregdetre.com/blog/final-dissertation/</id>
     <title>Final dissertation</title>
-    <updated>2024-09-29T15:55:55.629790+00:00</updated>
+    <updated>2025-08-25T14:33:29.264128+00:00</updated>
     <content type="html">&lt;p&gt;I realized I never uploaded the final version of my dissertation, '&lt;a href="/research/dissertation - after revisions - 100503.pdf"&gt;Weakening memories by half-remembering them&lt;/a&gt;'.&lt;/p&gt;</content>
     <link href="https://www.gregdetre.com/blog/final-dissertation/"/>
     <published>2013-01-07T00:00:00+00:00</published>
@@ -368,7 +368,7 @@
   <entry>
     <id>https://www.gregdetre.com/blog/blogging-with-wordpress-and-emacs/</id>
     <title>Blogging with Wordpress and Emacs</title>
-    <updated>2025-08-14T14:21:01.447833+00:00</updated>
+    <updated>2025-08-25T14:33:29.251596+00:00</updated>
     <content type="html">&lt;p&gt;When it comes to tools, I am a hedgehog rather than a fox. I like to have a small number of tools, and to know them well.&lt;/p&gt;
 &lt;p&gt;I recently resolved to start writing again. But I decided that I needed to sharpen my pencils first.&lt;/p&gt;
 &lt;p&gt;I have &lt;a href="/2007/09/12/entangling-the-ground-and-cloud/"&gt;plans on how publishing and sharing should work&lt;/a&gt;. Grand plans. Too grand, perhaps.&lt;/p&gt;
@@ -387,7 +387,7 @@
   <entry>
     <id>https://www.gregdetre.com/blog/two-level-tagging/</id>
     <title>Two-level tagging</title>
-    <updated>2025-08-14T14:20:59.009595+00:00</updated>
+    <updated>2025-08-25T14:33:29.261806+00:00</updated>
     <content type="html">&lt;p&gt;Have you ever had trouble deciding where to store a file on your hard disk? Or worse, had trouble finding it later?&lt;/p&gt;
 &lt;p&gt;When you store a file on your hard disk, you have to decide which folder to put it in. That folder can in turn live inside other folders. This results in a hierarchy, known in computer science as a *tree*.&lt;/p&gt;
 &lt;p&gt;The main problem with trees is that sometimes you want things to live in multiple places.&lt;/p&gt;
@@ -404,7 +404,7 @@
   <entry>
     <id>https://www.gregdetre.com/blog/sanity-checks-as-data-sidekicks/</id>
     <title>Sanity checks as data sidekicks</title>
-    <updated>2025-08-14T14:20:54.947213+00:00</updated>
+    <updated>2025-08-25T14:33:29.268137+00:00</updated>
     <content type="html">&lt;p&gt;Abe Gong asked for good examples of '&lt;a href="https://web.archive.org/web/20160410165155/http://blog.abegong.com/2014/02/wanted-good-examples-of-data-sidekicks.html?utm_content=bufferdd80e&amp;amp;utm_medium=social&amp;amp;utm_source=twitter.com&amp;amp;utm_campaign=buffer"&gt;data sidekicks&lt;/a&gt;', i.e. &lt;em&gt;"i.e. small, curated data" that "can accelerate analysis, solve cold start problems, and simplify complicated data pipelines"&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;My response was &lt;em&gt;&lt;a href="https://twitter.com/gregdetre/status/431192954808451073"&gt;"brain-data sidekick: sanity-check you can classify blank screen vs stimuli"&lt;/a&gt;&lt;/em&gt; - &lt;em&gt;&lt;a href="https://twitter.com/gregdetre/status/431199600033026048"&gt;e.g. when classifying mental states with fMRI, if you can't tell stimuli vs none, probably something awry upstream in your pipeline&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;I still haven't got the hang of distilling complex thoughts into 140 characters, and so I was worried my reply might have been compressed into cryptic nonsense. Here's what I was trying to say:&lt;/p&gt;
@@ -429,7 +429,7 @@
   <entry>
     <id>https://www.gregdetre.com/blog/oh-that-should-be-easy-maybe-a-few-minutes/</id>
     <title>"Oh, that should be easy - maybe a few minutes..."</title>
-    <updated>2025-08-14T14:20:52.824010+00:00</updated>
+    <updated>2025-08-25T14:33:29.237993+00:00</updated>
     <content type="html">&lt;p&gt;Hearing those words makes me feel like I'm tied mutely to a railway track, unable to scream for help as a train thunders towards me. We humans are walking sacks of blood, bile and bias, and estimating how long things will take brings out the worst in us.&lt;/p&gt;
 &lt;p&gt;A product manager recently asked me if one can get better at knowing whether things are easy or hard, and how long they will take. The good news is that with practice, you can help people estimate much better with your help than they would on their own.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Understand the problem you're trying to solve.&lt;/strong&gt;&lt;/p&gt;
@@ -485,7 +485,7 @@
   <entry>
     <id>https://www.gregdetre.com/blog/listing-things-to-look-forward-to/</id>
     <title>Listing things to look forward to</title>
-    <updated>2025-08-14T14:20:50.780249+00:00</updated>
+    <updated>2025-08-25T14:33:29.267916+00:00</updated>
     <content type="html">&lt;p&gt;I just made a list of things to look forward to. Like any deliberate deliberation, at first it took a slight push through the soft, invisible barrier of effort, but then things just started to flow.&lt;/p&gt;
 &lt;p&gt;I had worried I wouldn't be able to think of anything, that there'd be no colour even through a microscope.&lt;/p&gt;
 &lt;p&gt;It felt a little like mental physiotherapy - the unfurling of a cramped limb that had been injured. Atrophied still, but unpinioned, a growing sense of pins and needles, a shaky freedom... finally a stumble. But for a moment, just a moment, I felt free, like the sun had come out, like the wind was blowing through the trees.&lt;/p&gt;
@@ -497,7 +497,7 @@
   <entry>
     <id>https://www.gregdetre.com/blog/mindfulness-in-scuba-diving/</id>
     <title>Mindfulness in scuba diving</title>
-    <updated>2025-08-14T14:20:48.878899+00:00</updated>
+    <updated>2025-08-25T14:33:29.249455+00:00</updated>
     <content type="html">&lt;p&gt;Diving is mindful.&lt;/p&gt;
 &lt;p&gt;Diving is about the breath. Breathe in, rise. Breathe out, sink. Breathe, stay.&lt;/p&gt;
 &lt;p&gt;The underwater world is captivating - colourful, beautiful, ever-changing. The underwater world is serene - slow, smooth, curved. The underwater world is indifferent - endless, alien, incomprehensible. The underwater world is meditative - quiet, isolated, but embodied.&lt;/p&gt;
@@ -512,7 +512,7 @@
   <entry>
     <id>https://www.gregdetre.com/blog/barcamp-tampa-2015/</id>
     <title>Presentations at BarCamp Tampa 2015</title>
-    <updated>2025-08-14T14:20:46.831530+00:00</updated>
+    <updated>2025-08-25T14:33:29.257655+00:00</updated>
     <content type="html">&lt;p&gt;&lt;a href="/wp-content/uploads/2015/10/presentation-barcamp-tampa-python-151017.pdf"&gt;Unit testing in Python  - better code faster&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;a href="/wp-content/uploads/2015/10/presentation-barcamp-tampa-replatforming-1510172.pdf"&gt;The best way to kill and bury your crusty old PHP system&lt;/a&gt; - replatforming a legacy system without your users noticing.&lt;/p&gt;</content>
     <link href="https://www.gregdetre.com/blog/barcamp-tampa-2015/"/>
@@ -522,7 +522,7 @@
   <entry>
     <id>https://www.gregdetre.com/blog/todo-zero/</id>
     <title>Todo Zero</title>
-    <updated>2025-08-14T14:20:44.211216+00:00</updated>
+    <updated>2025-08-25T14:33:29.259908+00:00</updated>
     <content type="html">&lt;p&gt;What if I suggested that you finish each day with nothing left on your todo list? This is the only rule of &lt;em&gt;Todo Zero.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;You might find yourself biting back some choice words. This sounds like unhelpful advice from someone with a much simpler life than yours.&lt;/p&gt;
 &lt;p&gt;Not so fast. Picture a world-class juggler with half-a-dozen balls in motion. How many balls do they have in their &lt;a href="http://juggler.com/numbers-juggling-more-than-3-balls"&gt;hands at once&lt;/a&gt;? None, one, or two. Never more than two. The remainder are in the air.&lt;/p&gt;
@@ -606,7 +606,7 @@
   <entry>
     <id>https://www.gregdetre.com/blog/entrepreneur-vs-manager-vs-technician/</id>
     <title>Entrepreneur vs Manager vs Technician</title>
-    <updated>2025-08-14T14:20:41.993041+00:00</updated>
+    <updated>2025-08-25T14:33:29.259697+00:00</updated>
     <content type="html">&lt;p&gt;In &lt;a href="https://www.goodreads.com/book/show/81948.The_E_myth_Revisited"&gt;The E-Myth Revisited&lt;/a&gt;, Gerber talks about three selves:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -633,7 +633,7 @@
   <entry>
     <id>https://www.gregdetre.com/blog/why-has-google-open-sourced-tensorflow/</id>
     <title>Why has Google open sourced TensorFlow?</title>
-    <updated>2025-08-14T14:20:39.841240+00:00</updated>
+    <updated>2025-08-25T14:33:29.269545+00:00</updated>
     <content type="html">&lt;p&gt;I was sitting in a sun-warmed pizza restaurant in London last week talking about deep learning libraries. Everyone had their favourites. I was betting on &lt;a href="https://www.tensorflow.org/"&gt;TensorFlow&lt;/a&gt;, the new kid in town released by Google in late 2015. In response, a Torch fan pointed out that Google may invest in building up TensorFlow internally, but there's no reason for them to invest in the shared, external version.&lt;/p&gt;
 &lt;p&gt;This got me thinking - why &lt;em&gt;has&lt;/em&gt; Google open sourced TensorFlow?&lt;/p&gt;
 &lt;p&gt;Naively, I usually assume that companies keep their most crown jewels proprietary while open sourcing the periphery. In other words, keep your secret sauce close to your chest - but share the stuff that's more generic, since it builds brand and goodwill, others may contribute helpfully, and you're not straightforwardly giving a leg-up to your direct competitors.&lt;/p&gt;
@@ -665,7 +665,7 @@
   <entry>
     <id>https://www.gregdetre.com/blog/hackathon-profbot-technical/</id>
     <title>Chatbots - from Rogerian psychotherapists to cognitive behavioral therapists</title>
-    <updated>2025-08-17T11:22:55.602206+00:00</updated>
+    <updated>2025-08-25T14:33:29.237973+00:00</updated>
     <content type="html">&lt;p&gt;&lt;em&gt;[Reposted from https://medium.com/we-are-big-health/chatbots-from-rogerian-psychotherapists-to-cognitive-behavioral-therapists-237c2ee3cfb6]&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;I've been obsessed by chatbots ever since I first played around with an Eliza clone that shipped with my Soundblaster sound card at the age of 12. I taught myself to program because I so badly wanted to build a chatbot of my own. My first efforts were very simple - they matched keywords in the user's input, and picked at random from a bag of canned responses. It worked as well as you'd expect.&lt;/p&gt;
 &lt;p&gt;The more I scratched at this problem over the years, &lt;a href="/2006/04/18/the-turing-tournament-a-proposal-for-a-reformulation-of-the-turing-test/"&gt;the deeper I realized it to be&lt;/a&gt;. Even as we recognise the deficiencies of the Turing Test, we must also recognise its genius - it is a necessary but not sufficient test of intelligence. In other words, it's just too dang hard and too specific (see &lt;a href="http://lead.u-bourgogne.fr/people/french/turing.pdf"&gt;Robert French's brilliant 'Subcognition and the Limits of the Turing Test'&lt;/a&gt;).&lt;/p&gt;
@@ -718,7 +718,7 @@
   <entry>
     <id>https://www.gregdetre.com/blog/soft-and-hard-skills/</id>
     <title>Soft and hard skills</title>
-    <updated>2025-08-14T14:20:37.272619+00:00</updated>
+    <updated>2025-08-25T14:33:29.239925+00:00</updated>
     <content type="html">&lt;p&gt;PUBLISHED https://medium.com/@gregdetre/getting-soft-or-just-soft-skills-fd73146fe477#.pbmzfexl9&lt;/p&gt;
 &lt;p&gt;I'm sitting with a glass of red wine and a full-screen Jupyter Notebook window full of TensorFlow code open. Now, it may be the red wine, but it's just plain difficult to get things to work.&lt;/p&gt;
 &lt;p&gt;After more than a PhD's worth of wrestling with code and algorithms, I felt up to the challenge. But in between, there's been a few years where the emphasis has been on management rather than code.&lt;/p&gt;
@@ -734,7 +734,7 @@
   <entry>
     <id>https://www.gregdetre.com/blog/friendships-and-memory-effects/</id>
     <title>Friendships and memory effects</title>
-    <updated>2025-08-14T15:24:24.284704+00:00</updated>
+    <updated>2025-08-25T14:33:29.265610+00:00</updated>
     <content type="html">&lt;p&gt;Within a few steps of getting off the plane at Newark on my way to Princeton, I could feel myself traveling back in time as well as in space.&lt;/p&gt;
 &lt;p&gt;I spent 7 years in Princeton as a research assistant and PhD student, thinking about human forgetting and new computational approaches to studying the brain.&lt;/p&gt;
 &lt;p&gt;I've been back once or twice in the 6 years since I graduated, but a lot has changed. For starters, I'm married now and accompanied by my wife. I manage the engineering team at Big Health, rather than working as a researcher in a lab. I spend most of my time in Florida and San Francisco, rather than Princeton and New York. And I only get to see the friends and colleagues from grad school when our paths cross sporadically and briefly.&lt;/p&gt;
@@ -750,7 +750,7 @@
   <entry>
     <id>https://www.gregdetre.com/blog/small-wins/</id>
     <title>Small wins (list)</title>
-    <updated>2025-08-14T14:20:30.055401+00:00</updated>
+    <updated>2025-08-25T14:33:29.237079+00:00</updated>
     <content type="html">&lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;Learn the lyrics to your favourite song, so you can sing along to it as you walk down the street.&lt;/p&gt;
@@ -792,7 +792,7 @@
   <entry>
     <id>https://www.gregdetre.com/blog/fun-things-to-do-for-free-in-london/</id>
     <title>Fun things to do for free in London (list)</title>
-    <updated>2025-08-14T14:20:27.368637+00:00</updated>
+    <updated>2025-08-25T14:33:29.266694+00:00</updated>
     <content type="html">&lt;p&gt;[together with &lt;a href="http://carolinavasilikou.com"&gt;Carolina&lt;/a&gt;]&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -827,7 +827,7 @@
   <entry>
     <id>https://www.gregdetre.com/blog/unbound-2019/</id>
     <title>How to Cheat at Data Science (With Help from Centaurs and the Wizard of Oz) - presentation at Unbound 2019 (VIDEO)</title>
-    <updated>2025-08-22T14:51:11.016838+00:00</updated>
+    <updated>2025-08-25T14:33:29.257217+00:00</updated>
     <content type="html">&lt;p&gt;I'll be at &lt;a href="https://unbound.live/London/agenda#/"&gt;Unbound London&lt;/a&gt; for a talk at 12.05 on Thu 18th July 2019 on &lt;a href="https://www.youtube.com/watch?v=4kcjH4v6yrQ"&gt;How to Cheat at Data Science (With Help from Centaurs and the Wizard of Oz)&lt;/a&gt; .&lt;/p&gt;</content>
     <link href="https://www.gregdetre.com/blog/unbound-2019/"/>
     <published>2019-07-18T00:00:00+00:00</published>
@@ -835,7 +835,7 @@
   <entry>
     <id>https://www.gregdetre.com/blog/ltsf-2019/</id>
     <title>LTSF 2019</title>
-    <updated>2024-09-29T15:55:55.599842+00:00</updated>
+    <updated>2025-08-25T14:33:29.272171+00:00</updated>
     <content type="html">&lt;p&gt;Hi everyone. I’ll be at &lt;a href="https://www.learningtechnologies.co.uk/learning-tech-summer-forum/ltsf-conference"&gt;LTSF 2019 (Learning Technologies Summer Forum)&lt;/a&gt; in London on 11th July 2019.&lt;/p&gt;
 &lt;p&gt;If you’re interested in the slides, &lt;a href="https://www.linkedin.com/in/gregdetre/"&gt;drop me a line on LinkedIn&lt;/a&gt;.&lt;/p&gt;</content>
     <link href="https://www.gregdetre.com/blog/ltsf-2019/"/>
@@ -844,7 +844,7 @@
   <entry>
     <id>https://www.gregdetre.com/blog/how-memory-works/</id>
     <title>How to remember names at a party</title>
-    <updated>2025-08-14T14:20:22.527845+00:00</updated>
+    <updated>2025-08-25T14:33:29.258001+00:00</updated>
     <content type="html">&lt;p&gt;(First published at &lt;a href="https://www.yourheights.com/blogs/health/how-memory-works"&gt;Heights&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;Can't remember the name of the person you just met at your party? We can help with that.&lt;/p&gt;
 &lt;h2 id="why-do-we-forget-things"&gt;Why do we forget things?&lt;/h2&gt;
@@ -874,7 +874,7 @@
   <entry>
     <id>https://www.gregdetre.com/blog/abstractions-are-distractions-to-an-ai-assisted-programmer/</id>
     <title>Abstractions are distractions to an AI-assisted programmer</title>
-    <updated>2025-08-16T17:53:35.487241+00:00</updated>
+    <updated>2025-08-25T14:33:29.242185+00:00</updated>
     <content type="html">&lt;p&gt;Hypothesis: &lt;em&gt;In a world of AI programming assistants, there will be less need for high-level software languages &amp;amp; frameworks.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Right now, we human programmers like higher-level libraries because they save us keystrokes, and perhaps they’re &lt;a href="https://paulgraham.com/avg.html"&gt;more powerful&lt;/a&gt;. All other things being equal, fewer keystrokes means we can write code more quickly, with &lt;a href="https://stackoverflow.com/questions/2898571/basis-for-claim-that-the-number-of-bugs-per-line-of-code-is-constant-regardless"&gt;fewer bugs&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;But all other things are not equal, because cognitive load matters a lot. For humans, there is a complicated relationship between cognitive load and abstraction. Too low-level is bad - it’s almost always harder to write software if we have to manage our own memory, implement all our own data structures from scratch, or indeed type out our code in binary. But at the same time there are costs to writing at a higher-level - at the very least, we have to worry about &lt;a href="https://www.joelonsoftware.com/2002/11/11/the-law-of-leaky-abstractions/"&gt;leaky abstractions&lt;/a&gt;, and the &lt;a href="https://niltag.net/essays/racket_monad.html"&gt;effort to learn them&lt;/a&gt;.&lt;/p&gt;
@@ -891,7 +891,7 @@
   <entry>
     <id>https://www.gregdetre.com/blog/worst-experiment-ever/</id>
     <title>Worst scientific experiment ever?</title>
-    <updated>2025-08-14T15:24:22.552274+00:00</updated>
+    <updated>2025-08-25T14:33:29.273955+00:00</updated>
     <content type="html">&lt;p&gt;&lt;em&gt;Aim&lt;/em&gt;: to understand what makes for a good life.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Methods&lt;/em&gt;: The subject spent two weeks in &lt;a href="https://plumvillage.org/"&gt;Plum Village&lt;/a&gt;, a Zen Buddhist centre in southwest France. The weather was often sunny. Most of the day was spent outside, surrounded by forest, sometimes farming. The subject lived in a community of 250 people, include monastics, in communal housing. They were assigned to a small group that regularly sat in a circle together sharing from the heart, with occasional catchups in depth with an old friend. They meditated twice a day, walking everywhere at a snail's pace attempting to be mindful, while hearing a lot about bodhisattvas. They drank uncaffeinated tea, ate vegan meals three times a day, and mostly kept silent from late evening until after breakfast. Sources of entertainment included chatting in the tea house, journalling, reading (mostly books by Thich Nhat Hanh), going for a run, lying on the grass, with occasional naps, campfire singalong, and football game.&lt;/p&gt;
 &lt;p&gt;I’m not saying this is everyone’s cup of tea. And indeed, I often felt bored and restless.&lt;/p&gt;
@@ -919,7 +919,7 @@
   <entry>
     <id>https://www.gregdetre.com/blog/buy-microsoft-stock-as-they-add-ai-to-every-one-of-their-products/</id>
     <title>Buy Microsoft stock as they add AI to every one of their products</title>
-    <updated>2025-08-14T14:20:15.904641+00:00</updated>
+    <updated>2025-08-25T14:33:29.236327+00:00</updated>
     <content type="html">&lt;p&gt;I started consulting on AI innovation for an enterprise manufacturing company - a day later, I went out and bought a bunch of Microsoft stock.&lt;/p&gt;
 &lt;p&gt;Why? My client always looked for the Microsoft solution first. And I could see an endless march of Microsoft press releases, weaving GPT-4 into into their entire product portfolio. I'm betting they are representative of the way many large company IT departments think.&lt;/p&gt;
 &lt;p&gt;Secondly, Microsoft’s bet on OpenAI will continue to pay off - it’s easy to forget that OpenAI had an internal version of GPT-4 working &lt;em&gt;2 years&lt;/em&gt; ago. So even if the pack has caught up with GPT-4-based models, that’ll change when the 5th shoe drops.&lt;/p&gt;
@@ -937,7 +937,7 @@
   <entry>
     <id>https://www.gregdetre.com/blog/the-real-reason-we-cant-define-artificial-general-intelligence/</id>
     <title>The real reason we can’t define 'Artificial General Intelligence'</title>
-    <updated>2025-08-17T06:39:28+00:00</updated>
+    <updated>2025-08-25T14:33:29.255082+00:00</updated>
     <content type="html">&lt;p&gt;Could it be that the real reason we struggle to define Artificial General Intelligence (AGI) is that &lt;strong&gt;any clean, broad definition of general intelligence would exclude &lt;em&gt;us&lt;/em&gt;&lt;/strong&gt;?&lt;/p&gt;
 &lt;p&gt;Intelligence is hard to pin down, but I like these two related definitions:&lt;/p&gt;
 &lt;ol&gt;
@@ -961,7 +961,7 @@
   <entry>
     <id>https://www.gregdetre.com/blog/advice-to-a-younger-self/</id>
     <title>Advice to a younger self</title>
-    <updated>2025-08-17T06:27:49+00:00</updated>
+    <updated>2025-08-25T14:33:29.246030+00:00</updated>
     <content type="html">&lt;h3 id="think-back-to-what-you-were-doing-5-10-15-years-ago-really-visualise-it-what-advice-would-you-give-your-younger-self-is-it-consistent-honestly-doing-the-exercise-is-far-more-interesting-than-reading-other-peoples-answers"&gt;"Think back to what you were doing 5, 10, 15+ years ago. Really visualise it. What advice would you give your younger self? Is it consistent? Honestly doing the exercise is far more interesting than reading other people’s answers."&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;(&lt;a href="https://twitter.com/naval/status/914189738453622784"&gt;from Naval Ravikant&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -1006,7 +1006,7 @@
   <entry>
     <id>https://www.gregdetre.com/blog/what-is-wisdom/</id>
     <title>What is wisdom?</title>
-    <updated>2025-08-14T14:19:56.662001+00:00</updated>
+    <updated>2025-08-25T14:33:29.265202+00:00</updated>
     <content type="html">&lt;p&gt;Wisdom is often about truths whose opposite are truths.&lt;/p&gt;
 &lt;p&gt;Wisdom is about learning from one's mistakes - without beating oneself up.&lt;/p&gt;
 &lt;p&gt;Wisdom is about loving yourself, forgiving yourself, accepting yourself - but being honest with yourself, listening to criticism, and looking to grow.&lt;/p&gt;
@@ -1030,7 +1030,7 @@
   <entry>
     <id>https://www.gregdetre.com/blog/pronouns-plosive-sounds-can-you-change-society-with-a-single-word/</id>
     <title>Pronouns &amp; plosive sounds - can you change society with a single word?</title>
-    <updated>2025-08-14T14:19:54.708644+00:00</updated>
+    <updated>2025-08-25T14:33:29.260889+00:00</updated>
     <content type="html">&lt;h1 id="argument"&gt;Argument&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -1102,7 +1102,7 @@
   <entry>
     <id>https://www.gregdetre.com/blog/what-will-ai-do-to-jobs/</id>
     <title>What will AI do to jobs?</title>
-    <updated>2025-08-14T15:24:18.710225+00:00</updated>
+    <updated>2025-08-25T14:33:29.266687+00:00</updated>
     <content type="html">&lt;p&gt;There is already a huge gap between what current models are capable of, and how they’re being currently used. Even if AI doesn't improve at all from the current state of the art: AI will automate lots of jobs away; AI will also increase productivity and create new jobs.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;The good news&lt;/strong&gt;. Take programming, for example: if one AI-assisted programmer can do the work of 10 mere StackOverflow-assisted programmers, then we will build much more software. This is the &lt;a href="https://www.greenchoices.org/news/blog-posts/the-jevons-paradox-when-efficiency-leads-to-increased-consumption"&gt;Jevons Paradox.&lt;/a&gt; Programming teams may shrink, but more will proliferate. And we’ll also need more prompt engineers and product managers. So, perhaps fewer programmers per team, but more teams, and work created for other roles. We might imagine that the same will be true for many of the other fields where AI-assistance will turbocharge productivity. There will be orders of magnitude more writing, more medicine, more data insights, more architecture, more therapy, and indeed more pop songs, more personalised advertising messages, more lawsuits.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;The bad news&lt;/strong&gt;. The wave of AI-automation is going to be larger and faster than any technological unemployment we’ve seen before. It won’t be obvious in the next year or two, but it will be stark by the 2030s. Even if new jobs are being created, there will be a lag, and the people who lost their jobs may not be qualified for the new jobs. This is terrifying. People will move towards jobs in lingering niches where AI can’t yet compete, perhaps involving physical interactions (like hairdressing and plumbing), and rich human interactions (like therapy and care work).&lt;/p&gt;
@@ -1116,7 +1116,7 @@
   <entry>
     <id>https://www.gregdetre.com/blog/metaphors-for-depression-clean-language-and-the-dsm/</id>
     <title>Metaphors for depression, clean language, and the DSM</title>
-    <updated>2025-08-14T14:19:50.317816+00:00</updated>
+    <updated>2025-08-25T14:33:29.246702+00:00</updated>
     <content type="html">&lt;div class="toc"&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="#postscript-a-testable-hypothesis-treatment-idea"&gt;Postscript: a testable hypothesis &amp;amp; treatment idea&lt;/a&gt;&lt;/li&gt;
@@ -1144,7 +1144,7 @@
   <entry>
     <id>https://www.gregdetre.com/blog/we-should-de-stigmatise-suicide-our-innermost-freedom-and-right/</id>
     <title>We should de-stigmatise suicide, our innermost freedom and right</title>
-    <updated>2025-08-19T09:05:24.548123+00:00</updated>
+    <updated>2025-08-25T14:33:29.264430+00:00</updated>
     <content type="html">&lt;p&gt;My greatest fear has never been dying. It is and remains not being able to die if I want to.&lt;/p&gt;
 &lt;p&gt;I fear torture. I fear solitary confinement. I fear dementia. I fear the slow and painful breakdown of my body. I fear dependence and becoming a burden. I fear debilitating depression.&lt;/p&gt;
 &lt;p&gt;What is there to fear about death, nothingness itself? Maybe an end to joys, a sense of opportunity costs and failed potential, the pain our loved ones might feel at losing us... but these are the preoccupations of the living, not the non-existent.&lt;/p&gt;
@@ -1158,7 +1158,7 @@
   <entry>
     <id>https://www.gregdetre.com/blog/what-new-developments-will-we-need-for-personalised-relevant-one-to-one-ai-tutoring/</id>
     <title>What new developments will we need for personalised, relevant one-to-one AI tutoring?</title>
-    <updated>2025-08-16T17:53:35.509726+00:00</updated>
+    <updated>2025-08-25T14:33:29.265768+00:00</updated>
     <content type="html">&lt;div class="toc"&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="#introduction"&gt;Introduction&lt;/a&gt;&lt;/li&gt;
@@ -1189,7 +1189,7 @@
   <entry>
     <id>https://www.gregdetre.com/blog/how-can-we-measure-the-effectiveness-of-an-ai-tutor/</id>
     <title>How can we measure the effectiveness of an AI tutor?</title>
-    <updated>2025-08-16T17:53:35.498197+00:00</updated>
+    <updated>2025-08-25T14:33:29.253490+00:00</updated>
     <content type="html">&lt;div class="toc"&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="#measuring-human-learner-performance"&gt;Measuring human-learner performance&lt;/a&gt;&lt;/li&gt;
@@ -1226,7 +1226,7 @@
   <entry>
     <id>https://www.gregdetre.com/blog/psychological-illusions-in-ai-assisted-programming/</id>
     <title>Psychological effects and cognitive illusions in AI-assisted programming</title>
-    <updated>2025-08-16T18:02:14.763849+00:00</updated>
+    <updated>2025-08-25T14:33:29.261648+00:00</updated>
     <content type="html">&lt;p&gt;There's something odd and new about the subjective experience of AI-assisted programming. It distorts our sense of time passing, difficulty, effectiveness, and joy.&lt;/p&gt;
 &lt;p&gt;Some of these are well-known psychological effects and illusions, and the psychological theories behind them can help us understand a bit better what's going on.&lt;/p&gt;
 &lt;div class="toc"&gt;
@@ -1307,7 +1307,7 @@
   <entry>
     <id>https://www.gregdetre.com/blog/i-refuse-to-use-this-technology-even-if-it-would-make-me-money/</id>
     <title>I refuse to use this technology, even if it would make me money</title>
-    <updated>2025-08-17T09:54:02.015276+00:00</updated>
+    <updated>2025-08-25T14:33:29.260891+00:00</updated>
     <content type="html">&lt;p&gt;There is a new version of Grok, the Elon Musk-owned xAI bot used on Twitter/X coming out later today.  &lt;/p&gt;
 &lt;p&gt;We were discussing it on a UK AI WhatsApp group that I'm part of, full of some great technologists.  &lt;/p&gt;
 &lt;p&gt;This AI is sympathetic to Hitler, and producing hate speech. Last time, when it started talking about white genocide, the company acknowledged that was in direct response to a change that someone (they won’t say who) had made to its system prompt.  &lt;/p&gt;
@@ -1333,7 +1333,7 @@
   <entry>
     <id>https://www.gregdetre.com/blog/product-idea-an-episode-focused-podcast-player/</id>
     <title>Product idea - an episode-focused podcast player</title>
-    <updated>2025-08-17T13:37:58.382222+00:00</updated>
+    <updated>2025-08-25T14:33:29.259482+00:00</updated>
     <content type="html">&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Podcast app user interfaces work at the level of a &lt;em&gt;show&lt;/em&gt; - you subscribe to a &lt;em&gt;show&lt;/em&gt;, it recommends &lt;em&gt;shows&lt;/em&gt;.&lt;/p&gt;
@@ -1394,7 +1394,7 @@
   <entry>
     <id>https://www.gregdetre.com/blog/human-readers-deserve-human-writers-a-policy-on-ai-and-human-craft/</id>
     <title>Human readers deserve human writers: a policy on AI and human craft</title>
-    <updated>2025-08-25T11:16:23.440640+00:00</updated>
+    <updated>2025-08-25T14:33:29.258646+00:00</updated>
     <content type="html">&lt;p&gt;When you have a magic hammer, it's so very tempting to wallop everything you see with it. But should I use the magic AI hammer for my creative work (from writing to technology products)?&lt;/p&gt;
 &lt;p&gt;It certainly feels easy (usually a warning sign), and often helpful. As a solo creative, even an AI collaborator give me the sudden boost and release of a trampoline, along with a welcome, stabilising outside point of view.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.newyorker.com/culture/the-weekend-essay/why-ai-isnt-going-to-make-art"&gt;Ted Chiang gestures at a quantification of artistic expression&lt;/a&gt;: &lt;em&gt;"... art is something that results from making a lot of choices. ... When you are writing fiction, you are—consciously or unconsciously—making a choice about almost every word you type; to oversimplify, we can imagine that a ten-thousand-word short story requires something on the order of ten thousand choices. When you give a generative-A.I. program a prompt, you are making very few choices; if you supply a hundred-word prompt, you have made on the order of a hundred choices."&lt;/em&gt;&lt;/p&gt;
