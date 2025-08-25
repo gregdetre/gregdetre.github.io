@@ -226,31 +226,7 @@ Greg Detre
         <blockquote class="bluesky-embed"><a href="https://bsky.app/profile/gregdetre.bsky.social/post/3lx7cughnqc2k" target="_blank" rel="noopener noreferrer"
                 title="View on Bluesky">View on Bluesky</a></blockquote>
         
-        <script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"
-            onload="(function(){try{var e=window.BlueskyEmbed||window.Bluesky||window.bluesky||window.bsky; if(e){var fn=e.scan||e.load||e.hydrate; if(typeof fn==='function'){fn.call(e);} } console.log('Bluesky embed script loaded');}catch(err){console.log('Bluesky embed load error', err);}})()"></script>
-        <script>
-            (function () {
-                function hydrate() {
-                    try {
-                        var e = window.BlueskyEmbed || window.Bluesky || window.bluesky || window.bsky;
-                        var fn = e && (e.scan || e.load || e.hydrate);
-                        if (typeof fn === 'function') {
-                            fn.call(e);
-                            console.log('Bluesky embed hydrated');
-                            return true;
-                        }
-                    } catch (err) {
-                        console.log('Bluesky embed hydrate error', err);
-                    }
-                    return false;
-                }
-                if (!hydrate()) {
-                    window.addEventListener('load', hydrate);
-                    setTimeout(hydrate, 1000);
-                    setTimeout(hydrate, 3000);
-                }
-            })();
-        </script>
+        <script defer src="/static/js/bluesky-embeds.js"></script>
     </section>
     
 </div>
