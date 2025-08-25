@@ -1,0 +1,2 @@
+[console_scripts]
+moral-status-graphs = moral_status_openai_gpt5_high:main
