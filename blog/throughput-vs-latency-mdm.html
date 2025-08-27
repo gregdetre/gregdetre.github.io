@@ -24,11 +24,11 @@
     <div class="redirect-body">
         <h1 id="_1"></h1>
 <p>Imagine you have a conveyor belt in a factory that transports widgets from one end to the other:</p>
-<p><img alt="" src="/blog/makingdatamistakes/throughput-vs-latency-mdm/images/00JDKaDNDSNICCXQF60LfI0R_p_VxM0LqCNKV8z7XNVe-7Y2lKRgeorkQWuKQsiR9Hf_TDmJstO5-rHFV4nMMlAyB3YxmAKRiWaHn9rreHpVbfJYXPE3w7k30D2M1q1lhDGN2QFz"/></p>
+<p><img alt="" src="/blog/makingdatamistakes/throughput-vs-latency-mdm/images/00JDKaDNDSNICCXQF60LfI0R_p_VxM0LqCNKV8z7XNVe-7Y2lKRgeorkQWuKQsiR9Hf_TDmJstO5-rHFV4nMMlAyB3YxmAKRiWaHn9rreHpVbfJYXPE3w7k30D2M1q1lhDGN2QFz" /></p>
 <p>If you speed it up, you’ll reduce (i.e. improve) <strong>latency</strong> (the time taken for a given widget to pass through):</p>
-<p><img alt="" src="/blog/makingdatamistakes/throughput-vs-latency-mdm/images/yTVCX7laLSFeZ9ZpiMS5Em4HcL7N1sSSlzXxL7vT3v5qYAyRMWV8E0e7FU2mBXD6pjlJTKAUqAChN_SCZ8T06t7okd87GHZuUTAoqiu-Tfmf-E11ao_OhmymPK4RpXH0_jNCxu0w"/></p>
+<p><img alt="" src="/blog/makingdatamistakes/throughput-vs-latency-mdm/images/yTVCX7laLSFeZ9ZpiMS5Em4HcL7N1sSSlzXxL7vT3v5qYAyRMWV8E0e7FU2mBXD6pjlJTKAUqAChN_SCZ8T06t7okd87GHZuUTAoqiu-Tfmf-E11ao_OhmymPK4RpXH0_jNCxu0w" /></p>
 <p>If you widen it, you’ll increase <strong>throughput</strong> (the number of widgets per second that pass through) - but you <em>won’t</em> improve latency:</p>
-<p><img alt="" src="/blog/makingdatamistakes/throughput-vs-latency-mdm/images/B6wUKgRrnVgi6dnaNmIJhVSZ2ji0t5ZSXM0oPolH1ueUtHMZbJIy94ZnWbZxzlWAQesyBnyXc940V9gr7Ov6qyUerhdurqJ56nx9s79MN4CKz7eOxV9_Au-wukExEpcG3qhL3cew"/></p>
+<p><img alt="" src="/blog/makingdatamistakes/throughput-vs-latency-mdm/images/B6wUKgRrnVgi6dnaNmIJhVSZ2ji0t5ZSXM0oPolH1ueUtHMZbJIy94ZnWbZxzlWAQesyBnyXc940V9gr7Ov6qyUerhdurqJ56nx9s79MN4CKz7eOxV9_Au-wukExEpcG3qhL3cew" /></p>
 <p>In the case of, say, website performance, latency corresponds to how quickly the page loads (aka ‘performance’). Throughput corresponds to how many users you can have hitting the site concurrently (aka ’scalability’).</p>
 <p>Both latency and throughput are important, but users of the system will probably notice latency most, since that’s what’s delaying their task being completed (e.g. page load time).</p>
 <p><strong>If you improve latency, you also improve throughput. However, improving throughput won’t improve latency.</strong> Imagine making a slow conveyor belt wider - a given widget will still take a long time to pass all the way along it.</p>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Redirecting...</title>
+    <link rel="canonical" href="https://medium.com/we-are-big-health/how-i-learned-to-stop-worrying-and-love-hipaa-part-1-807ae94b0ade" />
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content="0; url=https://medium.com/we-are-big-health/how-i-learned-to-stop-worrying-and-love-hipaa-part-1-807ae94b0ade" />
+    <link rel="stylesheet" type="text/css" href="/static/css/base.css" />
+</head>
+
+<body>
+    <p>Redirecting to
+        <a href="https://medium.com/we-are-big-health/how-i-learned-to-stop-worrying-and-love-hipaa-part-1-807ae94b0ade">https://medium.com/we-are-big-health/how-i-learned-to-stop-worrying-and-love-hipaa-part-1-807ae94b0ade</a>
+        - click if you are not redirected.
+    </p>
+    
+    <hr />
+    <div class="external-source-note">
+        <strong>Note</strong>: You will be redirected to the original article. A local copy is included below for
+        convenience.
+    </div>
+    <div class="redirect-body">
+        <p><em>Originally published on Medium: <a href="https://medium.com/we-are-big-health/how-i-learned-to-stop-worrying-and-love-hipaa-part-1-807ae94b0ade">How I learned to stop worrying and love HIPAA</a></em></p>
+<p>I can still fondly remember when I thought a <a href="https://en.wikipedia.org/wiki/Health_Insurance_Portability_and_Accountability_Act">HIPAA</a> was the most dangerous animal in Africa. Then I learned it only has one ‘P’, which might as well stand for ‘paperwork’. Two years on, I see HIPAA as a well-crafted and pragmatic set of regulations that have helped us build up our data security and privacy approach. And though it’s my job to continue worrying, I now worry in a much more structured way.</p>
+<p><img alt="Hippo" src="images/hipaa-part-1-hippo.png" /></p>
+<p>We’re a software startup that helps people with sleep and mental health problems. We channel the best ideas and evidence from the psychological literature to provide help and advice.</p>
+<p>Just as a pharmaceutical company runs extensive trials and amasses evidence, so do we. Just as pharma companies need to worry about the potential side-effects of their pills, we worry about the potential side-effects of data security breaches. On the one hand, cognitive behavioral therapy doesn’t cause headaches or diarrhea — on the other hand, little white pills don’t need operating system security patches.</p>
+<p>The <a href="http://www.hhs.gov/hipaa/">HIPAA</a> regulations protect the security and privacy of health data in the US. We’ve spent a busy two years writing policies and upgrading our security to meet and exceed these requirements. In this set of guides, I’ll outline some of HIPAA’s core principles, and how to approach HIPAA compliance for other digital health startups. I’ll simplify, but provide a starting point.</p>
+<h1 id="which-data-needs-to-be-protected">Which data needs to be protected?</h1>
+<p>Firstly, you need to know which data are covered by HIPAA.</p>
+<p>If there’s a payor involved (usually health insurance or a company health plan) or a health provider (a doctor’s office or hospital), the data collected is covered under HIPAA. Notably, this means that when selling directly to consumers, that data is <em>not</em> covered under HIPAA. [The ‘HI’ in HIPAA stands for ‘Health Insurance’.]</p>
+<p>HIPAA focuses on <a href="http://cphs.berkeley.edu/hipaa/hipaa18.html"><em>Protected Health Information</em></a> <em>(PHI)</em> , that is, <em>health data that’s identifiable</em>. Mostly, the characteristics of identifiable information are obvious: if your data contain names, email addresses, phone numbers, bank accounts, SSNs, medical record numbers, then it’s identifiable. But even <em>IP addresses, dates &amp; times</em>, URLs, photographs and biometric identifiers make it identifiable. So your webserver logs, profile information, message queues, error logs, and lots of other logs contain identifiable information. [Make sure to read about <a href="http://cphs.berkeley.edu/hipaa/hipaa18.html">all 18 identifiers</a>].</p>
+<p>Note that if you can disconnect the identifying information from the health information, it‘s not PHI any more. So an EEG readout on its own is not PHI assuming it can’t be identified (though it’s probably not very useful either). In practice, you need your health information to be identified for it to be useful, which then needs to be protected.</p>
+<p>From <a href="http://img.deusm.com/informationweek/2013/12/1112741/Security-Cartoon.jpg">http://img.deusm.com/informationweek/2013/12/1112741/Security-Cartoon.jpg</a></p>
+<h1 id="risk-assessment">Risk Assessment</h1>
+<p>Now that you know which of your data you need to protect, you need to run a <a href="http://www.hhs.gov/hipaa/for-professionals/security/guidance/guidance-risk-analysis/index.html">Risk Assessment</a> to determine your most dangerous risks. This is a deeply sensible idea.</p>
+<p>Start by listing everything you’re worried about as a <a href="http://www.hhs.gov/ocr/privacy/hipaa/administrative/securityrule/rafinalguidancepdf.pdf">threat/vulnerability pair</a>:</p>
+<ul>
+<li>
+<p>the vulnerability is the avenue, i.e. the flaw/weakness that could be exercised;</p>
+</li>
+<li>
+<p>the threat is the agent.</p>
+</li>
+</ul>
+<p>For example:</p>
+<ol>
+<li>
+<p><em>Risk</em> = Password guessed. <em>Vulnerability</em> = Weak password set by user. <em>Threat</em> = Attacker.</p>
+</li>
+<li>
+<p><em>Risk</em> = Unable to recover lost PHI in the event of a disaster. <em>Vulnerability</em> = Database backup corruption or failure. <em>Threat</em> = Environmental.</p>
+</li>
+</ol>
+<p>For each <em>Risk</em> , we assign it:</p>
+<ul>
+<li>
+<p>a <em>Probability Score</em> (1=Low, 2=Medium, 3=High)</p>
+</li>
+<li>
+<p>a <em>Criticality Score</em> (1=Low, 2=Medium, 3=High).</p>
+</li>
+<li>
+<p>a compound <em>Riskiness = Probability x Criticality</em></p>
+</li>
+</ul>
+<p>Then we rank by <em>Riskiness</em> , and define a <em>Work Plan</em> to mitigate each <em>Risk</em> , with an associated <em>Timeline</em>.</p>
+<p>HIPAA is pragmatic and flexible. It doesn’t prescribe exactly how to go about the Risk Assessment — this is just the method we’ve found that’s the right balance of rigor and hassle for us. HIPAA doesn’t tell you exactly what the Risks are, or how to mitigate them. It leaves that up to you. This flexibility is both a blessing and a curse — it provides more room for interpretation, but means that the same legislation can be applicable all the way from a two-person startup to a $2b hospital.</p>
+<p>I do still worry — but the Risk Assessment helps me structure and prioritize my worries.</p>
+<p>This is the end of Part 1. In <a href="/@gregdetre/how-i-learned-to-stop-worrying-and-love-hipaa-part-2-5e2b0aea4b60">Part 2,</a> we’ll discuss documentation.</p>
+<p>You can follow our publication <a href="https://medium.com/we-are-big-health">‘We are Big Health’</a> on Medium.</p>
+<h1 id="resources">Resources</h1>
+<ol>
+<li>Finally, the <a href="https://helpmewithhipaa.com/podcasts/page/4/">Help Me With HIPAA Podcast</a> provides a discursive, playful introduction to many of the issues that IT professionals should consider.</li>
+</ol>
+    </div>
+    
+</body>
+
+</html>

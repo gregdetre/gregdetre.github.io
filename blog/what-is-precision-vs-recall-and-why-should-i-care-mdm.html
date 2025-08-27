@@ -46,7 +46,7 @@
 </li>
 </ul>
 <p>Our job is to guess what the yes/no <strong>label</strong> should be for a new piece of <strong>test data</strong> based on its <strong>input</strong>. For example, the input might be an X-ray of someone's leg, and we're trying to label it yes/no for whether the leg is broken.</p>
-<p><img alt="" src="/blog/makingdatamistakes/what-is-precision-vs-recall-and-why-should-i-care-mdm/images/ankle-2253057_1280-2.jpg"/></p>
+<p><img alt="" src="/blog/makingdatamistakes/what-is-precision-vs-recall-and-why-should-i-care-mdm/images/ankle-2253057_1280-2.jpg" /></p>
 <p><strong>If each input is an X-ray of someone's leg, the associated label might be 'yes - it’s broken', or 'no - it’s not broken'. It's the algorithm's job to identify if a new X-ray shows a broken leg, or not.</strong></p>
 <p>In this article, we’re going to focus on <em>how to measure whether we’re doing a good job</em>, and we’ll discuss three metrics, <strong>‘accuracy’</strong>, <strong>‘precision’</strong>, and <strong>‘recall’</strong>.</p>
 <h2 id="accuracy-how-often-do-you-get-the-right-answer">Accuracy: how often do you get the right answer?</h2>
@@ -67,7 +67,7 @@
 </ul>
 <p>Sometimes we care more about precision, sometimes we care more about recall.</p>
 <p>If we’re trying to decide whether to let someone into the Federal Reserve’s gold vaults from their retinal scan, maybe we care a lot about <strong>precision</strong>. In that case, we don’t want to accidentally say ‘yes’ when the answer is in fact ‘no’. We don’t want to accidentally let in a master thief holding up a severed eyeball - even if that means irritating the real Bank Manager because we’re being really careful and mistakenly reject them sometimes.</p>
-<p><img alt="Precision is important for retinal scanners and bank security" src="/blog/makingdatamistakes/what-is-precision-vs-recall-and-why-should-i-care-mdm/images/image.png"/></p>
+<p><img alt="Precision is important for retinal scanners and bank security" src="/blog/makingdatamistakes/what-is-precision-vs-recall-and-why-should-i-care-mdm/images/image.png" /></p>
 <p>Precision is important for bank security - particularly if a master thief has access to rogue eyeballs!</p>
 <p>If we’re trying to tell whether someone has cancer from their medical imaging, maybe we care a lot about <strong>recall</strong>, i.e. we don’t want to accidentally say ‘no’ when the answer is ‘yes’. We don’t want to accidentally miss anybody, even if it means we occasionally have some false positives that go for a follow-up test.</p>
 <p>For a deeper dive into precision and recall, the <a href="https://en.wikipedia.org/wiki/Precision_and_recall?ref=makingdatamistakes.com">Wikipedia’s examples and Venn diagrams are pretty helpful</a> and more rigorously defined.</p>
@@ -76,7 +76,7 @@
 <p>In the real world, <strong>your first job when faced with a classification task is to measure how balanced the dataset is, and then to have a conversation with your stakeholders about whether they care about precision or recall.</strong> Unhelpfully, the answer is almost always ‘both’!</p>
 <p>There are more advanced metrics (like ‘F1’, ‘area under the ROC curve’, ‘Cohen’s kappa’) that take both into account, so you could just use one of those. But once you dig into the problem, you may realise that one is more important than the other. Indeed you may eventually end up with an even more sophisticated approach. For example, imagine a situation where you make more money by maximising recall, but your reputation suffers if precision isn’t good enough. In that case, perhaps you decide on some acceptable level of precision (whatever’s standard for the existing system or market) - and set your threshold to maximise recall, as long as precision is above that acceptable level.</p>
 <p>As always, <strong>the key in data science is evaluation, i.e. knowing how to measure whether you're doing a good job.</strong> Unless you get that right, no amount of algorithm tuning will lead to happy stakeholders!</p>
-<hr/>
+<hr />
     </div>
     
 </body>

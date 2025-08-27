@@ -25,8 +25,8 @@
         <p>N.B. This was written with Claude Sonnet 3.5 in mind - for more modern models, see:</p>
 <p>[A field guide to AI-first development</p>
 <p>Detailed techniques and prompts for AI-first coding, for experienced developers to build medium-sized production-ready codebases, providing lots of architecture-level product guidance but without writing a line of code by hand.</p>
-<p><img alt="" src="/blog/makingdatamistakes/making-tea-while-ai-codes-a-practical-guide-to-2024s-development-revolution-mdm/images/logo---Greg-Detre-Consulting---191002-1.png"/>Making Data MistakesGreg Detre</p>
-<p><img alt="" src="/blog/makingdatamistakes/making-tea-while-ai-codes-a-practical-guide-to-2024s-development-revolution-mdm/images/Google_AI_Studio_2025-07-30T15_15_27.887Z.png"/>](https://www.makingdatamistakes.com/ai-first-development/)</p>
+<p><img alt="" src="/blog/makingdatamistakes/making-tea-while-ai-codes-a-practical-guide-to-2024s-development-revolution-mdm/images/logo---Greg-Detre-Consulting---191002-1.png" />Making Data MistakesGreg Detre</p>
+<p><img alt="" src="/blog/makingdatamistakes/making-tea-while-ai-codes-a-practical-guide-to-2024s-development-revolution-mdm/images/Google_AI_Studio_2025-07-30T15_15_27.887Z.png" />](https://www.makingdatamistakes.com/ai-first-development/)</p>
 <ul>
 <li>
 <p>Introduction</p>
@@ -136,7 +136,7 @@
 <p>I had an inspiration for how to tackle it, but there was no time to try it! So I gave Cursor (an AI coding assistant) clear instructions and toddled off to do the washing up. "Wouldn't it be poetic," I thought, "if this became my story of the moment AI truly became agentic?"</p>
 <p>Five minutes later, I returned to find... my laptop had fallen asleep.</p>
 <p>I gave it a prod, went back to the dishes, and then checked again just before we walked out the door. This time? Success! Clean dishes and the site was working perfectly after a long AI Composer thread of abortive attempts, culminating in a triumphal "All tests passed". My New Year's gift was watching an AI assistant independently navigate a complex deployment process while I handled real-world chores.</p>
-<p><img alt="" src="/blog/makingdatamistakes/making-tea-while-ai-codes-a-practical-guide-to-2024s-development-revolution-mdm/images/Screenshot-2025-01-08-at-02.13.34.png"/></p>
+<p><img alt="" src="/blog/makingdatamistakes/making-tea-while-ai-codes-a-practical-guide-to-2024s-development-revolution-mdm/images/Screenshot-2025-01-08-at-02.13.34.png" /></p>
 <h1 id="introduction">Introduction</h1>
 <h2 id="what-is-cursor">What is Cursor?</h2>
 <blockquote>
@@ -716,7 +716,7 @@
 <p><a href="https://www.cursor.com/?ref=makingdatamistakes.com">Cursor IDE</a></p>
 </li>
 <li>
-<p><a href="https://www.arguingwithalgorithms.com/posts/cursor-review.html?ref=makingdatamistakes.com">Useful tips for older versions of Cursor</a> </p>
+<p><a href="https://www.arguingwithalgorithms.com/posts/cursor-review.html?ref=makingdatamistakes.com">Useful tips for older versions of Cursor</a>  </p>
 </li>
 </ul>
 <p><a href="https://www.reddit.com/r/cursor/comments/1hqcp03/a_few_tips_for_using_composer_effectively/?ref=makingdatamistakes.com">Useful tips for Composer</a></p>
@@ -845,27 +845,32 @@
 <h4 id="adding-required-columns">Adding Required Columns</h4>
 <p>Three-step process to avoid nulls (see <code>migrations/004_fix_sourcedir_language.py</code>):</p>
 <p>Make it required and remove default</p>
-<div class="codehilite"><pre><span></span><code>migrator.sql("ALTER TABLE table ALTER COLUMN new_field SET NOT NULL")
-migrator.sql("ALTER TABLE table ALTER COLUMN new_field DROP DEFAULT")
+<div class="codehilite"><pre><span></span><code>migrator.sql(&quot;ALTER TABLE table ALTER COLUMN new_field SET NOT NULL&quot;)
+migrator.sql(&quot;ALTER TABLE table ALTER COLUMN new_field DROP DEFAULT&quot;)
 </code></pre></div>
+
 <p>Fill existing rows</p>
-<div class="codehilite"><pre><span></span><code>database.execute_sql("UPDATE table SET new_field = 'value'")
+<div class="codehilite"><pre><span></span><code>database.execute_sql(&quot;UPDATE table SET new_field = &#39;value&#39;&quot;)
 </code></pre></div>
+
 <p>Add column as nullable with a default value</p>
 <div class="codehilite"><pre><span></span><code>migrator.add_columns(
     Model,
-    new_field=CharField(max_length=2, default="el"),
+    new_field=CharField(max_length=2, default=&quot;el&quot;),
 )
 </code></pre></div>
+
 <h4 id="managing-indexes">Managing Indexes</h4>
 <p>Create new index:</p>
 <div class="codehilite"><pre><span></span><code>migrator.sql(
-    'CREATE UNIQUE INDEX new_index_name ON table (column1, column2);'
+    &#39;CREATE UNIQUE INDEX new_index_name ON table (column1, column2);&#39;
 )
 </code></pre></div>
+
 <p>Drop existing index if needed:</p>
-<div class="codehilite"><pre><span></span><code>migrator.sql('DROP INDEX IF EXISTS "index_name";')
+<div class="codehilite"><pre><span></span><code>migrator.sql(&#39;DROP INDEX IF EXISTS &quot;index_name&quot;;&#39;)
 </code></pre></div>
+
 <h4 id="model-definitions-in-migrations">Model Definitions in Migrations</h4>
 <p>When using <code>add_columns</code> or <code>drop_columns</code>, define model classes in both <code>migrate</code> and <code>rollback</code> functions:</p>
 <div class="codehilite"><pre><span></span><code>class BaseModel(Model):
@@ -876,11 +881,12 @@ class MyModel(BaseModel):
     field = CharField()
 
     class Meta:
-        table_name = "my_table"
+        table_name = &quot;my_table&quot;
 
 # Then use the model class, not string name:
-migrator.drop_columns(MyModel, ["field"])
+migrator.drop_columns(MyModel, [&quot;field&quot;])
 </code></pre></div>
+
 <p>Note: No need to bind models to database - they're just used for schema definition.</p>
 <h3 id="best-practices">Best Practices</h3>
 <ol>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Redirecting...</title>
+    <link rel="canonical" href="https://gregdetre.medium.com/how-i-learned-to-stop-worrying-and-love-hipaa-part-2-5e2b0aea4b60" />
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content="0; url=https://gregdetre.medium.com/how-i-learned-to-stop-worrying-and-love-hipaa-part-2-5e2b0aea4b60" />
+    <link rel="stylesheet" type="text/css" href="/static/css/base.css" />
+</head>
+
+<body>
+    <p>Redirecting to
+        <a href="https://gregdetre.medium.com/how-i-learned-to-stop-worrying-and-love-hipaa-part-2-5e2b0aea4b60">https://gregdetre.medium.com/how-i-learned-to-stop-worrying-and-love-hipaa-part-2-5e2b0aea4b60</a>
+        - click if you are not redirected.
+    </p>
+    
+    <hr />
+    <div class="external-source-note">
+        <strong>Note</strong>: You will be redirected to the original article. A local copy is included below for
+        convenience.
+    </div>
+    <div class="redirect-body">
+        <p><em>Originally published on Medium: <a href="https://gregdetre.medium.com/how-i-learned-to-stop-worrying-and-love-hipaa-part-2-5e2b0aea4b60">How I learned to stop worrying and love HIPAA: Part 2</a></em></p>
+<p>From <a href="https://medium.com/we-are-big-health/how-i-learned-to-stop-worrying-and-love-hipaa-part-1-807ae94b0ade">Part 1</a>, you have a sense of what counts as <em>Protected Health Information (PHI)</em> and how to conduct a <em>Risk Assessment</em> to understand the risks to those data.</p>
+<p>So you’ve already had your first taste of HIPAA’s documentation needs. <em>Document it, or it didn’t happen!</em></p>
+<p>Here’s how we break down our documentation:</p>
+<ul>
+<li>
+<p><em>Risk Assessment</em> spreadsheet to determine what you should be worrying most about — discussed in Part 1.</p>
+</li>
+<li>
+<p><em>Policy docs</em> — these describe and dictate everything about how you’ll operate to abide by HIPAA’s rules. There’s a great deal to be said about this — you could start by looking at Catalyze.io’s <a href="http://catalyzeio.github.io/policies/">open sourced policy documentation</a>. [Note that they’re a PaaS provider — in other words, they host but do not directly collect PHI, so you’ll certainly need to rework things for your needs.]</p>
+</li>
+<li>
+<p><em>Training</em> — you need to document that your employees have received regular training, and that they’ve internalized the important points. It’s tempting to just show them an excruciating PowerPoint presentation once a year and call it done, but you know deep in your heart that this is security theatre. At the very least, employees who have access to PHI should go through training when they start and then annually. And if you don’t test that they know what they’re supposed to, they probably don’t. This should all be documented in your <em>Workforce Policy</em> , of course. We try and make the multiple choice answers in our quiz darkly humorous, in a bid to keep people’s attention.</p>
+</li>
+</ul>
+<p>From the Sleepio HIPAA Training Quiz.</p>
+<ul>
+<li>
+<p><em>Data Access Record</em> — according to our <em>Minimum Access Policy</em> , we want to make sure that employees have access to just the data they need in order to do their jobs. The Data Access Record is a Google Spreadsheet with each employee as a row, and each type of PHI they can access as a column. If there’s a ‘Yes’ in any of those columns, they’re required to undergo training, and there’s a column to show when that happened last. [See below re permissions and BAA]</p>
+</li>
+<li>
+<p>A <em>‘Business Associate Agreement’ (BAA)</em> ensures that anyone who’s dealing with someone else’s PHI has to take care of it. For instance, if we were providing Sleepio to a hospital, they’d be the <em>Covered Entity</em> (the top of the HIPAA chain) and we’d be their <em>Business Associate</em>. The BAA would require us to take care of their data. If we then use a vendor (e.g. a hosting provider) or other subcontractor to help us provide those services, we in turn need to sign a BAA with them, to pass on those requirements. You also need to assess that they are sticking to what they agreed in the BAA. This is a neat kind of virality that spreads HIPAA’s protection to anyone handling PHI — there needs to be a BAA for each link in the chain.</p>
+</li>
+<li>
+<p><em>Incident Reports</em>. Let’s say a laptop gets stolen, or some other security incident occurs. Your well-trained colleagues should immediately let the Security Officer know, who determines whether this counts as a breach. If so, your Incident Response Policy determines how you escalate things. Hopefully, the laptop was encrypted, passworded and holds no PHI, so this wouldn’t count as a breach, and you can just document that it happened and why you’re confident it’s not serious. Of course, if it wasn’t encrypted and contained PHI, you’ll pay the price — now you need to begin your Incident Response, notification and other procedures. HIPAA is fairly specific about how you need to respond and who you need to notify.</p>
+</li>
+<li>
+<p><em>Audits and processes</em>. HIPAA is a journey not a destination. You’ll need to continually audit yourself over time to ensure you’re staying compliant, and record everything. We use a kind of internal <em>Audit &amp; Reviews Blog</em>, where we post results for all of our quarterly and annual reviews in reverse-chronological order. After all, if the OCR decide to check your compliance, they’ll request all of this, and if you didn’t document it, it didn’t happen.</p>
+</li>
+</ul>
+<p>Tools:</p>
+<ul>
+<li>
+<p>You need to maintain these records for 6 years (more if you take state laws into account). We use Google Docs for its sharing, collaborative editing and revision history. However, Google does not promise to store all revisions for all time, and so we archive our HIPAA Policies &amp; Docs folder as a new .zip file every year. If you use Google Docs to store any PHI, make sure to sign a downstream BAA with them!</p>
+</li>
+<li>
+<p>For your most critical records, like the Data Access Record, lock down the editing permissions to just a couple of administrators. It’s important that these are accurate, and that they can’t easily be tampered with by an attacker or disgruntled employee.</p>
+</li>
+<li>
+<p>Your HIPAA policies will require you to juggle various quarterly and annual reviews and audits. Set up a shared Google Calendar that defaults to email notifications, and then you can add recurring events like <em>‘Annual Training review (Greg)’</em> to denote what needs to happen, when, and who’s responsible.</p>
+</li>
+</ul>
+<p>As you can see, you’ll need sharp pencils to get to meaningful HIPAA compliance. And though you’ll bemoan the onerousness of writing the policies and paperwork, they serve a valuable purpose — you’ll be running a much tighter and more self-aware ship by the time you’re done.</p>
+<p>In <a href="https://medium.com/@gregdetre/how-i-learned-to-stop-worrying-and-love-hipaa-part-3-6d63f9b83999">Part 3</a>, we’ll consider some of the Security Rule requirements.</p>
+    </div>
+    
+</body>
+
+</html>

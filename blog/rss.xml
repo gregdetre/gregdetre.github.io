@@ -8,7 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 25 Aug 2025 17:45:37 +0300</lastBuildDate>
+    <lastBuildDate>Wed, 27 Aug 2025 15:21:29 +0100</lastBuildDate>
     <item>
       <title>Master Turkers</title>
       <link>https://www.gregdetre.com/blog/master-turkers/</link>
@@ -66,7 +66,7 @@
 <p>- At the beginning of the conversation, we all put our iPhones on the table, and fire up the Inforager app.  </p>
 <p>- Inforager is listening to us, uploading the audio of our conversation to voice-recognizing clouds.  </p>
 <p>- It runs dozens of google searches continually in the background, displaying result-snippet-bubbles that float past, driven by the whorls and eddies of our conversation. While we're talking about the beardy guy with the Greek name in The Hangover, a bubble for 'Zach Galifianakis - IMDb' looms large, only to be nudged offscreen as we move to debating whether the 'candied sunchokes' on the restaurant menu are likely to taste more like sunflowers or artichokes, while the other half of the table engages in a dialog on the nature of catnip.  </p>
-<p>In other words, the answers to questions we have are being provided in real time in response to our conversation. <em>This frees us up to talk about what matters.</em> </p>
+<p>In other words, the answers to questions we have are being provided in real time in response to our conversation. <em>This frees us up to talk about what matters.</em>  </p>
 <p>---- </p>
 <p>Technical notes:  </p>
 <p>- If multiple people at the same table were calling Inforager, it would use the multiple sound sources to do a better job of distinguishing voices and improving audio quality.  </p>
@@ -112,7 +112,7 @@
       <content:encoded><![CDATA[<p><em>God, grant me the serenity</em></p>
 <p><em>To accept the things I cannot change;</em></p>
 <p><em>Courage to change the things I can;</em></p>
-<p><em>And wisdom to know the difference.</em> </p>
+<p><em>And wisdom to know the difference.</em>  </p>
 <p>With the support of those around me, I can struggle to be courageous.  </p>
 <p>I believe I can summon forth the serenity.  </p>
 <p>But where does the wisdom come from?</p>]]></content:encoded>
@@ -186,20 +186,20 @@
       <description>Setting up your own domain and website doesn't have to be complicated—there are three main approaches, from DIY hosting to **Google Apps** to all-in-one platforms like **Weebly**.</description>
       <content:encoded><![CDATA[<p>Someone asked me recently about getting their own domain name and setting up a website. I'm not very good at this stuff, but I have been through it once or twice, so I thought I'd at least offer this up in case it's useful.  </p>
 <p>Let's say you want to buy <em>example.com</em>, and set it up as a series of static informational pages about <em>Example Business Inc</em>, along with <em>@example.com</em> email addresses. There are (at least) 3 ways you can go:  </p>
-<p><strong>1) the standard method</strong> </p>
+<p><strong>1) the standard method</strong>  </p>
 <p>- Grab the domain from <a href="http://www.godaddy.com/">GoDaddy</a> (or any other domain name registrar - they all do basically the same thing). It'll cost you $10-20 for a year or two  </p>
 <p>- Then you need to find a place to host your site (e.g. <a href="http://www.rackspace.com/index.php">Rackspace</a>, <a href="http://www.dreamhost.com/">Dreamhost</a>). You'd spend c. $10/month to rent space on a server, point your new domain name to the server's IP address, write and upload some html and images, and away you go.  </p>
 <p>- You then need to set up email addresses. If it's GoDaddy, I think you'll be able to set it up to forward your email to an existing account without too much trouble.  </p>
 <p>- This is what i had to do with <a href="http://www.memrise.com/">Memrise</a> because I wanted control over everything. Honestly, it was much much more complicated than i had anticipated to figure it all out.  </p>
-<p><strong>option 2) use Google</strong> </p>
-<p>- Use Google to <a href="https://www.google.com/a/cpanel/domain/new">register your domain name</a> </p>
+<p><strong>option 2) use Google</strong>  </p>
+<p>- Use Google to <a href="https://www.google.com/a/cpanel/domain/new">register your domain name</a>  </p>
 <p>- I think that'll automatically set you up with <a href="http://www.google.com/apps/">Google Apps</a> (custom Gmail, Calendar, Sites, Blogger, Docs etc.) for free.  </p>
 <p>- Then you can set up the design and content of the pages of your website with <a href="https://sites.google.com/">Google Sites</a>.  </p>
 <p>- So then you'd all use a custom Gmail interface to check your <em>@example.com</em> address, and have access to <em>blog.example.com</em>, <em>calendar.example.com</em> etc. I'm a big fan of Google Apps.  </p>
-<p><strong>option 3) Weebly (or some equivalent competitor)</strong> </p>
+<p><strong>option 3) Weebly (or some equivalent competitor)</strong>  </p>
 <p>- Besides Google, there are a variety of companies that help build a site. I've heard good things about <a href="http://www.weebly.com/">Weebly</a>, but haven't closely investigated it for myself.  </p>
 <p>- Much like Google Sites, it looks like they'll <a href="http://www.weebly.com/features.html">do most of what you'd wan</a>t: help with design templates, deal with the hosting, potentially help with domain names, and a bunch of other stuff. Nice!  </p>
-<p><strong>Conclusions:</strong> </p>
+<p><strong>Conclusions:</strong>  </p>
 <p>- As long as your needs are simple, I would consider the Google/Weebly approach, since I think it'll be the most straightforward.  </p>
 <p>- Down the line, if you decide that you want to build something more complicated and interactive, you can always hire a programmer and switch from Google/Weebly to your own hosting set up.  </p>
 <p>- If you have someone to help who enjoys techie stuff or has set up their own site before, then setting things up with GoDaddy and your own hosting will probably go smoothly. But otherwise, a company like Google or Weebly that'll do 90% of the work for you, so you can focus on building a great site :)</p>]]></content:encoded>
@@ -230,7 +230,7 @@
       <link>https://www.gregdetre.com/blog/get-your-users-to-tell-you-what-they-really-want/</link>
       <description>A simple feedback box at the end of learning sessions generated **5 times more user suggestions** than a prominent red UserVoice button that users had learned to ignore.</description>
       <content:encoded><![CDATA[<p>We're building <a href="http://www.memrise.com/">a site that we want people to love using</a>, so we want as much feedback on it as we can get. From the get-go, we've had a big red <a href="http://www.uservoice.com/">UserVoice 'Feedback'</a> button on the lefthand site of every page. But only a tiny proportion of our users ever suggested, voted or commented on an idea.</p>
-<p><img alt="" src="/img/blog/uservoice_box.png"/></p>
+<p><img alt="" src="/img/blog/uservoice_box.png" /></p>
 <ul>
 <li>
 <p>The red Feedback button was ubiquitous, but I bet that made it effectively invisible. Our feedback box is a straightforward text box that gets presented opportunely and prominently at the end of every learning session, at a moment when people will be most likely to have something they want to tell us.  </p>
@@ -271,17 +271,17 @@
       <title>Startup thinking - the people who have most influenced my thinking on startups.</title>
       <link>https://www.gregdetre.com/blog/startup-thinking-the-people-who-have-most-influenced-my-thinking-on-startups/</link>
       <description>From **Steve Blank's** lean methodology to **Paul Graham's** 'release early, iterate often' philosophy—exploring the foundational thinkers who shaped modern startup wisdom.</description>
-      <content:encoded><![CDATA[<p><strong>Steve Blank and Eric Ries</strong> </p>
+      <content:encoded><![CDATA[<p><strong>Steve Blank and Eric Ries</strong>  </p>
 <p><a href="http://steveblank.com/">Steve Blank</a> teaches entrepreneurship at the Haas Business School in Berkeley, but has a pretty serious pedigree as a tech entrepreneur himself. I'm ashamed to admit that I still haven't read The 4 Steps to the Epiphany, but I've read most of what he's posted online.  </p>
 <p><a href="http://www.startuplessonslearned.com/">Eric Ries</a> is a protege of Steve Blank's, applies and develops many of the same 'lean' ideas, and focuses specifically on web startups.  </p>
 <p>See the links for both <a href="http://platformsandnetworks.blogspot.com/2011/01/launching-tech-ventures-part-iv.html">Steve Blank and Eric Ries here</a>.  </p>
 <p>---- </p>
-<p><strong>Paul Graham</strong> </p>
+<p><strong>Paul Graham</strong>  </p>
 <p>He's a tour de force and a hero of mine. One of the early proponents of 'release early, iterate often'.  </p>
 <p>http://www.paulgraham.com/start.html  </p>
 <p>http://www.foxbusiness.com/search-results/m/25897600/funding-tech-start-ups.htm  </p>
 <p>---- </p>
-<p><strong>Joel Spolsky</strong> </p>
+<p><strong>Joel Spolsky</strong>  </p>
 <p>These are my favorite as they relate to HR:  </p>
 <p>http://www.joelonsoftware.com/articles/GuerrillaInterviewing3.html  </p>
 <p>http://www.joelonsoftware.com/navLinks/fog0000000262.html</p>]]></content:encoded>
@@ -347,7 +347,7 @@
     <item>
       <title>Final dissertation</title>
       <link>https://www.gregdetre.com/blog/final-dissertation/</link>
-      <description><![CDATA[<p>I realized I never uploaded the final version of my dissertation, '<a href="/research/dissertation - after revisions - 100503.pdf">Weakening memories by half-remembering them</a>'.</p>]]></description>
+      <description><![CDATA[<html><body><p>I realized I never uploaded the final version of my dissertation, '<a href="/research/dissertation - after revisions - 100503.pdf">Weakening memories by half-remembering them</a>'.</p></body></html>]]></description>
       <guid isPermaLink="false">https://www.gregdetre.com/blog/final-dissertation/</guid>
       <pubDate>Mon, 07 Jan 2013 00:00:00 +0000</pubDate>
     </item>
@@ -355,7 +355,7 @@
       <title>Blogging with Wordpress and Emacs</title>
       <link>https://www.gregdetre.com/blog/blogging-with-wordpress-and-emacs/</link>
       <description>A simple workflow combining Emacs, Python, and WordPress lets you write posts in your favorite editor and publish with a single command: `M-x wordpress-publish-this-file`.</description>
-      <content:encoded><![CDATA[<p>When it comes to tools, I am a hedgehog rather than a fox. I like to have a small number of tools, and to know them well.</p>
+      <content:encoded><![CDATA[<html><body><p>When it comes to tools, I am a hedgehog rather than a fox. I like to have a small number of tools, and to know them well.</p>
 <p>I recently resolved to start writing again. But I decided that I needed to sharpen my pencils first.</p>
 <p>I have <a href="/2007/09/12/entangling-the-ground-and-cloud/">plans on how publishing and sharing should work</a>. Grand plans. Too grand, perhaps.</p>
 <p>So for now, I wrote something simple for myself. Now I can type away, press buttons... publish.</p>
@@ -365,7 +365,7 @@
 <p>I wrote some simple Python scripts. One grabs all my existing blog posts. One looks through their titles, and checks them against the filename to see if this is a new post.</p>
 <p>And then there's a very simple Emacs function that calls them to save/publish the current text file.</p>
 <p>I could add more things: deleting posts, or a proper workflow for moving from draft to published. Maybe later.</p>
-<p>I wrote this post, then hit M-x wordpress-publish-this-file.</p>]]></content:encoded>
+<p>I wrote this post, then hit M-x wordpress-publish-this-file.</p></body></html>]]></content:encoded>
       <guid isPermaLink="false">https://www.gregdetre.com/blog/blogging-with-wordpress-and-emacs/</guid>
       <pubDate>Fri, 27 Sep 2013 00:00:00 +0000</pubDate>
     </item>
@@ -493,8 +493,8 @@
       <title>Presentations at BarCamp Tampa 2015</title>
       <link>https://www.gregdetre.com/blog/barcamp-tampa-2015/</link>
       <description>Two presentations from BarCamp Tampa 2015: mastering Python unit testing for better code, and **killing your crusty old PHP system** through seamless replatforming.</description>
-      <content:encoded><![CDATA[<p><a href="/wp-content/uploads/2015/10/presentation-barcamp-tampa-python-151017.pdf">Unit testing in Python  - better code faster</a>.</p>
-<p><a href="/wp-content/uploads/2015/10/presentation-barcamp-tampa-replatforming-1510172.pdf">The best way to kill and bury your crusty old PHP system</a> - replatforming a legacy system without your users noticing.</p>]]></content:encoded>
+      <content:encoded><![CDATA[<html><body><p><a href="/wp-content/uploads/2015/10/presentation-barcamp-tampa-python-151017.pdf">Unit testing in Python  - better code faster</a>.</p>
+<p><a href="/wp-content/uploads/2015/10/presentation-barcamp-tampa-replatforming-1510172.pdf">The best way to kill and bury your crusty old PHP system</a> - replatforming a legacy system without your users noticing.</p></body></html>]]></content:encoded>
       <guid isPermaLink="false">https://www.gregdetre.com/blog/barcamp-tampa-2015/</guid>
       <pubDate>Sat, 17 Oct 2015 00:00:00 +0000</pubDate>
     </item>
@@ -642,7 +642,7 @@
       <title>Chatbots - from Rogerian psychotherapists to cognitive behavioral therapists</title>
       <link>https://www.gregdetre.com/blog/hackathon-profbot-technical/</link>
       <description>Building a **stateful** Slack chatbot in two days taught us that representing conversational logic as *data rather than code* opens exciting possibilities—despite our demo day disaster.</description>
-      <content:encoded><![CDATA[<p><em>[Reposted from https://medium.com/we-are-big-health/chatbots-from-rogerian-psychotherapists-to-cognitive-behavioral-therapists-237c2ee3cfb6]</em></p>
+      <content:encoded><![CDATA[<html><body><p><em>[Reposted from https://medium.com/we-are-big-health/chatbots-from-rogerian-psychotherapists-to-cognitive-behavioral-therapists-237c2ee3cfb6]</em></p>
 <p>I've been obsessed by chatbots ever since I first played around with an Eliza clone that shipped with my Soundblaster sound card at the age of 12. I taught myself to program because I so badly wanted to build a chatbot of my own. My first efforts were very simple - they matched keywords in the user's input, and picked at random from a bag of canned responses. It worked as well as you'd expect.</p>
 <p>The more I scratched at this problem over the years, <a href="/2006/04/18/the-turing-tournament-a-proposal-for-a-reformulation-of-the-turing-test/">the deeper I realized it to be</a>. Even as we recognise the deficiencies of the Turing Test, we must also recognise its genius - it is a necessary but not sufficient test of intelligence. In other words, it's just too dang hard and too specific (see <a href="http://lead.u-bourgogne.fr/people/french/turing.pdf">Robert French's brilliant 'Subcognition and the Limits of the Turing Test'</a>).</p>
 <p>So, with a familiar sense of futility and excitement, I joined forces with Helena, Jess and Brandon to build a Slack-chatbot version of Sleepio's The Prof in our first Hackathon. We had two days from start to finish.</p>
@@ -686,7 +686,7 @@
 <li>
 <p>In the future, I'd love to try using TensorBoard. It's interactive, and deals really well with collapsing detail (so that you can see the high level but burrow down a path if you want to), but it would have been too much work to figure out how to decouple TensorBoard from TensorFlow objects for use with arbitrary inputs.</p>
 </li>
-</ul>]]></content:encoded>
+</ul></body></html>]]></content:encoded>
       <guid isPermaLink="false">https://www.gregdetre.com/blog/hackathon-profbot-technical/</guid>
       <pubDate>Tue, 16 Feb 2016 00:00:00 +0000</pubDate>
     </item>
@@ -756,7 +756,7 @@
 <p>Start a list of 'Small wins' of your own, and add the first item to it.</p>
 </li>
 </ol>
-<hr/>
+<hr />
 <p>In <a href="https://blog.strategicedge.co.uk/2017/02/small-wins-23.html">grateful homage to Nicholas Bate</a>.</p>]]></content:encoded>
       <guid isPermaLink="false">https://www.gregdetre.com/blog/small-wins/</guid>
       <pubDate>Sun, 18 Nov 2018 00:00:00 +0000</pubDate>
@@ -1242,7 +1242,7 @@
 <ul>
 <li><strong>Seniority</strong>: Junior programmers seem most positive about AI, because it levels the playing field for them. Senior programmers seem pretty positive, because their experience &amp; judgment enables them to make effective architecture decisions, without having to worry about semicolons), while mid-level programmers are most negative, because it threatens the craft and low-level skill on which their pride and economic value sit. see (<a href="https://www.wired.com/story/how-software-engineers-coders-actually-use-ai/">"Does experience affect attitude?"</a>)</li>
 </ul>
-<p><img alt="Does experience affect attitude" src="/blog/images/does_experience_affect_attitude.png"/></p>
+<p><img alt="Does experience affect attitude" src="/blog/images/does_experience_affect_attitude.png" /></p>
 <ul>
 <li>
 <p><strong>Expertise</strong>: This is part of what I'd guess explains the apparent <a href="https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/"><em>drop</em> in productivity when using AI tools in a recent (mid-2025) study</a>. Expert AI-assisted programming will involve <a href="https://www.makingdatamistakes.com/ai-first-development/">un-learning a lot of existing behaviours &amp; skills, and replacing them with new ones</a>.</p>
@@ -1349,9 +1349,9 @@
       <link>https://www.gregdetre.com/blog/human-readers-deserve-human-writers-a-policy-on-ai-and-human-craft/</link>
       <description>The magic hammer of AI makes everything look wonderfully nail-like, especially for the solo creative who finds in it both trampoline and anchor. But I've decided that human readers deserve the many tiny choices that make creative work personal, reserving my automation for the machines who won't notice the difference.</description>
       <content:encoded><![CDATA[<p>When you have a magic hammer, it's so very tempting to wallop everything you see with it. But should I use the magic AI hammer for my creative work (from writing to technology products)?</p>
-<p>It certainly feels easy (usually a warning sign), and often helpful. As a solo creative, even an AI collaborator give me the sudden boost and release of a trampoline, along with a welcome, stabilising outside point of view.</p>
+<p>It certainly feels easy (usually a warning sign), and often helpful. As a solo creative, an AI collaborator gives me the sudden boost and release of a trampoline, along with a welcome, stabilising, second point of view.</p>
 <p><a href="https://www.newyorker.com/culture/the-weekend-essay/why-ai-isnt-going-to-make-art">Ted Chiang gestures at a quantification of artistic expression</a>: <em>"... art is something that results from making a lot of choices. ... When you are writing fiction, you are—consciously or unconsciously—making a choice about almost every word you type; to oversimplify, we can imagine that a ten-thousand-word short story requires something on the order of ten thousand choices. When you give a generative-A.I. program a prompt, you are making very few choices; if you supply a hundred-word prompt, you have made on the order of a hundred choices."</em></p>
-<p>So, for a piece of writing that I hope people will read, and perhaps be changed by, it should be primarily my ideas, with words I have chosen. I might ask AI to be my editor - give me a trenchant critique, or provide suggestions to unstick me, or for titles and excerpts. But I want to retain a full feeling of authorship. In other words, I make most of the choices.</p>
+<p>For a piece of writing that I hope people will read, and perhaps be changed by, I want to retain a full feeling of authorship. That means it should be primarily my ideas, with words I have chosen. I might ask AI to be my editor - give me a trenchant critique, or provide suggestions to unstick me, or for titles and excerpts. In other words, I have to make most of the choices.</p>
 <p>If I'm writing primarily for a machine, then I'll use as much AI as I can. For example, it's fine for the AI to write the code, to worry about semicolons and syntax, because they will be consumed by a compiler. But the product vision, the user interface, even the software architecture, these are consumed by the human end-user, and so I want to make these choices.</p>
 <p>Proposed policy: <em>I'll hand-craft the work myself according to how much it will be consumed by humans.</em> Corollary: I'll automate when it will be consumed by machines.</p>
 <p>I sometimes feel that LinkedIn falls somewhere in the middle :~</p>
@@ -1359,19 +1359,22 @@
 <p>Postscript:</p>
 <ul>
 <li>
-<p>I wrote this post myself. I then asked Claude to critique it, it pointed out some weak bits and made suggestions, and I rewrote parts in response.</p>
+<p>For this post:</p>
 </li>
 <li>
-<p>I wrote a title, and then asked it to generate a few potential better titles.</p>
+<p>I wrote a draft myself. I then asked Claude to critique it, it pointed out some weak bits and made suggestions, and I rewrote parts in response.</p>
 </li>
 <li>
-<p>I picked a couple of ideas from those, and created my own title based on that. AI mostly created the excerpt, and completely assigned the tags. This is my standard practice.</p>
+<p>I wrote a title, and then asked it to generate a few potential better titles. I magpied a couple of ideas and created my own title based on them.</p>
 </li>
 <li>
-<p>For LinkedIn posts, it's more complicated. I fed the original post to a set of careful prompts that emphasise my original ideas/content, engaged in a lengthy back-and-forth about potential themes/arcs, picked from a few potential hooks and closes (often ignoring the generated ones and writing one myself), it generates a few candidates, and then I edit the final version. I am still iterating this - I'm not actually sure it's faster, but I think the result is sometimes much better.</p>
+<p>AI mostly created the excerpt, and completely assigned the tags. This is my standard practice.</p>
 </li>
 <li>
-<p>For the image, I asked AI to generate some ideas based on the text, then picked my favourite few and tweaked them, applying my own visual style, trying out a couple of versions until I found one I liked.</p>
+<p>For LinkedIn posts, it's more complicated. I fed the original post to a set of careful prompts that preserve my original ideas/content, engaged in a back-and-forth about extracted themes/arcs, picked from a few suggested hooks and closes (often ignoring the generated ones and writing one myself), it generates a few candidates, and then I edit the final version. I am still iterating this process - I'm not actually sure it's faster, but I think the result is sometimes much better.</p>
+</li>
+<li>
+<p>For the image, I asked AI to suggest a long list of ideas based on the text, then picked my favourite few and tweaked them, applying my own visual style, trying out a couple of versions until I found one I liked.</p>
 </li>
 </ul>
 <p>This dialogue shows what Centaur teams (human + AI) look like, with complementary strengths and roles. I think Chiang's framing about 'choice' (and <em>the number</em> of choices) helps characterise and quantify <em>the kind and level of human involvement</em>.</p>]]></content:encoded>

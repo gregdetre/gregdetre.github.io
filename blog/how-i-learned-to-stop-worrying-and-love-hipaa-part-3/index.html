@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Redirecting...</title>
+    <link rel="canonical" href="https://gregdetre.medium.com/how-i-learned-to-stop-worrying-and-love-hipaa-part-3-6d63f9b83999" />
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content="0; url=https://gregdetre.medium.com/how-i-learned-to-stop-worrying-and-love-hipaa-part-3-6d63f9b83999" />
+    <link rel="stylesheet" type="text/css" href="/static/css/base.css" />
+</head>
+
+<body>
+    <p>Redirecting to
+        <a href="https://gregdetre.medium.com/how-i-learned-to-stop-worrying-and-love-hipaa-part-3-6d63f9b83999">https://gregdetre.medium.com/how-i-learned-to-stop-worrying-and-love-hipaa-part-3-6d63f9b83999</a>
+        - click if you are not redirected.
+    </p>
+    
+    <hr />
+    <div class="external-source-note">
+        <strong>Note</strong>: You will be redirected to the original article. A local copy is included below for
+        convenience.
+    </div>
+    <div class="redirect-body">
+        <p><em>Originally published on Medium: <a href="https://gregdetre.medium.com/how-i-learned-to-stop-worrying-and-love-hipaa-part-3-6d63f9b83999">How I learned to stop worrying and love HIPAA: part 3</a></em></p>
+<p>From <a href="https://medium.com/we-are-big-health/how-i-learned-to-stop-worrying-and-love-hipaa-part-1-807ae94b0ade">Part 1</a>, you have a sense of what data you need to protect and how to assess risk. <a href="https://medium.com/@gregdetre/how-i-learned-to-stop-worrying-and-love-hipaa-part-2-5e2b0aea4b60">Part 2</a> discussed documentation requirements.</p>
+<h1 id="the-security-rule">The Security Rule</h1>
+<p>In this section, we’ll focus on some of the <a href="http://www.hhs.gov/sites/default/files/ocr/privacy/hipaa/administrative/securityrule/security101.pdf">HIPAA Security Rule</a> requirements. You know, the nitty-gritty/infrastructural work you knew you’d need to do: encryption, banning passwords on post-its, locks on filing cabinets, etc.</p>
+<p>Perhaps the most striking thing to me about HIPAA is how little it specifically mandates. It doesn’t say that you <em>must</em> use a particular algorithm to encrypt your hard disks with, or how many locks you need on your door. It divides its ‘implementation specifications’ into ‘ <em>required</em> ’ and ‘ <em>addressable</em> ’. <em>Addressable</em> doesn’t mean optional — it means that those things are a very good idea, so you should either do them, <em>or</em> document in your Risk Assessment why they don’t apply or what you have done instead.</p>
+<p>In practice, we implemented pretty much all of what HIPAA considers addressable, eventually. Even recommendations that seemed unnecessary at first, such as anti-virus for our Mac laptops and Linux servers, have since proven worthwhile (and necessary for more prescriptive standards like ISO27001 and HITRUST).</p>
+<p>[Source unknown]</p>
+<p>The Security Rule divides safeguards into the physical, administrative, and technical.</p>
+<h2 id="physical-safeguards"><em>Physical safeguards</em></h2>
+<p>The Security Rule applies to electronic, paper <em>and</em> oral security. We’ve tried to minimize the risks posed by physical access to our offices, by avoiding any printed PHI and hosting on AWS (whose <a href="https://d0.awsstatic.com/whitepapers/aws-security-whitepaper.pdf">data center physical security guarantees</a> are strong). [Make sure you have a BAA in place with your hosting provider, and read the fine print about what they require of you.]</p>
+<p>But if non-employees have access to your office or your data center, you still need to think hard about the worst things that could happen through a physical attack, theft, natural disaster or other incident. Depending on your Risk Assessment, you may need to think about things like: how you wipe/reuse hard disks, encrypting USB keys, securing physical backups, records of access to your offices, what happens if your office is inaccessible. [HIPAA doesn’t just care about breaches — it’s also there to protect against lack of access to patient data].</p>
+<p>Any devices that have PHI on them (USB keys, laptops, hard disks) should be encrypted at rest, passworded, with a quick screensaver, and generally locked down as tightly as possible — better still, minimize downloading of data from your data center at all.</p>
+<h2 id="administrative-safeguards"><em>Administrative safeguards</em></h2>
+<p>We’ve touched on many of the Administrative Security controls in Parts 1 and 2 with Risk Assessment, training policies.</p>
+<p>This also covers workforce security (e.g. sanctioning employees who violate HIPAA, hiring procedures and background checks).</p>
+<p>It covers the logistics of security, such as good password management, backups, disaster recovery, and anti-virus software.</p>
+<p>It also covers administrative procedures, such as regular reviews, access control, and procedures for dealing with Security Incidents.</p>
+<h2 id="technical-safeguards"><em>Technical safeguards</em></h2>
+<ul>
+<li><em>Encryption</em>. In the case of encryption, it’s almost always better to have more. If you accidentally disclose PHI that has been encrypted, it does not count as a breach. We encrypt all PHI at rest, including servers, logs, backups, laptops, and any other devices. Otherwise, a single stolen hard disk could be catastrophic. Encrypting in transit is just as important — tunnel <em>everything</em> over https and ssh. If you can throw a VPN into the mix, all the better, though that’s more complex to set up.</li>
+</ul>
+<p>From <a href="https://xkcd.com/257/">https://xkcd.com/257/</a></p>
+<ul>
+<li>
+<p>All of the safeguards stress the importance of being able to log what happened, and who did it. Each personshould have their own account, and all security-critical actions should be logged.</p>
+</li>
+<li>
+<p>This is where HIPAA specifies how users should be verified — at the least, it expects good practices (check against encrypted password). Depending on the risk (e.g. for your AWS root password), consider stronger password requirements and 2-factor authentication.</p>
+</li>
+</ul>
+<h1 id="conclusion">Conclusion</h1>
+<p>HIPAA is a journey, not a destination, and we’re continually working to improve our security and our policies.</p>
+<p>HIPAA provides a solid foundation — once you can say honestly that you’re HIPAA-compliant, you’ll already be well on your way towards a stricter standard (like ISO27001 or HITRUST), and you’ll also know clearly where your weaknesses are.</p>
+<h1 id="resources">Resources</h1>
+<ol>
+<li>These are my favorite <a href="http://www.hhs.gov/sites/default/files/ocr/privacy/hipaa/administrative/securityrule/security101.pdf">HIPAA security intro documents</a> — they provide a clear high-level introduction to the various components of HIPAA. <a href="http://www.hhs.gov/hipaa/for-professionals/security/guidance/index.html">See also</a>.</li>
+</ol>
+<h1 id="a-request">A request</h1>
+<p>If you found these guides useful, drop us a line at <a href="mailto:hello@sleepio.com">hello@sleepio.com</a>, and let us know if you have questions for future guides!</p>
+<p>You can follow our publication <a href="https://medium.com/we-are-big-health">‘We are Big Health’</a> on Medium.</p>
+    </div>
+    
+</body>
+
+</html>

@@ -139,7 +139,7 @@ Greg Detre
 
 
 
-<p>Emacs is pretty lightweight relative to most modern editors, though by the time it loads all the modes and gets through all the uncompiled junk in my .emacs configuration, you wouldn't know it.  </p>
+<html><body><p>Emacs is pretty lightweight relative to most modern editors, though by the time it loads all the modes and gets through all the uncompiled junk in my .emacs configuration, you wouldn't know it.  </p>
 <p><a href="http://www-h.eng.cam.ac.uk/help/tpl/emacs/node26.html">Emacsclient</a> is the solution - when you open a file with emacsclient, it doesn't start up a whole new emacs - it just opens it in the running emacs, which is more or less instantaneous.  </p>
 <p>There are lots of webpages on this, so I won't go into detail. Unfortunately, although you'd hope that calling 'emacsclient' would work just like 'emacs', this isn't true:  </p>
 <ul>
@@ -155,7 +155,7 @@ Greg Detre
 </ul>
 <p>These issues were annoying enough that I nearly stopped using emacsclient. Various people have <a href="http://www.emacswiki.org/cgi-bin/wiki/EmacsClient">offered shell script hacks</a> that handle some of these issues and more, but none of them solved the ones that bothered me. Plus, I like Python and I hate shell scripts. So I offer up a teeny python script, <a href="/software/emf-on-display">emf-on-display</a>. If you alias 'emf-on-display' to something handy like 'e', then it makes emacsclient behave in a way that I find much more consistent with emacs.  </p>
 <p>P.S. I have not dealt with the possibility that you're running this in the terminal, and you don't have an X11 display at all.  </p>
-<p>P.P.S. I suspect that it requires emacs 22 (or gnuclient) to work, since it relies on being able to pass 'make-frame-on-display' as elisp code to be evaluated.</p>
+<p>P.P.S. I suspect that it requires emacs 22 (or gnuclient) to work, since it relies on being able to pass 'make-frame-on-display' as elisp code to be evaluated.</p></body></html>
 
 
 <br />
