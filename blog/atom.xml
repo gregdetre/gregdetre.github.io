@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://www.gregdetre.com/blog/</id>
   <title>Greg Detre</title>
-  <updated>2025-08-28T23:42:18.489360+01:00</updated>
+  <updated>2025-08-28T23:57:43.709699+01:00</updated>
   <link href="https://www.gregdetre.com/blog/" rel="alternate"/>
   <link href="https://www.gregdetre.com/blog/atom.xml" rel="self"/>
   <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
