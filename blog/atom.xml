@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://www.gregdetre.com/blog/</id>
   <title>Greg Detre</title>
-  <updated>2025-08-28T19:41:49.271575+01:00</updated>
+  <updated>2025-08-28T19:55:52.521838+01:00</updated>
   <link href="https://www.gregdetre.com/blog/" rel="alternate"/>
   <link href="https://www.gregdetre.com/blog/atom.xml" rel="self"/>
   <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
@@ -1397,7 +1397,7 @@
   <entry>
     <id>https://www.gregdetre.com/blog/human-readers-deserve-human-writers-a-policy-on-ai-and-human-craft/</id>
     <title>Human readers deserve human writers: a policy on AI and human craft</title>
-    <updated>2025-08-26T16:25:32+00:00</updated>
+    <updated>2025-08-28T18:49:44.322599+00:00</updated>
     <content type="html">&lt;p&gt;When you have a magic hammer, it's so very tempting to wallop everything you see with it. But should I use the magic AI hammer for my creative work (from writing to technology products)?&lt;/p&gt;
 &lt;p&gt;It certainly feels easy (usually a warning sign), and often helpful. As a solo creative, an AI collaborator gives me the sudden boost and release of a trampoline, along with a welcome, stabilising, second point of view.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.newyorker.com/culture/the-weekend-essay/why-ai-isnt-going-to-make-art"&gt;Ted Chiang gestures at a quantification of artistic expression&lt;/a&gt;: &lt;em&gt;"... art is something that results from making a lot of choices. ... When you are writing fiction, you are—consciously or unconsciously—making a choice about almost every word you type; to oversimplify, we can imagine that a ten-thousand-word short story requires something on the order of ten thousand choices. When you give a generative-A.I. program a prompt, you are making very few choices; if you supply a hundred-word prompt, you have made on the order of a hundred choices."&lt;/em&gt;&lt;/p&gt;
