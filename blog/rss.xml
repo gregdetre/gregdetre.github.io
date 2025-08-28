@@ -8,7 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 28 Aug 2025 15:23:54 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 28 Aug 2025 17:41:04 +0100</lastBuildDate>
     <item>
       <title>Master Turkers</title>
       <link>https://www.gregdetre.com/blog/master-turkers/</link>
@@ -1115,53 +1115,53 @@
     </item>
     <item>
       <title>What new developments will we need for personalised, relevant one-to-one AI tutoring?</title>
-      <link>https://www.gregdetre.com/blog/what-new-developments-will-we-need-for-personalised-relevant-one-to-one-ai-tutoring/</link>
+      <link>https://www.gregdetre.com/blog/ai-tutors/what-new-developments-will-we-need-for-personalised-relevant-one-to-one-ai-tutoring/</link>
       <description>Future AI tutoring may require more than prompt engineering—perhaps **custom teacher models** that learn alongside students, plus **explicit student models** to predict and optimize learning outcomes.</description>
       <content:encoded><![CDATA[<div class="toc">
 <ul>
 <li><a href="#introduction">Introduction</a></li>
 <li><a href="#developing-a-teacher-model-thats-personalised-and-relevant">Developing a teacher model that's personalised and relevant</a></li>
-<li><a href="#developing-an-explicit-model-of-the-student">Developing an explicit model of the student</a></li>
+<li><a href="#developing-an-explicit-model-of-the-learner">Developing an explicit model of the learner</a></li>
 </ul>
 </div>
 <h2 id="introduction">Introduction</h2>
 <p>In <a href="https://en.wikipedia.org/wiki/Bloom%27s_2_sigma_problem">"The 2 Sigma Problem"</a>, Bloom suggested that one-to-one tutoring could provide a phenomenal boost to students' learning. Maybe it's <a href="https://www.educationnext.org/two-sigma-tutoring-separating-science-fiction-from-science-fact/">not <em>quite</em> as big an effect as he suggested</a>, but I'm still willing to bet that the combination of personalisation, relevance, engagement, adaptive difficulty, and other benefits of one-to-one tutoring do make a huge difference, and at least some of them can be captured by generative AI. But even if we thought we did have a better approach, how could we be sure?</p>
 <p>I'll try and tackle both sets of questions.</p>
 <h2 id="developing-a-teacher-model-thats-personalised-and-relevant">Developing a teacher model that's personalised and relevant</h2>
-<p>Let's focus on the question of how we might make a teacher model that provides very personalised, relevant tutoring to the student.</p>
+<p>Let's focus on the question of how we might make a teacher model that provides very personalised, relevant tutoring to the learner.</p>
 <p>Relevance is rich and hierarchical: the environment, the task or context that the student is learning about right now, this particular course, their previous learning and progress, the history of interactions with the teacher, the language, the country they live in, recent news, macro changes, etc. All of these contextualise our learning.</p>
 <p>This kind of rich, hierarchical, many-faceted personalisation presents challenges for a single gigantic, fixed model, such as an LLM.</p>
 <p><em>Maybe</em> we can get away with just prompt engineering, feeding in an enormous dump of data about learner goals, preferences, and previous interactions, and rely on ever-larger context windows and more instructable models.</p>
 <p>But I’m pessimistic about whether prompt engineering alone is enough for fine-grained, subtle, creative, optimal relevance and personalisation.</p>
 <p>Firstly, there's the challenge of fitting all the necessary background into the model's context window <a href="https://www.dbreunig.com/2025/06/22/how-contexts-fail-and-how-to-fix-them.html">without overwhelming or confusing it</a>.</p>
 <p>Secondly, LLMs struggle with prompts that tug against their pretraining. For example, at <a href="https://rehearsable.ai/">Rehearsable.ai</a>, it proved intractable to prompt-engineer GPT-4 to reliably and subtly follow a particular negotiation skills approach that flew in the face of the common advice found on the internet.</p>
-<p>In the short-run, perhaps we can imagine hierarchies of LORA-style fine-tuning that can be layered on top of one another, for student, exam board, culture, etc. But my bet is that eventually the best AI teachers will learn too, alongside and about their students.</p>
-<h2 id="developing-an-explicit-model-of-the-student">Developing an explicit model of the student</h2>
+<p>In the short-run, perhaps we can imagine hierarchies of LORA-style fine-tuning that can be layered on top of one another, for learner, exam board, culture, etc. But my bet is that eventually the best AI teachers will learn too, alongside and about their students.</p>
+<h2 id="developing-an-explicit-model-of-the-learner">Developing an explicit model of the learner</h2>
 <p>Perhaps we also need to go beyond a single, main teacher model. Could it help to represent the learner with an explicit (separate?) model that assists the primary teacher model? To train such a model of the learner, we could train it to predict the learner’s behaviour, e.g. the answers they are giving, and the questions they are asking. We might then probe this model of the learner, to ask “How would the learner respond if we asked them this question?”, or to look at how it has changed over time to measure “Has the learner’s understanding of Topic X improved?”.</p>
 <p>With such a model of the learner’s behaviour, we could run <a href="https://medium.com/@_michelangelo_/monte-carlo-tree-search-mcts-algorithm-for-dummies-74b2bae53bfa">Monte-Carlo Tree Search</a> or similar to simulate the effect of different teacher interventions, and pick the one that we believe will best help improve the learner’s eventual performance. In this way, we can consider relevance as exactly the content that <em>this</em> learner needs right now, in order to pass their particular exam, or indeed to unstick their current confusion. A rich model of the learner could help with choosing or generating particular problems that will help them see how to apply a new concept, develop the skill they’re missing, or correct a misconception. It could involve judicious examples, or analogies, or counter-examples.</p>
-<p>So, future AI one-to-one tutoring might involve both custom teacher <em>and</em> custom student models.</p>]]></content:encoded>
-      <guid isPermaLink="false">https://www.gregdetre.com/blog/what-new-developments-will-we-need-for-personalised-relevant-one-to-one-ai-tutoring/</guid>
+<p>So, future AI one-to-one tutoring might involve both custom teacher <em>and</em> custom learner models.</p>]]></content:encoded>
+      <guid isPermaLink="false">https://www.gregdetre.com/blog/ai-tutors/what-new-developments-will-we-need-for-personalised-relevant-one-to-one-ai-tutoring/</guid>
       <pubDate>Sat, 09 Aug 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>How can we measure the effectiveness of an AI tutor?</title>
-      <link>https://www.gregdetre.com/blog/how-can-we-measure-the-effectiveness-of-an-ai-tutor/</link>
+      <link>https://www.gregdetre.com/blog/ai-tutors/how-can-we-measure-the-effectiveness-of-an-ai-tutor/</link>
       <description>Perhaps our future grades will depend not on *our* exam performance, but on how well our **digital avatars** handle a battery of simulated tests.</description>
       <content:encoded><![CDATA[<div class="toc">
 <ul>
-<li><a href="#measuring-human-learner-performance">Measuring human-learner performance</a></li>
-<li><a href="#measuring-simulated-student-performance">Measuring simulated-student performance</a></li>
+<li><a href="#measuring-human-student-performance">Measuring human-student performance</a></li>
+<li><a href="#measuring-simulated-learner-performance">Measuring simulated-learner performance</a></li>
 <li><a href="#measuring-teacher-performance">Measuring teacher performance</a></li>
 <li><a href="#ai-offers-new-more-accurate-more-humane-ways-to-evaluate">AI offers new, more accurate, more humane ways to evaluate</a></li>
 </ul>
 </div>
-<h2 id="measuring-human-learner-performance">Measuring human-learner performance</h2>
+<h2 id="measuring-human-student-performance">Measuring human-student performance</h2>
 <p>We can of course try to directly measure the learner’s performance, e.g. with explicit tests and exams - but these are effortful for the learner, inefficient, and don’t capture everything that matters.</p>
 <p>We can measure the learner’s engagement and enjoyment, either explicitly (with surveys) or implicitly (by their continued interest). This makes some sense, in that a learner won't learn much if they give up. But on the flip side, it's possible to be engaged in something that isn't efficacious. So, engagement is <em>necessary</em> but not <em>sufficient</em> for learning.</p>
 <p>We might even try and quantify aspects of the learner’s behaviour with automated LLM evals, e.g. whether the learner is exhibiting curiosity, or asking good questions.</p>
 <p>Of course, even if we could measure all these dimensions at a given moment, it’s not easy to tell how much to attribute changes over time to the teacher. We have expensive gold-standard measurements (e.g. longitudinal between-subject AB tests/RCTs), but we can't run these very often. So in practice, we have to rely mostly on cheap &amp; immediate automated evaluations, after validating them occasionally against the gold standard - kinda like applying the <a href="https://en.wikipedia.org/wiki/Cosmic_distance_ladder">cosmic distance ladder</a> approach to product development, where we try and find a chain of proximal measures that ladder up to our expensive, gold-standard distal measure.</p>
-<h2 id="measuring-simulated-student-performance">Measuring simulated-student performance</h2>
-<p><a href="/blog/what-new-developments-will-we-need-for-personalised-relevant-one-to-one-ai-tutoring/#Developing an explicit model of the student">If we had a great model of the student</a>, we could make the model-of-the-student take the exams as a proxy!</p>
+<h2 id="measuring-simulated-learner-performance">Measuring simulated-learner performance</h2>
+<p><a href="/blog/ai-tutors/what-new-developments-will-we-need-for-personalised-relevant-one-to-one-ai-tutoring/#Developing an explicit model of the student">If we had a great model of the learner</a>, we could make the model-of-the-student take the exams as a proxy!</p>
 <h2 id="measuring-teacher-performance">Measuring teacher performance</h2>
 <p>We can also try and measure the teacher’s behaviour, as in the LearnLM paper, where the model is tuned towards important dimensions, like “be encouraging”, “don’t give away the answer prematurely”, and “keep the learner on track”.</p>
 <p>Beyond these, there are many lower-level pedagogical best practices we might consider, e.g. encouraging an <a href="https://web.archive.org/web/20070317194011/http://www.stanfordalumni.org/news/magazine/2007/marapr/features/dweck.html">incremental mindset</a>, making the content <a href="https://www.memrise.com/blog/how-to-use-mnemonics-to-remember-new-vocabulary">memorable</a>, applying a <a href="https://www.notion.so/230422-Newspeak-House-Hackathon-with-Peppe-Cesar-Greg-2c73fa13af404c70b03263bf56124810?pvs=21">spiral curriculum</a>, use of analogies and examples, etc.</p>
@@ -1179,7 +1179,7 @@
 <p>If we have built a rich, explicit model of the learner, as above, then we could use the simulated learner’s performance as a proxy measure for the real learner’s ability - perhaps in the future, our grade will be based on how well our avatars do on a multi-day battery of simulated exams!</p>
 </li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://www.gregdetre.com/blog/how-can-we-measure-the-effectiveness-of-an-ai-tutor/</guid>
+      <guid isPermaLink="false">https://www.gregdetre.com/blog/ai-tutors/how-can-we-measure-the-effectiveness-of-an-ai-tutor/</guid>
       <pubDate>Sun, 10 Aug 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
