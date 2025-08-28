@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://www.gregdetre.com/blog/</id>
   <title>Greg Detre</title>
-  <updated>2025-08-28T15:13:32.491789+01:00</updated>
+  <updated>2025-08-28T15:23:54.932119+01:00</updated>
   <link href="https://www.gregdetre.com/blog/" rel="alternate"/>
   <link href="https://www.gregdetre.com/blog/atom.xml" rel="self"/>
   <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
@@ -1189,10 +1189,11 @@
   <entry>
     <id>https://www.gregdetre.com/blog/how-can-we-measure-the-effectiveness-of-an-ai-tutor/</id>
     <title>How can we measure the effectiveness of an AI tutor?</title>
-    <updated>2025-08-25T14:33:29.253490+00:00</updated>
+    <updated>2025-08-28T14:23:37.931503+00:00</updated>
     <content type="html">&lt;div class="toc"&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="#measuring-human-learner-performance"&gt;Measuring human-learner performance&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#measuring-simulated-student-performance"&gt;Measuring simulated-student performance&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#measuring-teacher-performance"&gt;Measuring teacher performance&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#ai-offers-new-more-accurate-more-humane-ways-to-evaluate"&gt;AI offers new, more accurate, more humane ways to evaluate&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -1202,6 +1203,8 @@
 &lt;p&gt;We can measure the learner’s engagement and enjoyment, either explicitly (with surveys) or implicitly (by their continued interest). This makes some sense, in that a learner won't learn much if they give up. But on the flip side, it's possible to be engaged in something that isn't efficacious. So, engagement is &lt;em&gt;necessary&lt;/em&gt; but not &lt;em&gt;sufficient&lt;/em&gt; for learning.&lt;/p&gt;
 &lt;p&gt;We might even try and quantify aspects of the learner’s behaviour with automated LLM evals, e.g. whether the learner is exhibiting curiosity, or asking good questions.&lt;/p&gt;
 &lt;p&gt;Of course, even if we could measure all these dimensions at a given moment, it’s not easy to tell how much to attribute changes over time to the teacher. We have expensive gold-standard measurements (e.g. longitudinal between-subject AB tests/RCTs), but we can't run these very often. So in practice, we have to rely mostly on cheap &amp;amp; immediate automated evaluations, after validating them occasionally against the gold standard - kinda like applying the &lt;a href="https://en.wikipedia.org/wiki/Cosmic_distance_ladder"&gt;cosmic distance ladder&lt;/a&gt; approach to product development, where we try and find a chain of proximal measures that ladder up to our expensive, gold-standard distal measure.&lt;/p&gt;
+&lt;h2 id="measuring-simulated-student-performance"&gt;Measuring simulated-student performance&lt;/h2&gt;
+&lt;p&gt;&lt;a href="/blog/what-new-developments-will-we-need-for-personalised-relevant-one-to-one-ai-tutoring/#Developing an explicit model of the student"&gt;If we had a great model of the student&lt;/a&gt;, we could make the model-of-the-student take the exams as a proxy!&lt;/p&gt;
 &lt;h2 id="measuring-teacher-performance"&gt;Measuring teacher performance&lt;/h2&gt;
 &lt;p&gt;We can also try and measure the teacher’s behaviour, as in the LearnLM paper, where the model is tuned towards important dimensions, like “be encouraging”, “don’t give away the answer prematurely”, and “keep the learner on track”.&lt;/p&gt;
 &lt;p&gt;Beyond these, there are many lower-level pedagogical best practices we might consider, e.g. encouraging an &lt;a href="https://web.archive.org/web/20070317194011/http://www.stanfordalumni.org/news/magazine/2007/marapr/features/dweck.html"&gt;incremental mindset&lt;/a&gt;, making the content &lt;a href="https://www.memrise.com/blog/how-to-use-mnemonics-to-remember-new-vocabulary"&gt;memorable&lt;/a&gt;, applying a &lt;a href="https://www.notion.so/230422-Newspeak-House-Hackathon-with-Peppe-Cesar-Greg-2c73fa13af404c70b03263bf56124810?pvs=21"&gt;spiral curriculum&lt;/a&gt;, use of analogies and examples, etc.&lt;/p&gt;
