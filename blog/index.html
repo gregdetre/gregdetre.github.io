@@ -39,7 +39,7 @@ Greg Detre
 <meta property="article:published_time" content="2024-10-13 00:00:00" />
 
 
-<meta property="article:modified_time" content="2025-08-25 14:33:29" />
+<meta property="article:modified_time" content="2025-08-28 17:24:42" />
 
 
 
@@ -49,10 +49,13 @@ Greg Detre
 
 <meta name="twitter:card" content="summary_large_image" />
 
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Blog","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.gregdetre.com/blog/"},"url":"https://www.gregdetre.com/blog/","image":"https://www.gregdetre.com/img/bio/gdconsult_bio_A68A0104_cropped_sm.jpg","datePublished":"2024-10-13 00:00:00","dateModified":"2025-08-25 14:33:29","author":{"@type":"Person","name":"Greg Detre"},"publisher":{"@type":"Organization","name":"Greg Detre"},"description":"see also: Making Data Mistakes consulting blog on data science, software, and management.","inLanguage":"en","keywords":["Writing","Personal Reflection"],"wordCount":22}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Blog","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.gregdetre.com/blog/"},"url":"https://www.gregdetre.com/blog/","image":"https://www.gregdetre.com/img/bio/gdconsult_bio_A68A0104_cropped_sm.jpg","datePublished":"2024-10-13 00:00:00","dateModified":"2025-08-28 17:24:42","author":{"@type":"Person","name":"Greg Detre"},"publisher":{"@type":"Organization","name":"Greg Detre"},"description":"see also: Making Data Mistakes consulting blog on data science, software, and management.","inLanguage":"en","keywords":["Writing","Personal Reflection"],"wordCount":22}</script>
 
 
 <script defer src="/static/js/sort.js"></script>
+
+<script defer src="/static/js/blog-search.js"></script>
+
 
 </head>
 
@@ -127,6 +130,8 @@ Greg Detre
 
 
 
+
+
 <div class="feed-links">
     
     
@@ -159,6 +164,19 @@ Greg Detre
 
 
 
+
+
+<div class="search-controls" id="blog-search">
+    <label for="blog-search-input">Search or filter by tags:</label>
+    <div class="search-input-row">
+        <div id="blog-search-chips" class="chips" aria-live="polite"></div>
+        <input id="blog-search-input" type="search" placeholder="Search posts or add tags…" autocomplete="off" />
+    </div>
+    <div id="blog-search-suggestions" class="suggestions" role="listbox" aria-label="Tag suggestions"></div>
+    <noscript><small>(Search requires JavaScript)</small></noscript>
+</div>
+
+
 <div class="sort-controls">
     <label for="sort-select">Sort by:</label>
     <select id="sort-select">
@@ -174,17 +192,19 @@ Greg Detre
 <ul id="post-list">
     
     
+    
     <li class=""
-        data-title="ai tutors"
+        data-title="ai tutors" data-tags="ai|education|teaching"
+        data-excerpt=""
         data-date="1756339200"
-        data-modified="1756399255"
-        data-words="4" data-starred="0">
+        data-modified="1756399344"
+        data-words="7" data-starred="0">
         <a href="/blog/ai-tutors/">AI tutors</a>
         
         
         <span class="inline-date"
-            title="First published: 2025-Aug-28 00:00&#10;Last updated: 2025-Aug-28 16:40&#10;Created: 2025-Aug-28 16:40">
-            (<time datetime="2025-08-28T00:00">today</time> - 4 words)
+            title="First published: 2025-Aug-28 00:00&#10;Last updated: 2025-Aug-28 16:42&#10;Created: 2025-Aug-28 16:42">
+            (<time datetime="2025-08-28T00:00">today</time> - 7 words)
         </span>
         
         
@@ -207,8 +227,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="human readers deserve human writers: a policy on ai and human craft"
+        data-title="human readers deserve human writers: a policy on ai and human craft" data-tags="ai|writing|ethics|creativity|philosophy|ai-assisted|human-machine interaction|human nature"
+        data-excerpt="the magic hammer of ai makes everything look wonderfully nail-like, especially for the solo creative who finds in it both trampoline and anchor. but i've decided that human readers deserve the many tiny choices that make creative work personal, reserving my automation for the machines who won't notice the difference."
         data-date="1755993600"
         data-modified="1756225532"
         data-words="584" data-starred="0">
@@ -259,8 +281,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="product idea - an episode-focused podcast player"
+        data-title="product idea - an episode-focused podcast player" data-tags="product ideas|apps|entertainment|user experience"
+        data-excerpt="podcast apps still think in terms of shows , but what if they recommended the best episodes instead—using ai to parse transcripts and behavioural data to surface hidden gems across the entire medium?"
         data-date="1755388800"
         data-modified="1756132409"
         data-words="301" data-starred="0">
@@ -351,8 +375,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="i refuse to use this technology, even if it would make me money"
+        data-title="i refuse to use this technology, even if it would make me money" data-tags="ethics|artificial intelligence"
+        data-excerpt="when ai systems produce hate speech, technologists dismiss it as mere 'bugs' - what would it actually take for us to refuse profitable technology on moral grounds ?"
         data-date="1755129600"
         data-modified="1756132409"
         data-words="317" data-starred="0">
@@ -769,8 +795,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="psychological effects and cognitive illusions in ai-assisted programming"
+        data-title="psychological effects and cognitive illusions in ai-assisted programming" data-tags="artificial intelligence|programming|psychology|productivity|human-machine interaction|ai-assisted"
+        data-excerpt="we judge ai's coding mistakes as permanent character flaws whilst excusing our own as situational—and find a precarious flow. what can psychology experiments tell us about how it feels to program with ai assistance?"
         data-date="1754870400"
         data-modified="1756132409"
         data-words="1231" data-starred="1">
@@ -813,8 +841,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="how can we measure the effectiveness of an ai tutor?"
+        data-title="how can we measure the effectiveness of an ai tutor?" data-tags="artificial intelligence|education|learning|user experience|evaluation, measurement|ai-assisted"
+        data-excerpt="perhaps our future grades will depend not on our exam performance, but on how well our digital avatars handle a battery of simulated tests."
         data-date="1754784000"
         data-modified="1756391911"
         data-words="604" data-starred="1">
@@ -857,8 +887,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="what new developments will we need for personalised, relevant one-to-one ai tutoring?"
+        data-title="what new developments will we need for personalised, relevant one-to-one ai tutoring?" data-tags="artificial intelligence|education|machine learning|augmenting intelligence|personal development|ai-assisted|learning"
+        data-excerpt="future ai tutoring may require more than prompt engineering—perhaps custom teacher models that learn alongside students, plus explicit student models to predict and optimize learning outcomes."
         data-date="1754697600"
         data-modified="1756391898"
         data-words="604" data-starred="1">
@@ -904,8 +936,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="we should de-stigmatise suicide, our innermost freedom and right"
+        data-title="we should de-stigmatise suicide, our innermost freedom and right" data-tags="ethics|philosophy|mental health|personal reflection|human nature"
+        data-excerpt="my greatest fear has never been dying—it's not being able to die if i want to."
         data-date="1754611200"
         data-modified="1756132409"
         data-words="244" data-starred="1">
@@ -945,8 +979,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="metaphors for depression, clean language, and the dsm"
+        data-title="metaphors for depression, clean language, and the dsm" data-tags="mental health|psychology|language|medical|cognitive behavioral therapy|data science and machine learning"
+        data-excerpt="could we diagnose depression by the metaphors people use to describe it? black veil , gravity , suffocation - each might reveal different underlying patterns requiring different treatments."
         data-date="1754524800"
         data-modified="1756132409"
         data-words="671" data-starred="1">
@@ -989,8 +1025,10 @@ Greg Detre
     
     
     
+    
     <li class="external-item"
-        data-title="a field guide to ai-first development"
+        data-title="a field guide to ai-first development" data-tags="ai|programming|software|artificial intelligence|tips & tricks"
+        data-excerpt="it's a bazooka strapped to a chainsaw, and the default is that you cut off your arm rather than build a house with it."
         data-date="1753833600"
         data-modified="1756132409"
         data-words="5817" data-starred="0">
@@ -1041,8 +1079,10 @@ Greg Detre
     
     
     
+    
     <li class="external-item"
-        data-title="mindstone ai london 2025-feb-18"
+        data-title="mindstone ai london 2025-feb-18" data-tags="ai|london|presentation|programming|conference"
+        data-excerpt="i'll be performing a live dance recital with cursor, my favourite ai-assisted programming editor—because the best way to show ai partnership is through the improvised choreography of real-time coding."
         data-date="1739664000"
         data-modified="1756132409"
         data-words="591" data-starred="0">
@@ -1087,8 +1127,10 @@ Greg Detre
     
     
     
+    
     <li class="external-item"
-        data-title="your team needs a default, glue system for knowledge - use notion"
+        data-title="your team needs a default, glue system for knowledge - use notion" data-tags="knowledge|productivity|work, employment|software|tips & tricks"
+        data-excerpt="there's a tension between wanting sharp, specialised tools and the powerful network effects of having everything in one central place—notion threads this needle surprisingly well."
         data-date="1738972800"
         data-modified="1756132409"
         data-words="1331" data-starred="0">
@@ -1133,8 +1175,10 @@ Greg Detre
     
     
     
+    
     <li class="external-item"
-        data-title="podcast episode on the neuroscience of workplace learning"
+        data-title="podcast episode on the neuroscience of workplace learning" data-tags="learning|neuroscience|memory|ai|leadership|training"
+        data-excerpt="greg detre discovered that cramming teams into intensive workshops is scientifically designed to fail—after a year of monthly sessions focusing on 'sharpening blunt axes,' his channel 4 data team transformed completely."
         data-date="1738281600"
         data-modified="1756132409"
         data-words="8018" data-starred="0">
@@ -1182,8 +1226,10 @@ Greg Detre
     
     
     
+    
     <li class="external-item"
-        data-title="making tea while ai codes: a practical guide to ai-assisted programming (with cursor composer agent in yolo mode)"
+        data-title="making tea while ai codes: a practical guide to ai-assisted programming (with cursor composer agent in yolo mode)" data-tags="ai-assisted|programming|artificial intelligence|productivity|software"
+        data-excerpt="we've progressed from razor-sharp manual tools to chainsaws, and now someone's strapped a bazooka to the chainsaw—powerful, sometimes scary, but with the right approach, transformative and addictive."
         data-date="1736294400"
         data-modified="1756132409"
         data-words="5852" data-starred="0">
@@ -1228,8 +1274,10 @@ Greg Detre
     
     
     
+    
     <li class="external-item"
-        data-title="ease/value ranking"
+        data-title="ease/value ranking" data-tags="product management|project management|leadership|tips & tricks"
+        data-excerpt="sometimes we're better at breaking down an overall, intuitive judgment into narrower, structured criteria first—otherwise we're trying to weigh all these facets against one another simultaneously."
         data-date="1730419200"
         data-modified="1756132409"
         data-words="2299" data-starred="0">
@@ -1271,8 +1319,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="what will ai do to jobs?"
+        data-title="what will ai do to jobs?" data-tags="the future|artificial intelligence|society, sociology|economics"
+        data-excerpt="even if ai-assisted programmers can do the work of ten, we'll build orders of magnitude more software—but technological unemployment will outpace this jevons paradox by the 2030s."
         data-date="1729641600"
         data-modified="1756132409"
         data-words="381" data-starred="1">
@@ -1309,8 +1359,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="pronouns & plosive sounds - can you change society with a single word?"
+        data-title="pronouns & plosive sounds - can you change society with a single word?" data-tags="language|psychology|gender, sexuality|society, sociology|learning"
+        data-excerpt="could adopting a single pronoun for everyone subtly reshape how we think about gender? language creates perceptual boundaries in our minds—and changing those boundaries might change society."
         data-date="1729296000"
         data-modified="1756132409"
         data-words="1157" data-starred="0">
@@ -1352,8 +1404,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="what is wisdom?"
+        data-title="what is wisdom?" data-tags="wisdom"
+        data-excerpt="wisdom is often about truths whose opposite are truths - balancing seemingly contradictory principles like self-love and self-honesty, accountability and forgiveness."
         data-date="1729036800"
         data-modified="1756132409"
         data-words="274" data-starred="0">
@@ -1385,8 +1439,10 @@ Greg Detre
     
     
     
+    
     <li class="external-item"
-        data-title="tensions between engineering, commercial, and product?"
+        data-title="tensions between engineering, commercial, and product?" data-tags="management|product management|work, employment|business|leadership"
+        data-excerpt="just as in a suspension bridge, the structural tensions between engineering, commercial, and product teams are the key to holding everything together and building a successful company."
         data-date="1728777600"
         data-modified="1756132409"
         data-words="1275" data-starred="0">
@@ -1431,8 +1487,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="advice to a younger self"
+        data-title="advice to a younger self" data-tags="wisdom"
+        data-excerpt="honestly doing the exercise is far more interesting than reading other people's answers. what would you tell your younger self about procrastination, balance, and learning?"
         data-date="1728172800"
         data-modified="1756132409"
         data-words="228" data-starred="0">
@@ -1464,8 +1522,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="the real reason we can’t define 'artificial general intelligence'"
+        data-title="the real reason we can’t define 'artificial general intelligence'" data-tags="artificial intelligence|intelligence, mind|copernican view"
+        data-excerpt="could it be that any clean, broad definition of general intelligence would exclude us ? our intelligence is only somewhat general, existing on a continuum rather than being binary."
         data-date="1727740800"
         data-modified="1756132409"
         data-words="271" data-starred="1">
@@ -1535,8 +1595,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="buy microsoft stock as they add ai to every one of their products"
+        data-title="buy microsoft stock as they add ai to every one of their products" data-tags="artificial intelligence|investment|microsoft|consulting"
+        data-excerpt="microsoft makes ai integration just about possible across their product suite—frustratingly clunky today, but enterprise customers will choose familiar pain over third-party complexity."
         data-date="1725148800"
         data-modified="1756132409"
         data-words="629" data-starred="0">
@@ -1573,8 +1635,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="worst scientific experiment ever?"
+        data-title="worst scientific experiment ever?" data-tags="buddhism|lifestyle experiment|personal growth|plum village|meditation, mindfulness"
+        data-excerpt="i changed almost every variable in human life simultaneously—diet, community, silence, meditation, environment—then felt frustrated as a scientist trying to identify the active ingredient."
         data-date="1723939200"
         data-modified="1756132409"
         data-words="587" data-starred="1">
@@ -1614,8 +1678,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="abstractions are distractions to an ai-assisted programmer"
+        data-title="abstractions are distractions to an ai-assisted programmer" data-tags="software|artificial intelligence|programming|cognitive load|automation|ai-assisted"
+        data-excerpt="might ai assistants, who can type faster and memorise vast codebases, actually perform better with less abstract programming languages and frameworks?"
         data-date="1723248000"
         data-modified="1756132409"
         data-words="439" data-starred="0">
@@ -1658,8 +1724,10 @@ Greg Detre
     
     
     
+    
     <li class="external-item"
-        data-title="how to kick off a successful project"
+        data-title="how to kick off a successful project" data-tags="project management|data science and machine learning|risk management|management"
+        data-excerpt="we'd nearly finished the algorithmic work when it delivered the crushing news: no room on their roadmap this year—a painful reminder that brilliant code means nothing without early stakeholder buy-in."
         data-date="1624924800"
         data-modified="1756132409"
         data-words="644" data-starred="0">
@@ -1701,8 +1769,10 @@ Greg Detre
     
     
     
+    
     <li class="external-item"
-        data-title="how to make your software team much more effective"
+        data-title="how to make your software team much more effective" data-tags="programming|management|software|leadership|team effectiveness"
+        data-excerpt="these factors are multiplicative, so if any of them are completely broken, overall effectiveness can drop towards zero—the hidden mathematics of why brilliant teams sometimes accomplish nothing."
         data-date="1607299200"
         data-modified="1756132409"
         data-words="210" data-starred="0">
@@ -1747,8 +1817,10 @@ Greg Detre
     
     
     
+    
     <li class="external-item"
-        data-title="postmortems: the single most important keystone habit for a team (step-by-step guide)"
+        data-title="postmortems: the single most important keystone habit for a team (step-by-step guide)" data-tags="team effectiveness|project management|management|productivity|leadership"
+        data-excerpt="my habit of reading books about habit-formation is stronger than any of the habits they've helped me form—perhaps why i'm drawn to keystone habits that catalyse other positive changes."
         data-date="1606694400"
         data-modified="1756132409"
         data-words="998" data-starred="0">
@@ -1793,8 +1865,10 @@ Greg Detre
     
     
     
+    
     <li class="external-item"
-        data-title="make it work, make it right, make it fast"
+        data-title="make it work, make it right, make it fast" data-tags="programming|tips & tricks|software|wisdom"
+        data-excerpt="i can't count the number of times i've spotted people trying to correct code that doesn't run, or speed up code that isn't right yet."
         data-date="1606089600"
         data-modified="1756132409"
         data-words="331" data-starred="0">
@@ -1836,8 +1910,10 @@ Greg Detre
     
     
     
+    
     <li class="external-item"
-        data-title="how humans and machine learning deliver the best result (podcast)"
+        data-title="how humans and machine learning deliver the best result (podcast)" data-tags="machine learning|artificial intelligence|human-machine interaction|team effectiveness|entertainment"
+        data-excerpt="the best chess player twenty years after deep blue wasn't human or machine, but a centaur team—proving that even in domains as black-and-white as chess, hybrid intelligence exceeds the sum of its parts."
         data-date="1605830400"
         data-modified="1756132409"
         data-words="3183" data-starred="0">
@@ -1882,8 +1958,10 @@ Greg Detre
     
     
     
+    
     <li class="external-item"
-        data-title="how to reproduce your analysis"
+        data-title="how to reproduce your analysis" data-tags="data science and machine learning|research|bugs & testing|documentation|tips & tricks"
+        data-excerpt="i had to become the world's most boring archaeologist, poring over version control changelogs and filesystem backups to understand why my analysis suddenly gave different results."
         data-date="1605484800"
         data-modified="1756132409"
         data-words="785" data-starred="0">
@@ -1928,8 +2006,10 @@ Greg Detre
     
     
     
+    
     <li class="external-item"
-        data-title="how to run an idea stampede to make a group gallop"
+        data-title="how to run an idea stampede to make a group gallop" data-tags="ideas|management|team effectiveness|productivity|tips & tricks"
+        data-excerpt="you'd think everyone will trample over each other when typing, but after some initial confusion and giggling, people make space for one another."
         data-date="1604880000"
         data-modified="1756132409"
         data-words="1272" data-starred="0">
@@ -1974,8 +2054,10 @@ Greg Detre
     
     
     
+    
     <li class="external-item"
-        data-title="what is precision vs recall, and why should i care?"
+        data-title="what is precision vs recall, and why should i care?" data-tags="machine learning|data science and machine learning|statistics|evaluation, measurement"
+        data-excerpt="machine learning algorithms are lazy and opportunistic—faced with imbalanced data, they might just guess 'no' every time, achieve 90% accuracy, and go home early for a beer."
         data-date="1604275200"
         data-modified="1756132409"
         data-words="930" data-starred="0">
@@ -2017,8 +2099,10 @@ Greg Detre
     
     
     
+    
     <li class="external-item"
-        data-title="how to cheat at data science (with help from centaurs and the wizard of oz)"
+        data-title="how to cheat at data science (with help from centaurs and the wizard of oz)" data-tags="data science and machine learning|team effectiveness|product management|human-machine interaction|business"
+        data-excerpt="wizard-of-oz ui testing and ai-assisted centaur teams—two deceptively simple techniques that help data science teams sidestep the usual trap of building elegant solutions to problems nobody actually has."
         data-date="1603670400"
         data-modified="1756132409"
         data-words="115" data-starred="0">
@@ -2063,8 +2147,10 @@ Greg Detre
     
     
     
+    
     <li class="external-item"
-        data-title="why we're bad at estimating (and what to do about it)"
+        data-title="why we're bad at estimating (and what to do about it)" data-tags="product management|project management|cognitive biases|programming|estimation"
+        data-excerpt="people can't reliably estimate how long things will take beyond a few hours—so break solutions into smaller chunks, ask what could go wrong, and make estimates in isolation before discussing together."
         data-date="1603065600"
         data-modified="1756132409"
         data-words="783" data-starred="0">
@@ -2109,8 +2195,10 @@ Greg Detre
     
     
     
+    
     <li class="external-item"
-        data-title="a little functional programming goes a long way"
+        data-title="a little functional programming goes a long way" data-tags="programming|software|team effectiveness|tips & tricks"
+        data-excerpt="it's better to have 100 functions operate on one data structure than 10 functions on 10 data structures—a principle that transforms how we think about code modularity."
         data-date="1602460800"
         data-modified="1756132409"
         data-words="871" data-starred="0">
@@ -2152,8 +2240,10 @@ Greg Detre
     
     
     
+    
     <li class="external-item"
-        data-title="what does it take to transition from senior to chief data scientist?"
+        data-title="what does it take to transition from senior to chief data scientist?" data-tags="data science and machine learning|leadership|personal development|management"
+        data-excerpt="as you get more senior, your area of responsibility grows—from implementing well-defined tasks to picking the right projects and ensuring stakeholders actually see their value."
         data-date="1601856000"
         data-modified="1756132409"
         data-words="633" data-starred="0">
@@ -2195,8 +2285,10 @@ Greg Detre
     
     
     
+    
     <li class="external-item"
-        data-title="what makes a great data scientist and data science team? (podcast)"
+        data-title="what makes a great data scientist and data science team? (podcast)" data-tags="data science and machine learning|team effectiveness|management|entertainment"
+        data-excerpt="the most profound approach to building excellent data science teams isn't about hiring brilliant individuals—it's about creating teams the rest of the business actually wants to support."
         data-date="1601424000"
         data-modified="1756132409"
         data-words="339" data-starred="0">
@@ -2238,8 +2330,10 @@ Greg Detre
     
     
     
+    
     <li class="external-item"
-        data-title="what is machine learning?"
+        data-title="what is machine learning?" data-tags="machine learning|education|data science and machine learning|learning"
+        data-excerpt="machine learning algorithms face the same challenge you had as a school pupil: there's going to be an exam, and you only have past papers to study from."
         data-date="1601251200"
         data-modified="1756132409"
         data-words="469" data-starred="0">
@@ -2281,8 +2375,10 @@ Greg Detre
     
     
     
+    
     <li class="external-item"
-        data-title="what is overfitting?"
+        data-title="what is overfitting?" data-tags="machine learning|data science and machine learning|learning|education"
+        data-excerpt="solomon shereshevsky could memorise endless playing cards but struggled to recognise familiar faces—the same trap that snares ai models when they overlearn training data."
         data-date="1600646400"
         data-modified="1756132409"
         data-words="430" data-starred="0">
@@ -2324,8 +2420,10 @@ Greg Detre
     
     
     
+    
     <li class="external-item"
-        data-title="how to write good software faster (we spend 90% of our time debugging)"
+        data-title="how to write good software faster (we spend 90% of our time debugging)" data-tags="programming|bugs & testing|productivity|software|tips & tricks"
+        data-excerpt="if we spend 90% of our time debugging, learning to type twice as fast only speeds up development by a few percent—focus on writing fewer bugs instead."
         data-date="1597017600"
         data-modified="1756132409"
         data-words="2166" data-starred="0">
@@ -2370,8 +2468,10 @@ Greg Detre
     
     
     
+    
     <li class="external-item"
-        data-title="how to know if your recommendations algorithm is actually doing a good job"
+        data-title="how to know if your recommendations algorithm is actually doing a good job" data-tags="recommendations|machine learning|evaluation, measurement|product management|user experience"
+        data-excerpt="you can get a pretty good 'average hit rate' score by just recommending the most popular programs to everyone—but that's a failure of the metrics, rather than a success of the algorithm."
         data-date="1596412800"
         data-modified="1756132409"
         data-words="1428" data-starred="0">
@@ -2416,8 +2516,10 @@ Greg Detre
     
     
     
+    
     <li class="external-item"
-        data-title="necessary vs sufficient"
+        data-title="necessary vs sufficient" data-tags="philosophy|definitions|turing test|intelligence, mind"
+        data-excerpt="the turing test reveals intelligence's slippery nature—passing it proves you're intelligent, but failing might just mean you're french or think like an alien."
         data-date="1595808000"
         data-modified="1756132409"
         data-words="176" data-starred="0">
@@ -2459,8 +2561,10 @@ Greg Detre
     
     
     
+    
     <li class="external-item"
-        data-title="how to make your data science team faster (and speed up progress)"
+        data-title="how to make your data science team faster (and speed up progress)" data-tags="data science and machine learning|team effectiveness|project management|leadership|management"
+        data-excerpt="that complaint about your team being 'too slow' might not be about throughput at all—listen carefully and you'll often discover it's really about latency, flexibility, or predictability instead."
         data-date="1595203200"
         data-modified="1756132409"
         data-words="1648" data-starred="0">
@@ -2505,8 +2609,10 @@ Greg Detre
     
     
     
+    
     <li class="external-item"
-        data-title="why are my emails being sent to spam - a guide for gsuite"
+        data-title="why are my emails being sent to spam - a guide for gsuite" data-tags="tips & tricks|technology|google|business"
+        data-excerpt="like car brakes, we can all agree that email deliverability is important, but we don't want to have to learn how it works."
         data-date="1594857600"
         data-modified="1756132409"
         data-words="1082" data-starred="0">
@@ -2548,8 +2654,10 @@ Greg Detre
     
     
     
+    
     <li class="external-item"
-        data-title="the difference: throughput vs latency"
+        data-title="the difference: throughput vs latency" data-tags="technology|definitions|performance|system design"
+        data-excerpt="speeding up a conveyor belt reduces latency; widening it increases throughput—but a wider, slow belt still takes ages for any single widget to traverse."
         data-date="1594598400"
         data-modified="1756132409"
         data-words="246" data-starred="0">
@@ -2591,8 +2699,10 @@ Greg Detre
     
     
     
+    
     <li class="external-item"
-        data-title="will data scientists become obsolete in the next 10 years?"
+        data-title="will data scientists become obsolete in the next 10 years?" data-tags="data science and machine learning|the future|automation|business|ai"
+        data-excerpt="just as cloud servers replaced physical hardware with three clicks, machine learning services promise to commoditise data science—yet the real world stubbornly refuses to cooperate with our dorothy fantasies."
         data-date="1593993600"
         data-modified="1756132409"
         data-words="1848" data-starred="0">
@@ -2637,8 +2747,10 @@ Greg Detre
     
     
     
+    
     <li class="external-item"
-        data-title="how to find a job through a recruiter"
+        data-title="how to find a job through a recruiter" data-tags="job-hunting|work, employment|relationships|career advice"
+        data-excerpt="i've watched big companies systematically ignore direct applications whilst favouring candidates forwarded by recruiters—they trust that good recruiters have already done the careful screening work."
         data-date="1584316800"
         data-modified="1756132409"
         data-words="996" data-starred="0">
@@ -2680,8 +2792,10 @@ Greg Detre
     
     
     
+    
     <li class="external-item"
-        data-title="how to build a model that performs at chance"
+        data-title="how to build a model that performs at chance" data-tags="machine learning|fmri|bugs & testing|research|cross-validation"
+        data-excerpt="i shuffled the labels and ran my model on scrambled data—it still performed above chance, revealing that my canary had died and i was peeking."
         data-date="1581292800"
         data-modified="1756132409"
         data-words="1548" data-starred="0">
@@ -2726,8 +2840,10 @@ Greg Detre
     
     
     
+    
     <li class="external-item"
-        data-title="running a premortem"
+        data-title="running a premortem" data-tags="premortem|project management|risk management|leadership|team effectiveness"
+        data-excerpt="we told a story together out loud about a potential worst-case future that hadn't happened yet, picturing the apple launch event happening in slow motion with nary a mention of our product."
         data-date="1581292800"
         data-modified="1756132409"
         data-words="1226" data-starred="0">
@@ -2772,8 +2888,10 @@ Greg Detre
     
     
     
+    
     <li class="external-item"
-        data-title="technical debt isn't like financial debt"
+        data-title="technical debt isn't like financial debt" data-tags="software|project management|programming|management|economics"
+        data-excerpt="it's helpful to imagine i've borrowed money from a capricious loan shark, who might show up at your door one day with a baseball bat and demand all the money right now ."
         data-date="1581292800"
         data-modified="1756132409"
         data-words="2034" data-starred="0">
@@ -2818,8 +2936,10 @@ Greg Detre
     
     
     
+    
     <li class="external-item"
-        data-title="how to write proposals that lead to good, quick, collective decisions"
+        data-title="how to write proposals that lead to good, quick, collective decisions" data-tags="project management|team effectiveness|leadership|business"
+        data-excerpt="a good decision today is better than a perfect decision tomorrow—especially when you can reverse it if you're wrong."
         data-date="1581292800"
         data-modified="1756132409"
         data-words="306" data-starred="0">
@@ -2861,8 +2981,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="how to remember names at a party"
+        data-title="how to remember names at a party" data-tags="memory|personal development|memory tricks (mnemonics)|cognitive load"
+        data-excerpt="the biggest reason we forget names isn't poor memory—it's that we weren't paying attention in the first place while worrying about spinach in our teeth."
         data-date="1571788800"
         data-modified="1756132409"
         data-words="636" data-starred="0">
@@ -2899,8 +3021,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="ltsf 2019"
+        data-title="ltsf 2019" data-tags="education|presentation|conference|london"
+        data-excerpt=""
         data-date="1563494400"
         data-modified="1756132409"
         data-words="29" data-starred="0">
@@ -2935,8 +3059,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="how to cheat at data science (with help from centaurs and the wizard of oz) - presentation at unbound 2019 (video)"
+        data-title="how to cheat at data science (with help from centaurs and the wizard of oz) - presentation at unbound 2019 (video)" data-tags="presentation|conference|london|technology|data science and machine learning|ai-assisted|product management|video"
+        data-excerpt=""
         data-date="1563408000"
         data-modified="1756132409"
         data-words="32" data-starred="0">
@@ -2983,8 +3109,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="fun things to do for free in london (list)"
+        data-title="fun things to do for free in london (list)" data-tags="lifestyle experiment|happiness|ideas|london|personal growth"
+        data-excerpt="from roller skating through royal parks to staging impromptu street dramas, london offers countless free adventures for the creatively curious."
         data-date="1543708800"
         data-modified="1756132409"
         data-words="103" data-starred="0">
@@ -3024,8 +3152,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="small wins (list)"
+        data-title="small wins (list)" data-tags="lifestyle experiment|happiness|productivity|personal development"
+        data-excerpt="ten simple actions that can brighten your day, from learning song lyrics to waterproofing your favorite shoes. small changes that create disproportionate satisfaction in daily life."
         data-date="1542499200"
         data-modified="1756132409"
         data-words="247" data-starred="0">
@@ -3062,8 +3192,10 @@ Greg Detre
     
     
     
+    
     <li class="external-item"
-        data-title="how i learned to stop worrying and love hipaa - part 2"
+        data-title="how i learned to stop worrying and love hipaa - part 2" data-tags="documentation|security|training|privacy|medical"
+        data-excerpt="from part 1, you have a sense of what counts as protected health information (phi) and how to conduct a risk assessment to understand the risks to those data. so you’ve already had your first taste…"
         data-date="1512864000"
         data-modified="1756304470"
         data-words="901" data-starred="0">
@@ -3108,8 +3240,10 @@ Greg Detre
     
     
     
+    
     <li class="external-item"
-        data-title="how i learned to stop worrying and love hipaa - part 3"
+        data-title="how i learned to stop worrying and love hipaa - part 3" data-tags="security|medical|privacy|documentation|business"
+        data-excerpt="from part 1, you have a sense of what data you need to protect and how to assess risk. part 2 discussed documentation requirements. in this section, we’ll focus on some of the hipaa security rule…"
         data-date="1512864000"
         data-modified="1756304474"
         data-words="769" data-starred="0">
@@ -3154,8 +3288,10 @@ Greg Detre
     
     
     
+    
     <li class="external-item"
-        data-title="how i learned to stop worrying and love hipaa"
+        data-title="how i learned to stop worrying and love hipaa" data-tags="security|privacy|medical|startups|risk management"
+        data-excerpt="i can still fondly remember when i thought a hipaa was the most dangerous animal in africa. then i learned it only has one ‘p’, which might as well stand for ‘paperwork’. two years on, i see hipaa as…"
         data-date="1463356800"
         data-modified="1756304477"
         data-words="759" data-starred="0">
@@ -3200,8 +3336,10 @@ Greg Detre
     
     
     
+    
     <li class="external-item"
-        data-title="wikis are gardens"
+        data-title="wikis are gardens" data-tags="wiki|organising knowledge|philosophy"
+        data-excerpt="wikis aren't empty, like the term 'cyberspace' sounds, nor filled with clean, glowing lines, nor grungy and neuromantic. wikis are a communal garden, where anyone can graze, and anything can grow…"
         data-date="1460419200"
         data-modified="1756304479"
         data-words="121" data-starred="0">
@@ -3240,8 +3378,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="friendships and memory effects"
+        data-title="friendships and memory effects" data-tags="memory|friendship|context|personal reflection|human nature|spacing effect"
+        data-excerpt="the longer you've known something, the deeper its roots in your mind—it reassures me to think that friendships work the same way."
         data-date="1459814400"
         data-modified="1756132409"
         data-words="408" data-starred="1">
@@ -3284,8 +3424,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="soft and hard skills"
+        data-title="soft and hard skills" data-tags="personal reflection|management|programming|cognitive behavioral therapy"
+        data-excerpt="after years focused on management over coding, wrestling with tensorflow raises a familiar question: was this always this hard, or have i gone soft?"
         data-date="1457827200"
         data-modified="1756132409"
         data-words="217" data-starred="0">
@@ -3322,8 +3464,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="chatbots - from rogerian psychotherapists to cognitive behavioral therapists"
+        data-title="chatbots - from rogerian psychotherapists to cognitive behavioral therapists" data-tags="hackathon, mad dash|python|finite state machine|slack|artificial intelligence"
+        data-excerpt="building a stateful slack chatbot in two days taught us that representing conversational logic as data rather than code opens exciting possibilities—despite our demo day disaster."
         data-date="1455580800"
         data-modified="1756132409"
         data-words="1623" data-starred="0">
@@ -3363,8 +3507,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="why has google open sourced tensorflow?"
+        data-title="why has google open sourced tensorflow?" data-tags="artificial intelligence|open source|tensorflow|google|machine learning"
+        data-excerpt="google's open sourcing of tensorflow isn't altruism—it's strategy. the real goal may be "pay by the parameter" cloud computing that disrupts aws."
         data-date="1453420800"
         data-modified="1756132409"
         data-words="519" data-starred="0">
@@ -3404,8 +3550,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="entrepreneur vs manager vs technician"
+        data-title="entrepreneur vs manager vs technician" data-tags="entrepreneurship|management|personal development"
+        data-excerpt="gerber identifies three business personalities: the entrepreneur who dreams, the manager who orders, and the technician who crafts. which one dominates your work life?"
         data-date="1451347200"
         data-modified="1756132409"
         data-words="315" data-starred="0">
@@ -3439,8 +3587,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="todo zero"
+        data-title="todo zero" data-tags="productivity|time management"
+        data-excerpt="what if you finished each day with nothing left on your todo list? like a juggler with six balls but only two in hand, focus on just one or two tasks at a time."
         data-date="1449014400"
         data-modified="1756132409"
         data-words="881" data-starred="0">
@@ -3471,8 +3621,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="presentations at barcamp tampa 2015"
+        data-title="presentations at barcamp tampa 2015" data-tags="python|presentation|software|productivity|conference"
+        data-excerpt="two presentations from barcamp tampa 2015: mastering python unit testing for better code, and killing your crusty old php system through seamless replatforming."
         data-date="1445040000"
         data-modified="1756132409"
         data-words="27" data-starred="0">
@@ -3512,8 +3664,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="mindfulness in scuba diving"
+        data-title="mindfulness in scuba diving" data-tags="meditation, mindfulness|personal reflection|lifestyle experiment|mental health"
+        data-excerpt="beneath the surface, diving transforms into a meditation where breath controls buoyancy and the alien underwater world demands complete presence in the moment."
         data-date="1443657600"
         data-modified="1756132409"
         data-words="122" data-starred="0">
@@ -3550,8 +3704,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="listing things to look forward to"
+        data-title="listing things to look forward to" data-tags="personal reflection|mental health|happiness|personal development"
+        data-excerpt="making a list of things to anticipate felt like mental physiotherapy - unfurling a cramped limb that had been injured, atrophied but finally free."
         data-date="1443571200"
         data-modified="1756132409"
         data-words="157" data-starred="0">
@@ -3588,8 +3744,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title=""oh, that should be easy - maybe a few minutes...""
+        data-title=""oh, that should be easy - maybe a few minutes..."" data-tags="product management|productivity|software|cognitive biases"
+        data-excerpt="we humans are walking sacks of blood, bile and bias, and estimating how long things will take brings out the worst in us."
         data-date="1441584000"
         data-modified="1756132409"
         data-words="707" data-starred="0">
@@ -3626,8 +3784,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="sanity checks as data sidekicks"
+        data-title="sanity checks as data sidekicks" data-tags="data science and machine learning|artificial intelligence|fmri|research"
+        data-excerpt="when complex data analysis fails, test something dead simple first—like distinguishing a blank screen from visual stimuli in brain data."
         data-date="1391558400"
         data-modified="1756132409"
         data-words="286" data-starred="0">
@@ -3666,8 +3826,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="two-level tagging"
+        data-title="two-level tagging" data-tags="tagging|emacs freex|organising knowledge"
+        data-excerpt="what if you could combine the flexibility of tags with the organization of folders? two-level tagging lets items belong to multiple categories and creates hierarchies between those categories."
         data-date="1383004800"
         data-modified="1756132409"
         data-words="262" data-starred="0">
@@ -3701,8 +3863,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="blogging with wordpress and emacs"
+        data-title="blogging with wordpress and emacs" data-tags="emacs|wordpress|python|writing|software"
+        data-excerpt="a simple workflow combining emacs, python, and wordpress lets you write posts in your favorite editor and publish with a single command: m-x wordpress-publish-this-file ."
         data-date="1380240000"
         data-modified="1756132409"
         data-words="192" data-starred="0">
@@ -3752,8 +3916,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="final dissertation"
+        data-title="final dissertation" data-tags="research|writing|science|psychology|memory"
+        data-excerpt=""
         data-date="1357516800"
         data-modified="1756132409"
         data-words="16" data-starred="0">
@@ -3805,8 +3971,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="pluviocabulary (rain words), memrise-style"
+        data-title="pluviocabulary (rain words), memrise-style" data-tags="memrise|language|vocabulary|curiosity|weather|obsolete"
+        data-excerpt="from petrichor (the smell of first rain) to tirl (rain's sound on rooftops), exploring the rich vocabulary of precipitation reveals language as nuanced as weather itself."
         data-date="1301788800"
         data-modified="1756132409"
         data-words="33" data-starred="0">
@@ -3849,8 +4017,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="the iphone apps my cold, dead hands would cling most rigidly to"
+        data-title="the iphone apps my cold, dead hands would cling most rigidly to" data-tags="productivity|entertainment|technology|mobile phones|apps"
+        data-excerpt="from instapaper for reading queues to snaptell's book-scanning wizardry, these essential iphone apps prove indispensable for modern digital life."
         data-date="1294617600"
         data-modified="1756132409"
         data-words="179" data-starred="0">
@@ -3890,8 +4060,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="startup thinking - the people who have most influenced my thinking on startups."
+        data-title="startup thinking - the people who have most influenced my thinking on startups." data-tags="entrepreneurship|startups|technology|product management|personal development"
+        data-excerpt="from steve blank's lean methodology to paul graham's 'release early, iterate often' philosophy—exploring the foundational thinkers who shaped modern startup wisdom."
         data-date="1294531200"
         data-modified="1756132409"
         data-words="147" data-starred="0">
@@ -3931,8 +4103,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="daisydisk - where has all my disk space gone? (mac app)"
+        data-title="daisydisk - where has all my disk space gone? (mac app)" data-tags="mac|apps|productivity|technology|psychology"
+        data-excerpt="i have a theory that inability to manage one's finances and one's hard disk space have the same psychological factors at their root."
         data-date="1293667200"
         data-modified="1756132409"
         data-words="70" data-starred="0">
@@ -3972,8 +4146,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="get your users to tell you what they really want"
+        data-title="get your users to tell you what they really want" data-tags="feedback|product ideas"
+        data-excerpt="a simple feedback box at the end of learning sessions generated 5 times more user suggestions than a prominent red uservoice button that users had learned to ignore."
         data-date="1292889600"
         data-modified="1756132409"
         data-words="405" data-starred="0">
@@ -4004,8 +4180,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="storyville and jenga iphone apps"
+        data-title="storyville and jenga iphone apps" data-tags="technology|apps|gaming, games"
+        data-excerpt="two friends have released iphone apps just in time for christmas: a fiendishly realistic jenga with beautiful physics, and storyville delivering weekly stories to your pocket."
         data-date="1292803200"
         data-modified="1756132409"
         data-words="90" data-starred="0">
@@ -4039,8 +4217,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="setting up your own domain name and website"
+        data-title="setting up your own domain name and website" data-tags="website setup|domain names|hosting websites|technology"
+        data-excerpt="setting up your own domain and website doesn't have to be complicated—there are three main approaches, from diy hosting to google apps to all-in-one platforms like weebly ."
         data-date="1292630400"
         data-modified="1756132409"
         data-words="485" data-starred="0">
@@ -4077,8 +4257,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="breaking the seal"
+        data-title="breaking the seal" data-tags="writing|personal development|london|productivity"
+        data-excerpt="after years of procrastination, a simple context shift finally unlocked the floodgates: "writing's like peeing - once you break the seal, the words just spill forth all evening.""
         data-date="1288915200"
         data-modified="1756132409"
         data-words="135" data-starred="0">
@@ -4115,8 +4297,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="a letter to a prospective grad student"
+        data-title="a letter to a prospective grad student" data-tags="wisdom|research|personal development|education"
+        data-excerpt="a phd can be wonderful when you're excited about it, but don't expect the idiosyncrasies of my experience to apply closely to anyone else ."
         data-date="1288828800"
         data-modified="1756132409"
         data-words="600" data-starred="0">
@@ -4153,8 +4337,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="when i am famous, i will decline interviews"
+        data-title="when i am famous, i will decline interviews" data-tags="writing|fiction|personal development|intelligence, mind"
+        data-excerpt="famous actors' glossy interviews fill the author with existential dread —conversations stripped of context, distilled by strangers into caricature."
         data-date="1288828800"
         data-modified="1756132409"
         data-words="334" data-starred="0">
@@ -4191,8 +4377,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="but where does the wisdom come from?"
+        data-title="but where does the wisdom come from?" data-tags="wisdom|religion|quotation|personal development|philosophy"
+        data-excerpt="with courage and serenity within reach, the most elusive element of the serenity prayer remains: where does the wisdom come from?"
         data-date="1288742400"
         data-modified="1756132409"
         data-words="53" data-starred="0">
@@ -4232,8 +4420,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="the muses are deaf, so speak up"
+        data-title="the muses are deaf, so speak up" data-tags="writing|curiosity|personal development|creativity|neuroscience|tom waits|walking"
+        data-excerpt="want to unlock better thinking while walking? talk out loud —loudly, proudly, with gestures—because the muses are deaf and your inner monologue isn't entertaining enough."
         data-date="1288569600"
         data-modified="1756132409"
         data-words="243" data-starred="0">
@@ -4279,8 +4469,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="a wiki for spaces. a town anyone can edit. school architecture founded on mnemonic principles"
+        data-title="a wiki for spaces. a town anyone can edit. school architecture founded on mnemonic principles" data-tags="wiki|education|augmenting intelligence|architecture|memory tricks (mnemonics)|product ideas|geography"
+        data-excerpt="what if the collaborative editing power of wikipedia could be applied to spaces instead of text—from virtual towns to schools designed as living timelines?"
         data-date="1288483200"
         data-modified="1756132409"
         data-words="373" data-starred="0">
@@ -4326,8 +4518,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="how can your iphone make you even more entertaining and interesting than you already are?"
+        data-title="how can your iphone make you even more entertaining and interesting than you already are?" data-tags="iphone apps|technology|productivity|artificial intelligence|user experience|apps"
+        data-excerpt="what if your iphone could listen to conversations and automatically surface answers to disputed facts in real-time, keeping dialogue flowing instead of grinding to a halt?"
         data-date="1288483200"
         data-modified="1756132409"
         data-words="376" data-starred="0">
@@ -4370,8 +4564,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="master turkers"
+        data-title="master turkers" data-tags="job-hunting|technology|productivity|research|crowdsourcing|product ideas"
+        data-excerpt="what if amazon's mechanical turk could identify master turkers capable of higher-skilled work like research, programming, or creative tasks—transforming micro-work into meaningful portfolio building?"
         data-date="1288396800"
         data-modified="1756132409"
         data-words="401" data-starred="0">
@@ -4414,8 +4610,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="brain orchestras and fmri analyses"
+        data-title="brain orchestras and fmri analyses" data-tags="fmri|multi-variate pattern analysis (mvpa)|neuroscience|data science and machine learning|dimensionality reduction"
+        data-excerpt="think of the brain as an orchestra with instruments playing simultaneously— multi-variate pattern analysis helps decode whether you're hearing mozart or beethoven from the neural symphony."
         data-date="1288310400"
         data-modified="1756132409"
         data-words="623" data-starred="0">
@@ -4455,8 +4653,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="auto-links"
+        data-title="auto-links" data-tags="software|wiki|organising knowledge|automation|product ideas"
+        data-excerpt="what if wikis could automatically create links as you type, without camelcase or brackets? auto-links detect existing page names and transform them into links instantly, creating lazy serendipity ."
         data-date="1288224000"
         data-modified="1756132409"
         data-words="342" data-starred="0">
@@ -4496,8 +4696,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="eroding our minds"
+        data-title="eroding our minds" data-tags="advertising|psychology|technology|user experience|cognitive biases"
+        data-excerpt="advertising works by exploiting cognitive fluency —the more familiar something feels, the more we like it. like the banks of a river worn smooth by ceaseless flow, advertising erodes our minds."
         data-date="1288051200"
         data-modified="1756132409"
         data-words="255" data-starred="0">
@@ -4537,8 +4739,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="i refuse to consider an advertising-based business model"
+        data-title="i refuse to consider an advertising-based business model" data-tags="advertising|ethics|business|quotation"
+        data-excerpt="the idea of monetizing people's attention makes me feel the same way i'd feel about burning books to stay warm ."
         data-date="1287964800"
         data-modified="1756132409"
         data-words="91" data-starred="0">
@@ -4575,8 +4779,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="nietzsche"
+        data-title="nietzsche" data-tags="quotation|wisdom|philosophy|human nature"
+        data-excerpt=""
         data-date="1287878400"
         data-modified="1756132409"
         data-words="22" data-starred="0">
@@ -4611,8 +4817,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="communal interactive jukebox"
+        data-title="communal interactive jukebox" data-tags="music|ideas|technology|user experience|nerdy"
+        data-excerpt="what if wireless technology could transform any stereo into a communal interactive jukebox where party guests queue songs and vote on tracks, building reputation like social media karma?"
         data-date="1287792000"
         data-modified="1756132409"
         data-words="190" data-starred="0">
@@ -4652,8 +4860,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="house md, gibberish and clown school"
+        data-title="house md, gibberish and clown school" data-tags="television|medical|psychology|entertainment|house md|clown school"
+        data-excerpt="how can house md remain compelling when a third of it is medical gibberish? a friend's clown school experience reveals the surprising power of pure nonsense ."
         data-date="1287705600"
         data-modified="1756132409"
         data-words="95" data-starred="0">
@@ -4696,8 +4906,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="what's blowin' in the wind?"
+        data-title="what's blowin' in the wind?" data-tags="music|prediction|technology"
+        data-excerpt="what if we could identify musical early adopters through data, then track what they're listening to now to predict next year's hits?"
         data-date="1287619200"
         data-modified="1756132409"
         data-words="197" data-starred="0">
@@ -4731,8 +4943,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="dropbocumentation"
+        data-title="dropbocumentation" data-tags="wiki|productivity|documentation|dropbox|software"
+        data-excerpt="every time a programmer goes away, infrastructure they know best breaks—that's murphy's algorithm . how do you optimize wiki 'edit' conversion rates to capture knowledge while it's fresh?"
         data-date="1287532800"
         data-modified="1756132409"
         data-words="500" data-starred="0">
@@ -4772,8 +4986,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="excretation over"
+        data-title="excretation over" data-tags="memory|fmri|research|neuroscience"
+        data-excerpt=""
         data-date="1267920000"
         data-modified="1756132409"
         data-words="24" data-starred="0">
@@ -4808,8 +5024,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="a hivemind with a sense of humor"
+        data-title="a hivemind with a sense of humor" data-tags="artificial intelligence|comedy, humour|noosphere|google"
+        data-excerpt="unlike the bible's collective wisdom, google's search autocomplete reveals a hivemind with humor —proving that our digital consciousness can both giggle and think."
         data-date="1263772800"
         data-modified="1756132409"
         data-words="116" data-starred="0">
@@ -4846,8 +5064,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="my two favorite music videos of all time"
+        data-title="my two favorite music videos of all time" data-tags="music|nerdy|silliness|entertainment|tom waits"
+        data-excerpt="a manic messiah and his merry band versus a bullfrog with a bullhorn - two wildly different artists showcase what makes live performance truly transcendent."
         data-date="1263254400"
         data-modified="1756132409"
         data-words="54" data-starred="0">
@@ -4887,8 +5107,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="the pain of forgetting"
+        data-title="the pain of forgetting" data-tags="memory|emacs freex|augmenting intelligence|neuroscience"
+        data-excerpt="a memory researcher's personal struggle with forgetting led him from obsessive note-taking to building sophisticated software systems, and ultimately to co-founding memrise ."
         data-date="1262563200"
         data-modified="1756132409"
         data-words="600" data-starred="0">
@@ -4925,8 +5147,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="how to beat an fmri lie detector"
+        data-title="how to beat an fmri lie detector" data-tags="fmri|lie detection|neuroscience|machine learning"
+        data-excerpt="fmri lie detectors might seem foolproof, but they rely on baseline comparisons just like polygraphs—meaning simple mental tricks during control questions could disrupt their accuracy."
         data-date="1262563200"
         data-modified="1756132409"
         data-words="1211" data-starred="1">
@@ -4963,8 +5187,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="losing weight"
+        data-title="losing weight" data-tags="silliness|comedy, humour|ideas|lifestyle experiment"
+        data-excerpt=""
         data-date="1259193600"
         data-modified="1756132409"
         data-words="27" data-starred="0">
@@ -4999,8 +5225,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="our one true inalienable right"
+        data-title="our one true inalienable right" data-tags="ethics|philosophy|writing|the future|human nature|personal development"
+        data-excerpt="a death of our own choosing, at our own time and on our own terms, may be the most noble way to end one's life."
         data-date="1256169600"
         data-modified="1756132409"
         data-words="90" data-starred="0">
@@ -5043,8 +5271,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="why is it that chocolate and whisky help when i want a cigarette?"
+        data-title="why is it that chocolate and whisky help when i want a cigarette?" data-tags="curiosity|psychology|mental health"
+        data-excerpt="what does it mean that chocolate or whisky can sometimes quench that belly-fire-for-fire when craving cigarettes? are these just interchangeable sources of endorphins drowning out absent pleasures?"
         data-date="1256083200"
         data-modified="1756132409"
         data-words="58" data-starred="0">
@@ -5078,8 +5308,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="word pools for psychology experiments"
+        data-title="word pools for psychology experiments" data-tags="psychology|memory|research"
+        data-excerpt="need carefully curated word lists for your psychology research? from imageable nouns to frequency-filtered datasets, these specialized word pools offer researchers precisely controlled stimuli for memory and cognition experiments."
         data-date="1255910400"
         data-modified="1756132409"
         data-words="150" data-starred="0">
@@ -5113,8 +5345,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="i don't believe in luck"
+        data-title="i don't believe in luck" data-tags="luck|psychology|wisdom|attitude"
+        data-excerpt="some people are luckier than others, but this is a function of attitude rather than fortuity —lady luck wants to be serenaded, not strip-mined."
         data-date="1255478400"
         data-modified="1756132409"
         data-words="215" data-starred="1">
@@ -5151,8 +5385,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="on patents as a business tool"
+        data-title="on patents as a business tool" data-tags="patents|business|investment|startups|ethics"
+        data-excerpt="patents aren't just legal protection—they're deterrents that make large companies more likely to partner with or acquire you rather than compete directly."
         data-date="1255392000"
         data-modified="1756132409"
         data-words="194" data-starred="0">
@@ -5192,8 +5428,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="self control through software"
+        data-title="self control through software" data-tags="software|productivity|self-control|mac"
+        data-excerpt="when asked whether he'd rather be smarter or have more willpower, the choice was clear—but can software like self control actually help break our addiction to digital distractions?"
         data-date="1255305600"
         data-modified="1756132409"
         data-words="139" data-starred="0">
@@ -5230,8 +5468,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="mobile phones should be felt but not heard"
+        data-title="mobile phones should be felt but not heard" data-tags="mobile phones|technology|productivity|ideas"
+        data-excerpt="what if your phone could tap you on the wrist instead of screaming from the bottom of your bag?"
         data-date="1254355200"
         data-modified="1756132409"
         data-words="91" data-starred="0">
@@ -5268,8 +5508,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="sssssssshhhhhhhhhhh... for now (obsolete)"
+        data-title="sssssssshhhhhhhhhhh... for now (obsolete)" data-tags="mobile phones|memory|productivity|product ideas|geography|obsolete"
+        data-excerpt="what if phones could automatically silence themselves for an hour , then restore the ringer without relying on our notoriously unreliable prospective memory?"
         data-date="1254355200"
         data-modified="1756132409"
         data-words="143" data-starred="0">
@@ -5312,8 +5554,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="emacs backup files"
+        data-title="emacs backup files" data-tags="emacs|productivity|software|documentation|backup"
+        data-excerpt="emacs creates billions of little ugly-twin backup files scattered across your hard disk—here's how to tame them with better configuration options."
         data-date="1254355200"
         data-modified="1756132409"
         data-words="158" data-starred="0">
@@ -5353,8 +5597,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="google, here's some context"
+        data-title="google, here's some context" data-tags="google|search engines|python|user interfaces|technology"
+        data-excerpt="what if google let you provide context rather than exact keywords? a simple context:(python web database programming) could revolutionize how we search for related topics."
         data-date="1254355200"
         data-modified="1756132409"
         data-words="179" data-starred="0">
@@ -5394,8 +5640,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="picking scientific reviewers"
+        data-title="picking scientific reviewers" data-tags="peer review|science|research|feedback"
+        data-excerpt="a good reviewer's recommendations will be predictive of whether a paper went on to be published—imagine if every reviewer had a public scorecard tracking their efficacy."
         data-date="1252368000"
         data-modified="1756132409"
         data-words="415" data-starred="0">
@@ -5432,8 +5680,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="ithimble"
+        data-title="ithimble" data-tags="mobile phones|technology|user interfaces|product ideas"
+        data-excerpt="what if a simple thimble could transform your clumsy smartphone interactions into precise, pen-like control over those tiny touchscreen buttons?"
         data-date="1252368000"
         data-modified="1756132409"
         data-words="94" data-starred="0">
@@ -5470,8 +5720,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="assortative mixing for peer review"
+        data-title="assortative mixing for peer review" data-tags="peer review|science|network theory|adrian de froment|ecology|psychology"
+        data-excerpt="being a good reviewer is like wetting yourself in a dark suit—you get a warm feeling, but no one ever notices."
         data-date="1252368000"
         data-modified="1756132409"
         data-words="282" data-starred="1">
@@ -5514,8 +5766,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="the wallet washkit for the person about town"
+        data-title="the wallet washkit for the person about town" data-tags="productivity|comedy, humour|technology|product ideas"
+        data-excerpt="no thicker than an ordinary wallet, but packed with nasa-designed micro-toothbrush, potent chewing gum, and roll-on deodorant gel for the modern gentleman's nocturnal adventures."
         data-date="1252368000"
         data-modified="1756132409"
         data-words="107" data-starred="0">
@@ -5552,8 +5806,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="open source the drobo data format"
+        data-title="open source the drobo data format" data-tags="open source|technology|product ideas"
+        data-excerpt="open sourcing drobo's proprietary data format could spark innovation, reduce customer lock-in fears, and paradoxically make more people willing to trust their data to the platform."
         data-date="1252368000"
         data-modified="1756132409"
         data-words="334" data-starred="0">
@@ -5587,8 +5843,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="mobile phone ringing"
+        data-title="mobile phone ringing" data-tags="mobile phones|user interfaces|technology|context"
+        data-excerpt="what if phones could automatically silence themselves by detecting nearby devices? a simple algorithm might solve cinema embarrassment, but predictable dumbness often beats surprising smartness ."
         data-date="1252368000"
         data-modified="1756132409"
         data-words="271" data-starred="0">
@@ -5625,8 +5883,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="dice man iphone app"
+        data-title="dice man iphone app" data-tags="mobile phones|comedy, humour|ideas|technology|apps|product ideas"
+        data-excerpt="an iphone app that lets dice decide your fate—from calling your ex at 5am to throwing your phone in the nearest river."
         data-date="1252368000"
         data-modified="1756132409"
         data-words="42" data-starred="0">
@@ -5669,8 +5929,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="spacetime alarms"
+        data-title="spacetime alarms" data-tags="mobile phones|technology|productivity|ideas|apps|product ideas|geography"
+        data-excerpt="what if alarm clocks could wake you based on location instead of time? from train naps to meeting reminders, spatial alarms could revolutionize how we navigate daily life."
         data-date="1252368000"
         data-modified="1756132409"
         data-words="255" data-starred="0">
@@ -5716,8 +5978,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="did you know that the word 'gullible' isn't in the dictionary?"
+        data-title="did you know that the word 'gullible' isn't in the dictionary?" data-tags="silliness|comedy, humour|ideas"
+        data-excerpt=""
         data-date="1252368000"
         data-modified="1756132409"
         data-words="28" data-starred="0">
@@ -5749,8 +6013,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="alleviating tinnitus, and the shape of the auditory phenomenological landscape"
+        data-title="alleviating tinnitus, and the shape of the auditory phenomenological landscape" data-tags="medical|ideas|neuroscience|psychology|experiment design"
+        data-excerpt="could psychological interference from carefully tuned external sounds disrupt the brain's perception of tinnitus, creating a kind of neural "noise cancellation" effect?"
         data-date="1252368000"
         data-modified="1756132409"
         data-words="255" data-starred="0">
@@ -5790,8 +6056,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="emacs freex gets a new home"
+        data-title="emacs freex gets a new home" data-tags="emacs freex|emacs|open source|software|documentation|technology"
+        data-excerpt="emacs freex mode transforms note-taking into a massively-hyperlinked database of ideas—a personal wiki on steroids that's now found its new home on github."
         data-date="1236556800"
         data-modified="1756132409"
         data-words="100" data-starred="0">
@@ -5834,8 +6102,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="if i were to write a novel"
+        data-title="if i were to write a novel" data-tags="writing|marketing|ideas|advertising"
+        data-excerpt="what if you could transform london's subway platforms into the pages of your novel, turning daily commuters into captivated readers progressing billboard by billboard?"
         data-date="1232150400"
         data-modified="1756132409"
         data-words="146" data-starred="0">
@@ -5872,8 +6142,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="adam detre's recommendations on music in late 2008"
+        data-title="adam detre's recommendations on music in late 2008" data-tags="adam detre|music|recommendations"
+        data-excerpt="a charming, typo-filled email from 2008 captures one brother's passionate music discoveries, from fleet foxes' pet sounds -inspired harmonies to crystal castles' "lovely blip blop noises.""
         data-date="1228867200"
         data-modified="1756132409"
         data-words="380" data-starred="0">
@@ -5907,8 +6179,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="we only use 10% of our brains?"
+        data-title="we only use 10% of our brains?" data-tags="neuroscience|psychology|myths"
+        data-excerpt="the myth that we only use 10% of our brains is like saying we only use 10% of a piano—it's the pattern that matters, not the percentage."
         data-date="1227916800"
         data-modified="1756132409"
         data-words="306" data-starred="0">
@@ -5942,8 +6216,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="pyepl blog"
+        data-title="pyepl blog" data-tags="python|psychology|software|education|experiment design"
+        data-excerpt="pyepl is a versatile python library for coding psychology experiments, but it needs more tutorials and community resources to reach its full potential."
         data-date="1225756800"
         data-modified="1756132409"
         data-words="116" data-starred="0">
@@ -5983,8 +6259,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="writeroom? darkroom? mushroom!"
+        data-title="writeroom? darkroom? mushroom!" data-tags="emacs|mac|software|writing"
+        data-excerpt="why build yet another "distraction-free" text editor when emacs already has undo/redo and full-screen capabilities? here's a simple function that outperforms writeroom's expensive alternatives."
         data-date="1209945600"
         data-modified="1756132409"
         data-words="329" data-starred="0">
@@ -6021,8 +6299,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="switching from linux to mac"
+        data-title="switching from linux to mac" data-tags="mac|user interfaces|emacs|technology|software"
+        data-excerpt="a longtime linux user discovers the joys and frustrations of switching to macos, finding wonderful hardware but some fundamentally broken behaviors that may never be fixed."
         data-date="1209945600"
         data-modified="1756132409"
         data-words="579" data-starred="0">
@@ -6062,8 +6342,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="losing an old friend - a paean to a laptop"
+        data-title="losing an old friend - a paean to a laptop" data-tags="technology|hardware|linux|mac|personal development"
+        data-excerpt="a dying thinkpad forces a choice between the macbook air's sleek reliability and the lenovo x300's linux freedom—beauty versus ideology in laptop form."
         data-date="1206489600"
         data-modified="1756132409"
         data-words="571" data-starred="0">
@@ -6103,8 +6385,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="email is the mind-killer"
+        data-title="email is the mind-killer" data-tags="productivity|comedy, humour|technology"
+        data-excerpt="a dune -inspired meditation on conquering email overwhelm transforms frank herbert's iconic litany against fear into a mantra for digital mindfulness."
         data-date="1205193600"
         data-modified="1756132409"
         data-words="61" data-starred="0">
@@ -6138,8 +6422,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="running a psychology experiment"
+        data-title="running a psychology experiment" data-tags="psychology|experiment design|data logging|fmri|research"
+        data-excerpt="the most important advice i can give is to run yourself in your own experiment at least a couple of times before you run anyone else."
         data-date="1203120000"
         data-modified="1756132409"
         data-words="1769" data-starred="0">
@@ -6179,8 +6465,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="evangelizing emacs (in terms of economics)"
+        data-title="evangelizing emacs (in terms of economics)" data-tags="emacs|economics|software|productivity"
+        data-excerpt="emacs has a huge barrier to entry , but its keyboard shortcuts and customizations provide enormous economies of scale once mastered."
         data-date="1202428800"
         data-modified="1756132409"
         data-words="397" data-starred="0">
@@ -6217,8 +6505,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="sensing the buzz at a conference"
+        data-title="sensing the buzz at a conference" data-tags="rfid|data logging|privacy|technology|product ideas"
+        data-excerpt="what if conference badges tracked attendee movements to recommend sessions based on where like-minded people gather? a simple rfid system could transform how we navigate overwhelming conference schedules."
         data-date="1193011200"
         data-modified="1756132409"
         data-words="276" data-starred="0">
@@ -6258,8 +6548,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="create something shareable"
+        data-title="create something shareable" data-tags="wisdom|personal development|open source|internet culture"
+        data-excerpt="create something shareable - add to the sum total of human knowledge by building something useful, trustworthy, and worth the effort for others to discover rather than recreate themselves."
         data-date="1193011200"
         data-modified="1756132409"
         data-words="393" data-starred="0">
@@ -6296,8 +6588,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="matlab cookbook"
+        data-title="matlab cookbook" data-tags="matlab|software|documentation|education|programming"
+        data-excerpt="a collection of matlab tips and scripts inspired by o'reilly's python cookbook, offering practical solutions for common programming challenges."
         data-date="1190332800"
         data-modified="1756132409"
         data-words="60" data-starred="0">
@@ -6337,8 +6631,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="emacs freex 0.3.1"
+        data-title="emacs freex 0.3.1" data-tags="emacs freex|emacs|software|documentation|productivity"
+        data-excerpt="the first public release of emacs freex minor mode is now available, complete with starter tutorial and installation instructions."
         data-date="1190332800"
         data-modified="1756132409"
         data-words="47" data-starred="0">
@@ -6378,8 +6674,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="using fancy methods to estimate shipping dates (joel spolsky's fogbugz)"
+        data-title="using fancy methods to estimate shipping dates (joel spolsky's fogbugz)" data-tags="statistics|software|project management|joel spolsky|bugs & testing"
+        data-excerpt="joel spolsky's fogbugz uses non-parametric statistics to predict shipping dates by analyzing developers' historical estimation errors and generating thousands of synthetic futures."
         data-date="1190160000"
         data-modified="1756132409"
         data-words="613" data-starred="0">
@@ -6419,8 +6717,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="scroogled"
+        data-title="scroogled" data-tags="privacy|science fiction|google|surveillance|technology"
+        data-excerpt="cory doctorow's dystopian fiction explores 'what if google were evil?' — a compelling thought experiment about privacy erosion and surveillance power."
         data-date="1190160000"
         data-modified="1756132409"
         data-words="75" data-starred="0">
@@ -6460,8 +6760,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="entangling the ground and cloud"
+        data-title="entangling the ground and cloud" data-tags="cloud computing|filesystem|synchronisation|technology|the future|product ideas"
+        data-excerpt="what if your local filesystem and the cloud were quantum entangled , automatically syncing every file edit between your laptop and web services without you ever noticing?"
         data-date="1189555200"
         data-modified="1756132409"
         data-words="1088" data-starred="1">
@@ -6504,8 +6806,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="my take on emacsclient"
+        data-title="my take on emacsclient" data-tags="emacs|python|software|user interfaces|productivity"
+        data-excerpt="emacsclient promises instant file opening but fails basic usability tests. a python script fixes the frustrating gaps between emacsclient's potential and reality."
         data-date="1179187200"
         data-modified="1756132409"
         data-words="322" data-starred="0">
@@ -6545,8 +6849,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="testing the legs of the sansa express"
+        data-title="testing the legs of the sansa express" data-tags="linux|music|hardware|technology|user experience"
+        data-excerpt="the sansa express died after being yanked from ubuntu without safe removal, despite working fine on windows xp with the same treatment."
         data-date="1176508800"
         data-modified="1756132409"
         data-words="296" data-starred="0">
@@ -6586,8 +6892,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="collaborative filtering and how it's going to help us consume"
+        data-title="collaborative filtering and how it's going to help us consume" data-tags="the future|data science and machine learning|recommendations|shopping"
+        data-excerpt="amazon's recommendation engine is just the beginning—imagine a system that knows your tastes so well it could curate your entire life, from books to concerts to travel destinations."
         data-date="1175904000"
         data-modified="1756132409"
         data-words="1521" data-starred="0">
@@ -6624,8 +6932,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="make tags not trees - filesystem idea based on tags instead of hierarchical directories"
+        data-title="make tags not trees - filesystem idea based on tags instead of hierarchical directories" data-tags="filesystem|tagging|organising knowledge|open source|machine learning|product ideas"
+        data-excerpt="what if we replaced hierarchical directories with a flat filesystem organized by tags , where files could exist in multiple categories simultaneously without the constraints of choosing a single location?"
         data-date="1175904000"
         data-modified="1756132409"
         data-words="1183" data-starred="0">
@@ -6668,8 +6978,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="it has to be easy, and worth it, for you to add tags"
+        data-title="it has to be easy, and worth it, for you to add tags" data-tags="tagging|productivity|user interfaces|organising knowledge|technology|product ideas"
+        data-excerpt="tagging lets you assign things to multiple categories, reducing cognitive cost—but only if it's effortless to add tags and reliable for finding things later."
         data-date="1175904000"
         data-modified="1756132409"
         data-words="1340" data-starred="0">
@@ -6712,8 +7024,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="neuroscience notes (obsolete)"
+        data-title="neuroscience notes (obsolete)" data-tags="neuroscience|wiki|emacs|documentation|obsolete"
+        data-excerpt="phd qualifying exam notes transformed into a wiki-style neuroscience resource with hyperlinked brain regions, tracts, and disorders—though some pages remain sparse in this gargantuan task ."
         data-date="1175904000"
         data-modified="1756132409"
         data-words="272" data-starred="0">
@@ -6753,8 +7067,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="john cunningham lily, rip"
+        data-title="john cunningham lily, rip" data-tags="consciousness|neuroscience|psychology|comedy, humour"
+        data-excerpt="a tribute to consciousness researcher john c. lilly inspires a humorous reflection on alternative paths to exploring the nature of human awareness."
         data-date="1175904000"
         data-modified="1756132409"
         data-words="75" data-starred="0">
@@ -6791,8 +7107,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="the pittsburgh ebc competition"
+        data-title="the pittsburgh ebc competition" data-tags="fmri|neuroscience|competition|machine learning|multi-variate pattern analysis (mvpa)"
+        data-excerpt="researchers used fmri brain scans of people watching home improvement to predict moment-by-moment experiences like amusement and arousal, placing second in a groundbreaking neuroscience competition."
         data-date="1174867200"
         data-modified="1756132409"
         data-words="456" data-starred="0">
@@ -6832,8 +7150,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="push singh"
+        data-title="push singh" data-tags="memorial|mit|artificial intelligence"
+        data-excerpt=""
         data-date="1157068800"
         data-modified="1756132409"
         data-words="28" data-starred="0">
@@ -6865,8 +7185,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="statler pulchrifex"
+        data-title="statler pulchrifex" data-tags="reading|fiction|matt weber"
+        data-excerpt="a compelling fiction piece by matt weber graces the back page of nature , blending scientific imagination with literary craft in an unexpected venue."
         data-date="1157068800"
         data-modified="1756132409"
         data-words="22" data-starred="0">
@@ -6900,8 +7222,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="lawrence lessig"
+        data-title="lawrence lessig" data-tags="open source|philosophy|technology"
+        data-excerpt=""
         data-date="1157068800"
         data-modified="1756132409"
         data-words="5" data-starred="0">
@@ -6933,8 +7257,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="does eating salmon lower the murder rate?"
+        data-title="does eating salmon lower the murder rate?" data-tags="nutrition|neuroscience|research|psychology"
+        data-excerpt="a british prison study found that fatty acid supplements reduced antisocial behavior by over a third , raising intriguing questions about nutrition's role in violence."
         data-date="1149465600"
         data-modified="1756132409"
         data-words="62" data-starred="0">
@@ -6971,8 +7297,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="the world is your canvas"
+        data-title="the world is your canvas" data-tags="art|creativity"
+        data-excerpt="what if massive alien flying saucers could be painted on snowy hillsides, visible only to passing drivers? street artists are transforming everyday surfaces into mind-bending optical illusions."
         data-date="1145404800"
         data-modified="1756132409"
         data-words="51" data-starred="0">
@@ -7003,8 +7331,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="the turing tournament - a proposal for a reformulation of the turing test"
+        data-title="the turing tournament - a proposal for a reformulation of the turing test" data-tags="artificial intelligence|turing test|philosophy|research"
+        data-excerpt="what if we replaced the binary pass/fail turing test with a competitive tournament where players devise rules for each other, creating a richer, multi-dimensional measure of intelligence ?"
         data-date="1145318400"
         data-modified="1756132409"
         data-words="5910" data-starred="1">
@@ -7041,8 +7371,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="paul graham, joel spolsky and steve yegge and the law of increasing returns"
+        data-title="paul graham, joel spolsky and steve yegge and the law of increasing returns" data-tags="paul graham|programming|entrepreneurship|productivity|startups|joel spolsky|steve yegge"
+        data-excerpt="three influential tech writers share a crucial insight: the law of increasing returns means truly smart people, powerful tools, and quality environments deliver exponentially greater value than their mediocre counterparts."
         data-date="1145232000"
         data-modified="1756132409"
         data-words="380" data-starred="0">
@@ -7088,8 +7420,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="procrastination"
+        data-title="procrastination" data-tags="productivity|self-control|psychology"
+        data-excerpt="reading about avoiding procrastination is among the best ways to procrastinate—but what if you could harness this tendency as a force for good?"
         data-date="1145145600"
         data-modified="1756132409"
         data-words="648" data-starred="0">
@@ -7123,8 +7457,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="google desktop search"
+        data-title="google desktop search" data-tags="google|search engines|user interfaces|technology|product ideas"
+        data-excerpt="google's desktop search consistently fails to find existing files and struggles with pdfs, while browsers lack simple options to download everything for offline access."
         data-date="1120176000"
         data-modified="1756132409"
         data-words="170" data-starred="0">
@@ -7164,8 +7500,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="google as my permanent online user id?"
+        data-title="google as my permanent online user id?" data-tags="google|privacy|technology|synchronisation|user experience|product ideas"
+        data-excerpt="what if google became your universal online identity , automatically logging you into every site and syncing your digital life across any device, anywhere?"
         data-date="1120176000"
         data-modified="1756132409"
         data-words="63" data-starred="0">
@@ -7208,8 +7546,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="things that are still crap about linux (in 2005)"
+        data-title="things that are still crap about linux (in 2005)" data-tags="linux|software|user interfaces|technology|user experience"
+        data-excerpt="from dependency hell to wireless woes, a candid look at linux's persistent frustrations that keep users pulling their hair out."
         data-date="1120176000"
         data-modified="1756132409"
         data-words="113" data-starred="0">
@@ -7251,8 +7591,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="hard disk acceleromotors"
+        data-title="hard disk acceleromotors" data-tags="hardware|technology|product ideas"
+        data-excerpt="why don't all hard drives sense their own motion and protect themselves from impact—or have we been catastrophically overestimating the fragility of spinning platters?"
         data-date="1094515200"
         data-modified="1756132409"
         data-words="34" data-starred="0">
@@ -7286,8 +7628,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="philosophy as debugging"
+        data-title="philosophy as debugging" data-tags="philosophy|programming|ideas|wisdom|debugging"
+        data-excerpt="philosophical argument resembles debugging code: you modularize problems, test cases, and hunt for the source of error—often finding wrongful initialization or overlooked implications."
         data-date="1094515200"
         data-modified="1756132409"
         data-words="66" data-starred="0">
@@ -7327,8 +7671,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="for a moment i thought my wisdom was spreading by word of mouth"
+        data-title="for a moment i thought my wisdom was spreading by word of mouth" data-tags="wisdom|writing|neuroscience"
+        data-excerpt="the mixed blessing of academic citation: discovering your work is being referenced, only to realize the authors haven't actually read your papers."
         data-date="1093305600"
         data-modified="1756132409"
         data-words="26" data-starred="0">
@@ -7362,8 +7708,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="cringely on the riaa"
+        data-title="cringely on the riaa" data-tags="music|richard cohen|intellectual property|technology|internet culture"
+        data-excerpt="cringely proposed an intriguing legal workaround to challenge the riaa's grip on music distribution, but nobody ever tried it—perhaps because it seemed too easy."
         data-date="1093305600"
         data-modified="1756132409"
         data-words="75" data-starred="0">
@@ -7403,8 +7751,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="electronic voting"
+        data-title="electronic voting" data-tags="technology|security|privacy|democracy|political systems"
+        data-excerpt=""
         data-date="1092960000"
         data-modified="1756132409"
         data-words="38" data-starred="0">
@@ -7442,8 +7792,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="michael behe, 'darwin's black box'"
+        data-title="michael behe, 'darwin's black box'" data-tags="reading|biochemistry|evolution"
+        data-excerpt="michael behe argues that complex biochemical systems like blood clotting are irreducibly complex —requiring all components to function, making gradual darwinian evolution seemingly impossible."
         data-date="1092960000"
         data-modified="1756132409"
         data-words="1219" data-starred="0">
@@ -7477,8 +7829,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="fahrenheit 9-11"
+        data-title="fahrenheit 9-11" data-tags="politics|documentary|film|media criticism"
+        data-excerpt="moore's fahrenheit 9/11 could swing the election, but raises questions about whether subjective journalism succeeds where objective reporting has failed to expose uncomfortable truths."
         data-date="1092960000"
         data-modified="1756132409"
         data-words="200" data-starred="0">
@@ -7515,8 +7869,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="google goes public"
+        data-title="google goes public" data-tags="google|investment|business|technology"
+        data-excerpt="beyond reasoned analysis lies faith in google's potential —a company whose motto includes "you can make money without doing evil" and "great just isn't good enough.""
         data-date="1092960000"
         data-modified="1756132409"
         data-words="128" data-starred="0">
@@ -7553,8 +7909,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="cool interview with linus torvalds"
+        data-title="cool interview with linus torvalds" data-tags="open source|links|linux|programming"
+        data-excerpt=""
         data-date="1092873600"
         data-modified="1756132409"
         data-words="16" data-starred="0">
@@ -7589,8 +7947,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="reading: 1984 + 20 = 2004. coincidence?"
+        data-title="reading: 1984 + 20 = 2004. coincidence?" data-tags="reading|politics|history|democracy"
+        data-excerpt="a chilling examination of america's contingency plans for postponing elections, raising urgent questions about constitutional safeguards and the balance of power in crisis situations."
         data-date="1092873600"
         data-modified="1756132409"
         data-words="121" data-starred="0">
@@ -7627,8 +7987,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="direct democracy"
+        data-title="direct democracy" data-tags="political systems|ideas|the future|unfinished"
+        data-excerpt="switzerland holds referenda multiple times yearly on everything from village fair bunting to adopting the euro—could this direct democracy model transform how citizens engage with government?"
         data-date="1092787200"
         data-modified="1756132409"
         data-words="1165" data-starred="0">
@@ -7665,8 +8027,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="nobody seems to want to improve the world"
+        data-title="nobody seems to want to improve the world" data-tags="utopia|human nature|technology|essay|the future"
+        data-excerpt="designing a utopia proves surprisingly difficult—people resist radical improvements, fearing that eliminating suffering might destroy what makes us fundamentally human."
         data-date="1092700800"
         data-modified="1756132409"
         data-words="504" data-starred="0">
@@ -7706,8 +8070,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="my epitaph"
+        data-title="my epitaph" data-tags="comedy, humour|writing|curiosity|silliness|personal reflection"
+        data-excerpt=""
         data-date="1092700800"
         data-modified="1756132409"
         data-words="17" data-starred="0">
@@ -7745,8 +8111,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="shameless bid to get a gmail account"
+        data-title="shameless bid to get a gmail account" data-tags="comedy, humour|technology|writing|google"
+        data-excerpt=""
         data-date="1082851200"
         data-modified="1756132409"
         data-words="14" data-starred="0">
@@ -7781,8 +8149,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="journal - crashed"
+        data-title="journal - crashed" data-tags="writing|comedy, humour|backup|religion"
+        data-excerpt="after all, the flipside of a personal god is that, in order to be able to understand us, he must himself be capable of tantrums."
         data-date="1061856000"
         data-modified="1756132409"
         data-words="61" data-starred="0">
@@ -7819,8 +8189,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="dragonlance gods and the ancient greeks"
+        data-title="dragonlance gods and the ancient greeks" data-tags="mythology|fantasy|ideas|philosophy|greece"
+        data-excerpt="dragonlance gods become far more compelling when viewed as modern fantasy versions of ancient greek deities—flawed personifications of cultural archetypes and the morality of the strong ."
         data-date="1061856000"
         data-modified="1756132409"
         data-words="72" data-starred="0">
@@ -7860,8 +8232,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="the big lessons of philosophising"
+        data-title="the big lessons of philosophising" data-tags="philosophy|wisdom|human nature|ideas"
+        data-excerpt="if you've decided that one group of intelligent people are clearly wrong, then you've probably failed to understand the full complexity of the problem."
         data-date="1061510400"
         data-modified="1756132409"
         data-words="149" data-starred="0">
@@ -7898,8 +8272,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="definitions - o'reilly &amp; munakata"
+        data-title="definitions - o'reilly &amp; munakata" data-tags="definitions|neuroscience|artificial intelligence"
+        data-excerpt="what if the secret to symbol manipulation isn't in our algorithms, but in whether our neurons detect or merely activate —a distinction that could redefine intelligence itself?"
         data-date="1061510400"
         data-modified="1756132409"
         data-words="37" data-starred="0">
@@ -7933,8 +8309,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="intrinsicality, symbols, self-organisation and gradual transformation"
+        data-title="intrinsicality, symbols, self-organisation and gradual transformation" data-tags="artificial intelligence|self-organization|deep learning, neural networks|symbols|learning|stephen larson"
+        data-excerpt="self-organising symbols can transform gradually unlike rigid code, creating intrinsic environmental representations. is it coincidental that both neural networks and genotypes speak the universal language of vectors ?"
         data-date="1061510400"
         data-modified="1756132409"
         data-words="218" data-starred="0">
@@ -7977,8 +8355,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="the cog team"
+        data-title="the cog team" data-tags="artificial intelligence|neuroscience|intelligence, mind"
+        data-excerpt="three fundamental errors plague classical ai: assuming monolithic internal models, unified control, and general-purpose processing—all based on flawed introspection rather than modern cognitive science."
         data-date="1061510400"
         data-modified="1756132409"
         data-words="68" data-starred="0">
@@ -8012,8 +8392,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="attractors"
+        data-title="attractors" data-tags="artificial intelligence|deep learning, neural networks|quotation|network theory"
+        data-excerpt="lloyd rice warns against the devaluation of the term "attractor" when applied loosely to pattern recognizers, emphasizing its proper meaning as a sequence through states ."
         data-date="1061510400"
         data-modified="1756132409"
         data-words="125" data-starred="0">
@@ -8050,8 +8432,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="consciousness quote from kinsbourne"
+        data-title="consciousness quote from kinsbourne" data-tags="consciousness|quotation|psychology"
+        data-excerpt="we are consciously aware of thoughts according to their stability, persistence, and level of influence, according to research from kinsbourne and colleagues."
         data-date="1061510400"
         data-modified="1756132409"
         data-words="19" data-starred="0">
@@ -8085,8 +8469,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="jimmy carr"
+        data-title="jimmy carr" data-tags="quotation|comedy, humour|religion"
+        data-excerpt="comedian jimmy carr poses a provocative theological question that challenges traditional christian beliefs about divine hierarchy and special status."
         data-date="1061510400"
         data-modified="1756132409"
         data-words="10" data-starred="0">
@@ -8120,8 +8506,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="love is an illusion"
+        data-title="love is an illusion" data-tags="human nature|philosophy|emotions|evolution|copernican view"
+        data-excerpt="love isn't transcendent—it's biological. humanity clings to romantic notions that separate us from animals, fearing what remains if we abandon these illusions."
         data-date="1061337600"
         data-modified="1756132409"
         data-words="85" data-starred="0">
@@ -8161,8 +8549,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="atheists and foxholes"
+        data-title="atheists and foxholes" data-tags="religion|ideas|belief systems|human nature|psychology"
+        data-excerpt="religion is a decision of the viscera—if war can break atheist resistance, perhaps desperate need can will god into psychological existence."
         data-date="1061337600"
         data-modified="1756132409"
         data-words="105" data-starred="0">
@@ -8202,8 +8592,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="malonnaise"
+        data-title="malonnaise" data-tags="emotions|human nature|wisdom|philosophy|silliness"
+        data-excerpt="a poetic meditation on navigating emotional storms, where the author embraces being both ship and captain in life's turbulent waters."
         data-date="1061337600"
         data-modified="1756132409"
         data-words="181" data-starred="0">
@@ -8243,8 +8635,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="mathematician's refrain"
+        data-title="mathematician's refrain" data-tags="nerdy|mathematics|comedy, humour"
+        data-excerpt=""
         data-date="1061337600"
         data-modified="1756132409"
         data-words="11" data-starred="0">
@@ -8276,8 +8670,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="ralph waldo emerson"
+        data-title="ralph waldo emerson" data-tags="quotation|wisdom|personal development"
+        data-excerpt="emerson's timeless definition of success transcends wealth and fame, focusing instead on laughter, respect, beauty, and making even one life breathe easier ."
         data-date="1061337600"
         data-modified="1756132409"
         data-words="78" data-starred="0">
@@ -8311,8 +8707,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="why and the religious sense"
+        data-title="why and the religious sense" data-tags="religion|philosophy|wisdom|cognitive biases"
+        data-excerpt="the religious sense stems from a fundamental misconception—our pattern-seeking minds eventually trick us into asking unanswerable questions like ' why are we here?' instead of the safer ' how ?'"
         data-date="1061337600"
         data-modified="1756132409"
         data-words="565" data-starred="0">
@@ -8349,8 +8747,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="the wrong end of a telescope"
+        data-title="the wrong end of a telescope" data-tags="philosophy|curiosity|human nature|ideas"
+        data-excerpt="have you ever looked around and seen that all the people are just hairless primates, monkeys with syntax, equally pointless, equally unwitting, and equally comic ?"
         data-date="1061337600"
         data-modified="1756132409"
         data-words="35" data-starred="0">
@@ -8387,8 +8787,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="happiness"
+        data-title="happiness" data-tags="quotation|wisdom|philosophy"
+        data-excerpt="two profound perspectives on happiness: dennett advocates finding purpose beyond yourself , while kennedy emphasizes pursuing excellence through your natural abilities."
         data-date="1061337600"
         data-modified="1756132409"
         data-words="25" data-starred="0">
@@ -8422,8 +8824,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="marriage"
+        data-title="marriage" data-tags="human nature|belief systems|personal reflection|relationships"
+        data-excerpt=""
         data-date="1061337600"
         data-modified="1756132409"
         data-words="8" data-starred="0">
@@ -8458,8 +8862,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="file-sharing"
+        data-title="file-sharing" data-tags="intellectual property|ethics|internet culture|myths"
+        data-excerpt="file-sharing is stealing, plain and simple — masked by anonymity, mass participation, and spurious justifications that ignore the industry's survival needs."
         data-date="1061337600"
         data-modified="1756132409"
         data-words="79" data-starred="0">
@@ -8496,8 +8902,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="hot tips from the viennese recliner"
+        data-title="hot tips from the viennese recliner" data-tags="silliness|personal reflection|psychology|comedy, humour"
+        data-excerpt=""
         data-date="1061337600"
         data-modified="1756132409"
         data-words="21" data-starred="0">
@@ -8532,8 +8940,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="memories slipping through your fingers like sand..."
+        data-title="memories slipping through your fingers like sand..." data-tags="memory|personal reflection|psychology"
+        data-excerpt="you don't remember life as a continuous stream—you remember episodes . the secret to slowing time's passage lies in creating salient experiences that serve as vivid bookmarks of each era."
         data-date="1061337600"
         data-modified="1756132409"
         data-words="36" data-starred="0">
@@ -8567,8 +8977,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="mission statement"
+        data-title="mission statement" data-tags="artificial intelligence|augmenting intelligence|personal development|ideas"
+        data-excerpt="instead of saying i want to make machines think, i'll say i want to make people smarter—they're the same path to the singularity."
         data-date="1058140800"
         data-modified="1756132409"
         data-words="42" data-starred="0">
@@ -8605,8 +9017,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="semantic network hyper-reference of the brain"
+        data-title="semantic network hyper-reference of the brain" data-tags="neuroscience|organising knowledge|semantic networks"
+        data-excerpt="why isn't there a massive, intricately hyperlinked semantic network brain encyclopedia with neuroanatomical organization, functional links, and constantly updated cross-references between brain areas?"
         data-date="1058054400"
         data-modified="1756132409"
         data-words="97" data-starred="0">
@@ -8640,8 +9054,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="snow crash"
+        data-title="snow crash" data-tags="science fiction|books|reading|technology"
+        data-excerpt=""
         data-date="1058054400"
         data-modified="1756132409"
         data-words="4" data-starred="0">
@@ -8676,8 +9092,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="no more ringtones"
+        data-title="no more ringtones" data-tags="mobile phones|technology|ideas|nerdy|product ideas"
+        data-excerpt="why don't we have coin-sized vibrating accessories that attach to watches, necklaces, or earrings to alert us when our phone rings?"
         data-date="1058054400"
         data-modified="1756132409"
         data-words="51" data-starred="0">
@@ -8717,8 +9135,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="trophic levels, trade and the terminator"
+        data-title="trophic levels, trade and the terminator" data-tags="artificial intelligence|ecology|human-machine interaction|philosophy|the future"
+        data-excerpt="why would superintelligent machines want to dominate humans when they'll occupy completely different ecological niches? the key may lie in finding something uniquely human to trade."
         data-date="1058054400"
         data-modified="1756132409"
         data-words="251" data-starred="0">
@@ -8758,8 +9178,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="hans moravec on our future generations as robots"
+        data-title="hans moravec on our future generations as robots" data-tags="artificial intelligence|robots|human-machine interaction|quotation|hans moravec|the future"
+        data-excerpt="hans moravec argues that robots will be our true descendants, shaped by human consciousness rather than unconscious biochemistry— "it is the tune that matters, not the platter.""
         data-date="1056499200"
         data-modified="1756132409"
         data-words="118" data-starred="0">
@@ -8802,8 +9224,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="gradual transformability"
+        data-title="gradual transformability" data-tags="artificial intelligence|self-organization|programming|robustness"
+        data-excerpt=""
         data-date="1056499200"
         data-modified="1756132409"
         data-words="18" data-starred="0">
@@ -8838,8 +9262,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="lyrics from dead milkmen"
+        data-title="lyrics from dead milkmen" data-tags="music|quotation|comedy, humour|lyrics"
+        data-excerpt=""
         data-date="1056499200"
         data-modified="1756132409"
         data-words="20" data-starred="0">
@@ -8874,8 +9300,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="douglas adams' favourite pieces of information"
+        data-title="douglas adams' favourite pieces of information" data-tags="douglas adams|comedy, humour|quotation"
+        data-excerpt="douglas adams reveals his favourite absurd facts: sloths grabbing their own limbs and falling from trees, and a ruler's nick creating a kink in the trans-siberian railway."
         data-date="1056499200"
         data-modified="1756132409"
         data-words="147" data-starred="0">
@@ -8909,8 +9337,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="mcewan"
+        data-title="mcewan" data-tags="comedy, humour|wisdom|quotation"
+        data-excerpt="mcewan's rule of relative importance offers a vivid metaphor for survival in group dynamics: **"when traveling with a herd of elephants, don't be the first to lie down and rest.""
         data-date="1056499200"
         data-modified="1756132409"
         data-words="21" data-starred="0">
@@ -8944,8 +9374,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="live each day..."
+        data-title="live each day..." data-tags="silliness|comedy, humour|lifestyle experiment|personal reflection"
+        data-excerpt="a humorous take on the classic advice to live each day as if it's your last — with the logical conclusion that laundry becomes completely unnecessary."
         data-date="1056499200"
         data-modified="1756132409"
         data-words="37" data-starred="0">
@@ -8982,8 +9414,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="rolls on representations"
+        data-title="rolls on representations" data-tags="definitions|quotation|intelligence, mind|edmund rolls"
+        data-excerpt=""
         data-date="1056499200"
         data-modified="1756132409"
         data-words="9" data-starred="0">
@@ -9018,8 +9452,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="steve larson on minsky's model 6 framework"
+        data-title="steve larson on minsky's model 6 framework" data-tags="artificial intelligence|marvin minsky|psychology|stephen larson|intelligence, mind"
+        data-excerpt="minsky's six-level model of mind progresses from instinctive reflexes to self-conscious thinking that incorporates others' perceived opinions into our decision-making processes."
         data-date="1056499200"
         data-modified="1756132409"
         data-words="140" data-starred="0">
@@ -9059,8 +9495,10 @@ Greg Detre
     
     
     
+    
     <li class=""
-        data-title="bruce blumberg on curiosity"
+        data-title="bruce blumberg on curiosity" data-tags="curiosity|psychology|intelligence, mind"
+        data-excerpt="is curiosity a single adaptive specialization or a collection of mechanisms working together? bruce blumberg poses this fundamental question about the nature of human curiosity."
         data-date="1056499200"
         data-modified="1756132409"
         data-words="27" data-starred="0">
@@ -9150,7 +9588,7 @@ Greg Detre
     <i>
         <span
             title="The most recent time the content was edited (which could be before the page was actually published).">Last
-            updated</span>: 2025-Aug-25
+            updated</span>: 2025-Aug-28
     </i>
 </p>
 

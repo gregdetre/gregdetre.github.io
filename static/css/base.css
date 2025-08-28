@@ -763,3 +763,115 @@ blockquote {
     color: #666;
     font-style: italic;
 }
+
+/* Search controls for blog listings */
+.search-controls {
+    max-width: var(--content-width);
+    margin: 1.2em auto 1.2em auto;
+    padding: 12px 14px;
+    background: linear-gradient(135deg, rgba(34, 34, 34, 0.5) 0%, rgba(34, 34, 34, 0.3) 100%);
+    border-radius: 8px;
+    border: 1px solid rgba(68, 68, 68, 0.3);
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+}
+
+.search-controls label {
+    display: block;
+    color: var(--light-grey-text);
+    font-variant: all-small-caps;
+    font-weight: 300;
+    margin-bottom: 6px;
+}
+
+.search-input-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+#blog-search-input[type="search"] {
+    flex: 1 1 240px;
+    background-color: rgba(34, 34, 34, 0.8);
+    color: var(--almost-white);
+    border: 1px solid rgba(68, 68, 68, 0.6);
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 0.95em;
+    font-family: inherit;
+    transition: all 0.2s ease;
+}
+
+#blog-search-input[type="search"]:focus {
+    outline: none;
+    border-color: var(--highlight-colour);
+    box-shadow: 0 0 0 3px rgba(199, 180, 248, 0.15);
+}
+
+/* Tag chips */
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.chip,
+.chip-clear {
+    background: rgba(199, 180, 248, 0.12);
+    border: 1px solid rgba(199, 180, 248, 0.35);
+    color: var(--almost-white);
+    border-radius: 20px;
+    padding: 6px 10px;
+    font-size: 0.85em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.chip:hover,
+.chip-clear:hover {
+    border-color: var(--highlight-colour);
+    background: rgba(199, 180, 248, 0.2);
+}
+
+.chip-clear {
+    background: rgba(68, 68, 68, 0.3);
+    border-color: rgba(120, 120, 120, 0.6);
+}
+
+/* Suggestions list */
+.suggestions {
+    margin-top: 8px;
+}
+
+.suggestion-list {
+    list-style: none;
+    margin: 0;
+    padding: 6px;
+    background: rgba(34, 34, 34, 0.7);
+    border: 1px solid rgba(68, 68, 68, 0.6);
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.suggestion-list li {
+    margin: 0;
+    padding: 0;
+}
+
+.suggestion-list button {
+    background: rgba(50, 50, 50, 0.9);
+    color: var(--almost-white);
+    border: 1px solid rgba(68, 68, 68, 0.6);
+    border-radius: 16px;
+    padding: 6px 10px;
+    font-size: 0.85em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.suggestion-list button:hover {
+    border-color: var(--highlight-colour);
+    color: var(--hover-highlight-colour);
+}
